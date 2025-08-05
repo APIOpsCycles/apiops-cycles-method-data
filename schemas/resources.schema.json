@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["resources"],
+  "additionalProperties": false,
+  "properties": {
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "slug", "icon", "order", "description", "category"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "slug": {"type": "string"},
+          "icon": {"type": "string"},
+          "order": {"type": "number"},
+          "description": {"type": "string"},
+          "category": {"type": "string"},
+          "canvas": {"type": "string"},
+          "image": {"type": "string"},
+          "draft": {"type": ["string", "boolean"]},
+          "outcomes": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "how_it_works": {
+            "type": "object",
+            "properties": {
+              "steps": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "tips": {
+                "type": "array",
+                "items": {"type": "string"}
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

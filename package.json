@@ -1,0 +1,23 @@
+{
+  "name": "apiops-cycles-method-data",
+  "version": "1.0.0",
+  "description": "APIOps Cycles Method data and canvases",
+  "license": "Apache-2.0",
+  "type": "module",
+  "files": ["src/data"],
+  "exports": {
+    "./method/": "./src/data/method/",
+    "./canvasData": "./src/data/canvas/canvasData.json",
+    "./localizedData": "./src/data/canvas/localizedData.json",
+    "./canvas/": "./src/data/canvas/import-export-templates/"
+  },
+  "scripts": {
+    "test": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["lines"],
+  "additionalProperties": false,
+  "properties": {
+    "lines": {
+      "type": "object",
+      "required": ["title", "slug", "order", "image", "description", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {"type": "string"},
+        "slug": {"type": "string"},
+        "order": {"type": "number"},
+        "image": {"type": "string"},
+        "description": {"type": "string"},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "slug", "order", "color", "description", "stations"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string"},
+              "title": {"type": "string"},
+              "slug": {"type": "string"},
+              "order": {"type": "number"},
+              "color": {"type": "string"},
+              "description": {"type": "string"},
+              "stations": {
+                "type": "array",
+                "items": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

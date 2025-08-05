@@ -6,7 +6,26 @@ This repository contains the source for the APIOps Cycles method, including reso
 
 ## Requirements
 
-You can use the JSON files as is and download a .zip file or clone the repository. You can also install them using `npm install apiops-cycles-method-data`. 
+You can use the JSON files as is and download a .zip file or clone the repository. You can also install them using `npm install apiops-cycles-method-data`.
+
+This package can also be consumed directly from Git:
+
+```bash
+npm install github:Osaango/apiops-cycles-method-data
+```
+
+The module exposes top-level exports so you can import the data files directly, for example:
+
+```js
+import stations from "apiops-cycles-method-data/method/stations.json";
+import canvasData from "apiops-cycles-method-data/canvasData";
+```
+
+Validate the files locally with:
+
+```bash
+npm test
+``` 
 
 - **Node.js 22** or newer
 - npm

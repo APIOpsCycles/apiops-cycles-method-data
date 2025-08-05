@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["stations"],
+  "additionalProperties": false,
+  "properties": {
+    "stations": {
+      "type": "object",
+      "required": ["title", "slug", "order", "description", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "title": {"type": "string"},
+        "slug": {"type": "string"},
+        "order": {"type": "number"},
+        "description": {"type": "string"},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "slug", "order", "icon", "description", "why_it_matters", "outcomes", "apply_in_work"],
+            "properties": {
+              "id": {"type": "string"},
+              "title": {"type": "string"},
+              "slug": {"type": "string"},
+              "order": {"type": "number"},
+              "icon": {"type": "string"},
+              "description": {"type": "string"},
+              "why_it_matters": {"type": "string"},
+              "outcomes": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "how_it_works": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["step"],
+                  "properties": {
+                    "step": {"type": "string"},
+                    "resource": {"type": "string"}
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "apply_in_work": {"type": "string"}
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  }
+}
