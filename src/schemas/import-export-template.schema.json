@@ -13,7 +13,8 @@
         "source": {"type": "string"},
         "license": {"type": "string"},
         "authors": {"type": "array", "items": {"type": "string"}},
-        "website": {"type": "string"}
+        "website": {"type": "string"},
+        "date": {"type": "string"}
       },
       "additionalProperties": false
     },
@@ -34,7 +35,13 @@
               "properties": {
                 "content": {"type": "string"},
                 "size": {"type": "number"},
-                "color": {"type": "string"}
+                "color": {"type": "string"},
+                "position": {"type": "object",
+                     "properties": {
+                       "x": {"type": "number"},
+                       "y": {"type": "number"}
+                  }
+                }
               }
             }
           }

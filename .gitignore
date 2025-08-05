@@ -1,0 +1,5 @@
+node_modules
+
+# translation cache and temporary translation folder
+.json-autotranslate-cache
+src/data/locales/

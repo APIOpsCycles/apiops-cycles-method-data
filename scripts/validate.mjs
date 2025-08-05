@@ -48,13 +48,13 @@ async function gatherTemplateFiles() {
 }
 
 (async () => {
-  await validate('schemas/criteria.schema.json', ['src/data/method/criteria.json']);
-  await validate('schemas/lines.schema.json', ['src/data/method/lines.json']);
-  await validate('schemas/resources.schema.json', ['src/data/method/resources.json']);
-  await validate('schemas/station-criteria.schema.json', ['src/data/method/station-criteria.json']);
-  await validate('schemas/stations.schema.json', ['src/data/method/stations.json']);
-  await validate('schemas/canvasData.schema.json', ['src/data/canvas/canvasData.json']);
-  await validate('schemas/canvas-localized.schema.json', ['src/data/canvas/localizedData.json']);
-  await validate('schemas/import-export-template.schema.json', await gatherTemplateFiles());
-  await validate('schemas/labels.schema.json', await gatherLabelFiles());
+  await validate('src/schemas/criteria.schema.json', ['src/data/method/criteria.json']);
+  await validate('src/schemas/lines.schema.json', ['src/data/method/lines.json']);
+  await validate('src/schemas/resources.schema.json', ['src/data/method/resources.json']);
+  await validate('src/schemas/station-criteria.schema.json', ['src/data/method/station-criteria.json']);
+  await validate('src/schemas/stations.schema.json', ['src/data/method/stations.json']);
+  await validate('src/schemas/canvasData.schema.json', ['src/data/canvas/canvasData.json']);
+  await validate('src/schemas/canvas-localized.schema.json', ['src/data/canvas/localizedData.json']);
+  await validate('src/schemas/import-export-template.schema.json', await gatherTemplateFiles());
+  await validate('src/schemas/labels.schema.json', await gatherLabelFiles());
 })();

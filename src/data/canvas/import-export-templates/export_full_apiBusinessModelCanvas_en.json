@@ -1,0 +1,158 @@
+{
+  "templateId": "apiBusinessModelCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "test",
+    "license": "test",
+    "authors": [
+      "test"
+    ],
+    "website": "example.com",
+    "date": "2025-08-05T17:06:07.965Z"
+  },
+  "sections": [
+    {
+      "sectionId": "keyPartners",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color      ",
+          "position": {
+            "x": 74,
+            "y": 132
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "keyActivities",
+      "stickyNotes": []
+    },
+    {
+      "sectionId": "keyResources",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color           ",
+          "position": {
+            "x": 267,
+            "y": 276
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "apiValueProposition",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color            ",
+          "position": {
+            "x": 461,
+            "y": 180
+          },
+          "size": 80,
+          "color": "#fff399"
+        },
+        {
+          "content": "Double-click on text to edit. Click and select color          ",
+          "position": {
+            "x": 473.6666259765625,
+            "y": 366.9479064941406
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "developerRelations",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color       ",
+          "position": {
+            "x": 654,
+            "y": 123
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "channels",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color         ",
+          "position": {
+            "x": 636,
+            "y": 366
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "apiConsumerSegments",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color        ",
+          "position": {
+            "x": 787,
+            "y": 180
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "costs",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color    ",
+          "position": {
+            "x": 198,
+            "y": 478
+          },
+          "size": 80,
+          "color": "#fff399"
+        },
+        {
+          "content": "Double-click on text to edit. Click and select color  ",
+          "position": {
+            "x": 376,
+            "y": 536
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    },
+    {
+      "sectionId": "benefits",
+      "stickyNotes": [
+        {
+          "content": "Double-click on text to edit. Click and select color     ",
+          "position": {
+            "x": 522,
+            "y": 490
+          },
+          "size": 80,
+          "color": "#fff399"
+        },
+        {
+          "content": "Double-click on text to edit. Click and select color   ",
+          "position": {
+            "x": 672,
+            "y": 539
+          },
+          "size": 80,
+          "color": "#fff399"
+        }
+      ]
+    }
+  ]
+}
