@@ -1,0 +1,86 @@
+[
+  {
+    "id": "metrics-feedback-available",
+    "description": "Insights from metrics and feedback are available to optimize existing APIs."
+  },
+  {
+    "id": "business-goals-defined",
+    "description": "Business goals are defined."
+  },
+  {
+    "id": "market-research-done",
+    "description": "Market research identifies API opportunities."
+  },
+  {
+    "id": "stakeholder-approval",
+    "description": "Stakeholders approve strategy discussions."
+  },
+  {
+    "id": "api-opportunity-documented",
+    "description": "Individual API opportunities are identified and documented."
+  },
+  {
+    "id": "api-reusability",
+    "description": "The API meets a clear business need and is reusable for multiple API consumers."
+  },
+  {
+    "id": "hide-backend-discrepancies",
+    "description": "The goal of the API is to hide backend data models and discrepancies."
+  },
+  {
+    "id": "value-prop-validated",
+    "description": "The value proposition validates with key stakeholders."
+  },
+  {
+    "id": "consumer-segments-identified",
+    "description": "API consumer segments (internal and external) are identified."
+  },
+  {
+    "id": "api-roadmap-defined",
+    "description": "High-level roadmaps for API development are established."
+  },
+  {
+    "id": "architecture-patterns-validated",
+    "description": "The API architecture uses patterns that promote reusability and integration, and is validated with stakeholders."
+  },
+  {
+    "id": "design-reflects-business-value",
+    "description": "The API's design and endpoints have a clear connection to their business value and features."
+  },
+  {
+    "id": "api-consistency",
+    "description": "API has a consistent design with our other API products."
+  },
+  {
+    "id": "api-contract-tested",
+    "description": "The API contract is tested and meets functional and non-functional requirements."
+  },
+  {
+    "id": "api-description-available",
+    "description": "The API and its endpoints have descriptions that explain their business value and features."
+  },
+  {
+    "id": "audit-passed",
+    "description": "The API passes compliance, security, and audit checks."
+  },
+  {
+    "id": "audit-reports-shared",
+    "description": "Audit reports are shared with stakeholders."
+  },
+  {
+    "id": "api-ready-for-publishing",
+    "description": "The API is ready to be published to the appropriate gateways and environments to support reusability for multiple API consumers."
+  },
+  {
+    "id": "api-documentation-ready",
+    "description": "API documentation is complete and ready for publishing."
+  },
+  {
+    "id": "consumer-support-ready",
+    "description": "API registration, support, and communication processes are in place."
+  },
+  {
+    "id": "legal-compliance-clear",
+    "description": "Legal and compliance requirements are precise enough for publishing."
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "templateId": "customerJourneyCanvas",
+  "locale": "en-US",
+  "metadata": {
+    "source": "",
+    "license": "",
+    "authors": [],
+    "website": ""
+  },
+  "sections": [
+    {
+      "sectionId": "customerDiscoversNeed",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "persona",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "pains",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "journeySteps",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "customerNeedIsResolved",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "gains",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "inputsOutputs",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "interactionProcessingRules",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    }
+  ]
+}

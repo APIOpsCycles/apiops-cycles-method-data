@@ -1,0 +1,52 @@
+{
+  "templateId": "eventCanvas",
+  "locale": "en-US",
+  "metadata": {
+    "source": "",
+    "license": "",
+    "authors": [],
+    "website": ""
+  },
+  "sections": [
+    {
+      "sectionId": "userTaskTrigger",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "inputEventPayload",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "processingLogic",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "outputEventResult",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    }
+  ]
+}

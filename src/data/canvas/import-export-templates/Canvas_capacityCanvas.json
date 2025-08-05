@@ -1,0 +1,72 @@
+{
+  "templateId": "capacityCanvas",
+  "locale": "en-US",
+  "metadata": {
+    "source": "",
+    "license": "",
+    "authors": [],
+    "website": ""
+  },
+  "sections": [
+    {
+      "sectionId": "currentBusinessVolumes",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "futureConsumptionTrends",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "peakLoadAndAvailabilityRequirements",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "cachingStrategies",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "rateLimitingStrategies",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "scalingStrategies",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    }
+  ]
+}

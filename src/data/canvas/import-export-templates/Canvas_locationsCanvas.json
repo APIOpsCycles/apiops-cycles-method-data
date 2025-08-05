@@ -1,0 +1,92 @@
+{
+  "templateId": "locationsCanvas",
+  "locale": "en-US",
+  "metadata": {
+    "source": "",
+    "license": "",
+    "authors": [],
+    "website": ""
+  },
+  "sections": [
+    {
+      "sectionId": "locationGroups",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationGroupCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locations",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationDistances",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationDistanceCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationEndpoints",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationEndpointCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "templateId": "domainCanvas",
+  "locale": "en-US",
+  "metadata": {
+    "source": "",
+    "license": "",
+    "authors": [],
+    "website": ""
+  },
+  "sections": [
+    {
+      "sectionId": "selectedCustomerJourneySteps",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "coreEntitiesAndBusinessMeaning",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "attributesAndBusinessImportance",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "relationshipsBetweenEntities",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "businessComplianceAndIntegrityRules",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    },
+    {
+      "sectionId": "securityAndPrivacyConsiderations",
+      "stickyNotes": [
+        {
+          "content": "Placeholder",
+          "size": 80,
+          "color": "#FFF399"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "lines.title": "Linhas de metro",
+  "lines.description": "Uma coleção de linhas API que orientam o desenvolvimento e a gestão de APIs.",
+  "line.business-opportunities-line.title": "Linha oportunidades de negócio",
+  "line.business-opportunities-line.description": "Centra-se na identificação e aproveitamento de oportunidades de negócio através de APIs.",
+  "line.platform-architecture-line.title": "Linha de arquitetura da plataforma",
+  "line.platform-architecture-line.description": "Abrange os aspectos arquitecturais das plataformas API.",
+  "line.api-design-line.title": "Linha de conceção API",
+  "line.api-design-line.description": "Centra-se nos princípios e práticas de conceção de APIs.",
+  "line.delivery-line.title": "Linha de entrega",
+  "line.delivery-line.description": "Abrange os processos e práticas de entrega de APIs.",
+  "line.publishing-and-adoption-line.title": "Linha de publicação e adoção",
+  "line.publishing-and-adoption-line.description": "Centra-se na publicação de APIs e na garantia da sua adoção pelos consumidores.",
+  "line.operating-model-line.title": "Linha de modelo operacional",
+  "line.operating-model-line.description": "Abrange o modelo operacional para gestão e governação de API."
+}

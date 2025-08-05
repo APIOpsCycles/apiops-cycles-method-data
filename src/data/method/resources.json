@@ -1,0 +1,1047 @@
+{
+  "resources": [
+    {
+      "id": "api-community-engagement-strategies",
+      "title": "resource.api-community-engagement-strategies.title",
+      "slug": "resources/api-community-engagement-strategies",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 103,
+      "description": "resource.api-community-engagement-strategies.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-community-engagement-strategies.outcomes",
+        "resource.api-community-engagement-strategies.outcomes.1",
+        "resource.api-community-engagement-strategies.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-community-engagement-strategies.steps",
+          "resource.api-community-engagement-strategies.steps.1",
+          "resource.api-community-engagement-strategies.steps.2",
+          "resource.api-community-engagement-strategies.steps.3",
+          "resource.api-community-engagement-strategies.steps.4"
+        ],
+        "tips": [
+          "resource.api-community-engagement-strategies.tips",
+          "resource.api-community-engagement-strategies.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-compliance-best-practices",
+      "title": "resource.api-compliance-best-practices.title",
+      "slug": "resources/api-compliance-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 104,
+      "description": "resource.api-compliance-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-compliance-best-practices.outcomes",
+        "resource.api-compliance-best-practices.outcomes.1",
+        "resource.api-compliance-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-compliance-best-practices.steps",
+          "resource.api-compliance-best-practices.steps.1",
+          "resource.api-compliance-best-practices.steps.2"
+        ],
+        "tips": [
+          "resource.api-compliance-best-practices.tips",
+          "resource.api-compliance-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-development-best-practices",
+      "title": "resource.api-development-best-practices.title",
+      "slug": "resources/api-development-best-practices",
+      "icon": "edit-document-outline",
+      "daft": "true",
+      "order": 112,
+      "description": "resource.api-development-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-development-best-practices.outcomes",
+        "resource.api-development-best-practices.outcomes.1",
+        "resource.api-development-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-development-best-practices.steps",
+          "resource.api-development-best-practices.steps.1"
+        ],
+        "tips": [
+          "resource.api-development-best-practices.tips",
+          "resource.api-development-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline",
+      "draft": "true"
+    },
+    {
+      "id": "api-metrics-and-analytics",
+      "title": "resource.api-metrics-and-analytics.title",
+      "slug": "resources/api-metrics-and-analytics",
+      "icon": "edit-document-outline",
+      "daft": "true",
+      "order": 119,
+      "description": "resource.api-metrics-and-analytics.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-metrics-and-analytics.outcomes",
+        "resource.api-metrics-and-analytics.outcomes.1",
+        "resource.api-metrics-and-analytics.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-metrics-and-analytics.steps",
+          "resource.api-metrics-and-analytics.steps.1",
+          "resource.api-metrics-and-analytics.steps.2"
+        ],
+        "tips": [
+          "resource.api-metrics-and-analytics.tips",
+          "resource.api-metrics-and-analytics.tips.1"
+        ]
+      },
+      "category": "guideline",
+      "draft": "true"
+    },
+    {
+      "id": "api-onboarding-best-practices",
+      "title": "resource.api-onboarding-best-practices.title",
+      "slug": "resources/api-onboarding-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 121,
+      "description": "resource.api-onboarding-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-onboarding-best-practices.outcomes",
+        "resource.api-onboarding-best-practices.outcomes.1",
+        "resource.api-onboarding-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-onboarding-best-practices.steps",
+          "resource.api-onboarding-best-practices.steps.1",
+          "resource.api-onboarding-best-practices.steps.2"
+        ],
+        "tips": [
+          "resource.api-onboarding-best-practices.tips",
+          "resource.api-onboarding-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-portfolio-management-guidelines",
+      "title": "resource.api-portfolio-management-guidelines.title",
+      "slug": "resources/api-portfolio-management-guidelines",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 123,
+      "description": "resource.api-portfolio-management-guidelines.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-portfolio-management-guidelines.outcomes",
+        "resource.api-portfolio-management-guidelines.outcomes.1",
+        "resource.api-portfolio-management-guidelines.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-portfolio-management-guidelines.steps",
+          "resource.api-portfolio-management-guidelines.steps.1",
+          "resource.api-portfolio-management-guidelines.steps.2",
+          "resource.api-portfolio-management-guidelines.steps.3"
+        ],
+        "tips": [
+          "resource.api-portfolio-management-guidelines.tips",
+          "resource.api-portfolio-management-guidelines.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-security-best-practices",
+      "title": "resource.api-security-best-practices.title",
+      "slug": "resources/api-security-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 130,
+      "description": "resource.api-security-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-security-best-practices.outcomes",
+        "resource.api-security-best-practices.outcomes.1",
+        "resource.api-security-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-security-best-practices.steps",
+          "resource.api-security-best-practices.steps.1",
+          "resource.api-security-best-practices.steps.2"
+        ],
+        "tips": [
+          "resource.api-security-best-practices.tips",
+          "resource.api-security-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-team-structure-guidelines",
+      "title": "resource.api-team-structure-guidelines.title",
+      "slug": "resources/api-team-structure-guidelines",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 132,
+      "description": "resource.api-team-structure-guidelines.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-team-structure-guidelines.outcomes",
+        "resource.api-team-structure-guidelines.outcomes.1",
+        "resource.api-team-structure-guidelines.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-team-structure-guidelines.steps"
+        ],
+        "tips": [
+          "resource.api-team-structure-guidelines.tips",
+          "resource.api-team-structure-guidelines.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-testing-best-practices",
+      "title": "resource.api-testing-best-practices.title",
+      "slug": "resources/api-testing-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 133,
+      "description": "resource.api-testing-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-testing-best-practices.outcomes",
+        "resource.api-testing-best-practices.outcomes.1",
+        "resource.api-testing-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-testing-best-practices.steps",
+          "resource.api-testing-best-practices.steps.1",
+          "resource.api-testing-best-practices.steps.2"
+        ],
+        "tips": [
+          "resource.api-testing-best-practices.tips",
+          "resource.api-testing-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-training-programs",
+      "title": "resource.api-training-programs.title",
+      "slug": "resources/api-training-programs",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 134,
+      "description": "resource.api-training-programs.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-training-programs.outcomes",
+        "resource.api-training-programs.outcomes.1",
+        "resource.api-training-programs.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-training-programs.steps",
+          "resource.api-training-programs.steps.1",
+          "resource.api-training-programs.steps.2",
+          "resource.api-training-programs.steps.3"
+        ],
+        "tips": [
+          "resource.api-training-programs.tips",
+          "resource.api-training-programs.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-versioning-best-practices",
+      "title": "resource.api-versioning-best-practices.title",
+      "slug": "resources/api-versioning-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 138,
+      "description": "resource.api-versioning-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.api-versioning-best-practices.outcomes",
+        "resource.api-versioning-best-practices.outcomes.1",
+        "resource.api-versioning-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-versioning-best-practices.steps"
+        ],
+        "tips": [
+          "resource.api-versioning-best-practices.tips",
+          "resource.api-versioning-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "apiops-CI-CD-for-apis",
+      "title": "resource.apiops-CI-CD-for-apis.title",
+      "slug": "resources/apiops-CI-CD-for-apis",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 140,
+      "description": "resource.apiops-CI-CD-for-apis.description",
+      "image": "",
+      "outcomes": [
+        "resource.apiops-CI-CD-for-apis.outcomes",
+        "resource.apiops-CI-CD-for-apis.outcomes.1",
+        "resource.apiops-CI-CD-for-apis.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.apiops-CI-CD-for-apis.steps",
+          "resource.apiops-CI-CD-for-apis.steps.1",
+          "resource.apiops-CI-CD-for-apis.steps.2",
+          "resource.apiops-CI-CD-for-apis.steps.3"
+        ],
+        "tips": [
+          "resource.apiops-CI-CD-for-apis.tips",
+          "resource.apiops-CI-CD-for-apis.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "competitor-analysis-template",
+      "title": "resource.competitor-analysis-template.title",
+      "slug": "resources/competitor-analysis-template",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 143,
+      "description": "resource.competitor-analysis-template.description",
+      "image": "",
+      "outcomes": [
+        "resource.competitor-analysis-template.outcomes",
+        "resource.competitor-analysis-template.outcomes.1",
+        "resource.competitor-analysis-template.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.competitor-analysis-template.steps",
+          "resource.competitor-analysis-template.steps.1"
+        ],
+        "tips": [
+          "resource.competitor-analysis-template.tips",
+          "resource.competitor-analysis-template.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "contract-first-design",
+      "title": "resource.contract-first-design.title",
+      "slug": "resources/contract-first-design",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 146,
+      "description": "resource.contract-first-design.description",
+      "image": "",
+      "outcomes": [
+        "resource.contract-first-design.outcomes",
+        "resource.contract-first-design.outcomes.1",
+        "resource.contract-first-design.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.contract-first-design.steps",
+          "resource.contract-first-design.steps.1",
+          "resource.contract-first-design.steps.2"
+        ],
+        "tips": [
+          "resource.contract-first-design.tips",
+          "resource.contract-first-design.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "cross-functional-collaboration-best-practices",
+      "title": "resource.cross-functional-collaboration-best-practices.title",
+      "slug": "resources/cross-functional-collaboration-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 147,
+      "description": "resource.cross-functional-collaboration-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.cross-functional-collaboration-best-practices.outcomes",
+        "resource.cross-functional-collaboration-best-practices.outcomes.1",
+        "resource.cross-functional-collaboration-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.cross-functional-collaboration-best-practices.steps"
+        ],
+        "tips": [
+          "resource.cross-functional-collaboration-best-practices.tips",
+          "resource.cross-functional-collaboration-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "data-privacy-guidelines",
+      "title": "resource.data-privacy-guidelines.title",
+      "slug": "resources/data-privacy-guidelines",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 148,
+      "description": "resource.data-privacy-guidelines.description",
+      "image": "",
+      "outcomes": [
+        "resource.data-privacy-guidelines.outcomes",
+        "resource.data-privacy-guidelines.outcomes.1",
+        "resource.data-privacy-guidelines.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.data-privacy-guidelines.steps"
+        ],
+        "tips": [
+          "resource.data-privacy-guidelines.tips",
+          "resource.data-privacy-guidelines.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "domain-canvas",
+      "title": "resource.domain-canvas.title",
+      "slug": "resources/domain-canvas",
+      "icon": "dashboard-outline",
+      "order": 152,
+      "description": "resource.domain-canvas.description",
+      "canvas": "domainCanvas",
+      "outcomes": [
+        "resource.domain-canvas.outcomes",
+        "resource.domain-canvas.outcomes.1",
+        "resource.domain-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.domain-canvas.steps"
+        ],
+        "tips": [
+          "resource.domain-canvas.tips",
+          "resource.domain-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "ecosystem-vision-template",
+      "title": "resource.ecosystem-vision-template.title",
+      "slug": "resources/ecosystem-vision-template",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 154,
+      "description": "resource.ecosystem-vision-template.description",
+      "image": "",
+      "outcomes": [
+        "resource.ecosystem-vision-template.outcomes",
+        "resource.ecosystem-vision-template.outcomes.1",
+        "resource.ecosystem-vision-template.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.ecosystem-vision-template.steps",
+          "resource.ecosystem-vision-template.steps.1",
+          "resource.ecosystem-vision-template.steps.2",
+          "resource.ecosystem-vision-template.steps.3",
+          "resource.ecosystem-vision-template.steps.4",
+          "resource.ecosystem-vision-template.steps.5",
+          "resource.ecosystem-vision-template.steps.6"
+        ],
+        "tips": [
+          "resource.ecosystem-vision-template.tips",
+          "resource.ecosystem-vision-template.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "industry-standards-and-best-practices",
+      "title": "resource.industry-standards-and-best-practices.title",
+      "slug": "resources/industry-standards-and-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 157,
+      "description": "resource.industry-standards-and-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.industry-standards-and-best-practices.outcomes",
+        "resource.industry-standards-and-best-practices.outcomes.1",
+        "resource.industry-standards-and-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.industry-standards-and-best-practices.steps"
+        ],
+        "tips": [
+          "resource.industry-standards-and-best-practices.tips",
+          "resource.industry-standards-and-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "partner-integration-guidelines",
+      "title": "resource.partner-integration-guidelines.title",
+      "slug": "resources/partner-integration-guidelines",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 164,
+      "description": "resource.partner-integration-guidelines.description",
+      "image": "",
+      "outcomes": [
+        "resource.partner-integration-guidelines.outcomes",
+        "resource.partner-integration-guidelines.outcomes.1",
+        "resource.partner-integration-guidelines.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.partner-integration-guidelines.steps",
+          "resource.partner-integration-guidelines.steps.1"
+        ],
+        "tips": [
+          "resource.partner-integration-guidelines.tips",
+          "resource.partner-integration-guidelines.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "role-communication-best-practices",
+      "title": "resource.role-communication-best-practices.title",
+      "slug": "resources/role-communication-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 167,
+      "description": "resource.role-communication-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.role-communication-best-practices.outcomes",
+        "resource.role-communication-best-practices.outcomes.1",
+        "resource.role-communication-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.role-communication-best-practices.steps",
+          "resource.role-communication-best-practices.steps.1"
+        ],
+        "tips": [
+          "resource.role-communication-best-practices.tips",
+          "resource.role-communication-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "scalable-infrastructure-best-practices",
+      "title": "resource.scalable-infrastructure-best-practices.title",
+      "slug": "resources/scalable-infrastructure-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 168,
+      "description": "resource.scalable-infrastructure-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.scalable-infrastructure-best-practices.outcomes",
+        "resource.scalable-infrastructure-best-practices.outcomes.1",
+        "resource.scalable-infrastructure-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.scalable-infrastructure-best-practices.steps",
+          "resource.scalable-infrastructure-best-practices.steps.1"
+        ],
+        "tips": [
+          "resource.scalable-infrastructure-best-practices.tips",
+          "resource.scalable-infrastructure-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "service-agreement-template",
+      "title": "resource.service-agreement-template.title",
+      "slug": "resources/service-agreement-template",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 172,
+      "description": "resource.service-agreement-template.description",
+      "image": "",
+      "outcomes": [
+        "resource.service-agreement-template.outcomes",
+        "resource.service-agreement-template.outcomes.1",
+        "resource.service-agreement-template.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.service-agreement-template.steps",
+          "resource.service-agreement-template.steps.1",
+          "resource.service-agreement-template.steps.2"
+        ],
+        "tips": [
+          "resource.service-agreement-template.tips",
+          "resource.service-agreement-template.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "stakeholder-engagement-best-practices",
+      "title": "resource.stakeholder-engagement-best-practices.title",
+      "slug": "resources/stakeholder-engagement-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 173,
+      "description": "resource.stakeholder-engagement-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.stakeholder-engagement-best-practices.outcomes",
+        "resource.stakeholder-engagement-best-practices.outcomes.1",
+        "resource.stakeholder-engagement-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.stakeholder-engagement-best-practices.steps"
+        ],
+        "tips": [
+          "resource.stakeholder-engagement-best-practices.tips",
+          "resource.stakeholder-engagement-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "test-automation-frameworks",
+      "title": "resource.test-automation-frameworks.title",
+      "slug": "resources/test-automation-frameworks",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 174,
+      "description": "resource.test-automation-frameworks.description",
+      "image": "",
+      "outcomes": [
+        "resource.test-automation-frameworks.outcomes",
+        "resource.test-automation-frameworks.outcomes.1",
+        "resource.test-automation-frameworks.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.test-automation-frameworks.steps"
+        ],
+        "tips": [
+          "resource.test-automation-frameworks.tips",
+          "resource.test-automation-frameworks.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "vendor-management-best-practices",
+      "title": "resource.vendor-management-best-practices.title",
+      "slug": "resources/vendor-management-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 178,
+      "description": "resource.vendor-management-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.vendor-management-best-practices.outcomes",
+        "resource.vendor-management-best-practices.outcomes.1",
+        "resource.vendor-management-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.vendor-management-best-practices.steps",
+          "resource.vendor-management-best-practices.steps.1"
+        ],
+        "tips": [
+          "resource.vendor-management-best-practices.tips",
+          "resource.vendor-management-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-audit-checklist",
+      "title": "resource.api-audit-checklist.title",
+      "slug": "resources/api-audit-checklist",
+      "icon": "check-box-outline",
+      "order": 13,
+      "description": "resource.api-audit-checklist.description",
+      "image": "",
+      "snippet": "/snippets/api-audit-checklist.md",
+      "outcomes": [
+        "resource.api-audit-checklist.outcomes",
+        "resource.api-audit-checklist.outcomes.1",
+        "resource.api-audit-checklist.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-audit-checklist.steps",
+          "resource.api-audit-checklist.steps.1",
+          "resource.api-audit-checklist.steps.2"
+        ],
+        "tips": [
+          "resource.api-audit-checklist.tips",
+          "resource.api-audit-checklist.tips.1"
+        ]
+      },
+      "category": "checklist"
+    },
+    {
+      "id": "api-business-model-canvas",
+      "title": "resource.api-business-model-canvas.title",
+      "slug": "resources/api-business-model-canvas",
+      "icon": "dashboard-outline",
+      "order": 3,
+      "description": "resource.api-business-model-canvas.description",
+      "canvas": "apiBusinessModelCanvas",
+      "outcomes": [
+        "resource.api-business-model-canvas.outcomes",
+        "resource.api-business-model-canvas.outcomes.1",
+        "resource.api-business-model-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-business-model-canvas.steps",
+          "resource.api-business-model-canvas.steps.1",
+          "resource.api-business-model-canvas.steps.2",
+          "resource.api-business-model-canvas.steps.3",
+          "resource.api-business-model-canvas.steps.4",
+          "resource.api-business-model-canvas.steps.5",
+          "resource.api-business-model-canvas.steps.6"
+        ],
+        "tips": [
+          "resource.api-business-model-canvas.tips",
+          "resource.api-business-model-canvas.tips.1",
+          "resource.api-business-model-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "api-design-principles",
+      "title": "resource.api-design-principles.title",
+      "slug": "resources/api-design-principles",
+      "icon": "edit-document-outline",
+      "order": 14,
+      "description": "resource.api-design-principles.description",
+      "image": "",
+      "snippet": "/snippets/api-style-guide.md",
+      "outcomes": [
+        "resource.api-design-principles.outcomes",
+        "resource.api-design-principles.outcomes.1",
+        "resource.api-design-principles.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-design-principles.steps",
+          "resource.api-design-principles.steps.1",
+          "resource.api-design-principles.steps.2",
+          "resource.api-design-principles.steps.3",
+          "resource.api-design-principles.steps.4"
+        ],
+        "tips": [
+          "resource.api-design-principles.tips",
+          "resource.api-design-principles.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "api-value-proposition-canvas",
+      "title": "resource.api-value-proposition-canvas.title",
+      "slug": "resources/api-value-proposition-canvas",
+      "icon": "dashboard-outline",
+      "order": 2,
+      "description": "resource.api-value-proposition-canvas.description",
+      "canvas": "apiValuePropositionCanvas",
+      "outcomes": [
+        "resource.api-value-proposition-canvas.outcomes",
+        "resource.api-value-proposition-canvas.outcomes.1",
+        "resource.api-value-proposition-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.api-value-proposition-canvas.steps",
+          "resource.api-value-proposition-canvas.steps.1",
+          "resource.api-value-proposition-canvas.steps.2",
+          "resource.api-value-proposition-canvas.steps.3"
+        ],
+        "tips": [
+          "resource.api-value-proposition-canvas.tips",
+          "resource.api-value-proposition-canvas.tips.1",
+          "resource.api-value-proposition-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "business-impact-canvas",
+      "title": "resource.business-impact-canvas.title",
+      "slug": "resources/business-impact-canvas",
+      "icon": "dashboard-outline",
+      "order": 4,
+      "description": "resource.business-impact-canvas.description",
+      "canvas": "businessImpactCanvas",
+      "outcomes": [
+        "resource.business-impact-canvas.outcomes",
+        "resource.business-impact-canvas.outcomes.1",
+        "resource.business-impact-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.business-impact-canvas.steps",
+          "resource.business-impact-canvas.steps.1",
+          "resource.business-impact-canvas.steps.2",
+          "resource.business-impact-canvas.steps.3",
+          "resource.business-impact-canvas.steps.4",
+          "resource.business-impact-canvas.steps.5"
+        ],
+        "tips": [
+          "resource.business-impact-canvas.tips",
+          "resource.business-impact-canvas.tips.1",
+          "resource.business-impact-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "capacity-canvas",
+      "title": "resource.capacity-canvas.title",
+      "slug": "resources/capacity-canvas",
+      "icon": "dashboard-outline",
+      "order": 7,
+      "description": "resource.capacity-canvas.description",
+      "canvas": "capacityCanvas",
+      "outcomes": [
+        "resource.capacity-canvas.outcomes",
+        "resource.capacity-canvas.outcomes.1",
+        "resource.capacity-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.capacity-canvas.steps",
+          "resource.capacity-canvas.steps.1",
+          "resource.capacity-canvas.steps.2",
+          "resource.capacity-canvas.steps.3",
+          "resource.capacity-canvas.steps.4"
+        ],
+        "tips": [
+          "resource.capacity-canvas.tips",
+          "resource.capacity-canvas.tips.1",
+          "resource.capacity-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "customer-journey-canvas",
+      "title": "resource.customer-journey-canvas.title",
+      "slug": "resources/customer-journey-canvas",
+      "icon": "dashboard-outline",
+      "order": 1,
+      "description": "resource.customer-journey-canvas.description",
+      "canvas": "customerJourneyCanvas",
+      "outcomes": [
+        "resource.customer-journey-canvas.outcomes",
+        "resource.customer-journey-canvas.outcomes.1",
+        "resource.customer-journey-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.customer-journey-canvas.steps",
+          "resource.customer-journey-canvas.steps.1",
+          "resource.customer-journey-canvas.steps.2",
+          "resource.customer-journey-canvas.steps.3",
+          "resource.customer-journey-canvas.steps.4",
+          "resource.customer-journey-canvas.steps.5",
+          "resource.customer-journey-canvas.steps.6",
+          "resource.customer-journey-canvas.steps.7"
+        ],
+        "tips": [
+          "resource.customer-journey-canvas.tips",
+          "resource.customer-journey-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "event-canvas",
+      "title": "resource.event-canvas.title",
+      "slug": "resources/event-canvas",
+      "icon": "dashboard-outline",
+      "order": 12,
+      "description": "resource.event-canvas.description",
+      "canvas": "eventCanvas",
+      "outcomes": [
+        "resource.event-canvas.outcomes",
+        "resource.event-canvas.outcomes.1",
+        "resource.event-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.event-canvas.steps",
+          "resource.event-canvas.steps.1",
+          "resource.event-canvas.steps.2",
+          "resource.event-canvas.steps.3"
+        ],
+        "tips": [
+          "resource.event-canvas.tips",
+          "resource.event-canvas.tips.1",
+          "resource.event-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "graphql-canvas",
+      "title": "resource.graphql-canvas.title",
+      "slug": "resources/graphql-canvas",
+      "icon": "dashboard-outline",
+      "draft": "true",
+      "order": 11,
+      "description": "resource.graphql-canvas.description",
+      "canvas": "graphqlCanvas",
+      "outcomes": [
+        "resource.graphql-canvas.outcomes",
+        "resource.graphql-canvas.outcomes.1",
+        "resource.graphql-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.graphql-canvas.steps",
+          "resource.graphql-canvas.steps.1",
+          "resource.graphql-canvas.steps.2",
+          "resource.graphql-canvas.steps.3",
+          "resource.graphql-canvas.steps.4",
+          "resource.graphql-canvas.steps.5",
+          "resource.graphql-canvas.steps.6",
+          "resource.graphql-canvas.steps.7"
+        ],
+        "tips": [
+          "resource.graphql-canvas.tips",
+          "resource.graphql-canvas.tips.1",
+          "resource.graphql-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "interaction-canvas",
+      "title": "resource.interaction-canvas.title",
+      "slug": "resources/interaction-canvas",
+      "icon": "dashboard-outline",
+      "order": 9,
+      "description": "resource.interaction-canvas.description",
+      "canvas": "interactionCanvas",
+      "outcomes": [
+        "resource.interaction-canvas.outcomes",
+        "resource.interaction-canvas.outcomes.1",
+        "resource.interaction-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.interaction-canvas.steps",
+          "resource.interaction-canvas.steps.1",
+          "resource.interaction-canvas.steps.2",
+          "resource.interaction-canvas.steps.3",
+          "resource.interaction-canvas.steps.4"
+        ],
+        "tips": [
+          "resource.interaction-canvas.tips",
+          "resource.interaction-canvas.tips.1",
+          "resource.interaction-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "location-canvas",
+      "title": "resource.location-canvas.title",
+      "slug": "resources/location-canvas",
+      "icon": "dashboard-outline",
+      "order": 6,
+      "description": "resource.location-canvas.description",
+      "canvas": "locationsCanvas",
+      "outcomes": [
+        "resource.location-canvas.outcomes",
+        "resource.location-canvas.outcomes.1",
+        "resource.location-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.location-canvas.steps",
+          "resource.location-canvas.steps.1",
+          "resource.location-canvas.steps.2",
+          "resource.location-canvas.steps.3",
+          "resource.location-canvas.steps.4",
+          "resource.location-canvas.steps.5"
+        ],
+        "tips": [
+          "resource.location-canvas.tips",
+          "resource.location-canvas.tips.1",
+          "resource.location-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "rest-canvas",
+      "title": "resource.rest-canvas.title",
+      "slug": "resources/rest-canvas",
+      "icon": "dashboard-outline",
+      "order": 10,
+      "description": "resource.rest-canvas.description",
+      "canvas": "restCanvas",
+      "outcomes": [
+        "resource.rest-canvas.outcomes",
+        "resource.rest-canvas.outcomes.1",
+        "resource.rest-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.rest-canvas.steps",
+          "resource.rest-canvas.steps.1",
+          "resource.rest-canvas.steps.2",
+          "resource.rest-canvas.steps.3"
+        ],
+        "tips": [
+          "resource.rest-canvas.tips",
+          "resource.rest-canvas.tips.1",
+          "resource.rest-canvas.tips.2"
+        ]
+      },
+      "category": "canvas"
+    }
+  ]
+}

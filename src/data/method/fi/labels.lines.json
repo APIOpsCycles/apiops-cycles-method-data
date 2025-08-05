@@ -1,0 +1,16 @@
+{
+  "lines.title": "Metrolinjat",
+  "lines.description": "API-linjausten kokoelma, joka ohjaa APIen kehittämistä ja hallintaa.",
+  "line.business-opportunities-line.title": "Liiketoimintamahdollisuudet linja",
+  "line.business-opportunities-line.description": "Keskittyy tunnistamaan ja hyödyntämään liiketoimintamahdollisuuksia sovellusrajapintojen avulla.",
+  "line.platform-architecture-line.title": "Alusta-arkkitehtuurilinja",
+  "line.platform-architecture-line.description": "Kattaa API-alustojen arkkitehtuurinäkökohtia.",
+  "line.api-design-line.title": "API-suunnittelulinja",
+  "line.api-design-line.description": "Keskittyy APIen suunnitteluperiaatteisiin ja -käytäntöihin.",
+  "line.delivery-line.title": "Toimituslinja",
+  "line.delivery-line.description": "Kattaa APIen toimitusprosessit ja -käytännöt.",
+  "line.publishing-and-adoption-line.title": "Julkaisu- ja hyväksymislinja",
+  "line.publishing-and-adoption-line.description": "Keskittyy API-rajapintojen julkaisemiseen ja sen varmistamiseen, että kuluttajat hyväksyvät ne.",
+  "line.operating-model-line.title": "Toimintamalli Line",
+  "line.operating-model-line.description": "Kattaa API-hallinnan ja -hallinnan toimintamallin."
+}

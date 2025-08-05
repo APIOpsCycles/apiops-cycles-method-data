@@ -1,0 +1,1039 @@
+{
+  "core-stations": {
+    "title": "group.core-stations.title",
+    "slug": "core-stations",
+    "description": "group.core-stations.description",
+    "order": 1,
+    "icon": "train-outline",
+    "items": [
+      {
+        "id": "api-product-strategy",
+        "title": "station.api-product-strategy.title",
+        "slug": "method/api-product-strategy",
+        "order": 1,
+        "icon": "strategy-outline",
+        "description": "station.api-product-strategy.description",
+        "why_it_matters": "station.api-product-strategy.why_it_matters",
+        "outcomes": [
+          "station.api-product-strategy.outcomes",
+          "station.api-product-strategy.outcomes.1",
+          "station.api-product-strategy.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-product-strategy.how_it_works",
+            "resource": "customer-journey-canvas"
+          },
+          {
+            "step": "station.api-product-strategy.how_it_works.1",
+            "resource": "domain-canvas"
+          },
+          {
+            "step": "station.api-product-strategy.how_it_works.2",
+            "resource": "api-value-proposition-canvas"
+          },
+          {
+            "step": "station.api-product-strategy.how_it_works.3",
+            "resource": "api-business-model-canvas"
+          }
+        ],
+        "apply_in_work": "station.api-product-strategy.apply_in_work"
+      },
+      {
+        "id": "api-consumer-experience",
+        "title": "station.api-consumer-experience.title",
+        "slug": "method/api-consumer-experience",
+        "order": 2,
+        "icon": "deployed-code-account-outline",
+        "description": "station.api-consumer-experience.description",
+        "why_it_matters": "station.api-consumer-experience.why_it_matters",
+        "outcomes": [
+          "station.api-consumer-experience.outcomes",
+          "station.api-consumer-experience.outcomes.1",
+          "station.api-consumer-experience.outcomes.2",
+          "station.api-consumer-experience.outcomes.3"
+        ],
+        "how-it-works": [
+          {
+            "step": "station.api-consumer-experience.how_it_works",
+            "resource": "customer-journey-canvas"
+          },
+          {
+            "step": "station.api-consumer-experience.how_it_works.1",
+            "resource": "api-onboarding-best-practices"
+          }
+        ],
+        "apply_in_work": "station.api-consumer-experience.apply_in_work"
+      },
+      {
+        "id": "api-platform-architecture",
+        "title": "station.api-platform-architecture.title",
+        "slug": "method/api-platform-architecture",
+        "order": 3,
+        "icon": "code-blocks-outline",
+        "description": "station.api-platform-architecture.description",
+        "why_it_matters": "station.api-platform-architecture.why_it_matters",
+        "outcomes": [
+          "station.api-platform-architecture.outcomes",
+          "station.api-platform-architecture.outcomes.1",
+          "station.api-platform-architecture.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-platform-architecture.how_it_works",
+            "resource": "business-impact-canvas"
+          },
+          {
+            "step": "station.api-platform-architecture.how_it_works.1",
+            "resource": "location-canvas"
+          },
+          {
+            "step": "station.api-platform-architecture.how_it_works.2",
+            "resource": "capacity-canvas"
+          },
+          {
+            "step": "station.api-platform-architecture.how_it_works.3",
+            "resource": "api-metrics-and-analytics"
+          }
+        ],
+        "apply_in_work": "station.api-platform-architecture.apply_in_work"
+      },
+      {
+        "id": "api-design",
+        "title": "station.api-design.title",
+        "slug": "method/api-design",
+        "order": 4,
+        "icon": "api",
+        "description": "station.api-design.description",
+        "why_it_matters": "station.api-design.why_it_matters",
+        "outcomes": [
+          "station.api-design.outcomes",
+          "station.api-design.outcomes.1",
+          "station.api-design.outcomes.2",
+          "station.api-design.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-design.how_it_works",
+            "resource": "domain-canvas"
+          },
+          {
+            "step": "station.api-design.how_it_works.1",
+            "resource": "interaction-canvas"
+          },
+          {
+            "step": "station.api-design.how_it_works.2",
+            "resource": "rest-canvas"
+          },
+          {
+            "step": "station.api-design.how_it_works.3",
+            "resource": "event-canvas"
+          },
+          {
+            "step": "station.api-design.how_it_works.4",
+            "resource": "graphql-canvas"
+          },
+          {
+            "step": "station.api-design.how_it_works.5",
+            "resource": "api-design-principles"
+          },
+          {
+            "step": "station.api-design.how_it_works.6",
+            "resource": "api-audit-checklist"
+          }
+        ],
+        "apply_in_work": "station.api-design.apply_in_work"
+      },
+      {
+        "id": "api-delivery",
+        "title": "station.api-delivery.title",
+        "slug": "method/api-delivery",
+        "order": 5,
+        "icon": "code",
+        "description": "station.api-delivery.description",
+        "why_it_matters": "station.api-delivery.why_it_matters",
+        "outcomes": [
+          "station.api-delivery.outcomes",
+          "station.api-delivery.outcomes.1",
+          "station.api-delivery.outcomes.2",
+          "station.api-delivery.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-delivery.how_it_works",
+            "resource": "api-development-best-practices"
+          },
+          {
+            "step": "station.api-delivery.how_it_works.1",
+            "resource": "contract-first-design"
+          },
+          {
+            "step": "station.api-delivery.how_it_works.2",
+            "resource": "api-testing-best-practices"
+          },
+          {
+            "step": "station.api-delivery.how_it_works.3",
+            "resource": "apiops-CI-CD-for-apis"
+          },
+          {
+            "step": "station.api-delivery.how_it_works.4",
+            "resource": "api-security-best-practices"
+          },
+          {
+            "step": "station.api-delivery.how_it_works.5",
+            "resource": "api-audit-checklist"
+          }
+        ],
+        "apply_in_work": "station.api-delivery.apply_in_work"
+      },
+      {
+        "id": "api-audit",
+        "title": "station.api-audit.title",
+        "slug": "method/api-audit",
+        "order": 6,
+        "icon": "check-box-outline",
+        "description": "station.api-audit.description",
+        "why_it_matters": "station.api-audit.why_it_matters",
+        "outcomes": [
+          "station.api-audit.outcomes",
+          "station.api-audit.outcomes.1",
+          "station.api-audit.outcomes.2",
+          "station.api-audit.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-audit.how_it_works",
+            "resource": "api-audit-checklist"
+          },
+          {
+            "step": "station.api-audit.how_it_works.1",
+            "resource": "api-compliance-best-practices"
+          },
+          {
+            "step": "station.api-audit.how_it_works.2"
+          }
+        ],
+        "apply_in_work": "station.api-audit.apply_in_work"
+      },
+      {
+        "id": "api-publishing",
+        "title": "station.api-publishing.title",
+        "slug": "method/api-publishing",
+        "order": 7,
+        "icon": "deployed-code-outline",
+        "description": "station.api-publishing.description",
+        "why_it_matters": "station.api-publishing.why_it_matters",
+        "outcomes": [
+          "station.api-publishing.outcomes",
+          "station.api-publishing.outcomes.1",
+          "station.api-publishing.outcomes.2",
+          "station.api-publishing.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-publishing.how_it_works",
+            "resource": "api-publishing-guidelines"
+          },
+          {
+            "step": "station.api-publishing.how_it_works.1",
+            "resource": "api-onboarding-best-practices"
+          },
+          {
+            "step": "station.api-publishing.how_it_works.2",
+            "resource": "api-audit-checklist"
+          }
+        ],
+        "apply_in_work": "station.api-publishing.apply_in_work"
+      },
+      {
+        "id": "monitoring-and-improving",
+        "title": "station.monitoring-and-improving.title",
+        "slug": "method/monitoring-and-improving",
+        "order": 8,
+        "icon": "analytics-outline",
+        "description": "station.monitoring-and-improving.description",
+        "why_it_matters": "station.monitoring-and-improving.why_it_matters",
+        "outcomes": [
+          "station.monitoring-and-improving.outcomes",
+          "station.monitoring-and-improving.outcomes.1",
+          "station.monitoring-and-improving.outcomes.2",
+          "station.monitoring-and-improving.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.monitoring-and-improving.how_it_works",
+            "resource": "api-metrics-and-analytics"
+          },
+          {
+            "step": "station.monitoring-and-improving.how_it_works.1",
+            "resource": "api-community-engagement-strategies"
+          },
+          {
+            "step": "station.monitoring-and-improving.how_it_works.2",
+            "resource": "apiops-CI/CD-for-apis"
+          }
+        ],
+        "apply_in_work": "station.monitoring-and-improving.apply_in_work"
+      }
+    ]
+  },
+  "sub-stations": {
+    "title": "group.sub-stations.title",
+    "slug": "sub-stations",
+    "description": "group.sub-stations.description",
+    "order": 0,
+    "icon": "flag-2-outline",
+    "items": [
+      {
+        "id": "user-experience",
+        "title": "station.user-experience.title",
+        "slug": "method/user-experience",
+        "order": 1,
+        "icon": "user-attributes-outline",
+        "description": "station.user-experience.description",
+        "why_it_matters": "station.user-experience.why_it_matters",
+        "outcomes": [
+          "station.user-experience.outcomes",
+          "station.user-experience.outcomes.1",
+          "station.user-experience.outcomes.2",
+          "station.user-experience.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.user-experience.how_it_works",
+            "resource": "customer-journey-canvas"
+          },
+          {
+            "step": "station.user-experience.how_it_works.1",
+            "resource": "customer-journey-canvas"
+          },
+          {
+            "step": "station.user-experience.how_it_works.2",
+            "resource": "customer-journey-canvas"
+          }
+        ],
+        "apply_in_work": "station.user-experience.apply_in_work"
+      },
+      {
+        "id": "market-insights",
+        "title": "station.market-insights.title",
+        "slug": "method/market-insights",
+        "order": 2,
+        "icon": "area-chart-outline",
+        "description": "station.market-insights.description",
+        "why_it_matters": "station.market-insights.why_it_matters",
+        "outcomes": [
+          "station.market-insights.outcomes",
+          "station.market-insights.outcomes.1",
+          "station.market-insights.outcomes.2",
+          "station.market-insights.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.market-insights.how_it_works",
+            "resource": "ecosystem-vision-template"
+          },
+          {
+            "step": "station.market-insights.how_it_works.1",
+            "resource": "competitor-analysis-template"
+          },
+          {
+            "step": "station.market-insights.how_it_works.2",
+            "resource": "industry-standards-and-best-practices"
+          }
+        ],
+        "apply_in_work": "station.market-insights.apply_in_work"
+      },
+      {
+        "id": "business-goals",
+        "title": "station.business-goals.title",
+        "slug": "method/business-goals",
+        "order": 3,
+        "icon": "business-center-outline",
+        "description": "station.business-goals.description",
+        "why_it_matters": "station.business-goals.why_it_matters",
+        "outcomes": [
+          "station.business-goals.outcomes",
+          "station.business-goals.outcomes.1",
+          "station.business-goals.outcomes.2",
+          "station.business-goals.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.business-goals.how_it_works",
+            "resource": "api-business-model-canvas"
+          },
+          {
+            "step": "station.business-goals.how_it_works.1",
+            "resource": "api-metrics-and-analytics"
+          },
+          {
+            "step": "station.business-goals.how_it_works.2",
+            "resource": "stakeholder-engagement-best-practices"
+          }
+        ],
+        "apply_in_work": "station.business-goals.apply_in_work"
+      },
+      {
+        "id": "competitive-analysis",
+        "title": "station.competitive-analysis.title",
+        "slug": "method/competitive-analysis",
+        "order": 4,
+        "icon": "trophy-outline",
+        "description": "station.competitive-analysis.description",
+        "why_it_matters": "station.competitive-analysis.why_it_matters",
+        "outcomes": [
+          "station.competitive-analysis.outcomes",
+          "station.competitive-analysis.outcomes.1",
+          "station.competitive-analysis.outcomes.2",
+          "station.competitive-analysis.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.competitive-analysis.how_it_works",
+            "resource": "competitor-analysis-template"
+          },
+          {
+            "step": "station.competitive-analysis.how_it_works.1",
+            "resource": "ecosystem-vision-template"
+          },
+          {
+            "step": "station.competitive-analysis.how_it_works.2",
+            "resource": "ecosystem-vision-template"
+          }
+        ],
+        "apply_in_work": "station.competitive-analysis.apply_in_work"
+      },
+      {
+        "id": "ecosystem-vision",
+        "title": "station.ecosystem-vision.title",
+        "slug": "method/ecosystem-vision",
+        "order": 5,
+        "icon": "globe-book-rounded",
+        "description": "station.ecosystem-vision.description",
+        "why_it_matters": "station.ecosystem-vision.why_it_matters",
+        "outcomes": [
+          "station.ecosystem-vision.outcomes",
+          "station.ecosystem-vision.outcomes.1",
+          "station.ecosystem-vision.outcomes.2",
+          "station.ecosystem-vision.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.ecosystem-vision.how_it_works",
+            "resource": "ecosystem-vision-template"
+          },
+          {
+            "step": "station.ecosystem-vision.how_it_works.1",
+            "resource": "ecosystem-vision-template"
+          },
+          {
+            "step": "station.ecosystem-vision.how_it_works.2",
+            "resource": "ecosystem-vision-template"
+          }
+        ],
+        "apply_in_work": "station.ecosystem-vision.apply_in_work"
+      },
+      {
+        "id": "scalable-infrastructure",
+        "title": "station.scalable-infrastructure.title",
+        "slug": "method/scalable-infrastructure",
+        "order": 6,
+        "icon": "cloud-done-outline",
+        "description": "station.scalable-infrastructure.description",
+        "why_it_matters": "station.scalable-infrastructure.why_it_matters",
+        "outcomes": [
+          "station.scalable-infrastructure.outcomes",
+          "station.scalable-infrastructure.outcomes.1",
+          "station.scalable-infrastructure.outcomes.2",
+          "station.scalable-infrastructure.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.scalable-infrastructure.how_it_works",
+            "resource": "scalable-infrastructure-best-practices"
+          },
+          {
+            "step": "station.scalable-infrastructure.how_it_works.1",
+            "resource": "capacity-canvas"
+          },
+          {
+            "step": "station.scalable-infrastructure.how_it_works.2",
+            "resource": "scalable-infrastructure-best-practices"
+          }
+        ],
+        "apply_in_work": "station.scalable-infrastructure.apply_in_work"
+      },
+      {
+        "id": "legal-and-compliance",
+        "title": "station.legal-and-compliance.title",
+        "slug": "method/legal-and-compliance",
+        "order": 7,
+        "icon": "gavel-rounded",
+        "description": "station.legal-and-compliance.description",
+        "why_it_matters": "station.legal-and-compliance.why_it_matters",
+        "outcomes": [
+          "station.legal-and-compliance.outcomes",
+          "station.legal-and-compliance.outcomes.1",
+          "station.legal-and-compliance.outcomes.2",
+          "station.legal-and-compliance.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.legal-and-compliance.how_it_works",
+            "resource": "api-compliance-best-practices"
+          },
+          {
+            "step": "station.legal-and-compliance.how_it_works.1",
+            "resource": "api-compliance-best-practices"
+          },
+          {
+            "step": "station.legal-and-compliance.how_it_works.2",
+            "resource": "api-compliance-best-practices"
+          }
+        ],
+        "apply_in_work": "station.legal-and-compliance.apply_in_work"
+      },
+      {
+        "id": "security-and-privacy",
+        "title": "station.security-and-privacy.title",
+        "slug": "method/security-and-privacy",
+        "order": 8,
+        "icon": "cloud-lock-outline",
+        "description": "station.security-and-privacy.description",
+        "why_it_matters": "station.security-and-privacy.why_it_matters",
+        "outcomes": [
+          "station.security-and-privacy.outcomes",
+          "station.security-and-privacy.outcomes.1",
+          "station.security-and-privacy.outcomes.2",
+          "station.security-and-privacy.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.security-and-privacy.how_it_works",
+            "resource": "api-security-best-practices"
+          },
+          {
+            "step": "station.security-and-privacy.how_it_works.1",
+            "resource": "data-privacy-guidelines"
+          },
+          {
+            "step": "station.security-and-privacy.how_it_works.2",
+            "resource": ""
+          }
+        ],
+        "apply_in_work": "station.security-and-privacy.apply_in_work"
+      },
+      {
+        "id": "design-standards",
+        "title": "station.design-standards.title",
+        "slug": "method/design-standards",
+        "order": 9,
+        "icon": "design-services-outline",
+        "description": "station.design-standards.description",
+        "why_it_matters": "station.design-standards.why_it_matters",
+        "outcomes": [
+          "station.design-standards.outcomes",
+          "station.design-standards.outcomes.1",
+          "station.design-standards.outcomes.2",
+          "station.design-standards.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.design-standards.how_it_works",
+            "resource": "api-design-principles"
+          },
+          {
+            "step": "station.design-standards.how_it_works.1",
+            "resource": ""
+          },
+          {
+            "step": "station.design-standards.how_it_works.2",
+            "resource": "api-audit-checklist"
+          }
+        ],
+        "apply_in_work": "station.design-standards.apply_in_work"
+      },
+      {
+        "id": "vendor-management",
+        "title": "station.vendor-management.title",
+        "slug": "method/vendor-management",
+        "order": 10,
+        "icon": "handshake-outline",
+        "description": "station.vendor-management.description",
+        "why_it_matters": "station.vendor-management.why_it_matters",
+        "outcomes": [
+          "station.vendor-management.outcomes",
+          "station.vendor-management.outcomes.1",
+          "station.vendor-management.outcomes.2",
+          "station.vendor-management.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.vendor-management.how_it_works",
+            "resource": "vendor-management-best-practices"
+          },
+          {
+            "step": "station.vendor-management.how_it_works.1",
+            "resource": "vendor-management-best-practices"
+          },
+          {
+            "step": "station.vendor-management.how_it_works.2",
+            "resource": "vendor-management-best-practices"
+          }
+        ],
+        "apply_in_work": "station.vendor-management.apply_in_work"
+      },
+      {
+        "id": "contract-design",
+        "title": "station.contract-design.title",
+        "slug": "method/contract-design",
+        "order": 11,
+        "icon": "folder-code-outline",
+        "description": "station.contract-design.description",
+        "why_it_matters": "station.contract-design.why_it_matters",
+        "outcomes": [
+          "station.contract-design.outcomes",
+          "station.contract-design.outcomes.1",
+          "station.contract-design.outcomes.2",
+          "station.contract-design.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.contract-design.how_it_works",
+            "resource": "contract-first-design"
+          },
+          {
+            "step": "station.contract-design.how_it_works.1",
+            "resource": "contract-first-design"
+          },
+          {
+            "step": "station.contract-design.how_it_works.2",
+            "resource": "api-audit-checklist"
+          }
+        ],
+        "apply_in_work": "station.contract-design.apply_in_work"
+      },
+      {
+        "id": "development",
+        "title": "station.development.title",
+        "slug": "method/development",
+        "order": 12,
+        "icon": "deployed-code-outline",
+        "description": "station.development.description",
+        "why_it_matters": "station.development.why_it_matters",
+        "outcomes": [
+          "station.development.outcomes",
+          "station.development.outcomes.1",
+          "station.development.outcomes.2",
+          "station.development.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.development.how_it_works",
+            "resource": "api-development-best-practices"
+          },
+          {
+            "step": "station.development.how_it_works.1",
+            "resource": "contract-first-design"
+          },
+          {
+            "step": "station.development.how_it_works.2",
+            "resource": "api-development-best-practices"
+          }
+        ],
+        "apply_in_work": "station.development.apply_in_work"
+      },
+      {
+        "id": "ci-cd",
+        "title": "station.ci-cd.title",
+        "slug": "method/ci-cd",
+        "order": 13,
+        "icon": "deployed-code-update-outline",
+        "description": "station.ci-cd.description",
+        "why_it_matters": "station.ci-cd.why_it_matters",
+        "outcomes": [
+          "station.ci-cd.outcomes",
+          "station.ci-cd.outcomes.1",
+          "station.ci-cd.outcomes.2",
+          "station.ci-cd.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.ci-cd.how_it_works",
+            "resource": "apiops-CI-CD-for-apis"
+          },
+          {
+            "step": "station.ci-cd.how_it_works.1",
+            "resource": "api-testing-best-practices"
+          },
+          {
+            "step": "station.ci-cd.how_it_works.2",
+            "resource": "api-security-best-practices"
+          }
+        ],
+        "apply_in_work": "station.ci-cd.apply_in_work"
+      },
+      {
+        "id": "test-automation",
+        "title": "station.test-automation.title",
+        "slug": "method/test-automation",
+        "order": 14,
+        "icon": "deployed-code-alert-outline",
+        "description": "station.test-automation.description",
+        "why_it_matters": "station.test-automation.why_it_matters",
+        "outcomes": [
+          "station.test-automation.outcomes",
+          "station.test-automation.outcomes.1",
+          "station.test-automation.outcomes.2",
+          "station.test-automation.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.test-automation.how_it_works",
+            "resource": "api-testing-best-practices"
+          },
+          {
+            "step": "station.test-automation.how_it_works.1",
+            "resource": "api-testing-best-practices"
+          },
+          {
+            "step": "station.test-automation.how_it_works.2",
+            "resource": "apiops-CI-CD-for-apis"
+          }
+        ],
+        "apply_in_work": "station.test-automation.apply_in_work"
+      },
+      {
+        "id": "release-management",
+        "title": "station.release-management.title",
+        "slug": "method/release-management",
+        "order": 15,
+        "icon": "rocket-launch-outline",
+        "description": "station.release-management.description",
+        "why_it_matters": "station.release-management.why_it_matters",
+        "outcomes": [
+          "station.release-management.outcomes",
+          "station.release-management.outcomes.1",
+          "station.release-management.outcomes.2",
+          "station.release-management.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.release-management.how_it_works",
+            "resource": "api-versioning-best-practices"
+          },
+          {
+            "step": "station.release-management.how_it_works.1",
+            "resource": "apiops-CI-CD-for-apis"
+          },
+          {
+            "step": "station.release-management.how_it_works.2",
+            "resource": ""
+          }
+        ],
+        "apply_in_work": "station.release-management.apply_in_work"
+      },
+      {
+        "id": "service-agreements",
+        "title": "station.service-agreements.title",
+        "slug": "method/service-agreements",
+        "order": 16,
+        "icon": "contract-outline",
+        "description": "station.service-agreements.description",
+        "why_it_matters": "station.service-agreements.why_it_matters",
+        "outcomes": [
+          "station.service-agreements.outcomes",
+          "station.service-agreements.outcomes.1",
+          "station.service-agreements.outcomes.2",
+          "station.service-agreements.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.service-agreements.how_it_works",
+            "resource": "service-agreement-template"
+          },
+          {
+            "step": "station.service-agreements.how_it_works.1",
+            "resource": "service-agreement-template"
+          },
+          {
+            "step": "station.service-agreements.how_it_works.2",
+            "resource": "service-agreement-template"
+          }
+        ],
+        "apply_in_work": "station.service-agreements.apply_in_work"
+      },
+      {
+        "id": "api-consumer-adoption",
+        "title": "station.api-consumer-adoption.title",
+        "slug": "method/api-consumer-adoption",
+        "order": 17,
+        "icon": "chart-data-outline",
+        "description": "station.api-consumer-adoption.description",
+        "why_it_matters": "station.api-consumer-adoption.why_it_matters",
+        "outcomes": [
+          "station.api-consumer-adoption.outcomes",
+          "station.api-consumer-adoption.outcomes.1",
+          "station.api-consumer-adoption.outcomes.2",
+          "station.api-consumer-adoption.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-consumer-adoption.how_it_works",
+            "resource": "api-onboarding-best-practices"
+          },
+          {
+            "step": "station.api-consumer-adoption.how_it_works.1",
+            "resource": "api-community-engagement-strategies"
+          },
+          {
+            "step": "station.api-consumer-adoption.how_it_works.2",
+            "resource": "api-community-engagement-strategies"
+          }
+        ],
+        "apply_in_work": "station.api-consumer-adoption.apply_in_work"
+      },
+      {
+        "id": "api-promotion",
+        "title": "station.api-promotion.title",
+        "slug": "method/api-promotion",
+        "order": 18,
+        "icon": "brand-awareness-outline",
+        "description": "station.api-promotion.description",
+        "why_it_matters": "station.api-promotion.why_it_matters",
+        "outcomes": [
+          "station.api-promotion.outcomes",
+          "station.api-promotion.outcomes.1",
+          "station.api-promotion.outcomes.2",
+          "station.api-promotion.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-promotion.how_it_works",
+            "resource": "api-community-engagement-strategies"
+          },
+          {
+            "step": "station.api-promotion.how_it_works.1",
+            "resource": "api-community-engagement-strategies"
+          },
+          {
+            "step": "station.api-promotion.how_it_works.2",
+            "resource": "api-community-engagement-strategies"
+          }
+        ],
+        "apply_in_work": "station.api-promotion.apply_in_work"
+      },
+      {
+        "id": "partner-integration",
+        "title": "station.partner-integration.title",
+        "slug": "method/partner-integration",
+        "order": 19,
+        "icon": "integration-instructions-outline",
+        "description": "station.partner-integration.description",
+        "why_it_matters": "station.partner-integration.why_it_matters",
+        "outcomes": [
+          "station.partner-integration.outcomes",
+          "station.partner-integration.outcomes.1",
+          "station.partner-integration.outcomes.2",
+          "station.partner-integration.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.partner-integration.how_it_works",
+            "resource": "ecosystem-vision-template"
+          },
+          {
+            "step": "station.partner-integration.how_it_works.1",
+            "resource": "partner-integration-guidelines"
+          },
+          {
+            "step": "station.partner-integration.how_it_works.2",
+            "resource": "partner-integration-guidelines"
+          }
+        ],
+        "apply_in_work": "station.partner-integration.apply_in_work"
+      },
+      {
+        "id": "api-mindset",
+        "title": "station.api-mindset.title",
+        "slug": "method/api-mindset",
+        "order": 20,
+        "icon": "psychology-outline",
+        "description": "station.api-mindset.description",
+        "why_it_matters": "station.api-mindset.why_it_matters",
+        "outcomes": [
+          "station.api-mindset.outcomes",
+          "station.api-mindset.outcomes.1",
+          "station.api-mindset.outcomes.2",
+          "station.api-mindset.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-mindset.how_it_works",
+            "resource": "ecosystem-vision-template"
+          },
+          {
+            "step": "station.api-mindset.how_it_works.1",
+            "resource": "cross-functional-collaboration-best-practices"
+          },
+          {
+            "step": "station.api-mindset.how_it_works.2",
+            "resource": "api-training-programs"
+          }
+        ],
+        "apply_in_work": "station.api-mindset.apply_in_work"
+      },
+      {
+        "id": "roles-and-responsibilities",
+        "title": "station.roles-and-responsibilities.title",
+        "slug": "method/roles-and-responsibilities",
+        "order": 21,
+        "icon": "manage-accounts-outline",
+        "description": "station.roles-and-responsibilities.description",
+        "why_it_matters": "station.roles-and-responsibilities.why_it_matters",
+        "outcomes": [
+          "station.roles-and-responsibilities.outcomes",
+          "station.roles-and-responsibilities.outcomes.1",
+          "station.roles-and-responsibilities.outcomes.2",
+          "station.roles-and-responsibilities.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.roles-and-responsibilities.how_it_works",
+            "resource": "api-team-structure-guidelines"
+          },
+          {
+            "step": "station.roles-and-responsibilities.how_it_works.1",
+            "resource": "role-communication-best-practices"
+          },
+          {
+            "step": "station.roles-and-responsibilities.how_it_works.2",
+            "resource": "role-communication-best-practices"
+          }
+        ],
+        "apply_in_work": "station.roles-and-responsibilities.apply_in_work"
+      },
+      {
+        "id": "upskilling",
+        "title": "station.upskilling.title",
+        "slug": "method/upskilling",
+        "order": 22,
+        "icon": "school-outline",
+        "description": "station.upskilling.description",
+        "why_it_matters": "station.upskilling.why_it_matters",
+        "outcomes": [
+          "station.upskilling.outcomes",
+          "station.upskilling.outcomes.1",
+          "station.upskilling.outcomes.2",
+          "station.upskilling.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.upskilling.how_it_works",
+            "resource": "api-training-programs"
+          },
+          {
+            "step": "station.upskilling.how_it_works.1",
+            "resource": "api-training-programs"
+          },
+          {
+            "step": "station.upskilling.how_it_works.2",
+            "resource": "api-training-programs"
+          }
+        ],
+        "apply_in_work": "station.upskilling.apply_in_work"
+      },
+      {
+        "id": "operating-guidelines",
+        "title": "station.operating-guidelines.title",
+        "slug": "method/operating-guidelines",
+        "order": 23,
+        "icon": "list-alt-outline",
+        "description": "station.operating-guidelines.description",
+        "why_it_matters": "station.operating-guidelines.why_it_matters",
+        "outcomes": [
+          "station.operating-guidelines.outcomes",
+          "station.operating-guidelines.outcomes.1",
+          "station.operating-guidelines.outcomes.2",
+          "station.operating-guidelines.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.operating-guidelines.how_it_works",
+            "resource": ""
+          },
+          {
+            "step": "station.operating-guidelines.how_it_works.1",
+            "resource": ""
+          },
+          {
+            "step": "station.operating-guidelines.how_it_works.2",
+            "resource": "api-metrics-and-analytics"
+          }
+        ],
+        "apply_in_work": "station.operating-guidelines.apply_in_work"
+      },
+      {
+        "id": "portfolio-management",
+        "title": "station.portfolio-management.title",
+        "slug": "method/portfolio-management",
+        "order": 24,
+        "icon": "cases-outline",
+        "description": "station.portfolio-management.description",
+        "why_it_matters": "station.portfolio-management.why_it_matters",
+        "outcomes": [
+          "station.portfolio-management.outcomes",
+          "station.portfolio-management.outcomes.1",
+          "station.portfolio-management.outcomes.2",
+          "station.portfolio-management.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.portfolio-management.how_it_works",
+            "resource": "api-portfolio-management-guidelines"
+          },
+          {
+            "step": "station.portfolio-management.how_it_works.1",
+            "resource": "api-portfolio-management-guidelines"
+          },
+          {
+            "step": "station.portfolio-management.how_it_works.2",
+            "resource": "api-portfolio-management-guidelines"
+          }
+        ],
+        "apply_in_work": "station.portfolio-management.apply_in_work"
+      },
+      {
+        "id": "budget-and-resource-management",
+        "title": "station.budget-and-resource-management.title",
+        "slug": "method/budget-and-resource-management",
+        "order": 25,
+        "icon": "money-bag-outline",
+        "description": "station.budget-and-resource-management.description",
+        "why_it_matters": "station.budget-and-resource-management.why_it_matters",
+        "outcomes": [
+          "station.budget-and-resource-management.outcomes",
+          "station.budget-and-resource-management.outcomes.1",
+          "station.budget-and-resource-management.outcomes.2",
+          "station.budget-and-resource-management.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.budget-and-resource-management.how_it_works",
+            "resource": "api-portfolio-management-guidelines"
+          },
+          {
+            "step": "station.budget-and-resource-management.how_it_works.1",
+            "resource": "api-portfolio-management-guidelines"
+          },
+          {
+            "step": "station.budget-and-resource-management.how_it_works.2",
+            "resource": "api-portfolio-management-guidelines"
+          }
+        ],
+        "apply_in_work": "station.budget-and-resource-management.apply_in_work"
+      }
+    ]
+  }
+}

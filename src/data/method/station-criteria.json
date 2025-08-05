@@ -1,0 +1,53 @@
+{
+  "api-product-strategy": [
+    "metrics-feedback-available",
+    "business-goals-defined",
+    "market-research-done",
+    "stakeholder-approval"
+  ],
+  "api-consumer-experience": [
+    "api-opportunity-documented",
+    "api-reusability",
+    "hide-backend-discrepancies",
+    "value-prop-validated",
+    "consumer-segments-identified",
+    "api-roadmap-defined"
+  ],
+  "api-platform-architecture": [
+    "api-reusability",
+    "hide-backend-discrepancies",
+    "value-prop-validated",
+    "consumer-segments-identified",
+    "api-roadmap-defined"
+  ],
+  "api-design": [
+    "architecture-patterns-validated",
+    "hide-backend-discrepancies",
+    "design-reflects-business-value",
+    "api-consistency"
+  ],
+  "api-delivery": [
+    "architecture-patterns-validated",
+    "hide-backend-discrepancies",
+    "design-reflects-business-value",
+    "api-consistency"
+  ],
+  "api-audit": [
+    "architecture-patterns-validated",
+    "design-reflects-business-value",
+    "api-description-available",
+    "api-consistency",
+    "api-contract-tested"
+  ],
+  "api-publishing": [
+    "audit-passed",
+    "audit-reports-shared",
+    "api-ready-for-publishing",
+    "api-documentation-ready"
+  ],
+  "monitoring-and-improving": [
+    "api-documentation-ready",
+    "consumer-support-ready",
+    "legal-compliance-clear"
+  ]
+}

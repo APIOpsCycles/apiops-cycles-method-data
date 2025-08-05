@@ -1,0 +1,16 @@
+{
+  "lines.title": "Metro-Linien",
+  "lines.description": "Eine Sammlung von API-Linien, die die Entwicklung und Verwaltung von APIs leiten.",
+  "line.business-opportunities-line.title": "Geschäftsmöglichkeiten Linie",
+  "line.business-opportunities-line.description": "Konzentriert sich auf die Identifizierung und Nutzung von Geschäftsmöglichkeiten durch APIs.",
+  "line.platform-architecture-line.title": "Plattform Architektur Linie",
+  "line.platform-architecture-line.description": "Behandelt die architektonischen Aspekte von API-Plattformen.",
+  "line.api-design-line.title": "API-Entwurfslinie",
+  "line.api-design-line.description": "Konzentriert sich auf die Designprinzipien und -praktiken für APIs.",
+  "line.delivery-line.title": "Zustellleitung",
+  "line.delivery-line.description": "Behandelt die Bereitstellungsprozesse und -praktiken für APIs.",
+  "line.publishing-and-adoption-line.title": "Veröffentlichungs- und Adoptionslinie",
+  "line.publishing-and-adoption-line.description": "Der Schwerpunkt liegt auf der Veröffentlichung von APIs und der Gewährleistung ihrer Annahme durch die Verbraucher.",
+  "line.operating-model-line.title": "Betriebsmodell Linie",
+  "line.operating-model-line.description": "Deckt das Betriebsmodell für die API-Verwaltung und -Governance ab."
+}
