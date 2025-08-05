@@ -1,7 +1,5 @@
 # APIOps Cycles Method
 
-Read more about the method at (https://www.apiopscycles.com/)
-
 This repository contains the source for the APIOps Cycles method, including resources such as canvases. It can be used for multiple purposes, such as the method website (https://www.apiopscycles.com/), which is generated from these files, and the Canvas Creator tool that allows creating, importing and exporting the canvases, and provides a UI. (https://canvascreator.apiopscycles.com/). 
 
 ## License
