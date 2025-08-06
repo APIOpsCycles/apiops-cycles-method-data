@@ -12,8 +12,8 @@
   ],
   "exports": {
     "./method/": "./src/data/method/",
-    "./canvasData": "./src/data/canvas/canvasData.json",
-    "./localizedData": "./src/data/canvas/localizedData.json",
+    "./canvasData.json": "./src/data/canvas/canvasData.json",
+    "./localizedData.json": "./src/data/canvas/localizedData.json",
     "./canvas/": "./src/data/canvas/import-export-templates/"
   },
   "scripts": {
