@@ -698,7 +698,7 @@
       "order": 13,
       "description": "resource.api-audit-checklist.description",
       "image": "",
-      "snippet": "/snippets/api-audit-checklist.md",
+      "snippet": "api-audit-checklist.md",
       "outcomes": [
         "resource.api-audit-checklist.outcomes",
         "resource.api-audit-checklist.outcomes.1",
@@ -756,7 +756,7 @@
       "order": 14,
       "description": "resource.api-design-principles.description",
       "image": "",
-      "snippet": "/snippets/api-style-guide.md",
+      "snippet": "api-style-guide.md",
       "outcomes": [
         "resource.api-design-principles.outcomes",
         "resource.api-design-principles.outcomes.1",
