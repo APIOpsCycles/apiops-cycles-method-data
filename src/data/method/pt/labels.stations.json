@@ -48,7 +48,7 @@
   "station.api-design.how_it_works.4": "Aplicar padrões de design GraphQL para criar contratos de API consistentes e reutilizáveis que são validados com as partes interessadas.",
   "station.api-design.how_it_works.5": "Utilizar as informações para conceber APIs que satisfaçam as necessidades dos consumidores, garantindo que são detectáveis, compreensíveis e utilizáveis.",
   "station.api-design.how_it_works.6": "Utilize a lista de verificação de auditoria da API para garantir que a conceção da API cumpre os requisitos funcionais e não funcionais, incluindo segurança, desempenho e conformidade.",
-  "station.api-delivery.title": "Fornecimento de API - Fornecer APIs seguras e fiáveis",
+  "station.api-delivery.title": "Entrega da API - Fornecer APIs seguras e fiáveis",
   "station.api-delivery.description": "Criar, testar e lançar APIs usando pipelines de entrega modernos e práticas recomendadas de engenharia.",
   "station.api-delivery.why_it_matters": "Mesmo os melhores projectos de API falham se a entrega for inconsistente. Esta estação assegura que as suas APIs são construídas com qualidade, testadas exaustivamente e implementadas de forma fiável - permitindo iterações mais rápidas e maior confiança.",
   "station.api-delivery.apply_in_work": "Fornecer estruturas de codificação, bibliotecas e normas para a implementação de API. Implementar pipelines de CI/CD, estruturas de garantia de qualidade e ferramentas de automatização da implantação.",
