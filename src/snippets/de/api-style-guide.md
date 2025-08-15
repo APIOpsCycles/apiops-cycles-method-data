@@ -1,37 +1,17 @@
-# **API-Designprinzipien**
-
-Eine prägnante Anleitung zu API-Benutzerfreundlichkeit, Auffindbarkeit und Konsistenz, die auf bewährten Designphilosophien und Benutzeranforderungen basiert.
-
-**Ergebnisse**
-
-* Besseres Verständnis der API-Designprinzipien
-
-**So funktioniert**  
-**Schritte**
-
-1. **Verbraucherorientiertes Design:** Beginnen Sie jeden APIOps-Zyklus mit der Erfassung der Benutzerziele und Fachbegriffe, damit APIs echte Probleme lösen können.  
-2. **Einheitliche Benennung und Verhalten:** Wenden Sie gemeinsame Konventionen für Ressourcen, Fehler und Formate an, um APIs vorhersehbar zu machen.  
-3. **Vertragsorientiert:** Erfassen Sie die Schnittstelle mit OpenAPI oder AsyncAPI vor dem Codieren, um Teams aufeinander abzustimmen und Automatisierung zu ermöglichen.  
-4. **Benutzerfreundlichkeit und Auffindbarkeit:** Stellen Sie klare Dokumentationen und Beispiele bereit, damit Entwickler schnell verstehen, wie die API zu verwenden ist.  
-5. **Sichere Iteration:** Entwickeln Sie Designs in kleinen, versionierten Schritten weiter, damit Änderungen keine bestehenden Verbraucher beeinträchtigen.
-
-Tipp
-
-* Passen Sie die API-Designprinzipien an Ihre Domäne an  
-* Verwenden Sie sie gemeinsam in verschiedenen Geschäfts- und Technikbereichen.
-
-**API-Styleguide**
+## API-Styleguide
 
 Dieser Leitfaden enthält Best Practices und Standards für die Entwicklung und Implementierung von RESTful-APIs, um Sicherheit, Konsistenz, Benutzerfreundlichkeit und die Ausrichtung auf die Unternehmensziele zu gewährleisten. Er steht auch im Einklang mit der API-Audit-Checkliste.  
+
 ---
 
-**1\. Sicherheit und Datenschutz**  
-**HTTPS-Durchsetzung**
+### 1\. Sicherheit und Datenschutz
+
+#### HTTPS-Durchsetzung
 
 * Alle APIs müssen HTTPS erzwingen, um Daten während der Übertragung zu verschlüsseln.  
 * Sensible Informationen (z. B. Tokens, Anmeldedaten, personenbezogene Daten) dürfen niemals in URLs oder Abfrageparametern übertragen werden. Verwenden Sie für solche Daten den Request Body.
 
-**Rollenbasierte Zugriffskontrolle (RBAC)**
+#### Rollenbasierte Zugriffskontrolle (RBAC)
 
 * Implementieren Sie RBAC mithilfe von Identitätsanbietern und setzen Sie Berechtigungen innerhalb der API-Logik durch.  
 * Dokumentieren Sie rollenspezifische Zugriffskontrollen in der API-Dokumentation.  
@@ -41,72 +21,75 @@ Dieser Leitfaden enthält Best Practices und Standards für die Entwicklung und 
   * **Skalierung**: Dynamische Rollenprüfungen basierend auf API-Nutzern.  
   * **Innovativ**: Automatisierte, richtliniengesteuerte RBAC-Durchsetzung.
 
-**OWASP-API-Sicherheitskonformität**
+#### OWASP-API-Sicherheitskonformität
 
 * Behebt die 10 größten Risiken der OWASP API Security, darunter:  
   * **API6:2023 – Unrestricted Access to Sensitive Business Flows**: Beschränken Sie sensible Geschäftsabläufe durch geeignete Authentifizierung und Autorisierung.  
   * **API7:2023 – Server-Side Request Forgery (SSRF)**: Validieren Sie Eingaben und bereinigen Sie Antworten, um SSRF-Schwachstellen zu verhindern.  
   * **API2:2023 – Defekte Authentifizierung**: Stellen Sie robuste Authentifizierungsmechanismen (z. B. OAuth 2.0) sicher und validieren Sie Workflows für das Ablaufen von Tokens.
 
-**Verschlüsselung im Ruhezustand**
+#### Verschlüsselung im Ruhezustand
 
 * Sensible Daten, die in Datenbanken gespeichert sind, müssen im Ruhezustand mit branchenüblichen Algorithmen verschlüsselt werden.  
 * Stellen Sie sicher, dass keine sensiblen Daten in Protokollen oder URLs erscheinen.
 
 ---
 
-**2\. HTTP-Methoden**  
-**Standardmäßige Verwendung**
+### 2\. HTTP-Methoden
+
+#### Standardmäßige Verwendung
 
 * Verwenden Sie HTTP-Methoden konsistent:  
-  * GET: Daten abrufen, ohne den Serverstatus zu ändern.  
-  * POST: Erstellen Sie neue Ressourcen oder lösen Sie serverseitige Vorgänge aus.  
-  * PUT: Aktualisieren Sie vorhandene Ressourcen (verwenden Sie vollständige Ressourcen-Payloads).  
-  * PATCH: Aktualisieren Sie eine vorhandene Ressource teilweise.  
-  * DELETE: Entfernen einer Ressource.
+  * `GET`: Daten abrufen, ohne den Serverstatus zu ändern.  
+  * `POST`: Erstellen Sie neue Ressourcen oder lösen Sie serverseitige Vorgänge aus.  
+  * `PUT`: Aktualisieren Sie vorhandene Ressourcen (verwenden Sie vollständige Ressourcen-Payloads).  
+  * `PATCH`: Aktualisieren Sie eine vorhandene Ressource teilweise.  
+  * `DELETE`: Entfernen einer Ressource.
 
-**Idempotenz**
+#### Idempotenz
 
 * Stellen Sie sicher, dass die Methoden PUT, PATCH und DELETE idempotent sind, d. h. dass mehrere identische Anfragen zum gleichen Ergebnis führen.
 
-**Testen von HTTP-Methoden**
+#### Testen von HTTP-Methoden
 
 * Validieren Sie alle HTTP-Methoden durch Integrationstests, um die Übereinstimmung mit dem erwarteten Verhalten sicherzustellen.
 
 ---
 
-**3\. Fehlerbehandlung und Antworten**  
-**Standardisiertes Fehlerformat**
+### 3\. Fehlerbehandlung und Antworten  
+
+#### Standardisiertes Fehlerformat
 
 * Alle APIs müssen Fehler in einem standardisierten Format zurückgeben. Beispiel:
 
-`{`  
- `„error”: „invalid_request”,`  
- `"message": "Der Anfrage fehlt ein erforderlicher Parameter.",`  
- `„details”: [`  
-    
-`„Der Parameter „user_id” ist erforderlich.”`  
- `]`  
-`}`
+```
+{
+  "error": "invalid_request",
+  "message": "The request is missing a required parameter.",
+  "details": [
+    "Parameter 'user_id' is required."
+  ]
+}
+```
 
-**Ausführliche Beschreibungen**
+#### Ausführliche Beschreibungen
 
 * Fügen Sie für Menschen lesbare Fehlermeldungen hinzu, um Entwicklern bei der Fehlerbehebung zu helfen.  
 * Stellen Sie sicher, dass Fehlercodes und Beschreibungen mit der OpenAPI-Spezifikation übereinstimmen.
 
-**HTTP-Statuscodes**
+#### HTTP-Statuscodes
 
 * Verwenden Sie für jeden Vorgang die entsprechenden Statuscodes:  
-  * 200 OK: GET-, PUT- oder PATCH-Vorgänge erfolgreich.  
-  * 201 Erstellt: Erfolgreicher POST-Vorgang, der zu einer neuen Ressource führt.  
-  * 204 Kein Inhalt: Erfolgreicher DELETE-Vorgang.  
-  * 400 Bad Request: Ungültige Eingabe oder fehlende Parameter.  
-  * 401 Unauthorized: Authentifizierung fehlgeschlagen.  
-  * 403 Forbidden: Unzureichende Berechtigungen.  
-  * 404 Nicht gefunden: Ressource existiert nicht.  
-  * 429 Zu viele Anfragen: Ratenbegrenzung überschritten.
+  * `200 OK`: GET-, PUT- oder PATCH-Vorgänge erfolgreich.  
+  * `201 Created`: Erfolgreicher POST-Vorgang, der zu einer neuen Ressource führt.  
+  * `204 No Content`: Erfolgreicher DELETE-Vorgang.  
+  * `400 Bad Request`: Ungültige Eingabe oder fehlende Parameter.  
+  * `401 Unauthorized`: Authentifizierung fehlgeschlagen.  
+  * `403 Forbidden`: Unzureichende Berechtigungen.  
+  * `404 Not Found`: Ressource existiert nicht.  
+  * `429 Too Many Requests`: Ratenbegrenzung überschritten.
 
-**Testen von Fehlerszenarien**
+#### Testen von Fehlerszenarien
 
 * Überprüfen Sie alle Fehlerszenarien, um korrekte Antworten und aussagekräftige Fehlermeldungen sicherzustellen.  
 * **Reifegrade**:  
@@ -117,8 +100,9 @@ Dieser Leitfaden enthält Best Practices und Standards für die Entwicklung und 
 
 ---
 
-**4\. Dokumentation und Entwicklererfahrung**  
-**Interaktive Dokumentation**
+### 4\. Dokumentation und Entwicklererfahrung
+
+#### Interaktive Dokumentation
 
 * Generieren Sie API-Dokumentation mithilfe der OpenAPI-Spezifikation (neueste unterstützte Version).  
 * Fügen Sie Beispiele für alle Endpunkte hinzu, um Anfrage-/Antwort-Workflows zu veranschaulichen.  
@@ -128,77 +112,91 @@ Dieser Leitfaden enthält Best Practices und Standards für die Entwicklung und 
   * **Skalierung**: Entwicklertools für API-Tests.  
   * **Innovativ**: Integrierte Entwicklerumgebungen zum Testen.
 
-**Abschnitt „Erste Schritte“**
+#### Abschnitt „Erste Schritte“
 
 * Fügen Sie einen Abschnitt „Erste Schritte“ in die Dokumentation ein, um neue Benutzer durch die Authentifizierung, gängige Arbeitsabläufe und das Testen von Endpunkten zu führen.  
 * Verwenden Sie die Vorlage für die Erste-Schritte-Anleitung als Referenz.
 
-**Sandbox-Umgebung**
+#### Sandbox-Umgebung
 
 * Bieten Sie eine Sandbox-Umgebung an, die Produktionsschemata und Fehlercodes für Testzwecke widerspiegelt.  
 * Überprüfen Sie die Sandbox-Ausrichtung durch API-Audit-Tests.
 
 ---
 
-**5\. Namenskonventionen und Standards**  
-**Benennung von Ressourcen**
+### 5\. Namenskonventionen und Standards
 
-* Verwenden Sie beschreibende, branchenübliche englische Begriffe für Ressourcennamen (z. B. Bücher, Benutzer, Ausleihen).  
-* Vermeiden Sie mehrdeutige Begriffe wie „Typ” oder „Status” ohne zusätzlichen Kontext.
+#### Benennung von Ressourcen
 
-**Benennen von Attributen**
+* Verwenden Sie beschreibende, branchenübliche englische Begriffe für Ressourcennamen (z. B. `books`, `users`, `loans`).  
+* Vermeiden Sie mehrdeutige Begriffe wie `type` oder `status` ohne zusätzlichen Kontext.
 
-* Verwenden Sie für Attributnamen camelCase (z. B. userId, bookTitle).  
+#### Benennen von Attributen
+
+* Verwenden Sie für Attributnamen camelCase (z. B. `userId`, `bookTitle`).  
 * Vermeiden Sie Akronyme und Abkürzungen, um Klarheit zu gewährleisten.  
 * Überprüfen Sie die Namenskonventionen während der OpenAPI-Validierung.
 
 ---
 
-**6\. Lokalisierung und Internationalisierung**  
-**Header akzeptieren**
+### 6\. Lokalisierung und Internationalisierung
 
-* Unterstützen Sie die Lokalisierung mithilfe des Accept-Language\-Headers für API-Antworten.  
+#### Accept Headers
+
+* Unterstützen Sie die Lokalisierung mithilfe des `Accept-Language` -Headers für API-Antworten.  
 * Stellen Sie lokalisierte Zeichenfolgen bereit und stellen Sie sicher, dass alle Fehlermeldungen übersetzt werden können.
 
-**Datums- und Zeitformate**
+#### Datums- und Zeitformate
 
 * Verwenden Sie das ISO 8601-Format für alle Datums- und Zeitfelder, einschließlich Zeitzonen.
 
-**Testen der Lokalisierung**
+```
+"createdAt": "2024-12-21T10:00:00Z"
+```
+
+#### Testen der Lokalisierung
 
 * Validieren Sie lokalisierte Antworten und Fehlermeldungen durch Funktionstests.
 
 ---
 
-**7\. Versionierung und Abkündigung**  
-**Versionierungsstrategie**
+### 7\. Versionierung und Abkündigung
 
-* Verwenden Sie semantische Versionsnummern (z. B. /v1, /v2), um wesentliche Änderungen zu kennzeichnen.  
+#### Versionierungsstrategie
+
+* Verwenden Sie semantische Versionsnummern (z. B. `/v1`, `/v2`), um wesentliche Änderungen zu kennzeichnen.  
 * Vermeiden Sie grundlegende Änderungen innerhalb einer Version. Kündigen Sie alte Endpunkte mit ausreichender Vorankündigung.
 
 **Hinweise zur Abkündigung**
 
 * Kommunizieren Sie Veraltungen über das Entwicklerportal und fügen Sie Header in API-Antworten ein:
 
-`Veraltung: true`  
-`Auslaufdatum: 01.01.2025`  
-`Link: &lt;https://developer.portal.com/docs/deprecation&gt;; rel="deprecation"`  
+```
+Deprecation: true
+Sunset: 2025-01-01
+Link: <https://developer.portal.com/docs/deprecation>; rel="deprecation"
+```
+ 
 ---
 
-**8\. Paginierung und Filterung**  
-**Paginierung**
+### 8\. Paginierung und Filterung
+
+#### Paginierung
 
 * Verwenden Sie Standardparameter für die Paginierung:  
-  * page: Aktuelle Seitenzahl.  
-  * limit: Anzahl der Elemente pro Seite.
+  * `page`: Aktuelle Seitenzahl.  
+  * `limit`: Anzahl der Elemente pro Seite.
 
-**Filtern**
+#### Filtern
 
-* Filtern nach gängigen Attributen (z. B. Titel, Autor, Genre) zulassen:
+* Filtern nach gängigen Attributen (z. B. `title`, `author`, `genre`) zulassen:
 
-`GET /books?title=harry&amp;author=rowling`
+```
+GET /books?title=harry&author=rowling
+```
 
-**Paginierung und Filterung testen**
+
+#### Paginierung und Filterung testen
 
 * Überprüfen Sie anhand von API-Testfällen, ob die Paginierung und Filterung wie erwartet funktionieren.  
 * **Reifegrade**:  
@@ -209,16 +207,17 @@ Dieser Leitfaden enthält Best Practices und Standards für die Entwicklung und 
 
 ---
 
-**9\. Testen und Validieren**  
-**Automatisierte Validierung**
+### 9\. Testen und Validieren
+
+#### Automatisierte Validierung
 
 * Verwenden Sie Tools wie Spectral, um OpenAPI-Spezifikationen auf Vollständigkeit und Konsistenz zu überprüfen.
 
-**Fehlerprüfung**
+#### Fehlerprüfung
 
 * Testen Sie Fehlerszenarien für alle Endpunkte, um korrekte Antworten und aussagekräftige Fehlermeldungen sicherzustellen.
 
-**OWASP-Konformitätstests**
+#### OWASP-Konformitätstests
 
 * Testen Sie APIs anhand der OWASP API Security Top 10 Risiken:  
   * **API6:2023 – Uneingeschränkter Zugriff auf sensible Geschäftsabläufe**: Überprüfen Sie die ordnungsgemäßen Zugriffsbeschränkungen.  
@@ -227,18 +226,18 @@ Dieser Leitfaden enthält Best Practices und Standards für die Entwicklung und 
 
 ---
 
-**10\. Verfeinerung und Validierung des API-Styleguides**  
-**Überprüfung und Feedback**
+### 10\. Verfeinerung und Validierung des API-Styleguides
+
+#### Überprüfung und Feedback
 
 * Führen Sie regelmäßig Überprüfungen des Style Guides mit funktionsübergreifenden Teams (Produkt, Technik, Compliance) durch.  
 * Sammeln Sie Feedback von API-Nutzern, um Probleme hinsichtlich der Benutzerfreundlichkeit zu beheben.
 
-**Versionskontrolle**
+#### Versionskontrolle
 
 * Verwalten Sie den Styleguide in einem versionskontrollierten Repository, um Änderungen zu verfolgen und die Abstimmung im Team sicherzustellen.
 
-**Integration in Entwicklungsworkflows**
+#### Integration in Entwicklungsworkflows
 
 * Integrieren Sie die Grundsätze des Styleguides in API-Linting-Tools und CI/CD-Pipelines.  
 * Überprüfen Sie regelmäßig die OpenAPI-Spezifikationen anhand des Leitfadens mit automatisierten Tools wie Spectral.
-
