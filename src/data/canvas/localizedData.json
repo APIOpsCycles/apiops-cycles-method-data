@@ -19,7 +19,7 @@
         },
         "apiValueProposition": {
           "section": "Wertversprechen der API",
-          "description": "Welchen Wert bietet die API den API-Konsumenten?"
+          "description": "Beginnen Sie mit einem Haftzettel, auf dem Sie die API oder die API-Familie benennen, und erfassen Sie dann, welchen Nutzen die API den API-Nutzern bietet."
         },
         "developerRelations": {
           "section": "Entwicklerbeziehungen",
@@ -45,12 +45,12 @@
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Berücksichtigt diese API die Aufgaben, Probleme (Pains) und Bedürfnisse (Gains) der API-Konsumenten?",
-      "howToUse": "Beschreiben Sie die Sichtweise des API-Konsumenten, beginnend mit seinen Aufgaben, dann seine Pains und Gains, und schließlich die API-Produkte und -Features.",
+      "purpose": "Wie lässt sich die Customer Journey auf APIs abbilden? Welche Probleme und Vorteile von Endnutzern und API-Nutzern müssen berücksichtigt werden?",
+      "howToUse": "Beschreiben Sie die Perspektive der Endnutzer, beginnend mit ihren Aufgaben, dann die Probleme und Vorteile von Endnutzern und API-Nutzern und schließlich die Produkte und Funktionen der API.",
       "sections": {
         "tasks": {
           "section": "Aufgaben",
-          "description": "Was wollen die API-Konsumenten erreichen?"
+          "description": "Was wollen die Kunden (Endnutzer) erreichen?"
         },
         "gainEnablingFeatures": {
           "section": "Nutzenstiftende Features",
@@ -58,7 +58,7 @@
         },
         "painRelievingFeatures": {
           "section": "Problemlösende Features",
-          "description": "Welche Features ermöglichen es API-Konsumenten ihre Probleme zu überwinden?"
+          "description": "Welche Funktionen helfen Endnutzern und API-Nutzern, Probleme zu überwinden?"
         },
         "apiProducts": {
           "section": "API-Produkte",
@@ -406,7 +406,7 @@
         },
         "apiValueProposition": {
           "section": "API Value Proposition",
-          "description": "What value does the API offer to API consumers?"
+          "description": "Start with one sticky note naming the API or API family, then capture what value the API offers to API consumers."
         },
         "developerRelations": {
           "section": "Developer Relations",
@@ -432,20 +432,20 @@
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Does this API address the jobs, pains, and gains of API consumers?",
-      "howToUse": "Describe the API consumer's perspective, starting with their tasks, then their pains and gains, and finally the API's products and features.",
+      "purpose": "How does the customer journey map to APIs? What end-user and API consumer pains, and gains need to be addressed?",
+      "howToUse": "Describe the end-users' perspective, starting with their tasks, then their and API consumers' pains and gains, and finally the API's products and features.",
       "sections": {
         "tasks": {
           "section": "Tasks",
-          "description": "What are the API consumers trying to achieve?"
+          "description": "What are the customers (end-users) trying to achieve?"
         },
         "gainEnablingFeatures": {
           "section": "Gain Enabling Features",
-          "description": "What features enable API consumers to achieve gains?"
+          "description": "What features enable end-users and API consumers to achieve gains?"
         },
         "painRelievingFeatures": {
           "section": "Pain Relieving Features",
-          "description": "What features help API consumers overcome pains?"
+          "description": "What features help end-users and  API consumers overcome pains?"
         },
         "apiProducts": {
           "section": "API Products",
@@ -518,7 +518,7 @@
     "customerJourneyCanvas": {
       "title": "Customer Journey Canvas",
       "purpose": "What is the customer or partner journey that the API is intended to support?",
-      "howToUse": "Describe a real-life customer or user journey — not the API usage — to reveal pain points, goals, and context. This insight helps define what kind of API support is truly needed later.",
+      "howToUse": "In API Product Strategy, describe the real-life customer or partner journey, not the API usage, to reveal pain points, goals, and context. In API Consumer Experience, use this canvas for the API consumer journey from discovery and evaluation to onboarding, integration, troubleshooting, and ongoing use.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "Customer Discovers Need",
@@ -793,7 +793,7 @@
         },
         "apiValueProposition": {
           "section": "APIn arvolupaus",
-          "description": "Mitä arvoa API tarjoaa sen käyttäjille?"
+          "description": "Aloita yhdellä tarralapulla, jossa nimeät APIn tai API-perheen, kerro sitten mitä arvoa API tarjoaa API-käyttäjille."
         },
         "developerRelations": {
           "section": "Suhde kehittäjiin",
@@ -819,20 +819,20 @@
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Vastaako tämä API API-käyttäjien tehtäviin, kipupisteisiin ja hyötyihin?",
-      "howToUse": "Kuvaile API-käyttäjän näkökulma: aloita tehtävistä, siirry kipupisteisiin ja hyötyihin ja lopuksi esittele API-tuotteet ja -ominaisuudet.",
+      "purpose": "Miten asiakaspolku liittyy API-rajapintoihin? Mitä loppukäyttäjien ja API-käyttäjien ongelmia ja hyötyjä on käsiteltävä?",
+      "howToUse": "Kuvaile loppukäyttäjien näkökulmaa aloittaen heidän tehtävistään, sitten heidän ja API-käyttäjien ongelmista ja hyödyistä ja lopuksi API:n tuotteista ja ominaisuuksista.",
       "sections": {
         "tasks": {
           "section": "Tehtävät",
-          "description": "Mitä API-käyttäjät yrittävät saavuttaa?"
+          "description": "Mitä asiakkaat (loppukäyttäjät) yrittävät saavuttaa?"
         },
         "gainEnablingFeatures": {
           "section": "Hyötyä mahdollistavat ominaisuudet",
-          "description": "Mitkä ominaisuudet mahdollistavat API-käyttäjien hyötyjen saavuttamisen?"
+          "description": "Mitkä ominaisuudet mahdollistavat loppukäyttäjien ja API-käyttäjien hyötyjen saavuttamisen?"
         },
         "painRelievingFeatures": {
           "section": "Kipua lievittävät ominaisuudet",
-          "description": "Mitkä ominaisuudet auttavat API-käyttäjiä poistamaan kipupisteet?"
+          "description": "Mitkä ominaisuudet auttavat loppukäyttäjiä ja API-käyttäjiä voittamaan ongelmia?"
         },
         "apiProducts": {
           "section": "APIn tuotteet",
@@ -1180,7 +1180,7 @@
         },
         "apiValueProposition": {
           "section": "Proposition de valeur de l'API",
-          "description": "Quelle valeur l'API offre-t-elle aux consommateurs d'API?"
+          "description": "Commencez par une note adhésive indiquant le nom de l'API ou de la famille d'API, puis notez la valeur ajoutée que l'API offre aux consommateurs d'API."
         },
         "developerRelations": {
           "section": "Relations développeurs",
@@ -1206,20 +1206,20 @@
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Cette API répond-elle aux tâches, peines et gains des consommateurs d'API?",
-      "howToUse": "Décrivez le point de vue du consommateur d'API, en commençant par ses tâches, puis ses peines et gains, et enfin les produits et fonctionnalités de l'API.",
+      "purpose": "Comment le parcours client s'articule-t-il avec les API ? Quels sont les problèmes et les avantages rencontrés par les utilisateurs finaux et les consommateurs d'API ?",
+      "howToUse": "Décrire le point de vue des utilisateurs finaux, en commençant par leurs tâches, puis leurs problèmes et avantages ainsi que ceux des consommateurs d'API, et enfin les produits et fonctionnalités de l'API.",
       "sections": {
         "tasks": {
           "section": "Tâches",
-          "description": "Qu'essaient d'accomplir les consommateurs d'API?"
+          "description": "Qu'est-ce que les clients (utilisateurs finaux) cherchent à réaliser ?"
         },
         "gainEnablingFeatures": {
           "section": "Fonctionnalités génératrices de gains",
-          "description": "Quelles fonctionnalités permettent aux consommateurs d'API d'obtenir des gains?"
+          "description": "Quelles fonctionnalités permettent aux utilisateurs finaux et aux consommateurs d'API de réaliser des gains ?"
         },
         "painRelievingFeatures": {
           "section": "Fonctionnalités soulageant les peines",
-          "description": "Quelles fonctionnalités aident les consommateurs d'API à surmonter leurs difficultés?"
+          "description": "Quelles fonctionnalités aident les utilisateurs finaux et les consommateurs d'API à surmonter les difficultés ?"
         },
         "apiProducts": {
           "section": "Produits API",
@@ -1567,7 +1567,7 @@
         },
         "apiValueProposition": {
           "section": "Proposta de valor da API",
-          "description": "Que valor a API oferece aos consumidores da API?"
+          "description": "Comece com um post-it nomeando a API ou a família de APIs e, em seguida, anote o valor que a API oferece aos seus consumidores."
         },
         "developerRelations": {
           "section": "Relações com desenvolvedores",
@@ -1593,20 +1593,20 @@
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Esta API aborda as tarefas, dificuldades e ganhos dos consumidores da API?",
-      "howToUse": "Descreva a perspectiva do consumidor da API, começando pelas suas tarefas, depois pelos seus problemas e ganhos e, finalmente, pelos produtos e funcionalidades da API.",
+      "purpose": "Como a jornada do cliente se relaciona com as APIs? Quais dificuldades e benefícios dos usuários finais e consumidores de API precisam ser abordados?",
+      "howToUse": "Descreva a perspectiva dos usuários finais, começando com suas tarefas, depois suas dificuldades e benefícios e os dos consumidores de API e, finalmente, os produtos e recursos da API.",
       "sections": {
         "tasks": {
           "section": "Tarefas",
-          "description": "O que os consumidores da API pretendem alcançar?"
+          "description": "O que os clientes (usuários finais) estão tentando alcançar?"
         },
         "gainEnablingFeatures": {
           "section": "Recursos que possibilitam ganhos",
-          "description": "Quais recursos permitem que os consumidores da API obtenham ganhos?"
+          "description": "Quais recursos permitem que os usuários finais e consumidores de API alcancem ganhos?"
         },
         "painRelievingFeatures": {
           "section": "Recursos que aliviam dificuldades",
-          "description": "Quais recursos ajudam os consumidores da API a superar dificuldades?"
+          "description": "Quais recursos ajudam os usuários finais e os consumidores da API a superar dificuldades?"
         },
         "apiProducts": {
           "section": "Produtos API",
