@@ -56,10 +56,14 @@
         "how-it-works": [
           {
             "step": "station.api-consumer-experience.how_it_works",
-            "resource": "customer-journey-canvas"
+            "resource": "api-value-proposition-canvas"
           },
           {
             "step": "station.api-consumer-experience.how_it_works.1",
+            "resource": "api-onboarding-best-practices"
+          },
+          {
+            "step": "station.api-consumer-experience.how_it_works.2",
             "resource": "api-onboarding-best-practices"
           }
         ],
