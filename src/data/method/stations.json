@@ -60,7 +60,7 @@
           },
           {
             "step": "station.api-consumer-experience.how_it_works.1",
-            "resource": "api-onboarding-best-practices"
+            "resource": "customer-journey-canvas"
           },
           {
             "step": "station.api-consumer-experience.how_it_works.2",
@@ -143,6 +143,10 @@
           },
           {
             "step": "station.api-design.how_it_works.6",
+            "resource": "contract-first-design"
+          },
+          {
+            "step": "station.api-design.how_it_works.7",
             "resource": "api-audit-checklist"
           }
         ],
@@ -169,7 +173,7 @@
           },
           {
             "step": "station.api-delivery.how_it_works.1",
-            "resource": "contract-first-design"
+            "resource": "api-development-best-practices"
           },
           {
             "step": "station.api-delivery.how_it_works.2",

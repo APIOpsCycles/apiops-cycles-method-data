@@ -65,6 +65,7 @@
       "order": 112,
       "description": "resource.api-development-best-practices.description",
       "image": "",
+      "snippet": "api-design-principles-guidance.md",
       "outcomes": [
         "resource.api-development-best-practices.outcomes",
         "resource.api-development-best-practices.outcomes.1",

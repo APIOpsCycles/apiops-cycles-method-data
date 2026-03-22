@@ -11,10 +11,11 @@
     "schemas/"
   ],
   "exports": {
-    "./method/": "./src/data/method/",
     "./canvasData.json": "./src/data/canvas/canvasData.json",
     "./localizedData.json": "./src/data/canvas/localizedData.json",
-    "./canvas/": "./src/data/canvas/import-export-templates/"
+    "./method/stations.json": "./src/data/method/stations.json",
+    "./method/resources.json": "./src/data/method/resources.json",
+    "./method/station-criteria.json": "./src/data/method/station-criteria.json"
   },
   "scripts": {
     "test": "node scripts/validate.mjs"
