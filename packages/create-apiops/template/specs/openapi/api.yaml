@@ -1,0 +1,6 @@
+openapi: 3.1.0
+info:
+  title: __API_TITLE__
+  version: 0.1.0
+  summary: Replace with your API summary
+paths: {}

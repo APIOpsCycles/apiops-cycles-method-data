@@ -1,0 +1,5 @@
+interface:
+  display_name: New API Guide
+  short_description: Route new API work through APIOps Cycles data
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,40 @@
+{
+  "name": "create-apiops",
+  "version": "0.1.0",
+  "description": "Scaffold a new APIOps project with an OpenAPI spec, audit scaffolding, and APIOps documentation templates.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "create-apiops": "./bin/create-apiops-project.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "keywords": [
+    "apiops",
+    "openapi",
+    "scaffold",
+    "cli",
+    "templates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/APIops-cycles/apiops-cycles-method-data.git",
+    "directory": "packages/create-apiops"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "homepage": "https://github.com/APIops-cycles/apiops-cycles-method-data/tree/main/packages/create-apiops",
+  "bugs": {
+    "url": "https://github.com/APIops-cycles/apiops-cycles-method-data/issues"
+  },
+  "scripts": {
+    "preinstall": "node ./bin/check-node-version.js"
+  }
+}
