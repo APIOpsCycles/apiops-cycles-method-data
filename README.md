@@ -28,7 +28,7 @@ The module exposes top-level exports so you can import the data files directly, 
 
 ```js
 import stations from "apiops-cycles-method-data/method/stations.json";
-import canvasData from "apiops-cycles-method-data/canvasData";
+import canvasData from "apiops-cycles-method-data/canvasData.json";
 ```
 
 Validate the files locally with:
@@ -45,6 +45,16 @@ Install dependencies once with:
 ```bash
 npm install
 ```
+
+## Create a new APIOps project (CLI)
+
+Once `create-apiops` is published to npm, you can scaffold a new project with:
+
+```bash
+npm create apiops@latest
+```
+
+This command runs the `create-apiops` initializer package and generates a starter APIOps project template in your current directory.
 
 ## Contributing
 

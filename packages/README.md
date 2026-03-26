@@ -1,58 +1,57 @@
-# APIOps Project Scaffold
+# APIOps Project Scaffold (`create-apiops`)
 
-This package contains a draft scaffold for starting API design work with:
+The `create-apiops` package is the published APIOps project initializer.
 
-- `apiops-cycles-method-data`
-- `canvascreator`
-- the `new-api-guide` skill workflow
+## Requirements
 
-## What is included
+- Node.js 22 or newer
+- npm
 
-- `create-apiops/`
-  - a draft `npm create` style scaffolder
-  - a project template with `docs/`, `specs/`, `src/`, `AGENTS.md`, and starter files
-- `package-examples/`
-  - example `package.json` shapes for:
-    - `apiops-cycles-method-data`
-    - `canvascreator`
-    - a user API project
+## Quickstart
 
-## How to use this draft
+Use the published initializer:
 
-### Option 1: Review the scaffold design
+```bash
+npm create apiops@latest
+```
 
-Read:
+For unattended setup (CI/scripts), use flags:
 
-- `create-apiops/bin/create-apiops-project.js`
-- `create-apiops/template/package.json`
-- `create-apiops/template/README.md`
-- `create-apiops/template/AGENTS.md`
+```bash
+npm create apiops@latest -- --yes --name my-api --locale en --style REST --no-install
+```
 
-This is useful if you want to implement the scaffolder in a proper repo later.
+Supported automation flags:
 
-### Option 2: Use the template manually
+- `--yes` use defaults/non-interactive mode
+- `--name <project-name>` set project folder/package name
+- `--locale <locale>` set default locale (`en`, `fi`, `fr`, etc.)
+- `--style <REST|Event|GraphQL|Not sure yet>` set API style scaffolding focus
+- `--no-install` skip `npm install` during scaffolding
 
-1. Copy the contents of `create-apiops/template/` into a new API project folder.
-2. Edit `package.json`, `README.md`, and `specs/openapi/api.yaml` to replace placeholders.
-3. Run `npm install`.
-4. Add your canvases under `specs/canvases/`.
-5. Add your OpenAPI files under `specs/openapi/`.
-6. Export reviewable SVGs into `docs/api/...`.
+## What gets generated
 
-## Recommended project structure
+A starter project with:
 
-- `specs/` = version-controlled source-of-truth artifacts
-- `docs/` = rendered review material
-- `src/` = implementation
+- `specs/canvases/` (canvas source files)
+- `specs/openapi/` (OpenAPI contracts)
+- `specs/audit/` (audit notes/checklists)
+- `docs/api/...` (rendered artifacts)
+- `src/` (implementation area)
+- template `AGENTS.md` and helper npm scripts (`method:stations`, `method:resource:audit`, and style-specific canvas commands)
 
-Suggested layout:
+## Troubleshooting
 
-- `specs/canvases/`
-- `specs/openapi/`
-- `specs/audit/`
-- `docs/api/strategy/`
-- `docs/api/architecture/`
-- `docs/api/design/`
-- `docs/api/delivery/`
-- `docs/api/audit/`
-- `docs/api/publishing/`
+- **`Target already exists`**: choose a different `--name` or remove the existing folder.
+- **Install failed**: rerun inside the scaffolded directory with `npm install`.
+- **No starter canvas generated**: this happens when `--no-install` is used; run `npm install` and regenerate by rerunning scaffold flow.
+- **Method helper command fails**: confirm `apiops-cycles-method-data` is installed in the generated project and run `npm run method:stations` again.
+
+## Template dependency version policy
+
+`packages/create-apiops/template/package.json` keeps dependency ranges aligned to this policy:
+
+- Use caret ranges (`^x.y.z`) for template runtime dependencies to receive compatible patch/minor updates.
+- Do **not** add `overrides` for direct dependencies unless there is a documented compatibility issue.
+- If an override is required, it must match the same major/minor strategy as the dependency declaration (for example, `dependency: ^3.2.0` pairs with override `^3.2.x` / `^3.2.0`, not a different major line).
+- Any temporary override must be explained in this README with a short reason and removal plan.

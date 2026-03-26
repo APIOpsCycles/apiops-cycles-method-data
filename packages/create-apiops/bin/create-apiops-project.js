@@ -9,6 +9,64 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const templateDir = path.resolve(__dirname, "..", "template");
 
+const DEFAULTS = {
+  name: "my-api-project",
+  locale: "en",
+  style: "REST",
+  install: true
+};
+
+function parseArgs(argv) {
+  const args = {
+    yes: false,
+    name: undefined,
+    locale: undefined,
+    style: undefined,
+    install: undefined
+  };
+
+  for (let i = 0; i < argv.length; i += 1) {
+    const arg = argv[i];
+
+    if (arg === "--yes") {
+      args.yes = true;
+      continue;
+    }
+    if (arg === "--no-install") {
+      args.install = false;
+      continue;
+    }
+    if (arg === "--name") {
+      args.name = argv[i + 1];
+      i += 1;
+      continue;
+    }
+    if (arg === "--locale") {
+      args.locale = argv[i + 1];
+      i += 1;
+      continue;
+    }
+    if (arg === "--style") {
+      args.style = argv[i + 1];
+      i += 1;
+      continue;
+    }
+  }
+
+  return args;
+}
+
+function normalizeStyle(style) {
+  const value = String(style || "").trim().toLowerCase();
+  const map = {
+    rest: "REST",
+    event: "Event",
+    graphql: "GraphQL",
+    "not sure yet": "Not sure yet"
+  };
+  return map[value] || style;
+}
+
 function ask(rl, question, fallback = "") {
   return new Promise((resolve) => {
     rl.question(
@@ -41,21 +99,21 @@ function replaceInFile(filePath, replacements) {
 
 function getScripts(locale, apiStyle) {
   const base = {
-    "method:stations": `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
-    "method:resource:audit": `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-resource-metadata.cjs api-audit-checklist ${locale}`
+    "method:stations": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
+    "method:resource:audit": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-resource-metadata.cjs api-audit-checklist ${locale}`
   };
 
   if (apiStyle === "REST" || apiStyle === "Not sure yet") {
     base["method:canvas:rest"] =
-      `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-canvas-metadata.cjs restCanvas ${locale}`;
+      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs restCanvas ${locale}`;
   }
   if (apiStyle === "Event" || apiStyle === "Not sure yet") {
     base["method:canvas:event"] =
-      `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-canvas-metadata.cjs eventCanvas ${locale}`;
+      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs eventCanvas ${locale}`;
   }
   if (apiStyle === "GraphQL" || apiStyle === "Not sure yet") {
     base["method:canvas:graphql"] =
-      `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-canvas-metadata.cjs graphqlCanvas ${locale}`;
+      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs graphqlCanvas ${locale}`;
   }
 
   return base;
@@ -107,17 +165,52 @@ function createStarterCanvas(targetDir, locale = "en", canvasId = "domainCanvas"
   fs.writeFileSync(outPath, `${JSON.stringify(starter, null, 2)}\n`);
 }
 
-async function main() {
+function hasMissingFlagValue(args) {
+  return ["name", "locale", "style"].some((key) => args[key] === undefined && process.argv.includes(`--${key}`));
+}
+
+async function getScaffoldConfig() {
+  const args = parseArgs(process.argv.slice(2));
+
+  if (hasMissingFlagValue(args)) {
+    console.error("Missing value for one of --name, --locale, or --style.");
+    process.exit(1);
+  }
+
+  const initial = {
+    projectName: args.name || DEFAULTS.name,
+    locale: args.locale || DEFAULTS.locale,
+    apiStyle: normalizeStyle(args.style || DEFAULTS.style),
+    installNow: args.install === undefined ? DEFAULTS.install : args.install
+  };
+
+  if (args.yes || (args.name && args.locale && args.style && args.install !== undefined)) {
+    return initial;
+  }
+
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
 
-  const projectName = await ask(rl, "Project name", "my-api-project");
-  const locale = await ask(rl, "Default locale", "en");
-  const apiStyle = await ask(rl, "API style focus [REST/Event/GraphQL/Not sure yet]", "REST");
-  const installNow = await ask(rl, "Install dependencies now? [yes/no]", "yes");
+  const projectName = args.name || await ask(rl, "Project name", initial.projectName);
+  const locale = args.locale || await ask(rl, "Default locale", initial.locale);
+  const apiStyle = normalizeStyle(args.style || await ask(rl, "API style focus [REST/Event/GraphQL/Not sure yet]", initial.apiStyle));
+  const installAnswer = args.install === undefined
+    ? await ask(rl, "Install dependencies now? [yes/no]", initial.installNow ? "yes" : "no")
+    : (args.install ? "yes" : "no");
   rl.close();
+
+  return {
+    projectName,
+    locale,
+    apiStyle,
+    installNow: installAnswer.toLowerCase() === "yes"
+  };
+}
+
+async function main() {
+  const { projectName, locale, apiStyle, installNow } = await getScaffoldConfig();
 
   const targetDir = path.resolve(process.cwd(), projectName);
   if (fs.existsSync(targetDir)) {
@@ -147,7 +240,7 @@ async function main() {
 
   console.log(`Created ${projectName}`);
 
-  if (installNow.toLowerCase() === "yes") {
+  if (installNow) {
     const result = spawnSync("npm", ["install"], {
       cwd: targetDir,
       stdio: "inherit",
