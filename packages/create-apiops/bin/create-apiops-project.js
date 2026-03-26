@@ -41,21 +41,21 @@ function replaceInFile(filePath, replacements) {
 
 function getScripts(locale, apiStyle) {
   const base = {
-    "method:stations": `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
-    "method:resource:audit": `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-resource-metadata.cjs api-audit-checklist ${locale}`
+    "method:stations": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
+    "method:resource:audit": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-resource-metadata.cjs api-audit-checklist ${locale}`
   };
 
   if (apiStyle === "REST" || apiStyle === "Not sure yet") {
     base["method:canvas:rest"] =
-      `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-canvas-metadata.cjs restCanvas ${locale}`;
+      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs restCanvas ${locale}`;
   }
   if (apiStyle === "Event" || apiStyle === "Not sure yet") {
     base["method:canvas:event"] =
-      `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-canvas-metadata.cjs eventCanvas ${locale}`;
+      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs eventCanvas ${locale}`;
   }
   if (apiStyle === "GraphQL" || apiStyle === "Not sure yet") {
     base["method:canvas:graphql"] =
-      `node ./node_modules/apiops-cycles-method-data/.agents/skills/new-api-guide/scripts/get-canvas-metadata.cjs graphqlCanvas ${locale}`;
+      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs graphqlCanvas ${locale}`;
   }
 
   return base;

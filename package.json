@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "type": "module",
   "files": [
-    ".agents/skills",
+    "skills",
     "AGENTS.md",
     "src/data",
     "src/snippets",
@@ -26,7 +26,8 @@
   "scripts": {
     "test": "node scripts/validate.mjs",
     "release:create-apiops:pack": "npm pack --workspace packages/create-apiops",
-    "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public"
+    "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public",
+    "check:packaging:skills": "node scripts/check-packaging-skills.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.7",
