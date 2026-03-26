@@ -1,4 +1,5 @@
 node_modules
+.npm-pack-cache/
 
 # translation cache and temporary translation folder
 .json-autotranslate-cache

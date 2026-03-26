@@ -6,7 +6,10 @@
     "apiops-cycles-method-data": "^3.2.0",
     "canvascreator": "^1.6.2"
   },
-  "overrides": {
-    "apiops-cycles-method-data": "^1.6.2"
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "preinstall": "node ./scripts/check-node-version.js"
   }
 }

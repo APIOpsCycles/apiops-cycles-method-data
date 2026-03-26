@@ -20,7 +20,6 @@ npm install
 
 ```bash
 npm run method:stations
-npm run method:criteria:design
 npm run method:resource:audit
 ```
 
