@@ -4,7 +4,7 @@
   "description": "APIOps Cycles Method data and canvases",
   "license": "Apache-2.0",
   "type": "module",
-  "files": [    
+  "files": [
     ".agents/skills",
     "AGENTS.md",
     "src/data",
@@ -12,6 +12,9 @@
     "src/assets/",
     "schemas/",
     "packages/"
+  ],
+  "workspaces": [
+    "packages/*"
   ],
   "exports": {
     "./canvasData.json": "./src/data/canvas/canvasData.json",
@@ -21,9 +24,12 @@
     "./method/station-criteria.json": "./src/data/method/station-criteria.json"
   },
   "scripts": {
-    "test": "node scripts/validate.mjs"
+    "test": "node scripts/validate.mjs",
+    "release:create-apiops:pack": "npm pack --workspace packages/create-apiops",
+    "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "ajv": "^8.17.1"
   },
   "engines": {

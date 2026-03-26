@@ -46,6 +46,16 @@ Install dependencies once with:
 npm install
 ```
 
+## Create a new APIOps project (CLI)
+
+Once `create-apiops` is published to npm, you can scaffold a new project with:
+
+```bash
+npm create apiops@latest
+```
+
+This command runs the `create-apiops` initializer package and generates a starter APIOps project template in your current directory.
+
 ## Contributing
 
 ### Reporting issues or requesting features
