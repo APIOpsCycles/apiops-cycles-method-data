@@ -4,11 +4,14 @@
   "description": "APIOps Cycles Method data and canvases",
   "license": "Apache-2.0",
   "type": "module",
-  "files": [
+  "files": [    
+    ".agents/skills",
+    "AGENTS.md",
     "src/data",
     "src/snippets",
     "src/assets/",
-    "schemas/"
+    "schemas/",
+    "packages/"
   ],
   "exports": {
     "./canvasData.json": "./src/data/canvas/canvasData.json",

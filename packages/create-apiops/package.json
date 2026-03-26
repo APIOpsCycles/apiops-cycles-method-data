@@ -1,0 +1,8 @@
+{
+  "name": "create-apiops",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "create-apiops": "./bin/create-apiops-project.js"
+  }
+}
