@@ -33,9 +33,23 @@ if (!inputId) {
 const resources = readJson(resolveMethodData("method", "resources.json")).resources;
 const canvasData = readJson(resolveMethodData("canvas", "canvasData.json"));
 const localizedData = readJson(resolveMethodData("canvas", "localizedData.json"));
+const legacyAliases = new Map([
+  ["domain-canvas", "domainCanvas"],
+  ["api-business-model-canvas", "apiBusinessModelCanvas"],
+  ["api-value-proposition-canvas", "apiValuePropositionCanvas"],
+  ["business-impact-canvas", "businessImpactCanvas"],
+  ["capacity-canvas", "capacityCanvas"],
+  ["customer-journey-canvas", "customerJourneyCanvas"],
+  ["event-canvas", "eventCanvas"],
+  ["graphql-canvas", "graphqlCanvas"],
+  ["interaction-canvas", "interactionCanvas"],
+  ["location-canvas", "locationsCanvas"],
+  ["rest-canvas", "restCanvas"],
+]);
 
-const resource = resources.find((entry) => entry.id === inputId);
-const canvasId = resource && resource.canvas ? resource.canvas : inputId;
+const normalizedInputId = legacyAliases.get(inputId) || inputId;
+const resource = resources.find((entry) => entry.id === normalizedInputId);
+const canvasId = resource && resource.canvas ? resource.canvas : normalizedInputId;
 const base = canvasData[canvasId];
 const localized = (localizedData[locale] && localizedData[locale][canvasId]) || null;
 

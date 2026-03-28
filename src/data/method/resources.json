@@ -431,7 +431,7 @@
       "category": "guideline"
     },
     {
-      "id": "domain-canvas",
+      "id": "domainCanvas",
       "title": "resource.domain-canvas.title",
       "slug": "resources/domain-canvas",
       "icon": "dashboard-outline",
@@ -719,7 +719,7 @@
       "category": "checklist"
     },
     {
-      "id": "api-business-model-canvas",
+      "id": "apiBusinessModelCanvas",
       "title": "resource.api-business-model-canvas.title",
       "slug": "resources/api-business-model-canvas",
       "icon": "dashboard-outline",
@@ -779,7 +779,7 @@
       "category": "guideline"
     },
     {
-      "id": "api-value-proposition-canvas",
+      "id": "apiValuePropositionCanvas",
       "title": "resource.api-value-proposition-canvas.title",
       "slug": "resources/api-value-proposition-canvas",
       "icon": "dashboard-outline",
@@ -807,7 +807,7 @@
       "category": "canvas"
     },
     {
-      "id": "business-impact-canvas",
+      "id": "businessImpactCanvas",
       "title": "resource.business-impact-canvas.title",
       "slug": "resources/business-impact-canvas",
       "icon": "dashboard-outline",
@@ -837,7 +837,7 @@
       "category": "canvas"
     },
     {
-      "id": "capacity-canvas",
+      "id": "capacityCanvas",
       "title": "resource.capacity-canvas.title",
       "slug": "resources/capacity-canvas",
       "icon": "dashboard-outline",
@@ -866,7 +866,7 @@
       "category": "canvas"
     },
     {
-      "id": "customer-journey-canvas",
+      "id": "customerJourneyCanvas",
       "title": "resource.customer-journey-canvas.title",
       "slug": "resources/customer-journey-canvas",
       "icon": "dashboard-outline",
@@ -897,7 +897,7 @@
       "category": "canvas"
     },
     {
-      "id": "event-canvas",
+      "id": "eventCanvas",
       "title": "resource.event-canvas.title",
       "slug": "resources/event-canvas",
       "icon": "dashboard-outline",
@@ -925,7 +925,7 @@
       "category": "canvas"
     },
     {
-      "id": "graphql-canvas",
+      "id": "graphqlCanvas",
       "title": "resource.graphql-canvas.title",
       "slug": "resources/graphql-canvas",
       "icon": "dashboard-outline",
@@ -958,7 +958,7 @@
       "category": "canvas"
     },
     {
-      "id": "interaction-canvas",
+      "id": "interactionCanvas",
       "title": "resource.interaction-canvas.title",
       "slug": "resources/interaction-canvas",
       "icon": "dashboard-outline",
@@ -987,7 +987,7 @@
       "category": "canvas"
     },
     {
-      "id": "location-canvas",
+      "id": "locationsCanvas",
       "title": "resource.location-canvas.title",
       "slug": "resources/location-canvas",
       "icon": "dashboard-outline",
@@ -1017,7 +1017,7 @@
       "category": "canvas"
     },
     {
-      "id": "rest-canvas",
+      "id": "restCanvas",
       "title": "resource.rest-canvas.title",
       "slug": "resources/rest-canvas",
       "icon": "dashboard-outline",

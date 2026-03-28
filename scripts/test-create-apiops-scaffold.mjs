@@ -163,15 +163,15 @@ try {
   });
 
   const expectedGeneratedCanvases = [
-    join(projectDir, "specs", "canvases", "api-product-strategy", "customer-journey-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-product-strategy", "domain-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-product-strategy", "api-value-proposition-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-product-strategy", "api-business-model-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-platform-architecture", "business-impact-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-platform-architecture", "location-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-platform-architecture", "capacity-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-design", "interaction-canvas.empty.json"),
-    join(projectDir, "specs", "canvases", "api-design", "rest-canvas.empty.json")
+    join(projectDir, "specs", "canvases", "api-product-strategy", "customerJourneyCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-product-strategy", "domainCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-product-strategy", "apiValuePropositionCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-product-strategy", "apiBusinessModelCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-platform-architecture", "businessImpactCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-platform-architecture", "locationsCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-platform-architecture", "capacityCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-design", "interactionCanvas.empty.json"),
+    join(projectDir, "specs", "canvases", "api-design", "restCanvas.empty.json")
   ];
 
   for (const canvasPath of expectedGeneratedCanvases) {

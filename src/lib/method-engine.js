@@ -13,14 +13,27 @@ export const DEFAULT_NOTE_COLOR = "#FFF399";
 export const DEFAULT_NOTE_SIZE = 80;
 export const CANVAS_CREATOR_BASE_URL = "https://canvascreator.apiopscycles.com/";
 export const NEW_API_STATIONS = ["api-product-strategy", "api-platform-architecture", "api-design"];
+export const LEGACY_CANVAS_RESOURCE_ALIASES = new Map([
+  ["domain-canvas", "domainCanvas"],
+  ["api-business-model-canvas", "apiBusinessModelCanvas"],
+  ["api-value-proposition-canvas", "apiValuePropositionCanvas"],
+  ["business-impact-canvas", "businessImpactCanvas"],
+  ["capacity-canvas", "capacityCanvas"],
+  ["customer-journey-canvas", "customerJourneyCanvas"],
+  ["event-canvas", "eventCanvas"],
+  ["graphql-canvas", "graphqlCanvas"],
+  ["interaction-canvas", "interactionCanvas"],
+  ["location-canvas", "locationsCanvas"],
+  ["rest-canvas", "restCanvas"]
+]);
 export const STYLE_CANVAS_RESOURCES = new Map([
-  ["REST", "rest-canvas"],
-  ["Event", "event-canvas"],
-  ["GraphQL", "graphql-canvas"]
+  ["REST", "restCanvas"],
+  ["Event", "eventCanvas"],
+  ["GraphQL", "graphqlCanvas"]
 ]);
 export const SHARED_DESIGN_CANVAS_RESOURCES = new Set([
-  "domain-canvas",
-  "interaction-canvas"
+  "domainCanvas",
+  "interactionCanvas"
 ]);
 
 function readJson(filePath) {
@@ -82,6 +95,11 @@ export function getStationCriteriaMap() {
 
 export function getResources() {
   return readJson(resolveMethodFile("resources.json")).resources || [];
+}
+
+export function normalizeResourceId(resourceId) {
+  const normalized = String(resourceId || "").trim();
+  return LEGACY_CANVAS_RESOURCE_ALIASES.get(normalized) || normalized;
 }
 
 export function getCanvasData() {
@@ -187,7 +205,8 @@ export function buildResourceCatalog(locale = DEFAULT_LOCALE) {
 export function buildResourceMetadata(resourceId, locale = DEFAULT_LOCALE) {
   const resourceCatalog = buildResourceCatalog(locale);
   const resourceLabels = getLocalizedLabels(locale, "resources");
-  const resource = resourceCatalog.get(resourceId);
+  const normalizedResourceId = normalizeResourceId(resourceId);
+  const resource = resourceCatalog.get(normalizedResourceId);
 
   if (!resource) {
     throw new Error(`Unknown resource id: ${resourceId}`);
@@ -229,24 +248,25 @@ export function buildCanvasMetadata(canvasId, locale = DEFAULT_LOCALE) {
 }
 
 export function shouldIncludeResourceForStyle(resourceId, stationId, style) {
+  const normalizedResourceId = normalizeResourceId(resourceId);
   if (stationId !== "api-design") {
     return true;
   }
 
-  if (SHARED_DESIGN_CANVAS_RESOURCES.has(resourceId)) {
+  if (SHARED_DESIGN_CANVAS_RESOURCES.has(normalizedResourceId)) {
     return true;
   }
 
   if (!STYLE_CANVAS_RESOURCES.has(style)) {
-    return !["rest-canvas", "event-canvas", "graphql-canvas"].includes(resourceId);
+    return !["restCanvas", "eventCanvas", "graphqlCanvas"].includes(normalizedResourceId);
   }
 
   const selectedResourceId = STYLE_CANVAS_RESOURCES.get(style);
-  if (resourceId === selectedResourceId) {
+  if (normalizedResourceId === selectedResourceId) {
     return true;
   }
 
-  return !["rest-canvas", "event-canvas", "graphql-canvas"].includes(resourceId);
+  return !["restCanvas", "eventCanvas", "graphqlCanvas"].includes(normalizedResourceId);
 }
 
 export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, style = DEFAULT_STYLE) {
@@ -264,12 +284,13 @@ export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, sty
     .filter((step) => step.resource)
     .filter((step) => shouldIncludeResourceForStyle(step.resource, stationId, style))
     .map((step, index) => {
-      const resource = resources.find((entry) => entry.id === step.resource);
+      const normalizedResourceId = normalizeResourceId(step.resource);
+      const resource = resources.find((entry) => entry.id === normalizedResourceId);
       if (!resource) {
         return {
           order: index + 1,
           step: translate(step.step, stationLabels),
-          resourceId: step.resource,
+          resourceId: normalizedResourceId,
           missing: true
         };
       }
@@ -338,7 +359,8 @@ export function buildCanvasTemplate(canvasId, locale = DEFAULT_LOCALE) {
 }
 
 export function generateCanvasForStationResource(stationId, resourceId, locale = DEFAULT_LOCALE, output = DEFAULT_OUTPUT_DIR) {
-  const resource = getResources().find((entry) => entry.id === resourceId);
+  const normalizedResourceId = normalizeResourceId(resourceId);
+  const resource = getResources().find((entry) => entry.id === normalizedResourceId);
   if (!resource || resource.category !== "canvas" || !resource.canvas) {
     throw new Error(`Resource ${resourceId} is not a canvas resource.`);
   }
