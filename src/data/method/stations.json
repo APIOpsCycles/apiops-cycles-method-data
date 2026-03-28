@@ -22,19 +22,19 @@
         "how_it_works": [
           {
             "step": "station.api-product-strategy.how_it_works",
-            "resource": "customer-journey-canvas"
+            "resource": "customerJourneyCanvas"
           },
           {
             "step": "station.api-product-strategy.how_it_works.1",
-            "resource": "domain-canvas"
+            "resource": "domainCanvas"
           },
           {
             "step": "station.api-product-strategy.how_it_works.2",
-            "resource": "api-value-proposition-canvas"
+            "resource": "apiValuePropositionCanvas"
           },
           {
             "step": "station.api-product-strategy.how_it_works.3",
-            "resource": "api-business-model-canvas"
+            "resource": "apiBusinessModelCanvas"
           }
         ],
         "apply_in_work": "station.api-product-strategy.apply_in_work"
@@ -56,11 +56,11 @@
         "how-it-works": [
           {
             "step": "station.api-consumer-experience.how_it_works",
-            "resource": "api-value-proposition-canvas"
+            "resource": "apiValuePropositionCanvas"
           },
           {
             "step": "station.api-consumer-experience.how_it_works.1",
-            "resource": "customer-journey-canvas"
+            "resource": "customerJourneyCanvas"
           },
           {
             "step": "station.api-consumer-experience.how_it_works.2",
@@ -85,15 +85,15 @@
         "how_it_works": [
           {
             "step": "station.api-platform-architecture.how_it_works",
-            "resource": "business-impact-canvas"
+            "resource": "businessImpactCanvas"
           },
           {
             "step": "station.api-platform-architecture.how_it_works.1",
-            "resource": "location-canvas"
+            "resource": "locationsCanvas"
           },
           {
             "step": "station.api-platform-architecture.how_it_works.2",
-            "resource": "capacity-canvas"
+            "resource": "capacityCanvas"
           },
           {
             "step": "station.api-platform-architecture.how_it_works.3",
@@ -119,23 +119,23 @@
         "how_it_works": [
           {
             "step": "station.api-design.how_it_works",
-            "resource": "domain-canvas"
+            "resource": "domainCanvas"
           },
           {
             "step": "station.api-design.how_it_works.1",
-            "resource": "interaction-canvas"
+            "resource": "interactionCanvas"
           },
           {
             "step": "station.api-design.how_it_works.2",
-            "resource": "rest-canvas"
+            "resource": "restCanvas"
           },
           {
             "step": "station.api-design.how_it_works.3",
-            "resource": "event-canvas"
+            "resource": "eventCanvas"
           },
           {
             "step": "station.api-design.how_it_works.4",
-            "resource": "graphql-canvas"
+            "resource": "graphqlCanvas"
           },
           {
             "step": "station.api-design.how_it_works.5",
@@ -240,7 +240,7 @@
         "how_it_works": [
           {
             "step": "station.api-publishing.how_it_works",
-            "resource": "api-publishing-guidelines"
+            "resource": "apiops-CI-CD-for-apis"
           },
           {
             "step": "station.api-publishing.how_it_works.1",
@@ -278,7 +278,7 @@
           },
           {
             "step": "station.monitoring-and-improving.how_it_works.2",
-            "resource": "apiops-CI/CD-for-apis"
+            "resource": "apiops-CI-CD-for-apis"
           }
         ],
         "apply_in_work": "station.monitoring-and-improving.apply_in_work"
@@ -309,15 +309,15 @@
         "how_it_works": [
           {
             "step": "station.user-experience.how_it_works",
-            "resource": "customer-journey-canvas"
+            "resource": "customerJourneyCanvas"
           },
           {
             "step": "station.user-experience.how_it_works.1",
-            "resource": "customer-journey-canvas"
+            "resource": "customerJourneyCanvas"
           },
           {
             "step": "station.user-experience.how_it_works.2",
-            "resource": "customer-journey-canvas"
+            "resource": "customerJourneyCanvas"
           }
         ],
         "apply_in_work": "station.user-experience.apply_in_work"
@@ -369,7 +369,7 @@
         "how_it_works": [
           {
             "step": "station.business-goals.how_it_works",
-            "resource": "api-business-model-canvas"
+            "resource": "apiBusinessModelCanvas"
           },
           {
             "step": "station.business-goals.how_it_works.1",
@@ -463,7 +463,7 @@
           },
           {
             "step": "station.scalable-infrastructure.how_it_works.1",
-            "resource": "capacity-canvas"
+            "resource": "capacityCanvas"
           },
           {
             "step": "station.scalable-infrastructure.how_it_works.2",

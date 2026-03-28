@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "apiops-cycles-method-data": "^3.2.0",
+    "apiops-cycles-method-data": "^3.3.1",
     "canvascreator": "^1.6.2"
   },
   "engines": {

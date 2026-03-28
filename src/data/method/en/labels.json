@@ -1,9 +1,11 @@
 {
   "stations": "Stations",
-  "why_it_matters": "Why it matters",
+  "why_it_matters": "Why this station exists?",
   "outcomes": "Outcomes",
   "how_it_works": "How it works",
   "steps": "Steps",
-  "apply_in_work": "Apply in your work",
-  "related_metrolines": "Related metrolines"
+  "apply_in_work": "This is what success looks like",
+  "related_metrolines": "Included in these metrolines",
+  "entry_criteria_title": "Starting signals",
+  "exit_criteria_title": "Done well when"
 }

@@ -1,6 +1,8 @@
+# This file is intentionally a later-stage artifact.
+# For a new API, start with the APIOps method commands and canvases first.
 openapi: 3.1.0
 info:
   title: __API_TITLE__
   version: 0.1.0
-  summary: Replace with your API summary
+  summary: Replace with your API summary after API Design and contract-first work
 paths: {}

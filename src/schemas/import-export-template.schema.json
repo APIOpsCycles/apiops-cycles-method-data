@@ -35,7 +35,10 @@
               "properties": {
                 "content": {"type": "string"},
                 "size": {"type": "number"},
-                "color": {"type": "string"},
+                "color": {
+                  "type": "string",
+                  "pattern": "^#[0-9A-Fa-f]{6}$"
+                },
                 "position": {"type": "object",
                      "properties": {
                        "x": {"type": "number"},

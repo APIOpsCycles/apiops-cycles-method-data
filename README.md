@@ -1,3 +1,14 @@
+## Create a new APIOps project (CLI)
+
+
+```bash
+npm create apiops@latest
+```
+
+This command runs the `create-apiops` initializer package and generates a starter APIOps project template in your current directory.
+
+
+
 # APIOps Cycles Method
 
 This repository contains the source for the APIOps Cycles method, including resources such as canvases. It can be used for multiple purposes, such as the method website (https://www.apiopscycles.com/), which is generated from these files, and the Canvas Creator tool that allows creating, importing and exporting the canvases, and provides a UI. (https://canvascreator.apiopscycles.com/). 
@@ -13,23 +24,60 @@ APIOps and APIOps Cycles are trademarks owned by Osaango Oy (https://www.osaango
 ```
 ├── src/
 │   ├── assets/             # APIOps Cycles logos and other core assets which you might need in your tooling or product
+│   ├── lib/                # Method-engine, "walks" developer or AI through the method starting from needs, also used by the CLI when using the create apiops template
 │   ├── data/method/        # The Method JSON files (structure, relationship, and guideline content)
 │   ├── data/method/canvas/ # The Canvases included in the method as JSON files (also used by tools like Canvas Creator)
 │   ├── snippets/           # Raw markdown files used for long content for resource docs (only essential extensions for the json files)
 ├── scripts/                # Utility scripts
 └── package.json
+├── skills/                 # AI skills that help use the method to design APIs
+├── packages/               
+    └── create-apiops       # scaffolding template published as node module. Starts a new guided API design project with `npm create apiops@latest`
 ```
 
-## Requirements
+## Integrating the method in to tools, and developer workflows
 
-You can use the JSON files as is and download a .zip file or clone the repository. You can also install them using `npm install apiops-cycles-method-data`.
+You can use the JSON files as is and download a .zip file or clone the repository. You can also install them using `npm install apiops-cycles-method-data`, or create a new API design and/or development project with `npm create apiops@latest`
 
 The module exposes top-level exports so you can import the data files directly, for example:
 
 ```js
 import stations from "apiops-cycles-method-data/method/stations.json";
 import canvasData from "apiops-cycles-method-data/canvasData.json";
+import {
+  buildStartData,
+  buildStationResourceData,
+  generateCanvases
+} from "apiops-cycles-method-data/method-engine";
 ```
+
+The `method-engine` export is intended for reusable APIOps workflow logic. It gives CLIs, AI agents, apps, and APIs the same station recommendation, resource lookup, and canvas generation behavior without reimplementing the method rules.
+
+The method now also includes reusable stakeholder data:
+
+- `src/data/method/stakeholders.json` defines the shared stakeholder catalog
+- `src/data/method/station-stakeholders.json` maps each station to weighted stakeholder participation
+- `src/data/method/<locale>/labels.stakeholders.json` stores localized stakeholder titles, descriptions, and involvement labels
+
+Stakeholder involvement uses three lightweight levels:
+
+- `lead`
+- `core`
+- `consulted`
+
+This is meant to keep APIOps Cycles explicitly cross-functional, including business, security, compliance, support, and consumer voices in architecture and design work where relevant.
+
+Sticky note authoring should use the shared palette exposed by the method engine:
+
+- `benefit`: `#C0EB6A`
+- `neutral`: `#DFDDC5`
+- `negative`: `#FFAFAF`
+- `task`: `#7DC9E7`
+- `default`: `#FFF399`
+
+Prefer section-appropriate defaults when the intent is obvious from the canvas structure.
+If a note does not fit a clear intent yet, use the generic default rather than guessing.
+When using the interactive CLI, explicit note tags such as `[benefit]`, `[task]`, or `[color=#7DC9E7]` are the supported way to override the section default.
 
 Validate the files locally with:
 
@@ -46,16 +94,6 @@ Install dependencies once with:
 npm install
 ```
 
-## Create a new APIOps project (CLI)
-
-Once `create-apiops` is published to npm, you can scaffold a new project with:
-
-```bash
-npm create apiops@latest
-```
-
-This command runs the `create-apiops` initializer package and generates a starter APIOps project template in your current directory.
-
 ## Contributing
 
 ### Reporting issues or requesting features
@@ -64,16 +102,17 @@ If you spot a problem in the documentation or have an idea for new content, plea
 
 ### Editing or adding content
 
-The main method files (instructions, guidelines, method structure) is located in the the JSON files at `src/data/method/`. These base files (`lines.json`, `stations.json`, `resources.json`, `criteria.json` and `station-criteria.json`) are not localized and live at the root of the folder. Textual values in them reference label keys. English labels are in `src/data/method/en-US` and translations are provided in `labels.lines.json`, `labels.stations.json`, `labels.resources.json` and `labels.criteria.json` under each locale folder. Some longer or more complex resource pages like the API Audit Checklist also use markdown snippets `src/snippets/` linked to the `resources.json`. Do not use any frontmatter in the snippet files. Any supported markdown markup is ok. See references from [Starlight markdown reference](https://starlight.astro.build/guides/authoring-content/) and [Extended markdown reference](https://www.markdownguide.org/extended-syntax/).
+The main method content files (instructions, guidelines, method structure) are located in the JSON files at `src/data/method/`. These base files (`lines.json`, `stations.json`, `resources.json`, `criteria.json`, `station-criteria.json`, `stakeholders.json`, and `station-stakeholders.json`) are not localized and live at the root of the folder. Textual values in them reference label keys. English labels are in `src/data/method/en` and translations are provided in `labels.lines.json`, `labels.stations.json`, `labels.resources.json`, `labels.criteria.json`, and `labels.stakeholders.json` under each locale folder. Some longer or more complex resource pages like the API Audit Checklist also use markdown snippets `src/snippets/` linked to the `resources.json`. Do not use any frontmatter in the snippet files. Any supported markdown markup is ok. See references from [Starlight markdown reference](https://starlight.astro.build/guides/authoring-content/) and [Extended markdown reference](https://www.markdownguide.org/extended-syntax/).
 
-Each station links to specific entry criteria followed by the next core station's criteria as exit criteria.`criteria.json`, `station-criteria.json` and `labels.criteria.json` 
+Each station links to specific entry criteria followed by the next core station's criteria as exit criteria. Stakeholder participation is modeled separately through `stakeholders.json`, `station-stakeholders.json`, and `labels.stakeholders.json`.
 
 #### Editing existing content of Method pages (metrolines, core- and substations, resources). 
 1. Go to `src/data/method/en` and edit the content in English (English is considered the master langauge, and for the translations to work for other languages, it must always be the first to be edited). 
 2. Validate that your changes work by running the schema validations (`npm test`)
 3. Follow the translation guide if you are able to translate the content to other languages manually or automatically.
-4. Commit your code and make a pull request.
-5. If you were not able to create the translations of your changes to all languages, create an issue for in the repository for the translations.
+4. Update all supported locales before considering the change complete. This includes criteria wording and stakeholder labels when those are touched.
+5. Commit your code and make a pull request.
+6. If you were not able to create the translations of your changes to all languages, create an issue in the repository for the translations.
 
 #### Translating the language manually or with automated services (new or existing languages with new or changed content)
 
