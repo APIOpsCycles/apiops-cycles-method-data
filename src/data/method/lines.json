@@ -46,7 +46,7 @@
         "title": "line.api-design-line.title",
         "slug": "api-design-line",
         "order": 3,
-        "color": "#FFC647",
+        "color": "#db9b0c",
         "description": "line.api-design-line.description",
         "stations": [
           "api-platform-architecture",
@@ -60,7 +60,7 @@
         "title": "line.delivery-line.title",
         "slug": "delivery-line",
         "order": 4,
-        "color": "#FFC647",
+        "color": "#db9b0c",
         "description": "line.delivery-line.description",
         "stations": [
           "api-delivery",
