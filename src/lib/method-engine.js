@@ -184,19 +184,18 @@ function resolveCanvasFile(...parts) {
 }
 
 function getLocalizedLabels(locale, category) {
+  const fallback = resolveMethodFile(DEFAULT_LOCALE, `labels.${category}.json`);
   const preferred = resolveMethodFile(locale, `labels.${category}.json`);
-  if (fs.existsSync(preferred)) {
-    return readJson(preferred);
+  const fallbackLabels = fs.existsSync(fallback) ? readJson(fallback) : {};
+  if (locale === DEFAULT_LOCALE) {
+    return fallbackLabels;
   }
 
-  if (locale !== DEFAULT_LOCALE) {
-    const fallback = resolveMethodFile(DEFAULT_LOCALE, `labels.${category}.json`);
-    if (fs.existsSync(fallback)) {
-      return readJson(fallback);
-    }
-  }
-
-  return {};
+  const preferredLabels = fs.existsSync(preferred) ? readJson(preferred) : {};
+  return {
+    ...fallbackLabels,
+    ...preferredLabels
+  };
 }
 
 function getStationSteps(station) {
@@ -228,8 +227,26 @@ export function getCoreStations() {
     .sort((left, right) => left.order - right.order);
 }
 
+export function getStations() {
+  const stations = readJson(resolveMethodFile("stations.json"));
+  return [
+    ...((stations["core-stations"] && stations["core-stations"].items) || []),
+    ...((stations["sub-stations"] && stations["sub-stations"].items) || [])
+  ]
+    .slice()
+    .sort((left, right) => left.order - right.order);
+}
+
 export function getStationCriteriaMap() {
   return readJson(resolveMethodFile("station-criteria.json"));
+}
+
+export function getStakeholders() {
+  return readJson(resolveMethodFile("stakeholders.json")).stakeholders || [];
+}
+
+export function getStationStakeholderMap() {
+  return readJson(resolveMethodFile("station-stakeholders.json"));
 }
 
 export function getResources() {
@@ -254,6 +271,42 @@ function translate(labelKey, labels) {
   return labels[labelKey] || labelKey;
 }
 
+export function buildStakeholderCatalog(locale = DEFAULT_LOCALE) {
+  const stakeholderLabels = getLocalizedLabels(locale, "stakeholders");
+  return new Map(getStakeholders().map((stakeholder) => [
+    stakeholder.id,
+    {
+      id: stakeholder.id,
+      title: translate(stakeholder.title, stakeholderLabels),
+      description: translate(stakeholder.description, stakeholderLabels)
+    }
+  ]));
+}
+
+export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE) {
+  const stakeholderCatalog = buildStakeholderCatalog(locale);
+  const stakeholderLabels = getLocalizedLabels(locale, "stakeholders");
+  const stationStakeholderMap = getStationStakeholderMap();
+  const entries = stationStakeholderMap[stationId];
+
+  if (!entries) {
+    throw new Error(`Unknown station stakeholder mapping: ${stationId}`);
+  }
+
+  return entries.map((entry) => {
+    const stakeholder = stakeholderCatalog.get(entry.stakeholder);
+    if (!stakeholder) {
+      throw new Error(`Unknown stakeholder id: ${entry.stakeholder}`);
+    }
+
+    return {
+      ...stakeholder,
+      involvement: entry.involvement,
+      involvementLabel: translate(`stakeholder.involvement.${entry.involvement}`, stakeholderLabels)
+    };
+  });
+}
+
 export function buildStartData(locale = DEFAULT_LOCALE) {
   const stations = getCoreStations();
   const stationLabels = getLocalizedLabels(locale, "stations");
@@ -267,6 +320,7 @@ export function buildStartData(locale = DEFAULT_LOCALE) {
     title: translate(station.title, stationLabels),
     description: translate(station.description, stationLabels),
     suggestedForNewApi: index === 0,
+    stakeholders: buildStationStakeholderData(station.id, locale),
     criteria: (stationCriteriaMap[station.id] || []).map((criterionId) => ({
       id: criterionId,
       label: translate(`criterion.${criterionId}`, criteriaLabels)
@@ -501,7 +555,7 @@ export function shouldIncludeResourceForStyle(resourceId, stationId, style) {
 }
 
 export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, style = DEFAULT_STYLE) {
-  const stations = getCoreStations();
+  const stations = getStations();
   const resources = getResources();
   const stationLabels = getLocalizedLabels(locale, "stations");
   const resourceLabels = getLocalizedLabels(locale, "resources");
@@ -543,6 +597,7 @@ export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, sty
     stationId: station.id,
     stationTitle: translate(station.title, stationLabels),
     stationDescription: translate(station.description, stationLabels),
+    stakeholders: buildStationStakeholderData(station.id, locale),
     style,
     steps
   };

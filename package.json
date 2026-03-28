@@ -23,10 +23,12 @@
     "./localizedData.json": "./src/data/canvas/localizedData.json",
     "./method/stations.json": "./src/data/method/stations.json",
     "./method/resources.json": "./src/data/method/resources.json",
-    "./method/station-criteria.json": "./src/data/method/station-criteria.json"
+    "./method/station-criteria.json": "./src/data/method/station-criteria.json",
+    "./method/stakeholders.json": "./src/data/method/stakeholders.json",
+    "./method/station-stakeholders.json": "./src/data/method/station-stakeholders.json"
   },
   "scripts": {
-    "test": "node scripts/validate.mjs && node scripts/test-note-colors.mjs && node scripts/test-print-method-snippet.mjs",
+    "test": "node scripts/validate.mjs && node scripts/test-method-stakeholders.mjs && node scripts/test-note-colors.mjs && node scripts/test-print-method-snippet.mjs",
     "release:create-apiops:pack": "npm pack --workspace packages/create-apiops",
     "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public",
     "check:packaging:skills": "node scripts/check-packaging-skills.mjs",

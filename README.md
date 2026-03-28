@@ -53,7 +53,21 @@ import {
 
 The `method-engine` export is intended for reusable APIOps workflow logic. It gives CLIs, AI agents, apps, and APIs the same station recommendation, resource lookup, and canvas generation behavior without reimplementing the method rules.
 
-Sticky note authoring should uses the shared palette exposed by the method engine:
+The method now also includes reusable stakeholder data:
+
+- `src/data/method/stakeholders.json` defines the shared stakeholder catalog
+- `src/data/method/station-stakeholders.json` maps each station to weighted stakeholder participation
+- `src/data/method/<locale>/labels.stakeholders.json` stores localized stakeholder titles, descriptions, and involvement labels
+
+Stakeholder involvement uses three lightweight levels:
+
+- `lead`
+- `core`
+- `consulted`
+
+This is meant to keep APIOps Cycles explicitly cross-functional, including business, security, compliance, support, and consumer voices in architecture and design work where relevant.
+
+Sticky note authoring should use the shared palette exposed by the method engine:
 
 - `benefit`: `#C0EB6A`
 - `neutral`: `#DFDDC5`
@@ -88,16 +102,17 @@ If you spot a problem in the documentation or have an idea for new content, plea
 
 ### Editing or adding content
 
-The main method content files (instructions, guidelines, method structure) are located in the the JSON files at `src/data/method/`. These base files (`lines.json`, `stations.json`, `resources.json`, `criteria.json` and `station-criteria.json`) are not localized and live at the root of the folder. Textual values in them reference label keys. English labels are in `src/data/method/en-US` and translations are provided in `labels.lines.json`, `labels.stations.json`, `labels.resources.json` and `labels.criteria.json` under each locale folder. Some longer or more complex resource pages like the API Audit Checklist also use markdown snippets `src/snippets/` linked to the `resources.json`. Do not use any frontmatter in the snippet files. Any supported markdown markup is ok. See references from [Starlight markdown reference](https://starlight.astro.build/guides/authoring-content/) and [Extended markdown reference](https://www.markdownguide.org/extended-syntax/).
+The main method content files (instructions, guidelines, method structure) are located in the JSON files at `src/data/method/`. These base files (`lines.json`, `stations.json`, `resources.json`, `criteria.json`, `station-criteria.json`, `stakeholders.json`, and `station-stakeholders.json`) are not localized and live at the root of the folder. Textual values in them reference label keys. English labels are in `src/data/method/en` and translations are provided in `labels.lines.json`, `labels.stations.json`, `labels.resources.json`, `labels.criteria.json`, and `labels.stakeholders.json` under each locale folder. Some longer or more complex resource pages like the API Audit Checklist also use markdown snippets `src/snippets/` linked to the `resources.json`. Do not use any frontmatter in the snippet files. Any supported markdown markup is ok. See references from [Starlight markdown reference](https://starlight.astro.build/guides/authoring-content/) and [Extended markdown reference](https://www.markdownguide.org/extended-syntax/).
 
-Each station links to specific entry criteria followed by the next core station's criteria as exit criteria.`criteria.json`, `station-criteria.json` and `labels.criteria.json` 
+Each station links to specific entry criteria followed by the next core station's criteria as exit criteria. Stakeholder participation is modeled separately through `stakeholders.json`, `station-stakeholders.json`, and `labels.stakeholders.json`.
 
 #### Editing existing content of Method pages (metrolines, core- and substations, resources). 
 1. Go to `src/data/method/en` and edit the content in English (English is considered the master langauge, and for the translations to work for other languages, it must always be the first to be edited). 
 2. Validate that your changes work by running the schema validations (`npm test`)
 3. Follow the translation guide if you are able to translate the content to other languages manually or automatically.
-4. Commit your code and make a pull request.
-5. If you were not able to create the translations of your changes to all languages, create an issue for in the repository for the translations.
+4. Update all supported locales before considering the change complete. This includes criteria wording and stakeholder labels when those are touched.
+5. Commit your code and make a pull request.
+6. If you were not able to create the translations of your changes to all languages, create an issue in the repository for the translations.
 
 #### Translating the language manually or with automated services (new or existing languages with new or changed content)
 
