@@ -99,6 +99,10 @@ function replaceInFile(filePath, replacements) {
 
 function getScripts(locale, apiStyle) {
   const base = {
+    "method": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
+    "method:start": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js start --locale ${locale}`,
+    "method:resources:strategy": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale ${locale}`,
+    "method:canvases:new-api": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style "${apiStyle}" --locale ${locale} --output ./specs/canvases`,
     "method:stations": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
     "method:resource:audit": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-resource-metadata.cjs api-audit-checklist ${locale}`
   };
@@ -117,52 +121,6 @@ function getScripts(locale, apiStyle) {
   }
 
   return base;
-}
-
-function createStarterCanvas(targetDir, locale = "en", canvasId = "domainCanvas") {
-  const canvasDataPath = path.join(
-    targetDir,
-    "node_modules",
-    "apiops-cycles-method-data",
-    "canvasData.json"
-  );
-
-  if (!fs.existsSync(canvasDataPath)) {
-    return;
-  }
-
-  const canvasData = JSON.parse(fs.readFileSync(canvasDataPath, "utf8"));
-  const canvas = canvasData[canvasId];
-
-  if (!canvas) {
-    return;
-  }
-
-  const starter = {
-    templateId: canvasId,
-    locale,
-    metadata: {
-      source: "APIOps Cycles method",
-      license: "CC-BY-SA 4.0",
-      authors: ["Project team"],
-      website: "www.apiopscycles.com",
-      date: new Date().toISOString()
-    },
-    sections: canvas.sections.map((section) => ({
-      sectionId: section.id,
-      stickyNotes: [
-        {
-          content: "Placeholder",
-          size: 80,
-          color: "#FFF399"
-        }
-      ]
-    }))
-  };
-
-  const outPath = path.join(targetDir, "specs", "canvases", "example.json");
-  fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, `${JSON.stringify(starter, null, 2)}\n`);
 }
 
 function hasMissingFlagValue(args) {
@@ -223,7 +181,8 @@ async function main() {
   const replacements = {
     "__PROJECT_NAME__": projectName,
     "__LOCALE__": locale,
-    "__API_TITLE__": projectName.replace(/[-_]/g, " ")
+    "__API_TITLE__": projectName.replace(/[-_]/g, " "),
+    "__API_STYLE__": apiStyle
   };
 
   replaceInFile(path.join(targetDir, "README.md"), replacements);
@@ -251,15 +210,37 @@ async function main() {
       process.exit(result.status || 1);
     }
 
-    createStarterCanvas(targetDir, locale, "domainCanvas");
+    const canvasInit = spawnSync(
+      "node",
+      [
+        "./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
+        "generate-canvases",
+        "--preset", "new-api",
+        "--style", apiStyle,
+        "--locale", locale,
+        "--output", "./specs/canvases"
+      ],
+      {
+        cwd: targetDir,
+        stdio: "inherit",
+        shell: true
+      }
+    );
+
+    if (canvasInit.status !== 0) {
+      console.error("Starter canvas generation failed");
+      process.exit(canvasInit.status || 1);
+    }
   } else {
-    console.log("\nStarter canvas was not generated yet.");
-    console.log("Run `npm install` first, then regenerate it with the scaffolder or a helper command.");
+    console.log("\nStarter canvases were not generated yet.");
+    console.log("Run `npm install` first, then `npm run method:canvases:new-api`.");
   }
 
   console.log("\nNext steps:");
   console.log(`  cd ${projectName}`);
-  console.log("  npm run method:stations");
+  console.log("  npm run method:start");
+  console.log("  npm run method:resources:strategy");
+  console.log("  npm run method:canvases:new-api");
 }
 
 main().catch((err) => {

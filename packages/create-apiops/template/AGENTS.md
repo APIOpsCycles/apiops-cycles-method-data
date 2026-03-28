@@ -11,3 +11,9 @@ A skill is a set of local instructions to follow that is stored in a `SKILL.md` 
 - Load only the needed references
 - Prefer package-provided scripts and snippets over custom reinvention
 - Keep project outputs in `specs/` and `docs/`
+
+## Project-first method rules
+- For a new API, start with `npm run method:start` and `npm run method:resources:strategy` before editing `specs/openapi/api.yaml`.
+- Use `npm run method:canvases:new-api` to generate empty starter canvases under `specs/canvases/`.
+- Do not treat the presence of `specs/openapi/api.yaml` as evidence that the method is already in API Design.
+- Stay in APIOps strategy work until station criteria and resource guidance show it is time to move forward.

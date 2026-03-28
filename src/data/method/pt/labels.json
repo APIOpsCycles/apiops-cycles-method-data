@@ -1,9 +1,11 @@
 {
   "stations": "Estações",
-  "why_it_matters": "Porque é importante",
+  "why_it_matters": "Por que esta estação existe?",
   "outcomes": "Resultados",
   "how_it_works": "Como funciona",
   "steps": "Passos",
-  "apply_in_work": "Aplicar no seu trabalho",
-  "related_metrolines": "Linhas de metro relacionadas"
+  "apply_in_work": "Isto é o que significa sucesso",
+  "related_metrolines": "Incluído nestas linhas de metrô",
+  "entry_criteria_title": "Sinais de partida",
+  "exit_criteria_title": "Feito bem quando"
 }

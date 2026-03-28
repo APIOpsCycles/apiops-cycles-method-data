@@ -1,9 +1,11 @@
 {
   "stations": "Asemat",
-  "why_it_matters": "Miksi sillä on merkitystä",
+  "why_it_matters": "Miksi tällä asemalla on merkitystä?",
   "outcomes": "Tulokset",
   "how_it_works": "Näin se toimii",
   "steps": "Vaiheet",
-  "apply_in_work": "Sovella työssäsi",
-  "related_metrolines": "Liittyvät metrolinjat"
+  "apply_in_work": "Tältä onnistuminen näyttää",
+  "related_metrolines": "Sisältyy näihin metrolinjoihin",
+  "entry_criteria_title": "Alkuehdot",
+  "exit_criteria_title": "Hyvin tehty, kun"
 }

@@ -9,9 +9,38 @@ Guide the user through APIOps Cycles as a strict method orchestrator.
 
 This skill does not invent a parallel method. It uses APIOps Cycles method data as the source of truth for stations, station criteria, resources, resource mappings, localized instructions, and canvas questions.
 
+## Preferred interface
+
+Prefer the shared Node module export `apiops-cycles-method-data/method-engine` whenever the current workspace has access to the package source or the installed package.
+
+Use the method engine first for:
+
+- start-station recommendation
+- station criteria evaluation
+- station step and resource lookup
+- canvas metadata lookup
+- starter canvas generation
+- CanvasCreator URL generation
+
+Treat the engine as the canonical programmable interface for CLIs, AI agents, apps, and APIs. Prefer calling the engine rather than recreating method traversal logic from scattered repository files.
+
+Typical engine entry points include:
+
+- `buildStartData(locale)`
+- `normalizeAnswer(value)`
+- `evaluateStartRecommendation(startData, answers)`
+- `buildStationResourceData(stationId, locale, style)`
+- `buildResourceMetadata(resourceId, locale)`
+- `buildCanvasMetadata(canvasId, locale)`
+- `generateCanvasForStationResource(stationId, resourceId, locale, output)`
+- `generateCanvases(options)`
+- `getCanvasCreatorUrl(canvasId, locale)`
+
+When the engine is available, use it as the first choice and treat direct JSON reads as implementation detail or fallback.
+
 ## Built-in helper scripts
 
-Use the local helper scripts in `skills/new-api-guide/scripts/` for recurring lookups before reaching for ad hoc shell commands.
+Use the local helper scripts in `skills/new-api-guide/scripts/` as fallback and debugging tools when the method engine is unavailable or when you need to inspect one slice of method data quickly.
 
 - `node skills/new-api-guide/scripts/get-core-stations.cjs [locale]`
   - prints the ordered core stations with localized titles, descriptions, and linked resources
@@ -22,7 +51,28 @@ Use the local helper scripts in `skills/new-api-guide/scripts/` for recurring lo
 - `node skills/new-api-guide/scripts/get-resource-metadata.cjs <resource-id> [locale]`
   - prints localized resource metadata, steps, tips, and snippet path when a snippet exists
 
-Prefer these scripts for quick station and criteria checks because they already resolve the repository `src` paths correctly for this workspace shape.
+These scripts are still useful because they already resolve the repository `src` paths correctly for this workspace shape, but they are no longer the preferred orchestration interface when the method engine is available.
+
+Do not use these helper scripts for normal station, resource, or canvas lookups when the method engine can answer the same question directly.
+Use them only when:
+
+- the engine is unavailable in the current workspace
+- you are debugging or validating engine output
+- you need a quick one-off inspection while keeping the engine as the main workflow source
+
+## Engine-first, repository-backed rule
+
+In this project, prefer the shared method engine as the operational interface and the repository source data as the canonical backing data.
+
+Use this order:
+
+1. `src/lib/method-engine.js`
+2. `src/data/`
+3. `src/snippets/`
+4. `node_modules/canvascreator/`
+
+Do not prefer generated markdown pages when the same information exists in the engine or repository source.
+Use generated site pages only as a last-resort fallback when both the engine and repository data are unavailable for a specific detail.
 
 ## Repository-first rule
 
@@ -41,11 +91,11 @@ Use generated site pages only as a last-resort fallback when the repository data
 
 Follow this sequence unless a later step is impossible because the canonical data is unavailable:
 
-1. Identify the likely current station using the canonical core metro stations.
-2. Check station entry and exit readiness using canonical station criteria.
-3. Read the canonical station instructions for the active locale.
-4. Select the smallest valid next resource linked to that station.
-5. If the selected resource is a canvas, use the canonical localized canvas structure and questions.
+1. Identify the likely current station using the method engine start-station helpers.
+2. Check station entry and exit readiness using method engine criteria data and evaluation helpers.
+3. Read the canonical station instructions for the active locale from engine-backed data.
+4. Select the smallest valid next resource linked to that station via the method engine.
+5. If the selected resource is a canvas, use the engine-backed localized canvas structure and questions.
 6. Collect only the answers needed to draft that canvas.
 7. Hand off to `canvas-import-json-authoring` to create valid importable JSON.
 8. If the user wants reviewable artifacts, hand off to `export-cli-usage-patterns` after the content is ready.
@@ -56,14 +106,17 @@ Use the APIOps Cycles method data repository as the source of truth.
 
 Use these sources in this order:
 
-1. `src/data/method/stations.json` for the core metro stations.
-2. `src/data/method/station-criteria.json` to determine readiness to enter, stay in, or leave a station.
-3. The canonical method mapping files under `src/data/method/` to determine which resources belong to the station and which metro line context applies.
-4. The localized method files under `src/data/method/<locale>/` for the actual station instructions, labels, and step guidance.
-5. `src/data/canvas/canvasData.json` and `src/data/canvas/localizedData.json` for the exact canvas structure, sections, and question wording.
-6. `node_modules/canvascreator/` for import/export behavior, canvas JSON expectations, and export tooling.
+1. `src/lib/method-engine.js` as the reusable access layer.
+2. `src/data/method/stations.json` for the core metro stations.
+3. `src/data/method/station-criteria.json` to determine readiness to enter, stay in, or leave a station.
+4. The canonical method mapping files under `src/data/method/` to determine which resources belong to the station and which metro line context applies.
+5. The localized method files under `src/data/method/<locale>/` for the actual station instructions, labels, and step guidance.
+6. `src/data/canvas/canvasData.json` and `src/data/canvas/localizedData.json` for the exact canvas structure, sections, and question wording.
+7. `node_modules/canvascreator/` for import/export behavior, canvas JSON expectations, and export tooling.
 
 Do not duplicate or paraphrase method content unless the canonical data is unavailable. If you need a fallback, keep it minimal and clearly grounded in the method.
+
+When the engine already exposes the needed answer, prefer the engine over manually stitching together multiple JSON files.
 
 ## Station-first behavior
 
@@ -148,7 +201,7 @@ For this post-domain decision in `API Product Strategy`, interpret `Customer Jou
 ## Resource selection rules
 
 - Prefer the smallest resource that resolves the earliest unresolved prerequisite.
-- Use the station-resource mapping from canonical method data.
+- Use the station-resource mapping from the method engine or canonical method data.
 - If several resources are valid, prefer the one explicitly indicated by localized station instructions.
 - If no explicit next resource is given, choose the earliest resource that clarifies the blocking criterion.
 - If a canvas has already been completed well enough, do not restart it. Move to the next blocking resource.
@@ -162,12 +215,13 @@ When moving from `API Product Strategy` to `API Consumer Experience`:
 - if the main gap is API consumer tasks, pains, and gains, refine or revisit `API Value Proposition Canvas` first
 - then use `Customer Journey Canvas` for the API consumer experience journey if the actor is the API consumer
 
-When using canonical repository data:
+When using engine-backed or canonical repository data:
 
+- use `src/lib/method-engine.js` first when it already exposes the needed method answer
 - use `src/data/canvas/canvasData.json` for section ids, layout, and canvas structure
 - use `src/data/canvas/localizedData.json` for exact canvas titles, purposes, section names, section descriptions, and how-to-use guidance
 - use `node_modules/canvascreator/` for import/export expectations and JSON behavior
-- if a detail is missing from the repository data, inspect `node_modules/canvascreator/` before looking at generated site pages
+- if a detail is missing from the engine or repository data, inspect `node_modules/canvascreator/` before looking at generated site pages
 
 When the selected resource is a guideline rather than a canvas:
 
@@ -303,6 +357,8 @@ If canonical method data cannot be read for a specific detail:
 - prefer the earliest plausible resource
 - avoid design advice
 - ask only enough to continue safely
+
+If the method engine is unavailable, fall back to the repository helper scripts and direct repository data reads.
 
 If canonical repository data is unavailable for a specific detail but generated docs are available:
 - use the generated docs only as a fallback view of the same method

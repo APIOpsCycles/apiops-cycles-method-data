@@ -38,6 +38,7 @@ assertHasFiles(
     "skills/new-api-guide/SKILL.md",
     "packages/create-apiops/bin/create-apiops-project.js",
     "packages/create-apiops/template/AGENTS.md",
+    "src/lib/method-engine.js",
     "src/schemas/stations.schema.json",
     "src/data/canvas/canvasData.json",
     "src/data/canvas/localizedData.json"
@@ -64,6 +65,7 @@ assertHasFiles(
   createApiopsFiles,
   [
     "bin/create-apiops-project.js",
+    "bin/method-cli.js",
     "bin/check-node-version.js",
     "template/AGENTS.md",
     "template/README.md",
