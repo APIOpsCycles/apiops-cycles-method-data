@@ -53,6 +53,18 @@ import {
 
 The `method-engine` export is intended for reusable APIOps workflow logic. It gives CLIs, AI agents, apps, and APIs the same station recommendation, resource lookup, and canvas generation behavior without reimplementing the method rules.
 
+Sticky note authoring should uses the shared palette exposed by the method engine:
+
+- `benefit`: `#C0EB6A`
+- `neutral`: `#DFDDC5`
+- `negative`: `#FFAFAF`
+- `task`: `#7DC9E7`
+- `default`: `#FFF399`
+
+Prefer section-appropriate defaults when the intent is obvious from the canvas structure.
+If a note does not fit a clear intent yet, use the generic default rather than guessing.
+When using the interactive CLI, explicit note tags such as `[benefit]`, `[task]`, or `[color=#7DC9E7]` are the supported way to override the section default.
+
 Validate the files locally with:
 
 ```bash

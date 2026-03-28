@@ -90,6 +90,12 @@ function loadCanvasJson(filePath, canvasId, locale) {
   return methodEngine.buildCanvasTemplate(canvasId, locale);
 }
 
+function formatPaletteHelp() {
+  return Object.entries(methodEngine.getNoteColorPalette())
+    .map(([intent, color]) => `${intent}=${color}`)
+    .join(", ");
+}
+
 async function fillCanvasSectionsInteractive(stationId, step, locale, output, rl) {
   const outPath = methodEngine.generateCanvasForStationResource(stationId, step.resourceId, locale, output);
   const canvasJson = loadCanvasJson(outPath, step.canvasId, locale);
@@ -105,14 +111,17 @@ async function fillCanvasSectionsInteractive(stationId, step, locale, output, rl
   console.log("");
   console.log(`Filling ${canvasMetadata.title} section by section.`);
   console.log("Use `|` to create multiple notes in one section. Leave blank to keep existing notes. Type !clear to remove notes in a section.\n");
+  console.log("Prefix any note with `[benefit]`, `[neutral]`, `[negative]`, `[task]`, `[default]`, or `[color=#RRGGBB]` to set its color explicitly.");
+  console.log(`Palette: ${formatPaletteHelp()}\n`);
 
   for (const section of canvasMetadata.sections) {
     const existingSection = canvasJson.sections.find((entry) => entry.sectionId === section.id);
     const existingNotes = existingSection?.stickyNotes || [];
     console.log(`${section.title}`);
     console.log(section.description);
+    console.log(`Default note color here: ${section.defaultNoteIntent} (${section.defaultNoteColor})`);
     if (existingNotes.length > 0) {
-      console.log(`Current notes: ${existingNotes.map((note) => note.content).join(" | ")}`);
+      console.log(`Current notes: ${existingNotes.map((note) => `${note.content} (${note.color})`).join(" | ")}`);
     }
 
     const answer = (await rl.question("Notes: ")).trim();
@@ -131,10 +140,10 @@ async function fillCanvasSectionsInteractive(stationId, step, locale, output, rl
       .split("|")
       .map((entry) => entry.trim())
       .filter(Boolean)
-      .map((content) => ({
-        content,
-        size: methodEngine.DEFAULT_NOTE_SIZE,
-        color: methodEngine.DEFAULT_NOTE_COLOR
+      .map((content) => methodEngine.parseStickyNoteInput(content, {
+        canvasId: step.canvasId,
+        sectionId: section.id,
+        defaultIntent: section.defaultNoteIntent
       }));
 
     existingSection.stickyNotes = notes;

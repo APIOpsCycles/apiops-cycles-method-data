@@ -38,6 +38,20 @@ Typical engine entry points include:
 
 When the engine is available, use it as the first choice and treat direct JSON reads as implementation detail or fallback.
 
+## Sticky note palette
+
+When authoring or reviewing canvas sticky notes, use the shared palette from `src/lib/method-engine.js` consistently across guidance, generated JSON, and examples.
+
+- `benefit` for benefits, gains, new or positive things: `#C0EB6A`
+- `neutral` for neutral or technical notes: `#DFDDC5`
+- `negative` for cons, risks, pains, or negative notes: `#FFAFAF`
+- `task` for tasks, actions, or journey steps: `#7DC9E7`
+- `default` for generic uncategorized notes: `#FFF399`
+
+Prefer section-appropriate defaults when the intent is obvious from the canvas structure.
+If a note does not fit a clear intent yet, use the generic default rather than guessing.
+When using the interactive CLI, explicit note tags such as `[benefit]`, `[task]`, or `[color=#7DC9E7]` are the supported way to override the section default.
+
 ## Built-in helper scripts
 
 Use the local helper scripts in `skills/new-api-guide/scripts/` as fallback and debugging tools when the method engine is unavailable or when you need to inspect one slice of method data quickly.

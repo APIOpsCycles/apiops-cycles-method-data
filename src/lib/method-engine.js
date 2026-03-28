@@ -9,10 +9,145 @@ const repoRoot = path.resolve(__dirname, "..", "..");
 export const DEFAULT_LOCALE = "en";
 export const DEFAULT_OUTPUT_DIR = "specs/canvases";
 export const DEFAULT_STYLE = "Not sure yet";
-export const DEFAULT_NOTE_COLOR = "#FFF399";
 export const DEFAULT_NOTE_SIZE = 80;
+export const NOTE_COLOR_PALETTE = Object.freeze({
+  benefit: "#C0EB6A",
+  neutral: "#DFDDC5",
+  negative: "#FFAFAF",
+  task: "#7DC9E7",
+  default: "#FFF399"
+});
+export const DEFAULT_NOTE_INTENT = "default";
+export const DEFAULT_NOTE_COLOR = NOTE_COLOR_PALETTE.default;
 export const CANVAS_CREATOR_BASE_URL = "https://canvascreator.apiopscycles.com/";
 export const NEW_API_STATIONS = ["api-product-strategy", "api-platform-architecture", "api-design"];
+export const NOTE_INTENT_ALIASES = new Map([
+  ["benefit", "benefit"],
+  ["benefits", "benefit"],
+  ["gain", "benefit"],
+  ["gains", "benefit"],
+  ["positive", "benefit"],
+  ["new", "benefit"],
+  ["neutral", "neutral"],
+  ["technical", "neutral"],
+  ["tech", "neutral"],
+  ["negative", "negative"],
+  ["neg", "negative"],
+  ["con", "negative"],
+  ["cons", "negative"],
+  ["risk", "negative"],
+  ["risks", "negative"],
+  ["pain", "negative"],
+  ["pains", "negative"],
+  ["task", "task"],
+  ["tasks", "task"],
+  ["journey", "task"],
+  ["step", "task"],
+  ["steps", "task"],
+  ["default", "default"],
+  ["generic", "default"]
+]);
+export const CANVAS_SECTION_NOTE_INTENTS = Object.freeze({
+  apiBusinessModelCanvas: {
+    keyPartners: "neutral",
+    keyActivities: "task",
+    keyResources: "neutral",
+    apiValueProposition: "benefit",
+    developerRelations: "neutral",
+    channels: "task",
+    apiConsumerSegments: "neutral",
+    costs: "negative",
+    benefits: "benefit"
+  },
+  apiValuePropositionCanvas: {
+    tasks: "task",
+    gainEnablingFeatures: "benefit",
+    painRelievingFeatures: "benefit",
+    apiProducts: "neutral"
+  },
+  businessImpactCanvas: {
+    availabilityRisks: "negative",
+    securityRisks: "negative",
+    dataRisks: "negative",
+    mitigateAvailabilityRisks: "task",
+    mitigateSecurityRisks: "task",
+    mitigateDataRisks: "task"
+  },
+  capacityCanvas: {
+    currentBusinessVolumes: "neutral",
+    futureConsumptionTrends: "neutral",
+    peakLoadAndAvailabilityRequirements: "neutral",
+    cachingStrategies: "task",
+    rateLimitingStrategies: "task",
+    scalingStrategies: "task"
+  },
+  customerJourneyCanvas: {
+    customerDiscoversNeed: "neutral",
+    persona: "neutral",
+    pains: "negative",
+    journeySteps: "task",
+    customerNeedIsResolved: "benefit",
+    gains: "benefit",
+    inputsOutputs: "neutral",
+    interactionProcessingRules: "neutral"
+  },
+  domainCanvas: {
+    selectedCustomerJourneySteps: "task",
+    coreEntitiesAndBusinessMeaning: "neutral",
+    attributesAndBusinessImportance: "neutral",
+    relationshipsBetweenEntities: "neutral",
+    businessComplianceAndIntegrityRules: "neutral",
+    securityAndPrivacyConsiderations: "negative"
+  },
+  eventCanvas: {
+    userTaskTrigger: "task",
+    inputEventPayload: "neutral",
+    processingLogic: "neutral",
+    outputEventResult: "benefit"
+  },
+  interactionCanvas: {
+    crudInteractions: "task",
+    crudInputOutputModels: "neutral",
+    crudProcessingValidation: "neutral",
+    queryDrivenInteractions: "task",
+    queryDrivenInputOutputModels: "neutral",
+    queryDrivenProcessingValidation: "neutral",
+    commandDrivenInteractions: "task",
+    commandDrivenInputOutputModels: "neutral",
+    commandDrivenProcessingValidation: "neutral",
+    eventDrivenInteractions: "task",
+    eventDrivenInputOutputModels: "neutral",
+    eventDrivenProcessingValidation: "neutral"
+  },
+  locationsCanvas: {
+    locationGroups: "neutral",
+    locationGroupCharacteristics: "neutral",
+    locations: "neutral",
+    locationCharacteristics: "neutral",
+    locationDistances: "negative",
+    locationDistanceCharacteristics: "neutral",
+    locationEndpoints: "neutral",
+    locationEndpointCharacteristics: "neutral"
+  },
+  restCanvas: {
+    apiResources: "neutral",
+    apiResourceModel: "neutral",
+    apiVerbs: "task",
+    apiVerbExample: "task"
+  },
+  graphqlCanvas: {
+    apiName: "default",
+    consumerGoals: "benefit",
+    keyTypes: "neutral",
+    relationships: "neutral",
+    queries: "task",
+    mutations: "task",
+    subscriptions: "task",
+    authorizationRules: "negative",
+    consumerConstraints: "negative",
+    openQuestions: "default"
+  }
+});
 export const LEGACY_CANVAS_RESOURCE_ALIASES = new Map([
   ["domain-canvas", "domainCanvas"],
   ["api-business-model-canvas", "apiBusinessModelCanvas"],
@@ -66,6 +201,10 @@ function getLocalizedLabels(locale, category) {
 
 function getStationSteps(station) {
   return station.how_it_works || station["how-it-works"] || [];
+}
+
+function isHexColor(value) {
+  return /^#[0-9A-F]{6}$/i.test(String(value || "").trim());
 }
 
 export function normalizeStyle(style) {
@@ -171,6 +310,96 @@ export function normalizeAnswer(value) {
   return null;
 }
 
+export function normalizeNoteIntent(intent) {
+  const normalized = String(intent || "").trim().toLowerCase();
+  return NOTE_INTENT_ALIASES.get(normalized) || null;
+}
+
+export function getNoteColorPalette() {
+  return { ...NOTE_COLOR_PALETTE };
+}
+
+export function getDefaultNoteIntentForSection(canvasId, sectionId) {
+  return CANVAS_SECTION_NOTE_INTENTS[canvasId]?.[sectionId] || DEFAULT_NOTE_INTENT;
+}
+
+export function getDefaultNoteColorForSection(canvasId, sectionId) {
+  return NOTE_COLOR_PALETTE[getDefaultNoteIntentForSection(canvasId, sectionId)] || DEFAULT_NOTE_COLOR;
+}
+
+export function resolveNoteColor(value, fallbackIntent = DEFAULT_NOTE_INTENT) {
+  const raw = String(value || "").trim();
+  if (!raw) {
+    return NOTE_COLOR_PALETTE[fallbackIntent] || DEFAULT_NOTE_COLOR;
+  }
+
+  if (isHexColor(raw)) {
+    return raw.toUpperCase();
+  }
+
+  const normalizedIntent = normalizeNoteIntent(raw);
+  if (normalizedIntent) {
+    return NOTE_COLOR_PALETTE[normalizedIntent];
+  }
+
+  throw new Error(`Unknown note color or intent: ${value}`);
+}
+
+export function buildStickyNote(content, options = {}) {
+  const noteContent = String(content || "").trim();
+  if (!noteContent) {
+    throw new Error("Sticky note content cannot be empty.");
+  }
+
+  const fallbackIntent = getDefaultNoteIntentForSection(options.canvasId, options.sectionId);
+  const intent = normalizeNoteIntent(options.intent) || fallbackIntent;
+  const color = options.color
+    ? resolveNoteColor(options.color, intent)
+    : NOTE_COLOR_PALETTE[intent] || DEFAULT_NOTE_COLOR;
+
+  return {
+    content: noteContent,
+    size: options.size || DEFAULT_NOTE_SIZE,
+    color
+  };
+}
+
+export function parseStickyNoteInput(raw, options = {}) {
+  const input = String(raw || "").trim();
+  if (!input) {
+    throw new Error("Sticky note input cannot be empty.");
+  }
+
+  let remainder = input;
+  let explicitIntent = null;
+  let explicitColor = null;
+  let match = remainder.match(/^\[(.+?)\]\s*/);
+
+  while (match) {
+    const token = match[1].trim();
+    const colorMatch = token.match(/^color\s*=\s*(#?[0-9A-Fa-f]{6})$/);
+    if (colorMatch) {
+      const hex = colorMatch[1].startsWith("#") ? colorMatch[1] : `#${colorMatch[1]}`;
+      explicitColor = resolveNoteColor(hex, options.defaultIntent);
+    } else {
+      const intent = normalizeNoteIntent(token);
+      if (!intent) {
+        throw new Error(`Unknown sticky note tag: ${token}`);
+      }
+      explicitIntent = intent;
+    }
+
+    remainder = remainder.slice(match[0].length).trim();
+    match = remainder.match(/^\[(.+?)\]\s*/);
+  }
+
+  return buildStickyNote(remainder, {
+    ...options,
+    intent: explicitIntent || options.intent,
+    color: explicitColor || options.color
+  });
+}
+
 export function evaluateStartRecommendation(startData, answers) {
   const stationChecks = startData.map((station) => {
     const unmetCriteria = station.criteria.filter((criterion) => answers[criterion.id] !== "met");
@@ -242,7 +471,9 @@ export function buildCanvasMetadata(canvasId, locale = DEFAULT_LOCALE) {
     sections: canvas.sections.map((section) => ({
       id: section.id,
       title: localized.sections?.[section.id]?.section || section.id,
-      description: localized.sections?.[section.id]?.description || ""
+      description: localized.sections?.[section.id]?.description || "",
+      defaultNoteIntent: getDefaultNoteIntentForSection(canvasId, section.id),
+      defaultNoteColor: getDefaultNoteColorForSection(canvasId, section.id)
     }))
   };
 }
