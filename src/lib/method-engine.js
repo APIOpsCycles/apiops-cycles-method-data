@@ -237,6 +237,33 @@ export function getStations() {
     .sort((left, right) => left.order - right.order);
 }
 
+export function getSupportedMethodLocales() {
+  if (!fs.existsSync(resolveMethodFile())) {
+    return [DEFAULT_LOCALE];
+  }
+
+  const locales = fs.readdirSync(resolveMethodFile(), { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .filter((locale) => fs.existsSync(resolveMethodFile(locale, "labels.stations.json")));
+
+  if (!locales.includes(DEFAULT_LOCALE)) {
+    locales.unshift(DEFAULT_LOCALE);
+  }
+
+  return locales
+    .slice()
+    .sort((left, right) => {
+      if (left === DEFAULT_LOCALE) {
+        return -1;
+      }
+      if (right === DEFAULT_LOCALE) {
+        return 1;
+      }
+      return left.localeCompare(right);
+    });
+}
+
 export function getStationCriteriaMap() {
   return readJson(resolveMethodFile("station-criteria.json"));
 }

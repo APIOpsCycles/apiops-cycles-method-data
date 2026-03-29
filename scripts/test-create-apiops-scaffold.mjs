@@ -59,6 +59,10 @@ try {
   assert(pkg.name === projectName, "Scaffolded package name was not set correctly.");
   assert(pkg.scripts?.method, "Expected generic method script in scaffolded package.");
   assert(pkg.scripts?.["method:start"], "Expected method:start script in scaffolded package.");
+  assert(
+    pkg.scripts["method:start"].includes("--default-locale en"),
+    "Expected method:start to pass the project default locale without forcing the runtime locale."
+  );
   assert(pkg.scripts?.["method:resources:strategy"], "Expected method:resources:strategy script in scaffolded package.");
   assert(pkg.scripts?.["method:canvases:new-api"], "Expected method:canvases:new-api script in scaffolded package.");
   assert(pkg.scripts?.["method:stations"], "Expected method:stations script in scaffolded package.");

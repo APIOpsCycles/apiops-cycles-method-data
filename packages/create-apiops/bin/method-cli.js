@@ -18,12 +18,13 @@ const STATION_SCRIPT_HINTS = {
 
 function printUsage() {
   console.log(`Usage:
-  node packages/create-apiops/bin/method-cli.js start [--locale <locale>] [--json] [--list] [--answers <yes,no,...>] [--next-action <resources|canvases|exit>]
+  node packages/create-apiops/bin/method-cli.js start [--locale <locale>] [--default-locale <locale>] [--json] [--list] [--answers <yes,no,...>] [--next-action <resources|canvases|exit>]
   node packages/create-apiops/bin/method-cli.js resources --station <station-id> [--locale <locale>] [--style <style>] [--json] [--list] [--step-actions <details,next,...>]
   node packages/create-apiops/bin/method-cli.js generate-canvases [--station <station-id> | --stations <ids> | --preset new-api] [--locale <locale>] [--style <style>] [--output <dir>] [--force] [--json]
 
 Examples:
   node packages/create-apiops/bin/method-cli.js start --locale en
+  node packages/create-apiops/bin/method-cli.js start --default-locale en
   node packages/create-apiops/bin/method-cli.js start --locale en --answers yes,no,yes --next-action resources
   node packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale en
   node packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style REST --output ./specs/canvases
@@ -69,6 +70,14 @@ function parseArgs(argv) {
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function runCommand(command, args, options = {}) {
+  return spawnSync(command, args, {
+    encoding: "utf8",
+    shell: false,
+    ...options
+  });
 }
 
 function getNextStepHints(stationId) {
@@ -155,44 +164,137 @@ async function fillCanvasSectionsInteractive(stationId, step, locale, output, rl
 }
 
 function resolveCanvasExportCommand() {
-  const binPath = path.resolve(
-    process.cwd(),
-    "node_modules",
-    ".bin",
-    process.platform === "win32" ? "canvascreator-export.cmd" : "canvascreator-export"
-  );
-  if (fs.existsSync(binPath)) {
+  const packageRoot = path.resolve(process.cwd(), "node_modules", "canvascreator");
+  if (!fs.existsSync(packageRoot)) {
     return {
-      command: binPath,
-      args: []
+      ok: false,
+      reason: "SVG export requires CanvasCreator export support, which is not installed in this project.",
+      help: "Run `npm install` to install project dependencies, or `npm install canvascreator` to add CanvasCreator manually."
     };
   }
 
-  const scriptPath = path.resolve(process.cwd(), "node_modules", "canvascreator", "scripts", "export.js");
+  const packageJsonPath = path.join(packageRoot, "package.json");
+  if (fs.existsSync(packageJsonPath)) {
+    const packageJson = readJson(packageJsonPath);
+    const binEntry = typeof packageJson.bin === "string"
+      ? packageJson.bin
+      : packageJson.bin?.["canvascreator-export"];
+
+    if (binEntry) {
+      const binPath = path.resolve(packageRoot, binEntry);
+      if (fs.existsSync(binPath)) {
+        return {
+          ok: true,
+          command: process.execPath,
+          args: [binPath]
+        };
+      }
+    }
+  }
+
+  const scriptPath = path.resolve(packageRoot, "scripts", "export.js");
   if (fs.existsSync(scriptPath)) {
     return {
+      ok: true,
       command: process.execPath,
       args: [scriptPath]
     };
   }
 
-  return null;
+  return {
+    ok: false,
+    reason: "CanvasCreator is installed, but its export CLI could not be found.",
+    help: "Reinstall `canvascreator` or use the CanvasCreator web app to export SVG from the JSON file."
+  };
+}
+
+function resolveStartLocale(options = {}) {
+  const explicitLocale = options.locale;
+  const defaultLocale = options["default-locale"] || methodEngine.DEFAULT_LOCALE;
+  if (explicitLocale) {
+    return explicitLocale;
+  }
+
+  return methodEngine.getSupportedMethodLocales().includes(defaultLocale)
+    ? defaultLocale
+    : methodEngine.DEFAULT_LOCALE;
+}
+
+async function maybePromptForStartLocale(options = {}) {
+  const selectedLocale = resolveStartLocale(options);
+  if (
+    options.locale ||
+    options.json ||
+    options.list ||
+    options.answers ||
+    !process.stdin.isTTY
+  ) {
+    return selectedLocale;
+  }
+
+  const supportedLocales = methodEngine.getSupportedMethodLocales();
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  try {
+    console.log(`Default method language: ${selectedLocale}`);
+    console.log(`Available languages: ${supportedLocales.join(", ")}`);
+    const answer = (await rl.question("Press Enter to keep the default, or type another locale for this run: "))
+      .trim()
+      .toLowerCase();
+    if (!answer) {
+      console.log("");
+      return selectedLocale;
+    }
+
+    if (supportedLocales.includes(answer)) {
+      console.log("");
+      return answer;
+    }
+
+    console.log(`Unknown locale "${answer}", using ${selectedLocale}.`);
+    console.log("");
+    return selectedLocale;
+  } finally {
+    rl.close();
+  }
+}
+
+function formatCommandFailure(result) {
+  if (result.error?.message) {
+    return result.error.message;
+  }
+
+  const stderr = String(result.stderr || "").trim();
+  if (stderr) {
+    return stderr;
+  }
+
+  const stdout = String(result.stdout || "").trim();
+  if (stdout) {
+    return stdout;
+  }
+
+  return "Canvas export failed.";
 }
 
 function exportCanvasSvgForResource(stationId, step, locale, output) {
   const jsonPath = methodEngine.generateCanvasForStationResource(stationId, step.resourceId, locale, output);
   const exportCommand = resolveCanvasExportCommand();
-  if (!exportCommand) {
+  if (!exportCommand.ok) {
     return {
       ok: false,
-      reason: "CanvasCreator export CLI is not installed in this project yet.",
+      reason: exportCommand.reason,
+      help: exportCommand.help,
       jsonPath
     };
   }
 
   const outputDir = path.dirname(jsonPath);
   const outputFile = path.join(outputDir, `${step.resourceId}.svg`);
-  const result = spawnSync(
+  const result = runCommand(
     exportCommand.command,
     [
       ...exportCommand.args,
@@ -201,16 +303,14 @@ function exportCanvasSvgForResource(stationId, step, locale, output) {
       "--output", outputFile
     ],
     {
-      cwd: process.cwd(),
-      encoding: "utf8",
-      shell: process.platform === "win32"
+      cwd: process.cwd()
     }
   );
 
   if (result.status !== 0) {
     return {
       ok: false,
-      reason: result.stderr || result.stdout || "Canvas export failed.",
+      reason: formatCommandFailure(result),
       jsonPath
     };
   }
@@ -562,6 +662,9 @@ async function runInteractiveResources(options) {
             console.log(`Source JSON: ${exportResult.jsonPath}`);
           } else {
             console.log(`SVG export unavailable: ${exportResult.reason}`);
+            if (exportResult.help) {
+              console.log(exportResult.help);
+            }
             console.log(`Canvas JSON is still available at: ${exportResult.jsonPath}`);
             console.log(`CanvasCreator URL: ${methodEngine.getCanvasCreatorUrl(step.canvasId, locale)}`);
           }
@@ -627,7 +730,8 @@ async function main() {
   }
 
   if (command === "start") {
-    const data = methodEngine.buildStartData(options.locale || methodEngine.DEFAULT_LOCALE);
+    const locale = await maybePromptForStartLocale(options);
+    const data = methodEngine.buildStartData(locale);
     if (options.json) {
       console.log(JSON.stringify(data, null, 2));
       return;
@@ -638,7 +742,7 @@ async function main() {
       return;
     }
 
-    await runInteractiveStart(data, options);
+    await runInteractiveStart(data, { ...options, locale });
     return;
   }
 
