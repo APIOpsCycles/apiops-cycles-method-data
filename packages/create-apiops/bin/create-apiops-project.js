@@ -97,10 +97,32 @@ function replaceInFile(filePath, replacements) {
   fs.writeFileSync(filePath, content);
 }
 
+function resolveNpmCommand() {
+  const npmCliPath = path.resolve(path.dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
+  if (fs.existsSync(npmCliPath)) {
+    return {
+      command: process.execPath,
+      args: [npmCliPath]
+    };
+  }
+
+  return {
+    command: process.platform === "win32" ? "npm.cmd" : "npm",
+    args: []
+  };
+}
+
+function runCommand(command, args, options = {}) {
+  return spawnSync(command, args, {
+    shell: false,
+    ...options
+  });
+}
+
 function getScripts(locale, apiStyle) {
   const base = {
     "method": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
-    "method:start": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js start --locale ${locale}`,
+    "method:start": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js start --default-locale ${locale}`,
     "method:resources:strategy": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale ${locale}`,
     "method:canvases:new-api": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style "${apiStyle}" --locale ${locale} --output ./specs/canvases`,
     "method:stations": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
@@ -200,18 +222,18 @@ async function main() {
   console.log(`Created ${projectName}`);
 
   if (installNow) {
-    const result = spawnSync("npm", ["install"], {
+    const npmCommand = resolveNpmCommand();
+    const result = runCommand(npmCommand.command, [...npmCommand.args, "install"], {
       cwd: targetDir,
-      stdio: "inherit",
-      shell: true
+      stdio: "inherit"
     });
     if (result.status !== 0) {
       console.error("npm install failed");
       process.exit(result.status || 1);
     }
 
-    const canvasInit = spawnSync(
-      "node",
+    const canvasInit = runCommand(
+      process.execPath,
       [
         "./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
         "generate-canvases",
@@ -222,8 +244,7 @@ async function main() {
       ],
       {
         cwd: targetDir,
-        stdio: "inherit",
-        shell: true
+        stdio: "inherit"
       }
     );
 

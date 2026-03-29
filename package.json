@@ -33,7 +33,7 @@
     "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public",
     "check:packaging:skills": "node scripts/check-packaging-skills.mjs",
     "check:package:contents": "node scripts/check-package-contents.mjs",
-    "test:create-apiops": "node scripts/test-create-apiops-scaffold.mjs"
+    "test:create-apiops": "node scripts/test-create-apiops-scaffold.mjs && node scripts/test-method-cli.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.7",
