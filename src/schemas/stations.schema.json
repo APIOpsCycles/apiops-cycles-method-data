@@ -31,6 +31,15 @@
                 "type": "array",
                 "items": {"type": "string"}
               },
+              "lifecycleStage": {"type": "string"},
+              "stationCriteria": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "expectedEvidenceTags": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
               "how_it_works": {
                 "type": "array",
                 "items": {
@@ -74,6 +83,15 @@
               "description": {"type": "string"},
               "why_it_matters": {"type": "string"},
               "outcomes": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "lifecycleStage": {"type": "string"},
+              "stationCriteria": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "expectedEvidenceTags": {
                 "type": "array",
                 "items": {"type": "string"}
               },

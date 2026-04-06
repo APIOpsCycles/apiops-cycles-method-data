@@ -37,7 +37,20 @@
             "resource": "apiBusinessModelCanvas"
           }
         ],
-        "apply_in_work": "station.api-product-strategy.apply_in_work"
+        "apply_in_work": "station.api-product-strategy.apply_in_work",
+        "lifecycleStage": "strategy",
+        "stationCriteria": [
+          "metrics-feedback-available",
+          "business-goals-defined",
+          "market-research-done",
+          "stakeholder-approval"
+        ],
+        "expectedEvidenceTags": [
+          "design-artifact",
+          "documentation",
+          "research",
+          "roadmap"
+        ]
       },
       {
         "id": "api-consumer-experience",
@@ -67,7 +80,21 @@
             "resource": "api-onboarding-best-practices"
           }
         ],
-        "apply_in_work": "station.api-consumer-experience.apply_in_work"
+        "apply_in_work": "station.api-consumer-experience.apply_in_work",
+        "lifecycleStage": "strategy",
+        "stationCriteria": [
+          "api-opportunity-documented",
+          "api-reusability",
+          "hide-backend-discrepancies",
+          "value-prop-validated",
+          "consumer-segments-identified",
+          "api-roadmap-defined"
+        ],
+        "expectedEvidenceTags": [
+          "design-artifact",
+          "documentation",
+          "consumer-feedback"
+        ]
       },
       {
         "id": "api-platform-architecture",
@@ -100,7 +127,21 @@
             "resource": "api-metrics-and-analytics"
           }
         ],
-        "apply_in_work": "station.api-platform-architecture.apply_in_work"
+        "apply_in_work": "station.api-platform-architecture.apply_in_work",
+        "lifecycleStage": "architecture",
+        "stationCriteria": [
+          "api-reusability",
+          "hide-backend-discrepancies",
+          "value-prop-validated",
+          "consumer-segments-identified",
+          "api-roadmap-defined"
+        ],
+        "expectedEvidenceTags": [
+          "architecture-decision",
+          "documentation",
+          "platform-config",
+          "metrics"
+        ]
       },
       {
         "id": "api-design",
@@ -150,7 +191,20 @@
             "resource": "api-audit-checklist"
           }
         ],
-        "apply_in_work": "station.api-design.apply_in_work"
+        "apply_in_work": "station.api-design.apply_in_work",
+        "lifecycleStage": "design",
+        "stationCriteria": [
+          "architecture-patterns-validated",
+          "hide-backend-discrepancies",
+          "design-reflects-business-value",
+          "api-consistency"
+        ],
+        "expectedEvidenceTags": [
+          "spec",
+          "contract",
+          "design-artifact",
+          "documentation"
+        ]
       },
       {
         "id": "api-delivery",
@@ -192,7 +246,20 @@
             "resource": "api-audit-checklist"
           }
         ],
-        "apply_in_work": "station.api-delivery.apply_in_work"
+        "apply_in_work": "station.api-delivery.apply_in_work",
+        "lifecycleStage": "delivery",
+        "stationCriteria": [
+          "architecture-patterns-validated",
+          "hide-backend-discrepancies",
+          "design-reflects-business-value",
+          "api-consistency"
+        ],
+        "expectedEvidenceTags": [
+          "implementation",
+          "pipeline-config",
+          "test-report",
+          "security-report"
+        ]
       },
       {
         "id": "api-audit",
@@ -221,7 +288,21 @@
             "step": "station.api-audit.how_it_works.2"
           }
         ],
-        "apply_in_work": "station.api-audit.apply_in_work"
+        "apply_in_work": "station.api-audit.apply_in_work",
+        "lifecycleStage": "publishing",
+        "stationCriteria": [
+          "architecture-patterns-validated",
+          "design-reflects-business-value",
+          "api-description-available",
+          "api-consistency",
+          "api-contract-tested"
+        ],
+        "expectedEvidenceTags": [
+          "audit-report",
+          "compliance-report",
+          "security-report",
+          "test-report"
+        ]
       },
       {
         "id": "api-publishing",
@@ -251,7 +332,20 @@
             "resource": "api-audit-checklist"
           }
         ],
-        "apply_in_work": "station.api-publishing.apply_in_work"
+        "apply_in_work": "station.api-publishing.apply_in_work",
+        "lifecycleStage": "publishing",
+        "stationCriteria": [
+          "audit-passed",
+          "audit-reports-shared",
+          "api-ready-for-publishing",
+          "api-documentation-ready"
+        ],
+        "expectedEvidenceTags": [
+          "gateway-config",
+          "developer-portal",
+          "documentation",
+          "release-record"
+        ]
       },
       {
         "id": "monitoring-and-improving",
@@ -281,7 +375,19 @@
             "resource": "apiops-CI-CD-for-apis"
           }
         ],
-        "apply_in_work": "station.monitoring-and-improving.apply_in_work"
+        "apply_in_work": "station.monitoring-and-improving.apply_in_work",
+        "lifecycleStage": "improving",
+        "stationCriteria": [
+          "api-documentation-ready",
+          "consumer-support-ready",
+          "legal-compliance-clear"
+        ],
+        "expectedEvidenceTags": [
+          "metrics",
+          "consumer-feedback",
+          "incident-report",
+          "roadmap"
+        ]
       }
     ]
   },

@@ -7,10 +7,50 @@
       "description": "General API profile that allows create, update, and delete operations."
     }
   },
-  "sections": [
+  "lifecycleStages": [
     {
-      "id": "concept-ready",
-      "title": "Concept is Ready When...",
+      "id": "strategy",
+      "title": "Strategy",
+      "readinessLabel": "Strategy is Ready When...",
+      "order": 1
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "readinessLabel": "Architecture is Ready When...",
+      "order": 2
+    },
+    {
+      "id": "design",
+      "title": "Design",
+      "readinessLabel": "Design is Ready When...",
+      "order": 3
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery",
+      "readinessLabel": "Delivery is Ready When...",
+      "order": 4
+    },
+    {
+      "id": "publishing",
+      "title": "Publishing",
+      "readinessLabel": "Publishing is Ready When...",
+      "order": 5
+    },
+    {
+      "id": "improving",
+      "title": "Improving",
+      "readinessLabel": "Improving is Ready When...",
+      "order": 6
+    }
+  ],
+  "stages": [
+    {
+      "id": "strategy",
+      "title": "Strategy",
+      "readinessLabel": "Strategy is Ready When...",
+      "order": 1,
       "items": [
         {
           "id": "based-on-clear-business-needs",
@@ -21,61 +61,210 @@
           ],
           "kind": "manual",
           "defaultStatus": "partial",
-          "guidelineRef": [
-            "REST-DOMAIN-01"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
-            "api-product-strategy",
-            "business-goals"
+          "primaryStage": "strategy",
+          "producedByStation": [
+            "api-product-strategy"
+          ],
+          "producedByStationCriteria": [
+            "business-goals-defined",
+            "market-research-done",
+            "stakeholder-approval",
+            "metrics-feedback-available"
+          ],
+          "guidelines": [
+            "REST-DOMAIN-01"
           ],
           "resourceSource": [
             "apiBusinessModelCanvas",
             "apiValuePropositionCanvas"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "design-artifact",
-            "documentation"
+            "documentation",
+            "research"
           ],
-          "evidence": [
-            "specs/openapi/api.yaml",
-            "docs/api/strategy/Canvas_apiBusinessModelCanvas_en.svg"
+          "expectedEvidence": [
+            "specs/canvases/api-product-strategy/apiValuePropositionCanvas.empty.json",
+            "specs/canvases/api-product-strategy/apiBusinessModelCanvas.empty.json"
           ]
         },
         {
-          "id": "hides-raw-backend-data",
-          "label": "API hides raw backend data and is designed for shared use",
+          "id": "concept-items-audited",
+          "label": "All concept checklist items are audited",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "aggregate",
+          "check": {
+            "type": "stageCoverage",
+            "stageId": "strategy"
+          },
+          "automationLevel": "semi",
+          "primaryStage": "strategy",
+          "producedByStation": [
+            "api-product-strategy",
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "business-goals-defined",
+            "market-research-done",
+            "stakeholder-approval",
+            "metrics-feedback-available",
+            "api-opportunity-documented",
+            "api-reusability",
+            "value-prop-validated",
+            "consumer-segments-identified"
+          ],
+          "guidelines": [
+            "REST-AUDIT-02"
+          ],
+          "resourceSource": [
+            "api-audit-checklist"
+          ],
+          "expectedEvidenceTags": [
+            "report"
+          ],
+          "expectedEvidence": [
+            "audit/concept-review-report.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "readinessLabel": "Architecture is Ready When...",
+      "order": 2,
+      "items": [
+        {
+          "id": "versioning-decided",
+          "label": "Versioning strategy decided and supported by gateway",
           "applicableTo": [
             "read-only",
             "full-crud"
           ],
           "kind": "manual",
           "defaultStatus": "partial",
-          "guidelineRef": [
-            "REST-DOMAIN-01"
+          "automationLevel": "semi",
+          "primaryStage": "architecture",
+          "producedByStation": [
+            "api-platform-architecture",
+            "api-publishing"
           ],
-          "automationLevel": "manual",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "producedByStationCriteria": [
+            "api-roadmap-defined",
+            "api-reusability",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
+            "REST-VERSION-01"
           ],
           "resourceSource": [
-            "domainCanvas",
-            "interactionCanvas",
             "restCanvas",
-            "api-design-principles",
-            "contract-first-design"
+            "contract-first-design",
+            "api-versioning-best-practices",
+            "apiops-CI-CD-for-apis"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec",
-            "design-artifact"
+            "ci-cd",
+            "gateway-config"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml",
-            "docs/api/design/Canvas_interactionCanvas_en.svg"
+            "docs/api/architecture/README.md",
+            "docs/api/publishing/README.md"
           ]
         },
+        {
+          "id": "only-via-gateway",
+          "label": "Only accessible via API gateway",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "architecture",
+          "producedByStation": [
+            "api-platform-architecture",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "api-reusability",
+            "api-ready-for-publishing",
+            "audit-passed"
+          ],
+          "guidelines": [
+            "REST-PUBLISH-02",
+            "REST-CAPACITY-02"
+          ],
+          "resourceSource": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "api-security-best-practices",
+            "data-privacy-guidelines"
+          ],
+          "expectedEvidenceTags": [
+            "gateway-config",
+            "infra-config",
+            "security-config"
+          ],
+          "expectedEvidence": [
+            "docs/api/architecture/README.md",
+            "docs/api/publishing/README.md"
+          ]
+        },
+        {
+          "id": "rate-limits-enforced",
+          "label": "Rate limits are enforced",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "partial",
+          "automationLevel": "semi",
+          "primaryStage": "architecture",
+          "producedByStation": [
+            "api-platform-architecture"
+          ],
+          "producedByStationCriteria": [
+            "api-roadmap-defined",
+            "api-reusability"
+          ],
+          "guidelines": [
+            "REST-CAPACITY-01",
+            "REST-OBS-01",
+            "REST-SEC-04"
+          ],
+          "resourceSource": [
+            "capacityCanvas",
+            "api-security-best-practices",
+            "scalable-infrastructure-best-practices",
+            "api-metrics-and-analytics"
+          ],
+          "expectedEvidenceTags": [
+            "gateway-config",
+            "runtime",
+            "monitoring"
+          ],
+          "expectedEvidence": [
+            "specs/canvases/api-platform-architecture/capacityCanvas.empty.json",
+            "docs/api/architecture/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design",
+      "readinessLabel": "Design is Ready When...",
+      "order": 3,
+      "items": [
         {
           "id": "endpoint-descriptions-present",
           "label": "Endpoints have business value and feature descriptions",
@@ -87,14 +276,19 @@
           "check": {
             "type": "operationDescriptions"
           },
-          "guidelineRef": [
-            "REST-CX-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-consumer-experience",
-            "api-product-strategy",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design",
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "design-reflects-business-value",
+            "value-prop-validated",
+            "api-opportunity-documented"
+          ],
+          "guidelines": [
+            "REST-CX-01"
           ],
           "resourceSource": [
             "apiValuePropositionCanvas",
@@ -102,10 +296,50 @@
             "api-onboarding-best-practices",
             "contract-first-design"
           ],
-          "evidenceType": [
-            "spec"
+          "expectedEvidenceTags": [
+            "spec",
+            "design-artifact"
           ],
-          "evidence": [
+          "expectedEvidence": [
+            "specs/openapi/api.yaml",
+            "specs/canvases/api-product-strategy/apiValuePropositionCanvas.empty.json"
+          ]
+        },
+        {
+          "id": "hides-raw-backend-data",
+          "label": "API hides raw backend data and is designed for shared use",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "partial",
+          "automationLevel": "manual",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "hide-backend-discrepancies",
+            "design-reflects-business-value"
+          ],
+          "guidelines": [
+            "REST-DOMAIN-01"
+          ],
+          "resourceSource": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "api-design-principles",
+            "contract-first-design"
+          ],
+          "expectedEvidenceTags": [
+            "spec",
+            "design-artifact"
+          ],
+          "expectedEvidence": [
+            "specs/canvases/api-product-strategy/domainCanvas.empty.json",
+            "specs/canvases/api-design/interactionCanvas.empty.json",
             "specs/openapi/api.yaml"
           ]
         },
@@ -118,28 +352,33 @@
           ],
           "kind": "manual",
           "defaultStatus": "partial",
-          "guidelineRef": [
+          "automationLevel": "manual",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design",
+            "api-platform-architecture"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "architecture-patterns-validated",
+            "api-reusability"
+          ],
+          "guidelines": [
             "REST-DOMAIN-02",
             "REST-CX-03"
-          ],
-          "automationLevel": "manual",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "api-platform-architecture"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "api-audit-checklist"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "documentation",
             "design-artifact"
           ],
-          "evidence": [
-            "README.md",
-            "docs/api/design/Canvas_restCanvas_en.svg"
+          "expectedEvidence": [
+            "specs/canvases/api-design/restCanvas.empty.json",
+            "docs/api/design/README.md"
           ]
         },
         {
@@ -153,14 +392,16 @@
           "check": {
             "type": "fieldNamesDescriptive"
           },
-          "guidelineRef": [
-            "REST-NAMING-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-NAMING-01"
           ],
           "resourceSource": [
             "domainCanvas",
@@ -168,10 +409,10 @@
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -186,23 +427,27 @@
           "check": {
             "type": "requiredFieldsPresent"
           },
-          "guidelineRef": [
-            "REST-VALIDATION-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-VALIDATION-01"
           ],
           "resourceSource": [
             "domainCanvas",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec",
             "contract"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -217,24 +462,26 @@
           "check": {
             "type": "dateFormatTimezone"
           },
-          "guidelineRef": [
-            "REST-DATA-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-DATA-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -249,14 +496,17 @@
           "check": {
             "type": "standardizedEnumsOrPatterns"
           },
-          "guidelineRef": [
-            "REST-DATA-02"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "design-reflects-business-value"
+          ],
+          "guidelines": [
+            "REST-DATA-02"
           ],
           "resourceSource": [
             "domainCanvas",
@@ -264,10 +514,10 @@
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -282,14 +532,16 @@
           "check": {
             "type": "avoidAcronyms"
           },
-          "guidelineRef": [
-            "REST-NAMING-02"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-NAMING-02"
           ],
           "resourceSource": [
             "domainCanvas",
@@ -297,10 +549,10 @@
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -313,60 +565,30 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "This profile is read-only and does not create resources.",
-          "guidelineRef": [
-            "REST-RESP-201-01"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "api-consumer-experience",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "design-reflects-business-value",
+            "api-consistency",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-RESP-201-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-onboarding-best-practices",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "design-prototype-ready",
-      "title": "API Design Prototype is Ready When...",
-      "items": [
-        {
-          "id": "concept-items-audited",
-          "label": "All concept checklist items are audited",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "aggregate",
-          "check": {
-            "type": "sectionCoverage",
-            "sectionId": "concept-ready"
-          },
-          "guidelineRef": [
-            "REST-AUDIT-02"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-audit"
-          ],
-          "resourceSource": [
-            "api-audit-checklist"
-          ],
-          "evidenceType": [
-            "report"
-          ],
-          "evidence": [
-            "audit/concept-review-report.json"
           ]
         },
         {
@@ -381,24 +603,26 @@
             "type": "pathDepthMax",
             "maxDepth": 2
           },
-          "guidelineRef": [
-            "REST-PATH-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-PATH-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -413,24 +637,28 @@
           "check": {
             "type": "examplesPresent"
           },
-          "guidelineRef": [
-            "REST-CX-02"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-consumer-experience",
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "design-reflects-business-value",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-CX-02"
           ],
           "resourceSource": [
             "api-onboarding-best-practices",
             "restCanvas",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -443,25 +671,28 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "Read-only profile does not expose create or update operations.",
-          "guidelineRef": [
+          "automationLevel": "manual",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "design-reflects-business-value"
+          ],
+          "guidelines": [
             "REST-HTTP-POST-01",
             "REST-HTTP-PUT-01"
-          ],
-          "automationLevel": "manual",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -474,60 +705,27 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "Read-only profile does not expose delete operations.",
-          "guidelineRef": [
-            "REST-HTTP-DELETE-01"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-HTTP-DELETE-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "versioning-decided",
-          "label": "Versioning strategy decided and supported by gateway",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "partial",
-          "guidelineRef": [
-            "REST-VERSION-01"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-design",
-            "release-management",
-            "api-publishing",
-            "api-platform-architecture"
-          ],
-          "resourceSource": [
-            "restCanvas",
-            "contract-first-design",
-            "api-versioning-best-practices",
-            "apiops-CI-CD-for-apis"
-          ],
-          "evidenceType": [
-            "spec",
-            "ci-cd",
-            "gateway-config"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml",
-            ".github/workflows/openapi-lint.yml"
           ]
         },
         {
@@ -541,25 +739,27 @@
           "check": {
             "type": "getNoRequestBody"
           },
-          "guidelineRef": [
+          "automationLevel": "auto",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
             "REST-HTTP-GET-01",
             "REST-RESP-200-01"
-          ],
-          "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -573,24 +773,28 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "The current contract returns content for all GET operations.",
-          "guidelineRef": [
-            "REST-RESP-204-02"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "api-consumer-experience",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-RESP-204-02"
           ],
           "resourceSource": [
             "restCanvas",
             "api-onboarding-best-practices",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -603,24 +807,28 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "Read-only profile does not expose POST updates.",
-          "guidelineRef": [
-            "REST-RESP-200-01"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "api-consumer-experience",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-RESP-200-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-onboarding-best-practices",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -633,24 +841,28 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "Read-only profile does not expose POST creates.",
-          "guidelineRef": [
-            "REST-RESP-201-01"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "api-consumer-experience",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-RESP-201-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-onboarding-best-practices",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -663,24 +875,28 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "Read-only profile does not expose DELETE operations.",
-          "guidelineRef": [
-            "REST-RESP-204-01"
-          ],
           "automationLevel": "manual",
-          "stationSource": [
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "api-consumer-experience",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-RESP-204-01"
           ],
           "resourceSource": [
             "restCanvas",
             "api-onboarding-best-practices",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -695,15 +911,19 @@
           "check": {
             "type": "errorResponsesSpecific"
           },
-          "guidelineRef": [
-            "REST-ERROR-400-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-consumer-experience",
+          "primaryStage": "design",
+          "producedByStation": [
             "api-design",
-            "api-audit",
-            "contract-design"
+            "api-consumer-experience"
+          ],
+          "producedByStationCriteria": [
+            "design-reflects-business-value",
+            "api-consistency",
+            "value-prop-validated"
+          ],
+          "guidelines": [
+            "REST-ERROR-400-01"
           ],
           "resourceSource": [
             "api-onboarding-best-practices",
@@ -711,10 +931,10 @@
             "api-audit-checklist",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -728,28 +948,32 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "The current public storefront contract is intentionally unauthenticated.",
-          "guidelineRef": [
+          "automationLevel": "semi",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
             "REST-ERROR-401-01",
             "REST-SEC-01",
             "REST-SEC-03"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "api-publishing"
           ],
           "resourceSource": [
             "api-security-best-practices",
             "data-privacy-guidelines",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec",
             "security-config",
             "gateway-config"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -763,299 +987,31 @@
           "kind": "n/a",
           "defaultStatus": "na",
           "reason": "The current profile is public read-only and exposes no unauthorized operations.",
-          "guidelineRef": [
+          "automationLevel": "semi",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
             "REST-ERROR-403-01",
             "REST-SEC-03"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "api-publishing"
           ],
           "resourceSource": [
             "api-security-best-practices",
             "data-privacy-guidelines",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec",
             "security-config",
             "gateway-config"
           ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "production-ready",
-      "title": "API Is Maintainable in Production When...",
-      "items": [
-        {
-          "id": "design-items-audited",
-          "label": "All prototype and design items are audited",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "aggregate",
-          "check": {
-            "type": "sectionCoverage",
-            "sectionId": "design-prototype-ready"
-          },
-          "guidelineRef": [
-            "REST-AUDIT-02"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-audit"
-          ],
-          "resourceSource": [
-            "api-audit-checklist"
-          ],
-          "evidenceType": [
-            "report"
-          ],
-          "evidence": [
-            "audit/production-readiness-review.json"
-          ]
-        },
-        {
-          "id": "published-via-api-management",
-          "label": "Published via API management",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-PUBLISH-01"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-publishing",
-            "api-platform-architecture",
-            "ci-cd"
-          ],
-          "resourceSource": [
-            "apiops-CI-CD-for-apis",
-            "api-onboarding-best-practices",
-            "api-audit-checklist"
-          ],
-          "evidenceType": [
-            "gateway-config",
-            "ci-cd",
-            "documentation"
-          ],
-          "evidence": [
-            ".github/workflows/openapi-lint.yml",
-            "docs/api/publishing/README.md"
-          ]
-        },
-        {
-          "id": "visible-in-dev-portal",
-          "label": "Visible in developer portal",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-PUBLISH-03"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-publishing",
-            "api-consumer-experience",
-            "api-consumer-adoption"
-          ],
-          "resourceSource": [
-            "api-onboarding-best-practices",
-            "api-community-engagement-strategies"
-          ],
-          "evidenceType": [
-            "documentation",
-            "runtime"
-          ],
-          "evidence": [
-            "docs/api/publishing/README.md"
-          ]
-        },
-        {
-          "id": "only-via-gateway",
-          "label": "Only accessible via API gateway",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-PUBLISH-02",
-            "REST-CAPACITY-02"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-platform-architecture",
-            "api-publishing",
-            "security-and-privacy"
-          ],
-          "resourceSource": [
-            "businessImpactCanvas",
-            "locationsCanvas",
-            "api-security-best-practices",
-            "data-privacy-guidelines"
-          ],
-          "evidenceType": [
-            "gateway-config",
-            "infra-config",
-            "security-config"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "rate-limits-enforced",
-          "label": "Rate limits are enforced",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "partial",
-          "guidelineRef": [
-            "REST-CAPACITY-01",
-            "REST-OBS-01",
-            "REST-SEC-04"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-platform-architecture",
-            "monitoring-and-improving",
-            "scalable-infrastructure",
-            "security-and-privacy"
-          ],
-          "resourceSource": [
-            "capacityCanvas",
-            "api-security-best-practices",
-            "scalable-infrastructure-best-practices",
-            "api-metrics-and-analytics"
-          ],
-          "evidenceType": [
-            "gateway-config",
-            "runtime",
-            "monitoring"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml",
-            "spectral/read-only.yaml"
-          ]
-        },
-        {
-          "id": "docs-auto-generated",
-          "label": "Docs auto-generated from spec and schema",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "partial",
-          "guidelineRef": [
-            "REST-CONTRACT-02",
-            "REST-PUBLISH-03"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-publishing",
-            "contract-design",
-            "ci-cd"
-          ],
-          "resourceSource": [
-            "contract-first-design",
-            "apiops-CI-CD-for-apis",
-            "api-onboarding-best-practices"
-          ],
-          "evidenceType": [
-            "spec",
-            "documentation",
-            "ci-cd"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml",
-            "README.md"
-          ]
-        },
-        {
-          "id": "spec-auto-updated",
-          "label": "Spec auto-updated to gateway and dev portal",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-CONTRACT-02"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-publishing",
-            "ci-cd",
-            "api-platform-architecture"
-          ],
-          "resourceSource": [
-            "apiops-CI-CD-for-apis",
-            "contract-first-design",
-            "api-onboarding-best-practices"
-          ],
-          "evidenceType": [
-            "ci-cd",
-            "gateway-config",
-            "documentation"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "spec-validated-on-change",
-          "label": "Spec validated on every change",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "openapi",
-          "check": {
-            "type": "validationWorkflowPresent"
-          },
-          "guidelineRef": [
-            "REST-AUDIT-01"
-          ],
-          "automationLevel": "auto",
-          "stationSource": [
-            "api-audit",
-            "contract-design",
-            "ci-cd",
-            "test-automation"
-          ],
-          "resourceSource": [
-            "api-audit-checklist",
-            "contract-first-design",
-            "apiops-CI-CD-for-apis",
-            "api-testing-best-practices"
-          ],
-          "evidenceType": [
-            "ci-cd",
-            "spec",
-            "test"
-          ],
-          "evidence": [
-            ".github/workflows/openapi-lint.yml",
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -1070,342 +1026,28 @@
           "check": {
             "type": "schemasPresent"
           },
-          "guidelineRef": [
-            "REST-CONTRACT-01"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "contract-design"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-CONTRACT-01"
           ],
           "resourceSource": [
             "contract-first-design",
             "restCanvas"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec",
             "contract"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "schema-and-examples-pass",
-          "label": "Schema and examples pass validation",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "openapi",
-          "check": {
-            "type": "examplesPassValidation"
-          },
-          "guidelineRef": [
-            "REST-AUDIT-01",
-            "REST-CONTRACT-01"
-          ],
-          "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "api-audit",
-            "contract-design",
-            "test-automation"
-          ],
-          "resourceSource": [
-            "contract-first-design",
-            "api-audit-checklist",
-            "api-testing-best-practices"
-          ],
-          "evidenceType": [
-            "spec",
-            "test"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "uses-https",
-          "label": "Uses HTTPS or encrypted protocols",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-SEC-05"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "api-publishing"
-          ],
-          "resourceSource": [
-            "api-security-best-practices",
-            "data-privacy-guidelines",
-            "api-compliance-best-practices"
-          ],
-          "evidenceType": [
-            "security-config",
-            "gateway-config"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "official-domain",
-          "label": "Published under official organization domain",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-PUBLISH-04"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-publishing"
-          ],
-          "resourceSource": [
-            "api-onboarding-best-practices",
-            "api-audit-checklist"
-          ],
-          "evidenceType": [
-            "documentation",
-            "runtime"
-          ],
-          "evidence": [
-            "docs/api/publishing/README.md"
-          ]
-        },
-        {
-          "id": "auth-protection",
-          "label": "Endpoints protected by authentication",
-          "applicableTo": [
-            "full-crud"
-          ],
-          "kind": "n/a",
-          "defaultStatus": "na",
-          "reason": "This profile is intentionally public read-only.",
-          "guidelineRef": [
-            "REST-SEC-01",
-            "REST-SEC-04"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "api-publishing"
-          ],
-          "resourceSource": [
-            "api-security-best-practices",
-            "data-privacy-guidelines",
-            "api-compliance-best-practices"
-          ],
-          "evidenceType": [
-            "security-config",
-            "gateway-config",
-            "spec"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "token-auth",
-          "label": "Token-based authentication",
-          "applicableTo": [
-            "full-crud"
-          ],
-          "kind": "n/a",
-          "defaultStatus": "na",
-          "reason": "This profile is intentionally public read-only.",
-          "guidelineRef": [
-            "REST-SEC-02"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "api-publishing"
-          ],
-          "resourceSource": [
-            "api-security-best-practices",
-            "data-privacy-guidelines",
-            "api-compliance-best-practices"
-          ],
-          "evidenceType": [
-            "security-config",
-            "spec"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "csrf-protection",
-          "label": "Protected against CSRF",
-          "applicableTo": [
-            "full-crud"
-          ],
-          "kind": "n/a",
-          "defaultStatus": "na",
-          "reason": "This profile is intentionally public read-only.",
-          "guidelineRef": [
-            "REST-SEC-08"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-delivery"
-          ],
-          "resourceSource": [
-            "api-security-best-practices",
-            "data-privacy-guidelines",
-            "api-development-best-practices"
-          ],
-          "evidenceType": [
-            "security-config",
-            "code"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "inputs-auto-validated",
-          "label": "Inputs auto-validated by framework",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "partial",
-          "guidelineRef": [
-            "REST-VALIDATION-01"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "api-delivery",
-            "development",
-            "contract-design"
-          ],
-          "resourceSource": [
-            "api-development-best-practices",
-            "contract-first-design",
-            "api-testing-best-practices"
-          ],
-          "evidenceType": [
-            "code",
-            "test",
-            "spec"
-          ],
-          "evidence": [
-            "specs/openapi/api.yaml"
-          ]
-        },
-        {
-          "id": "outputs-auto-escaped",
-          "label": "Outputs auto-escaped by framework",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "n/a",
-          "defaultStatus": "na",
-          "reason": "JSON APIs do not typically require output escaping in the same way as HTML rendering.",
-          "guidelineRef": [
-            "REST-SEC-04"
-          ],
-          "automationLevel": "manual",
-          "stationSource": [
-            "api-delivery",
-            "development",
-            "security-and-privacy"
-          ],
-          "resourceSource": [
-            "api-development-best-practices",
-            "api-security-best-practices",
-            "data-privacy-guidelines"
-          ],
-          "evidenceType": [
-            "code"
-          ],
-          "evidence": [
-            "src/"
-          ]
-        },
-        {
-          "id": "encryption-in-transit",
-          "label": "Encryption for data in transit and storage",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-SEC-05"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "api-publishing",
-            "monitoring-and-improving"
-          ],
-          "resourceSource": [
-            "api-security-best-practices",
-            "data-privacy-guidelines",
-            "api-compliance-best-practices",
-            "api-metrics-and-analytics"
-          ],
-          "evidenceType": [
-            "security-config",
-            "infra-config",
-            "documentation"
-          ],
-          "evidence": [
-            "docs/api/publishing/README.md"
-          ]
-        },
-        {
-          "id": "message-integrity",
-          "label": "Message integrity implemented",
-          "applicableTo": [
-            "read-only",
-            "full-crud"
-          ],
-          "kind": "manual",
-          "defaultStatus": "gap",
-          "guidelineRef": [
-            "REST-OBS-01",
-            "REST-SEC-04"
-          ],
-          "automationLevel": "semi",
-          "stationSource": [
-            "security-and-privacy",
-            "api-platform-architecture",
-            "monitoring-and-improving"
-          ],
-          "resourceSource": [
-            "api-security-best-practices",
-            "api-compliance-best-practices",
-            "api-metrics-and-analytics"
-          ],
-          "evidenceType": [
-            "security-config",
-            "monitoring",
-            "documentation"
-          ],
-          "evidence": [
-            "docs/api/publishing/README.md"
           ]
         },
         {
@@ -1419,24 +1061,27 @@
           "check": {
             "type": "opaqueIdentifiers"
           },
-          "guidelineRef": [
-            "REST-SEC-07"
-          ],
           "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "contract-design",
-            "security-and-privacy"
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "hide-backend-discrepancies",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-SEC-07"
           ],
           "resourceSource": [
             "domainCanvas",
             "contract-first-design",
             "api-security-best-practices"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -1451,16 +1096,18 @@
           "check": {
             "type": "noSensitiveDataInPaths"
           },
-          "guidelineRef": [
+          "automationLevel": "auto",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "hide-backend-discrepancies",
+            "api-consistency"
+          ],
+          "guidelines": [
             "REST-SEC-06",
             "REST-SEC-04"
-          ],
-          "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "contract-design",
-            "security-and-privacy",
-            "api-publishing"
           ],
           "resourceSource": [
             "restCanvas",
@@ -1468,10 +1115,10 @@
             "api-security-best-practices",
             "data-privacy-guidelines"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         },
@@ -1486,31 +1133,644 @@
           "check": {
             "type": "methodResourceConsistency"
           },
-          "guidelineRef": [
+          "automationLevel": "auto",
+          "primaryStage": "design",
+          "producedByStation": [
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency"
+          ],
+          "guidelines": [
             "REST-HTTP-GET-01",
             "REST-HTTP-POST-01",
             "REST-HTTP-PUT-01",
             "REST-HTTP-DELETE-01"
-          ],
-          "automationLevel": "auto",
-          "stationSource": [
-            "api-design",
-            "design-standards",
-            "contract-design"
           ],
           "resourceSource": [
             "restCanvas",
             "api-design-principles",
             "contract-first-design"
           ],
-          "evidenceType": [
+          "expectedEvidenceTags": [
             "spec"
           ],
-          "evidence": [
+          "expectedEvidence": [
             "specs/openapi/api.yaml"
           ]
         }
       ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery",
+      "readinessLabel": "Delivery is Ready When...",
+      "order": 4,
+      "items": [
+        {
+          "id": "design-items-audited",
+          "label": "All prototype and design items are audited",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "aggregate",
+          "check": {
+            "type": "stageCoverage",
+            "stageId": "design"
+          },
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-design",
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "design-reflects-business-value",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-AUDIT-02"
+          ],
+          "resourceSource": [
+            "api-audit-checklist"
+          ],
+          "expectedEvidenceTags": [
+            "report"
+          ],
+          "expectedEvidence": [
+            "audit/production-readiness-review.json"
+          ]
+        },
+        {
+          "id": "spec-validated-on-change",
+          "label": "Spec validated on every change",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "openapi",
+          "check": {
+            "type": "validationWorkflowPresent"
+          },
+          "automationLevel": "auto",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-AUDIT-01"
+          ],
+          "resourceSource": [
+            "api-audit-checklist",
+            "contract-first-design",
+            "apiops-CI-CD-for-apis",
+            "api-testing-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "ci-cd",
+            "spec",
+            "test"
+          ],
+          "expectedEvidence": [
+            ".github/workflows/openapi-lint.yml",
+            "specs/openapi/api.yaml"
+          ]
+        },
+        {
+          "id": "schema-and-examples-pass",
+          "label": "Schema and examples pass validation",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "openapi",
+          "check": {
+            "type": "examplesPassValidation"
+          },
+          "automationLevel": "auto",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery",
+            "api-design"
+          ],
+          "producedByStationCriteria": [
+            "api-consistency",
+            "architecture-patterns-validated",
+            "api-contract-tested"
+          ],
+          "guidelines": [
+            "REST-AUDIT-01",
+            "REST-CONTRACT-01"
+          ],
+          "resourceSource": [
+            "contract-first-design",
+            "api-audit-checklist",
+            "api-testing-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "spec",
+            "test"
+          ],
+          "expectedEvidence": [
+            "specs/openapi/api.yaml"
+          ]
+        },
+        {
+          "id": "uses-https",
+          "label": "Uses HTTPS or encrypted protocols",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
+            "REST-SEC-05"
+          ],
+          "resourceSource": [
+            "api-security-best-practices",
+            "data-privacy-guidelines",
+            "api-compliance-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "security-config",
+            "gateway-config"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md",
+            "docs/api/publishing/README.md"
+          ]
+        },
+        {
+          "id": "auth-protection",
+          "label": "Endpoints protected by authentication",
+          "applicableTo": [
+            "full-crud"
+          ],
+          "kind": "n/a",
+          "defaultStatus": "na",
+          "reason": "This profile is intentionally public read-only.",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
+            "REST-SEC-01",
+            "REST-SEC-04"
+          ],
+          "resourceSource": [
+            "api-security-best-practices",
+            "data-privacy-guidelines",
+            "api-compliance-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "security-config",
+            "gateway-config",
+            "spec"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md",
+            "docs/api/publishing/README.md",
+            "specs/openapi/api.yaml"
+          ]
+        },
+        {
+          "id": "token-auth",
+          "label": "Token-based authentication",
+          "applicableTo": [
+            "full-crud"
+          ],
+          "kind": "n/a",
+          "defaultStatus": "na",
+          "reason": "This profile is intentionally public read-only.",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
+            "REST-SEC-02"
+          ],
+          "resourceSource": [
+            "api-security-best-practices",
+            "data-privacy-guidelines",
+            "api-compliance-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "security-config",
+            "spec"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md",
+            "docs/api/publishing/README.md",
+            "specs/openapi/api.yaml"
+          ]
+        },
+        {
+          "id": "csrf-protection",
+          "label": "Protected against CSRF",
+          "applicableTo": [
+            "full-crud"
+          ],
+          "kind": "n/a",
+          "defaultStatus": "na",
+          "reason": "This profile is intentionally public read-only.",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-SEC-08"
+          ],
+          "resourceSource": [
+            "api-security-best-practices",
+            "data-privacy-guidelines",
+            "api-development-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "security-config",
+            "code"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md",
+            "specs/openapi/api.yaml"
+          ]
+        },
+        {
+          "id": "inputs-auto-validated",
+          "label": "Inputs auto-validated by framework",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "partial",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-VALIDATION-01"
+          ],
+          "resourceSource": [
+            "api-development-best-practices",
+            "contract-first-design",
+            "api-testing-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "code",
+            "test",
+            "spec"
+          ],
+          "expectedEvidence": [
+            "specs/openapi/api.yaml",
+            "docs/api/delivery/README.md"
+          ]
+        },
+        {
+          "id": "outputs-auto-escaped",
+          "label": "Outputs auto-escaped by framework",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "n/a",
+          "defaultStatus": "na",
+          "reason": "JSON APIs do not typically require output escaping in the same way as HTML rendering.",
+          "automationLevel": "manual",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-SEC-04"
+          ],
+          "resourceSource": [
+            "api-development-best-practices",
+            "api-security-best-practices",
+            "data-privacy-guidelines"
+          ],
+          "expectedEvidenceTags": [
+            "code"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md"
+          ]
+        },
+        {
+          "id": "encryption-in-transit",
+          "label": "Encryption for data in transit and storage",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery",
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-ready-for-publishing",
+            "audit-passed"
+          ],
+          "guidelines": [
+            "REST-SEC-05"
+          ],
+          "resourceSource": [
+            "api-security-best-practices",
+            "data-privacy-guidelines",
+            "api-compliance-best-practices",
+            "api-metrics-and-analytics"
+          ],
+          "expectedEvidenceTags": [
+            "security-config",
+            "infra-config",
+            "documentation"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md",
+            "docs/api/publishing/README.md"
+          ]
+        },
+        {
+          "id": "message-integrity",
+          "label": "Message integrity implemented",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "delivery",
+          "producedByStation": [
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "architecture-patterns-validated",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-OBS-01",
+            "REST-SEC-04"
+          ],
+          "resourceSource": [
+            "api-security-best-practices",
+            "api-compliance-best-practices",
+            "api-metrics-and-analytics"
+          ],
+          "expectedEvidenceTags": [
+            "security-config",
+            "monitoring",
+            "documentation"
+          ],
+          "expectedEvidence": [
+            "docs/api/delivery/README.md",
+            "docs/api/architecture/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "publishing",
+      "title": "Publishing",
+      "readinessLabel": "Publishing is Ready When...",
+      "order": 5,
+      "items": [
+        {
+          "id": "published-via-api-management",
+          "label": "Published via API management",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "publishing",
+          "producedByStation": [
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "api-ready-for-publishing",
+            "audit-passed"
+          ],
+          "guidelines": [
+            "REST-PUBLISH-01"
+          ],
+          "resourceSource": [
+            "apiops-CI-CD-for-apis",
+            "api-onboarding-best-practices",
+            "api-audit-checklist"
+          ],
+          "expectedEvidenceTags": [
+            "gateway-config",
+            "ci-cd",
+            "documentation"
+          ],
+          "expectedEvidence": [
+            ".github/workflows/openapi-lint.yml",
+            "docs/api/publishing/README.md"
+          ]
+        },
+        {
+          "id": "visible-in-dev-portal",
+          "label": "Visible in developer portal",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "publishing",
+          "producedByStation": [
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "api-documentation-ready",
+            "api-ready-for-publishing"
+          ],
+          "guidelines": [
+            "REST-PUBLISH-03"
+          ],
+          "resourceSource": [
+            "api-onboarding-best-practices",
+            "api-community-engagement-strategies"
+          ],
+          "expectedEvidenceTags": [
+            "documentation",
+            "runtime"
+          ],
+          "expectedEvidence": [
+            "docs/api/publishing/README.md"
+          ]
+        },
+        {
+          "id": "docs-auto-generated",
+          "label": "Docs auto-generated from spec and schema",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "partial",
+          "automationLevel": "semi",
+          "primaryStage": "publishing",
+          "producedByStation": [
+            "api-publishing",
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "api-documentation-ready",
+            "api-ready-for-publishing",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-CONTRACT-02",
+            "REST-PUBLISH-03"
+          ],
+          "resourceSource": [
+            "contract-first-design",
+            "apiops-CI-CD-for-apis",
+            "api-onboarding-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "spec",
+            "documentation",
+            "ci-cd"
+          ],
+          "expectedEvidence": [
+            "specs/openapi/api.yaml",
+            "docs/api/publishing/README.md",
+            "docs/api/audit/design-audit.read-only.md"
+          ]
+        },
+        {
+          "id": "spec-auto-updated",
+          "label": "Spec auto-updated to gateway and dev portal",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "publishing",
+          "producedByStation": [
+            "api-publishing",
+            "api-delivery"
+          ],
+          "producedByStationCriteria": [
+            "api-ready-for-publishing",
+            "audit-passed",
+            "api-consistency"
+          ],
+          "guidelines": [
+            "REST-CONTRACT-02"
+          ],
+          "resourceSource": [
+            "apiops-CI-CD-for-apis",
+            "contract-first-design",
+            "api-onboarding-best-practices"
+          ],
+          "expectedEvidenceTags": [
+            "ci-cd",
+            "gateway-config",
+            "documentation"
+          ],
+          "expectedEvidence": [
+            ".github/workflows/openapi-lint.yml",
+            "docs/api/publishing/README.md",
+            "specs/openapi/api.yaml"
+          ]
+        },
+        {
+          "id": "official-domain",
+          "label": "Published under official organization domain",
+          "applicableTo": [
+            "read-only",
+            "full-crud"
+          ],
+          "kind": "manual",
+          "defaultStatus": "gap",
+          "automationLevel": "semi",
+          "primaryStage": "publishing",
+          "producedByStation": [
+            "api-publishing"
+          ],
+          "producedByStationCriteria": [
+            "api-ready-for-publishing",
+            "audit-passed"
+          ],
+          "guidelines": [
+            "REST-PUBLISH-04"
+          ],
+          "resourceSource": [
+            "api-onboarding-best-practices",
+            "api-audit-checklist"
+          ],
+          "expectedEvidenceTags": [
+            "documentation",
+            "runtime"
+          ],
+          "expectedEvidence": [
+            "docs/api/publishing/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "improving",
+      "title": "Improving",
+      "readinessLabel": "Improving is Ready When...",
+      "order": 6,
+      "items": []
     }
   ],
   "guidelines": [

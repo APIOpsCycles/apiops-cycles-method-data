@@ -1,6 +1,6 @@
 {
   "name": "apiops-cycles-method-data",
-  "version": "3.4.1",
+  "version": "3.4.2",
   "description": "APIOps Cycles Method data and canvases",
   "license": "Apache-2.0",
   "type": "module",
@@ -35,7 +35,7 @@
     "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public",
     "check:packaging:skills": "node scripts/check-packaging-skills.mjs",
     "check:package:contents": "node scripts/check-package-contents.mjs",
-    "test:create-apiops": "node scripts/test-create-apiops-scaffold.mjs && node scripts/test-method-cli.mjs"
+    "test:create-apiops": "node scripts/test-create-apiops-scaffold.mjs && node scripts/test-method-cli.mjs && node scripts/test-run-design-audit.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.7",

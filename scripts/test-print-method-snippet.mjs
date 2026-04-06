@@ -42,6 +42,8 @@ try {
   const auditSnippet = renderSnippet("api-audit-checklist", "en", { forceUnicode: true });
   assert(auditSnippet.includes("\"profiles\""), "Expected api-audit-checklist to render the JSON checklist snippet.");
   assert(auditSnippet.includes("\"read-only\""), "Expected api-audit-checklist JSON snippet to include the read-only profile.");
+  assert(auditSnippet.includes("\"stages\""), "Expected api-audit-checklist JSON snippet to include lifecycle stages.");
+  assert(auditSnippet.includes("\"producedByStation\""), "Expected api-audit-checklist JSON snippet to include station ownership links.");
 
   const styleSnippet = renderSnippet("api-design-principles", "en", { forceAscii: true });
   assert(styleSnippet.includes("\"guidelines\""), "Expected api-design-principles to render the JSON style snippet.");
