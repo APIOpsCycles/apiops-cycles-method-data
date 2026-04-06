@@ -1,17 +1,17 @@
-name: Release create-apiops
+name: Verify create-apiops
 
 on:
+  pull_request:
   push:
     branches:
       - main
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
-  release:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -35,14 +35,3 @@ jobs:
       - name: Run create-apiops scaffold integration test
         run: npm run test:create-apiops
 
-      - name: Version and publish create-apiops
-        uses: changesets/action@v1
-        with:
-          version: npx changeset version
-          commit: "chore(release): version create-apiops"
-          title: "chore(release): version create-apiops"
-          createGithubReleases: true
-          publish: npm publish --workspace packages/create-apiops --access public
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
