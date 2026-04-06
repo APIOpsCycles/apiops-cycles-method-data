@@ -147,7 +147,7 @@
         },
         "journeySteps": {
           "section": "Customer Journey Schritte",
-          "description": "Welche Schritte durchläuft der Kunde bei der Nutzung der API?"
+          "description": "Welche Schritte durchläuft der Kunde bei der Reise?"
         },
         "customerNeedIsResolved": {
           "section": "Kundenbedürfnis wird gelöst",
