@@ -20,6 +20,14 @@ export const NOTE_COLOR_PALETTE = Object.freeze({
 export const DEFAULT_NOTE_INTENT = "default";
 export const DEFAULT_NOTE_COLOR = NOTE_COLOR_PALETTE.default;
 export const CANVAS_CREATOR_BASE_URL = "https://canvascreator.apiopscycles.com/";
+export const LIFECYCLE_STAGES = Object.freeze([
+  { id: "strategy", title: "Strategy", order: 1 },
+  { id: "architecture", title: "Architecture", order: 2 },
+  { id: "design", title: "Design", order: 3 },
+  { id: "delivery", title: "Delivery", order: 4 },
+  { id: "publishing", title: "Publishing", order: 5 },
+  { id: "improving", title: "Improving", order: 6 }
+]);
 export const NEW_API_STATIONS = ["api-product-strategy", "api-platform-architecture", "api-design"];
 export const NOTE_INTENT_ALIASES = new Map([
   ["benefit", "benefit"],
@@ -235,6 +243,10 @@ export function getStations() {
   ]
     .slice()
     .sort((left, right) => left.order - right.order);
+}
+
+export function getLifecycleStages() {
+  return LIFECYCLE_STAGES.slice();
 }
 
 export function getSupportedMethodLocales() {

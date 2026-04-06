@@ -10,6 +10,7 @@ const linesJson = readJson("src/data/method/lines.json");
 const resourcesJson = readJson("src/data/method/resources.json");
 const criteriaJson = readJson("src/data/method/criteria.json");
 const stakeholdersJson = readJson("src/data/method/stakeholders.json");
+const stationCriteriaJson = readJson("src/data/method/station-criteria.json");
 const canvasDataJson = readJson("src/data/canvas/canvasData.json");
 const localizedCanvasDataJson = readJson("src/data/canvas/localizedData.json");
 const knownResourceIds = new Set((resourcesJson.resources || []).map((resource) => resource.id));
@@ -23,6 +24,7 @@ const localeDirs = readdirSync("src/data/method", { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name);
 const findings = [];
+const lifecycleStages = new Set(["strategy", "architecture", "design", "delivery", "publishing", "improving"]);
 
 function collectMatchingStringValues(node, pattern, results = new Set()) {
   if (typeof node === "string") {
@@ -102,6 +104,22 @@ for (const station of stationGroups) {
       findings.push(
         `Station ${station.id} references unknown resource "${resourceId}" at index ${index}.`
       );
+    }
+  }
+
+  if (station.group === "core-stations") {
+    if (!lifecycleStages.has(station.lifecycleStage)) {
+      findings.push(`Core station ${station.id} is missing a valid lifecycleStage.`);
+    }
+
+    const expectedCriteria = stationCriteriaJson[station.id] || [];
+    const actualCriteria = station.stationCriteria || [];
+    if (JSON.stringify(actualCriteria) !== JSON.stringify(expectedCriteria)) {
+      findings.push(`Core station ${station.id} stationCriteria does not match station-criteria.json.`);
+    }
+
+    if (!Array.isArray(station.expectedEvidenceTags) || station.expectedEvidenceTags.length === 0) {
+      findings.push(`Core station ${station.id} must define expectedEvidenceTags.`);
     }
   }
 }

@@ -2,27 +2,39 @@ import fs from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import YAML from "yaml";
 
-const root = process.cwd();
 const require = createRequire(import.meta.url);
-const profile = (process.argv[2] || "read-only").trim();
+const __filename = fileURLToPath(import.meta.url);
 
-if (!["read-only", "full-crud"].includes(profile)) {
-  console.error(`Unknown audit profile: ${profile}`);
-  process.exit(1);
+let root = process.cwd();
+let profile = "read-only";
+let auditSlug = profile;
+let openApiPath = path.join(root, "specs", "openapi", "api.yaml");
+let reportJsonPath = path.join(root, "specs", "audit", `design-audit.${auditSlug}.json`);
+let reportMarkdownPath = path.join(root, "specs", "audit", `design-audit.${auditSlug}.md`);
+let reportDocsPath = path.join(root, "docs", "api", "audit", `design-audit.${auditSlug}.md`);
+let reportHtmlPath = path.join(root, "docs", "api", "audit", `design-audit.${auditSlug}.html`);
+let reportJUnitPath = path.join(root, "reports", "junit", `design-audit.${auditSlug}.xml`);
+let legacyMarkdownPath = path.join(root, "specs", "audit", "design-audit.md");
+let legacyDocsPath = path.join(root, "docs", "api", "audit", "design-audit.md");
+let legacyHtmlPath = path.join(root, "docs", "api", "audit", "index.html");
+
+function configureRun(rootDir, selectedProfile) {
+  root = rootDir;
+  profile = selectedProfile;
+  auditSlug = profile;
+  openApiPath = path.join(root, "specs", "openapi", "api.yaml");
+  reportJsonPath = path.join(root, "specs", "audit", `design-audit.${auditSlug}.json`);
+  reportMarkdownPath = path.join(root, "specs", "audit", `design-audit.${auditSlug}.md`);
+  reportDocsPath = path.join(root, "docs", "api", "audit", `design-audit.${auditSlug}.md`);
+  reportHtmlPath = path.join(root, "docs", "api", "audit", `design-audit.${auditSlug}.html`);
+  reportJUnitPath = path.join(root, "reports", "junit", `design-audit.${auditSlug}.xml`);
+  legacyMarkdownPath = profile === "read-only" ? path.join(root, "specs", "audit", "design-audit.md") : null;
+  legacyDocsPath = profile === "read-only" ? path.join(root, "docs", "api", "audit", "design-audit.md") : null;
+  legacyHtmlPath = profile === "read-only" ? path.join(root, "docs", "api", "audit", "index.html") : null;
 }
-
-const auditSlug = profile;
-const openApiPath = path.join(root, "specs", "openapi", "api.yaml");
-const reportJsonPath = path.join(root, "specs", "audit", `design-audit.${auditSlug}.json`);
-const reportMarkdownPath = path.join(root, "specs", "audit", `design-audit.${auditSlug}.md`);
-const reportDocsPath = path.join(root, "docs", "api", "audit", `design-audit.${auditSlug}.md`);
-const reportHtmlPath = path.join(root, "docs", "api", "audit", `design-audit.${auditSlug}.html`);
-const reportJUnitPath = path.join(root, "reports", "junit", `design-audit.${auditSlug}.xml`);
-const legacyMarkdownPath = profile === "read-only" ? path.join(root, "specs", "audit", "design-audit.md") : null;
-const legacyDocsPath = profile === "read-only" ? path.join(root, "docs", "api", "audit", "design-audit.md") : null;
-const legacyHtmlPath = profile === "read-only" ? path.join(root, "docs", "api", "audit", "index.html") : null;
 
 function resolveChecklistSource() {
   const localOverridePath = path.join(root, "specs", "audit", "api-audit-checklist.json");
@@ -315,10 +327,11 @@ function evaluateCheck(check, spec, item) {
       return checkStandardizedValues(spec);
     case "avoidAcronyms":
       return checkAvoidAcronyms(spec);
-    case "sectionCoverage": {
+    case "sectionCoverage":
+    case "stageCoverage": {
       return {
         ok: true,
-        details: [check.sectionId]
+        details: [check.stageId || check.sectionId]
       };
     }
     case "pathDepthMax":
@@ -346,6 +359,15 @@ function evaluateCheck(check, spec, item) {
   }
 }
 
+const DEFAULT_LIFECYCLE_STAGES = Object.freeze([
+  { id: "strategy", title: "Strategy", order: 1, readinessLabel: "Concept is Ready When..." },
+  { id: "architecture", title: "Architecture", order: 2, readinessLabel: "Architecture is Ready When..." },
+  { id: "design", title: "Design", order: 3, readinessLabel: "Design Prototype is Ready When..." },
+  { id: "delivery", title: "Delivery", order: 4, readinessLabel: "Delivery is Ready When..." },
+  { id: "publishing", title: "Publishing", order: 5, readinessLabel: "Production Ready for Publishing When..." },
+  { id: "improving", title: "Improving", order: 6, readinessLabel: "Improvement Loops are Ready When..." }
+]);
+
 function normalizeStatus(item, evaluation) {
   if (item.defaultStatus === "na") return "na";
   if (item.kind === "manual") return item.defaultStatus || "partial";
@@ -367,9 +389,82 @@ function formatStatus(status) {
   }
 }
 
+function summarizeStatuses(items) {
+  const summary = { pass: 0, partial: 0, gap: 0, na: 0 };
+  for (const item of items) {
+    summary[item.currentStatus] += 1;
+  }
+  summary.total = summary.pass + summary.partial + summary.gap + summary.na;
+  return summary;
+}
+
+function formatStageSummary(summary) {
+  const parts = [`${summary.pass} pass`, `${summary.partial} partial`, `${summary.gap} gap`];
+  if (summary.na > 0) {
+    parts.push(`${summary.na} n/a`);
+  }
+  return parts.join(" | ");
+}
+
+function normalizeChecklistItem(item, primaryStage) {
+  return {
+    ...item,
+    primaryStage: item.primaryStage || primaryStage,
+    producedByStation: item.producedByStation || item.stationSource || [],
+    producedByStationCriteria: item.producedByStationCriteria || [],
+    guidelines: item.guidelines || item.guidelineRef || [],
+    expectedEvidenceTags: item.expectedEvidenceTags || item.evidenceType || [],
+    expectedEvidence: item.expectedEvidence || item.evidence || []
+  };
+}
+
+function normalizeChecklist(checklist) {
+  const lifecycleStages = (Array.isArray(checklist.lifecycleStages) && checklist.lifecycleStages.length
+    ? checklist.lifecycleStages
+    : DEFAULT_LIFECYCLE_STAGES
+  )
+    .slice()
+    .sort((left, right) => (left.order || 0) - (right.order || 0));
+
+  if (Array.isArray(checklist.stages)) {
+    const itemsByStage = new Map(checklist.stages.map((stage) => [stage.id, stage.items || []]));
+    return lifecycleStages.map((stage) => ({
+      ...stage,
+      items: (itemsByStage.get(stage.id) || []).map((item) => normalizeChecklistItem(item, stage.id))
+    }));
+  }
+
+  const legacyStageBySectionId = {
+    "concept-ready": "strategy",
+    "design-prototype-ready": "design",
+    "production-ready": "publishing"
+  };
+  const itemsByStage = new Map(lifecycleStages.map((stage) => [stage.id, []]));
+
+  for (const section of checklist.sections || []) {
+    const stageId = legacyStageBySectionId[section.id] || "design";
+    const items = itemsByStage.get(stageId) || [];
+    for (const item of section.items || []) {
+      items.push(normalizeChecklistItem(item, stageId));
+    }
+    itemsByStage.set(stageId, items);
+  }
+
+  return lifecycleStages.map((stage) => ({
+    ...stage,
+    items: itemsByStage.get(stage.id) || []
+  }));
+}
+
+function findExistingEvidence(paths) {
+  return (paths || [])
+    .filter(Boolean)
+    .filter((entry) => fs.existsSync(path.join(root, entry)));
+}
+
 function buildChecklistResults(spec, checklist) {
-  const sections = checklist.sections.map((section) => {
-    const items = section.items
+  return normalizeChecklist(checklist).map((stage) => {
+    const items = stage.items
       .filter((item) => item.applicableTo.includes(profile))
       .map((item) => {
         if (item.defaultStatus === "na") {
@@ -377,47 +472,56 @@ function buildChecklistResults(spec, checklist) {
             id: item.id,
             label: item.label,
             kind: item.kind,
-            status: "na",
-            reason: item.reason || "Not applicable",
-            evidence: item.evidence || []
+            primaryStage: item.primaryStage || stage.id,
+            producedByStation: item.producedByStation,
+            producedByStationCriteria: item.producedByStationCriteria,
+            guidelines: item.guidelines,
+            expectedEvidenceTags: item.expectedEvidenceTags,
+            expectedEvidence: item.expectedEvidence,
+            actualEvidenceFound: findExistingEvidence(item.expectedEvidence),
+            currentStatus: "na",
+            reason: item.reason || "Not applicable"
           };
         }
 
         const evaluation = item.kind === "openapi" || item.kind === "aggregate"
           ? evaluateCheck(item.check, spec, item)
           : { ok: false, details: [] };
+        const currentStatus = normalizeStatus(item, evaluation);
+        const actualEvidenceFound = evaluation.details?.length
+          ? evaluation.details
+          : (
+            findExistingEvidence(item.expectedEvidence).length
+              ? findExistingEvidence(item.expectedEvidence)
+              : (item.kind === "openapi" ? [path.relative(root, openApiPath)] : [])
+          );
 
-        const status = normalizeStatus(item, evaluation);
         return {
           id: item.id,
           label: item.label,
           kind: item.kind,
-          status,
-          evidence: evaluation.details?.length ? evaluation.details : (item.evidence || []),
+          primaryStage: item.primaryStage || stage.id,
+          producedByStation: item.producedByStation,
+          producedByStationCriteria: item.producedByStationCriteria,
+          guidelines: item.guidelines,
+          expectedEvidenceTags: item.expectedEvidenceTags,
+          expectedEvidence: item.expectedEvidence,
+          actualEvidenceFound,
+          currentStatus,
           reason: item.reason || "",
           evaluation: item.kind === "openapi" || item.kind === "aggregate" ? evaluation.ok : undefined
         };
       });
 
     return {
-      id: section.id,
-      title: section.title,
+      id: stage.id,
+      title: stage.title,
+      readinessLabel: stage.readinessLabel || "",
+      order: stage.order || 0,
+      summary: summarizeStatuses(items),
       items
     };
   });
-
-  return sections;
-}
-
-function summarizeChecklist(sections) {
-  const summary = { pass: 0, partial: 0, gap: 0, na: 0 };
-  for (const section of sections) {
-    for (const item of section.items) {
-      summary[item.status] += 1;
-    }
-  }
-  summary.total = summary.pass + summary.partial + summary.gap + summary.na;
-  return summary;
 }
 
 function buildReport() {
@@ -425,8 +529,8 @@ function buildReport() {
   const checklist = readJson(checklistSource.filePath);
   const spec = YAML.parse(readText(openApiPath));
   const spectral = runSpectral();
-  const sections = buildChecklistResults(spec, checklist);
-  const summary = summarizeChecklist(sections);
+  const stages = buildChecklistResults(spec, checklist);
+  const summary = summarizeStatuses(stages.flatMap((stage) => stage.items));
 
   return {
     profile,
@@ -442,7 +546,12 @@ function buildReport() {
       findings: spectral.findings
     },
     summary,
-    sections
+    stageSummary: stages.map((stage) => ({
+      id: stage.id,
+      title: stage.title,
+      ...stage.summary
+    })),
+    stages
   };
 }
 
@@ -461,16 +570,36 @@ function renderMarkdown(report) {
   lines.push(`- Gaps: ${report.summary.gap}`);
   lines.push(`- Not applicable: ${report.summary.na}`);
   lines.push("");
-  lines.push("## Checklist Results");
+  lines.push("## Lifecycle Summary");
+  lines.push("");
+  for (const stage of report.stageSummary) {
+    lines.push(`- ${stage.title}: ${formatStageSummary(stage)}`);
+  }
+  lines.push("");
+  lines.push("## Stage Results");
   lines.push("");
 
-  for (const section of report.sections) {
-    lines.push(`### ${section.title}`);
+  for (const stage of report.stages) {
+    lines.push(`### ${stage.title}`);
     lines.push("");
-    for (const item of section.items) {
-      lines.push(`- [${formatStatus(item.status)}] ${item.label}`);
-      if (item.evidence && item.evidence.length) {
-        lines.push(`  - Evidence: ${item.evidence.slice(0, 5).join(", ")}`);
+    if (stage.readinessLabel) {
+      lines.push(stage.readinessLabel);
+      lines.push("");
+    }
+    lines.push(`Summary: ${formatStageSummary(stage.summary)}`);
+    lines.push("");
+    for (const item of stage.items) {
+      lines.push(`- [${formatStatus(item.currentStatus)}] ${item.label}`);
+      if (item.producedByStation.length) {
+        lines.push(`  - Stations: ${item.producedByStation.join(", ")}`);
+      }
+      if (item.guidelines.length) {
+        lines.push(`  - Guidelines: ${item.guidelines.join(", ")}`);
+      }
+      if (item.actualEvidenceFound.length) {
+        lines.push(`  - Actual evidence found: ${item.actualEvidenceFound.slice(0, 5).join(", ")}`);
+      } else if (item.expectedEvidence.length) {
+        lines.push(`  - Expected evidence: ${item.expectedEvidence.slice(0, 5).join(", ")}`);
       }
       if (item.reason) {
         lines.push(`  - Reason: ${item.reason}`);
@@ -479,11 +608,6 @@ function renderMarkdown(report) {
     lines.push("");
   }
 
-  lines.push("## Summary");
-  lines.push("");
-  lines.push("The current contract and canvases support a storefront product search API well enough for an initial design review.");
-  lines.push("The remaining audit gaps are mostly operational: gateway policy, publishing integration, and production controls.");
-  lines.push("");
   return `${lines.join("\n")}\n`;
 }
 
@@ -492,17 +616,31 @@ function statusClass(status) {
 }
 
 function renderHtml(report) {
-  const itemsHtml = report.sections
-    .map((section) => {
-      const rows = section.items.map((item) => {
-        const evidence = item.evidence && item.evidence.length ? `<div class="evidence">${xmlEscape(item.evidence.slice(0, 5).join(", "))}</div>` : "";
-        const reason = item.reason ? `<div class="reason">${xmlEscape(item.reason)}</div>` : "";
+  const stageSummaryHtml = report.stageSummary
+    .map((stage) => `
+      <div class="stage-summary">
+        <div class="stage-title">${xmlEscape(stage.title)}</div>
+        <div class="stage-stats">${xmlEscape(formatStageSummary(stage))}</div>
+      </div>`)
+    .join("\n");
+
+  const itemsHtml = report.stages
+    .map((stage) => {
+      const rows = stage.items.map((item) => {
+        const stations = item.producedByStation.length ? `<div class="meta-row"><strong>Stations:</strong> ${xmlEscape(item.producedByStation.join(", "))}</div>` : "";
+        const guidelines = item.guidelines.length ? `<div class="meta-row"><strong>Guidelines:</strong> ${xmlEscape(item.guidelines.join(", "))}</div>` : "";
+        const evidence = item.actualEvidenceFound.length
+          ? `<div class="meta-row"><strong>Actual evidence:</strong> ${xmlEscape(item.actualEvidenceFound.slice(0, 5).join(", "))}</div>`
+          : (item.expectedEvidence.length ? `<div class="meta-row"><strong>Expected evidence:</strong> ${xmlEscape(item.expectedEvidence.slice(0, 5).join(", "))}</div>` : "");
+        const reason = item.reason ? `<div class="meta-row"><strong>Reason:</strong> ${xmlEscape(item.reason)}</div>` : "";
         return `
-          <li class="item ${statusClass(item.status)}">
+          <li class="item ${statusClass(item.currentStatus)}">
             <div class="item-head">
-              <span class="badge ${xmlEscape(item.status)}">${xmlEscape(formatStatus(item.status))}</span>
+              <span class="badge ${xmlEscape(item.currentStatus)}">${xmlEscape(formatStatus(item.currentStatus))}</span>
               <span class="label">${xmlEscape(item.label)}</span>
             </div>
+            ${stations}
+            ${guidelines}
             ${evidence}
             ${reason}
           </li>`;
@@ -510,7 +648,13 @@ function renderHtml(report) {
 
       return `
         <section class="section">
-          <h2>${xmlEscape(section.title)}</h2>
+          <div class="section-head">
+            <div>
+              <h2>${xmlEscape(stage.title)}</h2>
+              <p>${xmlEscape(stage.readinessLabel || "")}</p>
+            </div>
+            <div class="section-summary">${xmlEscape(formatStageSummary(stage.summary))}</div>
+          </div>
           <ul>${rows}</ul>
         </section>`;
     })
@@ -533,7 +677,6 @@ function renderHtml(report) {
       --partial: #fff0b5;
       --gap: #ffcdcd;
       --na: #e8e4d2;
-      --accent: #7dc9e7;
     }
     body {
       margin: 0;
@@ -542,25 +685,37 @@ function renderHtml(report) {
       color: var(--text);
     }
     .wrap {
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
       padding: 32px 20px 56px;
     }
-    .hero {
+    .hero, .section {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 24px;
       box-shadow: 0 12px 40px rgba(31, 41, 55, 0.08);
+    }
+    .hero {
+      padding: 24px;
       margin-bottom: 24px;
     }
-    .meta {
+    .meta, .coverage, .stage-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 12px;
+    }
+    .meta {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       margin-top: 16px;
     }
-    .metric {
+    .coverage {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      margin-top: 16px;
+    }
+    .stage-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 16px;
+    }
+    .metric, .stage-summary {
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 14px;
@@ -570,12 +725,6 @@ function renderHtml(report) {
       font-size: 1.5rem;
       font-weight: 700;
       margin-top: 6px;
-    }
-    .coverage {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 12px;
-      margin: 20px 0 0;
     }
     .pill {
       border-radius: 999px;
@@ -589,16 +738,30 @@ function renderHtml(report) {
     .pill.partial { background: var(--partial); }
     .pill.gap { background: var(--gap); }
     .pill.na { background: var(--na); }
+    .stage-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .stage-stats, .section-summary, .meta-row, .links a, .section-head p {
+      color: var(--muted);
+    }
     .section {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
       padding: 20px 22px;
       margin: 0 0 18px;
     }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
     .section h2 {
-      margin: 0 0 12px;
+      margin: 0 0 6px;
       font-size: 1.2rem;
+    }
+    .section-head p {
+      margin: 0;
     }
     ul {
       list-style: none;
@@ -620,7 +783,7 @@ function renderHtml(report) {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .badge {
       display: inline-block;
@@ -636,8 +799,7 @@ function renderHtml(report) {
     .label {
       font-weight: 600;
     }
-    .evidence, .reason {
-      color: var(--muted);
+    .meta-row {
       font-size: 0.95rem;
       margin-top: 6px;
     }
@@ -664,6 +826,9 @@ function renderHtml(report) {
         <div class="pill partial">Partial ${report.summary.partial}</div>
         <div class="pill gap">Gap ${report.summary.gap}</div>
         <div class="pill na">NA ${report.summary.na}</div>
+      </div>
+      <div class="stage-grid">
+        ${stageSummaryHtml}
       </div>
       <div class="links">
         <a href="./design-audit.${xmlEscape(report.profile)}.md">Markdown report</a>
@@ -697,7 +862,7 @@ function renderTestcase(name, classname, status, details) {
 
 function renderJUnit(report) {
   const testSuites = [];
-  const allCheckItems = report.sections.flatMap((section) => section.items.filter((item) => item.status !== undefined));
+  const allCheckItems = report.stages.flatMap((stage) => stage.items.filter((item) => item.currentStatus !== undefined));
 
   const spectralCaseStatus = report.spectral.status === "pass" ? "pass" : "gap";
   const spectralCase = renderTestcase(
@@ -717,22 +882,22 @@ function renderJUnit(report) {
     `</testsuite>`
   );
 
-  for (const section of report.sections) {
-    const suiteTests = section.items.length;
-    const suiteFailures = section.items.filter((item) => item.status === "gap").length;
-    const suiteSkipped = section.items.filter((item) => item.status === "partial" || item.status === "na").length;
-    const cases = section.items
-      .map((item) => renderTestcase(item.label, `APIOps Cycles / ${section.title}`, item.status, item.evidence || []))
+  for (const stage of report.stages) {
+    const suiteTests = stage.items.length;
+    const suiteFailures = stage.items.filter((item) => item.currentStatus === "gap").length;
+    const suiteSkipped = stage.items.filter((item) => item.currentStatus === "partial" || item.currentStatus === "na").length;
+    const cases = stage.items
+      .map((item) => renderTestcase(item.label, `APIOps Cycles / ${stage.title}`, item.currentStatus, item.actualEvidenceFound || []))
       .join("");
     testSuites.push(
-      `<testsuite name="${xmlEscape(section.title)}" tests="${suiteTests}" failures="${suiteFailures}" skipped="${suiteSkipped}" time="0">` +
+      `<testsuite name="${xmlEscape(stage.title)}" tests="${suiteTests}" failures="${suiteFailures}" skipped="${suiteSkipped}" time="0">` +
       cases +
       `</testsuite>`
     );
   }
 
-  const failures = (report.spectral.status === "pass" ? 0 : 1) + report.sections.reduce((acc, section) => acc + section.items.filter((item) => item.status === "gap").length, 0);
-  const skipped = report.sections.reduce((acc, section) => acc + section.items.filter((item) => item.status === "partial" || item.status === "na").length, 0);
+  const failures = (report.spectral.status === "pass" ? 0 : 1) + report.stages.reduce((acc, stage) => acc + stage.items.filter((item) => item.currentStatus === "gap").length, 0);
+  const skipped = report.stages.reduce((acc, stage) => acc + stage.items.filter((item) => item.currentStatus === "partial" || item.currentStatus === "na").length, 0);
   const tests = 1 + allCheckItems.length;
 
   return [
@@ -748,30 +913,63 @@ function writeFile(filePath, content) {
   fs.writeFileSync(filePath, content);
 }
 
-const report = buildReport();
-const markdown = renderMarkdown(report);
-const html = renderHtml(report);
-const junit = renderJUnit(report);
-const reportJson = `${JSON.stringify(report, null, 2)}\n`;
+export function runDesignAudit(options = {}) {
+  const selectedRoot = options.rootDir || process.cwd();
+  const selectedProfile = String(options.profile || process.argv[2] || "read-only").trim();
 
-writeFile(reportJsonPath, reportJson);
-writeFile(reportMarkdownPath, markdown);
-writeFile(reportDocsPath, markdown);
-writeFile(reportHtmlPath, html);
-writeFile(reportJUnitPath, junit);
+  if (!["read-only", "full-crud"].includes(selectedProfile)) {
+    throw new Error(`Unknown audit profile: ${selectedProfile}`);
+  }
 
-if (legacyMarkdownPath) {
-  writeFile(legacyMarkdownPath, markdown);
-}
-if (legacyDocsPath) {
-  writeFile(legacyDocsPath, markdown);
-}
-if (legacyHtmlPath) {
-  writeFile(legacyHtmlPath, html);
+  configureRun(selectedRoot, selectedProfile);
+
+  const report = buildReport();
+  const markdown = renderMarkdown(report);
+  const html = renderHtml(report);
+  const junit = renderJUnit(report);
+  const reportJson = `${JSON.stringify(report, null, 2)}\n`;
+
+  writeFile(reportJsonPath, reportJson);
+  writeFile(reportMarkdownPath, markdown);
+  writeFile(reportDocsPath, markdown);
+  writeFile(reportHtmlPath, html);
+  writeFile(reportJUnitPath, junit);
+
+  if (legacyMarkdownPath) {
+    writeFile(legacyMarkdownPath, markdown);
+  }
+  if (legacyDocsPath) {
+    writeFile(legacyDocsPath, markdown);
+  }
+  if (legacyHtmlPath) {
+    writeFile(legacyHtmlPath, html);
+  }
+
+  return {
+    report,
+    paths: {
+      reportJsonPath,
+      reportMarkdownPath,
+      reportDocsPath,
+      reportHtmlPath,
+      reportJUnitPath,
+      legacyMarkdownPath,
+      legacyDocsPath,
+      legacyHtmlPath
+    }
+  };
 }
 
-console.log(`Wrote ${path.relative(root, reportJsonPath)}`);
-console.log(`Wrote ${path.relative(root, reportMarkdownPath)}`);
-console.log(`Wrote ${path.relative(root, reportDocsPath)}`);
-console.log(`Wrote ${path.relative(root, reportHtmlPath)}`);
-console.log(`Wrote ${path.relative(root, reportJUnitPath)}`);
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  try {
+    const result = runDesignAudit();
+    console.log(`Wrote ${path.relative(root, result.paths.reportJsonPath)}`);
+    console.log(`Wrote ${path.relative(root, result.paths.reportMarkdownPath)}`);
+    console.log(`Wrote ${path.relative(root, result.paths.reportDocsPath)}`);
+    console.log(`Wrote ${path.relative(root, result.paths.reportHtmlPath)}`);
+    console.log(`Wrote ${path.relative(root, result.paths.reportJUnitPath)}`);
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  }
+}
