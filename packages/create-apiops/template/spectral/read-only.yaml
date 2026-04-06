@@ -1,0 +1,32 @@
+extends:
+  - "./base.yaml"
+
+rules:
+  no-post-operations:
+    description: Read-only APIs should not expose POST operations.
+    message: Read-only profiles should not include POST operations.
+    severity: error
+    given: $.paths[*].post
+    then:
+      function: falsy
+  no-put-operations:
+    description: Read-only APIs should not expose PUT operations.
+    message: Read-only profiles should not include PUT operations.
+    severity: error
+    given: $.paths[*].put
+    then:
+      function: falsy
+  no-patch-operations:
+    description: Read-only APIs should not expose PATCH operations.
+    message: Read-only profiles should not include PATCH operations.
+    severity: error
+    given: $.paths[*].patch
+    then:
+      function: falsy
+  no-delete-operations:
+    description: Read-only APIs should not expose DELETE operations.
+    message: Read-only profiles should not include DELETE operations.
+    severity: error
+    given: $.paths[*].delete
+    then:
+      function: falsy

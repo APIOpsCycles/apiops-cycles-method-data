@@ -4,42 +4,53 @@ Use this file to navigate the APIOps Cycles canonical data sources.
 
 ## Source of truth order
 
-If you only need the canonical core station list or readable criteria quickly, prefer the helper scripts first (the `en`in the end refers to the locale i.e. language the user wants to interact with the method, there are also other options):
+Prefer the shared method engine first when the current workspace has access to the package source or installed package:
+
+- `apiops-cycles-method-data/method-engine`
+
+Use the helper scripts as fallback or quick inspection tools when the engine is unavailable or when you need to inspect one slice of method data directly.
+
+If you only need the canonical core station list or readable criteria quickly through helper scripts, these are the built-in options (the `en` at the end refers to the locale, and other locale values are also possible):
 
 - `node skills/new-api-guide/scripts/get-core-stations.cjs en`
 - `node skills/new-api-guide/scripts/get-station-criteria.cjs api-platform-architecture en`
 - `node skills/new-api-guide/scripts/get-canvas-metadata.cjs interactionCanvas en`
 - `node skills/new-api-guide/scripts/get-resource-metadata.cjs api-design-principles en`
 
-1. `src/data/method/stations.json`
+1. `src/lib/method-engine.js`
+   - use as the preferred programmable access layer for station, criteria, resource, and canvas lookups
+   - prefer this over stitching together multiple JSON files by hand
+
+2. `src/data/method/stations.json`
    - use for the core metro stations
    - use to identify the canonical station set instead of hardcoding station names
 
-2. `src/data/method/station-criteria.json`
+3. `src/data/method/station-criteria.json`
    - use to assess readiness to enter, remain in, or leave a station
    - use entry and exit criteria before routing forward
 
-3. Method mapping files under `src/data/method/`
+4. Method mapping files under `src/data/method/`
    - use to determine metro line to station relationships
    - use to determine station to resource relationships
    - prefer canonical mappings over hand-maintained mappings in the skill
 
-4. Localized method files under `src/data/method/<locale>/`
+5. Localized method files under `src/data/method/<locale>/`
    - use for actual labels, instructions, and station guidance
    - the human-readable content is in the localized files, not only in the base files
    - for English, use the English locale folder in the repository data
 
-5. `src/data/canvas/canvasData.json`
+6. `src/data/canvas/canvasData.json`
    - use for canvas sections, ids, layout, and structure
 
-6. `src/data/canvas/localizedData.json`
+7. `src/data/canvas/localizedData.json`
    - use for exact canvas wording, titles, descriptions, purpose, and how-to-use guidance
 
-7. `node_modules/canvascreator/`
+8. `node_modules/canvascreator/`
    - use for import/export behavior, expected JSON shape, export CLI usage, and canvas tooling details
 
-8. `src/snippets/`
+9. `src/snippets/`
    - use when a method resource declares a `snippet` in `resources.json`
+   - snippets may be JSON, YAML, or Markdown depending on the resource
    - treat the snippet as canonical guidance for that resource instead of inventing a parallel local document
    - if the resource is a checklist, keep the snippet's checklist structure in the output
 

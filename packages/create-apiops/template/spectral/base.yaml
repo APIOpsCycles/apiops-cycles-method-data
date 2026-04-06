@@ -1,0 +1,13 @@
+extends:
+  - "spectral:oas"
+
+rules:
+  versioned-server-path:
+    description: Server URLs should use a versioned base path.
+    message: "{{value}} should match a versioned base path such as /v1"
+    severity: error
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: "^/v\\d+$"

@@ -1,13 +1,34 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
 
-const npmCliPath = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
 const npmCacheDir = resolve(".npm-pack-cache");
 
+function resolveNpmCommand() {
+  const nodeBinDir = dirname(process.execPath);
+  const candidates = [
+    resolve(nodeBinDir, "node_modules", "npm", "bin", "npm-cli.js"),
+    resolve(nodeBinDir, "..", "lib", "node_modules", "npm", "bin", "npm-cli.js")
+  ];
+
+  const npmCliPath = candidates.find((candidate) => existsSync(candidate));
+  if (npmCliPath) {
+    return {
+      command: process.execPath,
+      args: [npmCliPath]
+    };
+  }
+
+  return {
+    command: process.platform === "win32" ? "npm.cmd" : "npm",
+    args: []
+  };
+}
+
 function getPackedFileSet(packArgs) {
+  const npmCommand = resolveNpmCommand();
   const packResult = JSON.parse(
-    execFileSync(process.execPath, [npmCliPath, ...packArgs, "--cache", npmCacheDir], {
+    execFileSync(npmCommand.command, [...npmCommand.args, ...packArgs, "--cache", npmCacheDir], {
       encoding: "utf8"
     })
   );
@@ -39,6 +60,7 @@ assertHasFiles(
     "packages/create-apiops/bin/create-apiops-project.js",
     "packages/create-apiops/template/AGENTS.md",
     "src/lib/method-engine.js",
+    "src/lib/snippet-engine.js",
     "src/schemas/stations.schema.json",
     "src/data/canvas/canvasData.json",
     "src/data/canvas/localizedData.json"
@@ -48,11 +70,24 @@ assertHasFiles(
 
 for (const target of Object.values(pkg.exports || {})) {
   const normalized = target.replace(/^\.\//, "");
+  if (normalized.includes("*")) {
+    continue;
+  }
   if (!rootFiles.has(normalized)) {
     console.error(`[root] Export target missing from tarball: ${target}`);
     process.exit(1);
   }
 }
+
+assertHasFiles(
+  rootFiles,
+  [
+    "src/snippets/api-audit-checklist.json",
+    "src/snippets/api-style-guide.json",
+    "src/snippets/api-contract-example.yaml"
+  ],
+  "root"
+);
 
 const createApiopsFiles = getPackedFileSet([
   "pack",
