@@ -1,0 +1,403 @@
+{
+  "guidelines": [
+    {
+      "id": "REST-CONTRACT-01",
+      "priority": "MUST",
+      "category": "contract-governance",
+      "requirement": "The REST API MUST implement endpoints, parameters, request bodies, response bodies, and error responses as defined in the validated OpenAPI contract.",
+      "relatedAuditItems": [
+        "spec-contains-schemas",
+        "schema-and-examples-pass"
+      ]
+    },
+    {
+      "id": "REST-CONTRACT-02",
+      "priority": "MUST",
+      "category": "contract-governance",
+      "requirement": "The REST API MUST keep the implementation, published OpenAPI description, gateway configuration, and developer portal documentation aligned on every change.",
+      "relatedAuditItems": [
+        "docs-auto-generated",
+        "spec-auto-updated",
+        "spec-validated-on-change"
+      ]
+    },
+    {
+      "id": "REST-VALIDATION-01",
+      "priority": "MUST",
+      "category": "contract-governance",
+      "requirement": "The REST API MUST validate path parameters, query parameters, headers, and JSON request bodies against the OpenAPI schema before business processing.",
+      "relatedAuditItems": [
+        "mandatory-fields-specified",
+        "400-errors-specific",
+        "inputs-auto-validated"
+      ]
+    },
+    {
+      "id": "REST-DOMAIN-01",
+      "priority": "MUST",
+      "category": "domain-modeling",
+      "requirement": "The REST API MUST expose business-oriented resources and attributes rather than raw backend tables, internal service payloads, or system-specific field names.",
+      "relatedAuditItems": [
+        "hides-raw-backend-data",
+        "design-consistent"
+      ]
+    },
+    {
+      "id": "REST-DOMAIN-02",
+      "priority": "MUST",
+      "category": "domain-modeling",
+      "requirement": "The REST API MUST preserve validated meanings of entities, attributes, statuses, and source-of-truth rules across all endpoints and operations.",
+      "relatedAuditItems": [
+        "design-consistent",
+        "general-data-uses-standard-values"
+      ]
+    },
+    {
+      "id": "REST-NAMING-01",
+      "priority": "MUST",
+      "category": "domain-modeling",
+      "requirement": "The REST API MUST use descriptive English names for resources and attributes.",
+      "relatedAuditItems": [
+        "descriptive-english-naming"
+      ]
+    },
+    {
+      "id": "REST-NAMING-02",
+      "priority": "MUST",
+      "category": "domain-modeling",
+      "requirement": "The REST API MUST avoid unexplained acronyms in public field and resource names.",
+      "relatedAuditItems": [
+        "field-names-avoid-acronyms"
+      ]
+    },
+    {
+      "id": "REST-DATA-01",
+      "priority": "MUST",
+      "category": "domain-modeling",
+      "requirement": "The REST API MUST use ISO date-time values with timezone information where dates are exposed.",
+      "relatedAuditItems": [
+        "dates-use-iso"
+      ]
+    },
+    {
+      "id": "REST-DATA-02",
+      "priority": "SHOULD",
+      "category": "domain-modeling",
+      "requirement": "The REST API SHOULD use standard codes, controlled vocabularies, and standardized value sets where applicable.",
+      "relatedAuditItems": [
+        "general-data-uses-standard-values"
+      ]
+    },
+    {
+      "id": "REST-CX-01",
+      "priority": "MUST",
+      "category": "consumer-experience",
+      "requirement": "The REST API MUST describe the business value and feature intent of each endpoint or capability.",
+      "relatedAuditItems": [
+        "endpoint-descriptions-present"
+      ]
+    },
+    {
+      "id": "REST-CX-02",
+      "priority": "MUST",
+      "category": "consumer-experience",
+      "requirement": "The REST API MUST include examples for endpoints, request bodies, response bodies, and key attributes.",
+      "relatedAuditItems": [
+        "examples-present"
+      ]
+    },
+    {
+      "id": "REST-CX-03",
+      "priority": "SHOULD",
+      "category": "consumer-experience",
+      "requirement": "The REST API SHOULD use consistent pagination, filtering, sorting, and response conventions across resources.",
+      "relatedAuditItems": [
+        "design-consistent"
+      ]
+    },
+    {
+      "id": "REST-HTTP-GET-01",
+      "priority": "MUST",
+      "category": "http-semantics",
+      "requirement": "The REST API MUST use GET for safe read-only operations and MUST NOT define a request body for GET operations.",
+      "relatedAuditItems": [
+        "get-no-request-body",
+        "http-methods-match-resources"
+      ]
+    },
+    {
+      "id": "REST-HTTP-POST-01",
+      "priority": "MUST",
+      "category": "http-semantics",
+      "requirement": "The REST API MUST use POST for resource creation and other non-idempotent operations.",
+      "relatedAuditItems": [
+        "post-for-create-update"
+      ]
+    },
+    {
+      "id": "REST-HTTP-PUT-01",
+      "priority": "MUST",
+      "category": "http-semantics",
+      "requirement": "The REST API MUST use PUT only for full resource replacement.",
+      "relatedAuditItems": [
+        "post-for-create-update",
+        "http-methods-match-resources"
+      ]
+    },
+    {
+      "id": "REST-HTTP-DELETE-01",
+      "priority": "MUST",
+      "category": "http-semantics",
+      "requirement": "The REST API MUST use DELETE to remove resources.",
+      "relatedAuditItems": [
+        "delete-for-remove",
+        "http-methods-match-resources"
+      ]
+    },
+    {
+      "id": "REST-PATH-01",
+      "priority": "SHOULD",
+      "category": "resource-modeling",
+      "requirement": "The REST API SHOULD keep endpoint paths shallow and avoid more than two resource or sub-resource levels unless explicitly justified.",
+      "relatedAuditItems": [
+        "paths-max-two-resources"
+      ]
+    },
+    {
+      "id": "REST-RESP-200-01",
+      "priority": "MUST",
+      "category": "status-codes",
+      "requirement": "The REST API MUST return 200 OK for successful reads and updates that include a response body.",
+      "relatedAuditItems": [
+        "get-no-request-body",
+        "post-returns-200"
+      ]
+    },
+    {
+      "id": "REST-RESP-201-01",
+      "priority": "MUST",
+      "category": "status-codes",
+      "requirement": "The REST API MUST return 201 Created and the created resource identifier when a new resource is created.",
+      "relatedAuditItems": [
+        "create-returns-identifiers",
+        "post-returns-201"
+      ]
+    },
+    {
+      "id": "REST-RESP-204-01",
+      "priority": "MUST",
+      "category": "status-codes",
+      "requirement": "The REST API MUST return 204 No Content for successful delete operations that do not return a body.",
+      "relatedAuditItems": [
+        "delete-returns-204"
+      ]
+    },
+    {
+      "id": "REST-RESP-204-02",
+      "priority": "SHOULD",
+      "category": "status-codes",
+      "requirement": "The REST API SHOULD return 204 No Content for successful operations that intentionally return no response body.",
+      "relatedAuditItems": [
+        "get-empty-returns-204"
+      ]
+    },
+    {
+      "id": "REST-ERROR-400-01",
+      "priority": "MUST",
+      "category": "error-handling",
+      "requirement": "The REST API MUST define 400 Bad Request responses with specific and actionable validation error information.",
+      "relatedAuditItems": [
+        "400-errors-specific"
+      ]
+    },
+    {
+      "id": "REST-ERROR-401-01",
+      "priority": "MUST",
+      "category": "error-handling",
+      "requirement": "The REST API MUST return 401 Unauthorized for missing or invalid credentials.",
+      "relatedAuditItems": [
+        "401-unauthorized"
+      ]
+    },
+    {
+      "id": "REST-ERROR-403-01",
+      "priority": "MUST",
+      "category": "error-handling",
+      "requirement": "The REST API MUST return 403 Forbidden for authenticated clients lacking sufficient permission.",
+      "relatedAuditItems": [
+        "403-forbidden"
+      ]
+    },
+    {
+      "id": "REST-VERSION-01",
+      "priority": "MUST",
+      "category": "versioning",
+      "requirement": "The REST API MUST define a versioning strategy before production release, and the strategy MUST be supportable by the API gateway.",
+      "relatedAuditItems": [
+        "versioning-decided"
+      ]
+    },
+    {
+      "id": "REST-SEC-01",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST require authentication for protected endpoints.",
+      "relatedAuditItems": [
+        "auth-protection"
+      ]
+    },
+    {
+      "id": "REST-SEC-02",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST use token-based authentication or another approved modern authentication mechanism for protected endpoints.",
+      "relatedAuditItems": [
+        "token-auth"
+      ]
+    },
+    {
+      "id": "REST-SEC-03",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST enforce object-level and function-level authorization on every protected operation.",
+      "relatedAuditItems": [
+        "401-unauthorized",
+        "403-forbidden"
+      ]
+    },
+    {
+      "id": "REST-SEC-04",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST mitigate OWASP API risks including broken object level authorization, broken function level authorization, injection, and unrestricted resource consumption.",
+      "relatedAuditItems": [
+        "auth-protection",
+        "rate-limits-enforced",
+        "no-sensitive-data-in-urls"
+      ]
+    },
+    {
+      "id": "REST-SEC-05",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST use HTTPS or another approved encrypted protocol for all traffic.",
+      "relatedAuditItems": [
+        "uses-https",
+        "encryption-in-transit"
+      ]
+    },
+    {
+      "id": "REST-SEC-06",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST NOT expose sensitive information in URLs, query strings, logs, or unnecessary response fields.",
+      "relatedAuditItems": [
+        "no-sensitive-data-in-urls"
+      ]
+    },
+    {
+      "id": "REST-SEC-07",
+      "priority": "SHOULD",
+      "category": "security",
+      "requirement": "The REST API SHOULD use UUIDs or other non-sequential public identifiers where direct database identifiers would increase exposure risk.",
+      "relatedAuditItems": [
+        "pseudo-identifiers"
+      ]
+    },
+    {
+      "id": "REST-SEC-08",
+      "priority": "MUST",
+      "category": "security",
+      "requirement": "The REST API MUST implement CSRF protection where relevant to the authentication model and client interaction pattern.",
+      "relatedAuditItems": [
+        "csrf-protection"
+      ]
+    },
+    {
+      "id": "REST-CAPACITY-01",
+      "priority": "MUST",
+      "category": "resilience-capacity",
+      "requirement": "The REST API MUST define and enforce rate limits, throttling, or quotas according to capacity expectations.",
+      "relatedAuditItems": [
+        "rate-limits-enforced"
+      ]
+    },
+    {
+      "id": "REST-CAPACITY-02",
+      "priority": "MUST",
+      "category": "resilience-capacity",
+      "requirement": "The REST API MUST implement resilience controls such as timeouts, fallback behavior, and degradation handling according to business impact.",
+      "relatedAuditItems": [
+        "only-via-gateway",
+        "encryption-in-transit"
+      ]
+    },
+    {
+      "id": "REST-OBS-01",
+      "priority": "MUST",
+      "category": "observability",
+      "requirement": "The REST API MUST implement logs, metrics, and monitoring needed to observe validation failures, auth failures, traffic, latency, and dependency health.",
+      "relatedAuditItems": [
+        "rate-limits-enforced",
+        "message-integrity"
+      ]
+    },
+    {
+      "id": "REST-PUBLISH-01",
+      "priority": "MUST",
+      "category": "publishing-governance",
+      "requirement": "The REST API MUST be published through an API management platform.",
+      "relatedAuditItems": [
+        "published-via-api-management"
+      ]
+    },
+    {
+      "id": "REST-PUBLISH-02",
+      "priority": "MUST",
+      "category": "publishing-governance",
+      "requirement": "The REST API MUST be accessible only through approved API gateway paths and managed entry points.",
+      "relatedAuditItems": [
+        "only-via-gateway"
+      ]
+    },
+    {
+      "id": "REST-PUBLISH-03",
+      "priority": "SHOULD",
+      "category": "publishing-governance",
+      "requirement": "The REST API SHOULD be visible in a developer portal with documentation generated from the contract.",
+      "relatedAuditItems": [
+        "visible-in-dev-portal",
+        "docs-auto-generated"
+      ]
+    },
+    {
+      "id": "REST-PUBLISH-04",
+      "priority": "MUST",
+      "category": "publishing-governance",
+      "requirement": "The REST API MUST be published under an approved organizational domain.",
+      "relatedAuditItems": [
+        "official-domain"
+      ]
+    },
+    {
+      "id": "REST-AUDIT-01",
+      "priority": "MUST",
+      "category": "contract-governance",
+      "requirement": "The REST API MUST validate the specification, schema, and examples on every change.",
+      "relatedAuditItems": [
+        "spec-validated-on-change",
+        "schema-and-examples-pass"
+      ]
+    },
+    {
+      "id": "REST-AUDIT-02",
+      "priority": "MUST",
+      "category": "contract-governance",
+      "requirement": "The REST API MUST pass concept, design, security, and production-readiness checks before release.",
+      "relatedAuditItems": [
+        "concept-items-audited",
+        "design-items-audited"
+      ]
+    }
+  ]
+}

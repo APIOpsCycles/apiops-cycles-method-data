@@ -2,14 +2,48 @@
   "name": "__PROJECT_NAME__",
   "private": true,
   "type": "module",
-  "dependencies": {
-    "apiops-cycles-method-data": "^3.3.1",
-    "canvascreator": "^1.6.2"
-  },
   "engines": {
     "node": ">=22"
   },
+  "dependencies": {
+    "apiops-cycles-method-data": "^3.3.2",
+    "canvascreator": "^1.7.1"
+  },
+  "devDependencies": {
+    "@stoplight/spectral-cli": "^6.15.0",
+    "yaml": "^2.8.3"
+  },
+  "overrides": {
+    "@stoplight/spectral-core": {
+      "minimatch": "3.1.4"
+    },
+    "@stoplight/spectral-ruleset-bundler": {
+      "rollup": "2.80.0"
+    }
+  },
   "scripts": {
-    "preinstall": "node ./scripts/check-node-version.js"
+    "preinstall": "node ./scripts/check-node-version.js",
+    "method": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
+    "method:start": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js start --default-locale __LOCALE__",
+    "method:stations": "node ./scripts/get-core-stations.js",
+    "method:resources:strategy": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale __LOCALE__",
+    "method:resources:architecture": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-platform-architecture --locale __LOCALE__",
+    "method:resources:design": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-design --locale __LOCALE__",
+    "method:resources:audit-station": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-audit --locale __LOCALE__",
+    "method:canvases:new-api": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style \"__API_STYLE__\" --locale __LOCALE__ --output ./specs/canvases",
+    "method:canvas": "node ./scripts/get-method-canvas-metadata.js",
+    "method:canvas:mappings": "node ./scripts/list-canvas-mappings.js",
+    "method:canvas:rest": "node ./scripts/get-method-canvas-metadata.js restCanvas __LOCALE__",
+    "method:canvas:event": "node ./scripts/get-method-canvas-metadata.js eventCanvas __LOCALE__",
+    "method:canvas:graphql": "node ./scripts/get-method-canvas-metadata.js graphqlCanvas __LOCALE__",
+    "method:snippet": "node ./scripts/print-method-snippet.js",
+    "method:snippet:style": "node ./scripts/get-resource-metadata.js api-style-guide __LOCALE__",
+    "method:snippet:audit": "node ./scripts/get-resource-metadata.js api-audit-checklist __LOCALE__",
+    "method:resource:audit": "node ./scripts/get-resource-metadata.js api-audit-checklist __LOCALE__",
+    "lint:openapi": "spectral lint --ruleset ./spectral/read-only.yaml ./specs/openapi/api.yaml",
+    "lint:openapi:full-crud": "spectral lint --ruleset ./spectral/full-crud.yaml ./specs/openapi/api.yaml",
+    "validate:openapi": "npm run lint:openapi && npm run lint:openapi:full-crud",
+    "audit:design": "node ./scripts/run-design-audit.js read-only",
+    "audit:design:full-crud": "node ./scripts/run-design-audit.js full-crud"
   }
 }

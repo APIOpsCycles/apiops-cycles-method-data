@@ -19,13 +19,15 @@
   ],
   "exports": {
     "./method-engine": "./src/lib/method-engine.js",
+    "./snippet-engine": "./src/lib/snippet-engine.js",
     "./canvasData.json": "./src/data/canvas/canvasData.json",
     "./localizedData.json": "./src/data/canvas/localizedData.json",
     "./method/stations.json": "./src/data/method/stations.json",
     "./method/resources.json": "./src/data/method/resources.json",
     "./method/station-criteria.json": "./src/data/method/station-criteria.json",
     "./method/stakeholders.json": "./src/data/method/stakeholders.json",
-    "./method/station-stakeholders.json": "./src/data/method/station-stakeholders.json"
+    "./method/station-stakeholders.json": "./src/data/method/station-stakeholders.json",
+    "./snippets/*": "./src/snippets/*"
   },
   "scripts": {
     "test": "node scripts/validate.mjs && node scripts/test-method-stakeholders.mjs && node scripts/test-note-colors.mjs && node scripts/test-print-method-snippet.mjs",

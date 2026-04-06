@@ -1,0 +1,66 @@
+name: OpenAPI lint and audit coverage
+
+on:
+  workflow_dispatch:
+    inputs:
+      audit_profile:
+        description: Audit profile to run
+        required: true
+        default: read-only
+        type: choice
+        options:
+          - read-only
+          - full-crud
+  push:
+    paths:
+      - "specs/openapi/api.yaml"
+      - "specs/audit/**"
+      - "spectral/**"
+      - "docs/api/audit/**"
+      - "scripts/run-design-audit.js"
+      - "package.json"
+      - "package-lock.json"
+      - ".spectral.yaml"
+      - ".github/workflows/openapi-lint.yml"
+  pull_request:
+    paths:
+      - "specs/openapi/api.yaml"
+      - "specs/audit/**"
+      - "spectral/**"
+      - "docs/api/audit/**"
+      - "scripts/run-design-audit.js"
+      - "package.json"
+      - "package-lock.json"
+      - ".spectral.yaml"
+      - ".github/workflows/openapi-lint.yml"
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  spectral:
+    runs-on: ubuntu-latest
+    env:
+      AUDIT_PROFILE: ${{ github.event_name == 'workflow_dispatch' && inputs.audit_profile || 'read-only' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Lint OpenAPI
+        run: npm run lint:openapi${{ env.AUDIT_PROFILE == 'full-crud' && ':full-crud' || '' }}
+      - name: Generate audit reports
+        run: npm run audit:design${{ env.AUDIT_PROFILE == 'full-crud' && ':full-crud' || '' }}
+      - name: Publish audit coverage
+        if: (!cancelled())
+        continue-on-error: true
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        with:
+          files: reports/junit/design-audit.${{ env.AUDIT_PROFILE }}.xml
+          check_name: APIOps Cycles coverage (${{ env.AUDIT_PROFILE }})

@@ -1,9 +1,29 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
 
-const npmCliPath = resolve(dirname(process.execPath), "node_modules", "npm", "bin", "npm-cli.js");
 const npmCacheDir = resolve(".npm-pack-cache");
+
+function resolveNpmCommand() {
+  const nodeBinDir = dirname(process.execPath);
+  const candidates = [
+    resolve(nodeBinDir, "node_modules", "npm", "bin", "npm-cli.js"),
+    resolve(nodeBinDir, "..", "lib", "node_modules", "npm", "bin", "npm-cli.js")
+  ];
+
+  const npmCliPath = candidates.find((candidate) => existsSync(candidate));
+  if (npmCliPath) {
+    return {
+      command: process.execPath,
+      args: [npmCliPath]
+    };
+  }
+
+  return {
+    command: process.platform === "win32" ? "npm.cmd" : "npm",
+    args: []
+  };
+}
 
 const expectedRepoFiles = [
   "skills/new-api-guide/SKILL.md",
@@ -28,9 +48,10 @@ if (!Array.isArray(packageJson.files) || !packageJson.files.includes("skills")) 
   process.exit(1);
 }
 
+const npmCommand = resolveNpmCommand();
 const packJson = execFileSync(
-  process.execPath,
-  [npmCliPath, "pack", "--dry-run", "--json", "--cache", npmCacheDir],
+  npmCommand.command,
+  [...npmCommand.args, "pack", "--dry-run", "--json", "--cache", npmCacheDir],
   { encoding: "utf8" }
 );
 const packEntries = JSON.parse(packJson);

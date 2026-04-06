@@ -8,6 +8,8 @@ import { spawnSync } from "node:child_process";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const templateDir = path.resolve(__dirname, "..", "template");
+const repoRoot = path.resolve(__dirname, "..", "..", "..");
+const canonicalOpenApiSnippetPath = path.join(repoRoot, "src", "snippets", "api-contract-example.yaml");
 
 const DEFAULTS = {
   name: "my-api-project",
@@ -89,6 +91,11 @@ function copyDir(src, dest) {
   }
 }
 
+function copyFile(src, dest) {
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.copyFileSync(src, dest);
+}
+
 function replaceInFile(filePath, replacements) {
   let content = fs.readFileSync(filePath, "utf8");
   for (const [from, to] of Object.entries(replacements)) {
@@ -117,32 +124,6 @@ function runCommand(command, args, options = {}) {
     shell: false,
     ...options
   });
-}
-
-function getScripts(locale, apiStyle) {
-  const base = {
-    "method": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
-    "method:start": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js start --default-locale ${locale}`,
-    "method:resources:strategy": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale ${locale}`,
-    "method:canvases:new-api": `node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style "${apiStyle}" --locale ${locale} --output ./specs/canvases`,
-    "method:stations": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-core-stations.cjs ${locale}`,
-    "method:resource:audit": `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-resource-metadata.cjs api-audit-checklist ${locale}`
-  };
-
-  if (apiStyle === "REST" || apiStyle === "Not sure yet") {
-    base["method:canvas:rest"] =
-      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs restCanvas ${locale}`;
-  }
-  if (apiStyle === "Event" || apiStyle === "Not sure yet") {
-    base["method:canvas:event"] =
-      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs eventCanvas ${locale}`;
-  }
-  if (apiStyle === "GraphQL" || apiStyle === "Not sure yet") {
-    base["method:canvas:graphql"] =
-      `node ./node_modules/apiops-cycles-method-data/skills/new-api-guide/scripts/get-canvas-metadata.cjs graphqlCanvas ${locale}`;
-  }
-
-  return base;
 }
 
 function hasMissingFlagValue(args) {
@@ -199,6 +180,7 @@ async function main() {
   }
 
   copyDir(templateDir, targetDir);
+  copyFile(canonicalOpenApiSnippetPath, path.join(targetDir, "specs", "openapi", "api.yaml"));
 
   const replacements = {
     "__PROJECT_NAME__": projectName,
@@ -208,16 +190,8 @@ async function main() {
   };
 
   replaceInFile(path.join(targetDir, "README.md"), replacements);
+  replaceInFile(path.join(targetDir, "package.json"), replacements);
   replaceInFile(path.join(targetDir, "specs", "openapi", "api.yaml"), replacements);
-
-  const packageJsonPath = path.join(targetDir, "package.json");
-  const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
-  pkg.name = projectName;
-  pkg.scripts = {
-    ...pkg.scripts,
-    ...getScripts(locale, apiStyle)
-  };
-  fs.writeFileSync(packageJsonPath, `${JSON.stringify(pkg, null, 2)}\n`);
 
   console.log(`Created ${projectName}`);
 

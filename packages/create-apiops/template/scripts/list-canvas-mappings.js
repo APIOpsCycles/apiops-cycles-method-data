@@ -1,27 +1,10 @@
-import fs from "fs";
-import path from "path";
+import { getResources } from "apiops-cycles-method-data/method-engine";
 
-function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
-}
-
-const resourcesPath = path.resolve(
-  process.cwd(),
-  "node_modules",
-  "apiops-cycles-method-data",
-  "src",
-  "data",
-  "method",
-  "resources.json",
-);
-
-const resources = readJson(resourcesPath).resources;
-
-const mappings = resources
+const mappings = getResources()
   .filter((resource) => resource.category === "canvas" && resource.canvas)
   .map((resource) => ({
     resourceId: resource.id,
-    canvasId: resource.canvas,
+    canvasId: resource.canvas
   }))
   .sort((left, right) => left.resourceId.localeCompare(right.resourceId));
 

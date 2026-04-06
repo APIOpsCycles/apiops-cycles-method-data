@@ -36,6 +36,8 @@ Typical engine entry points include:
 - `generateCanvases(options)`
 - `getCanvasCreatorUrl(canvasId, locale)`
 
+For snippet-backed resources, prefer the shared Node module export `apiops-cycles-method-data/snippet-engine` instead of reimplementing snippet path resolution or terminal rendering behavior.
+
 When the engine is available, use it as the first choice and treat direct JSON reads as implementation detail or fallback.
 
 ## Sticky note palette
@@ -240,7 +242,7 @@ When using engine-backed or canonical repository data:
 When the selected resource is a guideline rather than a canvas:
 
 - check whether the resource has a `snippet` in `resources.json`
-- if it has one, load the snippet markdown and use it as canonical guidance
+- if it has one, load the canonical snippet asset and use it as canonical guidance
 - if the resource category is `checklist`, preserve the checklist's own structure in the review output
 - for snippet-backed checklists, default to row-by-row pass, partial, gap, or not-applicable judgments instead of a generic prose summary
 - do not create a custom derived document by default when the method already provides a snippet

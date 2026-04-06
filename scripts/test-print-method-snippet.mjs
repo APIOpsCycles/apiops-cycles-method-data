@@ -2,7 +2,7 @@ import { mkdtempSync, mkdirSync, cpSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { dirname, join, resolve } from "node:path";
-import { renderSnippet } from "../packages/create-apiops/template/scripts/print-method-snippet.js";
+import { renderSnippet } from "../src/lib/snippet-engine.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,31 +20,39 @@ function assert(condition, message) {
 try {
   mkdirSync(join(fixturePkgRoot, "src", "data", "method"), { recursive: true });
   mkdirSync(join(fixturePkgRoot, "src", "snippets"), { recursive: true });
-  cpSync(resolve(repoRoot, "src", "data", "method", "resources.json"), join(fixturePkgRoot, "src", "data", "method", "resources.json"));
-  cpSync(resolve(repoRoot, "src", "snippets", "api-audit-checklist.md"), join(fixturePkgRoot, "src", "snippets", "api-audit-checklist.md"));
+  cpSync(
+    resolve(repoRoot, "src", "data", "method", "resources.json"),
+    join(fixturePkgRoot, "src", "data", "method", "resources.json")
+  );
+  cpSync(
+    resolve(repoRoot, "src", "snippets", "api-audit-checklist.json"),
+    join(fixturePkgRoot, "src", "snippets", "api-audit-checklist.json")
+  );
+  cpSync(
+    resolve(repoRoot, "src", "snippets", "api-style-guide.json"),
+    join(fixturePkgRoot, "src", "snippets", "api-style-guide.json")
+  );
+  cpSync(
+    resolve(repoRoot, "src", "snippets", "api-contract-example.yaml"),
+    join(fixturePkgRoot, "src", "snippets", "api-contract-example.yaml")
+  );
 
   process.chdir(tempRoot);
 
-  const unicodeOutput = renderSnippet("api-audit-checklist", "en", { forceUnicode: true });
-  assert(unicodeOutput.includes("### ✅ Concept is Ready When..."), "Expected forced Unicode output to keep checklist symbols.");
-  assert(unicodeOutput.includes("### 🧪 API Design Prototype is Ready When..."), "Expected forced Unicode output to keep prototype heading.");
+  const auditSnippet = renderSnippet("api-audit-checklist", "en", { forceUnicode: true });
+  assert(auditSnippet.includes("\"profiles\""), "Expected api-audit-checklist to render the JSON checklist snippet.");
+  assert(auditSnippet.includes("\"read-only\""), "Expected api-audit-checklist JSON snippet to include the read-only profile.");
 
-  const explicitAsciiOutput = renderSnippet("api-audit-checklist", "en", { forceAscii: true });
-  assert(explicitAsciiOutput.includes("### [OK] Concept is Ready When..."), "Expected --ascii output to replace heading symbols.");
-  assert(explicitAsciiOutput.includes("| API is based on clear business needs                   | API9:2019            | [X]"), "Expected --ascii output to replace checklist cross marks.");
+  const styleSnippet = renderSnippet("api-design-principles", "en", { forceAscii: true });
+  assert(styleSnippet.includes("\"guidelines\""), "Expected api-design-principles to render the JSON style snippet.");
+  assert(styleSnippet.includes("\"REST-CONTRACT-01\""), "Expected api-design-principles JSON snippet to include guideline ids.");
 
-  process.env.APIOPS_FORCE_WINDOWS = "1";
-  process.env.APIOPS_WINDOWS_CODEPAGE = "437";
-  const simulatedWindowsOutput = renderSnippet("api-audit-checklist", "en");
-  assert(simulatedWindowsOutput.includes("### [OK] Concept is Ready When..."), "Expected Windows non-UTF-8 fallback to use ASCII automatically.");
-  assert(simulatedWindowsOutput.includes("### [Prod] API Is Maintainable in Production When..."), "Expected production heading to remain readable in fallback mode.");
+  const contractSnippet = renderSnippet("contract-first-design", "en");
+  assert(contractSnippet.includes("openapi: 3.0.3"), "Expected contract-first-design to render the YAML OpenAPI snippet.");
+  assert(contractSnippet.includes("/items:"), "Expected YAML snippet to include sample contract paths.");
 
-  delete process.env.APIOPS_FORCE_WINDOWS;
-  delete process.env.APIOPS_WINDOWS_CODEPAGE;
   console.log("print-method-snippet regression test passed.");
 } finally {
-  delete process.env.APIOPS_FORCE_WINDOWS;
-  delete process.env.APIOPS_WINDOWS_CODEPAGE;
   process.chdir(previousCwd);
   rmSync(tempRoot, { recursive: true, force: true });
 }
