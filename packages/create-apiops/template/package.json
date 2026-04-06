@@ -19,7 +19,8 @@
     },
     "@stoplight/spectral-ruleset-bundler": {
       "rollup": "2.80.0"
-    }
+    },
+    "lodash": "~4.18.0"
   },
   "scripts": {
     "preinstall": "node ./scripts/check-node-version.js",

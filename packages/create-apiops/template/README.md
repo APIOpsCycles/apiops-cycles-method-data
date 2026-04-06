@@ -110,6 +110,8 @@ In practice:
 - `scripts/run-design-audit.js` also selects the matching Spectral ruleset directly when generating coverage reports
 - `.spectral.yaml` is still useful as the default config for editor integrations or manual commands like `spectral lint specs/openapi/api.yaml`
 
+Note: the Spectral toolchain currently relies on some transitive dependencies that may otherwise trigger npm audit findings. The `overrides` in `package.json` are intentional and are used to keep the scaffolded dependency tree in a working and lower-risk state.
+
 The audit command writes multiple outputs so the same result can be used by developers, docs, and CI:
 
 - `specs/audit/design-audit.<profile>.json` as the canonical machine-readable result

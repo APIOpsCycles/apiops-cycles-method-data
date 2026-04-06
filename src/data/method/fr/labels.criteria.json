@@ -14,6 +14,7 @@
   "criterion.architecture-patterns-validated": "Les modèles d'architecture et de plateforme API choisis ont été validés avec les parties prenantes d'architecture, de sécurité et de plateforme pertinentes.",
   "criterion.design-reflects-business-value": "La conception de l'API et ses capacités exposées reflètent clairement la valeur commerciale et les besoins des utilisateurs.",
   "criterion.api-consistency": "La conception de l'API suit nos conventions partagées pour le produit API et la conception.",
+  "criterion.api-contract-tested": "Le contrat d'API est testé et répond aux exigences fonctionnelles et non fonctionnelles.",
   "criterion.api-description-available": "L'API et ses capacités exposées sont décrites de manière suffisante pour être examinées, auditées et intégrées.",
   "criterion.audit-passed": "L'API passe avec succès les contrôles de conformité, de sécurité et d'audit.",
   "criterion.audit-reports-shared": "Les résultats de l'audit et les décisions de correction sont partagés avec les parties prenantes pertinentes.",

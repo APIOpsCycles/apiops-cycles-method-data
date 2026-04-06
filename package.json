@@ -30,7 +30,7 @@
     "./snippets/*": "./src/snippets/*"
   },
   "scripts": {
-    "test": "node scripts/validate.mjs && node scripts/test-method-stakeholders.mjs && node scripts/test-note-colors.mjs && node scripts/test-print-method-snippet.mjs",
+    "test": "node scripts/validate.mjs && node scripts/test-method-stakeholders.mjs && node scripts/test-note-colors.mjs && node scripts/test-print-method-snippet.mjs && node scripts/test-method-content-integrity.mjs",
     "release:create-apiops:pack": "npm pack --workspace packages/create-apiops",
     "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public",
     "check:packaging:skills": "node scripts/check-packaging-skills.mjs",
