@@ -6,8 +6,8 @@
     "node": ">=22"
   },
   "dependencies": {
-    "apiops-cycles-method-data": "^3.3.2",
-    "canvascreator": "^1.7.1"
+    "apiops-cycles-method-data": "^3.4.0",
+    "canvascreator": "^1.7.2"
   },
   "devDependencies": {
     "@stoplight/spectral-cli": "^6.15.0",
