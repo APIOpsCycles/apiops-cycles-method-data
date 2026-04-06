@@ -6,7 +6,7 @@
     "node": ">=22"
   },
   "dependencies": {
-    "apiops-cycles-method-data": "^3.4.0",
+    "apiops-cycles-method-data": "^3.4.1",
     "canvascreator": "^1.7.3"
   },
   "devDependencies": {
