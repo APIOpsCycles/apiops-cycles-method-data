@@ -8,8 +8,6 @@ import { spawnSync } from "node:child_process";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const templateDir = path.resolve(__dirname, "..", "template");
-const repoRoot = path.resolve(__dirname, "..", "..", "..");
-const canonicalOpenApiSnippetPath = path.join(repoRoot, "src", "snippets", "api-contract-example.yaml");
 
 const DEFAULTS = {
   name: "my-api-project",
@@ -89,11 +87,6 @@ function copyDir(src, dest) {
       fs.copyFileSync(srcPath, destPath);
     }
   }
-}
-
-function copyFile(src, dest) {
-  fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.copyFileSync(src, dest);
 }
 
 function replaceInFile(filePath, replacements) {
@@ -180,7 +173,6 @@ async function main() {
   }
 
   copyDir(templateDir, targetDir);
-  copyFile(canonicalOpenApiSnippetPath, path.join(targetDir, "specs", "openapi", "api.yaml"));
 
   const replacements = {
     "__PROJECT_NAME__": projectName,
@@ -209,7 +201,7 @@ async function main() {
     const canvasInit = runCommand(
       process.execPath,
       [
-        "./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
+        "./node_modules/apiops-cycles-method-data/bin/method-cli.js",
         "generate-canvases",
         "--preset", "new-api",
         "--style", apiStyle,

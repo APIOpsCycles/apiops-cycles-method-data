@@ -1,0 +1,272 @@
+openapi: 3.0.3
+info:
+  title: Sample Catalog API
+  version: 1.0.0
+  description: |
+    Starter example for a read-only APIOps Cycles API.
+    This example keeps the contract audit-friendly and easy to extend.
+servers:
+  - url: /v1
+    description: Versioned API base path
+tags:
+  - name: catalog
+    description: Browse and search catalog items
+paths:
+  /items:
+    get:
+      tags: [catalog]
+      summary: List catalog items
+      description: Returns a paginated list of public catalog items.
+      operationId: listItems
+      parameters:
+        - $ref: "#/components/parameters/searchTerm"
+        - $ref: "#/components/parameters/categoryId"
+        - $ref: "#/components/parameters/page"
+        - $ref: "#/components/parameters/pageSize"
+      responses:
+        "200":
+          description: Item list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ItemListResponse"
+              examples:
+                default:
+                  value:
+                    data:
+                      - itemId: item-123
+                        slug: blue-widget
+                        name: Blue Widget
+                        status: published
+                    page:
+                      number: 1
+                      size: 20
+                      totalItems: 1
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "429":
+          $ref: "#/components/responses/TooManyRequests"
+  /items/{itemId}:
+    get:
+      tags: [catalog]
+      summary: Get item by id
+      description: Returns a single public catalog item by opaque identifier.
+      operationId: getItemById
+      parameters:
+        - $ref: "#/components/parameters/itemId"
+      responses:
+        "200":
+          description: Item details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ItemDetail"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /items/by-slug/{slug}:
+    get:
+      tags: [catalog]
+      summary: Get item by slug
+      description: Returns a single item by public slug.
+      operationId: getItemBySlug
+      parameters:
+        - $ref: "#/components/parameters/slug"
+      responses:
+        "200":
+          description: Item details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ItemDetail"
+        "404":
+          $ref: "#/components/responses/NotFound"
+  /categories/{categoryId}/items:
+    get:
+      tags: [catalog]
+      summary: List items in category
+      description: Returns public items in a category.
+      operationId: listItemsByCategory
+      parameters:
+        - $ref: "#/components/parameters/categoryId"
+      responses:
+        "200":
+          description: Category item list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ItemListResponse"
+        "404":
+          $ref: "#/components/responses/NotFound"
+components:
+  parameters:
+    itemId:
+      name: itemId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: "^[a-z0-9][a-z0-9-]{1,63}$"
+      example: item-123
+    slug:
+      name: slug
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      example: blue-widget
+    categoryId:
+      name: categoryId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: "^[a-z0-9][a-z0-9-]{1,63}$"
+      example: home-goods
+    searchTerm:
+      name: searchTerm
+      in: query
+      required: false
+      schema:
+        type: string
+        minLength: 1
+      example: widget
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    pageSize:
+      name: pageSize
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+  responses:
+    BadRequest:
+      description: Validation failed
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+          examples:
+            default:
+              value:
+                code: BAD_REQUEST
+                message: Invalid request
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    TooManyRequests:
+      description: Rate limit exceeded
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Seconds until the next allowed request.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+  schemas:
+    ItemListResponse:
+      type: object
+      required: [data, page]
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemSummary"
+        page:
+          $ref: "#/components/schemas/Page"
+    ItemSummary:
+      type: object
+      required: [itemId, slug, name, status]
+      properties:
+        itemId:
+          type: string
+        slug:
+          type: string
+        name:
+          type: string
+        status:
+          type: string
+          enum: [published, hidden]
+    ItemDetail:
+      allOf:
+        - $ref: "#/components/schemas/ItemSummary"
+        - type: object
+          properties:
+            description:
+              type: string
+            categories:
+              type: array
+              items:
+                type: string
+            variants:
+              type: array
+              items:
+                $ref: "#/components/schemas/Variant"
+    Variant:
+      type: object
+      required: [variantId, sku, price, inventory]
+      properties:
+        variantId:
+          type: string
+        sku:
+          type: string
+        price:
+          $ref: "#/components/schemas/Price"
+        inventory:
+          $ref: "#/components/schemas/Inventory"
+    Price:
+      type: object
+      required: [amount, currency]
+      properties:
+        amount:
+          type: number
+          format: decimal
+        currency:
+          type: string
+          example: EUR
+    Inventory:
+      type: object
+      required: [available]
+      properties:
+        available:
+          type: integer
+          minimum: 0
+        reserved:
+          type: integer
+          minimum: 0
+        source:
+          type: string
+    Page:
+      type: object
+      required: [number, size, totalItems]
+      properties:
+        number:
+          type: integer
+        size:
+          type: integer
+        totalItems:
+          type: integer
+    ErrorResponse:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+        message:
+          type: string

@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const repoRoot = resolve(__dirname, "..");
 const cliPath = resolve(repoRoot, "packages/create-apiops/bin/create-apiops-project.js");
+const installedMethodCliPath = join("node_modules", "apiops-cycles-method-data", "bin", "method-cli.js");
 const npmCacheDir = resolve(repoRoot, ".npm-pack-cache");
 
 function resolveNpmCommand() {
@@ -152,7 +153,7 @@ try {
   const guidedStartOutput = execFileSync(
     process.execPath,
     [
-      join(projectDir, "node_modules", "apiops-cycles-method-data", "packages", "create-apiops", "bin", "method-cli.js"),
+      join(projectDir, installedMethodCliPath),
       "start",
       "--locale", "en",
       "--answers", guidedAnswers,
@@ -175,7 +176,7 @@ try {
   const interactiveResourcesOutput = execFileSync(
     process.execPath,
     [
-      join(projectDir, "node_modules", "apiops-cycles-method-data", "packages", "create-apiops", "bin", "method-cli.js"),
+      join(projectDir, installedMethodCliPath),
       "resources",
       "--station", "api-product-strategy",
       "--locale", "en",

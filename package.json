@@ -5,6 +5,7 @@
   "license": "Apache-2.0",
   "type": "module",
   "files": [
+    "bin",
     "skills",
     "AGENTS.md",
     "src/lib",
@@ -18,6 +19,7 @@
     "packages/*"
   ],
   "exports": {
+    "./method-cli": "./bin/method-cli.js",
     "./method-engine": "./src/lib/method-engine.js",
     "./snippet-engine": "./src/lib/snippet-engine.js",
     "./canvasData.json": "./src/data/canvas/canvasData.json",
