@@ -56,6 +56,7 @@ assertHasFiles(
   rootFiles,
   [
     "AGENTS.md",
+    "bin/method-cli.js",
     "skills/new-api-guide/SKILL.md",
     "packages/create-apiops/bin/create-apiops-project.js",
     "packages/create-apiops/template/AGENTS.md",
@@ -104,7 +105,8 @@ assertHasFiles(
     "bin/check-node-version.js",
     "template/AGENTS.md",
     "template/README.md",
-    "template/package.json"
+    "template/package.json",
+    "template/specs/openapi/api.yaml"
   ],
   "create-apiops"
 );

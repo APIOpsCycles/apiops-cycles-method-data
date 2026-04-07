@@ -3,7 +3,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import readline from "node:readline/promises";
+import { fileURLToPath } from "node:url";
 import * as methodEngine from "../../../src/lib/method-engine.js";
+
+const currentFilePath = fileURLToPath(import.meta.url);
 
 const STATION_SCRIPT_HINTS = {
   "api-product-strategy": {
@@ -721,7 +724,7 @@ function printGeneratedCanvasText(result) {
   }
 }
 
-async function main() {
+export async function main() {
   const { command, options } = parseArgs(process.argv.slice(2));
 
   if (command === "help") {
@@ -783,7 +786,9 @@ async function main() {
   fail(`Unknown command: ${command}`);
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.message : error);
-  process.exit(1);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === currentFilePath) {
+  main().catch((error) => {
+    console.error(error instanceof Error ? error.message : error);
+    process.exit(1);
+  });
+}

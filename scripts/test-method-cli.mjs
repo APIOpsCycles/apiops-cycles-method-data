@@ -8,7 +8,7 @@ import * as methodEngine from "../src/lib/method-engine.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const repoRoot = resolve(__dirname, "..");
-const methodCliPath = resolve(repoRoot, "packages/create-apiops/bin/method-cli.js");
+const methodCliPath = resolve(repoRoot, "bin/method-cli.js");
 const scaffoldCliPath = resolve(repoRoot, "packages/create-apiops/bin/create-apiops-project.js");
 
 function assert(condition, message) {

@@ -6,7 +6,7 @@
     "node": ">=22"
   },
   "dependencies": {
-    "apiops-cycles-method-data": "^3.4.2",
+    "apiops-cycles-method-data": "^3.4.3",
     "canvascreator": "^1.7.3"
   },
   "devDependencies": {
@@ -24,14 +24,14 @@
   },
   "scripts": {
     "preinstall": "node ./scripts/check-node-version.js",
-    "method": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js",
-    "method:start": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js start --default-locale __LOCALE__",
+    "method": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js",
+    "method:start": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js start --default-locale __LOCALE__",
     "method:stations": "node ./scripts/get-core-stations.js",
-    "method:resources:strategy": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale __LOCALE__",
-    "method:resources:architecture": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-platform-architecture --locale __LOCALE__",
-    "method:resources:design": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-design --locale __LOCALE__",
-    "method:resources:audit-station": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js resources --station api-audit --locale __LOCALE__",
-    "method:canvases:new-api": "node ./node_modules/apiops-cycles-method-data/packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style \"__API_STYLE__\" --locale __LOCALE__ --output ./specs/canvases",
+    "method:resources:strategy": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js resources --station api-product-strategy --locale __LOCALE__",
+    "method:resources:architecture": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js resources --station api-platform-architecture --locale __LOCALE__",
+    "method:resources:design": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js resources --station api-design --locale __LOCALE__",
+    "method:resources:audit-station": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js resources --station api-audit --locale __LOCALE__",
+    "method:canvases:new-api": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js generate-canvases --preset new-api --style \"__API_STYLE__\" --locale __LOCALE__ --output ./specs/canvases",
     "method:canvas": "node ./scripts/get-method-canvas-metadata.js",
     "method:canvas:mappings": "node ./scripts/list-canvas-mappings.js",
     "method:canvas:rest": "node ./scripts/get-method-canvas-metadata.js restCanvas __LOCALE__",
