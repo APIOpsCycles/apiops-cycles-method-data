@@ -13,15 +13,6 @@
     "@stoplight/spectral-cli": "^6.15.0",
     "yaml": "^2.8.3"
   },
-  "overrides": {
-    "@stoplight/spectral-core": {
-      "minimatch": "3.1.4"
-    },
-    "@stoplight/spectral-ruleset-bundler": {
-      "rollup": "2.80.0"
-    },
-    "lodash": "~4.18.0"
-  },
   "scripts": {
     "preinstall": "node ./scripts/check-node-version.js",
     "method": "node ./node_modules/apiops-cycles-method-data/bin/method-cli.js",
