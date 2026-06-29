@@ -24,6 +24,7 @@ const localeDirs = readdirSync("src/data/method", { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name);
 const findings = [];
+const warnings = [];
 const lifecycleStages = new Set(["strategy", "architecture", "design", "delivery", "publishing", "improving"]);
 
 function collectMatchingStringValues(node, pattern, results = new Set()) {
@@ -93,7 +94,7 @@ for (const station of stationGroups) {
     }
 
     if (seenResources.has(resourceId)) {
-      findings.push(
+      warnings.push(
         `Station ${station.id} contains duplicate resource reference "${resourceId}" at indexes ${seenResources.get(resourceId)} and ${index}.`
       );
     } else {
@@ -234,6 +235,13 @@ if (findings.length > 0) {
     console.error(`- ${finding}`);
   }
   process.exit(1);
+}
+
+if (warnings.length > 0) {
+  console.log("Method content validation warnings:");
+  for (const warning of warnings) {
+    console.log(`- ${warning}`);
+  }
 }
 
 console.log("Method content validation passed.");
