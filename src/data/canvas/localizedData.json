@@ -384,6 +384,119 @@
           "description": "Gibt es noch offene Entscheidungen oder Integrationsüberlegungen?"
         }
       }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Which reusable capability would create value for consumers without deciding yet whether it should be delivered as an API, event, file, stream, data product, or another integration style?",
+      "howToUse": "Start from consumer tasks and outcomes. Capture gain-enabling and pain-relieving capability features, then describe candidate reusable capabilities without naming the technology too early.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Consumer tasks and outcomes",
+          "description": "What are consumers, partners, users, systems, or teams trying to achieve?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Gain-enabling capability features",
+          "description": "What capability features would help consumers achieve better outcomes, speed, automation, insight, reach, or compliance?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-relieving capability features",
+          "description": "What capability features would remove friction, manual work, errors, delays, risk, or uncertainty for consumers?"
+        },
+        "reusableCapabilities": {
+          "section": "Reusable capabilities",
+          "description": "What reusable business or data capabilities could serve these tasks, gains, and pains across more than one consumer or use case?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "How viable, reusable, funded, owned, supported, and discoverable should this integration capability be?",
+      "howToUse": "Summarize the capability value proposition, identify consumers and engagement channels, then map ownership, activities, resources, partners, benefits, and costs.",
+      "sections": {
+        "keyPartners": {
+          "section": "Key partners",
+          "description": "Which business, technology, data, security, legal, platform, or external partners are needed to make the capability work?"
+        },
+        "keyActivities": {
+          "section": "Key activities",
+          "description": "What must the capability owner and producers do to design, deliver, govern, support, and improve the capability?"
+        },
+        "keyResources": {
+          "section": "Key resources",
+          "description": "Which systems, data assets, platforms, people, standards, funding, and operational capabilities are required?"
+        },
+        "capabilityValueProposition": {
+          "section": "Capability value proposition",
+          "description": "What value does this reusable capability provide to consumers and to the organization or ecosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Consumer engagement",
+          "description": "How will consumers discover, evaluate, request, onboard, get support for, and provide feedback on the capability?"
+        },
+        "channels": {
+          "section": "Channels",
+          "description": "Through which catalogs, portals, marketplaces, documentation sites, support paths, or governance processes will consumers interact with the capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Capability consumer segments",
+          "description": "Who are the current and potential consumers of the capability, including teams, partners, systems, products, or data users?"
+        },
+        "costs": {
+          "section": "Costs",
+          "description": "What are the significant costs of building, operating, governing, supporting, and evolving the capability?"
+        },
+        "benefits": {
+          "section": "Benefits",
+          "description": "What business, operational, ecosystem, reuse, compliance, or cost benefits justify the capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
+      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another pattern.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Consumer goals",
+          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Availability and timeliness",
+          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume and performance",
+          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Data quality and consistency",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Security, privacy, and compliance",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+        },
+        "changeAndVersioning": {
+          "section": "Change and versioning",
+          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability and support",
+          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery and continuity",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+        },
+        "architectureImplications": {
+          "section": "Architecture implications",
+          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
+        }
+      }
     }
   },
   "en": {
@@ -455,16 +568,16 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "What are the potential business impacts of API failure?",
-      "howToUse": "Consider the potential impact on availability, security, and data for each API.",
+      "purpose": "What are the potential business impacts if the capability, integration, or service fails?",
+      "howToUse": "Consider the potential impact on availability, security, and data for each capability, integration, or service.",
       "sections": {
         "availabilityRisks": {
           "section": "Availability Risks",
-          "description": "What are the potential risks to API availability?"
+          "description": "What are the potential risks to capability availability?"
         },
         "securityRisks": {
           "section": "Security Risks",
-          "description": "What are the potential security risks associated with the API?"
+          "description": "What are the potential security risks associated with the capability?"
         },
         "dataRisks": {
           "section": "Data Risks",
@@ -472,22 +585,22 @@
         },
         "mitigateAvailabilityRisks": {
           "section": "Mitigate Availability Risks",
-          "description": "How can the API provider mitigate the availability risks?"
+          "description": "How can the capability owner mitigate the availability risks?"
         },
         "mitigateSecurityRisks": {
           "section": "Mitigate Security Risks",
-          "description": "How can the API provider mitigate the security risks?"
+          "description": "How can the capability owner mitigate the security risks?"
         },
         "mitigateDataRisks": {
           "section": "Mitigate Data Risks",
-          "description": "How can the API provider mitigate the data risks?"
+          "description": "How can the capability owner mitigate the data risks?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "How much capacity is needed to support API consumption?",
-      "howToUse": "Analyze the current and future capacity requirements for each API.",
+      "purpose": "How much capacity is needed to support expected capability consumption?",
+      "howToUse": "Analyze the current and future capacity requirements for each capability, integration, or service.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Current Business Volumes",
@@ -517,8 +630,8 @@
     },
     "customerJourneyCanvas": {
       "title": "Customer Journey Canvas",
-      "purpose": "What is the customer or partner journey that the API is intended to support?",
-      "howToUse": "In API Product Strategy, describe the real-life customer or partner journey, not the API usage, to reveal pain points, goals, and context. In API Consumer Experience, use this canvas for the API consumer journey from discovery and evaluation to onboarding, integration, troubleshooting, and ongoing use.",
+      "purpose": "What customer, partner, or consumer journey is the capability intended to support?",
+      "howToUse": "Describe the real-life customer, partner, or consumer journey, not the solution usage itself, to reveal pain points, goals, context, inputs, outputs, and experience expectations.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "Customer Discovers Need",
@@ -556,8 +669,8 @@
     },
     "domainCanvas": {
       "title": "Domain Canvas",
-      "purpose": "What are the core entities and business rules related to the API?",
-      "howToUse": "Define the domain model for each API, including entities, attributes, and relationships.",
+      "purpose": "What are the core entities and business rules related to this capability or domain?",
+      "howToUse": "Define the domain model, including entities, attributes, relationships, ownership, and business rules.",
       "sections": {
         "selectedCustomerJourneySteps": {
           "section": "Selected Customer Journey Steps",
@@ -610,8 +723,8 @@
     },
     "interactionCanvas": {
       "title": "Interaction Canvas",
-      "purpose": "What kinds of interactions should this API support before choosing a protocol-specific design?",
-      "howToUse": "Identify which interaction styles are actually needed for this API, and which are out of scope. Use this canvas to clarify intent before mapping the result to REST, events, or GraphQL.",
+      "purpose": "What kinds of interactions should this capability support before choosing a protocol-specific design?",
+      "howToUse": "Identify which interaction styles are actually needed for this capability, and which are out of scope. Use this canvas to clarify intent before mapping the result to REST, events, GraphQL, or another selected pattern.",
       "sections": {
         "crudInteractions": {
           "section": "CRUD Interactions",
@@ -665,8 +778,8 @@
     },
     "locationsCanvas": {
       "title": "Locations Canvas",
-      "purpose": "What geopolitical, regulatory, network, and trust boundaries affect this API?",
-      "howToUse": "Identify where API consumers, providers, and dependent systems operate across internal networks, partner networks, public internet, and regulated regions. Describe the latency, trust, compliance, and connectivity implications between them.",
+      "purpose": "What geopolitical, regulatory, network, and trust boundaries affect this capability or integration?",
+      "howToUse": "Identify where consumers, producers, and dependent systems operate across internal networks, partner networks, public internet, and regulated regions. Describe the latency, trust, compliance, and connectivity implications between them.",
       "sections": {
         "locationGroups": {
           "section": "Location / Trust Groups",
@@ -769,6 +882,119 @@
         "openQuestions": {
           "section": "Notes / Open Questions",
           "description": "Any pending decisions or integration considerations?"
+        }
+      }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Which reusable capability would create value for consumers without deciding yet whether it should be delivered as an API, event, file, stream, data product, or another integration style?",
+      "howToUse": "Start from consumer tasks and outcomes. Capture gain-enabling and pain-relieving capability features, then describe candidate reusable capabilities without naming the technology too early.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Consumer tasks and outcomes",
+          "description": "What are consumers, partners, users, systems, or teams trying to achieve?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Gain-enabling capability features",
+          "description": "What capability features would help consumers achieve better outcomes, speed, automation, insight, reach, or compliance?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-relieving capability features",
+          "description": "What capability features would remove friction, manual work, errors, delays, risk, or uncertainty for consumers?"
+        },
+        "reusableCapabilities": {
+          "section": "Reusable capabilities",
+          "description": "What reusable business or data capabilities could serve these tasks, gains, and pains across more than one consumer or use case?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "How viable, reusable, funded, owned, supported, and discoverable should this integration capability be?",
+      "howToUse": "Summarize the capability value proposition, identify consumers and engagement channels, then map ownership, activities, resources, partners, benefits, and costs.",
+      "sections": {
+        "keyPartners": {
+          "section": "Key partners",
+          "description": "Which business, technology, data, security, legal, platform, or external partners are needed to make the capability work?"
+        },
+        "keyActivities": {
+          "section": "Key activities",
+          "description": "What must the capability owner and producers do to design, deliver, govern, support, and improve the capability?"
+        },
+        "keyResources": {
+          "section": "Key resources",
+          "description": "Which systems, data assets, platforms, people, standards, funding, and operational capabilities are required?"
+        },
+        "capabilityValueProposition": {
+          "section": "Capability value proposition",
+          "description": "What value does this reusable capability provide to consumers and to the organization or ecosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Consumer engagement",
+          "description": "How will consumers discover, evaluate, request, onboard, get support for, and provide feedback on the capability?"
+        },
+        "channels": {
+          "section": "Channels",
+          "description": "Through which catalogs, portals, marketplaces, documentation sites, support paths, or governance processes will consumers interact with the capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Capability consumer segments",
+          "description": "Who are the current and potential consumers of the capability, including teams, partners, systems, products, or data users?"
+        },
+        "costs": {
+          "section": "Costs",
+          "description": "What are the significant costs of building, operating, governing, supporting, and evolving the capability?"
+        },
+        "benefits": {
+          "section": "Benefits",
+          "description": "What business, operational, ecosystem, reuse, compliance, or cost benefits justify the capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
+      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another pattern.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Consumer goals",
+          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Availability and timeliness",
+          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume and performance",
+          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Data quality and consistency",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Security, privacy, and compliance",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+        },
+        "changeAndVersioning": {
+          "section": "Change and versioning",
+          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability and support",
+          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery and continuity",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+        },
+        "architectureImplications": {
+          "section": "Architecture implications",
+          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
         }
       }
     }
@@ -1158,6 +1384,119 @@
           "description": "Onko keskeneräisiä päätöksiä tai integraatioon liittyviä huomioita?"
         }
       }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Which reusable capability would create value for consumers without deciding yet whether it should be delivered as an API, event, file, stream, data product, or another integration style?",
+      "howToUse": "Start from consumer tasks and outcomes. Capture gain-enabling and pain-relieving capability features, then describe candidate reusable capabilities without naming the technology too early.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Consumer tasks and outcomes",
+          "description": "What are consumers, partners, users, systems, or teams trying to achieve?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Gain-enabling capability features",
+          "description": "What capability features would help consumers achieve better outcomes, speed, automation, insight, reach, or compliance?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-relieving capability features",
+          "description": "What capability features would remove friction, manual work, errors, delays, risk, or uncertainty for consumers?"
+        },
+        "reusableCapabilities": {
+          "section": "Reusable capabilities",
+          "description": "What reusable business or data capabilities could serve these tasks, gains, and pains across more than one consumer or use case?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "How viable, reusable, funded, owned, supported, and discoverable should this integration capability be?",
+      "howToUse": "Summarize the capability value proposition, identify consumers and engagement channels, then map ownership, activities, resources, partners, benefits, and costs.",
+      "sections": {
+        "keyPartners": {
+          "section": "Key partners",
+          "description": "Which business, technology, data, security, legal, platform, or external partners are needed to make the capability work?"
+        },
+        "keyActivities": {
+          "section": "Key activities",
+          "description": "What must the capability owner and producers do to design, deliver, govern, support, and improve the capability?"
+        },
+        "keyResources": {
+          "section": "Key resources",
+          "description": "Which systems, data assets, platforms, people, standards, funding, and operational capabilities are required?"
+        },
+        "capabilityValueProposition": {
+          "section": "Capability value proposition",
+          "description": "What value does this reusable capability provide to consumers and to the organization or ecosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Consumer engagement",
+          "description": "How will consumers discover, evaluate, request, onboard, get support for, and provide feedback on the capability?"
+        },
+        "channels": {
+          "section": "Channels",
+          "description": "Through which catalogs, portals, marketplaces, documentation sites, support paths, or governance processes will consumers interact with the capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Capability consumer segments",
+          "description": "Who are the current and potential consumers of the capability, including teams, partners, systems, products, or data users?"
+        },
+        "costs": {
+          "section": "Costs",
+          "description": "What are the significant costs of building, operating, governing, supporting, and evolving the capability?"
+        },
+        "benefits": {
+          "section": "Benefits",
+          "description": "What business, operational, ecosystem, reuse, compliance, or cost benefits justify the capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
+      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another pattern.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Consumer goals",
+          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Availability and timeliness",
+          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume and performance",
+          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Data quality and consistency",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Security, privacy, and compliance",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+        },
+        "changeAndVersioning": {
+          "section": "Change and versioning",
+          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability and support",
+          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery and continuity",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+        },
+        "architectureImplications": {
+          "section": "Architecture implications",
+          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
+        }
+      }
     }
   },
   "fr": {
@@ -1545,6 +1884,119 @@
           "description": "Y a-t-il des décisions en attente ou des considérations d'intégration ?"
         }
       }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Which reusable capability would create value for consumers without deciding yet whether it should be delivered as an API, event, file, stream, data product, or another integration style?",
+      "howToUse": "Start from consumer tasks and outcomes. Capture gain-enabling and pain-relieving capability features, then describe candidate reusable capabilities without naming the technology too early.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Consumer tasks and outcomes",
+          "description": "What are consumers, partners, users, systems, or teams trying to achieve?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Gain-enabling capability features",
+          "description": "What capability features would help consumers achieve better outcomes, speed, automation, insight, reach, or compliance?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-relieving capability features",
+          "description": "What capability features would remove friction, manual work, errors, delays, risk, or uncertainty for consumers?"
+        },
+        "reusableCapabilities": {
+          "section": "Reusable capabilities",
+          "description": "What reusable business or data capabilities could serve these tasks, gains, and pains across more than one consumer or use case?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "How viable, reusable, funded, owned, supported, and discoverable should this integration capability be?",
+      "howToUse": "Summarize the capability value proposition, identify consumers and engagement channels, then map ownership, activities, resources, partners, benefits, and costs.",
+      "sections": {
+        "keyPartners": {
+          "section": "Key partners",
+          "description": "Which business, technology, data, security, legal, platform, or external partners are needed to make the capability work?"
+        },
+        "keyActivities": {
+          "section": "Key activities",
+          "description": "What must the capability owner and producers do to design, deliver, govern, support, and improve the capability?"
+        },
+        "keyResources": {
+          "section": "Key resources",
+          "description": "Which systems, data assets, platforms, people, standards, funding, and operational capabilities are required?"
+        },
+        "capabilityValueProposition": {
+          "section": "Capability value proposition",
+          "description": "What value does this reusable capability provide to consumers and to the organization or ecosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Consumer engagement",
+          "description": "How will consumers discover, evaluate, request, onboard, get support for, and provide feedback on the capability?"
+        },
+        "channels": {
+          "section": "Channels",
+          "description": "Through which catalogs, portals, marketplaces, documentation sites, support paths, or governance processes will consumers interact with the capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Capability consumer segments",
+          "description": "Who are the current and potential consumers of the capability, including teams, partners, systems, products, or data users?"
+        },
+        "costs": {
+          "section": "Costs",
+          "description": "What are the significant costs of building, operating, governing, supporting, and evolving the capability?"
+        },
+        "benefits": {
+          "section": "Benefits",
+          "description": "What business, operational, ecosystem, reuse, compliance, or cost benefits justify the capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
+      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another pattern.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Consumer goals",
+          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Availability and timeliness",
+          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume and performance",
+          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Data quality and consistency",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Security, privacy, and compliance",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+        },
+        "changeAndVersioning": {
+          "section": "Change and versioning",
+          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability and support",
+          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery and continuity",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+        },
+        "architectureImplications": {
+          "section": "Architecture implications",
+          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
+        }
+      }
     }
   },
   "pt": {
@@ -1930,6 +2382,119 @@
         "openQuestions": {
           "section": "Notas/Questões em aberto",
           "description": "Alguma decisão pendente ou considerações sobre integração?"
+        }
+      }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Which reusable capability would create value for consumers without deciding yet whether it should be delivered as an API, event, file, stream, data product, or another integration style?",
+      "howToUse": "Start from consumer tasks and outcomes. Capture gain-enabling and pain-relieving capability features, then describe candidate reusable capabilities without naming the technology too early.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Consumer tasks and outcomes",
+          "description": "What are consumers, partners, users, systems, or teams trying to achieve?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Gain-enabling capability features",
+          "description": "What capability features would help consumers achieve better outcomes, speed, automation, insight, reach, or compliance?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-relieving capability features",
+          "description": "What capability features would remove friction, manual work, errors, delays, risk, or uncertainty for consumers?"
+        },
+        "reusableCapabilities": {
+          "section": "Reusable capabilities",
+          "description": "What reusable business or data capabilities could serve these tasks, gains, and pains across more than one consumer or use case?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "How viable, reusable, funded, owned, supported, and discoverable should this integration capability be?",
+      "howToUse": "Summarize the capability value proposition, identify consumers and engagement channels, then map ownership, activities, resources, partners, benefits, and costs.",
+      "sections": {
+        "keyPartners": {
+          "section": "Key partners",
+          "description": "Which business, technology, data, security, legal, platform, or external partners are needed to make the capability work?"
+        },
+        "keyActivities": {
+          "section": "Key activities",
+          "description": "What must the capability owner and producers do to design, deliver, govern, support, and improve the capability?"
+        },
+        "keyResources": {
+          "section": "Key resources",
+          "description": "Which systems, data assets, platforms, people, standards, funding, and operational capabilities are required?"
+        },
+        "capabilityValueProposition": {
+          "section": "Capability value proposition",
+          "description": "What value does this reusable capability provide to consumers and to the organization or ecosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Consumer engagement",
+          "description": "How will consumers discover, evaluate, request, onboard, get support for, and provide feedback on the capability?"
+        },
+        "channels": {
+          "section": "Channels",
+          "description": "Through which catalogs, portals, marketplaces, documentation sites, support paths, or governance processes will consumers interact with the capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Capability consumer segments",
+          "description": "Who are the current and potential consumers of the capability, including teams, partners, systems, products, or data users?"
+        },
+        "costs": {
+          "section": "Costs",
+          "description": "What are the significant costs of building, operating, governing, supporting, and evolving the capability?"
+        },
+        "benefits": {
+          "section": "Benefits",
+          "description": "What business, operational, ecosystem, reuse, compliance, or cost benefits justify the capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
+      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another pattern.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Consumer goals",
+          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Availability and timeliness",
+          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume and performance",
+          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Data quality and consistency",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Security, privacy, and compliance",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+        },
+        "changeAndVersioning": {
+          "section": "Change and versioning",
+          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability and support",
+          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery and continuity",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+        },
+        "architectureImplications": {
+          "section": "Architecture implications",
+          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
         }
       }
     }

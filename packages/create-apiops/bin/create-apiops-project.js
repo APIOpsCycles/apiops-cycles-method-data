@@ -18,17 +18,46 @@ const DEFAULTS = {
 
 function parseArgs(argv) {
   const args = {
+    help: false,
+    version: false,
     yes: false,
     name: undefined,
     locale: undefined,
     style: undefined,
-    install: undefined
+    install: undefined,
+    errors: []
+  };
+
+  const readValue = (arg, key, index) => {
+    const equalIndex = arg.indexOf("=");
+    if (equalIndex !== -1) {
+      const value = arg.slice(equalIndex + 1);
+      if (!value) {
+        args.errors.push(`Missing value for ${arg.slice(0, equalIndex)}.`);
+      }
+      return { value, nextIndex: index };
+    }
+
+    const value = argv[index + 1];
+    if (!value || value.startsWith("--")) {
+      args.errors.push(`Missing value for --${key}.`);
+      return { value: undefined, nextIndex: index };
+    }
+    return { value, nextIndex: index + 1 };
   };
 
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
 
-    if (arg === "--yes") {
+    if (arg === "--help" || arg === "-h") {
+      args.help = true;
+      continue;
+    }
+    if (arg === "--version" || arg === "-v") {
+      args.version = true;
+      continue;
+    }
+    if (arg === "--yes" || arg === "-y") {
       args.yes = true;
       continue;
     }
@@ -36,24 +65,73 @@ function parseArgs(argv) {
       args.install = false;
       continue;
     }
-    if (arg === "--name") {
-      args.name = argv[i + 1];
-      i += 1;
+    if (arg === "--name" || arg.startsWith("--name=")) {
+      const result = readValue(arg, "name", i);
+      args.name = result.value;
+      i = result.nextIndex;
       continue;
     }
-    if (arg === "--locale") {
-      args.locale = argv[i + 1];
-      i += 1;
+    if (arg === "--locale" || arg.startsWith("--locale=")) {
+      const result = readValue(arg, "locale", i);
+      args.locale = result.value;
+      i = result.nextIndex;
       continue;
     }
-    if (arg === "--style") {
-      args.style = argv[i + 1];
-      i += 1;
+    if (arg === "--style" || arg.startsWith("--style=")) {
+      const result = readValue(arg, "style", i);
+      args.style = result.value;
+      i = result.nextIndex;
+      continue;
+    }
+    if (arg.startsWith("-")) {
+      args.errors.push(`Unknown option: ${arg}`);
+      continue;
+    }
+    if (!args.name) {
+      args.name = arg;
+      continue;
+    }
+    if (args.name !== arg) {
+      args.errors.push(`Unexpected positional argument: ${arg}`);
       continue;
     }
   }
 
   return args;
+}
+
+function getPackageVersion() {
+  const packageJsonPath = path.resolve(__dirname, "..", "package.json");
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+  return packageJson.version;
+}
+
+function printHelp() {
+  console.log(`create-apiops ${getPackageVersion()}
+
+Scaffold a new APIOps project with method guidance, API design artifacts,
+OpenAPI linting, and APIOps Cycles audit scaffolding.
+
+Usage:
+  create-apiops [project-name] [options]
+  npm create apiops@latest -- [project-name] [options]
+
+Options:
+  --name <name>        Project directory and package name. Same as project-name.
+  --locale <locale>    Default locale for generated method commands. Default: ${DEFAULTS.locale}
+  --style <style>      API style focus: REST, Event, GraphQL, or "Not sure yet". Default: ${DEFAULTS.style}
+  --yes, -y            Accept defaults for omitted options and run without prompts.
+                      Use this in non-interactive shells when any prompt answer is omitted.
+  --no-install         Skip npm install and starter canvas generation.
+  --version, -v        Show the create-apiops version.
+  --help, -h           Show this help.
+
+Examples:
+  npm create apiops@latest
+  npm create apiops@latest my-api
+  npm create apiops@latest -- --name my-api --locale en --style REST --yes
+  npm create apiops@latest -- my-api --locale en --style REST --yes --no-install
+`);
 }
 
 function normalizeStyle(style) {
@@ -119,15 +197,26 @@ function runCommand(command, args, options = {}) {
   });
 }
 
-function hasMissingFlagValue(args) {
-  return ["name", "locale", "style"].some((key) => args[key] === undefined && process.argv.includes(`--${key}`));
+function hasCompleteNonInteractiveConfig(args) {
+  return args.name && args.locale && args.style && args.install !== undefined;
 }
 
 async function getScaffoldConfig() {
   const args = parseArgs(process.argv.slice(2));
 
-  if (hasMissingFlagValue(args)) {
-    console.error("Missing value for one of --name, --locale, or --style.");
+  if (args.help) {
+    printHelp();
+    process.exit(0);
+  }
+
+  if (args.version) {
+    console.log(getPackageVersion());
+    process.exit(0);
+  }
+
+  if (args.errors.length > 0) {
+    console.error(args.errors.join("\n"));
+    console.error("\nRun `create-apiops --help` for usage.");
     process.exit(1);
   }
 
@@ -138,8 +227,15 @@ async function getScaffoldConfig() {
     installNow: args.install === undefined ? DEFAULTS.install : args.install
   };
 
-  if (args.yes || (args.name && args.locale && args.style && args.install !== undefined)) {
+  if (args.yes || hasCompleteNonInteractiveConfig(args)) {
     return initial;
+  }
+
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    console.error("create-apiops cannot prompt because stdin or stdout is not interactive.");
+    console.error("Pass --yes to accept defaults for omitted options. To skip --yes, pass --name, --locale, --style, and --no-install.");
+    console.error("Example: npm create apiops@latest -- --name my-api --locale en --style REST --yes");
+    process.exit(1);
   }
 
   const rl = readline.createInterface({

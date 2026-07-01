@@ -1,0 +1,411 @@
+{
+  "templateId": "apiBusinessModelCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.827Z"
+  },
+  "sections": [
+    {
+      "sectionId": "keyPartners",
+      "stickyNotes": [
+        {
+          "content": "PIM / catalog owners",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 32,
+            "y": 117.33334350585938
+          }
+        },
+        {
+          "content": "Commerce platform team",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 117,
+            "y": 116.05431365966797
+          }
+        },
+        {
+          "content": "Search platform team",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 32,
+            "y": 202.96783447265625
+          }
+        },
+        {
+          "content": "Market / merch team",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 117,
+            "y": 202.3300323486328
+          }
+        },
+        {
+          "content": "Partner channels",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 75,
+            "y": 291.1569519042969
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "keyActivities",
+      "stickyNotes": [
+        {
+          "content": "Ingest catalog updates",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 222.63784790039062,
+            "y": 117.32998657226562
+          }
+        },
+        {
+          "content": "Index search data",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 309.5513000488281,
+            "y": 116.69215393066406
+          }
+        },
+        {
+          "content": "Publish product changes",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 224.55126953125,
+            "y": 201.69215393066406
+          }
+        },
+        {
+          "content": "Tune relevance",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 310.8269958496094,
+            "y": 200.41648864746094
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "keyResources",
+      "stickyNotes": [
+        {
+          "content": "Product catalog data",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 222,
+            "y": 305.35797119140625
+          }
+        },
+        {
+          "content": "Search index",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 307,
+            "y": 307.2579345703125
+          }
+        },
+        {
+          "content": "Facet definitions",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 222,
+            "y": 391.6380615234375
+          }
+        },
+        {
+          "content": "Variant data",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 307,
+            "y": 392.2940673828125
+          }
+        },
+        {
+          "content": "Media assets",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 261.0979919433594,
+            "y": 442.7335510253906
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "apiValueProposition",
+      "stickyNotes": [
+        {
+          "content": "Fast product discovery",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 413.91339111328125,
+            "y": 193.60961151123047
+          }
+        },
+        {
+          "content": "Relevant search results",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 496.0731201171875,
+            "y": 193.8117218017578
+          }
+        },
+        {
+          "content": "Consistent product linking",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 411.442626953125,
+            "y": 278.8744201660156
+          }
+        },
+        {
+          "content": "Cached, resizable images",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 498.1148681640625,
+            "y": 283.3338623046875
+          }
+        },
+        {
+          "content": "Reusable, public product APIs",
+          "position": {
+            "x": 459.38301849365234,
+            "y": 109.90234756469727
+          },
+          "size": 80,
+          "color": "#C0EB6A"
+        }
+      ]
+    },
+    {
+      "sectionId": "developerRelations",
+      "stickyNotes": [
+        {
+          "content": "Developer portal",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 602,
+            "y": 116.4976806640625
+          }
+        },
+        {
+          "content": "API docs",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 686.3798828125,
+            "y": 117.11776733398438
+          }
+        },
+        {
+          "content": "Example requests",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 602,
+            "y": 202.7378387451172
+          }
+        },
+        {
+          "content": "Support channel",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 685.759765625,
+            "y": 203.3579559326172
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "channels",
+      "stickyNotes": [
+        {
+          "content": "REST APIs",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 602,
+            "y": 305.9780578613281
+          }
+        },
+        {
+          "content": "Developer portal",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 687,
+            "y": 307.83831787109375
+          }
+        },
+        {
+          "content": "API gateway",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 602,
+            "y": 392.2182312011719
+          }
+        },
+        {
+          "content": "SDKs / examples",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 687,
+            "y": 393.45843505859375
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "apiConsumerSegments",
+      "stickyNotes": [
+        {
+          "content": "Frontend developers",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 790.759765625,
+            "y": 120.83831787109375
+          }
+        },
+        {
+          "content": "Commerce engineers",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 877,
+            "y": 121.45840454101562
+          }
+        },
+        {
+          "content": "Partner integrators",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 792,
+            "y": 205.83831787109375
+          }
+        },
+        {
+          "content": "Mobile app teams",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 876.3798828125,
+            "y": 206.4584197998047
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "costs",
+      "stickyNotes": [
+        {
+          "content": "Search infrastructure",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 90,
+            "y": 506
+          }
+        },
+        {
+          "content": "Indexing pipeline",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 175,
+            "y": 506
+          }
+        },
+        {
+          "content": "Caching and CDN",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 260,
+            "y": 506
+          }
+        },
+        {
+          "content": "Monitoring and support",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 345,
+            "y": 506
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "benefits",
+      "stickyNotes": [
+        {
+          "content": "Higher conversion",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 565,
+            "y": 506
+          }
+        },
+        {
+          "content": "More reused APIs",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 650,
+            "y": 506
+          }
+        },
+        {
+          "content": "Faster channel delivery",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 735,
+            "y": 506
+          }
+        },
+        {
+          "content": "Lower integration cost",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 820,
+            "y": 506
+          }
+        }
+      ]
+    }
+  ]
+}

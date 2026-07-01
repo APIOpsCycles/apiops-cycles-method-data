@@ -1,0 +1,135 @@
+{
+  "templateId": "capacityCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.832Z"
+  },
+  "sections": [
+    {
+      "sectionId": "currentBusinessVolumes",
+      "stickyNotes": [
+        {
+          "content": "~5k searches/day baseline",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "~500 concurrent browse users",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "~2-3x detail calls per search",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "futureConsumptionTrends",
+      "stickyNotes": [
+        {
+          "content": "Search growth 12-18% monthly",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Mobile traffic dominates queries",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Campaign peaks up to 4x baseline",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "peakLoadAndAvailabilityRequirements",
+      "stickyNotes": [
+        {
+          "content": "p95 search under 500 ms",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Support 4x peak without failure",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "99.9% discovery availability",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "cachingStrategies",
+      "stickyNotes": [
+        {
+          "content": "Cache top queries for 5 min",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Cache category results for 10 min",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Use stale-while-revalidate",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "rateLimitingStrategies",
+      "stickyNotes": [
+        {
+          "content": "Limit bot-like query bursts",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Throttle heavy filter queries",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Separate public and partner quotas",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "scalingStrategies",
+      "stickyNotes": [
+        {
+          "content": "Scale read APIs horizontally",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Autoscale search nodes on load",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Isolate indexing from queries",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    }
+  ]
+}

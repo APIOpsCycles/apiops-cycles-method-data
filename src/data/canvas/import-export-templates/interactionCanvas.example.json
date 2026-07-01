@@ -1,0 +1,390 @@
+{
+  "templateId": "interactionCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.833Z"
+  },
+  "sections": [
+    {
+      "sectionId": "crudInteractions",
+      "stickyNotes": [
+        {
+          "content": "Public API is read only",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 57,
+            "y": 132
+          }
+        },
+        {
+          "content": "Read product by id or slug",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 142,
+            "y": 132
+          }
+        },
+        {
+          "content": "No public create or update",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 99.33334350585938,
+            "y": 213.66665649414062
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "crudInputOutputModels",
+      "stickyNotes": [
+        {
+          "content": "Input: product id or slug",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 57.66667175292969,
+            "y": 307
+          }
+        },
+        {
+          "content": "Output: product summary",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 142,
+            "y": 310.33331298828125
+          }
+        },
+        {
+          "content": "Output: detail and variants",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 100,
+            "y": 392
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "crudProcessingValidation",
+      "stickyNotes": [
+        {
+          "content": "Return published products only",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 57,
+            "y": 496
+          }
+        },
+        {
+          "content": "Hide inactive variants",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 142,
+            "y": 496.666748046875
+          }
+        },
+        {
+          "content": "Use stable ids and slugs",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 99.33332824707031,
+            "y": 581
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "queryDrivenInteractions",
+      "stickyNotes": [
+        {
+          "content": "Search products by term",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 297,
+            "y": 123.33334350585938
+          }
+        },
+        {
+          "content": "Filter by category and brand",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 382,
+            "y": 123.33334350585938
+          }
+        },
+        {
+          "content": "Browse products by category",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 297,
+            "y": 209
+          }
+        },
+        {
+          "content": "Return facets and pagination",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 382,
+            "y": 211.66665649414062
+          }
+        },
+        {
+          "content": "Sort and rank results",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 437.3333740234375,
+            "y": 189.33334350585938
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "queryDrivenInputOutputModels",
+      "stickyNotes": [
+        {
+          "content": "Inputs: term, category, market",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 297,
+            "y": 319.66668701171875
+          }
+        },
+        {
+          "content": "Inputs: filters, page, sort",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 384.6666564941406,
+            "y": 322.33331298828125
+          }
+        },
+        {
+          "content": "Outputs: items, facets, paging",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 298.33331298828125,
+            "y": 391.3334045410156
+          }
+        },
+        {
+          "content": "Outputs: category metadata",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 384.0000305175781,
+            "y": 391.33331298828125
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "queryDrivenProcessingValidation",
+      "stickyNotes": [
+        {
+          "content": "Require valid market code",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 296.3333435058594,
+            "y": 506.6667175292969
+          }
+        },
+        {
+          "content": "Validate allowed filters",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 381.3333435058594,
+            "y": 510.0000305175781
+          }
+        },
+        {
+          "content": "Enforce page size limits",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 297,
+            "y": 587.6666870117188
+          }
+        },
+        {
+          "content": "Rank by relevance",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 380.6666564941406,
+            "y": 585
+          }
+        },
+        {
+          "content": "Exclude hidden products",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 340,
+            "y": 694
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "commandDrivenInteractions",
+      "stickyNotes": [
+        {
+          "content": "No public commands in v1",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 537,
+            "y": 132
+          }
+        },
+        {
+          "content": "Cart actions out of scope",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 622,
+            "y": 132
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "commandDrivenInputOutputModels",
+      "stickyNotes": [
+        {
+          "content": "Backoffice writes out of scope",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 537,
+            "y": 337
+          }
+        },
+        {
+          "content": "No command payloads in v1",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 622,
+            "y": 337
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "commandDrivenProcessingValidation",
+      "stickyNotes": [
+        {
+          "content": "Separate admin API later",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 537,
+            "y": 524
+          }
+        },
+        {
+          "content": "Keep public API read only",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 622,
+            "y": 524
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "eventDrivenInteractions",
+      "stickyNotes": [
+        {
+          "content": "No public events in v1",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 777,
+            "y": 132
+          }
+        },
+        {
+          "content": "No consumer subscriptions yet",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 862,
+            "y": 132
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "eventDrivenInputOutputModels",
+      "stickyNotes": [
+        {
+          "content": "Catalog events stay internal",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 777,
+            "y": 337
+          }
+        },
+        {
+          "content": "No event schemas in v1",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 862,
+            "y": 337
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "eventDrivenProcessingValidation",
+      "stickyNotes": [
+        {
+          "content": "Publish later if needed",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 777,
+            "y": 524
+          }
+        },
+        {
+          "content": "Protect internal event flow",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 862,
+            "y": 524
+          }
+        }
+      ]
+    }
+  ]
+}

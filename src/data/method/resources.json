@@ -1044,6 +1044,89 @@
         ]
       },
       "category": "canvas"
+    },
+    {
+      "id": "capabilityValuePropositionCanvas",
+      "title": "resource.capability-value-proposition-canvas.title",
+      "slug": "resources/capability-value-proposition-canvas",
+      "icon": "dashboard-outline",
+      "order": 2.1,
+      "description": "resource.capability-value-proposition-canvas.description",
+      "canvas": "capabilityValuePropositionCanvas",
+      "outcomes": [
+        "resource.capability-value-proposition-canvas.outcomes",
+        "resource.capability-value-proposition-canvas.outcomes.1",
+        "resource.capability-value-proposition-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.capability-value-proposition-canvas.steps",
+          "resource.capability-value-proposition-canvas.steps.1",
+          "resource.capability-value-proposition-canvas.steps.2",
+          "resource.capability-value-proposition-canvas.steps.3"
+        ],
+        "tips": [
+          "resource.capability-value-proposition-canvas.tips",
+          "resource.capability-value-proposition-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "capabilityBusinessModelCanvas",
+      "title": "resource.capability-business-model-canvas.title",
+      "slug": "resources/capability-business-model-canvas",
+      "icon": "dashboard-outline",
+      "order": 3.1,
+      "description": "resource.capability-business-model-canvas.description",
+      "canvas": "capabilityBusinessModelCanvas",
+      "outcomes": [
+        "resource.capability-business-model-canvas.outcomes",
+        "resource.capability-business-model-canvas.outcomes.1",
+        "resource.capability-business-model-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.capability-business-model-canvas.steps",
+          "resource.capability-business-model-canvas.steps.1",
+          "resource.capability-business-model-canvas.steps.2",
+          "resource.capability-business-model-canvas.steps.3",
+          "resource.capability-business-model-canvas.steps.4",
+          "resource.capability-business-model-canvas.steps.5"
+        ],
+        "tips": [
+          "resource.capability-business-model-canvas.tips",
+          "resource.capability-business-model-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "consumerExperienceRequirementsCanvas",
+      "title": "resource.consumer-experience-requirements-canvas.title",
+      "slug": "resources/consumer-experience-requirements-canvas",
+      "icon": "dashboard-outline",
+      "order": 3.2,
+      "description": "resource.consumer-experience-requirements-canvas.description",
+      "canvas": "consumerExperienceRequirementsCanvas",
+      "outcomes": [
+        "resource.consumer-experience-requirements-canvas.outcomes",
+        "resource.consumer-experience-requirements-canvas.outcomes.1",
+        "resource.consumer-experience-requirements-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.consumer-experience-requirements-canvas.steps",
+          "resource.consumer-experience-requirements-canvas.steps.1",
+          "resource.consumer-experience-requirements-canvas.steps.2",
+          "resource.consumer-experience-requirements-canvas.steps.3"
+        ],
+        "tips": [
+          "resource.consumer-experience-requirements-canvas.tips",
+          "resource.consumer-experience-requirements-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
     }
   ]
 }

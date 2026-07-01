@@ -1,0 +1,602 @@
+{
+  "cycles": {
+    "title": "cycles.title",
+    "slug": "cycles",
+    "order": 0,
+    "description": "cycles.description",
+    "items": [
+      {
+        "id": "capability-productization-cycle",
+        "title": "cycle.capability-productization-cycle.title",
+        "slug": "capability-productization-cycle",
+        "description": "cycle.capability-productization-cycle.description",
+        "audiences": [
+          "cycle.audience.top-management",
+          "cycle.audience.enterprise-architects",
+          "cycle.audience.capability-owners"
+        ],
+        "purpose": "cycle.capability-productization-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.capability-strategy",
+          "api-consumer-experience": "cycle.station.consumer-requirements-onboarding",
+          "api-platform-architecture": "cycle.station.architecture-platform-decisions",
+          "api-design": "cycle.station.solution-interface-design",
+          "api-delivery": "cycle.station.delivery-operations",
+          "api-audit": "cycle.station.quality-readiness-assurance",
+          "api-publishing": "cycle.station.publishing-enablement",
+          "monitoring-and-improving": "cycle.station.monitoring-improvement"
+        },
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.capability-productization-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.capability-productization-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.capability-productization-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.capability-productization-cycle.station.api-design.description",
+          "api-delivery": "cycle.capability-productization-cycle.station.api-delivery.description",
+          "api-audit": "cycle.capability-productization-cycle.station.api-audit.description",
+          "api-publishing": "cycle.capability-productization-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.capability-productization-cycle.station.monitoring-and-improving.description"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "capabilityValuePropositionCanvas",
+            "capabilityBusinessModelCanvas"
+          ],
+          "api-consumer-experience": [
+            "consumerExperienceRequirementsCanvas",
+            "api-onboarding-best-practices"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "api-onboarding-best-practices",
+            "service-agreement-template"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics",
+            "api-community-engagement-strategies"
+          ]
+        },
+        "questionnaireResources": [
+          {
+            "station": "api-product-strategy",
+            "resource": "customerJourneyCanvas",
+            "suggestedAnswerOwner": "cycle.owner.business-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "domainCanvas",
+            "suggestedAnswerOwner": "cycle.owner.domain-expert"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "capabilityValuePropositionCanvas",
+            "suggestedAnswerOwner": "cycle.owner.capability-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "capabilityBusinessModelCanvas",
+            "suggestedAnswerOwner": "cycle.owner.capability-owner"
+          },
+          {
+            "station": "api-consumer-experience",
+            "resource": "consumerExperienceRequirementsCanvas",
+            "suggestedAnswerOwner": "cycle.owner.consumer-representative"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "businessImpactCanvas",
+            "suggestedAnswerOwner": "cycle.owner.capability-owner"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "locationsCanvas",
+            "suggestedAnswerOwner": "cycle.owner.enterprise-architect"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "capacityCanvas",
+            "suggestedAnswerOwner": "cycle.owner.platform-owner"
+          }
+        ],
+        "confluenceTemplateSections": [
+          {
+            "id": "intent-fit",
+            "title": "cycle.template.intent-fit.title",
+            "description": "cycle.template.intent-fit.description"
+          },
+          {
+            "id": "requirements",
+            "title": "cycle.template.requirements.title",
+            "description": "cycle.template.requirements.description"
+          },
+          {
+            "id": "architecture-decision",
+            "title": "cycle.template.architecture-decision.title",
+            "description": "cycle.template.architecture-decision.description"
+          },
+          {
+            "id": "adr",
+            "title": "cycle.template.adr.title",
+            "description": "cycle.template.adr.description"
+          }
+        ],
+        "entryCriteria": [
+          "business-goals-defined",
+          "stakeholder-approval"
+        ],
+        "exitCriteria": [
+          "value-prop-validated",
+          "architecture-patterns-validated",
+          "audit-passed"
+        ]
+      },
+      {
+        "id": "api-productization-cycle",
+        "title": "cycle.api-productization-cycle.title",
+        "slug": "api-productization-cycle",
+        "description": "cycle.api-productization-cycle.description",
+        "audiences": [
+          "cycle.audience.api-product-owners",
+          "cycle.audience.api-designers",
+          "cycle.audience.api-platform-teams"
+        ],
+        "purpose": "cycle.api-productization-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.api-product-strategy",
+          "api-consumer-experience": "cycle.station.api-consumer-experience",
+          "api-platform-architecture": "cycle.station.api-platform-architecture",
+          "api-design": "cycle.station.api-design",
+          "api-delivery": "cycle.station.api-delivery",
+          "api-audit": "cycle.station.api-audit",
+          "api-publishing": "cycle.station.api-publishing",
+          "monitoring-and-improving": "cycle.station.monitoring-and-improving"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "apiValuePropositionCanvas",
+            "apiBusinessModelCanvas"
+          ],
+          "api-consumer-experience": [
+            "apiValuePropositionCanvas",
+            "customerJourneyCanvas",
+            "api-onboarding-best-practices"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas",
+            "api-metrics-and-analytics"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "eventCanvas",
+            "graphqlCanvas",
+            "api-design-principles",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis",
+            "api-security-best-practices"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "apiops-CI-CD-for-apis",
+            "api-onboarding-best-practices",
+            "api-audit-checklist"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics",
+            "api-community-engagement-strategies"
+          ]
+        },
+        "questionnaireResources": [
+          {
+            "station": "api-product-strategy",
+            "resource": "customerJourneyCanvas",
+            "suggestedAnswerOwner": "cycle.owner.business-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "domainCanvas",
+            "suggestedAnswerOwner": "cycle.owner.domain-expert"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "apiValuePropositionCanvas",
+            "suggestedAnswerOwner": "cycle.owner.api-product-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "apiBusinessModelCanvas",
+            "suggestedAnswerOwner": "cycle.owner.api-product-owner"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "businessImpactCanvas",
+            "suggestedAnswerOwner": "cycle.owner.api-product-owner"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "locationsCanvas",
+            "suggestedAnswerOwner": "cycle.owner.api-platform-owner"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "capacityCanvas",
+            "suggestedAnswerOwner": "cycle.owner.api-platform-owner"
+          }
+        ],
+        "confluenceTemplateSections": [
+          {
+            "id": "intent-fit",
+            "title": "cycle.template.intent-fit.title",
+            "description": "cycle.template.intent-fit.description"
+          },
+          {
+            "id": "requirements",
+            "title": "cycle.template.requirements.title",
+            "description": "cycle.template.requirements.description"
+          },
+          {
+            "id": "architecture-decision",
+            "title": "cycle.template.api-architecture-decision.title",
+            "description": "cycle.template.api-architecture-decision.description"
+          },
+          {
+            "id": "adr",
+            "title": "cycle.template.adr.title",
+            "description": "cycle.template.adr.description"
+          }
+        ],
+        "entryCriteria": [
+          "api-opportunity-documented",
+          "consumer-segments-identified"
+        ],
+        "exitCriteria": [
+          "api-contract-tested",
+          "api-ready-for-publishing",
+          "api-documentation-ready"
+        ]
+      },
+      {
+        "id": "integration-productization-cycle",
+        "title": "cycle.integration-productization-cycle.title",
+        "slug": "integration-productization-cycle",
+        "description": "cycle.integration-productization-cycle.description",
+        "audiences": [
+          "cycle.audience.enterprise-architects",
+          "cycle.audience.solution-architects",
+          "cycle.audience.integration-architects",
+          "cycle.audience.platform-owners"
+        ],
+        "purpose": "cycle.integration-productization-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.integration-capability-strategy",
+          "api-consumer-experience": "cycle.station.integration-consumer-requirements-onboarding",
+          "api-platform-architecture": "cycle.station.integration-architecture-decision",
+          "api-design": "cycle.station.integration-solution-design",
+          "api-delivery": "cycle.station.integration-delivery-operations",
+          "api-audit": "cycle.station.integration-readiness-assurance",
+          "api-publishing": "cycle.station.capability-publishing",
+          "monitoring-and-improving": "cycle.station.integration-monitoring-improvement"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "capabilityValuePropositionCanvas",
+            "capabilityBusinessModelCanvas"
+          ],
+          "api-consumer-experience": [
+            "consumerExperienceRequirementsCanvas",
+            "api-onboarding-best-practices"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas",
+            "api-metrics-and-analytics"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "eventCanvas",
+            "graphqlCanvas",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis",
+            "api-security-best-practices"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "api-onboarding-best-practices",
+            "service-agreement-template"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics",
+            "api-community-engagement-strategies"
+          ]
+        },
+        "questionnaireResources": [
+          {
+            "station": "api-product-strategy",
+            "resource": "customerJourneyCanvas",
+            "suggestedAnswerOwner": "cycle.owner.business-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "domainCanvas",
+            "suggestedAnswerOwner": "cycle.owner.domain-expert"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "capabilityValuePropositionCanvas",
+            "suggestedAnswerOwner": "cycle.owner.capability-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "capabilityBusinessModelCanvas",
+            "suggestedAnswerOwner": "cycle.owner.capability-owner"
+          },
+          {
+            "station": "api-consumer-experience",
+            "resource": "consumerExperienceRequirementsCanvas",
+            "suggestedAnswerOwner": "cycle.owner.consumer-representative"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "businessImpactCanvas",
+            "suggestedAnswerOwner": "cycle.owner.integration-architect"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "locationsCanvas",
+            "suggestedAnswerOwner": "cycle.owner.enterprise-architect"
+          },
+          {
+            "station": "api-platform-architecture",
+            "resource": "capacityCanvas",
+            "suggestedAnswerOwner": "cycle.owner.platform-owner"
+          }
+        ],
+        "confluenceTemplateSections": [
+          {
+            "id": "intent-fit",
+            "title": "cycle.template.intent-fit.title",
+            "description": "cycle.template.intent-fit.description"
+          },
+          {
+            "id": "requirements",
+            "title": "cycle.template.requirements.title",
+            "description": "cycle.template.requirements.description"
+          },
+          {
+            "id": "integration-pattern-decision",
+            "title": "cycle.template.integration-pattern-decision.title",
+            "description": "cycle.template.integration-pattern-decision.description"
+          },
+          {
+            "id": "adr",
+            "title": "cycle.template.adr.title",
+            "description": "cycle.template.adr.description"
+          }
+        ],
+        "entryCriteria": [
+          "business-goals-defined",
+          "api-opportunity-documented"
+        ],
+        "exitCriteria": [
+          "architecture-patterns-validated",
+          "api-description-available",
+          "audit-passed"
+        ]
+      },
+      {
+        "id": "ai-augmented-design-cycle",
+        "title": "cycle.ai-augmented-design-cycle.title",
+        "slug": "ai-augmented-design-cycle",
+        "description": "cycle.ai-augmented-design-cycle.description",
+        "audiences": [
+          "cycle.audience.ai-teams",
+          "cycle.audience.platform-innovators",
+          "cycle.audience.architects",
+          "cycle.audience.product-teams"
+        ],
+        "purpose": "cycle.ai-augmented-design-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.ai-assisted-capability-strategy",
+          "api-consumer-experience": "cycle.station.ai-assisted-requirements-onboarding",
+          "api-platform-architecture": "cycle.station.ai-assisted-architecture-decisions",
+          "api-design": "cycle.station.ai-assisted-solution-interface-design",
+          "api-delivery": "cycle.station.ai-assisted-delivery-operations",
+          "api-audit": "cycle.station.ai-governance-readiness",
+          "api-publishing": "cycle.station.ai-assisted-publishing-enablement",
+          "monitoring-and-improving": "cycle.station.ai-assisted-monitoring-improvement"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "capabilityValuePropositionCanvas"
+          ],
+          "api-consumer-experience": [
+            "consumerExperienceRequirementsCanvas"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "eventCanvas",
+            "graphqlCanvas",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "api-onboarding-best-practices"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics"
+          ]
+        },
+        "questionnaireResources": [
+          {
+            "station": "api-product-strategy",
+            "resource": "customerJourneyCanvas",
+            "suggestedAnswerOwner": "cycle.owner.business-owner"
+          },
+          {
+            "station": "api-product-strategy",
+            "resource": "domainCanvas",
+            "suggestedAnswerOwner": "cycle.owner.domain-expert"
+          },
+          {
+            "station": "api-consumer-experience",
+            "resource": "consumerExperienceRequirementsCanvas",
+            "suggestedAnswerOwner": "cycle.owner.consumer-representative"
+          },
+          {
+            "station": "api-design",
+            "resource": "interactionCanvas",
+            "suggestedAnswerOwner": "cycle.owner.solution-architect"
+          }
+        ],
+        "confluenceTemplateSections": [
+          {
+            "id": "intent-fit",
+            "title": "cycle.template.intent-fit.title",
+            "description": "cycle.template.intent-fit.description"
+          },
+          {
+            "id": "ai-assistance-plan",
+            "title": "cycle.template.ai-assistance-plan.title",
+            "description": "cycle.template.ai-assistance-plan.description"
+          },
+          {
+            "id": "human-validation",
+            "title": "cycle.template.human-validation.title",
+            "description": "cycle.template.human-validation.description"
+          },
+          {
+            "id": "adr",
+            "title": "cycle.template.adr.title",
+            "description": "cycle.template.adr.description"
+          }
+        ],
+        "overlays": [
+          {
+            "station": "api-product-strategy",
+            "assistance": "cycle.ai.overlay.strategy.assistance",
+            "humanValidation": "cycle.ai.overlay.strategy.validation"
+          },
+          {
+            "station": "api-design",
+            "assistance": "cycle.ai.overlay.design.assistance",
+            "humanValidation": "cycle.ai.overlay.design.validation"
+          },
+          {
+            "station": "api-audit",
+            "assistance": "cycle.ai.overlay.audit.assistance",
+            "humanValidation": "cycle.ai.overlay.audit.validation"
+          }
+        ],
+        "entryCriteria": [
+          "business-goals-defined",
+          "stakeholder-approval"
+        ],
+        "exitCriteria": [
+          "design-reflects-business-value",
+          "api-contract-tested",
+          "audit-passed"
+        ]
+      }
+    ]
+  }
+}

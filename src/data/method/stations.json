@@ -30,11 +30,11 @@
           },
           {
             "step": "station.api-product-strategy.how_it_works.2",
-            "resource": "apiValuePropositionCanvas"
+            "resource": "capabilityValuePropositionCanvas"
           },
           {
             "step": "station.api-product-strategy.how_it_works.3",
-            "resource": "apiBusinessModelCanvas"
+            "resource": "capabilityBusinessModelCanvas"
           }
         ],
         "apply_in_work": "station.api-product-strategy.apply_in_work",
@@ -66,20 +66,6 @@
           "station.api-consumer-experience.outcomes.2",
           "station.api-consumer-experience.outcomes.3"
         ],
-        "how-it-works": [
-          {
-            "step": "station.api-consumer-experience.how_it_works",
-            "resource": "apiValuePropositionCanvas"
-          },
-          {
-            "step": "station.api-consumer-experience.how_it_works.1",
-            "resource": "customerJourneyCanvas"
-          },
-          {
-            "step": "station.api-consumer-experience.how_it_works.2",
-            "resource": "api-onboarding-best-practices"
-          }
-        ],
         "apply_in_work": "station.api-consumer-experience.apply_in_work",
         "lifecycleStage": "strategy",
         "stationCriteria": [
@@ -94,6 +80,20 @@
           "design-artifact",
           "documentation",
           "consumer-feedback"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.api-consumer-experience.how_it_works",
+            "resource": "consumerExperienceRequirementsCanvas"
+          },
+          {
+            "step": "station.api-consumer-experience.how_it_works.1",
+            "resource": "customerJourneyCanvas"
+          },
+          {
+            "step": "station.api-consumer-experience.how_it_works.2",
+            "resource": "api-onboarding-best-practices"
+          }
         ]
       },
       {
@@ -426,7 +426,38 @@
             "resource": "customerJourneyCanvas"
           }
         ],
-        "apply_in_work": "station.user-experience.apply_in_work"
+        "apply_in_work": "station.user-experience.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "capability-productization-cycle": "Capability User Experience",
+          "api-productization-cycle": "API User Experience",
+          "integration-productization-cycle": "Integration Consumer Experience",
+          "ai-augmented-design-cycle": "AI-Assisted Experience Discovery"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "customerJourneyCanvas"
+          ],
+          "api-productization-cycle": [
+            "customerJourneyCanvas"
+          ],
+          "integration-productization-cycle": [
+            "customerJourneyCanvas"
+          ],
+          "ai-augmented-design-cycle": [
+            "customerJourneyCanvas"
+          ]
+        }
       },
       {
         "id": "market-insights",
@@ -456,7 +487,36 @@
             "resource": "industry-standards-and-best-practices"
           }
         ],
-        "apply_in_work": "station.market-insights.apply_in_work"
+        "apply_in_work": "station.market-insights.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "ecosystem-vision-template",
+            "competitor-analysis-template",
+            "industry-standards-and-best-practices"
+          ],
+          "api-productization-cycle": [
+            "ecosystem-vision-template",
+            "competitor-analysis-template",
+            "industry-standards-and-best-practices"
+          ],
+          "integration-productization-cycle": [
+            "ecosystem-vision-template",
+            "competitor-analysis-template",
+            "industry-standards-and-best-practices"
+          ]
+        }
       },
       {
         "id": "business-goals",
@@ -486,7 +546,43 @@
             "resource": "stakeholder-engagement-best-practices"
           }
         ],
-        "apply_in_work": "station.business-goals.apply_in_work"
+        "apply_in_work": "station.business-goals.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "apiBusinessModelCanvas",
+            "api-metrics-and-analytics",
+            "stakeholder-engagement-best-practices"
+          ],
+          "api-productization-cycle": [
+            "apiBusinessModelCanvas",
+            "api-metrics-and-analytics",
+            "stakeholder-engagement-best-practices"
+          ],
+          "integration-productization-cycle": [
+            "apiBusinessModelCanvas",
+            "api-metrics-and-analytics",
+            "stakeholder-engagement-best-practices"
+          ],
+          "ai-augmented-design-cycle": [
+            "apiBusinessModelCanvas",
+            "api-metrics-and-analytics",
+            "stakeholder-engagement-best-practices"
+          ]
+        }
       },
       {
         "id": "competitive-analysis",
@@ -516,7 +612,27 @@
             "resource": "ecosystem-vision-template"
           }
         ],
-        "apply_in_work": "station.competitive-analysis.apply_in_work"
+        "apply_in_work": "station.competitive-analysis.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "competitor-analysis-template",
+            "ecosystem-vision-template"
+          ],
+          "api-productization-cycle": [
+            "competitor-analysis-template",
+            "ecosystem-vision-template"
+          ]
+        }
       },
       {
         "id": "ecosystem-vision",
@@ -546,7 +662,34 @@
             "resource": "ecosystem-vision-template"
           }
         ],
-        "apply_in_work": "station.ecosystem-vision.apply_in_work"
+        "apply_in_work": "station.ecosystem-vision.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "ecosystem-vision-template"
+          ],
+          "api-productization-cycle": [
+            "ecosystem-vision-template"
+          ],
+          "integration-productization-cycle": [
+            "ecosystem-vision-template"
+          ],
+          "ai-augmented-design-cycle": [
+            "ecosystem-vision-template"
+          ]
+        }
       },
       {
         "id": "scalable-infrastructure",
@@ -576,7 +719,38 @@
             "resource": "scalable-infrastructure-best-practices"
           }
         ],
-        "apply_in_work": "station.scalable-infrastructure.apply_in_work"
+        "apply_in_work": "station.scalable-infrastructure.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "api-productization-cycle": "API Scalable Infrastructure",
+          "integration-productization-cycle": "Integration Scalable Infrastructure",
+          "ai-augmented-design-cycle": "AI Platform Scalability"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "scalable-infrastructure-best-practices",
+            "capacityCanvas"
+          ],
+          "integration-productization-cycle": [
+            "scalable-infrastructure-best-practices",
+            "capacityCanvas"
+          ],
+          "ai-augmented-design-cycle": [
+            "scalable-infrastructure-best-practices",
+            "capacityCanvas"
+          ]
+        }
       },
       {
         "id": "legal-and-compliance",
@@ -606,7 +780,43 @@
             "resource": "api-compliance-best-practices"
           }
         ],
-        "apply_in_work": "station.legal-and-compliance.apply_in_work"
+        "apply_in_work": "station.legal-and-compliance.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "capability-productization-cycle": "Capability Legal & Compliance",
+          "api-productization-cycle": "API Legal & Compliance",
+          "integration-productization-cycle": "Integration Legal & Compliance",
+          "ai-augmented-design-cycle": "AI Legal, Compliance & Responsible Use"
+        },
+        "cycleSpecificDescriptions": {
+          "integration-productization-cycle": "Identify legal, privacy, regulatory, data-sharing and cross-boundary obligations for reusable integration capabilities.",
+          "ai-augmented-design-cycle": "Identify legal, privacy, compliance, responsible-use and accountability obligations for AI-enabled capabilities."
+        },
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-compliance-best-practices"
+          ],
+          "api-productization-cycle": [
+            "api-compliance-best-practices"
+          ],
+          "integration-productization-cycle": [
+            "api-compliance-best-practices"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-compliance-best-practices"
+          ]
+        }
       },
       {
         "id": "security-and-privacy",
@@ -636,7 +846,47 @@
             "resource": ""
           }
         ],
-        "apply_in_work": "station.security-and-privacy.apply_in_work"
+        "apply_in_work": "station.security-and-privacy.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "capability-productization-cycle": "Capability Security & Privacy",
+          "api-productization-cycle": "API Security & Privacy",
+          "integration-productization-cycle": "Integration Security & Privacy",
+          "ai-augmented-design-cycle": "AI Trust, Security & Privacy"
+        },
+        "cycleSpecificDescriptions": {
+          "integration-productization-cycle": "Identify security, privacy, trust-boundary and data-movement controls for reusable integration capabilities.",
+          "ai-augmented-design-cycle": "Identify security, privacy, safety, trust, model, tool and data controls for AI-enabled capabilities."
+        },
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-security-best-practices",
+            "data-privacy-guidelines"
+          ],
+          "api-productization-cycle": [
+            "api-security-best-practices",
+            "data-privacy-guidelines"
+          ],
+          "integration-productization-cycle": [
+            "api-security-best-practices",
+            "data-privacy-guidelines"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-security-best-practices",
+            "data-privacy-guidelines"
+          ]
+        }
       },
       {
         "id": "design-standards",
@@ -666,7 +916,38 @@
             "resource": "api-audit-checklist"
           }
         ],
-        "apply_in_work": "station.design-standards.apply_in_work"
+        "apply_in_work": "station.design-standards.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "api-productization-cycle": "API Design Standards",
+          "integration-productization-cycle": "Integration Pattern Standards",
+          "ai-augmented-design-cycle": "AI Design & Governance Standards"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "api-design-principles",
+            "api-audit-checklist"
+          ],
+          "integration-productization-cycle": [
+            "api-design-principles",
+            "api-audit-checklist"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-design-principles",
+            "api-audit-checklist"
+          ]
+        }
       },
       {
         "id": "vendor-management",
@@ -696,7 +977,34 @@
             "resource": "vendor-management-best-practices"
           }
         ],
-        "apply_in_work": "station.vendor-management.apply_in_work"
+        "apply_in_work": "station.vendor-management.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "capability-productization-cycle": "Capability Vendor Management",
+          "integration-productization-cycle": "Integration Vendor & Platform Management",
+          "ai-augmented-design-cycle": "AI Vendor & Model Provider Management"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "vendor-management-best-practices"
+          ],
+          "integration-productization-cycle": [
+            "vendor-management-best-practices"
+          ],
+          "ai-augmented-design-cycle": [
+            "vendor-management-best-practices"
+          ]
+        }
       },
       {
         "id": "contract-design",
@@ -726,7 +1034,38 @@
             "resource": "api-audit-checklist"
           }
         ],
-        "apply_in_work": "station.contract-design.apply_in_work"
+        "apply_in_work": "station.contract-design.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "api-productization-cycle": "API Contract Design",
+          "integration-productization-cycle": "Capability Contract & Data Movement Design",
+          "ai-augmented-design-cycle": "Tool, Prompt & Interaction Contract Design"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "contract-first-design",
+            "api-audit-checklist"
+          ],
+          "integration-productization-cycle": [
+            "contract-first-design",
+            "api-audit-checklist"
+          ],
+          "ai-augmented-design-cycle": [
+            "contract-first-design",
+            "api-audit-checklist"
+          ]
+        }
       },
       {
         "id": "development",
@@ -756,7 +1095,33 @@
             "resource": "api-development-best-practices"
           }
         ],
-        "apply_in_work": "station.development.apply_in_work"
+        "apply_in_work": "station.development.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "api-development-best-practices",
+            "contract-first-design"
+          ],
+          "integration-productization-cycle": [
+            "api-development-best-practices",
+            "contract-first-design"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-development-best-practices",
+            "contract-first-design"
+          ]
+        }
       },
       {
         "id": "ci-cd",
@@ -786,7 +1151,37 @@
             "resource": "api-security-best-practices"
           }
         ],
-        "apply_in_work": "station.ci-cd.apply_in_work"
+        "apply_in_work": "station.ci-cd.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "apiops-CI-CD-for-apis",
+            "api-testing-best-practices",
+            "api-security-best-practices"
+          ],
+          "integration-productization-cycle": [
+            "apiops-CI-CD-for-apis",
+            "api-testing-best-practices",
+            "api-security-best-practices"
+          ],
+          "ai-augmented-design-cycle": [
+            "apiops-CI-CD-for-apis",
+            "api-testing-best-practices",
+            "api-security-best-practices"
+          ]
+        }
       },
       {
         "id": "test-automation",
@@ -816,7 +1211,34 @@
             "resource": "apiops-CI-CD-for-apis"
           }
         ],
-        "apply_in_work": "station.test-automation.apply_in_work"
+        "apply_in_work": "station.test-automation.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "integration-productization-cycle": [
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ]
+        }
       },
       {
         "id": "release-management",
@@ -846,7 +1268,33 @@
             "resource": ""
           }
         ],
-        "apply_in_work": "station.release-management.apply_in_work"
+        "apply_in_work": "station.release-management.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "api-productization-cycle": [
+            "api-versioning-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "integration-productization-cycle": [
+            "api-versioning-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-versioning-best-practices",
+            "apiops-CI-CD-for-apis"
+          ]
+        }
       },
       {
         "id": "service-agreements",
@@ -876,7 +1324,30 @@
             "resource": "service-agreement-template"
           }
         ],
-        "apply_in_work": "station.service-agreements.apply_in_work"
+        "apply_in_work": "station.service-agreements.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "service-agreement-template"
+          ],
+          "api-productization-cycle": [
+            "service-agreement-template"
+          ],
+          "integration-productization-cycle": [
+            "service-agreement-template"
+          ]
+        }
       },
       {
         "id": "api-consumer-adoption",
@@ -906,7 +1377,36 @@
             "resource": "api-community-engagement-strategies"
           }
         ],
-        "apply_in_work": "station.api-consumer-adoption.apply_in_work"
+        "apply_in_work": "station.api-consumer-adoption.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "capability-productization-cycle": "Capability Consumer Adoption",
+          "api-productization-cycle": "API Consumer Adoption",
+          "integration-productization-cycle": "Integration Consumer Adoption"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-onboarding-best-practices",
+            "api-community-engagement-strategies"
+          ],
+          "api-productization-cycle": [
+            "api-onboarding-best-practices",
+            "api-community-engagement-strategies"
+          ],
+          "integration-productization-cycle": [
+            "api-onboarding-best-practices",
+            "api-community-engagement-strategies"
+          ]
+        }
       },
       {
         "id": "api-promotion",
@@ -936,7 +1436,28 @@
             "resource": "api-community-engagement-strategies"
           }
         ],
-        "apply_in_work": "station.api-promotion.apply_in_work"
+        "apply_in_work": "station.api-promotion.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle"
+        ],
+        "cycleSpecificLabels": {
+          "capability-productization-cycle": "Capability Promotion",
+          "api-productization-cycle": "API Promotion"
+        },
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-community-engagement-strategies"
+          ],
+          "api-productization-cycle": [
+            "api-community-engagement-strategies"
+          ]
+        }
       },
       {
         "id": "partner-integration",
@@ -966,7 +1487,32 @@
             "resource": "partner-integration-guidelines"
           }
         ],
-        "apply_in_work": "station.partner-integration.apply_in_work"
+        "apply_in_work": "station.partner-integration.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle"
+        ],
+        "defaultForCycles": [
+          "integration-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "ecosystem-vision-template",
+            "partner-integration-guidelines"
+          ],
+          "api-productization-cycle": [
+            "ecosystem-vision-template",
+            "partner-integration-guidelines"
+          ],
+          "integration-productization-cycle": [
+            "ecosystem-vision-template",
+            "partner-integration-guidelines"
+          ]
+        }
       },
       {
         "id": "api-mindset",
@@ -996,7 +1542,41 @@
             "resource": "api-training-programs"
           }
         ],
-        "apply_in_work": "station.api-mindset.apply_in_work"
+        "apply_in_work": "station.api-mindset.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "ecosystem-vision-template",
+            "cross-functional-collaboration-best-practices",
+            "api-training-programs"
+          ],
+          "api-productization-cycle": [
+            "ecosystem-vision-template",
+            "cross-functional-collaboration-best-practices",
+            "api-training-programs"
+          ],
+          "integration-productization-cycle": [
+            "ecosystem-vision-template",
+            "cross-functional-collaboration-best-practices",
+            "api-training-programs"
+          ],
+          "ai-augmented-design-cycle": [
+            "ecosystem-vision-template",
+            "cross-functional-collaboration-best-practices",
+            "api-training-programs"
+          ]
+        }
       },
       {
         "id": "roles-and-responsibilities",
@@ -1026,7 +1606,40 @@
             "resource": "role-communication-best-practices"
           }
         ],
-        "apply_in_work": "station.roles-and-responsibilities.apply_in_work"
+        "apply_in_work": "station.roles-and-responsibilities.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-team-structure-guidelines",
+            "role-communication-best-practices"
+          ],
+          "api-productization-cycle": [
+            "api-team-structure-guidelines",
+            "role-communication-best-practices"
+          ],
+          "integration-productization-cycle": [
+            "api-team-structure-guidelines",
+            "role-communication-best-practices"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-team-structure-guidelines",
+            "role-communication-best-practices"
+          ]
+        }
       },
       {
         "id": "upskilling",
@@ -1056,7 +1669,34 @@
             "resource": "api-training-programs"
           }
         ],
-        "apply_in_work": "station.upskilling.apply_in_work"
+        "apply_in_work": "station.upskilling.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "api-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-training-programs"
+          ],
+          "api-productization-cycle": [
+            "api-training-programs"
+          ],
+          "integration-productization-cycle": [
+            "api-training-programs"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-training-programs"
+          ]
+        }
       },
       {
         "id": "operating-guidelines",
@@ -1086,7 +1726,36 @@
             "resource": "api-metrics-and-analytics"
           }
         ],
-        "apply_in_work": "station.operating-guidelines.apply_in_work"
+        "apply_in_work": "station.operating-guidelines.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-metrics-and-analytics"
+          ],
+          "api-productization-cycle": [
+            "api-metrics-and-analytics"
+          ],
+          "integration-productization-cycle": [
+            "api-metrics-and-analytics"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-metrics-and-analytics"
+          ]
+        }
       },
       {
         "id": "portfolio-management",
@@ -1116,7 +1785,34 @@
             "resource": "api-portfolio-management-guidelines"
           }
         ],
-        "apply_in_work": "station.portfolio-management.apply_in_work"
+        "apply_in_work": "station.portfolio-management.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-portfolio-management-guidelines"
+          ],
+          "api-productization-cycle": [
+            "api-portfolio-management-guidelines"
+          ],
+          "integration-productization-cycle": [
+            "api-portfolio-management-guidelines"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-portfolio-management-guidelines"
+          ]
+        }
       },
       {
         "id": "budget-and-resource-management",
@@ -1146,7 +1842,33 @@
             "resource": "api-portfolio-management-guidelines"
           }
         ],
-        "apply_in_work": "station.budget-and-resource-management.apply_in_work"
+        "apply_in_work": "station.budget-and-resource-management.apply_in_work",
+        "type": "supporting-station",
+        "applicableCycles": [
+          "capability-productization-cycle",
+          "api-productization-cycle",
+          "integration-productization-cycle",
+          "ai-augmented-design-cycle"
+        ],
+        "defaultForCycles": [
+          "capability-productization-cycle"
+        ],
+        "cycleSpecificLabels": {},
+        "cycleSpecificDescriptions": {},
+        "cycleSpecificResources": {
+          "capability-productization-cycle": [
+            "api-portfolio-management-guidelines"
+          ],
+          "api-productization-cycle": [
+            "api-portfolio-management-guidelines"
+          ],
+          "integration-productization-cycle": [
+            "api-portfolio-management-guidelines"
+          ],
+          "ai-augmented-design-cycle": [
+            "api-portfolio-management-guidelines"
+          ]
+        }
       }
     ]
   }

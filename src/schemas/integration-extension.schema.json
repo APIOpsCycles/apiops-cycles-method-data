@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "slug",
+    "description",
+    "baseMethod",
+    "scope",
+    "principles",
+    "decisions",
+    "line",
+    "documentCanvasOrder",
+    "documentCanvasStations",
+    "stationOverlays",
+    "alternativeResources",
+    "criteria",
+    "architectureDecisionOptions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "slug": { "type": "string" },
+    "description": { "type": "string" },
+    "baseMethod": { "type": "string" },
+    "scope": {
+      "type": "object",
+      "required": ["appliesWhen", "outOfScope"],
+      "additionalProperties": false,
+      "properties": {
+        "appliesWhen": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "outOfScope": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "decisions": {
+      "type": "object",
+      "required": [
+        "newLine",
+        "additionalStations",
+        "alternativeResources",
+        "integrationSpecificCriteria",
+        "integrationSpecificWording"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "newLine": { "$ref": "#/definitions/decision" },
+        "additionalStations": { "$ref": "#/definitions/decision" },
+        "alternativeResources": { "$ref": "#/definitions/decision" },
+        "integrationSpecificCriteria": { "$ref": "#/definitions/decision" },
+        "integrationSpecificWording": { "$ref": "#/definitions/decision" }
+      }
+    },
+    "line": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "order",
+        "color",
+        "description",
+        "stations",
+        "stationIntent"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "order": { "type": "number" },
+        "color": { "type": "string" },
+        "description": { "type": "string" },
+        "stations": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "stationIntent": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["station", "intent"],
+            "additionalProperties": false,
+            "properties": {
+              "station": { "type": "string" },
+              "intent": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "documentCanvasOrder": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "documentCanvasStations": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "stationOverlays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["station", "title", "reuse", "alternativeResources", "wording"],
+        "additionalProperties": false,
+        "properties": {
+          "station": { "type": "string" },
+          "title": { "type": "string" },
+          "reuse": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "alternativeResources": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "wording": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    },
+    "alternativeResources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "category", "status", "replacesOrAdapts", "purpose"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "category": { "type": "string" },
+          "status": { "type": "string" },
+          "replacesOrAdapts": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "purpose": { "type": "string" }
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "appliesTo", "type", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "appliesTo": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "type": { "enum": ["entry", "exit"] },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "architectureDecisionOptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "useWhen"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "useWhen": { "type": "string" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "decision": {
+      "type": "object",
+      "required": ["needed", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "needed": { "type": "boolean" },
+        "id": { "type": "string" },
+        "reason": { "type": "string" }
+      }
+    }
+  }
+}

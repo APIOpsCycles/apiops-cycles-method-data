@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["cycles"],
+  "additionalProperties": false,
+  "properties": {
+    "cycles": {
+      "type": "object",
+      "required": ["title", "slug", "order", "description", "items"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "order": { "type": "number" },
+        "description": { "type": "string" },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/cycle" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "cycle": {
+      "type": "object",
+      "required": ["id", "title", "slug", "description", "audiences", "purpose", "stations"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "description": { "type": "string" },
+        "audiences": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "purpose": { "type": "string" },
+        "stations": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "stationLabels": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "stationDescriptions": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "recommendedResources": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "questionnaireResources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["station", "resource", "suggestedAnswerOwner"],
+            "additionalProperties": false,
+            "properties": {
+              "station": { "type": "string" },
+              "resource": { "type": "string" },
+              "suggestedAnswerOwner": { "type": "string" }
+            }
+          }
+        },
+        "confluenceTemplateSections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "description"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "title": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "overlays": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["station", "assistance", "humanValidation"],
+            "additionalProperties": false,
+            "properties": {
+              "station": { "type": "string" },
+              "assistance": { "type": "string" },
+              "humanValidation": { "type": "string" }
+            }
+          }
+        },
+        "entryCriteria": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exitCriteria": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
