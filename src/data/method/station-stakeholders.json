@@ -1040,5 +1040,205 @@
       "stakeholder": "support-operations-owner",
       "involvement": "consulted"
     }
+  ],
+  "integration-capability-strategy": [
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "business-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "domain-expert",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "customer-or-partner-representative",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "api-consumer-representative",
+      "involvement": "consulted"
+    },
+    {
+      "stakeholder": "platform-architect",
+      "involvement": "consulted"
+    }
+  ],
+  "integration-consumer-producer-experience": [
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-consumer-representative",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "domain-expert",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "support-operations-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "documentation-devrel-owner",
+      "involvement": "consulted"
+    },
+    {
+      "stakeholder": "platform-architect",
+      "involvement": "consulted"
+    }
+  ],
+  "integration-architecture-decision": [
+    {
+      "stakeholder": "platform-architect",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "domain-expert",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "security-specialist",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "compliance-legal-specialist",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "support-operations-owner",
+      "involvement": "consulted"
+    },
+    {
+      "stakeholder": "delivery-engineer",
+      "involvement": "consulted"
+    }
+  ],
+  "integration-solution-design": [
+    {
+      "stakeholder": "api-designer",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "domain-expert",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "api-consumer-representative",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "platform-architect",
+      "involvement": "consulted"
+    },
+    {
+      "stakeholder": "security-specialist",
+      "involvement": "consulted"
+    }
+  ],
+  "integration-delivery": [
+    {
+      "stakeholder": "delivery-engineer",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "api-designer",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "security-specialist",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "support-operations-owner",
+      "involvement": "consulted"
+    }
+  ],
+  "integration-readiness-audit": [
+    {
+      "stakeholder": "governance-owner",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "security-specialist",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "compliance-legal-specialist",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "support-operations-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "delivery-engineer",
+      "involvement": "consulted"
+    }
+  ],
+  "capability-publishing": [
+    {
+      "stakeholder": "documentation-devrel-owner",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "api-consumer-representative",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "support-operations-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "governance-owner",
+      "involvement": "consulted"
+    }
+  ],
+  "integration-monitoring-improvement": [
+    {
+      "stakeholder": "support-operations-owner",
+      "involvement": "lead"
+    },
+    {
+      "stakeholder": "api-product-owner",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "api-consumer-representative",
+      "involvement": "core"
+    },
+    {
+      "stakeholder": "platform-architect",
+      "involvement": "consulted"
+    },
+    {
+      "stakeholder": "governance-owner",
+      "involvement": "consulted"
+    }
   ]
 }

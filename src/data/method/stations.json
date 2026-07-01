@@ -1149,5 +1149,254 @@
         "apply_in_work": "station.budget-and-resource-management.apply_in_work"
       }
     ]
+  },
+  "integration-stations": {
+    "title": "group.integration-stations.title",
+    "slug": "integration-stations",
+    "description": "group.integration-stations.description",
+    "order": 3,
+    "icon": "hub-outline",
+    "items": [
+      {
+        "id": "integration-capability-strategy",
+        "title": "station.integration-capability-strategy.title",
+        "slug": "method/integration-capability-strategy",
+        "order": 101,
+        "icon": "strategy-outline",
+        "description": "station.integration-capability-strategy.description",
+        "why_it_matters": "station.integration-capability-strategy.why_it_matters",
+        "outcomes": [
+          "station.integration-capability-strategy.outcomes",
+          "station.integration-capability-strategy.outcomes.1",
+          "station.integration-capability-strategy.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-capability-strategy.how_it_works",
+            "resource": "customerJourneyCanvas"
+          },
+          {
+            "step": "station.integration-capability-strategy.how_it_works.1",
+            "resource": "domainCanvas"
+          },
+          {
+            "step": "station.integration-capability-strategy.how_it_works.2",
+            "resource": "capabilityValuePropositionCanvas"
+          },
+          {
+            "step": "station.integration-capability-strategy.how_it_works.3",
+            "resource": "capabilityBusinessModelCanvas"
+          }
+        ],
+        "apply_in_work": "station.integration-capability-strategy.apply_in_work"
+      },
+      {
+        "id": "integration-consumer-producer-experience",
+        "title": "station.integration-consumer-producer-experience.title",
+        "slug": "method/integration-consumer-producer-experience",
+        "order": 102,
+        "icon": "deployed-code-account-outline",
+        "description": "station.integration-consumer-producer-experience.description",
+        "why_it_matters": "station.integration-consumer-producer-experience.why_it_matters",
+        "outcomes": [
+          "station.integration-consumer-producer-experience.outcomes",
+          "station.integration-consumer-producer-experience.outcomes.1",
+          "station.integration-consumer-producer-experience.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-consumer-producer-experience.how_it_works",
+            "resource": "consumerExperienceRequirementsCanvas"
+          },
+          {
+            "step": "station.integration-consumer-producer-experience.how_it_works.1",
+            "resource": "api-onboarding-best-practices"
+          }
+        ],
+        "apply_in_work": "station.integration-consumer-producer-experience.apply_in_work"
+      },
+      {
+        "id": "integration-architecture-decision",
+        "title": "station.integration-architecture-decision.title",
+        "slug": "method/integration-architecture-decision",
+        "order": 103,
+        "icon": "code-blocks-outline",
+        "description": "station.integration-architecture-decision.description",
+        "why_it_matters": "station.integration-architecture-decision.why_it_matters",
+        "outcomes": [
+          "station.integration-architecture-decision.outcomes",
+          "station.integration-architecture-decision.outcomes.1",
+          "station.integration-architecture-decision.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-architecture-decision.how_it_works",
+            "resource": "businessImpactCanvas"
+          },
+          {
+            "step": "station.integration-architecture-decision.how_it_works.1",
+            "resource": "locationsCanvas"
+          },
+          {
+            "step": "station.integration-architecture-decision.how_it_works.2",
+            "resource": "capacityCanvas"
+          },
+          {
+            "step": "station.integration-architecture-decision.how_it_works.3",
+            "resource": "api-metrics-and-analytics"
+          }
+        ],
+        "apply_in_work": "station.integration-architecture-decision.apply_in_work"
+      },
+      {
+        "id": "integration-solution-design",
+        "title": "station.integration-solution-design.title",
+        "slug": "method/integration-solution-design",
+        "order": 104,
+        "icon": "draw-outline",
+        "description": "station.integration-solution-design.description",
+        "why_it_matters": "station.integration-solution-design.why_it_matters",
+        "outcomes": [
+          "station.integration-solution-design.outcomes",
+          "station.integration-solution-design.outcomes.1",
+          "station.integration-solution-design.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-solution-design.how_it_works",
+            "resource": "domainCanvas"
+          },
+          {
+            "step": "station.integration-solution-design.how_it_works.1",
+            "resource": "interactionCanvas"
+          },
+          {
+            "step": "station.integration-solution-design.how_it_works.2",
+            "resource": "restCanvas"
+          },
+          {
+            "step": "station.integration-solution-design.how_it_works.3",
+            "resource": "eventCanvas"
+          },
+          {
+            "step": "station.integration-solution-design.how_it_works.4",
+            "resource": "graphqlCanvas"
+          },
+          {
+            "step": "station.integration-solution-design.how_it_works.5",
+            "resource": "contract-first-design"
+          }
+        ],
+        "apply_in_work": "station.integration-solution-design.apply_in_work"
+      },
+      {
+        "id": "integration-delivery",
+        "title": "station.integration-delivery.title",
+        "slug": "method/integration-delivery",
+        "order": 105,
+        "icon": "rocket-launch-outline",
+        "description": "station.integration-delivery.description",
+        "why_it_matters": "station.integration-delivery.why_it_matters",
+        "outcomes": [
+          "station.integration-delivery.outcomes",
+          "station.integration-delivery.outcomes.1",
+          "station.integration-delivery.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-delivery.how_it_works",
+            "resource": "api-development-best-practices"
+          },
+          {
+            "step": "station.integration-delivery.how_it_works.1",
+            "resource": "api-testing-best-practices"
+          },
+          {
+            "step": "station.integration-delivery.how_it_works.2",
+            "resource": "apiops-CI-CD-for-apis"
+          },
+          {
+            "step": "station.integration-delivery.how_it_works.3",
+            "resource": "api-security-best-practices"
+          }
+        ],
+        "apply_in_work": "station.integration-delivery.apply_in_work"
+      },
+      {
+        "id": "integration-readiness-audit",
+        "title": "station.integration-readiness-audit.title",
+        "slug": "method/integration-readiness-audit",
+        "order": 106,
+        "icon": "fact-check-outline",
+        "description": "station.integration-readiness-audit.description",
+        "why_it_matters": "station.integration-readiness-audit.why_it_matters",
+        "outcomes": [
+          "station.integration-readiness-audit.outcomes",
+          "station.integration-readiness-audit.outcomes.1",
+          "station.integration-readiness-audit.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-readiness-audit.how_it_works",
+            "resource": "api-audit-checklist"
+          },
+          {
+            "step": "station.integration-readiness-audit.how_it_works.1",
+            "resource": "api-compliance-best-practices"
+          }
+        ],
+        "apply_in_work": "station.integration-readiness-audit.apply_in_work"
+      },
+      {
+        "id": "capability-publishing",
+        "title": "station.capability-publishing.title",
+        "slug": "method/capability-publishing",
+        "order": 107,
+        "icon": "publish-outline",
+        "description": "station.capability-publishing.description",
+        "why_it_matters": "station.capability-publishing.why_it_matters",
+        "outcomes": [
+          "station.capability-publishing.outcomes",
+          "station.capability-publishing.outcomes.1",
+          "station.capability-publishing.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-publishing.how_it_works",
+            "resource": "api-onboarding-best-practices"
+          },
+          {
+            "step": "station.capability-publishing.how_it_works.1",
+            "resource": "service-agreement-template"
+          }
+        ],
+        "apply_in_work": "station.capability-publishing.apply_in_work"
+      },
+      {
+        "id": "integration-monitoring-improvement",
+        "title": "station.integration-monitoring-improvement.title",
+        "slug": "method/integration-monitoring-improvement",
+        "order": 108,
+        "icon": "monitoring-outline",
+        "description": "station.integration-monitoring-improvement.description",
+        "why_it_matters": "station.integration-monitoring-improvement.why_it_matters",
+        "outcomes": [
+          "station.integration-monitoring-improvement.outcomes",
+          "station.integration-monitoring-improvement.outcomes.1",
+          "station.integration-monitoring-improvement.outcomes.2"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.integration-monitoring-improvement.how_it_works",
+            "resource": "api-metrics-and-analytics"
+          },
+          {
+            "step": "station.integration-monitoring-improvement.how_it_works.1",
+            "resource": "api-community-engagement-strategies"
+          }
+        ],
+        "apply_in_work": "station.integration-monitoring-improvement.apply_in_work"
+      }
+    ]
   }
 }

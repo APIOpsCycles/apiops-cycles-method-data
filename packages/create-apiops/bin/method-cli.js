@@ -24,6 +24,7 @@ function printUsage() {
   node packages/create-apiops/bin/method-cli.js start [--locale <locale>] [--default-locale <locale>] [--json] [--list] [--answers <yes,no,...>] [--next-action <resources|canvases|exit>]
   node packages/create-apiops/bin/method-cli.js resources --station <station-id> [--locale <locale>] [--style <style>] [--json] [--list] [--step-actions <details,next,...>]
   node packages/create-apiops/bin/method-cli.js generate-canvases [--station <station-id> | --stations <ids> | --preset new-api] [--locale <locale>] [--style <style>] [--output <dir>] [--force] [--json]
+  node packages/create-apiops/bin/method-cli.js document [--extension integration-design] [--format confluence-wiki|markdown] [--locale <locale>] [--title <title>] [--output <file>]
 
 Examples:
   node packages/create-apiops/bin/method-cli.js start --locale en
@@ -31,6 +32,7 @@ Examples:
   node packages/create-apiops/bin/method-cli.js start --locale en --answers yes,no,yes --next-action resources
   node packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale en
   node packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style REST --output ./specs/canvases
+  node packages/create-apiops/bin/method-cli.js document --extension integration-design --format confluence-wiki --output ./specs/integration-design.confluence
 `);
 }
 
@@ -724,6 +726,35 @@ function printGeneratedCanvasText(result) {
   }
 }
 
+function runDocumentCommand(options) {
+  const extension = options.extension || "integration-design";
+  const format = options.format || "confluence-wiki";
+  if (!["integration-design", "integration"].includes(extension)) {
+    fail(`Unsupported document extension: ${extension}`);
+  }
+  if (!["confluence-wiki", "markdown"].includes(format)) {
+    fail(`Unsupported document format: ${format}`);
+  }
+
+  const renderer = format === "markdown"
+    ? methodEngine.renderIntegrationDesignMarkdown
+    : methodEngine.renderIntegrationDesignConfluenceWiki;
+  const content = renderer({
+    locale: options.locale || methodEngine.DEFAULT_LOCALE,
+    title: options.title
+  });
+
+  if (!options.output) {
+    console.log(content);
+    return;
+  }
+
+  const outputPath = path.resolve(process.cwd(), options.output);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, content);
+  console.log(`${format} document: ${outputPath}`);
+}
+
 export async function main() {
   const { command, options } = parseArgs(process.argv.slice(2));
 
@@ -780,6 +811,11 @@ export async function main() {
       return;
     }
     printGeneratedCanvasText(result);
+    return;
+  }
+
+  if (command === "document") {
+    runDocumentCommand(options);
     return;
   }
 

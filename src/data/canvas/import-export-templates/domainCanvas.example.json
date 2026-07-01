@@ -1,0 +1,185 @@
+{
+  "templateId": "domainCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.821Z"
+  },
+  "sections": [
+    {
+      "sectionId": "selectedCustomerJourneySteps",
+      "stickyNotes": [
+        {
+          "content": "Search catalog",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Filter results",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Compare options",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Open product",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Add variant to cart",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "coreEntitiesAndBusinessMeaning",
+      "stickyNotes": [
+        {
+          "content": "Product: merchandised offering",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Variant: purchasable option",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Category: browse grouping",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "SearchQuery: shopper intent",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Facet: filterable dimension",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "attributesAndBusinessImportance",
+      "stickyNotes": [
+        {
+          "content": "Product: id, slug, name, status",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Variant: sku, options, active",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Category: id, name, parent",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "SearchQuery: term, filters, market",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Facet: name, values, counts",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "relationshipsBetweenEntities",
+      "stickyNotes": [
+        {
+          "content": "SearchQuery returns Products",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Product has many Variants",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Product belongs to Categories",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Facet refines SearchQuery",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Variant belongs to Product",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "businessComplianceAndIntegrityRules",
+      "stickyNotes": [
+        {
+          "content": "Only published Products appear",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Only active Variants selectable",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Product ids stay stable",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Search ranking should be explainable",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "securityAndPrivacyConsiderations",
+      "stickyNotes": [
+        {
+          "content": "Catalog data is public read",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "No PII in SearchQuery",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Internal fields stay hidden",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Admin writes stay separate",
+          "size": 80,
+          "color": "#FFAFAF"
+        }
+      ]
+    }
+  ]
+}

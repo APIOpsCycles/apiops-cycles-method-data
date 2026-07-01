@@ -1,0 +1,225 @@
+{
+  "templateId": "locationsCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.831Z"
+  },
+  "sections": [
+    {
+      "sectionId": "locationGroups",
+      "stickyNotes": [
+        {
+          "content": "Public internet consumers",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Edge / DMZ zone",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Internal API platform zone",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Internal source systems zone",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationGroupCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Untrusted external traffic",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Public entry, filtered access",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Trusted internal services",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Restricted back-office access",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "locations",
+      "stickyNotes": [
+        {
+          "content": "Browser / mobile app",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "CDN / API gateway",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Search API / cluster",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "PIM / catalog system",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Media storage / CDN",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Public client environment",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Internet-facing ingress",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Regional read service",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "System of record",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Cached media delivery",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationDistances",
+      "stickyNotes": [
+        {
+          "content": "Client to edge over internet",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Edge to API over trusted network",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "API to search in-region",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "API to PIM cross-zone",
+          "size": 80,
+          "color": "#FFAFAF"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationDistanceCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Internet adds variable latency",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Cross-zone calls need control",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Search path must stay low-latency",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Source reads should be minimized",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationEndpoints",
+      "stickyNotes": [
+        {
+          "content": "Browser clients",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Mobile apps",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Partner storefront backends",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "CDN / API gateway",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "locationEndpointCharacteristics",
+      "stickyNotes": [
+        {
+          "content": "Public HTTPS access",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Untrusted client traffic",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Partner auth for backends",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Rate limited at edge",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    }
+  ]
+}

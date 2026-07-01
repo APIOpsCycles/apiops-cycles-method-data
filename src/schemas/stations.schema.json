@@ -60,6 +60,14 @@
       }
     },
     "sub-stations": {
+      "$ref": "#/definitions/stationGroup"
+    },
+    "integration-stations": {
+      "$ref": "#/definitions/stationGroup"
+    }
+  },
+  "definitions": {
+    "stationGroup": {
       "type": "object",
       "required": ["title", "slug", "order", "description", "items"],
       "additionalProperties": false,

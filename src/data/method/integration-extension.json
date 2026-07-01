@@ -1,0 +1,563 @@
+{
+  "id": "integration-design-extension",
+  "title": "Integration design extension",
+  "slug": "integration-design-extension",
+  "description": "Identifies where an integration-design journey diverges from the core API product method while reusing shared product, platform, design, delivery, publishing, and improvement concepts.",
+  "baseMethod": "core-api-method",
+  "scope": {
+    "appliesWhen": [
+      "The integration need is known, but API is not yet the decided implementation style.",
+      "The team needs technology-agnostic requirements before choosing APIs, events, files, streams, data products, or direct system integration.",
+      "The outcome should still favor reusable, discoverable, governed capabilities rather than one-off point-to-point connections."
+    ],
+    "outOfScope": [
+      "Replacing the core API method for confirmed API products.",
+      "Adding technology-specific design canvases before the integration style decision is justified by requirements."
+    ]
+  },
+  "principles": [
+    {
+      "id": "technology-agnostic-first",
+      "title": "Stay technology agnostic until requirements justify an architecture choice",
+      "description": "Early canvases should describe capability, consumers, value, data, events, volumes, controls, and service expectations without assuming REST, events, files, data products, or another integration mechanism."
+    },
+    {
+      "id": "reusable-capabilities",
+      "title": "Design reusable integration capabilities",
+      "description": "The extension should keep the product-thinking strengths of the API method: clear consumers, value proposition, ownership, lifecycle, discoverability, support, metrics, and improvement."
+    },
+    {
+      "id": "branch-late",
+      "title": "Branch into API-specific design only after the integration style decision",
+      "description": "REST, event, GraphQL, file, stream, data product, and direct integration design resources should be selected after requirements and constraints indicate the right architecture pattern."
+    }
+  ],
+  "decisions": {
+    "newLine": {
+      "needed": true,
+      "id": "integration-design-line",
+      "reason": "The journey has a distinct technology-agnostic discovery and architecture-decision path before it may branch into API-specific or non-API design resources."
+    },
+    "additionalStations": {
+      "needed": false,
+      "reason": "Existing core stations cover the lifecycle well. The divergence is in station intent, resource selection, wording, and criteria, not in a fundamentally new station sequence."
+    },
+    "alternativeResources": {
+      "needed": true,
+      "reason": "Several existing canvases carry API-specific naming. Integration discovery needs technology-agnostic equivalents while preserving the same structure and product-thinking intent."
+    },
+    "integrationSpecificCriteria": {
+      "needed": true,
+      "reason": "Readiness should include architecture-choice evidence, capability reuse, producer and consumer commitments, operability, and data movement constraints that are broader than API readiness."
+    },
+    "integrationSpecificWording": {
+      "needed": true,
+      "reason": "Existing canvases can stay reusable if their labels and instructions are overlaid with capability, consumer, interaction, contract, and service wording instead of API-only wording."
+    }
+  },
+  "line": {
+    "id": "integration-design-line",
+    "title": "Integration Design Line",
+    "slug": "integration-design-line",
+    "order": 3,
+    "color": "#2F80ED",
+    "description": "A technology-agnostic route from integration opportunity and reusable capability definition to architecture choice, solution design, delivery, audit, publishing, and improvement.",
+    "stations": [
+      "integration-capability-strategy",
+      "integration-consumer-producer-experience",
+      "integration-architecture-decision",
+      "integration-solution-design",
+      "integration-delivery",
+      "integration-readiness-audit",
+      "capability-publishing",
+      "integration-monitoring-improvement"
+    ],
+    "stationIntent": [
+      {
+        "station": "integration-capability-strategy",
+        "intent": "Frame the integration opportunity as a reusable business or ecosystem capability, not as a preselected implementation style."
+      },
+      {
+        "station": "integration-consumer-producer-experience",
+        "intent": "Describe consumers, producer responsibilities, journeys, pains, gains, service expectations, and adoption paths without assuming the integration technology."
+      },
+      {
+        "station": "integration-architecture-decision",
+        "intent": "Use business impact, locations, capacity, security, privacy, governance, and operability evidence to decide the appropriate integration architecture."
+      },
+      {
+        "station": "integration-solution-design",
+        "intent": "After architecture choice, branch into the correct contract and interaction design resources for APIs, events, files, streams, data products, or other selected patterns."
+      },
+      {
+        "station": "integration-delivery",
+        "intent": "Deliver the selected integration mechanism with lifecycle automation, testing, security, versioning, and environment controls appropriate to the chosen pattern."
+      },
+      {
+        "station": "integration-readiness-audit",
+        "intent": "Audit the capability contract, data movement, controls, observability, and lifecycle readiness, not only API specification quality."
+      },
+      {
+        "station": "capability-publishing",
+        "intent": "Publish discoverable capability information, onboarding paths, ownership, support, and service expectations for reuse."
+      },
+      {
+        "station": "integration-monitoring-improvement",
+        "intent": "Monitor usage, reliability, data quality, consumer outcomes, operational cost, and reuse opportunities across integration styles."
+      }
+    ]
+  },
+  "documentCanvasOrder": [
+    "customerJourneyCanvas",
+    "domainCanvas",
+    "capabilityValuePropositionCanvas",
+    "capabilityBusinessModelCanvas",
+    "consumerExperienceRequirementsCanvas",
+    "businessImpactCanvas",
+    "locationsCanvas",
+    "capacityCanvas"
+  ],
+  "documentCanvasStations": {
+    "customerJourneyCanvas": "integration-capability-strategy",
+    "domainCanvas": "integration-capability-strategy",
+    "capabilityValuePropositionCanvas": "integration-capability-strategy",
+    "capabilityBusinessModelCanvas": "integration-capability-strategy",
+    "consumerExperienceRequirementsCanvas": "integration-consumer-producer-experience",
+    "businessImpactCanvas": "integration-architecture-decision",
+    "locationsCanvas": "integration-architecture-decision",
+    "capacityCanvas": "integration-architecture-decision"
+  },
+  "stationOverlays": [
+    {
+      "station": "integration-capability-strategy",
+      "title": "Integration capability strategy",
+      "reuse": [
+        "customerJourneyCanvas",
+        "domainCanvas",
+        "businessImpactCanvas"
+      ],
+      "alternativeResources": [
+        "capabilityValuePropositionCanvas",
+        "capabilityBusinessModelCanvas"
+      ],
+      "wording": {
+        "api": "integration capability",
+        "api product": "reusable capability",
+        "developer": "consumer or integrating team",
+        "API consumer": "capability consumer"
+      }
+    },
+    {
+      "station": "integration-consumer-producer-experience",
+      "title": "Integration consumer and producer experience",
+      "reuse": [
+        "customerJourneyCanvas",
+        "api-onboarding-best-practices"
+      ],
+      "alternativeResources": [
+        "consumerExperienceRequirementsCanvas",
+        "capabilityOnboardingGuidelines"
+      ],
+      "wording": {
+        "API consumer": "capability consumer",
+        "API provider": "capability owner or producer",
+        "onboarding": "integration onboarding"
+      }
+    },
+    {
+      "station": "integration-architecture-decision",
+      "title": "Integration architecture decision",
+      "reuse": [
+        "businessImpactCanvas",
+        "locationsCanvas",
+        "capacityCanvas",
+        "api-metrics-and-analytics",
+        "data-privacy-guidelines",
+        "api-security-best-practices"
+      ],
+      "alternativeResources": [
+        "integrationStyleDecisionRecord",
+        "integrationArchitectureOptionsCanvas",
+        "dataMovementAndOwnershipCanvas"
+      ],
+      "wording": {
+        "API platform": "integration platform or enabling platform",
+        "endpoint": "integration access point",
+        "traffic": "demand, throughput, events, batches, or data volume"
+      }
+    },
+    {
+      "station": "integration-solution-design",
+      "title": "Integration solution design",
+      "reuse": [
+        "domainCanvas",
+        "interactionCanvas",
+        "restCanvas",
+        "eventCanvas",
+        "graphqlCanvas",
+        "contract-first-design"
+      ],
+      "alternativeResources": [
+        "capabilityContractCanvas",
+        "fileExchangeCanvas",
+        "dataProductCanvas",
+        "streamingIntegrationCanvas"
+      ],
+      "wording": {
+        "API design": "integration solution design",
+        "API contract": "capability contract",
+        "resource": "business object, event, dataset, file, or operation"
+      }
+    },
+    {
+      "station": "integration-delivery",
+      "title": "Integration delivery",
+      "reuse": [
+        "api-development-best-practices",
+        "api-testing-best-practices",
+        "apiops-CI-CD-for-apis",
+        "api-security-best-practices"
+      ],
+      "alternativeResources": [
+        "integrationDeliveryChecklist",
+        "integrationTestStrategy"
+      ],
+      "wording": {
+        "API pipeline": "integration delivery pipeline",
+        "contract test": "capability contract and data movement test"
+      }
+    },
+    {
+      "station": "integration-readiness-audit",
+      "title": "Integration readiness audit",
+      "reuse": [
+        "api-audit-checklist",
+        "api-compliance-best-practices"
+      ],
+      "alternativeResources": [
+        "integrationReadinessChecklist"
+      ],
+      "wording": {
+        "API audit": "integration readiness audit",
+        "API description": "capability description and contract"
+      }
+    },
+    {
+      "station": "capability-publishing",
+      "title": "Capability publishing",
+      "reuse": [
+        "apiops-CI-CD-for-apis",
+        "api-onboarding-best-practices",
+        "service-agreement-template"
+      ],
+      "alternativeResources": [
+        "capabilityCatalogPublishingGuidelines"
+      ],
+      "wording": {
+        "developer portal": "capability catalog or integration catalog",
+        "API documentation": "capability documentation"
+      }
+    },
+    {
+      "station": "integration-monitoring-improvement",
+      "title": "Integration monitoring and improvement",
+      "reuse": [
+        "api-metrics-and-analytics",
+        "api-community-engagement-strategies"
+      ],
+      "alternativeResources": [
+        "integrationObservabilityGuidelines",
+        "capabilityReuseMetrics"
+      ],
+      "wording": {
+        "API metrics": "capability and integration metrics",
+        "consumer adoption": "consumer adoption and reuse"
+      }
+    }
+  ],
+  "alternativeResources": [
+    {
+      "id": "integrationOpportunityCanvas",
+      "title": "Integration Opportunity Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "apiValuePropositionCanvas"
+      ],
+      "purpose": "Capture business need, consumer outcomes, producer capabilities, constraints, and reuse potential before selecting an integration style."
+    },
+    {
+      "id": "capabilityValuePropositionCanvas",
+      "title": "Capability Value Proposition Canvas",
+      "category": "canvas",
+      "status": "implemented",
+      "replacesOrAdapts": [
+        "apiValuePropositionCanvas"
+      ],
+      "purpose": "Describe jobs, gains, pains, and reusable capability features without naming the delivery technology."
+    },
+    {
+      "id": "capabilityBusinessModelCanvas",
+      "title": "Capability Business Model Canvas",
+      "category": "canvas",
+      "status": "implemented",
+      "replacesOrAdapts": [
+        "apiBusinessModelCanvas"
+      ],
+      "purpose": "Model ownership, funding, support, value, costs, channels, and consumers for a reusable integration capability."
+    },
+    {
+      "id": "consumerExperienceRequirementsCanvas",
+      "title": "Consumer Experience Requirements Canvas",
+      "category": "canvas",
+      "status": "implemented",
+      "replacesOrAdapts": [
+        "apiValuePropositionCanvas"
+      ],
+      "purpose": "Capture consumer experience and non-functional requirements that guide the later choice between APIs, events, files, streams, data products, or another integration style."
+    },
+    {
+      "id": "integrationStyleDecisionRecord",
+      "title": "Integration Style Decision Record",
+      "category": "guideline",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-design-principles"
+      ],
+      "purpose": "Document why the selected pattern, such as API, event, file, stream, data product, or direct integration, best fits the requirements and constraints."
+    },
+    {
+      "id": "capabilityContractCanvas",
+      "title": "Capability Contract Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "restCanvas",
+        "eventCanvas",
+        "graphqlCanvas"
+      ],
+      "purpose": "Define the service contract, data contract, interaction expectations, lifecycle promises, and consumer obligations independent of implementation style."
+    },
+    {
+      "id": "capabilityConsumerJourneyCanvas",
+      "title": "Capability Consumer Journey Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "customerJourneyCanvas"
+      ],
+      "purpose": "Map the consumer and producer experience for discovering, requesting, integrating, operating, and improving a reusable capability."
+    },
+    {
+      "id": "capabilityOnboardingGuidelines",
+      "title": "Capability Onboarding Guidelines",
+      "category": "guideline",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-onboarding-best-practices"
+      ],
+      "purpose": "Define onboarding steps that work for APIs, events, files, data products, streams, and other approved integration mechanisms."
+    },
+    {
+      "id": "integrationArchitectureOptionsCanvas",
+      "title": "Integration Architecture Options Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "businessImpactCanvas",
+        "locationsCanvas",
+        "capacityCanvas"
+      ],
+      "purpose": "Compare viable integration styles against requirements, constraints, risks, platform fit, and lifecycle implications."
+    },
+    {
+      "id": "dataMovementAndOwnershipCanvas",
+      "title": "Data Movement and Ownership Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "domainCanvas",
+        "locationsCanvas"
+      ],
+      "purpose": "Capture data ownership, movement, retention, quality, consistency, privacy, and lineage requirements before selecting the integration pattern."
+    },
+    {
+      "id": "fileExchangeCanvas",
+      "title": "File Exchange Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "interactionCanvas"
+      ],
+      "purpose": "Design file-based contracts, schedules, formats, controls, acknowledgements, and recovery expectations when file exchange is the chosen pattern."
+    },
+    {
+      "id": "dataProductCanvas",
+      "title": "Data Product Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "domainCanvas"
+      ],
+      "purpose": "Design discoverable, owned, governed data products with quality, lineage, lifecycle, and consumer expectations."
+    },
+    {
+      "id": "streamingIntegrationCanvas",
+      "title": "Streaming Integration Canvas",
+      "category": "canvas",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "eventCanvas"
+      ],
+      "purpose": "Design continuous stream contracts, partitioning, ordering, retention, replay, schema evolution, and consumer obligations."
+    },
+    {
+      "id": "integrationDeliveryChecklist",
+      "title": "Integration Delivery Checklist",
+      "category": "checklist",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-development-best-practices",
+        "apiops-CI-CD-for-apis"
+      ],
+      "purpose": "Check delivery readiness across selected integration styles, environments, automation, configuration, versioning, and rollback."
+    },
+    {
+      "id": "integrationTestStrategy",
+      "title": "Integration Test Strategy",
+      "category": "guideline",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-testing-best-practices"
+      ],
+      "purpose": "Define contract, compatibility, data quality, security, performance, resilience, replay, and end-to-end testing for the chosen integration style."
+    },
+    {
+      "id": "integrationReadinessChecklist",
+      "title": "Integration Readiness Checklist",
+      "category": "checklist",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-audit-checklist"
+      ],
+      "purpose": "Audit capability contract, governance, security, privacy, support, observability, lifecycle, and publishing readiness before release."
+    },
+    {
+      "id": "capabilityCatalogPublishingGuidelines",
+      "title": "Capability Catalog Publishing Guidelines",
+      "category": "guideline",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-onboarding-best-practices"
+      ],
+      "purpose": "Publish reusable integration capabilities with ownership, documentation, access, onboarding, service expectations, and lifecycle status."
+    },
+    {
+      "id": "integrationObservabilityGuidelines",
+      "title": "Integration Observability Guidelines",
+      "category": "guideline",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-metrics-and-analytics"
+      ],
+      "purpose": "Define metrics, logs, traces, data quality checks, replay visibility, incident ownership, and improvement signals for integrations."
+    },
+    {
+      "id": "capabilityReuseMetrics",
+      "title": "Capability Reuse Metrics",
+      "category": "guideline",
+      "status": "proposed",
+      "replacesOrAdapts": [
+        "api-metrics-and-analytics"
+      ],
+      "purpose": "Measure reuse, consumer value, operational cost, onboarding speed, lifecycle health, and improvement opportunities for reusable capabilities."
+    }
+  ],
+  "criteria": [
+    {
+      "id": "integration-need-documented",
+      "appliesTo": [
+        "integration-capability-strategy"
+      ],
+      "type": "entry",
+      "description": "The business need, consumers, producers, outcomes, candidate data or process scope, and reuse potential are documented without assuming the integration technology."
+    },
+    {
+      "id": "capability-reuse-potential-validated",
+      "appliesTo": [
+        "integration-capability-strategy",
+        "integration-consumer-producer-experience"
+      ],
+      "type": "exit",
+      "description": "The capability has plausible reuse beyond a single point-to-point connection, or the reason for a one-off exception is explicit."
+    },
+    {
+      "id": "integration-style-decision-documented",
+      "appliesTo": [
+        "integration-architecture-decision"
+      ],
+      "type": "exit",
+      "description": "The selected architecture style is justified against consumer experience, producer constraints, data ownership, latency, volume, consistency, security, privacy, operability, cost, and governance."
+    },
+    {
+      "id": "capability-contract-defined",
+      "appliesTo": [
+        "integration-solution-design",
+        "integration-delivery",
+        "integration-readiness-audit"
+      ],
+      "type": "exit",
+      "description": "The capability contract describes interactions, data, events or files where relevant, validation rules, service expectations, ownership, versioning, and consumer obligations."
+    },
+    {
+      "id": "integration-operability-defined",
+      "appliesTo": [
+        "integration-delivery",
+        "integration-readiness-audit",
+        "integration-monitoring-improvement"
+      ],
+      "type": "exit",
+      "description": "Monitoring, alerting, incident ownership, replay or recovery, data quality checks, support model, and improvement metrics are defined for the chosen integration style."
+    },
+    {
+      "id": "capability-catalog-ready",
+      "appliesTo": [
+        "capability-publishing"
+      ],
+      "type": "exit",
+      "description": "Reusable capability documentation, onboarding guidance, support contacts, service expectations, lifecycle status, and access request paths are ready for discovery."
+    }
+  ],
+  "architectureDecisionOptions": [
+    {
+      "id": "api",
+      "title": "API",
+      "useWhen": "Consumers need request-response or query access, clear contracts, interactive workflows, ecosystem onboarding, or productized self-service consumption."
+    },
+    {
+      "id": "event",
+      "title": "Event",
+      "useWhen": "Consumers react to business facts asynchronously, producers should publish state changes once, and loose coupling or fan-out is important."
+    },
+    {
+      "id": "file",
+      "title": "File exchange",
+      "useWhen": "Batch movement, partner constraints, legacy tooling, or reconciliation workflows make file delivery the appropriate contract."
+    },
+    {
+      "id": "data-product",
+      "title": "Data product",
+      "useWhen": "The primary outcome is trusted analytical or operational data consumption with ownership, quality, lineage, and discoverability expectations."
+    },
+    {
+      "id": "stream",
+      "title": "Stream",
+      "useWhen": "High-volume continuous data movement, low-latency processing, or durable ordered event streams are central requirements."
+    },
+    {
+      "id": "direct-integration",
+      "title": "Direct integration",
+      "useWhen": "The integration is intentionally local, constrained, low reuse, or temporary, and the exception from reusable capability design is documented."
+    }
+  ]
+}

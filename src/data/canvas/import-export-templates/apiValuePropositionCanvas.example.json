@@ -1,0 +1,125 @@
+{
+  "templateId": "apiValuePropositionCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.824Z"
+  },
+  "sections": [
+    {
+      "sectionId": "tasks",
+      "stickyNotes": [
+        {
+          "content": "Search catalog",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Filter results",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Open product",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Check price and stock (out of scope)",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Add variant to cart",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "gainEnablingFeatures",
+      "stickyNotes": [
+        {
+          "content": "Fast full-text search",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Rich facets and filters",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Relevant ranking",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Market-aware variants",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Cached and resizable images",
+          "size": 80,
+          "color": "#C0EB6A"
+        }
+      ]
+    },
+    {
+      "sectionId": "painRelievingFeatures",
+      "stickyNotes": [
+        {
+          "content": "Hide stale or unpublished products",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Keep filters simple",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Return relevant results",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Return consistent slugs and ids",
+          "size": 80,
+          "color": "#C0EB6A"
+        }
+      ]
+    },
+    {
+      "sectionId": "apiProducts",
+      "stickyNotes": [
+        {
+          "content": "Product Search",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Product Detail",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Category Browse",
+          "size": 80, 
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Facet and Filter",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    }
+  ]
+}

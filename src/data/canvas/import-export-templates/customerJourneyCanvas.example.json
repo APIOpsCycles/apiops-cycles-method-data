@@ -1,0 +1,155 @@
+{
+  "templateId": "customerJourneyCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.816Z"
+  },
+  "sections": [
+    {
+      "sectionId": "customerDiscoversNeed",
+      "stickyNotes": [
+        {
+          "content": "Need to find the right product",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "persona",
+      "stickyNotes": [
+        {
+          "content": "Mobile shopper comparing options",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Wants quick, confident choice",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "pains",
+      "stickyNotes": [
+        {
+          "content": "Too many irrelevant results",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Filters are hard to understand",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Price or stock looks stale",
+          "size": 80,
+          "color": "#FFAFAF"
+        }
+      ]
+    },
+    {
+      "sectionId": "journeySteps",
+      "stickyNotes": [
+        {
+          "content": "Search catalog",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Filter results",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Compare options",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Open product",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Add variant to cart",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "customerNeedIsResolved",
+      "stickyNotes": [
+        {
+          "content": "Find the right product fast",
+          "size": 80,
+          "color": "#C0EB6A"
+        }
+      ]
+    },
+    {
+      "sectionId": "gains",
+      "stickyNotes": [
+        {
+          "content": "Relevant results quickly",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Easy comparison on mobile",
+          "size": 80,
+          "color": "#C0EB6A"
+        },
+        {
+          "content": "Confident variant choice",
+          "size": 80,
+          "color": "#C0EB6A"
+        }
+      ]
+    },
+    {
+      "sectionId": "inputsOutputs",
+      "stickyNotes": [
+        {
+          "content": "Inputs: need, keyword, filters",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Outputs: options, detail, choice",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    },
+    {
+      "sectionId": "interactionProcessingRules",
+      "stickyNotes": [
+        {
+          "content": "Show relevant results first",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Keep filters simple",
+          "size": 80,
+          "color": "#DFDDC5"
+        },
+        {
+          "content": "Hide unavailable options",
+          "size": 80,
+          "color": "#DFDDC5"
+        }
+      ]
+    }
+  ]
+}

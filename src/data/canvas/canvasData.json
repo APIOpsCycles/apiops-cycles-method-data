@@ -568,5 +568,170 @@
         "fillOrder": 10
       }
     ]
+  },
+  "capabilityValuePropositionCanvas": {
+    "id": "capabilityValuePropositionCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": ["Osaango Ltd"],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "consumerTasks",
+        "gridPosition": { "column": 0, "row": 0, "colSpan": 4, "rowSpan": 1 },
+        "fillOrder": 1,
+        "highlight": true,
+        "journeySteps": true
+      },
+      {
+        "id": "gainEnablingCapabilities",
+        "gridPosition": { "column": 0, "row": 1, "colSpan": 2, "rowSpan": 1 },
+        "fillOrder": 2
+      },
+      {
+        "id": "painRelievingCapabilities",
+        "gridPosition": { "column": 2, "row": 1, "colSpan": 2, "rowSpan": 1 },
+        "fillOrder": 3
+      },
+      {
+        "id": "reusableCapabilities",
+        "gridPosition": { "column": 0, "row": 2, "colSpan": 4, "rowSpan": 1 },
+        "fillOrder": 4
+      }
+    ]
+  },
+  "capabilityBusinessModelCanvas": {
+    "id": "capabilityBusinessModelCanvas",
+    "layout": {
+      "columns": 5,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": ["Osaango Ltd"],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "keyPartners",
+        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "fillOrder": 7
+      },
+      {
+        "id": "keyActivities",
+        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 6
+      },
+      {
+        "id": "keyResources",
+        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 5
+      },
+      {
+        "id": "capabilityValueProposition",
+        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "consumerEngagement",
+        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 3
+      },
+      {
+        "id": "channels",
+        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 4
+      },
+      {
+        "id": "capabilityConsumerSegments",
+        "gridPosition": { "column": 4, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "fillOrder": 2
+      },
+      {
+        "id": "costs",
+        "gridPosition": { "column": 0, "row": 2, "colSpan": 2.5, "rowSpan": 1 },
+        "fillOrder": 9
+      },
+      {
+        "id": "benefits",
+        "gridPosition": { "column": 2.5, "row": 2, "colSpan": 2.5, "rowSpan": 1 },
+        "fillOrder": 8
+      }
+    ]
+  },
+  "consumerExperienceRequirementsCanvas": {
+    "id": "consumerExperienceRequirementsCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": ["Osaango Ltd"],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "consumerGoals",
+        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "availabilityAndTimeliness",
+        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 2
+      },
+      {
+        "id": "volumeAndPerformance",
+        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 3
+      },
+      {
+        "id": "dataQualityAndConsistency",
+        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 4
+      },
+      {
+        "id": "securityPrivacyAndCompliance",
+        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 5
+      },
+      {
+        "id": "onboardingAndAccess",
+        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 6
+      },
+      {
+        "id": "changeAndVersioning",
+        "gridPosition": { "column": 2, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 7
+      },
+      {
+        "id": "observabilityAndSupport",
+        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "fillOrder": 8
+      },
+      {
+        "id": "recoveryAndContinuity",
+        "gridPosition": { "column": 0, "row": 2, "colSpan": 2, "rowSpan": 1 },
+        "fillOrder": 9
+      },
+      {
+        "id": "architectureImplications",
+        "gridPosition": { "column": 2, "row": 2, "colSpan": 2, "rowSpan": 1 },
+        "fillOrder": 10,
+        "highlight": true
+      }
+    ]
   }
 }

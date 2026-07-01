@@ -73,6 +73,35 @@ export const CANVAS_SECTION_NOTE_INTENTS = Object.freeze({
     painRelievingFeatures: "benefit",
     apiProducts: "neutral"
   },
+  capabilityValuePropositionCanvas: {
+    consumerTasks: "task",
+    gainEnablingCapabilities: "benefit",
+    painRelievingCapabilities: "benefit",
+    reusableCapabilities: "neutral"
+  },
+  capabilityBusinessModelCanvas: {
+    keyPartners: "neutral",
+    keyActivities: "task",
+    keyResources: "neutral",
+    capabilityValueProposition: "benefit",
+    consumerEngagement: "neutral",
+    channels: "task",
+    capabilityConsumerSegments: "neutral",
+    costs: "negative",
+    benefits: "benefit"
+  },
+  consumerExperienceRequirementsCanvas: {
+    consumerGoals: "benefit",
+    availabilityAndTimeliness: "neutral",
+    volumeAndPerformance: "neutral",
+    dataQualityAndConsistency: "neutral",
+    securityPrivacyAndCompliance: "negative",
+    onboardingAndAccess: "task",
+    changeAndVersioning: "negative",
+    observabilityAndSupport: "task",
+    recoveryAndContinuity: "task",
+    architectureImplications: "neutral"
+  },
   businessImpactCanvas: {
     availabilityRisks: "negative",
     securityRisks: "negative",
@@ -237,10 +266,8 @@ export function getCoreStations() {
 
 export function getStations() {
   const stations = readJson(resolveMethodFile("stations.json"));
-  return [
-    ...((stations["core-stations"] && stations["core-stations"].items) || []),
-    ...((stations["sub-stations"] && stations["sub-stations"].items) || [])
-  ]
+  return Object.values(stations)
+    .flatMap((group) => group.items || [])
     .slice()
     .sort((left, right) => left.order - right.order);
 }
@@ -280,6 +307,10 @@ export function getStationCriteriaMap() {
   return readJson(resolveMethodFile("station-criteria.json"));
 }
 
+export function getIntegrationExtension() {
+  return readJson(resolveMethodFile("integration-extension.json"));
+}
+
 export function getStakeholders() {
   return readJson(resolveMethodFile("stakeholders.json")).stakeholders || [];
 }
@@ -290,6 +321,10 @@ export function getStationStakeholderMap() {
 
 export function getResources() {
   return readJson(resolveMethodFile("resources.json")).resources || [];
+}
+
+export function getLines() {
+  return readJson(resolveMethodFile("lines.json")).lines?.items || [];
 }
 
 export function normalizeResourceId(resourceId) {
@@ -705,6 +740,479 @@ export function generateCanvasForStationResource(stationId, resourceId, locale =
 
 export function getCanvasCreatorUrl(canvasId, locale = DEFAULT_LOCALE) {
   return `${CANVAS_CREATOR_BASE_URL}?canvas=${encodeURIComponent(canvasId)}&locale=${encodeURIComponent(locale)}`;
+}
+
+function formatMarkdownCell(value) {
+  return String(value || "")
+    .replace(/\r?\n/g, " ")
+    .trim();
+}
+
+function formatGuidanceList(values) {
+  return values
+    .map((value) => formatMarkdownCell(value).replace(/[.;:]+$/g, ""))
+    .filter(Boolean)
+    .join("; ");
+}
+
+function isPlaceholderExampleNote(content) {
+  const normalized = String(content || "").trim().replace(/\s+/g, " ");
+  return !normalized ||
+    /^placeholder$/i.test(normalized) ||
+    /^double-click on text to edit\. click and select color$/i.test(normalized);
+}
+
+function formatExampleNotes(notes) {
+  return (notes || [])
+    .map((note) => String(note.content || "").trim())
+    .filter((content) => !isPlaceholderExampleNote(content))
+    .join("; ");
+}
+
+function formatExampleAnswer(value) {
+  const text = formatMarkdownCell(value);
+  return text ? `_Example: ${text}_` : "";
+}
+
+function renderConfluencePasteTableRow(values) {
+  return `| ${values.map((value) => formatMarkdownCell(value)).join(" | ")} |`;
+}
+
+function renderConfluenceWikiHeaderRow(values) {
+  return `|| ${values.map((value) => formatMarkdownCell(value)).join(" || ")} ||`;
+}
+
+function renderConfluenceWikiRow(values) {
+  return `| ${values.map((value) => formatMarkdownCell(value)).join(" | ")} |`;
+}
+
+function buildStationCanvasGroups(canvasRows) {
+  const groups = [];
+  const groupsByStation = new Map();
+
+  for (const row of canvasRows) {
+    const stationKey = row.stationTitle || "Requirements";
+    let group = groupsByStation.get(stationKey);
+    if (!group) {
+      group = {
+        stationTitle: stationKey,
+        stationDescription: row.stationDescription || "",
+        stationWhyItMatters: row.stationWhyItMatters || "",
+        canvasRows: []
+      };
+      groupsByStation.set(stationKey, group);
+      groups.push(group);
+    }
+
+    group.canvasRows.push(row);
+  }
+
+  return groups;
+}
+
+function findCanvasResource(canvasId) {
+  return getResources().find((resource) => resource.canvas === canvasId) || null;
+}
+
+function findCanvasStationContext(canvasId, resourceId, stationPath, stationOverlays) {
+  const overlay = stationOverlays.find((entry) => {
+    const reuse = entry.reuse || [];
+    const alternatives = entry.alternativeResources || [];
+    return reuse.includes(canvasId) ||
+      reuse.includes(resourceId) ||
+      alternatives.includes(canvasId) ||
+      alternatives.includes(resourceId);
+  });
+
+  if (!overlay) {
+    return null;
+  }
+
+  return stationPath.find((station) => station.id === overlay.station) || null;
+}
+
+function getDocumentCanvasStationContext(canvasId, resourceId, extension, stationPath) {
+  const explicitStationId = extension.documentCanvasStations?.[canvasId] || extension.documentCanvasStations?.[resourceId];
+  if (explicitStationId) {
+    return stationPath.find((station) => station.id === explicitStationId) || null;
+  }
+
+  return findCanvasStationContext(canvasId, resourceId, stationPath, extension.stationOverlays || []);
+}
+
+function findStationInstruction(stationId, resourceId, locale) {
+  if (!stationId || !resourceId) {
+    return "";
+  }
+
+  const stationLabels = getLocalizedLabels(locale, "stations");
+  const station = getStations().find((entry) => entry.id === stationId);
+  const step = getStationSteps(station || {}).find((entry) => normalizeResourceId(entry.resource) === resourceId);
+  return step ? translate(step.step, stationLabels) : "";
+}
+
+function normalizeDocumentText(value) {
+  return String(value || "");
+}
+
+function getCanvasExampleAnswers(canvasId) {
+  const templatesDir = resolveCanvasFile("import-export-templates");
+  if (!fs.existsSync(templatesDir)) {
+    return new Map();
+  }
+
+  const examplesBySection = new Map();
+  const files = fs.readdirSync(templatesDir)
+    .filter((fileName) => fileName.endsWith(".json"))
+    .map((fileName) => path.join(templatesDir, fileName));
+
+  for (const filePath of files) {
+    const template = readJson(filePath);
+    if (template.templateId !== canvasId) {
+      continue;
+    }
+
+    for (const section of template.sections || []) {
+      const exampleAnswer = formatExampleNotes(section.stickyNotes);
+      if (!exampleAnswer) {
+        continue;
+      }
+
+      const existing = examplesBySection.get(section.sectionId);
+      examplesBySection.set(
+        section.sectionId,
+        existing ? `${existing}; ${exampleAnswer}` : exampleAnswer
+      );
+    }
+  }
+
+  return examplesBySection;
+}
+
+export function buildIntegrationDesignDocumentData(options = {}) {
+  const locale = options.locale || DEFAULT_LOCALE;
+  const extension = getIntegrationExtension();
+  const lineLabels = getLocalizedLabels(locale, "lines");
+  const stationLabels = getLocalizedLabels(locale, "stations");
+  const realLine = getLines().find((line) => line.id === extension.line.id) || extension.line;
+  const stations = new Map(getStations().map((station) => [station.id, station]));
+  const integrationCriteriaByStation = new Map();
+
+  for (const criterion of extension.criteria || []) {
+    for (const stationId of criterion.appliesTo || []) {
+      const criteria = integrationCriteriaByStation.get(stationId) || [];
+      criteria.push(criterion);
+      integrationCriteriaByStation.set(stationId, criteria);
+    }
+  }
+
+  const stationPath = (realLine.stations || []).map((stationId) => {
+    const station = stations.get(stationId);
+    if (!station) {
+      throw new Error(`Unknown integration extension station: ${stationId}`);
+    }
+
+    return {
+      id: station.id,
+      title: translate(station.title, stationLabels),
+      description: translate(station.description, stationLabels),
+      whyItMatters: translate(station.why_it_matters, stationLabels),
+      criteria: (integrationCriteriaByStation.get(station.id) || []).map((criterion) => criterion.description)
+    };
+  });
+
+  const canvasRows = (extension.documentCanvasOrder || []).map((canvasId) => {
+    const canvas = buildCanvasMetadata(canvasId, locale);
+    const resource = findCanvasResource(canvasId);
+    const resourceMetadata = resource ? buildResourceMetadata(resource.id, locale) : null;
+    const stationContext = getDocumentCanvasStationContext(canvasId, resource?.id, extension, stationPath);
+    const formatText = normalizeDocumentText;
+    const exampleAnswers = getCanvasExampleAnswers(canvasId);
+    const questions = canvas.sections.map((section) => ({
+      sectionId: section.id,
+      section: formatText(section.title),
+      question: formatText(section.description || section.title),
+      exampleAnswer: exampleAnswers.get(section.id) || ""
+    }));
+    const steps = (resourceMetadata?.steps || []).slice(0, 3).map((step) => formatText(step));
+    const tips = (resourceMetadata?.tips || []).slice(0, 1).map((tip) => formatText(tip));
+    const stationInstruction = findStationInstruction(stationContext?.id, resource?.id, locale);
+
+    return {
+      canvasId,
+      title: canvas.title,
+      purpose: formatText(canvas.purpose),
+      howToUse: formatText(canvas.howToUse),
+      resourceId: resource?.id || "",
+      resourceDescription: formatText(resourceMetadata?.description || ""),
+      stationTitle: stationContext?.title || "",
+      stationDescription: stationContext?.description || "",
+      stationWhyItMatters: stationContext?.whyItMatters || "",
+      stationInstruction: stationInstruction ? formatText(stationInstruction) : "",
+      steps,
+      tips,
+      hasExampleAnswers: questions.some((question) => question.exampleAnswer),
+      canvasCreatorUrl: getCanvasCreatorUrl(canvasId, locale),
+      questions
+    };
+  });
+
+  return {
+    title: options.title || "Integration Design Requirements",
+    locale,
+    extensionId: extension.id,
+    line: {
+      ...realLine,
+      title: translate(realLine.title, lineLabels),
+      description: translate(realLine.description, lineLabels)
+    },
+    stationPath,
+    canvasRows,
+    criteria: extension.criteria || [],
+    architectureDecisionOptions: extension.architectureDecisionOptions || []
+  };
+}
+
+export function renderIntegrationDesignMarkdown(options = {}) {
+  const data = buildIntegrationDesignDocumentData(options);
+  const lines = [];
+
+  lines.push("Use this page to gather technology-agnostic integration requirements before deciding whether the solution should be an API, event, file exchange, stream, data product, direct integration, or a hybrid pattern.");
+  lines.push("");
+  lines.push("Intent & fit needs");
+  lines.push("Purpose: Quickly capture the integration's job-to-be-done and key context.");
+  lines.push("");
+  lines.push(renderConfluencePasteTableRow(["Field", "Value"]));
+  lines.push(renderConfluencePasteTableRow(["Integration / capability name", ""]));
+  lines.push(renderConfluencePasteTableRow(["Job to be done", "What business outcome must be achieved?"]));
+  lines.push(renderConfluencePasteTableRow(["Producer / source systems", ""]));
+  lines.push(renderConfluencePasteTableRow(["Consumer / target systems", ""]));
+  lines.push(renderConfluencePasteTableRow(["Core business nouns", "Order, Product, Customer..."]));
+  lines.push(renderConfluencePasteTableRow(["Trigger / event", "What initiates the process?"]));
+  lines.push(renderConfluencePasteTableRow(["Non-functional drivers", "Latency, availability, privacy, regulatory, volume, recovery"]));
+  lines.push(renderConfluencePasteTableRow(["Scope / out of scope", ""]));
+  lines.push(renderConfluencePasteTableRow(["Decision status", "Requirements gathering"]));
+  lines.push("");
+
+  lines.push("Method path");
+  lines.push("");
+  lines.push(`Line: ${formatMarkdownCell(data.line.title)}`);
+  lines.push(`Path: ${data.stationPath.map((station) => formatMarkdownCell(station.title)).join(" -> ")}`);
+  lines.push("");
+
+  lines.push("Text sources");
+  lines.push("Integration document canvas order and station grouping: src/data/method/integration-extension.json");
+  lines.push("Integration line and station descriptions: src/data/method/lines.json, src/data/method/stations.json, and src/data/method/<locale>/labels.*.json");
+  lines.push("Canvas title, purpose, and questions: src/data/canvas/localizedData.json");
+  lines.push("Station descriptions and instructions: src/data/method/stations.json and src/data/method/<locale>/labels.stations.json");
+  lines.push("Example answers, when available: src/data/canvas/import-export-templates/*.json");
+  lines.push("");
+
+  lines.push("Business flow visualization");
+  lines.push("Add a simple process outline or Mermaid diagram showing producer, consumer, trigger, data movement, and key decision points.");
+  lines.push("");
+
+  lines.push("Requirements");
+  lines.push("");
+  for (const group of buildStationCanvasGroups(data.canvasRows)) {
+    lines.push(group.stationTitle);
+    if (group.stationDescription) {
+      lines.push(`Station description: ${formatMarkdownCell(group.stationDescription)}`);
+    }
+    if (group.stationWhyItMatters) {
+      lines.push(`Why it matters: ${formatMarkdownCell(group.stationWhyItMatters)}`);
+    }
+    lines.push("");
+
+    for (const row of group.canvasRows) {
+      lines.push(row.title);
+      lines.push(`CanvasCreator: ${row.canvasCreatorUrl}`);
+      lines.push(`Purpose: ${formatMarkdownCell(row.purpose)}`);
+      if (row.stationInstruction) {
+        lines.push(`Station instruction: ${formatMarkdownCell(row.stationInstruction)}`);
+      }
+      lines.push("");
+      lines.push(renderConfluencePasteTableRow(["Topic", "Question", "Answer / evidence / owner"]));
+      for (const question of row.questions) {
+        lines.push(renderConfluencePasteTableRow([question.section, question.question, formatExampleAnswer(question.exampleAnswer)]));
+      }
+      lines.push("");
+    }
+  }
+
+  lines.push("Integration pattern decision");
+  lines.push("");
+  lines.push(renderConfluencePasteTableRow(["Primary pattern", "Fallback pattern", "Justification"]));
+  lines.push(renderConfluencePasteTableRow(["API / Event / File exchange / Stream / Data product / Direct integration / Hybrid", "", ""]));
+  lines.push("");
+
+  lines.push("Reusable capability analysis");
+  lines.push("Conduct after requirements are defined.");
+  lines.push("");
+  lines.push(renderConfluencePasteTableRow(["Candidate", "Type", "Business fit", "Shape match", "Timing fit", "Gaps / comments"]));
+  lines.push(renderConfluencePasteTableRow(["", "API / Event / Data product / File / Stream / Existing service", "", "", "", ""]));
+  lines.push("Classification: Reuse as-is / Reuse with interface / Extend / None");
+  lines.push("Reasoning: ");
+  lines.push("");
+
+  lines.push("Pattern option notes");
+  lines.push("");
+  lines.push(renderConfluencePasteTableRow(["Candidate pattern", "Use when", "Fit / concerns", "Decision"]));
+  for (const option of data.architectureDecisionOptions) {
+    lines.push(renderConfluencePasteTableRow([option.title, option.useWhen, "", ""]));
+  }
+  lines.push("");
+
+  lines.push("Architecture diagram");
+  lines.push("Insert a high-level diagram aligned with the target architecture.");
+  lines.push("");
+
+  lines.push("Architecture decision record (ADR)");
+  lines.push("Title: [Describe capability]");
+  lines.push("Status: Proposed / Approved");
+  lines.push("Context:");
+  lines.push("- Key business requirements");
+  lines.push("- Technical constraints");
+  lines.push("- Expected volumes / performance");
+  lines.push("Decision:");
+  lines.push("- Chosen integration pattern and why");
+  lines.push("- Reuse, if any, chosen and why");
+  lines.push("Alternatives considered:");
+  lines.push("- Rejected approaches and reasons");
+  lines.push("Consequences:");
+  lines.push("- Pros, cons, risks, mitigations");
+  lines.push("Follow-up actions:");
+  lines.push("- Register APIs, event topics, data products, file contracts, governance checks, or support model updates");
+  lines.push("");
+
+  return `${lines.join("\n")}\n`;
+}
+
+export function renderIntegrationDesignConfluenceWiki(options = {}) {
+  const data = buildIntegrationDesignDocumentData(options);
+  const lines = [];
+
+  lines.push("Use this page to gather technology-agnostic integration requirements before deciding whether the solution should be an API, event, file exchange, stream, data product, direct integration, or a hybrid pattern.");
+  lines.push("");
+  lines.push("h2. Intent & fit needs");
+  lines.push("");
+  lines.push("Purpose: Quickly capture the integration's job-to-be-done and key context.");
+  lines.push("");
+  lines.push(renderConfluenceWikiHeaderRow(["Field", "Value"]));
+  lines.push(renderConfluenceWikiRow(["Integration / capability name", ""]));
+  lines.push(renderConfluenceWikiRow(["Job to be done", "What business outcome must be achieved?"]));
+  lines.push(renderConfluenceWikiRow(["Producer / source systems", ""]));
+  lines.push(renderConfluenceWikiRow(["Consumer / target systems", ""]));
+  lines.push(renderConfluenceWikiRow(["Core business nouns", "Order, Product, Customer..."]));
+  lines.push(renderConfluenceWikiRow(["Trigger / event", "What initiates the process?"]));
+  lines.push(renderConfluenceWikiRow(["Non-functional drivers", "Latency, availability, privacy, regulatory, volume, recovery"]));
+  lines.push(renderConfluenceWikiRow(["Scope / out of scope", ""]));
+  lines.push(renderConfluenceWikiRow(["Decision status", "Requirements gathering"]));
+  lines.push("");
+
+  lines.push("h2. Method path");
+  lines.push("");
+  lines.push(`Line: ${formatMarkdownCell(data.line.title)}`);
+  lines.push(`Path: ${data.stationPath.map((station) => formatMarkdownCell(station.title)).join(" -> ")}`);
+  lines.push("");
+
+  lines.push("h2. Text sources");
+  lines.push("");
+  lines.push("* Integration document canvas order and station grouping: src/data/method/integration-extension.json");
+  lines.push("* Integration line and station descriptions: src/data/method/lines.json, src/data/method/stations.json, and src/data/method/<locale>/labels.*.json");
+  lines.push("* Canvas title, purpose, and questions: src/data/canvas/localizedData.json");
+  lines.push("* Station descriptions and instructions: src/data/method/stations.json and src/data/method/<locale>/labels.stations.json");
+  lines.push("* Example answers, when available: src/data/canvas/import-export-templates/*.json");
+  lines.push("");
+
+  lines.push("h2. Business flow visualization");
+  lines.push("");
+  lines.push("Add a simple process outline or Mermaid diagram showing producer, consumer, trigger, data movement, and key decision points.");
+  lines.push("");
+
+  lines.push("h2. Requirements");
+  lines.push("");
+  for (const group of buildStationCanvasGroups(data.canvasRows)) {
+    lines.push(`h3. ${group.stationTitle}`);
+    if (group.stationDescription) {
+      lines.push(`Station description: ${formatMarkdownCell(group.stationDescription)}`);
+    }
+    if (group.stationWhyItMatters) {
+      lines.push(`Why it matters: ${formatMarkdownCell(group.stationWhyItMatters)}`);
+    }
+    lines.push("");
+
+    for (const row of group.canvasRows) {
+      lines.push(`h4. ${row.title}`);
+      lines.push(`CanvasCreator: ${row.canvasCreatorUrl}`);
+      lines.push(`Purpose: ${formatMarkdownCell(row.purpose)}`);
+      if (row.stationInstruction) {
+        lines.push(`Station instruction: ${formatMarkdownCell(row.stationInstruction)}`);
+      }
+      lines.push("");
+      lines.push(renderConfluenceWikiHeaderRow(["Topic", "Question", "Answer / evidence / owner"]));
+      for (const question of row.questions) {
+        lines.push(renderConfluenceWikiRow([question.section, question.question, formatExampleAnswer(question.exampleAnswer)]));
+      }
+      lines.push("");
+    }
+  }
+
+  lines.push("h2. Integration pattern decision");
+  lines.push("");
+  lines.push(renderConfluenceWikiHeaderRow(["Primary pattern", "Fallback pattern", "Justification"]));
+  lines.push(renderConfluenceWikiRow(["API / Event / File exchange / Stream / Data product / Direct integration / Hybrid", "", ""]));
+  lines.push("");
+
+  lines.push("h2. Reusable capability analysis");
+  lines.push("");
+  lines.push("Conduct after requirements are defined.");
+  lines.push("");
+  lines.push(renderConfluenceWikiHeaderRow(["Candidate", "Type", "Business fit", "Shape match", "Timing fit", "Gaps / comments"]));
+  lines.push(renderConfluenceWikiRow(["", "API / Event / Data product / File / Stream / Existing service", "", "", "", ""]));
+  lines.push("");
+  lines.push("Classification: Reuse as-is / Reuse with interface / Extend / None");
+  lines.push("Reasoning: ");
+  lines.push("");
+
+  lines.push("h2. Pattern option notes");
+  lines.push("");
+  lines.push(renderConfluenceWikiHeaderRow(["Candidate pattern", "Use when", "Fit / concerns", "Decision"]));
+  for (const option of data.architectureDecisionOptions) {
+    lines.push(renderConfluenceWikiRow([option.title, option.useWhen, "", ""]));
+  }
+  lines.push("");
+
+  lines.push("h2. Architecture diagram");
+  lines.push("");
+  lines.push("Insert a high-level diagram aligned with the target architecture.");
+  lines.push("");
+
+  lines.push("h2. Architecture decision record (ADR)");
+  lines.push("");
+  lines.push("Title: [Describe capability]");
+  lines.push("Status: Proposed / Approved");
+  lines.push("");
+  lines.push("Context:");
+  lines.push("* Key business requirements");
+  lines.push("* Technical constraints");
+  lines.push("* Expected volumes / performance");
+  lines.push("");
+  lines.push("Decision:");
+  lines.push("* Chosen integration pattern and why");
+  lines.push("* Reuse, if any, chosen and why");
+  lines.push("");
+  lines.push("Alternatives considered:");
+  lines.push("* Rejected approaches and reasons");
+  lines.push("");
+  lines.push("Consequences:");
+  lines.push("* Pros, cons, risks, mitigations");
+  lines.push("");
+  lines.push("Follow-up actions:");
+  lines.push("* Register APIs, event topics, data products, file contracts, governance checks, or support model updates");
+  lines.push("");
+
+  return `${lines.join("\n")}\n`;
 }
 
 export function resolveStationIds(options = {}) {

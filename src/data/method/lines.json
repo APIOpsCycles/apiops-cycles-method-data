@@ -104,6 +104,24 @@
           "portfolio-management",
           "budget-and-resource-management"
         ]
+      },
+      {
+        "id": "integration-design-line",
+        "title": "line.integration-design-line.title",
+        "slug": "integration-design-line",
+        "order": 7,
+        "color": "#2F80ED",
+        "description": "line.integration-design-line.description",
+        "stations": [
+          "integration-capability-strategy",
+          "integration-consumer-producer-experience",
+          "integration-architecture-decision",
+          "integration-solution-design",
+          "integration-delivery",
+          "integration-readiness-audit",
+          "capability-publishing",
+          "integration-monitoring-improvement"
+        ]
       }
     ]
   }

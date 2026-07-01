@@ -51,6 +51,7 @@ async function gatherTemplateFiles() {
   await validate('src/schemas/criteria.schema.json', ['src/data/method/criteria.json']);
   await validate('src/schemas/lines.schema.json', ['src/data/method/lines.json']);
   await validate('src/schemas/resources.schema.json', ['src/data/method/resources.json']);
+  await validate('src/schemas/integration-extension.schema.json', ['src/data/method/integration-extension.json']);
   await validate('src/schemas/stakeholders.schema.json', ['src/data/method/stakeholders.json']);
   await validate('src/schemas/station-criteria.schema.json', ['src/data/method/station-criteria.json']);
   await validate('src/schemas/station-stakeholders.schema.json', ['src/data/method/station-stakeholders.json']);

@@ -1,0 +1,135 @@
+{
+  "templateId": "businessImpactCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.829Z"
+  },
+  "sections": [
+    {
+      "sectionId": "availabilityRisks",
+      "stickyNotes": [
+        {
+          "content": "Search outage blocks discovery",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Traffic spikes overload search",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Slow responses hurt UX",
+          "size": 80,
+          "color": "#FFAFAF"
+        }
+      ]
+    },
+    {
+      "sectionId": "securityRisks",
+      "stickyNotes": [
+        {
+          "content": "Public API abused by bots",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Internal fields exposed",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Query logs leak user intent",
+          "size": 80,
+          "color": "#FFAFAF"
+        }
+      ]
+    },
+    {
+      "sectionId": "dataRisks",
+      "stickyNotes": [
+        {
+          "content": "Stale index shows wrong results",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Hidden products appear in results",
+          "size": 80,
+          "color": "#FFAFAF"
+        },
+        {
+          "content": "Inconsistent IDs break linking",
+          "size": 80,
+          "color": "#FFAFAF"
+        }
+      ]
+    },
+    {
+      "sectionId": "mitigateAvailabilityRisks",
+      "stickyNotes": [
+        {
+          "content": "Cache popular queries",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Autoscale search services",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Graceful fallback results",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "mitigateSecurityRisks",
+      "stickyNotes": [
+        {
+          "content": "Rate limit public access",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Filter response fields",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Sanitize logs and queries",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    },
+    {
+      "sectionId": "mitigateDataRisks",
+      "stickyNotes": [
+        {
+          "content": "Validate indexed data",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Enforce visibility rules",
+          "size": 80,
+          "color": "#7DC9E7"
+        },
+        {
+          "content": "Monitor index freshness",
+          "size": 80,
+          "color": "#7DC9E7"
+        }
+      ]
+    }
+  ]
+}

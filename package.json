@@ -26,6 +26,7 @@
     "./localizedData.json": "./src/data/canvas/localizedData.json",
     "./method/stations.json": "./src/data/method/stations.json",
     "./method/resources.json": "./src/data/method/resources.json",
+    "./method/integration-extension.json": "./src/data/method/integration-extension.json",
     "./method/station-criteria.json": "./src/data/method/station-criteria.json",
     "./method/stakeholders.json": "./src/data/method/stakeholders.json",
     "./method/station-stakeholders.json": "./src/data/method/station-stakeholders.json",
@@ -37,7 +38,8 @@
     "release:create-apiops:publish": "npm publish --workspace packages/create-apiops --access public",
     "check:packaging:skills": "node scripts/check-packaging-skills.mjs",
     "check:package:contents": "node scripts/check-package-contents.mjs",
-    "test:create-apiops": "node scripts/test-create-apiops-scaffold.mjs && node scripts/test-method-cli.mjs && node scripts/test-run-design-audit.mjs"
+    "test:create-apiops": "node scripts/test-create-apiops-scaffold.mjs && node scripts/test-method-cli.mjs && node scripts/test-run-design-audit.mjs",
+    "test:create-apiops:integration": "node scripts/test-create-apiops-scaffold.mjs --install-integration && node scripts/test-method-cli.mjs && node scripts/test-run-design-audit.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.7",

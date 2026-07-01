@@ -12,5 +12,7 @@
   "line.publishing-and-adoption-line.title": "Publishing and Adoption Line",
   "line.publishing-and-adoption-line.description": "Focuses on publishing APIs and ensuring their adoption by consumers.",
   "line.operating-model-line.title": "Operating Model Line",
-  "line.operating-model-line.description": "Covers the operating model for API management and governance."
+  "line.operating-model-line.description": "Covers the operating model for API management and governance.",
+  "line.integration-design-line.title": "Integration Design Line",
+  "line.integration-design-line.description": "Guides technology-agnostic integration requirements from reusable capability strategy to architecture choice, solution design, delivery, publishing, and improvement."
 }

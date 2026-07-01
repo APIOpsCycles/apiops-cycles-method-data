@@ -1,10 +1,40 @@
 ## Create a new APIOps project (CLI)
 
+Interactive scaffold:
+
 ```bash
 npm create apiops@latest
 ```
 
-This command runs the `create-apiops` initializer package and generates a starter APIOps project template in your current directory. This is useful for a scaffolded proces (with or without AI) to create or review requirements for new APIs or improve existing APIs. 
+Named project scaffold:
+
+```bash
+npm create apiops@latest report-conversion-apiops
+```
+
+Non-interactive scaffold:
+
+```bash
+npm create apiops@latest -- --name report-conversion-apiops --locale en --style REST --yes
+```
+
+When using `npm create`, pass initializer flags after the `--` separator. Flags before the separator are handled by npm itself and may not reach `create-apiops`.
+
+To inspect the initializer options without starting prompts:
+
+```bash
+npm create apiops@latest -- --help
+```
+
+Useful options:
+
+- `--name <name>` or the first positional argument sets the project directory and package name
+- `--locale <locale>` sets the default method locale, such as `en` or `fi`
+- `--style <style>` sets the API style focus: `REST`, `Event`, `GraphQL`, or `"Not sure yet"`
+- `--yes` accepts defaults for omitted options and runs without prompts; use it in non-interactive shells when any prompt answer is omitted
+- `--no-install` skips dependency installation and starter canvas generation
+
+This command runs the `create-apiops` initializer package and generates a starter APIOps project template in your current directory. This is useful for a scaffolded process (with or without AI) to create or review requirements for new APIs or improve existing APIs.
 
 This scaffolded project uses the CLI and/or the method-engine library (useful for AI or applications) provided by the main package. They guide the design and development using the APIOps Cycles method and canvases. 
 

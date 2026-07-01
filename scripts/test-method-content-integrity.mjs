@@ -9,15 +9,15 @@ const stationsJson = readJson("src/data/method/stations.json");
 const linesJson = readJson("src/data/method/lines.json");
 const resourcesJson = readJson("src/data/method/resources.json");
 const criteriaJson = readJson("src/data/method/criteria.json");
+const integrationExtensionJson = readJson("src/data/method/integration-extension.json");
 const stakeholdersJson = readJson("src/data/method/stakeholders.json");
 const stationCriteriaJson = readJson("src/data/method/station-criteria.json");
 const canvasDataJson = readJson("src/data/canvas/canvasData.json");
 const localizedCanvasDataJson = readJson("src/data/canvas/localizedData.json");
 const knownResourceIds = new Set((resourcesJson.resources || []).map((resource) => resource.id));
-const stationGroups = [
-  ...(stationsJson["core-stations"]?.items || []).map((station) => ({ ...station, group: "core-stations" })),
-  ...(stationsJson["sub-stations"]?.items || []).map((station) => ({ ...station, group: "sub-stations" }))
-];
+const stationGroups = Object.entries(stationsJson).flatMap(([groupId, group]) => (
+  (group.items || []).map((station) => ({ ...station, group: groupId }))
+));
 const knownStationIds = new Set(stationGroups.map((station) => station.id));
 const knownCanvasIds = new Set(Object.keys(canvasDataJson));
 const localeDirs = readdirSync("src/data/method", { withFileTypes: true })
@@ -53,12 +53,15 @@ function collectMatchingStringValues(node, pattern, results = new Set()) {
 
 function validateLabelFile(locale, filename, expectedKeys, allowedExtras = []) {
   const filePath = path.join("src", "data", "method", locale, filename);
+  const fallbackFilePath = path.join("src", "data", "method", "en", filename);
   const labels = readJson(filePath);
+  const fallbackLabels = readJson(fallbackFilePath);
   const actualKeys = new Set(Object.keys(labels));
+  const fallbackKeys = new Set(Object.keys(fallbackLabels));
   const allowedExtrasSet = new Set(allowedExtras);
 
   for (const expectedKey of expectedKeys) {
-    if (!actualKeys.has(expectedKey)) {
+    if (!actualKeys.has(expectedKey) && !fallbackKeys.has(expectedKey)) {
       findings.push(`Locale ${locale} is missing label "${expectedKey}" in ${filename}.`);
     }
   }
@@ -139,6 +142,64 @@ for (const line of linesJson.lines?.items || []) {
 
     if (!knownStationIds.has(stationId)) {
       findings.push(`Line ${line.id} references unknown station "${stationId}" at index ${index}.`);
+    }
+  }
+}
+
+for (const [index, stationId] of (integrationExtensionJson.line?.stations || []).entries()) {
+  if (!knownStationIds.has(stationId)) {
+    findings.push(`Integration extension line references unknown station "${stationId}" at index ${index}.`);
+  }
+}
+
+for (const [index, entry] of (integrationExtensionJson.line?.stationIntent || []).entries()) {
+  if (!knownStationIds.has(entry.station)) {
+    findings.push(`Integration extension line stationIntent references unknown station "${entry.station}" at index ${index}.`);
+  }
+}
+
+const proposedIntegrationResourceIds = new Set(
+  (integrationExtensionJson.alternativeResources || []).map((resource) => resource.id)
+);
+
+for (const [overlayIndex, overlay] of (integrationExtensionJson.stationOverlays || []).entries()) {
+  if (!knownStationIds.has(overlay.station)) {
+    findings.push(`Integration extension station overlay references unknown station "${overlay.station}" at index ${overlayIndex}.`);
+  }
+
+  for (const resourceId of overlay.reuse || []) {
+    if (!knownResourceIds.has(resourceId)) {
+      findings.push(
+        `Integration extension station overlay "${overlay.station}" reuses unknown core resource "${resourceId}".`
+      );
+    }
+  }
+
+  for (const resourceId of overlay.alternativeResources || []) {
+    if (!knownResourceIds.has(resourceId) && !proposedIntegrationResourceIds.has(resourceId)) {
+      findings.push(
+        `Integration extension station overlay "${overlay.station}" references unknown alternative resource "${resourceId}".`
+      );
+    }
+  }
+}
+
+for (const resource of integrationExtensionJson.alternativeResources || []) {
+  for (const resourceId of resource.replacesOrAdapts || []) {
+    if (!knownResourceIds.has(resourceId)) {
+      findings.push(
+        `Integration extension alternative resource "${resource.id}" adapts unknown core resource "${resourceId}".`
+      );
+    }
+  }
+}
+
+for (const criterion of integrationExtensionJson.criteria || []) {
+  for (const stationId of criterion.appliesTo || []) {
+    if (!knownStationIds.has(stationId)) {
+      findings.push(
+        `Integration extension criterion "${criterion.id}" applies to unknown station "${stationId}".`
+      );
     }
   }
 }

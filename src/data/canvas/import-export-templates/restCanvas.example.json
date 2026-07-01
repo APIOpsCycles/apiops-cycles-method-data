@@ -1,0 +1,206 @@
+{
+  "templateId": "restCanvas",
+  "locale": "en",
+  "metadata": {
+    "source": "APIOps Cycles",
+    "license": "CC-BY-SA 4.0",
+    "authors": [
+      "Osaango Ltd"
+    ],
+    "website": "www.apiopscycles.com",
+    "date": "2026-03-30T21:10:16.835Z"
+  },
+  "sections": [
+    {
+      "sectionId": "apiResources",
+      "stickyNotes": [
+        {
+          "content": "/products",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 33.10430908203125,
+            "y": 110.89584350585938
+          }
+        },
+        {
+          "content": "/products \n/{id}",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 121.49319458007812,
+            "y": 112.22917175292969
+          }
+        },
+        {
+          "content": "/products /slug /{slug}",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 29.666671752929688,
+            "y": 171.66665649414062
+          }
+        },
+        {
+          "content": "/categories",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 121.72235107421875,
+            "y": 174.5625
+          }
+        },
+        {
+          "content": "/categories /{id} /products",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 171.236083984375,
+            "y": 203.43057250976562
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "apiResourceModel",
+      "stickyNotes": [
+        {
+          "content": "Product summary for lists",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 57,
+            "y": 319
+          }
+        },
+        {
+          "content": "Product detail with variants",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 142,
+            "y": 319
+          }
+        },
+        {
+          "content": "Facet data for filtering",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 57,
+            "y": 404
+          }
+        },
+        {
+          "content": "Paging and sort metadata",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 142,
+            "y": 404
+          }
+        },
+        {
+          "content": "Market-aware product view",
+          "size": 80,
+          "color": "#DFDDC5",
+          "position": {
+            "x": 100,
+            "y": 489
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "apiVerbs",
+      "stickyNotes": [
+        {
+          "content": "GET /products",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 298.3333435058594,
+            "y": 116
+          }
+        },
+        {
+          "content": "GET /products /{id}",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 381.33331298828125,
+            "y": 118.66665649414062
+          }
+        },
+        {
+          "content": "GET /categories/{id}/products",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 297.66668701171875,
+            "y": 190.33334350585938
+          }
+        },
+        {
+          "content": "No POST, PUT, DELETE in v1",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 382,
+            "y": 194.33331298828125
+          }
+        }
+      ]
+    },
+    {
+      "sectionId": "apiVerbExample",
+      "stickyNotes": [
+        {
+          "content": "GET /products?term=shoe",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 537,
+            "y": 319
+          }
+        },
+        {
+          "content": "GET /products?brand=nike\n&page=2",
+          "size": 80,
+          "color": "#7DC9E7",
+          "position": {
+            "x": 622,
+            "y": 319
+          }
+        },
+        {
+          "content": "200 list + facets + paging",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 537,
+            "y": 404
+          }
+        },
+        {
+          "content": "200 product detail + variants",
+          "size": 80,
+          "color": "#C0EB6A",
+          "position": {
+            "x": 622,
+            "y": 404
+          }
+        },
+        {
+          "content": "404 for unknown or hidden product",
+          "size": 80,
+          "color": "#FFAFAF",
+          "position": {
+            "x": 580,
+            "y": 489
+          }
+        }
+      ]
+    }
+  ]
+}
