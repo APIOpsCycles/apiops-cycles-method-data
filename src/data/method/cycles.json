@@ -304,7 +304,17 @@
           "api-contract-tested",
           "api-ready-for-publishing",
           "api-documentation-ready"
-        ]
+        ],
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.api-productization-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.api-productization-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.api-productization-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.api-productization-cycle.station.api-design.description",
+          "api-delivery": "cycle.api-productization-cycle.station.api-delivery.description",
+          "api-audit": "cycle.api-productization-cycle.station.api-audit.description",
+          "api-publishing": "cycle.api-productization-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.api-productization-cycle.station.monitoring-and-improving.description"
+        }
       },
       {
         "id": "integration-productization-cycle",
@@ -454,20 +464,30 @@
           "architecture-patterns-validated",
           "api-description-available",
           "audit-passed"
-        ]
+        ],
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.integration-productization-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.integration-productization-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.integration-productization-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.integration-productization-cycle.station.api-design.description",
+          "api-delivery": "cycle.integration-productization-cycle.station.api-delivery.description",
+          "api-audit": "cycle.integration-productization-cycle.station.api-audit.description",
+          "api-publishing": "cycle.integration-productization-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.integration-productization-cycle.station.monitoring-and-improving.description"
+        }
       },
       {
-        "id": "ai-augmented-design-cycle",
-        "title": "cycle.ai-augmented-design-cycle.title",
-        "slug": "ai-augmented-design-cycle",
-        "description": "cycle.ai-augmented-design-cycle.description",
+        "id": "automation-cycle",
+        "title": "cycle.automation-cycle.title",
+        "slug": "automation-cycle",
+        "description": "cycle.automation-cycle.description",
         "audiences": [
-          "cycle.audience.ai-teams",
-          "cycle.audience.platform-innovators",
-          "cycle.audience.architects",
-          "cycle.audience.product-teams"
+          "cycle.audience.automation-owners",
+          "cycle.audience.process-owners",
+          "cycle.audience.automation-teams",
+          "cycle.audience.platform-owners"
         ],
-        "purpose": "cycle.ai-augmented-design-cycle.purpose",
+        "purpose": "cycle.automation-cycle.purpose",
         "stations": [
           "api-product-strategy",
           "api-consumer-experience",
@@ -479,14 +499,14 @@
           "monitoring-and-improving"
         ],
         "stationLabels": {
-          "api-product-strategy": "cycle.station.ai-assisted-capability-strategy",
-          "api-consumer-experience": "cycle.station.ai-assisted-requirements-onboarding",
-          "api-platform-architecture": "cycle.station.ai-assisted-architecture-decisions",
-          "api-design": "cycle.station.ai-assisted-solution-interface-design",
-          "api-delivery": "cycle.station.ai-assisted-delivery-operations",
-          "api-audit": "cycle.station.ai-governance-readiness",
-          "api-publishing": "cycle.station.ai-assisted-publishing-enablement",
-          "monitoring-and-improving": "cycle.station.ai-assisted-monitoring-improvement"
+          "api-product-strategy": "cycle.station.automation-opportunity-strategy",
+          "api-consumer-experience": "cycle.station.process-user-requirements",
+          "api-platform-architecture": "cycle.station.automation-platform-decision",
+          "api-design": "cycle.station.automation-workflow-design",
+          "api-delivery": "cycle.station.automation-delivery",
+          "api-audit": "cycle.station.automation-readiness-review",
+          "api-publishing": "cycle.station.automation-enablement",
+          "monitoring-and-improving": "cycle.station.automation-monitoring-improvement"
         },
         "recommendedResources": {
           "api-product-strategy": [
@@ -555,11 +575,6 @@
             "description": "cycle.template.intent-fit.description"
           },
           {
-            "id": "ai-assistance-plan",
-            "title": "cycle.template.ai-assistance-plan.title",
-            "description": "cycle.template.ai-assistance-plan.description"
-          },
-          {
             "id": "human-validation",
             "title": "cycle.template.human-validation.title",
             "description": "cycle.template.human-validation.description"
@@ -570,23 +585,7 @@
             "description": "cycle.template.adr.description"
           }
         ],
-        "overlays": [
-          {
-            "station": "api-product-strategy",
-            "assistance": "cycle.ai.overlay.strategy.assistance",
-            "humanValidation": "cycle.ai.overlay.strategy.validation"
-          },
-          {
-            "station": "api-design",
-            "assistance": "cycle.ai.overlay.design.assistance",
-            "humanValidation": "cycle.ai.overlay.design.validation"
-          },
-          {
-            "station": "api-audit",
-            "assistance": "cycle.ai.overlay.audit.assistance",
-            "humanValidation": "cycle.ai.overlay.audit.validation"
-          }
-        ],
+        "overlays": [],
         "entryCriteria": [
           "business-goals-defined",
           "stakeholder-approval"
@@ -595,7 +594,17 @@
           "design-reflects-business-value",
           "api-contract-tested",
           "audit-passed"
-        ]
+        ],
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.automation-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.automation-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.automation-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.automation-cycle.station.api-design.description",
+          "api-delivery": "cycle.automation-cycle.station.api-delivery.description",
+          "api-audit": "cycle.automation-cycle.station.api-audit.description",
+          "api-publishing": "cycle.automation-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.automation-cycle.station.monitoring-and-improving.description"
+        }
       }
     ]
   }
