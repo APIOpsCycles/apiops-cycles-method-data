@@ -2,7 +2,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, resolve, join } from "node:path";
 import { mkdtempSync, readFileSync, existsSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -38,6 +38,7 @@ const projectName = "ci-apiops-project";
 const projectDir = join(tempRoot, projectName);
 let localTarball = null;
 const npmCommand = resolveNpmCommand();
+const runInstallIntegration = process.argv.includes("--install-integration");
 
 function assert(condition, message) {
   if (!condition) {
@@ -45,7 +46,76 @@ function assert(condition, message) {
   }
 }
 
+function runStep(label, command, args, options = {}) {
+  const timeout = options.timeout ?? 180000;
+  console.log(`\n[create-apiops test] ${label}`);
+  try {
+    return execFileSync(command, args, {
+      timeout,
+      ...options
+    });
+  } catch (error) {
+    if (error.code === "ETIMEDOUT") {
+      const commandLine = [command, ...args].join(" ");
+      throw new Error(`[create-apiops test] ${label} timed out after ${timeout} ms.\nCommand: ${commandLine}`);
+    }
+    throw error;
+  }
+}
+
 try {
+  const helpOutput = execFileSync(
+    "node",
+    [cliPath, "--help"],
+    { cwd: tempRoot, encoding: "utf8" }
+  );
+  assert(helpOutput.includes("Usage:"), "Expected create-apiops --help to print usage.");
+  assert(
+    helpOutput.includes("npm create apiops@latest -- --name my-api"),
+    "Expected help output to document npm-create flag forwarding."
+  );
+  assert(
+    !existsSync(join(tempRoot, "my-api-project")),
+    "Expected create-apiops --help to exit without creating the default project."
+  );
+
+  const nonInteractivePrompt = spawnSync(
+    "node",
+    [cliPath, "needs-prompt-answers"],
+    { cwd: tempRoot, encoding: "utf8" }
+  );
+  assert(
+    nonInteractivePrompt.status === 1,
+    "Expected omitted answers in a non-interactive shell to fail clearly instead of waiting for prompts."
+  );
+  assert(
+    nonInteractivePrompt.stderr.includes("cannot prompt"),
+    "Expected non-interactive prompt failure to explain the prompt problem."
+  );
+  assert(
+    nonInteractivePrompt.stderr.includes("--yes"),
+    "Expected non-interactive prompt failure to recommend --yes."
+  );
+
+  const positionalProjectName = "positional-apiops-project";
+  const positionalProjectDir = join(tempRoot, positionalProjectName);
+  execFileSync(
+    "node",
+    [
+      cliPath,
+      positionalProjectName,
+      "--yes",
+      "--no-install"
+    ],
+    { cwd: tempRoot, stdio: "inherit" }
+  );
+
+  const positionalPkg = JSON.parse(readFileSync(join(positionalProjectDir, "package.json"), "utf8"));
+  assert(
+    positionalPkg.name === positionalProjectName,
+    "Expected first positional argument to set the scaffolded project name."
+  );
+
   execFileSync(
     "node",
     [
@@ -105,7 +175,13 @@ try {
     "Expected scaffolded OpenAPI file to contain the canonical OpenAPI snippet content."
   );
 
-  const packJson = execFileSync(
+  if (!runInstallIntegration) {
+    console.log("create-apiops scaffold fast test passed.");
+    console.log("Install-heavy generated project integration was skipped. Run `npm run test:create-apiops:integration` to include npm install and generated project commands.");
+  } else {
+
+  const packJson = runStep(
+    "Packing apiops-cycles-method-data for generated-project install",
     npmCommand.command,
     [...npmCommand.args, "pack", "--json", "--cache", npmCacheDir],
     { cwd: repoRoot, encoding: "utf8" }
@@ -113,7 +189,8 @@ try {
   localTarball = JSON.parse(packJson)[0]?.filename;
   assert(localTarball, "Failed to create local apiops-cycles-method-data tarball for integration test.");
 
-  execFileSync(
+  runStep(
+    "Installing local package tarball into generated project",
     npmCommand.command,
     [...npmCommand.args, "install", resolve(repoRoot, localTarball), "--cache", npmCacheDir],
     {
@@ -122,7 +199,8 @@ try {
     }
   );
 
-  const engineImportOutput = execFileSync(
+  const engineImportOutput = runStep(
+    "Checking generated project method-engine import",
     process.execPath,
     [
       "--input-type=module",
@@ -139,18 +217,19 @@ try {
     "Expected installed package to expose the reusable method-engine export."
   );
 
-  execFileSync(npmCommand.command, [...npmCommand.args, "run", "method:stations", "--cache", npmCacheDir], {
+  runStep("Running generated project method:stations", npmCommand.command, [...npmCommand.args, "run", "method:stations", "--cache", npmCacheDir], {
     cwd: projectDir,
     stdio: "inherit"
   });
 
-  execFileSync(npmCommand.command, [...npmCommand.args, "run", "method:start", "--cache", npmCacheDir], {
+  runStep("Running generated project method:start", npmCommand.command, [...npmCommand.args, "run", "method:start", "--cache", npmCacheDir], {
     cwd: projectDir,
     stdio: "inherit"
   });
 
   const guidedAnswers = Array.from({ length: 21 }, () => "no").join(",");
-  const guidedStartOutput = execFileSync(
+  const guidedStartOutput = runStep(
+    "Checking generated project guided start flow",
     process.execPath,
     [
       join(projectDir, installedMethodCliPath),
@@ -173,7 +252,8 @@ try {
     "Expected guided start flow to show interactive next-step options."
   );
 
-  const interactiveResourcesOutput = execFileSync(
+  const interactiveResourcesOutput = runStep(
+    "Checking generated project interactive resources flow",
     process.execPath,
     [
       join(projectDir, installedMethodCliPath),
@@ -192,12 +272,12 @@ try {
     "Expected interactive resources flow to create or show starter canvas JSON."
   );
 
-  execFileSync(npmCommand.command, [...npmCommand.args, "run", "method:resources:strategy", "--cache", npmCacheDir], {
+  runStep("Running generated project method:resources:strategy", npmCommand.command, [...npmCommand.args, "run", "method:resources:strategy", "--cache", npmCacheDir], {
     cwd: projectDir,
     stdio: "inherit"
   });
 
-  execFileSync(npmCommand.command, [...npmCommand.args, "run", "method:canvases:new-api", "--cache", npmCacheDir], {
+  runStep("Running generated project method:canvases:new-api", npmCommand.command, [...npmCommand.args, "run", "method:canvases:new-api", "--cache", npmCacheDir], {
     cwd: projectDir,
     stdio: "inherit"
   });
@@ -219,6 +299,7 @@ try {
   }
 
   console.log("create-apiops scaffold integration test passed.");
+  }
 } finally {
   if (localTarball) {
     rmSync(resolve(repoRoot, localTarball), { force: true });
