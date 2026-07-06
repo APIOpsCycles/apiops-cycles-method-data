@@ -73,6 +73,35 @@ export const CANVAS_SECTION_NOTE_INTENTS = Object.freeze({
     painRelievingFeatures: "benefit",
     apiProducts: "neutral"
   },
+  capabilityValuePropositionCanvas: {
+    consumerTasks: "task",
+    gainEnablingCapabilities: "benefit",
+    painRelievingCapabilities: "benefit",
+    reusableCapabilities: "neutral"
+  },
+  capabilityBusinessModelCanvas: {
+    keyPartners: "neutral",
+    keyActivities: "task",
+    keyResources: "neutral",
+    capabilityValueProposition: "benefit",
+    consumerEngagement: "neutral",
+    channels: "task",
+    capabilityConsumerSegments: "neutral",
+    costs: "negative",
+    benefits: "benefit"
+  },
+  consumerExperienceRequirementsCanvas: {
+    consumerGoals: "benefit",
+    availabilityAndTimeliness: "neutral",
+    volumeAndPerformance: "neutral",
+    dataQualityAndConsistency: "neutral",
+    securityPrivacyAndCompliance: "negative",
+    onboardingAndAccess: "task",
+    changeAndVersioning: "negative",
+    observabilityAndSupport: "task",
+    recoveryAndContinuity: "task",
+    architectureImplications: "neutral"
+  },
   businessImpactCanvas: {
     availabilityRisks: "negative",
     securityRisks: "negative",
@@ -237,10 +266,8 @@ export function getCoreStations() {
 
 export function getStations() {
   const stations = readJson(resolveMethodFile("stations.json"));
-  return [
-    ...((stations["core-stations"] && stations["core-stations"].items) || []),
-    ...((stations["sub-stations"] && stations["sub-stations"].items) || [])
-  ]
+  return Object.values(stations)
+    .flatMap((group) => group.items || [])
     .slice()
     .sort((left, right) => left.order - right.order);
 }
@@ -280,6 +307,10 @@ export function getStationCriteriaMap() {
   return readJson(resolveMethodFile("station-criteria.json"));
 }
 
+export function getCriteria() {
+  return readJson(resolveMethodFile("criteria.json"));
+}
+
 export function getStakeholders() {
   return readJson(resolveMethodFile("stakeholders.json")).stakeholders || [];
 }
@@ -290,6 +321,23 @@ export function getStationStakeholderMap() {
 
 export function getResources() {
   return readJson(resolveMethodFile("resources.json")).resources || [];
+}
+
+export function getLines() {
+  return readJson(resolveMethodFile("lines.json")).lines?.items || [];
+}
+
+export function getCycles() {
+  return readJson(resolveMethodFile("cycles.json")).cycles?.items || [];
+}
+
+export function getCycle(cycleId) {
+  const normalizedCycleId = String(cycleId || "").trim();
+  const cycle = getCycles().find((entry) => entry.id === normalizedCycleId || entry.slug === normalizedCycleId);
+  if (!cycle) {
+    throw new Error(`Unknown cycle: ${cycleId}`);
+  }
+  return cycle;
 }
 
 export function normalizeResourceId(resourceId) {
@@ -705,6 +753,168 @@ export function generateCanvasForStationResource(stationId, resourceId, locale =
 
 export function getCanvasCreatorUrl(canvasId, locale = DEFAULT_LOCALE) {
   return `${CANVAS_CREATOR_BASE_URL}?canvas=${encodeURIComponent(canvasId)}&locale=${encodeURIComponent(locale)}`;
+}
+
+function formatMarkdownCell(value) {
+  return String(value || "")
+    .replace(/\r?\n/g, " ")
+    .trim();
+}
+
+function formatGuidanceList(values) {
+  return values
+    .map((value) => formatMarkdownCell(value).replace(/[.;:]+$/g, ""))
+    .filter(Boolean)
+    .join("; ");
+}
+
+function isPlaceholderExampleNote(content) {
+  const normalized = String(content || "").trim().replace(/\s+/g, " ");
+  return !normalized ||
+    /^placeholder$/i.test(normalized) ||
+    /^double-click on text to edit\. click and select color$/i.test(normalized);
+}
+
+function formatExampleNotes(notes) {
+  return (notes || [])
+    .map((note) => String(note.content || "").trim())
+    .filter((content) => !isPlaceholderExampleNote(content))
+    .join("; ");
+}
+
+function formatExampleAnswer(value) {
+  const text = formatMarkdownCell(value);
+  return text ? `_Example: ${text}_` : "";
+}
+
+function renderConfluencePasteTableRow(values) {
+  return `| ${values.map((value) => formatMarkdownCell(value)).join(" | ")} |`;
+}
+
+function renderConfluenceWikiHeaderRow(values) {
+  return `|| ${values.map((value) => formatMarkdownCell(value)).join(" || ")} ||`;
+}
+
+function renderConfluenceWikiRow(values) {
+  return `| ${values.map((value) => formatMarkdownCell(value)).join(" | ")} |`;
+}
+
+function buildStationCanvasGroups(canvasRows) {
+  const groups = [];
+  const groupsByStation = new Map();
+
+  for (const row of canvasRows) {
+    const stationKey = row.stationTitle || "Requirements";
+    let group = groupsByStation.get(stationKey);
+    if (!group) {
+      group = {
+        stationTitle: stationKey,
+        stationDescription: row.stationDescription || "",
+        stationWhyItMatters: row.stationWhyItMatters || "",
+        canvasRows: []
+      };
+      groupsByStation.set(stationKey, group);
+      groups.push(group);
+    }
+
+    group.canvasRows.push(row);
+  }
+
+  return groups;
+}
+
+function findCanvasResource(canvasId) {
+  return getResources().find((resource) => resource.canvas === canvasId) || null;
+}
+
+function findCanvasStationContext(canvasId, resourceId, stationPath, stationOverlays) {
+  const overlay = stationOverlays.find((entry) => {
+    const reuse = entry.reuse || [];
+    const alternatives = entry.alternativeResources || [];
+    return reuse.includes(canvasId) ||
+      reuse.includes(resourceId) ||
+      alternatives.includes(canvasId) ||
+      alternatives.includes(resourceId);
+  });
+
+  if (!overlay) {
+    return null;
+  }
+
+  return stationPath.find((station) => station.id === overlay.station) || null;
+}
+
+function getDocumentCanvasStationContext(canvasId, resourceId, extension, stationPath) {
+  const explicitStationId = extension.documentCanvasStations?.[canvasId] || extension.documentCanvasStations?.[resourceId];
+  if (explicitStationId) {
+    return stationPath.find((station) => station.id === explicitStationId) || null;
+  }
+
+  return findCanvasStationContext(canvasId, resourceId, stationPath, extension.stationOverlays || []);
+}
+
+function findStationInstruction(stationId, resourceId, locale) {
+  if (!stationId || !resourceId) {
+    return "";
+  }
+
+  const stationLabels = getLocalizedLabels(locale, "stations");
+  const station = getStations().find((entry) => entry.id === stationId);
+  const step = getStationSteps(station || {}).find((entry) => normalizeResourceId(entry.resource) === resourceId);
+  return step ? translate(step.step, stationLabels) : "";
+}
+
+function normalizeDocumentText(value) {
+  return String(value || "");
+}
+
+function getCanvasExampleAnswers(canvasId) {
+  const templatesDir = resolveCanvasFile("import-export-templates");
+  if (!fs.existsSync(templatesDir)) {
+    return new Map();
+  }
+
+  const examplesBySection = new Map();
+  const files = fs.readdirSync(templatesDir)
+    .filter((fileName) => fileName.endsWith(".json"))
+    .map((fileName) => path.join(templatesDir, fileName));
+
+  for (const filePath of files) {
+    const template = readJson(filePath);
+    if (template.templateId !== canvasId) {
+      continue;
+    }
+
+    for (const section of template.sections || []) {
+      const exampleAnswer = formatExampleNotes(section.stickyNotes);
+      if (!exampleAnswer) {
+        continue;
+      }
+
+      const existing = examplesBySection.get(section.sectionId);
+      examplesBySection.set(
+        section.sectionId,
+        existing ? `${existing}; ${exampleAnswer}` : exampleAnswer
+      );
+    }
+  }
+
+  return examplesBySection;
+}
+
+function buildCriteriaMetadata(criteriaIds, locale) {
+  const criteriaLabels = getLocalizedLabels(locale, "criteria");
+  const criteriaById = new Map(getCriteria().map((criterion) => [criterion.id, criterion]));
+  return (criteriaIds || [])
+    .map((criterionId) => {
+      const criterion = criteriaById.get(criterionId);
+      return criterion ? {
+        id: criterion.id,
+        title: translate(`criterion.${criterion.id}`, criteriaLabels),
+        description: criterion.description
+      } : null;
+    })
+    .filter(Boolean);
 }
 
 export function resolveStationIds(options = {}) {

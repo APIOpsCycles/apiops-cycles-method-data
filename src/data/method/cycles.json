@@ -1,0 +1,363 @@
+{
+  "cycles": {
+    "title": "cycles.title",
+    "slug": "cycles",
+    "order": 0,
+    "description": "cycles.description",
+    "items": [
+      {
+        "id": "capability-productization-cycle",
+        "title": "cycle.capability-productization-cycle.title",
+        "slug": "capability-productization-cycle",
+        "description": "cycle.capability-productization-cycle.description",
+        "purpose": "cycle.capability-productization-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.capability-strategy",
+          "api-consumer-experience": "cycle.station.consumer-requirements-onboarding",
+          "api-platform-architecture": "cycle.station.architecture-platform-decisions",
+          "api-design": "cycle.station.solution-interface-design",
+          "api-delivery": "cycle.station.delivery-operations",
+          "api-audit": "cycle.station.quality-readiness-assurance",
+          "api-publishing": "cycle.station.publishing-enablement",
+          "monitoring-and-improving": "cycle.station.monitoring-improvement"
+        },
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.capability-productization-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.capability-productization-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.capability-productization-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.capability-productization-cycle.station.api-design.description",
+          "api-delivery": "cycle.capability-productization-cycle.station.api-delivery.description",
+          "api-audit": "cycle.capability-productization-cycle.station.api-audit.description",
+          "api-publishing": "cycle.capability-productization-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.capability-productization-cycle.station.monitoring-and-improving.description"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "capabilityValuePropositionCanvas",
+            "capabilityBusinessModelCanvas"
+          ],
+          "api-consumer-experience": [
+            "consumerExperienceRequirementsCanvas",
+            "api-onboarding-best-practices"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "api-onboarding-best-practices",
+            "service-agreement-template"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics",
+            "api-community-engagement-strategies"
+          ]
+        },
+        "entryCriteria": [
+          "business-goals-defined",
+          "stakeholder-approval"
+        ],
+        "exitCriteria": [
+          "value-prop-validated",
+          "architecture-patterns-validated",
+          "audit-passed"
+        ]
+      },
+      {
+        "id": "api-productization-cycle",
+        "title": "cycle.api-productization-cycle.title",
+        "slug": "api-productization-cycle",
+        "description": "cycle.api-productization-cycle.description",
+        "purpose": "cycle.api-productization-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.api-product-strategy",
+          "api-consumer-experience": "cycle.station.api-consumer-experience",
+          "api-platform-architecture": "cycle.station.api-platform-architecture",
+          "api-design": "cycle.station.api-design",
+          "api-delivery": "cycle.station.api-delivery",
+          "api-audit": "cycle.station.api-audit",
+          "api-publishing": "cycle.station.api-publishing",
+          "monitoring-and-improving": "cycle.station.monitoring-and-improving"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "apiValuePropositionCanvas",
+            "apiBusinessModelCanvas"
+          ],
+          "api-consumer-experience": [
+            "apiValuePropositionCanvas",
+            "customerJourneyCanvas",
+            "api-onboarding-best-practices"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas",
+            "api-metrics-and-analytics"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "eventCanvas",
+            "graphqlCanvas",
+            "api-design-principles",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis",
+            "api-security-best-practices"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "apiops-CI-CD-for-apis",
+            "api-onboarding-best-practices",
+            "api-audit-checklist"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics",
+            "api-community-engagement-strategies"
+          ]
+        },
+        "entryCriteria": [
+          "api-opportunity-documented",
+          "consumer-segments-identified"
+        ],
+        "exitCriteria": [
+          "api-contract-tested",
+          "api-ready-for-publishing",
+          "api-documentation-ready"
+        ],
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.api-productization-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.api-productization-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.api-productization-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.api-productization-cycle.station.api-design.description",
+          "api-delivery": "cycle.api-productization-cycle.station.api-delivery.description",
+          "api-audit": "cycle.api-productization-cycle.station.api-audit.description",
+          "api-publishing": "cycle.api-productization-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.api-productization-cycle.station.monitoring-and-improving.description"
+        }
+      },
+      {
+        "id": "integration-productization-cycle",
+        "title": "cycle.integration-productization-cycle.title",
+        "slug": "integration-productization-cycle",
+        "description": "cycle.integration-productization-cycle.description",
+        "purpose": "cycle.integration-productization-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.integration-capability-strategy",
+          "api-consumer-experience": "cycle.station.integration-consumer-requirements-onboarding",
+          "api-platform-architecture": "cycle.station.integration-architecture-decision",
+          "api-design": "cycle.station.integration-solution-design",
+          "api-delivery": "cycle.station.integration-delivery-operations",
+          "api-audit": "cycle.station.integration-readiness-assurance",
+          "api-publishing": "cycle.station.capability-publishing",
+          "monitoring-and-improving": "cycle.station.integration-monitoring-improvement"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "capabilityValuePropositionCanvas",
+            "capabilityBusinessModelCanvas"
+          ],
+          "api-consumer-experience": [
+            "consumerExperienceRequirementsCanvas",
+            "api-onboarding-best-practices"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas",
+            "api-metrics-and-analytics"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "eventCanvas",
+            "graphqlCanvas",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis",
+            "api-security-best-practices"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "api-onboarding-best-practices",
+            "service-agreement-template"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics",
+            "api-community-engagement-strategies"
+          ]
+        },
+        "entryCriteria": [
+          "business-goals-defined",
+          "api-opportunity-documented"
+        ],
+        "exitCriteria": [
+          "architecture-patterns-validated",
+          "api-description-available",
+          "audit-passed"
+        ],
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.integration-productization-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.integration-productization-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.integration-productization-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.integration-productization-cycle.station.api-design.description",
+          "api-delivery": "cycle.integration-productization-cycle.station.api-delivery.description",
+          "api-audit": "cycle.integration-productization-cycle.station.api-audit.description",
+          "api-publishing": "cycle.integration-productization-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.integration-productization-cycle.station.monitoring-and-improving.description"
+        }
+      },
+      {
+        "id": "automation-cycle",
+        "title": "cycle.automation-cycle.title",
+        "slug": "automation-cycle",
+        "description": "cycle.automation-cycle.description",
+        "purpose": "cycle.automation-cycle.purpose",
+        "stations": [
+          "api-product-strategy",
+          "api-consumer-experience",
+          "api-platform-architecture",
+          "api-design",
+          "api-delivery",
+          "api-audit",
+          "api-publishing",
+          "monitoring-and-improving"
+        ],
+        "stationLabels": {
+          "api-product-strategy": "cycle.station.automation-opportunity-strategy",
+          "api-consumer-experience": "cycle.station.process-user-requirements",
+          "api-platform-architecture": "cycle.station.automation-platform-decision",
+          "api-design": "cycle.station.automation-workflow-design",
+          "api-delivery": "cycle.station.automation-delivery",
+          "api-audit": "cycle.station.automation-readiness-review",
+          "api-publishing": "cycle.station.automation-enablement",
+          "monitoring-and-improving": "cycle.station.automation-monitoring-improvement"
+        },
+        "recommendedResources": {
+          "api-product-strategy": [
+            "customerJourneyCanvas",
+            "domainCanvas",
+            "capabilityValuePropositionCanvas"
+          ],
+          "api-consumer-experience": [
+            "consumerExperienceRequirementsCanvas"
+          ],
+          "api-platform-architecture": [
+            "businessImpactCanvas",
+            "locationsCanvas",
+            "capacityCanvas"
+          ],
+          "api-design": [
+            "domainCanvas",
+            "interactionCanvas",
+            "restCanvas",
+            "eventCanvas",
+            "graphqlCanvas",
+            "contract-first-design"
+          ],
+          "api-delivery": [
+            "api-development-best-practices",
+            "api-testing-best-practices",
+            "apiops-CI-CD-for-apis"
+          ],
+          "api-audit": [
+            "api-audit-checklist",
+            "api-compliance-best-practices"
+          ],
+          "api-publishing": [
+            "api-onboarding-best-practices"
+          ],
+          "monitoring-and-improving": [
+            "api-metrics-and-analytics"
+          ]
+        },
+        "overlays": [],
+        "entryCriteria": [
+          "business-goals-defined",
+          "stakeholder-approval"
+        ],
+        "exitCriteria": [
+          "design-reflects-business-value",
+          "api-contract-tested",
+          "audit-passed"
+        ],
+        "stationDescriptions": {
+          "api-product-strategy": "cycle.automation-cycle.station.api-product-strategy.description",
+          "api-consumer-experience": "cycle.automation-cycle.station.api-consumer-experience.description",
+          "api-platform-architecture": "cycle.automation-cycle.station.api-platform-architecture.description",
+          "api-design": "cycle.automation-cycle.station.api-design.description",
+          "api-delivery": "cycle.automation-cycle.station.api-delivery.description",
+          "api-audit": "cycle.automation-cycle.station.api-audit.description",
+          "api-publishing": "cycle.automation-cycle.station.api-publishing.description",
+          "monitoring-and-improving": "cycle.automation-cycle.station.monitoring-and-improving.description"
+        }
+      }
+    ]
+  }
+}

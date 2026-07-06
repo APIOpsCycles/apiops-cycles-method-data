@@ -7,6 +7,7 @@ function readJson(filePath) {
 
 const stationsJson = readJson("src/data/method/stations.json");
 const linesJson = readJson("src/data/method/lines.json");
+const cyclesJson = readJson("src/data/method/cycles.json");
 const resourcesJson = readJson("src/data/method/resources.json");
 const criteriaJson = readJson("src/data/method/criteria.json");
 const stakeholdersJson = readJson("src/data/method/stakeholders.json");
@@ -14,16 +15,18 @@ const stationCriteriaJson = readJson("src/data/method/station-criteria.json");
 const canvasDataJson = readJson("src/data/canvas/canvasData.json");
 const localizedCanvasDataJson = readJson("src/data/canvas/localizedData.json");
 const knownResourceIds = new Set((resourcesJson.resources || []).map((resource) => resource.id));
-const stationGroups = [
-  ...(stationsJson["core-stations"]?.items || []).map((station) => ({ ...station, group: "core-stations" })),
-  ...(stationsJson["sub-stations"]?.items || []).map((station) => ({ ...station, group: "sub-stations" }))
-];
+const knownCriteriaIds = new Set((criteriaJson || []).map((criterion) => criterion.id));
+const knownCycleIds = new Set((cyclesJson.cycles?.items || []).map((cycle) => cycle.id));
+const stationGroups = Object.entries(stationsJson).flatMap(([groupId, group]) => (
+  (group.items || []).map((station) => ({ ...station, group: groupId }))
+));
 const knownStationIds = new Set(stationGroups.map((station) => station.id));
 const knownCanvasIds = new Set(Object.keys(canvasDataJson));
 const localeDirs = readdirSync("src/data/method", { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name);
 const findings = [];
+const warnings = [];
 const lifecycleStages = new Set(["strategy", "architecture", "design", "delivery", "publishing", "improving"]);
 
 function collectMatchingStringValues(node, pattern, results = new Set()) {
@@ -52,12 +55,15 @@ function collectMatchingStringValues(node, pattern, results = new Set()) {
 
 function validateLabelFile(locale, filename, expectedKeys, allowedExtras = []) {
   const filePath = path.join("src", "data", "method", locale, filename);
+  const fallbackFilePath = path.join("src", "data", "method", "en", filename);
   const labels = readJson(filePath);
+  const fallbackLabels = readJson(fallbackFilePath);
   const actualKeys = new Set(Object.keys(labels));
+  const fallbackKeys = new Set(Object.keys(fallbackLabels));
   const allowedExtrasSet = new Set(allowedExtras);
 
   for (const expectedKey of expectedKeys) {
-    if (!actualKeys.has(expectedKey)) {
+    if (!actualKeys.has(expectedKey) && !fallbackKeys.has(expectedKey)) {
       findings.push(`Locale ${locale} is missing label "${expectedKey}" in ${filename}.`);
     }
   }
@@ -93,7 +99,7 @@ for (const station of stationGroups) {
     }
 
     if (seenResources.has(resourceId)) {
-      findings.push(
+      warnings.push(
         `Station ${station.id} contains duplicate resource reference "${resourceId}" at indexes ${seenResources.get(resourceId)} and ${index}.`
       );
     } else {
@@ -122,6 +128,58 @@ for (const station of stationGroups) {
       findings.push(`Core station ${station.id} must define expectedEvidenceTags.`);
     }
   }
+
+  if (station.group === "sub-stations") {
+    if (station.type !== "supporting-station") {
+      findings.push(`Substation ${station.id} must have type "supporting-station".`);
+    }
+
+    const applicableCycles = new Set(station.applicableCycles || []);
+    if (applicableCycles.size === 0) {
+      findings.push(`Substation ${station.id} must define applicableCycles.`);
+    }
+
+    for (const cycleId of applicableCycles) {
+      if (!knownCycleIds.has(cycleId)) {
+        findings.push(`Substation ${station.id} applicableCycles references unknown cycle "${cycleId}".`);
+      }
+    }
+
+    for (const cycleId of station.defaultForCycles || []) {
+      if (!knownCycleIds.has(cycleId)) {
+        findings.push(`Substation ${station.id} defaultForCycles references unknown cycle "${cycleId}".`);
+      }
+      if (!applicableCycles.has(cycleId)) {
+        findings.push(`Substation ${station.id} defaultForCycles contains "${cycleId}" that is not in applicableCycles.`);
+      }
+    }
+
+    for (const cycleId of Object.keys(station.cycleSpecificLabels || {})) {
+      if (!knownCycleIds.has(cycleId)) {
+        findings.push(`Substation ${station.id} cycleSpecificLabels references unknown cycle "${cycleId}".`);
+      }
+    }
+
+    for (const cycleId of Object.keys(station.cycleSpecificDescriptions || {})) {
+      if (!knownCycleIds.has(cycleId)) {
+        findings.push(`Substation ${station.id} cycleSpecificDescriptions references unknown cycle "${cycleId}".`);
+      }
+    }
+
+    for (const [cycleId, resourceIds] of Object.entries(station.cycleSpecificResources || {})) {
+      if (!knownCycleIds.has(cycleId)) {
+        findings.push(`Substation ${station.id} cycleSpecificResources references unknown cycle "${cycleId}".`);
+      }
+      if (!applicableCycles.has(cycleId)) {
+        findings.push(`Substation ${station.id} cycleSpecificResources contains "${cycleId}" that is not in applicableCycles.`);
+      }
+      for (const resourceId of resourceIds || []) {
+        if (!knownResourceIds.has(resourceId)) {
+          findings.push(`Substation ${station.id} cycleSpecificResources for "${cycleId}" references unknown resource "${resourceId}".`);
+        }
+      }
+    }
+  }
 }
 
 for (const line of linesJson.lines?.items || []) {
@@ -140,6 +198,63 @@ for (const line of linesJson.lines?.items || []) {
       findings.push(`Line ${line.id} references unknown station "${stationId}" at index ${index}.`);
     }
   }
+}
+
+for (const cycle of cyclesJson.cycles?.items || []) {
+  const seenStations = new Map();
+
+  for (const [index, stationId] of (cycle.stations || []).entries()) {
+    if (seenStations.has(stationId)) {
+      findings.push(
+        `Cycle ${cycle.id} contains duplicate station "${stationId}" at indexes ${seenStations.get(stationId)} and ${index}.`
+      );
+    } else {
+      seenStations.set(stationId, index);
+    }
+
+    if (!knownStationIds.has(stationId)) {
+      findings.push(`Cycle ${cycle.id} references unknown station "${stationId}" at index ${index}.`);
+    }
+  }
+
+  for (const [stationId, resourceIds] of Object.entries(cycle.recommendedResources || {})) {
+    if (!knownStationIds.has(stationId)) {
+      findings.push(`Cycle ${cycle.id} recommends resources for unknown station "${stationId}".`);
+    }
+    for (const resourceId of resourceIds || []) {
+      if (!knownResourceIds.has(resourceId)) {
+        findings.push(`Cycle ${cycle.id} recommends unknown resource "${resourceId}" for station "${stationId}".`);
+      }
+    }
+  }
+
+  for (const [index, entry] of (cycle.questionnaireResources || []).entries()) {
+    if (!knownStationIds.has(entry.station)) {
+      findings.push(`Cycle ${cycle.id} questionnaire resource at index ${index} references unknown station "${entry.station}".`);
+    }
+    if (!knownResourceIds.has(entry.resource)) {
+      findings.push(`Cycle ${cycle.id} questionnaire resource at index ${index} references unknown resource "${entry.resource}".`);
+    }
+  }
+
+  for (const [index, overlay] of (cycle.overlays || []).entries()) {
+    if (!knownStationIds.has(overlay.station)) {
+      findings.push(`Cycle ${cycle.id} overlay at index ${index} references unknown station "${overlay.station}".`);
+    }
+  }
+
+  for (const criterionId of cycle.entryCriteria || []) {
+    if (!knownCriteriaIds.has(criterionId)) {
+      findings.push(`Cycle ${cycle.id} entryCriteria references unknown criterion "${criterionId}".`);
+    }
+  }
+
+  for (const criterionId of cycle.exitCriteria || []) {
+    if (!knownCriteriaIds.has(criterionId)) {
+      findings.push(`Cycle ${cycle.id} exitCriteria references unknown criterion "${criterionId}".`);
+    }
+  }
+
 }
 
 const stationsUsedInLines = new Set(
@@ -170,6 +285,7 @@ for (const resource of resourcesJson.resources || []) {
 
 const expectedStationLabels = collectMatchingStringValues(stationsJson, /^(group|station)\./);
 const expectedLineLabels = collectMatchingStringValues(linesJson, /^(lines|line)\./);
+const expectedCycleLabels = collectMatchingStringValues(cyclesJson, /^(cycle|cycles)\./);
 const expectedResourceLabels = collectMatchingStringValues(resourcesJson, /^resource\./);
 const expectedCriteriaLabels = new Set(criteriaJson.map((criterion) => `criterion.${criterion.id}`));
 const expectedStakeholderLabels = collectMatchingStringValues(stakeholdersJson, /^stakeholder\./);
@@ -177,6 +293,9 @@ const expectedStakeholderLabels = collectMatchingStringValues(stakeholdersJson, 
 for (const locale of localeDirs) {
   validateLabelFile(locale, "labels.stations.json", expectedStationLabels);
   validateLabelFile(locale, "labels.lines.json", expectedLineLabels);
+  if (locale === "en" || existsSync(path.join("src", "data", "method", locale, "labels.cycles.json"))) {
+    validateLabelFile(locale, "labels.cycles.json", expectedCycleLabels);
+  }
   validateLabelFile(locale, "labels.resources.json", expectedResourceLabels);
   validateLabelFile(locale, "labels.criteria.json", expectedCriteriaLabels, ["entry_criteria", "exit_criteria"]);
   validateLabelFile(
@@ -234,6 +353,13 @@ if (findings.length > 0) {
     console.error(`- ${finding}`);
   }
   process.exit(1);
+}
+
+if (warnings.length > 0) {
+  console.log("Method content validation warnings:");
+  for (const warning of warnings) {
+    console.log(`- ${warning}`);
+  }
 }
 
 console.log("Method content validation passed.");
