@@ -24,7 +24,7 @@
   "definitions": {
     "cycle": {
       "type": "object",
-      "required": ["id", "title", "slug", "description", "audiences", "purpose", "stations"],
+      "required": ["id", "title", "slug", "description", "purpose", "stations"],
       "additionalProperties": false,
       "properties": {
         "id": { "type": "string" },

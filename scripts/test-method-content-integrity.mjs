@@ -130,12 +130,21 @@ for (const station of stationGroups) {
   }
 
   if (station.group === "sub-stations") {
-    if (station.type !== "supporting-station") {
+    const hasCycleSpecificMetadata = Boolean(
+      station.type ||
+      station.applicableCycles ||
+      station.defaultForCycles ||
+      station.cycleSpecificLabels ||
+      station.cycleSpecificDescriptions ||
+      station.cycleSpecificResources
+    );
+
+    if (hasCycleSpecificMetadata && station.type !== "supporting-station") {
       findings.push(`Substation ${station.id} must have type "supporting-station".`);
     }
 
     const applicableCycles = new Set(station.applicableCycles || []);
-    if (applicableCycles.size === 0) {
+    if (hasCycleSpecificMetadata && applicableCycles.size === 0) {
       findings.push(`Substation ${station.id} must define applicableCycles.`);
     }
 
@@ -291,10 +300,16 @@ const expectedCriteriaLabels = new Set(criteriaJson.map((criterion) => `criterio
 const expectedStakeholderLabels = collectMatchingStringValues(stakeholdersJson, /^stakeholder\./);
 
 for (const locale of localeDirs) {
-  validateLabelFile(locale, "labels.stations.json", expectedStationLabels);
+  const stationLabelFile = path.join("src", "data", "method", locale, "labels.stations.json");
+  const stationLabelExtras = Object.keys(readJson(stationLabelFile))
+    .filter((key) => key.startsWith("cycle."));
+  validateLabelFile(locale, "labels.stations.json", expectedStationLabels, stationLabelExtras);
   validateLabelFile(locale, "labels.lines.json", expectedLineLabels);
   if (locale === "en" || existsSync(path.join("src", "data", "method", locale, "labels.cycles.json"))) {
-    validateLabelFile(locale, "labels.cycles.json", expectedCycleLabels);
+    const cycleLabelFile = path.join("src", "data", "method", locale, "labels.cycles.json");
+    const cycleLabelExtras = Object.keys(readJson(cycleLabelFile))
+      .filter((key) => key.startsWith("cycle.owner.") || key.startsWith("cycle.audience.") || key.startsWith("cycle.template."));
+    validateLabelFile(locale, "labels.cycles.json", expectedCycleLabels, cycleLabelExtras);
   }
   validateLabelFile(locale, "labels.resources.json", expectedResourceLabels);
   validateLabelFile(locale, "labels.criteria.json", expectedCriteriaLabels, ["entry_criteria", "exit_criteria"]);

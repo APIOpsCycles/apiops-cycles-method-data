@@ -12,6 +12,7 @@ const templateDir = path.resolve(__dirname, "..", "template");
 const DEFAULTS = {
   name: "my-api-project",
   locale: "en",
+  cycle: "api-productization-cycle",
   style: "REST",
   install: true
 };
@@ -23,6 +24,7 @@ function parseArgs(argv) {
     yes: false,
     name: undefined,
     locale: undefined,
+    cycle: undefined,
     style: undefined,
     install: undefined,
     errors: []
@@ -77,6 +79,12 @@ function parseArgs(argv) {
       i = result.nextIndex;
       continue;
     }
+    if (arg === "--cycle" || arg.startsWith("--cycle=")) {
+      const result = readValue(arg, "cycle", i);
+      args.cycle = result.value;
+      i = result.nextIndex;
+      continue;
+    }
     if (arg === "--style" || arg.startsWith("--style=")) {
       const result = readValue(arg, "style", i);
       args.style = result.value;
@@ -119,6 +127,7 @@ Usage:
 Options:
   --name <name>        Project directory and package name. Same as project-name.
   --locale <locale>    Default locale for generated method commands. Default: ${DEFAULTS.locale}
+  --cycle <cycle-id>   APIOps cycle for station labels and resources. Default: ${DEFAULTS.cycle}
   --style <style>      API style focus: REST, Event, GraphQL, or "Not sure yet". Default: ${DEFAULTS.style}
   --yes, -y            Accept defaults for omitted options and run without prompts.
                       Use this in non-interactive shells when any prompt answer is omitted.
@@ -129,8 +138,8 @@ Options:
 Examples:
   npm create apiops@latest
   npm create apiops@latest my-api
-  npm create apiops@latest -- --name my-api --locale en --style REST --yes
-  npm create apiops@latest -- my-api --locale en --style REST --yes --no-install
+  npm create apiops@latest -- --name my-api --locale en --cycle api-productization-cycle --style REST --yes
+  npm create apiops@latest -- my-api --locale en --cycle api-productization-cycle --style REST --yes --no-install
 `);
 }
 
@@ -198,7 +207,7 @@ function runCommand(command, args, options = {}) {
 }
 
 function hasCompleteNonInteractiveConfig(args) {
-  return args.name && args.locale && args.style && args.install !== undefined;
+  return args.name && args.locale && args.cycle && args.style && args.install !== undefined;
 }
 
 async function getScaffoldConfig() {
@@ -223,6 +232,7 @@ async function getScaffoldConfig() {
   const initial = {
     projectName: args.name || DEFAULTS.name,
     locale: args.locale || DEFAULTS.locale,
+    cycle: args.cycle || DEFAULTS.cycle,
     apiStyle: normalizeStyle(args.style || DEFAULTS.style),
     installNow: args.install === undefined ? DEFAULTS.install : args.install
   };
@@ -233,8 +243,8 @@ async function getScaffoldConfig() {
 
   if (!process.stdin.isTTY || !process.stdout.isTTY) {
     console.error("create-apiops cannot prompt because stdin or stdout is not interactive.");
-    console.error("Pass --yes to accept defaults for omitted options. To skip --yes, pass --name, --locale, --style, and --no-install.");
-    console.error("Example: npm create apiops@latest -- --name my-api --locale en --style REST --yes");
+    console.error("Pass --yes to accept defaults for omitted options. To skip --yes, pass --name, --locale, --cycle, --style, and --no-install.");
+    console.error("Example: npm create apiops@latest -- --name my-api --locale en --cycle api-productization-cycle --style REST --yes");
     process.exit(1);
   }
 
@@ -245,6 +255,7 @@ async function getScaffoldConfig() {
 
   const projectName = args.name || await ask(rl, "Project name", initial.projectName);
   const locale = args.locale || await ask(rl, "Default locale", initial.locale);
+  const cycle = args.cycle || await ask(rl, "APIOps cycle", initial.cycle);
   const apiStyle = normalizeStyle(args.style || await ask(rl, "API style focus [REST/Event/GraphQL/Not sure yet]", initial.apiStyle));
   const installAnswer = args.install === undefined
     ? await ask(rl, "Install dependencies now? [yes/no]", initial.installNow ? "yes" : "no")
@@ -254,13 +265,14 @@ async function getScaffoldConfig() {
   return {
     projectName,
     locale,
+    cycle,
     apiStyle,
     installNow: installAnswer.toLowerCase() === "yes"
   };
 }
 
 async function main() {
-  const { projectName, locale, apiStyle, installNow } = await getScaffoldConfig();
+  const { projectName, locale, cycle, apiStyle, installNow } = await getScaffoldConfig();
 
   const targetDir = path.resolve(process.cwd(), projectName);
   if (fs.existsSync(targetDir)) {
@@ -273,6 +285,7 @@ async function main() {
   const replacements = {
     "__PROJECT_NAME__": projectName,
     "__LOCALE__": locale,
+    "__CYCLE__": cycle,
     "__API_TITLE__": projectName.replace(/[-_]/g, " "),
     "__API_STYLE__": apiStyle
   };
@@ -300,6 +313,7 @@ async function main() {
         "./node_modules/apiops-cycles-method-data/bin/method-cli.js",
         "generate-canvases",
         "--preset", "new-api",
+        "--cycle", cycle,
         "--style", apiStyle,
         "--locale", locale,
         "--output", "./specs/canvases"

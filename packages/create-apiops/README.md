@@ -19,13 +19,13 @@ npm create apiops@latest report-conversion-apiops
 Non-interactive scaffold:
 
 ```bash
-npm create apiops@latest -- --name report-conversion-apiops --locale en --style REST --yes
+npm create apiops@latest -- --name report-conversion-apiops --locale en --cycle api-productization-cycle --style REST --yes
 ```
 
 Skip dependency installation:
 
 ```bash
-npm create apiops@latest -- report-conversion-apiops --locale en --style REST --yes --no-install
+npm create apiops@latest -- report-conversion-apiops --locale en --cycle api-productization-cycle --style REST --yes --no-install
 ```
 
 ## npm create argument forwarding
@@ -55,6 +55,7 @@ npx create-apiops@latest --help
 
 - `--name <name>` or the first positional argument sets the project directory and package name.
 - `--locale <locale>` sets the default method locale. Default: `en`.
+- `--cycle <cycle-id>` sets the APIOps cycle for station labels, stakeholders, and recommended resources. Default: `api-productization-cycle`.
 - `--style <style>` sets the API style focus: `REST`, `Event`, `GraphQL`, or `"Not sure yet"`. Default: `REST`.
 - `--yes`, `-y` accepts defaults for omitted options and runs without prompts. Use it in non-interactive shells when any prompt answer is omitted.
 - `--no-install` skips dependency installation and starter canvas generation.

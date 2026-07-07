@@ -15,7 +15,7 @@ npm create apiops@latest report-conversion-apiops
 Non-interactive scaffold:
 
 ```bash
-npm create apiops@latest -- --name report-conversion-apiops --locale en --style REST --yes
+npm create apiops@latest -- --name report-conversion-apiops --locale en --cycle api-productization-cycle --style REST --yes
 ```
 
 When using `npm create`, pass initializer flags after the `--` separator. Flags before the separator are handled by npm itself and may not reach `create-apiops`.
@@ -30,6 +30,7 @@ Useful options:
 
 - `--name <name>` or the first positional argument sets the project directory and package name
 - `--locale <locale>` sets the default method locale, such as `en` or `fi`
+- `--cycle <cycle-id>` sets the APIOps cycle used for station labels, stakeholders, and recommended resources; default: `api-productization-cycle`
 - `--style <style>` sets the API style focus: `REST`, `Event`, `GraphQL`, or `"Not sure yet"`
 - `--yes` accepts defaults for omitted options and runs without prompts; use it in non-interactive shells when any prompt answer is omitted
 - `--no-install` skips dependency installation and starter canvas generation
@@ -88,7 +89,8 @@ The `snippet-engine` export resolves canonical resource snippets, including loca
 The method also includes reusable stakeholder data:
 
 - `src/data/method/stakeholders.json` defines the shared stakeholder catalog
-- `src/data/method/station-stakeholders.json` maps each station to weighted stakeholder participation
+- `src/data/method/cycles.json` defines APIOps cycles that reuse canonical core station ids while providing cycle-specific station labels, descriptions, and recommended resources
+- `src/data/method/station-stakeholders.json` maps cycle ids to station-specific stakeholder participation and optional responsibilities
 - `src/data/method/<locale>/labels.stakeholders.json` stores localized stakeholder titles, descriptions, and involvement labels
 
 Stakeholder involvement uses three lightweight levels:
@@ -136,11 +138,11 @@ If you spot a problem in the documentation or have an idea for new content, open
 
 ### Editing or adding content
 
-The main method content files are located under `src/data/method/`. These base files (`lines.json`, `stations.json`, `resources.json`, `criteria.json`, `station-criteria.json`, `stakeholders.json`, and `station-stakeholders.json`) are not localized and live at the root of the folder. Textual values in them reference label keys. English labels are in `src/data/method/en`, and translations are provided in locale folders through `labels.lines.json`, `labels.stations.json`, `labels.resources.json`, `labels.criteria.json`, and `labels.stakeholders.json`.
+The main method content files are located under `src/data/method/`. These base files (`lines.json`, `cycles.json`, `stations.json`, `resources.json`, `criteria.json`, `station-criteria.json`, `stakeholders.json`, and `station-stakeholders.json`) are not localized and live at the root of the folder. Textual values in them reference label keys. English labels are in `src/data/method/en`, and translations are provided in locale folders through `labels.lines.json`, `labels.cycles.json`, `labels.stations.json`, `labels.resources.json`, `labels.criteria.json`, and `labels.stakeholders.json`.
 
 Some longer or more complex resources also use canonical snippet assets under `src/snippets/` linked from `resources.json`. Those snippets are now primarily structured JSON or YAML files, with Markdown kept only where a resource genuinely needs prose content.
 
-Each station links to specific entry criteria followed by the next core station's criteria as exit criteria. Stakeholder participation is modeled separately through `stakeholders.json`, `station-stakeholders.json`, and `labels.stakeholders.json`.
+Each station links to specific entry criteria followed by the next core station's criteria as exit criteria. Cycles in `cycles.json` reuse canonical station ids and can override the displayed station label, station description, and recommended resources for that cycle. Stakeholder participation is modeled separately through `stakeholders.json`, cycle-scoped mappings in `station-stakeholders.json`, and `labels.stakeholders.json`.
 
 #### Editing existing method pages
 

@@ -1,12 +1,13 @@
-import { DEFAULT_STYLE, buildStationResourceData } from "apiops-cycles-method-data/method-engine";
+import { DEFAULT_CYCLE_ID, DEFAULT_STYLE, buildStationResourceData } from "apiops-cycles-method-data/method-engine";
 
 function printUsage() {
-  console.error("Usage: node scripts/get-station-resources.js <station-id> [locale] [style]");
+  console.error("Usage: node scripts/get-station-resources.js <station-id> [locale] [style] [cycle]");
 }
 
 const stationId = process.argv[2];
 const locale = process.argv[3] || "en";
 const style = process.argv[4] || DEFAULT_STYLE;
+const cycle = process.argv[5] || DEFAULT_CYCLE_ID;
 
 if (!stationId) {
   printUsage();
@@ -14,9 +15,10 @@ if (!stationId) {
 }
 
 try {
-  const data = buildStationResourceData(stationId, locale, style);
+  const data = buildStationResourceData(stationId, locale, style, cycle);
   console.log(JSON.stringify({
     stationId: data.stationId,
+    cycleId: data.cycleId,
     locale,
     style: data.style,
     title: data.stationTitle,

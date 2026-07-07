@@ -9,6 +9,7 @@ const repoRoot = path.resolve(__dirname, "..", "..");
 export const DEFAULT_LOCALE = "en";
 export const DEFAULT_OUTPUT_DIR = "specs/canvases";
 export const DEFAULT_STYLE = "Not sure yet";
+export const DEFAULT_CYCLE_ID = "api-productization-cycle";
 export const DEFAULT_NOTE_SIZE = 80;
 export const NOTE_COLOR_PALETTE = Object.freeze({
   benefit: "#C0EB6A",
@@ -319,6 +320,20 @@ export function getStationStakeholderMap() {
   return readJson(resolveMethodFile("station-stakeholders.json"));
 }
 
+export function getStationStakeholderMapForCycle(cycleId = DEFAULT_CYCLE_ID) {
+  const stationStakeholderMap = getStationStakeholderMap();
+  if (stationStakeholderMap.stationStakeholdersByCycle) {
+    const cycle = resolveCycle(cycleId);
+    const entries = stationStakeholderMap.stationStakeholdersByCycle[cycle.id];
+    if (!entries) {
+      throw new Error(`Unknown station stakeholder cycle mapping: ${cycle.id}`);
+    }
+    return entries;
+  }
+
+  return stationStakeholderMap;
+}
+
 export function getResources() {
   return readJson(resolveMethodFile("resources.json")).resources || [];
 }
@@ -340,6 +355,10 @@ export function getCycle(cycleId) {
   return cycle;
 }
 
+export function resolveCycle(cycleId = DEFAULT_CYCLE_ID) {
+  return getCycle(cycleId || DEFAULT_CYCLE_ID);
+}
+
 export function normalizeResourceId(resourceId) {
   const normalized = String(resourceId || "").trim();
   return LEGACY_CANVAS_RESOURCE_ALIASES.get(normalized) || normalized;
@@ -358,6 +377,15 @@ function translate(labelKey, labels) {
   return labels[labelKey] || labelKey;
 }
 
+function translateFromLabelSets(labelKey, ...labelSets) {
+  for (const labels of labelSets) {
+    if (labels[labelKey]) {
+      return labels[labelKey];
+    }
+  }
+  return labelKey;
+}
+
 export function buildStakeholderCatalog(locale = DEFAULT_LOCALE) {
   const stakeholderLabels = getLocalizedLabels(locale, "stakeholders");
   return new Map(getStakeholders().map((stakeholder) => [
@@ -370,14 +398,14 @@ export function buildStakeholderCatalog(locale = DEFAULT_LOCALE) {
   ]));
 }
 
-export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE) {
+export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE, cycleId = DEFAULT_CYCLE_ID) {
   const stakeholderCatalog = buildStakeholderCatalog(locale);
   const stakeholderLabels = getLocalizedLabels(locale, "stakeholders");
-  const stationStakeholderMap = getStationStakeholderMap();
+  const stationStakeholderMap = getStationStakeholderMapForCycle(cycleId);
   const entries = stationStakeholderMap[stationId];
 
   if (!entries) {
-    throw new Error(`Unknown station stakeholder mapping: ${stationId}`);
+    throw new Error(`Unknown station stakeholder mapping: ${stationId} in ${cycleId || DEFAULT_CYCLE_ID}`);
   }
 
   return entries.map((entry) => {
@@ -389,14 +417,20 @@ export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE) 
     return {
       ...stakeholder,
       involvement: entry.involvement,
-      involvementLabel: translate(`stakeholder.involvement.${entry.involvement}`, stakeholderLabels)
+      involvementLabel: translate(`stakeholder.involvement.${entry.involvement}`, stakeholderLabels),
+      responsibilities: entry.responsibilities || []
     };
   });
 }
 
-export function buildStartData(locale = DEFAULT_LOCALE) {
-  const stations = getCoreStations();
+export function buildStartData(locale = DEFAULT_LOCALE, cycleId = DEFAULT_CYCLE_ID) {
+  const cycle = resolveCycle(cycleId);
+  const stationById = new Map(getCoreStations().map((station) => [station.id, station]));
+  const stations = (cycle.stations || [])
+    .map((stationId) => stationById.get(stationId))
+    .filter(Boolean);
   const stationLabels = getLocalizedLabels(locale, "stations");
+  const cycleLabels = getLocalizedLabels(locale, "cycles");
   const criteriaLabels = getLocalizedLabels(locale, "criteria");
   const stationCriteriaMap = getStationCriteriaMap();
 
@@ -404,10 +438,15 @@ export function buildStartData(locale = DEFAULT_LOCALE) {
     id: station.id,
     order: station.order,
     slug: station.slug,
-    title: translate(station.title, stationLabels),
-    description: translate(station.description, stationLabels),
+    cycleId: cycle.id,
+    title: cycle.stationLabels?.[station.id]
+      ? translateFromLabelSets(cycle.stationLabels[station.id], stationLabels, cycleLabels)
+      : translate(station.title, stationLabels),
+    description: cycle.stationDescriptions?.[station.id]
+      ? translateFromLabelSets(cycle.stationDescriptions[station.id], stationLabels, cycleLabels)
+      : translate(station.description, stationLabels),
     suggestedForNewApi: index === 0,
-    stakeholders: buildStationStakeholderData(station.id, locale),
+    stakeholders: buildStationStakeholderData(station.id, locale, cycle.id),
     criteria: (stationCriteriaMap[station.id] || []).map((criterionId) => ({
       id: criterionId,
       label: translate(`criterion.${criterionId}`, criteriaLabels)
@@ -641,27 +680,39 @@ export function shouldIncludeResourceForStyle(resourceId, stationId, style) {
   return !["restCanvas", "eventCanvas", "graphqlCanvas"].includes(normalizedResourceId);
 }
 
-export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, style = DEFAULT_STYLE) {
-  const stations = getStations();
-  const resources = getResources();
-  const stationLabels = getLocalizedLabels(locale, "stations");
-  const resourceLabels = getLocalizedLabels(locale, "resources");
-  const station = stations.find((entry) => entry.id === stationId);
+function getCycleStepLabelKey(cycleId, stationId, index) {
+  const baseKey = `cycle.${cycleId}.station.${stationId}.how_it_works`;
+  return index === 0 ? baseKey : `${baseKey}.${index}`;
+}
 
-  if (!station) {
-    throw new Error(`Unknown station id: ${stationId}`);
-  }
+function buildStationResourceSteps(station, stationId, cycle, style, resources, stationLabels, cycleLabels, resourceLabels) {
+  const stationSteps = getStationSteps(station);
+  const stationStepsByResource = new Map(
+    stationSteps
+      .filter((step) => step.resource)
+      .map((step) => [normalizeResourceId(step.resource), step])
+  );
+  const resourceIds = cycle.recommendedResources?.[stationId] || stationSteps.map((step) => step.resource).filter(Boolean);
 
-  const steps = getStationSteps(station)
-    .filter((step) => step.resource)
-    .filter((step) => shouldIncludeResourceForStyle(step.resource, stationId, style))
-    .map((step, index) => {
-      const normalizedResourceId = normalizeResourceId(step.resource);
+  return resourceIds
+    .filter((resourceId) => shouldIncludeResourceForStyle(resourceId, stationId, style))
+    .map((resourceId, index) => {
+      const normalizedResourceId = normalizeResourceId(resourceId);
       const resource = resources.find((entry) => entry.id === normalizedResourceId);
+      const stationStep = stationStepsByResource.get(normalizedResourceId);
+      const resourceTitle = resource ? translate(resource.title, resourceLabels) : normalizedResourceId;
+      const cycleStepLabelKey = getCycleStepLabelKey(cycle.id, stationId, index);
+      const hasCycleStepLabel = cycleLabels[cycleStepLabelKey] || stationLabels[cycleStepLabelKey];
+      const stepText = hasCycleStepLabel
+        ? translateFromLabelSets(cycleStepLabelKey, cycleLabels, stationLabels)
+        : (stationStep
+          ? translate(stationStep.step, stationLabels)
+          : `Use ${resourceTitle}.`);
+
       if (!resource) {
         return {
           order: index + 1,
-          step: translate(step.step, stationLabels),
+          step: stepText,
           resourceId: normalizedResourceId,
           missing: true
         };
@@ -669,9 +720,9 @@ export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, sty
 
       return {
         order: index + 1,
-        step: translate(step.step, stationLabels),
+        step: stepText,
         resourceId: resource.id,
-        resourceTitle: translate(resource.title, resourceLabels),
+        resourceTitle,
         resourceDescription: translate(resource.description, resourceLabels),
         category: resource.category || "",
         canvasId: resource.canvas || null,
@@ -679,12 +730,37 @@ export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, sty
         slug: resource.slug
       };
     });
+}
+
+export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, style = DEFAULT_STYLE, cycleId = DEFAULT_CYCLE_ID) {
+  const stations = getStations();
+  const resources = getResources();
+  const stationLabels = getLocalizedLabels(locale, "stations");
+  const cycleLabels = getLocalizedLabels(locale, "cycles");
+  const resourceLabels = getLocalizedLabels(locale, "resources");
+  const cycle = resolveCycle(cycleId);
+  const station = stations.find((entry) => entry.id === stationId);
+
+  if (!station) {
+    throw new Error(`Unknown station id: ${stationId}`);
+  }
+
+  if (!(cycle.stations || []).includes(stationId)) {
+    throw new Error(`Station ${stationId} is not part of cycle ${cycle.id}`);
+  }
+
+  const steps = buildStationResourceSteps(station, stationId, cycle, style, resources, stationLabels, cycleLabels, resourceLabels);
 
   return {
     stationId: station.id,
-    stationTitle: translate(station.title, stationLabels),
-    stationDescription: translate(station.description, stationLabels),
-    stakeholders: buildStationStakeholderData(station.id, locale),
+    cycleId: cycle.id,
+    stationTitle: cycle.stationLabels?.[station.id]
+      ? translateFromLabelSets(cycle.stationLabels[station.id], stationLabels, cycleLabels)
+      : translate(station.title, stationLabels),
+    stationDescription: cycle.stationDescriptions?.[station.id]
+      ? translateFromLabelSets(cycle.stationDescriptions[station.id], stationLabels, cycleLabels)
+      : translate(station.description, stationLabels),
+    stakeholders: buildStationStakeholderData(station.id, locale, cycle.id),
     style,
     steps
   };
@@ -930,7 +1006,8 @@ export function resolveStationIds(options = {}) {
   }
 
   if (!options.preset || options.preset === "new-api") {
-    return NEW_API_STATIONS;
+    const cycle = resolveCycle(options.cycle || DEFAULT_CYCLE_ID);
+    return NEW_API_STATIONS.filter((stationId) => (cycle.stations || []).includes(stationId));
   }
 
   throw new Error(`Unknown preset: ${options.preset}`);
@@ -939,6 +1016,7 @@ export function resolveStationIds(options = {}) {
 export function generateCanvases(options = {}) {
   const locale = options.locale || DEFAULT_LOCALE;
   const style = normalizeStyle(options.style || DEFAULT_STYLE);
+  const cycle = resolveCycle(options.cycle || DEFAULT_CYCLE_ID);
   const outputRoot = path.resolve(process.cwd(), options.output || DEFAULT_OUTPUT_DIR);
   const resources = getResources();
   const generated = [];
@@ -946,7 +1024,7 @@ export function generateCanvases(options = {}) {
   const seenResourceIds = new Set();
 
   for (const stationId of resolveStationIds(options)) {
-    const stationResources = buildStationResourceData(stationId, locale, style);
+    const stationResources = buildStationResourceData(stationId, locale, style, cycle.id);
     const canvasResources = stationResources.steps
       .map((step) => resources.find((resource) => resource.id === step.resourceId))
       .filter((resource) => resource && resource.category === "canvas");
@@ -984,6 +1062,7 @@ export function generateCanvases(options = {}) {
   return {
     locale,
     style,
+    cycleId: cycle.id,
     outputRoot,
     generated,
     skipped

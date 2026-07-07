@@ -68,7 +68,7 @@ Treat `specs/` as the source of truth and `docs/` as generated or review materia
 npm run method:start
 npm run method:resources:strategy
 npm run method:canvases:new-api
-npm run method -- resources --station api-design --style "__API_STYLE__"
+npm run method -- resources --station api-design --cycle "__CYCLE__" --style "__API_STYLE__"
 npm run method:stations
 npm run method:resource:audit
 npm run lint:openapi
@@ -80,7 +80,7 @@ npm run audit:design:full-crud
 ## How to use it
 
 - Use `npm run method:start` to find the right station to begin from. In an interactive terminal it checks criteria one by one and recommends where to start.
-- Use the `method:resources:*` commands or `npm run method -- resources --station ...` to walk the method resources for a station and inspect related canvases or snippets.
+- Use the `method:resources:*` commands or `npm run method -- resources --station ... --cycle "__CYCLE__"` to walk the method resources for a station and inspect related canvases or snippets.
 - Use `npm run method:canvases:new-api` to generate starter canvas JSON files for a new API initiative.
 - Use the generated canvas files to capture scope, business needs, domain understanding, and interface options before going too early into contract details.
 - Use `specs/openapi/api.yaml` when you are ready to produce or review API contract details.
@@ -159,4 +159,5 @@ The skill guidance is meant to keep AI work aligned with the project structure: 
 - This project can also be used for an existing API by reviewing the current design against the canvases, style guide, and audit checklist.
 - If you are building your own helper app, agent, or automation, you can also import the shared method logic from `apiops-cycles-method-data/method-engine`.
 - Default locale: `__LOCALE__`
+- Selected APIOps cycle: `__CYCLE__`
 - Selected API style hint: `__API_STYLE__`

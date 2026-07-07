@@ -21,16 +21,17 @@ const STATION_SCRIPT_HINTS = {
 
 function printUsage() {
   console.log(`Usage:
-  node packages/create-apiops/bin/method-cli.js start [--locale <locale>] [--default-locale <locale>] [--json] [--list] [--answers <yes,no,...>] [--next-action <resources|canvases|exit>]
-  node packages/create-apiops/bin/method-cli.js resources --station <station-id> [--locale <locale>] [--style <style>] [--json] [--list] [--step-actions <details,next,...>]
-  node packages/create-apiops/bin/method-cli.js generate-canvases [--station <station-id> | --stations <ids> | --preset new-api] [--locale <locale>] [--style <style>] [--output <dir>] [--force] [--json]
+  node packages/create-apiops/bin/method-cli.js start [--cycle <cycle-id>] [--locale <locale>] [--default-locale <locale>] [--json] [--list] [--answers <yes,no,...>] [--next-action <resources|canvases|exit>]
+  node packages/create-apiops/bin/method-cli.js resources --station <station-id> [--cycle <cycle-id>] [--locale <locale>] [--style <style>] [--json] [--list] [--step-actions <details,next,...>]
+  node packages/create-apiops/bin/method-cli.js generate-canvases [--station <station-id> | --stations <ids> | --preset new-api] [--cycle <cycle-id>] [--locale <locale>] [--style <style>] [--output <dir>] [--force] [--json]
 
 Examples:
   node packages/create-apiops/bin/method-cli.js start --locale en
+  node packages/create-apiops/bin/method-cli.js start --cycle api-productization-cycle --locale en
   node packages/create-apiops/bin/method-cli.js start --default-locale en
   node packages/create-apiops/bin/method-cli.js start --locale en --answers yes,no,yes --next-action resources
-  node packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --locale en
-  node packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --style REST --output ./specs/canvases
+  node packages/create-apiops/bin/method-cli.js resources --station api-product-strategy --cycle api-productization-cycle --locale en
+  node packages/create-apiops/bin/method-cli.js generate-canvases --preset new-api --cycle api-productization-cycle --style REST --output ./specs/canvases
 `);
 }
 
@@ -93,6 +94,10 @@ function getNextStepHints(stationId) {
     resources: `npm run method -- resources --station ${stationId}`,
     canvases: `npm run method -- generate-canvases --station ${stationId} --output ./specs/canvases`
   };
+}
+
+function getCycleId(options = {}) {
+  return options.cycle || methodEngine.DEFAULT_CYCLE_ID;
 }
 
 function loadCanvasJson(filePath, canvasId, locale) {
@@ -530,7 +535,8 @@ async function runInteractiveStart(data, options) {
     await runInteractiveResources({
       station: result.recommendedStation.id,
       locale: options.locale || methodEngine.DEFAULT_LOCALE,
-      style: options.style || methodEngine.DEFAULT_STYLE
+      style: options.style || methodEngine.DEFAULT_STYLE,
+      cycle: getCycleId(options)
     });
     return;
   }
@@ -540,6 +546,7 @@ async function runInteractiveStart(data, options) {
       station: result.recommendedStation.id,
       locale: options.locale || methodEngine.DEFAULT_LOCALE,
       style: options.style || methodEngine.DEFAULT_STYLE,
+      cycle: getCycleId(options),
       output: methodEngine.DEFAULT_OUTPUT_DIR
     });
     printGeneratedCanvasText(generateResult);
@@ -578,7 +585,7 @@ async function runInteractiveResources(options) {
   const locale = options.locale || methodEngine.DEFAULT_LOCALE;
   const style = methodEngine.normalizeStyle(options.style || methodEngine.DEFAULT_STYLE);
   const output = options.output || methodEngine.DEFAULT_OUTPUT_DIR;
-  const data = methodEngine.buildStationResourceData(options.station, locale, style);
+  const data = methodEngine.buildStationResourceData(options.station, locale, style, getCycleId(options));
   const scriptedActions = (options["step-actions"] || "")
     .split(",")
     .map((entry) => entry.trim())
@@ -734,7 +741,7 @@ export async function main() {
 
   if (command === "start") {
     const locale = await maybePromptForStartLocale(options);
-    const data = methodEngine.buildStartData(locale);
+    const data = methodEngine.buildStartData(locale, getCycleId(options));
     if (options.json) {
       console.log(JSON.stringify(data, null, 2));
       return;
@@ -757,7 +764,8 @@ export async function main() {
     const data = methodEngine.buildStationResourceData(
       options.station,
       options.locale || methodEngine.DEFAULT_LOCALE,
-      methodEngine.normalizeStyle(options.style || methodEngine.DEFAULT_STYLE)
+      methodEngine.normalizeStyle(options.style || methodEngine.DEFAULT_STYLE),
+      getCycleId(options)
     );
     if (options.json) {
       console.log(JSON.stringify(data, null, 2));
