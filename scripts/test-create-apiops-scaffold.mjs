@@ -97,6 +97,35 @@ try {
     "Expected non-interactive prompt failure to recommend --yes."
   );
 
+  const invalidCycleProjectName = "invalid-cycle-project";
+  const invalidCycleResult = spawnSync(
+    "node",
+    [
+      cliPath,
+      "--name", invalidCycleProjectName,
+      "--cycle", "not-a-cycle",
+      "--yes",
+      "--no-install"
+    ],
+    { cwd: tempRoot, encoding: "utf8" }
+  );
+  assert(
+    invalidCycleResult.status === 1,
+    "Expected an unknown --cycle value to fail before scaffolding."
+  );
+  assert(
+    invalidCycleResult.stderr.includes("Unknown APIOps cycle: not-a-cycle"),
+    "Expected invalid cycle failure to explain the unknown cycle."
+  );
+  assert(
+    invalidCycleResult.stderr.includes("api-productization-cycle"),
+    "Expected invalid cycle failure to list supported cycles."
+  );
+  assert(
+    !existsSync(join(tempRoot, invalidCycleProjectName)),
+    "Expected invalid cycle failure to avoid creating the project directory."
+  );
+
   const positionalProjectName = "positional-apiops-project";
   const positionalProjectDir = join(tempRoot, positionalProjectName);
   execFileSync(
