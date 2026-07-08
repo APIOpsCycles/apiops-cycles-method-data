@@ -1,16 +1,16 @@
 {
   "lines.title": "Lignes de métro",
-  "lines.description": "Une collection de lignes d'API qui guident le développement et la gestion des API.",
-  "line.business-opportunities-line.title": "Ligne sur les opportunités d'affaires",
-  "line.business-opportunities-line.description": "L'accent est mis sur l'identification et l'exploitation des opportunités commerciales grâce aux API.",
+  "lines.description": "Lignes du métro APIOps Cycles qui guident la conception, la mise en œuvre et l'évolution des capacités, des API et des intégrations.",
+  "line.business-opportunities-line.title": "Ligne des opportunités métier",
+  "line.business-opportunities-line.description": "Se concentre sur l'identification, l'évaluation et la productisation des opportunités métier sous forme de capacités réutilisables.",
   "line.platform-architecture-line.title": "Ligne d'architecture de la plateforme",
-  "line.platform-architecture-line.description": "Couvre les aspects architecturaux des plateformes API.",
+  "line.platform-architecture-line.description": "Couvre les décisions d'architecture relatives aux plateformes, aux intégrations et aux interfaces.",
   "line.api-design-line.title": "Ligne de conception de l'API",
-  "line.api-design-line.description": "Se concentre sur les principes et les pratiques de conception des API.",
+  "line.api-design-line.description": "Se concentre sur les principes et les bonnes pratiques de conception des interfaces et des solutions d'intégration.",
   "line.delivery-line.title": "Ligne de livraison",
-  "line.delivery-line.description": "Couvre les processus et pratiques de livraison des API.",
-  "line.publishing-and-adoption-line.title": "Ligne d'édition et d'adoption",
-  "line.publishing-and-adoption-line.description": "Se concentre sur la publication d'API et sur leur adoption par les consommateurs.",
+  "line.delivery-line.description": "Couvre les pratiques de mise en œuvre, de test, d'automatisation et de livraison.",
+  "line.publishing-and-adoption-line.title": "Ligne Publication & Enablement",
+  "line.publishing-and-adoption-line.description": "Se concentre sur la publication des capacités, leur découvrabilité, leur onboarding et leur adoption.",
   "line.operating-model-line.title": "Ligne de modèle opérationnel",
-  "line.operating-model-line.description": "Couvre le modèle d'exploitation pour la gestion et la gouvernance des API."
+  "line.operating-model-line.description": "Couvre la gouvernance, les responsabilités et le modèle opérationnel des capacités."
 }

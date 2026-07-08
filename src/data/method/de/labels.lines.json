@@ -1,16 +1,16 @@
 {
   "lines.title": "Metro-Linien",
-  "lines.description": "Eine Sammlung von API-Linien, die die Entwicklung und Verwaltung von APIs leiten.",
-  "line.business-opportunities-line.title": "Geschäftsmöglichkeiten Linie",
-  "line.business-opportunities-line.description": "Konzentriert sich auf die Identifizierung und Nutzung von Geschäftsmöglichkeiten durch APIs.",
-  "line.platform-architecture-line.title": "Plattform Architektur Linie",
-  "line.platform-architecture-line.description": "Behandelt die architektonischen Aspekte von API-Plattformen.",
+  "lines.description": "APIOps Cycles-Metrolinien zur Unterstützung der Planung, Umsetzung und Weiterentwicklung von Capabilities, APIs und Integrationen.",
+  "line.business-opportunities-line.title": "Linie Geschäftsmöglichkeiten",
+  "line.business-opportunities-line.description": "Konzentriert sich auf die Identifizierung, Bewertung und Produktisierung von Geschäftsmöglichkeiten als wiederverwendbare Capabilities.",
+  "line.platform-architecture-line.title": "Linie Plattformarchitektur",
+  "line.platform-architecture-line.description": "Behandelt Architekturentscheidungen für Plattformen, Integrationen und Schnittstellen.",
   "line.api-design-line.title": "API-Entwurfslinie",
-  "line.api-design-line.description": "Konzentriert sich auf die Designprinzipien und -praktiken für APIs.",
+  "line.api-design-line.description": "Konzentriert sich auf Entwurfsprinzipien und Best Practices für Schnittstellen und Integrationslösungen.",
   "line.delivery-line.title": "Bereitstellungslinie",
-  "line.delivery-line.description": "Behandelt die Bereitstellungsprozesse und -praktiken für APIs.",
-  "line.publishing-and-adoption-line.title": "Veröffentlichungs- und Adoptionslinie",
-  "line.publishing-and-adoption-line.description": "Der Schwerpunkt liegt auf der Veröffentlichung von APIs und der Gewährleistung ihrer Annahme durch die Verbraucher.",
-  "line.operating-model-line.title": "Betriebsmodell Linie",
-  "line.operating-model-line.description": "Deckt das Betriebsmodell für die API-Verwaltung und -Governance ab."
+  "line.delivery-line.description": "Behandelt Implementierung, Tests, Automatisierung und Bereitstellungspraktiken.",
+  "line.publishing-and-adoption-line.title": "Linie Veröffentlichung & Enablement",
+  "line.publishing-and-adoption-line.description": "Konzentriert sich auf die Veröffentlichung von Capabilities sowie deren Auffindbarkeit, Onboarding und Nutzung.",
+  "line.operating-model-line.title": "Linie Betriebsmodell",
+  "line.operating-model-line.description": "Behandelt Governance, Verantwortlichkeiten und das Betriebsmodell für Capabilities."
 }
