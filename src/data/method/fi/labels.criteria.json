@@ -15,6 +15,7 @@
   "criterion.design-reflects-business-value": "Rajapintasuunnittelu ja tarjottavat kyvykkyydet ovat jäljitettävissä liiketoiminta-arvoon ja hyödyntäjien tarpeisiin.",
   "criterion.api-consistency": "Rajapintasuunnittelu noudattaa sovittuja suunnittelustandardeja ja käytäntöjä.",
   "criterion.api-contract-tested": "Rajapintasopimus on validoitu ja testattu toiminnallisia ja ei-toiminnallisia vaatimuksia vasten.",
+  "criterion.automation-workflow-validated": "Tyonkulku, saannot, integraatiot ja olennaiset rajapintasopimukset on validoitu ja testattu.",
   "criterion.api-description-available": "Rajapinta ja sen kyvykkyydet on dokumentoitu riittävän selkeästi katselmointia, auditointia ja käyttöönottoa varten.",
   "criterion.audit-passed": "Ratkaisu läpäisee laatu-, tietoturva-, vaatimustenmukaisuus- ja valmiustarkastukset.",
   "criterion.audit-reports-shared": "Auditointihavainnot ja korjauspäätökset on jaettu olennaisille sidosryhmille.",

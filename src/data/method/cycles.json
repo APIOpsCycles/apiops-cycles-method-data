@@ -224,11 +224,12 @@
             "businessImpactCanvas",
             "locationsCanvas",
             "capacityCanvas",
-            "api-metrics-and-analytics"
+            "partner-integration-guidelines"
           ],
           "api-design": [
             "domainCanvas",
             "interactionCanvas",
+            "integration-style-selection-guide",
             "restCanvas",
             "eventCanvas",
             "graphqlCanvas",
@@ -238,7 +239,8 @@
             "api-development-best-practices",
             "api-testing-best-practices",
             "apiops-CI-CD-for-apis",
-            "api-security-best-practices"
+            "api-security-best-practices",
+            "partner-integration-guidelines"
           ],
           "api-audit": [
             "api-audit-checklist",
@@ -311,29 +313,31 @@
           "api-platform-architecture": [
             "businessImpactCanvas",
             "locationsCanvas",
-            "capacityCanvas"
+            "capacityCanvas",
+            "automation-operational-ownership-guide"
           ],
           "api-design": [
             "domainCanvas",
             "interactionCanvas",
-            "restCanvas",
-            "eventCanvas",
-            "graphqlCanvas",
-            "contract-first-design"
+            "process-workflow-design-guide",
+            "decision-business-rules-guide",
+            "automation-trigger-handoff-exception-guide"
           ],
           "api-delivery": [
-            "api-development-best-practices",
-            "api-testing-best-practices",
-            "apiops-CI-CD-for-apis"
+            "automation-testing-guide",
+            "automation-operational-ownership-guide",
+            "automation-rollback-supervision-guide"
           ],
           "api-audit": [
-            "api-audit-checklist",
+            "automation-readiness-checklist",
             "api-compliance-best-practices"
           ],
           "api-publishing": [
-            "api-onboarding-best-practices"
+            "automation-rollout-enablement-guide",
+            "service-agreement-template"
           ],
           "monitoring-and-improving": [
+            "automation-operational-ownership-guide",
             "api-metrics-and-analytics"
           ]
         },
@@ -344,7 +348,7 @@
         ],
         "exitCriteria": [
           "design-reflects-business-value",
-          "api-contract-tested",
+          "automation-workflow-validated",
           "audit-passed"
         ],
         "stationDescriptions": {

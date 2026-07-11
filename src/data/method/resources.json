@@ -1127,6 +1127,256 @@
         ]
       },
       "category": "canvas"
+    },
+    {
+      "id": "integration-style-selection-guide",
+      "title": "resource.integration-style-selection-guide.title",
+      "slug": "resources/integration-style-selection-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 180,
+      "description": "resource.integration-style-selection-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-style-selection-guide.outcomes",
+        "resource.integration-style-selection-guide.outcomes.1",
+        "resource.integration-style-selection-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-style-selection-guide.steps",
+          "resource.integration-style-selection-guide.steps.1",
+          "resource.integration-style-selection-guide.steps.2",
+          "resource.integration-style-selection-guide.steps.3"
+        ],
+        "tips": [
+          "resource.integration-style-selection-guide.tips",
+          "resource.integration-style-selection-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "process-workflow-design-guide",
+      "title": "resource.process-workflow-design-guide.title",
+      "slug": "resources/process-workflow-design-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 181,
+      "description": "resource.process-workflow-design-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.process-workflow-design-guide.outcomes",
+        "resource.process-workflow-design-guide.outcomes.1",
+        "resource.process-workflow-design-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.process-workflow-design-guide.steps",
+          "resource.process-workflow-design-guide.steps.1",
+          "resource.process-workflow-design-guide.steps.2",
+          "resource.process-workflow-design-guide.steps.3"
+        ],
+        "tips": [
+          "resource.process-workflow-design-guide.tips",
+          "resource.process-workflow-design-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "decision-business-rules-guide",
+      "title": "resource.decision-business-rules-guide.title",
+      "slug": "resources/decision-business-rules-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 182,
+      "description": "resource.decision-business-rules-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.decision-business-rules-guide.outcomes",
+        "resource.decision-business-rules-guide.outcomes.1",
+        "resource.decision-business-rules-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.decision-business-rules-guide.steps",
+          "resource.decision-business-rules-guide.steps.1",
+          "resource.decision-business-rules-guide.steps.2"
+        ],
+        "tips": [
+          "resource.decision-business-rules-guide.tips",
+          "resource.decision-business-rules-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "automation-trigger-handoff-exception-guide",
+      "title": "resource.automation-trigger-handoff-exception-guide.title",
+      "slug": "resources/automation-trigger-handoff-exception-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 183,
+      "description": "resource.automation-trigger-handoff-exception-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-trigger-handoff-exception-guide.outcomes",
+        "resource.automation-trigger-handoff-exception-guide.outcomes.1",
+        "resource.automation-trigger-handoff-exception-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-trigger-handoff-exception-guide.steps",
+          "resource.automation-trigger-handoff-exception-guide.steps.1",
+          "resource.automation-trigger-handoff-exception-guide.steps.2",
+          "resource.automation-trigger-handoff-exception-guide.steps.3"
+        ],
+        "tips": [
+          "resource.automation-trigger-handoff-exception-guide.tips",
+          "resource.automation-trigger-handoff-exception-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "automation-testing-guide",
+      "title": "resource.automation-testing-guide.title",
+      "slug": "resources/automation-testing-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 184,
+      "description": "resource.automation-testing-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-testing-guide.outcomes",
+        "resource.automation-testing-guide.outcomes.1",
+        "resource.automation-testing-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-testing-guide.steps",
+          "resource.automation-testing-guide.steps.1",
+          "resource.automation-testing-guide.steps.2",
+          "resource.automation-testing-guide.steps.3"
+        ],
+        "tips": [
+          "resource.automation-testing-guide.tips",
+          "resource.automation-testing-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "automation-operational-ownership-guide",
+      "title": "resource.automation-operational-ownership-guide.title",
+      "slug": "resources/automation-operational-ownership-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 185,
+      "description": "resource.automation-operational-ownership-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-operational-ownership-guide.outcomes",
+        "resource.automation-operational-ownership-guide.outcomes.1",
+        "resource.automation-operational-ownership-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-operational-ownership-guide.steps",
+          "resource.automation-operational-ownership-guide.steps.1",
+          "resource.automation-operational-ownership-guide.steps.2"
+        ],
+        "tips": [
+          "resource.automation-operational-ownership-guide.tips",
+          "resource.automation-operational-ownership-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "automation-rollback-supervision-guide",
+      "title": "resource.automation-rollback-supervision-guide.title",
+      "slug": "resources/automation-rollback-supervision-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 186,
+      "description": "resource.automation-rollback-supervision-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-rollback-supervision-guide.outcomes",
+        "resource.automation-rollback-supervision-guide.outcomes.1",
+        "resource.automation-rollback-supervision-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-rollback-supervision-guide.steps",
+          "resource.automation-rollback-supervision-guide.steps.1",
+          "resource.automation-rollback-supervision-guide.steps.2",
+          "resource.automation-rollback-supervision-guide.steps.3"
+        ],
+        "tips": [
+          "resource.automation-rollback-supervision-guide.tips",
+          "resource.automation-rollback-supervision-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "automation-readiness-checklist",
+      "title": "resource.automation-readiness-checklist.title",
+      "slug": "resources/automation-readiness-checklist",
+      "icon": "check-box-outline",
+      "draft": "true",
+      "order": 187,
+      "description": "resource.automation-readiness-checklist.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-readiness-checklist.outcomes",
+        "resource.automation-readiness-checklist.outcomes.1",
+        "resource.automation-readiness-checklist.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-readiness-checklist.steps",
+          "resource.automation-readiness-checklist.steps.1",
+          "resource.automation-readiness-checklist.steps.2",
+          "resource.automation-readiness-checklist.steps.3"
+        ],
+        "tips": [
+          "resource.automation-readiness-checklist.tips",
+          "resource.automation-readiness-checklist.tips.1"
+        ]
+      },
+      "category": "checklist"
+    },
+    {
+      "id": "automation-rollout-enablement-guide",
+      "title": "resource.automation-rollout-enablement-guide.title",
+      "slug": "resources/automation-rollout-enablement-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 188,
+      "description": "resource.automation-rollout-enablement-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-rollout-enablement-guide.outcomes",
+        "resource.automation-rollout-enablement-guide.outcomes.1",
+        "resource.automation-rollout-enablement-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-rollout-enablement-guide.steps",
+          "resource.automation-rollout-enablement-guide.steps.1",
+          "resource.automation-rollout-enablement-guide.steps.2",
+          "resource.automation-rollout-enablement-guide.steps.3"
+        ],
+        "tips": [
+          "resource.automation-rollout-enablement-guide.tips",
+          "resource.automation-rollout-enablement-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
     }
   ]
 }

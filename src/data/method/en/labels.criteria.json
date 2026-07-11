@@ -15,6 +15,7 @@
   "criterion.design-reflects-business-value": "The interface design and exposed capabilities trace back to business value and consumer needs.",
   "criterion.api-consistency": "The interface design follows agreed design standards and conventions.",
   "criterion.api-contract-tested": "The interface contract has been validated and tested against functional and non-functional requirements.",
+  "criterion.automation-workflow-validated": "The workflow, rules, integrations, and relevant interface contracts have been validated and tested.",
   "criterion.api-description-available": "The interface and its capabilities are documented clearly enough for review, audit, and onboarding.",
   "criterion.audit-passed": "The solution passes quality, security, compliance, and readiness checks.",
   "criterion.audit-reports-shared": "Audit findings and remediation decisions are shared with the relevant stakeholders.",

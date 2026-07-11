@@ -15,6 +15,7 @@
   "criterion.design-reflects-business-value": "Das Schnittstellendesign und die offengelegten Fähigkeiten lassen sich klar auf Geschäftswert und Nutzerbedürfnisse zurückführen.",
   "criterion.api-consistency": "Das Schnittstellendesign folgt den vereinbarten Produkt-, Design- und Qualitätsstandards.",
   "criterion.api-contract-tested": "Der Schnittstellenvertrag wurde validiert und gegen funktionale und nicht-funktionale Anforderungen getestet.",
+  "criterion.automation-workflow-validated": "Workflow, Regeln, Integrationen und relevante Schnittstellenvertraege wurden validiert und getestet.",
   "criterion.api-description-available": "Die Schnittstelle und ihre Fähigkeiten sind ausreichend für Review, Auditierung und Onboarding dokumentiert.",
   "criterion.audit-passed": "Die Lösung besteht Qualitäts-, Sicherheits-, Compliance- und Bereitschaftsprüfungen.",
   "criterion.audit-reports-shared": "Audit-Ergebnisse und Maßnahmenentscheidungen wurden mit den relevanten Stakeholdern geteilt.",

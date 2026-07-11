@@ -15,6 +15,7 @@
   "criterion.design-reflects-business-value": "La conception de l'interface et les capacités exposées sont clairement reliées à la valeur métier et aux besoins des utilisateurs.",
   "criterion.api-consistency": "La conception de l'interface respecte les standards partagés de produit, de conception et de qualité.",
   "criterion.api-contract-tested": "Le contrat d'interface a été validé et testé par rapport aux exigences fonctionnelles et non fonctionnelles.",
+  "criterion.automation-workflow-validated": "Le workflow, les regles, les integrations et les contrats d interface pertinents ont ete valides et testes.",
   "criterion.api-description-available": "L'interface et ses capacités sont documentées de manière suffisante pour la revue, l'audit et l'onboarding.",
   "criterion.audit-passed": "La solution réussit les contrôles de qualité, de sécurité, de conformité et de préparation.",
   "criterion.audit-reports-shared": "Les résultats d'audit et les décisions de correction sont partagés avec les parties prenantes concernées.",

@@ -142,7 +142,33 @@ The main method content files are located under `src/data/method/`. These base f
 
 Some longer or more complex resources also use canonical snippet assets under `src/snippets/` linked from `resources.json`. Those snippets are now primarily structured JSON or YAML files, with Markdown kept only where a resource genuinely needs prose content.
 
-Each station links to specific entry criteria followed by the next core station's criteria as exit criteria. Cycles in `cycles.json` reuse canonical station ids and can override the displayed station label, station description, and recommended resources for that cycle. Stakeholder participation is modeled separately through `stakeholders.json`, cycle-scoped mappings in `station-stakeholders.json`, and `labels.stakeholders.json`.
+Each station links to specific entry criteria followed by the next core station's criteria as exit criteria. Cycles in `cycles.json` reuse canonical station ids and can override the displayed station label, station description, and recommended resources for that cycle. The `api-*` station and criteria ids are legacy canonical identifiers, not user-facing semantic labels; use cycle labels and descriptions for capability, integration, automation, or API-specific wording. Stakeholder participation is modeled separately through `stakeholders.json`, cycle-scoped mappings in `station-stakeholders.json`, and `labels.stakeholders.json`.
+
+#### Canonical localization terms
+
+Use these terms consistently when editing or translating method labels. The English labels are the editorial master; other locales should express the same concept naturally rather than translating the English sentence literally.
+
+Localization principles:
+
+1. English is the canonical source.
+2. Translate concepts, not words.
+3. Generic method terminology uses Capability, Interface, Interface contract, Implementation style, Publishing, and Enablement.
+4. The API Productization Cycle intentionally remains API-specific.
+5. Resource names remain unchanged unless they are already officially localized.
+6. Prefer natural language over literal translation.
+
+| English | FI | DE | FR | PT |
+| --- | --- | --- | --- | --- |
+| Capability | Kyvykkyys | Capability | Capacité | Capacidade |
+| Interface | Rajapinta | Schnittstelle | Interface | Interface |
+| Interface contract | Rajapintasopimus | Schnittstellenvertrag | Contrat d'interface | Contrato de interface |
+| Consumer | Hyödyntäjä | Nutzer | Utilisateur | Utilizador |
+| Business value | Liiketoiminta-arvo | Geschäftswert | Valeur métier | Valor de negócio |
+| Business goals | Liiketoimintatavoitteet | Geschäftsziele | Objectifs métier | Objectivos de negócio |
+| Implementation style | Toteutustapa | Implementierungsstil | Mode de mise en œuvre | Estilo de implementação |
+| Publishing | Julkaisu | Veröffentlichung | Publication | Publicação |
+| Enablement | Käyttöönoton tuki | Enablement | Enablement | Enablement |
+| Readiness | Valmius | Bereitschaft | Préparation | Prontidão |
 
 #### Editing existing method pages
 

@@ -15,6 +15,7 @@
   "criterion.design-reflects-business-value": "A conceção da API e as capacidades expostas refletem claramente o valor de negócio e as necessidades dos utilizadores.",
   "criterion.api-consistency": "A conceção da API segue as nossas convenções partilhadas para o produto API e a conceção.",
   "criterion.api-contract-tested": "O contrato de interface da API é testado e satisfaz os requisitos funcionais e não funcionais.",
+  "criterion.automation-workflow-validated": "O fluxo de trabalho, as regras, as integracoes e os contratos de interface relevantes foram validados e testados.",
   "criterion.api-description-available": "A API e suas capacidades expostas são descritas de forma suficiente para revisão, auditoria e integração.",
   "criterion.audit-passed": "A API é aprovada nas verificações de conformidade, segurança e auditoria.",
   "criterion.audit-reports-shared": "Os resultados da auditoria e as decisões de correção são partilhados com as partes interessadas relevantes.",
