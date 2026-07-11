@@ -11,7 +11,7 @@
   "criterion.value-prop-validated": "The capability value proposition has been validated with business and consumer stakeholders.",
   "criterion.consumer-segments-identified": "Consumer segments are identified.",
   "criterion.api-roadmap-defined": "A high-level implementation roadmap is defined.",
-  "criterion.architecture-patterns-validated": "The chosen architecture, platform, and delivery approach have been validated with the relevant architecture, security, and platform stakeholders.",
+  "criterion.architecture-patterns-validated": "The chosen architecture, platform, and implementation style have been validated with the relevant architecture, security, and platform stakeholders.",
   "criterion.design-reflects-business-value": "The interface design and exposed capabilities trace back to business value and consumer needs.",
   "criterion.api-consistency": "The interface design follows agreed design standards and conventions.",
   "criterion.api-contract-tested": "The interface contract has been validated and tested against functional and non-functional requirements.",
@@ -19,8 +19,8 @@
   "criterion.api-description-available": "The interface and its capabilities are documented clearly enough for review, audit, and onboarding.",
   "criterion.audit-passed": "The solution passes quality, security, compliance, and readiness checks.",
   "criterion.audit-reports-shared": "Audit findings and remediation decisions are shared with the relevant stakeholders.",
-  "criterion.api-ready-for-publishing": "The capability is ready for release through the selected delivery mechanism.",
+  "criterion.api-ready-for-publishing": "The capability is ready to be published or released through the selected delivery mechanism.",
   "criterion.api-documentation-ready": "Consumer-facing documentation and onboarding materials are ready.",
   "criterion.consumer-support-ready": "Consumer onboarding, support, and communication processes are ready.",
-  "criterion.legal-compliance-clear": "Legal, privacy, and compliance requirements for release are defined and understood."
+  "criterion.legal-compliance-clear": "Legal, privacy, and compliance requirements for publishing or release are defined and understood."
 }
