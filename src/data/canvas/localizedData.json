@@ -11,31 +11,31 @@
         },
         "keyActivities": {
           "section": "Schlüsselaktivitäten",
-          "description": "Was sind die wichtigsten Maßnahmen, die der API-Anbieter ergreifen muss, um erfolgreich zu arbeiten?"
+          "description": "Welche wichtigsten Aktivitäten muss der API-Anbieter ausführen, damit die API erfolgreich betrieben werden kann?"
         },
         "keyResources": {
           "section": "Schlüsselressourcen",
-          "description": "Welche einzigartigen strategischen Vermögenswerte muss der API-Anbieter erwerben oder aufbauen?"
+          "description": "Welche strategischen Ressourcen muss der API-Anbieter beschaffen oder aufbauen?"
         },
         "apiValueProposition": {
           "section": "Wertversprechen der API",
           "description": "Beginnen Sie mit einem Haftzettel, auf dem Sie die API oder die API-Familie benennen, und erfassen Sie dann, welchen Nutzen die API den API-Nutzern bietet."
         },
         "developerRelations": {
-          "section": "Entwicklerbeziehungen",
-          "description": "Wie erreicht und unterstützt der API-Anbieter API-Konsumenten?"
+          "section": "Developer Relations",
+          "description": "Wie erreicht und unterstützt der API-Anbieter die API-Nutzer?"
         },
         "channels": {
           "section": "Kanäle",
-          "description": "Über welche Mechanismen interagieren API-Konsumenten mit der API?"
+          "description": "Über welche Mechanismen interagieren API-Nutzer mit der API?"
         },
         "apiConsumerSegments": {
-          "section": "Konsumenten der API",
+          "section": "API-Nutzersegmente",
           "description": "Wer sind die Zielgruppen für die API?"
         },
         "costs": {
           "section": "Kosten",
-          "description": "Was sind die wesentlichen Kosten für die Erstellung, Bereitstellung und den Betrieb der API?"
+          "description": "Welche wesentlichen Kosten entstehen durch Aufbau, Bereitstellung und Betrieb der API?"
         },
         "benefits": {
           "section": "Vorteile",
@@ -45,20 +45,20 @@
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Wie lässt sich die Customer Journey auf APIs abbilden? Welche Probleme und Vorteile von Endnutzern und API-Nutzern müssen berücksichtigt werden?",
-      "howToUse": "Beschreiben Sie die Perspektive der Endnutzer, beginnend mit ihren Aufgaben, dann die Probleme und Vorteile von Endnutzern und API-Nutzern und schließlich die Produkte und Funktionen der API.",
+      "purpose": "Wie hängt die Customer Journey mit APIs zusammen? Welche Pain Points und Nutzen von Endnutzern und API-Nutzern müssen adressiert werden?",
+      "howToUse": "Beschreiben Sie die Perspektive der Endnutzer: zuerst ihre Aufgaben, dann ihre Pain Points und Nutzen sowie die der API-Nutzer, und schließlich die API-Produkte und API-Funktionen.",
       "sections": {
         "tasks": {
           "section": "Aufgaben",
-          "description": "Was wollen die Kunden (Endnutzer) erreichen?"
+          "description": "Was möchten Kunden oder Endnutzer erreichen?"
         },
         "gainEnablingFeatures": {
-          "section": "Nutzenstiftende Features",
-          "description": "Welche Features ermöglichen es API-Konsumenten ihre Bedürfnisse zu bedienen?"
+          "section": "Nutzenstiftende Funktionen",
+          "description": "Welche Funktionen helfen Endnutzern und API-Nutzern, den gewünschten Nutzen zu erreichen?"
         },
         "painRelievingFeatures": {
-          "section": "Problemlösende Features",
-          "description": "Welche Funktionen helfen Endnutzern und API-Nutzern, Probleme zu überwinden?"
+          "section": "Funktionen zur Reduktion von Pain Points",
+          "description": "Welche Funktionen helfen Endnutzern und API-Nutzern, Pain Points zu reduzieren?"
         },
         "apiProducts": {
           "section": "API-Produkte",
@@ -68,8 +68,8 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "Was sind die potenziellen geschäftlichen Auswirkungen eines Ausfalls einer API?",
-      "howToUse": "Berücksichtigen Sie die potenziellen Auswirkungen auf Verfügbarkeit, Sicherheit und Daten für jede API.",
+      "purpose": "Welche geschäftlichen Auswirkungen kann ein Ausfall oder Fehlverhalten der Capability oder Schnittstelle haben?",
+      "howToUse": "Bewerten Sie mögliche Auswirkungen auf Verfügbarkeit, Sicherheit und Daten, bevor der Implementierungsstil endgültig festgelegt wird.",
       "sections": {
         "availabilityRisks": {
           "section": "Risiken der Verfügbarkeit",
@@ -85,22 +85,22 @@
         },
         "mitigateAvailabilityRisks": {
           "section": "Reduzierung von Risiken der Verfügbarkeit",
-          "description": "Wie kann der API-Anbieter die Risiken der Verfügbarkeit reduzieren?"
+          "description": "Wie lassen sich Verfügbarkeitsrisiken reduzieren?"
         },
         "mitigateSecurityRisks": {
           "section": "Reduktion der Sicherheitsrisiken",
-          "description": "Wie kann der API-Anbieter die Sicherheitsrisiken reduzieren?"
+          "description": "Wie lassen sich Sicherheitsrisiken reduzieren?"
         },
         "mitigateDataRisks": {
           "section": "Reduktion der Datenrisiken",
-          "description": "Wie kann der API-Anbieter die Datenrisiken reduzieren?"
+          "description": "Wie lassen sich Datenrisiken reduzieren?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "Welche Anforderungen ergeben sich, um den Konsum der API zu gewährleisten?",
-      "howToUse": "Analysieren Sie die aktuellen und zukünftigen Kapazitätsanforderungen für jede API.",
+      "purpose": "Welche Kapazität ist erforderlich, um die Nutzung der Capability oder Schnittstelle zu unterstützen?",
+      "howToUse": "Analysieren Sie aktuelle und zukünftige Kapazitätsanforderungen für die Capability oder Schnittstelle.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Aktuelles Geschäftsvolumen",
@@ -119,8 +119,8 @@
           "description": "Welche Caching-Strategien können zur Performanceoptimierung eingesetzt werden?"
         },
         "rateLimitingStrategies": {
-          "section": "Rate-Limiting-Strategien",
-          "description": "Welche Rate-Limiting-Strategien können zur Konsumsteuerung eingesetzt werden?"
+          "section": "Strategien zur Ratenbegrenzung",
+          "description": "Welche Strategien zur Ratenbegrenzung können genutzt werden, um die Nutzung zu steuern?"
         },
         "scalingStrategies": {
           "section": "Strategien zur Skalierung",
@@ -130,8 +130,8 @@
     },
     "customerJourneyCanvas": {
       "title": "Customer Journey Canvas",
-      "purpose": "Welche Reise eines Kunden oder Partners soll mit der API unterstützt werden?",
-      "howToUse": "Beschreiben Sie eine reale Reise eines Kunden oder Nutzers – nicht die API-Nutzung selbst. Diese Reise macht Probleme, Ziele und Kontexte sichtbar, um spätere API-Anforderungen und Nutzen zu definieren.",
+      "purpose": "Welche Customer Journey oder Partner Journey erzeugt den Bedarf für eine Capability oder Schnittstelle?",
+      "howToUse": "Beschreiben Sie eine reale Reise eines Kunden, Partners oder Nutzers - nicht die API-Nutzung selbst. Diese Reise macht Probleme, Ziele und Kontext sichtbar und hilft, spätere Anforderungen an Capability- und Schnittstellendesign zu klären.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "Kunde erkennt Bedarf",
@@ -143,15 +143,15 @@
         },
         "pains": {
           "section": "Probleme",
-          "description": "Was sind die Probleme oder Herausforderungen des Kunden?"
+          "description": "Welche Probleme oder Pain Points erlebt der Kunde oder Nutzer?"
         },
         "journeySteps": {
           "section": "Customer Journey Schritte",
           "description": "Welche Schritte durchläuft der Kunde bei der Reise?"
         },
         "customerNeedIsResolved": {
-          "section": "Kundenbedürfnis wird gelöst",
-          "description": "Wie wird das Bedürfnis des Kunden letztendlich gelöst?"
+          "section": "Kundenbedarf wird erfüllt",
+          "description": "Wie wird der Bedarf des Kunden oder Nutzers letztlich erfüllt?"
         },
         "gains": {
           "section": "Nutzen",
@@ -169,8 +169,8 @@
     },
     "domainCanvas": {
       "title": "Domain Canvas",
-      "purpose": "Was sind die wesentlichen Entitäten und Geschäftsregeln im Zusammenhang mit der API?",
-      "howToUse": "Definieren Sie das Domänenmodell für jede API, einschließlich Entitäten, Attribute und Beziehungen.",
+      "purpose": "Welche wesentlichen Entitäten, Begriffe und Fachregeln muss die Capability oder Schnittstelle respektieren?",
+      "howToUse": "Definieren Sie das Fachdomänenmodell für die Capability oder Schnittstelle, einschließlich Entitäten, Attributen und Beziehungen.",
       "sections": {
         "selectedCustomerJourneySteps": {
           "section": "Ausgewählte Customer Journey Schritte",
@@ -189,8 +189,8 @@
           "description": "Welche Beziehungen bestehen zwischen den Entitäten?"
         },
         "businessComplianceAndIntegrityRules": {
-          "section": "Geschäfts-, Compliance- und Integritätsregeln",
-          "description": "Welche Geschäfts-, Compliance- und Integritätsregeln gelten für die Entitäten?"
+          "section": "Fachregeln, Compliance und Integrität",
+          "description": "Welche Fachregeln sowie Compliance- und Integritätsanforderungen beziehen sich auf die Entitäten?"
         },
         "securityAndPrivacyConsiderations": {
           "section": "Überlegungen zu Sicherheit und Datenschutz",
@@ -200,12 +200,12 @@
     },
     "eventCanvas": {
       "title": "Event Canvas",
-      "purpose": "Welche Events sind für die API relevant, und wie werden sie verarbeitet?",
-      "howToUse": "Definieren Sie die Events, ihre Trigger und die Verarbeitungslogik für jede API.",
+      "purpose": "Welche Ereignisse sind für die Capability oder Schnittstelle relevant und wie werden sie verarbeitet?",
+      "howToUse": "Definieren Sie Ereignisse, Auslöser und Verarbeitungslogik für die Capability oder Schnittstelle.",
       "sections": {
         "userTaskTrigger": {
-          "section": "Nutzeraufgabe / Trigger",
-          "description": "Welche Nutzeraktion oder welches System-Event löst diese Eventoperation aus?"
+          "section": "Nutzeraufgabe / Auslöser",
+          "description": "Welche Nutzeraktion oder welches Systemereignis löst diese Ereignisoperation aus?"
         },
         "inputEventPayload": {
           "section": "Input / Event-Payload",
@@ -213,7 +213,7 @@
         },
         "processingLogic": {
           "section": "Verarbeitung / Logik",
-          "description": "Beschreiben Sie die Backend-Verarbeitungslogik, inklusive Validierungen, Transformationen, oder Routing-Entscheidungen."
+          "description": "Beschreiben Sie die Verarbeitungslogik der Backend-Systeme, einschließlich Validierungen, Transformationen oder Routing-Entscheidungen."
         },
         "outputEventResult": {
           "section": "Output / Event-Ergebnis",
@@ -223,8 +223,8 @@
     },
     "interactionCanvas": {
       "title": "Interaction Canvas",
-      "purpose": "Welche Arten von Interaktionen sollte diese API unterstützen, bevor Sie sich für ein protokollspezifisches Design entscheiden?",
-      "howToUse": "Ermitteln Sie, welche Interaktionsarten für diese API tatsächlich benötigt werden und welche nicht in den Anwendungsbereich fallen. Verwenden Sie diese Arbeitsfläche, um die Absicht zu klären, bevor Sie das Ergebnis auf REST, Events oder GraphQL abbilden.",
+      "purpose": "Welche Arten von Interaktionen muss diese Capability oder Schnittstelle unterstützen, bevor ein konkretes Protokolldesign gewählt wird?",
+      "howToUse": "Identifizieren Sie, welche Interaktionsstile wirklich benötigt werden und welche außerhalb des Umfangs liegen. Nutzen Sie dieses Canvas, um die Absicht zu klären, bevor das Ergebnis auf REST, Events oder GraphQL abgebildet wird.",
       "sections": {
         "crudInteractions": {
           "section": "CRUD Interaktionen",
@@ -240,7 +240,7 @@
         },
         "queryDrivenInteractions": {
           "section": "Abfragegesteuerte Interaktionen",
-          "description": "Welche Lese- oder Abfrageinteraktionen sind erforderlich, um Verbraucherfragen zu beantworten?"
+          "description": "Welche Lese- oder Abfrageinteraktionen sind erforderlich, um Nutzerfragen zu beantworten?"
         },
         "queryDrivenInputOutputModels": {
           "section": "Abfragegesteuerte Input- & Output-Modelle",
@@ -277,9 +277,9 @@
       }
     },
     "locationsCanvas": {
-      "title": "Location Canvas",
-      "purpose": "Welche geopolitischen, regulatorischen, netzwerkbezogenen und vertrauensbezogenen Grenzen wirken sich auf diese API aus?",
-      "howToUse": "Ermitteln Sie, wo API-Nutzer, -Anbieter und abhängige Systeme in internen Netzwerken, Partnernetzwerken, im öffentlichen Internet und in regulierten Regionen operieren. Beschreiben Sie die Auswirkungen auf Latenz, Vertrauen, Compliance und Konnektivität zwischen ihnen.",
+      "title": "Locations Canvas",
+      "purpose": "Welche geopolitischen, regulatorischen, Netzwerk- und Vertrauensgrenzen betreffen diese Capability oder Schnittstelle?",
+      "howToUse": "Identifizieren Sie, wo Nutzer, Anbieter und abhängige Systeme in internen Netzwerken, Partnernetzwerken, im öffentlichen Internet und in regulierten Regionen betrieben werden. Beschreiben Sie die Auswirkungen auf Latenz, Vertrauen, Compliance und Konnektivität.",
       "sections": {
         "locationGroups": {
           "section": "Standort-/Vertrauensgruppen",
@@ -318,7 +318,7 @@
     "restCanvas": {
       "title": "REST Canvas",
       "purpose": "Wie kann die API nach RESTful-Prinzipien gestaltet werden?",
-      "howToUse": "Definieren Sie die API-Ressourcen, HTTP-Methoden und Beispielanfragen und -antworten.",
+      "howToUse": "Definieren Sie Ressourcen, Verben sowie Beispiele für API-Requests und API-Responses.",
       "sections": {
         "apiResources": {
           "section": "API-Ressourcen",
@@ -340,20 +340,20 @@
     },
     "graphqlCanvas": {
       "title": "GraphQL Canvas",
-      "purpose": "Wie kann die API unter Verwendung von GraphQL-Prinzipien gestaltet werden?",
-      "howToUse": "Definieren Sie die Schlüsseltypen, Abfragen, Mutationen und Einschränkungen für Ihre GraphQL-API.",
+      "purpose": "Wie kann die API nach GraphQL-Prinzipien gestaltet werden?",
+      "howToUse": "Definieren Sie zentrale Typen, Queries, Mutations und Einschränkungen für die GraphQL-API.",
       "sections": {
         "apiName": {
           "section": "API-Name",
           "description": "Wie lautet der Name der GraphQL-API oder des Endpunkts?"
         },
         "consumerGoals": {
-          "section": "Ziele der Konsumenten",
-          "description": "Welche Probleme versuchen API-Konsumenten zu lösen? Welche Daten benötigen sie?"
+          "section": "Ziele der API-Nutzer",
+          "description": "Welche Probleme versuchen API-Nutzer zu lösen? Welche Daten benötigen sie?"
         },
         "keyTypes": {
           "section": "Schlüsseltypen",
-          "description": "Welche Kern-Typen werden bereitgestellt (z.B. Benutzer, Bestellung, Produkt)?"
+          "description": "Welche zentralen Typen werden bereitgestellt (z. B. Nutzer, Bestellung, Produkt)?"
         },
         "relationships": {
           "section": "Beziehungen",
@@ -369,19 +369,132 @@
         },
         "subscriptions": {
           "section": "Subscriptions",
-          "description": "Gibt es Echtzeit-Updates oder Ereignisse, die Konsumenten abonnieren können?"
+          "description": "Gibt es Echtzeit-Updates oder Ereignisse, die Nutzer abonnieren können?"
         },
         "authorizationRules": {
           "section": "Autorisierungsregeln",
           "description": "Wer darf auf welche Felder oder Typen zugreifen?"
         },
         "consumerConstraints": {
-          "section": "Einschränkungen für Konsumenten",
+          "section": "Einschränkungen für Nutzer",
           "description": "Gibt es Paginierungs-, Filter- oder Ratenbegrenzungen?"
         },
         "openQuestions": {
           "section": "Notizen / Offene Fragen",
           "description": "Gibt es noch offene Entscheidungen oder Integrationsüberlegungen?"
+        }
+      }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Welche wiederverwendbare Capability würde Nutzern Wert liefern, ohne bereits zu entscheiden, ob sie als API, Event, Datei, Stream, Datenprodukt oder ein anderer Implementierungsstil bereitgestellt werden soll?",
+      "howToUse": "Starten Sie mit Nutzeraufgaben und Ergebnissen. Erfassen Sie nutzenstiftende und Pain-Point-reduzierende Capability-Funktionen und beschreiben Sie mögliche wiederverwendbare Capabilities, ohne die Technologie zu früh festzulegen.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Nutzeraufgaben und Ergebnisse",
+          "description": "Was möchten Nutzer, Partner, Systeme oder Teams erreichen?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Nutzenstiftende Capability-Funktionen",
+          "description": "Welche Capability-Funktionen helfen Nutzern, bessere Ergebnisse, Geschwindigkeit, Automatisierung, Erkenntnisse, Reichweite oder Compliance zu erreichen?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-Point-reduzierende Capability-Funktionen",
+          "description": "Welche Capability-Funktionen reduzieren Reibung, manuelle Arbeit, Fehler, Verzögerungen, Risiken oder Unsicherheit für Nutzer?"
+        },
+        "reusableCapabilities": {
+          "section": "Wiederverwendbare Capabilities",
+          "description": "Welche wiederverwendbaren Geschäfts- oder Daten-Capabilities könnten diese Aufgaben, Nutzen und Pain Points über mehr als einen Nutzer oder Use Case hinweg unterstützen?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "Wie tragfähig, wiederverwendbar, finanziert, verantwortet, unterstützt und auffindbar soll diese Integrations-Capability sein?",
+      "howToUse": "Fassen Sie das Wertversprechen der Capability zusammen, identifizieren Sie Nutzer und Interaktionskanäle und erfassen Sie anschließend Verantwortlichkeiten, Aktivitäten, Ressourcen, Partner, Nutzen und Kosten.",
+      "sections": {
+        "keyPartners": {
+          "section": "Schlüsselpartner",
+          "description": "Welche Partner aus Business, Technologie, Daten, Sicherheit, Recht, Plattform oder externen Organisationen werden benötigt, damit die Capability funktioniert?"
+        },
+        "keyActivities": {
+          "section": "Schlüsselaktivitäten",
+          "description": "Was müssen Capability Owner und Produzenten tun, um die Capability zu gestalten, bereitzustellen, zu steuern, zu unterstützen und zu verbessern?"
+        },
+        "keyResources": {
+          "section": "Schlüsselressourcen",
+          "description": "Welche Systeme, Datenbestände, Plattformen, Personen, Standards, Finanzierungen und operativen Fähigkeiten werden benötigt?"
+        },
+        "capabilityValueProposition": {
+          "section": "Wertversprechen der Capability",
+          "description": "Welchen Wert liefert diese wiederverwendbare Capability für Nutzer und für die Organisation oder das Ökosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Nutzerinteraktion",
+          "description": "Wie werden Nutzer die Capability entdecken, bewerten, anfordern, onboarden, Unterstützung erhalten und Feedback geben?"
+        },
+        "channels": {
+          "section": "Kanäle",
+          "description": "Über welche Kataloge, Portale, Marktplätze, Dokumentationsseiten, Support-Wege oder Governance-Prozesse interagieren Nutzer mit der Capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Nutzersegmente der Capability",
+          "description": "Wer sind die aktuellen und potenziellen Nutzer der Capability, einschließlich Teams, Partnern, Systemen, Produkten oder Datennutzern?"
+        },
+        "costs": {
+          "section": "Kosten",
+          "description": "Welche wesentlichen Kosten entstehen durch Aufbau, Betrieb, Governance, Support und Weiterentwicklung der Capability?"
+        },
+        "benefits": {
+          "section": "Nutzen",
+          "description": "Welcher geschäftliche, operative, ökologische, wiederverwendungsbezogene, Compliance- oder Kostennutzen rechtfertigt die Capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "Welche Erfahrungs- und nichtfunktionalen Anforderungen benötigen Nutzer, bevor die beste Integrationsarchitektur entschieden wird?",
+      "howToUse": "Nutzen Sie dieses Canvas als technologieunabhängige Anforderungstabelle. Erfassen Sie Erwartungen und Einschränkungen der Nutzer und verwenden Sie anschließend die Architekturimplikationen, um APIs, Events, Dateien, Streams, Datenprodukte oder ein anderes Muster auszuwählen.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Nutzerziele",
+          "description": "Welche Geschäfts-, Workflow-, Entscheidungs-, Automatisierungs- oder Datennutzungsziele haben die Nutzer?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Verfügbarkeit und Aktualität",
+          "description": "Wann muss die Capability verfügbar sein, wie aktuell müssen Informationen sein und welche Latenz- oder Bereitstellungsfenster sind relevant?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volumen und Performance",
+          "description": "Welche Volumina an Requests, Events, Datensätzen, Dateien, Batches, Nutzern oder Transaktionen muss die Capability heute und künftig unterstützen?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Datenqualität und Konsistenz",
+          "description": "Welche Erwartungen an Genauigkeit, Vollständigkeit, Konsistenz, Reihenfolge, Deduplizierung, Abstimmung oder Validierung haben Nutzer?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Sicherheit, Datenschutz und Compliance",
+          "description": "Welche Anforderungen an Identität, Autorisierung, Vertraulichkeit, Datenresidenz, Einwilligung, Aufbewahrung, Audit oder Regulierung gelten?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding und Zugriff",
+          "description": "Wie sollen Nutzer die Capability finden, anfordern, testen, freigeben lassen und mit der Nutzung beginnen?"
+        },
+        "changeAndVersioning": {
+          "section": "Änderungen und Versionierung",
+          "description": "Wie viel Änderungstoleranz haben Nutzer und welche Erwartungen an Vorankündigung, Kompatibilität, Migration oder Versionierung gelten?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability und Support",
+          "description": "Welche Überwachung, Statusinformationen, Nachvollziehbarkeit, Sichtbarkeit der Datenqualität, Unterstützung, Verantwortlichkeiten und Incident-Kommunikation benötigen Nutzer?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery und Kontinuität",
+          "description": "Welche Erwartungen an Replay, Retry, Abstimmung, Backup, Fallback, Kontinuität oder manuelle Wiederherstellung müssen unterstützt werden?"
+        },
+        "architectureImplications": {
+          "section": "Architekturimplikationen",
+          "description": "Was bedeuten diese Anforderungen für mögliche Architekturstile wie APIs, Events, Dateien, Streams, Datenprodukte oder direkte Integration?"
         }
       }
     }
@@ -455,16 +568,16 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "What are the potential business impacts of API failure?",
-      "howToUse": "Consider the potential impact on availability, security, and data for each API.",
+      "purpose": "What are the potential business impacts if the capability, integration, or service fails?",
+      "howToUse": "Consider the potential impact on availability, security, and data for each capability, integration, or service.",
       "sections": {
         "availabilityRisks": {
           "section": "Availability Risks",
-          "description": "What are the potential risks to API availability?"
+          "description": "What are the potential risks to capability availability?"
         },
         "securityRisks": {
           "section": "Security Risks",
-          "description": "What are the potential security risks associated with the API?"
+          "description": "What are the potential security risks associated with the capability?"
         },
         "dataRisks": {
           "section": "Data Risks",
@@ -472,22 +585,22 @@
         },
         "mitigateAvailabilityRisks": {
           "section": "Mitigate Availability Risks",
-          "description": "How can the API provider mitigate the availability risks?"
+          "description": "How can the capability owner mitigate the availability risks?"
         },
         "mitigateSecurityRisks": {
           "section": "Mitigate Security Risks",
-          "description": "How can the API provider mitigate the security risks?"
+          "description": "How can the capability owner mitigate the security risks?"
         },
         "mitigateDataRisks": {
           "section": "Mitigate Data Risks",
-          "description": "How can the API provider mitigate the data risks?"
+          "description": "How can the capability owner mitigate the data risks?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "How much capacity is needed to support API consumption?",
-      "howToUse": "Analyze the current and future capacity requirements for each API.",
+      "purpose": "How much capacity is needed to support expected capability consumption?",
+      "howToUse": "Analyze the current and future capacity requirements for each capability, integration, or service.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Current Business Volumes",
@@ -517,8 +630,8 @@
     },
     "customerJourneyCanvas": {
       "title": "Customer Journey Canvas",
-      "purpose": "What is the customer or partner journey that the API is intended to support?",
-      "howToUse": "In API Product Strategy, describe the real-life customer or partner journey, not the API usage, to reveal pain points, goals, and context. In API Consumer Experience, use this canvas for the API consumer journey from discovery and evaluation to onboarding, integration, troubleshooting, and ongoing use.",
+      "purpose": "What customer, partner, or consumer journey is the capability intended to support?",
+      "howToUse": "Describe the real-life customer, partner, or consumer journey, not the solution usage itself, to reveal pain points, goals, context, inputs, outputs, and experience expectations.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "Customer Discovers Need",
@@ -556,8 +669,8 @@
     },
     "domainCanvas": {
       "title": "Domain Canvas",
-      "purpose": "What are the core entities and business rules related to the API?",
-      "howToUse": "Define the domain model for each API, including entities, attributes, and relationships.",
+      "purpose": "What are the core entities and business rules related to this capability or domain?",
+      "howToUse": "Define the domain model, including entities, attributes, relationships, ownership, and business rules.",
       "sections": {
         "selectedCustomerJourneySteps": {
           "section": "Selected Customer Journey Steps",
@@ -610,8 +723,8 @@
     },
     "interactionCanvas": {
       "title": "Interaction Canvas",
-      "purpose": "What kinds of interactions should this API support before choosing a protocol-specific design?",
-      "howToUse": "Identify which interaction styles are actually needed for this API, and which are out of scope. Use this canvas to clarify intent before mapping the result to REST, events, or GraphQL.",
+      "purpose": "What kinds of interactions should this capability support before choosing a protocol-specific design?",
+      "howToUse": "Identify which interaction styles are actually needed for this capability, and which are out of scope. Use this canvas to clarify intent before mapping the result to REST, events, GraphQL, or another selected implementation style.",
       "sections": {
         "crudInteractions": {
           "section": "CRUD Interactions",
@@ -665,8 +778,8 @@
     },
     "locationsCanvas": {
       "title": "Locations Canvas",
-      "purpose": "What geopolitical, regulatory, network, and trust boundaries affect this API?",
-      "howToUse": "Identify where API consumers, providers, and dependent systems operate across internal networks, partner networks, public internet, and regulated regions. Describe the latency, trust, compliance, and connectivity implications between them.",
+      "purpose": "What geopolitical, regulatory, network, and trust boundaries affect this capability or integration?",
+      "howToUse": "Identify where consumers, producers, and dependent systems operate across internal networks, partner networks, public internet, and regulated regions. Describe the latency, trust, compliance, and connectivity implications between them.",
       "sections": {
         "locationGroups": {
           "section": "Location / Trust Groups",
@@ -771,13 +884,126 @@
           "description": "Any pending decisions or integration considerations?"
         }
       }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Which reusable capability would create value for consumers without deciding yet whether it should be delivered as an API, event, file, stream, data product, or another implementation style?",
+      "howToUse": "Start from consumer tasks and outcomes. Capture gain-enabling and pain-relieving capability features, then describe candidate reusable capabilities without naming the technology too early.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Consumer tasks and outcomes",
+          "description": "What are consumers, partners, users, systems, or teams trying to achieve?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Gain-enabling capability features",
+          "description": "What capability features would help consumers achieve better outcomes, speed, automation, insight, reach, or compliance?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Pain-relieving capability features",
+          "description": "What capability features would remove friction, manual work, errors, delays, risk, or uncertainty for consumers?"
+        },
+        "reusableCapabilities": {
+          "section": "Reusable capabilities",
+          "description": "What reusable business or data capabilities could serve these tasks, gains, and pains across more than one consumer or use case?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "How viable, reusable, funded, owned, supported, and discoverable should this integration capability be?",
+      "howToUse": "Summarize the capability value proposition, identify consumers and engagement channels, then map ownership, activities, resources, partners, benefits, and costs.",
+      "sections": {
+        "keyPartners": {
+          "section": "Key partners",
+          "description": "Which business, technology, data, security, legal, platform, or external partners are needed to make the capability work?"
+        },
+        "keyActivities": {
+          "section": "Key activities",
+          "description": "What must the capability owner and producers do to design, deliver, govern, support, and improve the capability?"
+        },
+        "keyResources": {
+          "section": "Key resources",
+          "description": "Which systems, data assets, platforms, people, standards, funding, and operational capabilities are required?"
+        },
+        "capabilityValueProposition": {
+          "section": "Capability value proposition",
+          "description": "What value does this reusable capability provide to consumers and to the organization or ecosystem?"
+        },
+        "consumerEngagement": {
+          "section": "Consumer engagement",
+          "description": "How will consumers discover, evaluate, request, onboard, get support for, and provide feedback on the capability?"
+        },
+        "channels": {
+          "section": "Channels",
+          "description": "Through which catalogs, portals, marketplaces, documentation sites, support paths, or governance processes will consumers interact with the capability?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Capability consumer segments",
+          "description": "Who are the current and potential consumers of the capability, including teams, partners, systems, products, or data users?"
+        },
+        "costs": {
+          "section": "Costs",
+          "description": "What are the significant costs of building, operating, governing, supporting, and evolving the capability?"
+        },
+        "benefits": {
+          "section": "Benefits",
+          "description": "What business, operational, ecosystem, reuse, compliance, or cost benefits justify the capability?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
+      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another implementation style.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Consumer goals",
+          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Availability and timeliness",
+          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume and performance",
+          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Data quality and consistency",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Security, privacy, and compliance",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+        },
+        "changeAndVersioning": {
+          "section": "Change and versioning",
+          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observability and support",
+          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recovery and continuity",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+        },
+        "architectureImplications": {
+          "section": "Architecture implications",
+          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
+        }
+      }
     }
   },
   "fi": {
     "apiBusinessModelCanvas": {
-      "title": "API Business Model Canvas",
-      "purpose": "Kuinka toteuttamiskelpoinen ja uudelleenkäytettävä API on? Onko meillä liiketoimintaperuste kustannus-hyötynäkökulmasta?",
-      "howToUse": "Yhteenveto APIn arvolupauksesta API Value Proposition Canvasin pohjalta, ja etene sitten numeroidussa järjestyksessä.",
+      "title": "API-liiketoimintamallikanvas",
+      "purpose": "Kuinka elinkelpoinen ja uudelleenkäytettävä tämä API on? Onko sille kustannus-hyötynäkökulmasta perusteltu liiketoimintamalli?",
+      "howToUse": "Tiivistä API-rajapinnan arvolupaus API-arvolupauskanvas -kanvaksesta ja etene numeroidussa järjestyksessä.",
       "sections": {
         "keyPartners": {
           "section": "Keskeiset kumppanit",
@@ -793,7 +1019,7 @@
         },
         "apiValueProposition": {
           "section": "APIn arvolupaus",
-          "description": "Aloita yhdellä tarralapulla, jossa nimeät APIn tai API-perheen, kerro sitten mitä arvoa API tarjoaa API-käyttäjille."
+          "description": "Aloita yhdellä tarralapulla, jossa nimeät APIn tai API-perheen, kerro sitten mitä arvoa API tarjoaa API-hyödyntäjille."
         },
         "developerRelations": {
           "section": "Suhde kehittäjiin",
@@ -804,7 +1030,7 @@
           "description": "Minkä kanavien kautta APIn käyttäjät ovat vuorovaikutuksessa APIn kanssa?"
         },
         "apiConsumerSegments": {
-          "section": "APIn kohderyhmät",
+          "section": "API-hyödyntäjäsegmentit",
           "description": "Keitä ovat APIn kohdeyleisöt?"
         },
         "costs": {
@@ -818,21 +1044,21 @@
       }
     },
     "apiValuePropositionCanvas": {
-      "title": "API Value Proposition Canvas",
-      "purpose": "Miten asiakaspolku liittyy API-rajapintoihin? Mitä loppukäyttäjien ja API-käyttäjien ongelmia ja hyötyjä on käsiteltävä?",
-      "howToUse": "Kuvaile loppukäyttäjien näkökulmaa aloittaen heidän tehtävistään, sitten heidän ja API-käyttäjien ongelmista ja hyödyistä ja lopuksi API:n tuotteista ja ominaisuuksista.",
+      "title": "API-arvolupauskanvas",
+      "purpose": "Miten asiakaspolku liittyy API-rajapintoihin? Mitkä loppukäyttäjien ja API-hyödyntäjien kipupisteet ja tavoitellut hyödyt täytyy huomioida?",
+      "howToUse": "Kuvaa loppukäyttäjien näkökulma aloittamalla heidän tehtävistään, kipupisteistään ja hyödyistään. Lisää sen jälkeen API-hyödyntäjien vastaavat tarpeet sekä API-tuotteet ja API-ominaisuudet.",
       "sections": {
         "tasks": {
           "section": "Tehtävät",
-          "description": "Mitä asiakkaat (loppukäyttäjät) yrittävät saavuttaa?"
+          "description": "Mitä asiakkaat tai loppukäyttäjät yrittävät saavuttaa?"
         },
         "gainEnablingFeatures": {
-          "section": "Hyötyä mahdollistavat ominaisuudet",
-          "description": "Mitkä ominaisuudet mahdollistavat loppukäyttäjien ja API-käyttäjien hyötyjen saavuttamisen?"
+          "section": "Hyötyjä mahdollistavat ominaisuudet",
+          "description": "Mitkä ominaisuudet auttavat loppukäyttäjiä ja API-hyödyntäjiä saavuttamaan tavoitellut hyödyt?"
         },
         "painRelievingFeatures": {
-          "section": "Kipua lievittävät ominaisuudet",
-          "description": "Mitkä ominaisuudet auttavat loppukäyttäjiä ja API-käyttäjiä voittamaan ongelmia?"
+          "section": "Kipupisteitä vähentävät ominaisuudet",
+          "description": "Mitkä ominaisuudet auttavat loppukäyttäjiä ja API-hyödyntäjiä vähentämään kipupisteitä?"
         },
         "apiProducts": {
           "section": "APIn tuotteet",
@@ -841,9 +1067,9 @@
       }
     },
     "businessImpactCanvas": {
-      "title": "Business Impact Canvas",
-      "purpose": "Mitkä ovat mahdolliset liiketoiminnalliset vaikutukset APIn virhetilanteissa?",
-      "howToUse": "Ota huomioon mahdolliset vaikutukset saatavuuteen, tietoturvaan ja dataan kullekin APIlle.",
+      "title": "Liiketoimintavaikutuskanvas",
+      "purpose": "Mitkä ovat kyvykkyyden tai rajapinnan epäonnistumisen mahdolliset liiketoimintavaikutukset?",
+      "howToUse": "Arvioi vaikutukset saatavuuteen, turvallisuuteen, dataan ja operointiin ennen toteutustyylin lukitsemista.",
       "sections": {
         "availabilityRisks": {
           "section": "Saatavuuteen liittyvät riskit",
@@ -851,7 +1077,7 @@
         },
         "securityRisks": {
           "section": "Tietoturvariskit",
-          "description": "Mitkä ovat APIin liittyvät mahdolliset tietoturvariskit?"
+          "description": "Mitkä ovat API-rajapintaan liittyvät mahdolliset tietoturvariskit?"
         },
         "dataRisks": {
           "section": "Tietoriskit",
@@ -872,9 +1098,9 @@
       }
     },
     "capacityCanvas": {
-      "title": "Capacity Canvas",
-      "purpose": "Kuinka paljon kapasiteettia tarvitaan APIn käytön tukemiseksi?",
-      "howToUse": "Analysoi kunkin APIn nykyiset ja tulevat kapasiteettitarpeet.",
+      "title": "Kapasiteettikanvas",
+      "purpose": "Kuinka paljon kapasiteettia kyvykkyyden tai rajapinnan käytön tukeminen edellyttää?",
+      "howToUse": "Analysoi nykyiset ja tulevat kapasiteettivaatimukset kyvykkyydelle tai rajapinnalle.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Nykyinen liiketoimintavolyymi",
@@ -903,9 +1129,9 @@
       }
     },
     "customerJourneyCanvas": {
-      "title": "Customer Journey Canvas",
-      "purpose": "Mikä on se asiakkaan tai kumppanin asiakaspolku, jota API:n tulisi tukea?",
-      "howToUse": "Kuvaa oikea asiakkaan tai käyttäjän polku, ei API:n käyttöpolkua. Tunnista kipupisteet, tavoitteet ja konteksti. Tämä toimii pohjana API-tarpeiden ja arvolupausten muotoilulle.",
+      "title": "Asiakaspolkukanvas",
+      "purpose": "Mikä asiakkaan tai kumppanin polku synnyttää tarpeen kyvykkyydelle tai rajapinnalle?",
+      "howToUse": "Kuvaa todellinen asiakkaan, kumppanin tai käyttäjän polku, ei API-rajapinnan käyttöä. Polku tuo näkyviin kipupisteet, tavoitteet ja kontekstin, jotka auttavat määrittämään kyvykkyyden ja rajapinnan vaatimukset.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "Asiakas havaitsee tarpeen",
@@ -942,9 +1168,9 @@
       }
     },
     "domainCanvas": {
-      "title": "Domain Canvas",
-      "purpose": "Mitkä ovat APIn keskeiset entiteetit ja liiketoimintasäännöt?",
-      "howToUse": "Määrittele kunkin APIn toimialuemalli, mukaan lukien entiteetit, attribuutit ja suhteet.",
+      "title": "Toimialuekanvas",
+      "purpose": "Mitkä keskeiset käsitteet, entiteetit ja toimialueen säännöt kyvykkyyden tai rajapinnan täytyy huomioida?",
+      "howToUse": "Määritä toimialuemalli kyvykkyydelle tai rajapinnalle, mukaan lukien entiteetit, attribuutit ja suhteet.",
       "sections": {
         "selectedCustomerJourneySteps": {
           "section": "Valitut asiakaspolun vaiheet",
@@ -973,9 +1199,9 @@
       }
     },
     "eventCanvas": {
-      "title": "Event Canvas",
-      "purpose": "Mitkä tapahtumat liittyvät APIin ja miten ne käsitellään?",
-      "howToUse": "Määrittele tapahtumat, niiden laukaisijat ja käsittelylogiikka kullekin APIlle.",
+      "title": "Tapahtumakanvas",
+      "purpose": "Mitkä tapahtumat ovat olennaisia kyvykkyydelle tai rajapinnalle ja miten ne käsitellään?",
+      "howToUse": "Määritä tapahtumat, niiden laukaisijat ja käsittelylogiikka kyvykkyydelle tai rajapinnalle.",
       "sections": {
         "userTaskTrigger": {
           "section": "Käyttäjän tehtävä / Laukaisija",
@@ -996,9 +1222,9 @@
       }
     },
     "interactionCanvas": {
-      "title": "Interaction Canvas",
-      "purpose": "Minkälaisia vuorovaikutustapoja tämän APIn tulisi tukea ennen protokollakohtaisen suunnittelun valitsemista?",
-      "howToUse": "Määritä, mitkä vuorovaikutustavat ovat tämän APIn kannalta todella tarpeellisia ja mitkä eivät kuulu sen piiriin. Käytä tätä kankaata tarkentamaan tarkoitusta ennen tuloksen kartoittamista RESTiin, eventeihin tai GraphQLään.",
+      "title": "Vuorovaikutuskanvas",
+      "purpose": "Minkä tyyppisiä vuorovaikutuksia kyvykkyyden tai rajapinnan täytyy tukea ennen protokollakohtaisen suunnittelun valintaa?",
+      "howToUse": "Tunnista, mitä vuorovaikutustyylejä todella tarvitaan ja mitkä jäävät rajauksen ulkopuolelle. Käytä kanvasta tarkoituksen selkeyttämiseen ennen kuin ratkaisu mallinnetaan REST-, tapahtuma- tai GraphQL-toteutukseksi.",
       "sections": {
         "crudInteractions": {
           "section": "CRUD-vuorovaikutukset",
@@ -1014,7 +1240,7 @@
         },
         "queryDrivenInteractions": {
           "section": "Kyselyohjatut vuorovaikutukset",
-          "description": "Mitä luku- tai kyselyvuorovaikutuksia tarvitaan vastaamaan kuluttajien kysymyksiin?"
+          "description": "Mitä luku- tai kyselyvuorovaikutuksia tarvitaan vastaamaan hyödyntäjien kysymyksiin?"
         },
         "queryDrivenInputOutputModels": {
           "section": "Kyselyohjatut syötteet ja vastaukset",
@@ -1051,9 +1277,9 @@
       }
     },
     "locationsCanvas": {
-      "title": "Locations Canvas",
-      "purpose": "”Mitkä geopoliittiset, sääntely-, verkko- ja luottamusrajat vaikuttavat tähän APIin?",
-      "howToUse": "Tunnista, missä APIn käyttäjät, tarjoajat ja riippuvaiset järjestelmät toimivat sisäisissä verkoissa, kumppaniverkoissa, julkisessa internetissä ja säännellyillä alueilla. Kuvaile niiden välisiä viive-, luottamus-, vaatimustenmukaisuus- ja yhteysvaikutuksia.",
+      "title": "Sijaintikanvas",
+      "purpose": "Mitkä geopoliittiset, sääntelyyn liittyvät, verkko- ja luottamusrajat vaikuttavat tähän kyvykkyyteen tai rajapintaan?",
+      "howToUse": "Tunnista, missä hyödyntäjät, tuottajat ja riippuvat järjestelmät toimivat sisäverkoissa, kumppaniverkoissa, julkisessa internetissä ja säännellyillä alueilla. Kuvaa vaikutukset latenssiin, luottamukseen, vaatimustenmukaisuuteen ja yhteyksiin.",
       "sections": {
         "locationGroups": {
           "section": "Sijainti-/luottamusryhmät",
@@ -1090,7 +1316,7 @@
       }
     },
     "restCanvas": {
-      "title": "REST Canvas",
+      "title": "REST-kanvas",
       "purpose": "Miten API voidaan suunnitella REST-periaatteiden mukaisesti?",
       "howToUse": "Määrittele APIn resurssit, verbit sekä esimerkkipyynnöt ja -vastaukset.",
       "sections": {
@@ -1113,9 +1339,9 @@
       }
     },
     "graphqlCanvas": {
-      "title": "GraphQL Canvas",
-      "purpose": "Kuinka API voidaan suunnitella GraphQL-periaatteiden mukaisesti?",
-      "howToUse": "Määrittele keskeiset tyypit, kyselyt, mutaatiot ja rajoitukset GraphQL-API:a varten.",
+      "title": "GraphQL-kanvas",
+      "purpose": "Miten API voidaan suunnitella GraphQL-periaatteiden mukaisesti?",
+      "howToUse": "Määritä GraphQL-API-rajapinnan keskeiset tyypit, kyselyt, mutaatiot ja rajoitteet.",
       "sections": {
         "apiName": {
           "section": "APIn nimi",
@@ -1158,13 +1384,126 @@
           "description": "Onko keskeneräisiä päätöksiä tai integraatioon liittyviä huomioita?"
         }
       }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Kyvykkyyden arvolupauskanvas",
+      "purpose": "Mikä uudelleenkäytettävä kyvykkyys loisi arvoa hyödyntäjille ilman, että vielä päätetään toteutetaanko se API-rajapintana, tapahtumana, tiedostona, streamina, datatuotteena tai muuna integraatiotyylinä?",
+      "howToUse": "Aloita hyödyntäjien tehtävistä ja lopputuloksista. Kuvaa hyödyt mahdollistavat ja kipupisteitä vähentävät kyvykkyyden ominaisuudet. Määritä sen jälkeen mahdolliset uudelleenkäytettävät kyvykkyydet nimeämättä teknologiaa liian aikaisin.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Hyödyntäjien tehtävät ja lopputulokset",
+          "description": "Mitä hyödyntäjät, kumppanit, käyttäjät, järjestelmät tai tiimit yrittävät saavuttaa?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Hyötyjä mahdollistavat kyvykkyyden ominaisuudet",
+          "description": "Mitkä kyvykkyyden ominaisuudet auttaisivat hyödyntäjiä saavuttamaan parempia tuloksia, nopeutta, automaatiota, oivalluksia, kattavuutta tai vaatimustenmukaisuutta?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Kipupisteitä vähentävät kyvykkyyden ominaisuudet",
+          "description": "Mitkä kyvykkyyden ominaisuudet poistaisivat kitkaa, manuaalista työtä, virheitä, viiveitä, riskejä tai epävarmuutta hyödyntäjiltä?"
+        },
+        "reusableCapabilities": {
+          "section": "Uudelleenkäytettävät kyvykkyydet",
+          "description": "Mitkä uudelleenkäytettävät liiketoiminta- tai datakyvykkyydet voisivat palvella näitä tehtäviä, hyötyjä ja kipupisteitä useamman kuin yhden hyödyntäjän tai käyttötapauksen tarpeisiin?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Kyvykkyyden liiketoimintamallikanvas",
+      "purpose": "Kuinka elinkelpoinen, uudelleenkäytettävä, rahoitettu, omistettu, tuettu ja löydettävä tämän integraatiokyvykkyyden tulisi olla?",
+      "howToUse": "Tiivistä kyvykkyyden arvolupaus, tunnista hyödyntäjät ja osallistamiskanavat sekä kartoita omistajuus, toiminnot, resurssit, kumppanit, hyödyt ja kustannukset.",
+      "sections": {
+        "keyPartners": {
+          "section": "Keskeiset kumppanit",
+          "description": "Mitä liiketoiminnan, teknologian, datan, turvallisuuden, juridiikan, alustan tai ulkoisia kumppaneita tarvitaan, jotta kyvykkyys toimii?"
+        },
+        "keyActivities": {
+          "section": "Keskeiset toiminnot",
+          "description": "Mitä kyvykkyyden omistajan ja tuottajien täytyy tehdä kyvykkyyden suunnittelemiseksi, toimittamiseksi, hallitsemiseksi, tukemiseksi ja parantamiseksi?"
+        },
+        "keyResources": {
+          "section": "Keskeiset resurssit",
+          "description": "Mitä järjestelmiä, data-aineistoja, alustoja, ihmisiä, standardeja, rahoitusta ja operatiivisia kyvykkyyksiä tarvitaan?"
+        },
+        "capabilityValueProposition": {
+          "section": "Kyvykkyyden arvolupaus",
+          "description": "Mitä arvoa tämä uudelleenkäytettävä kyvykkyys tuottaa hyödyntäjille sekä organisaatiolle tai ekosysteemille?"
+        },
+        "consumerEngagement": {
+          "section": "Hyödyntäjien osallistaminen",
+          "description": "Miten hyödyntäjät löytävät, arvioivat, pyytävät käyttöönsä, ottavat käyttöön, saavat tukea ja antavat palautetta kyvykkyydestä?"
+        },
+        "channels": {
+          "section": "Kanavat",
+          "description": "Minkä katalogien, portaalien, markkinapaikkojen, dokumentaatiosivustojen, tukikanavien tai governance-prosessien kautta hyödyntäjät ovat vuorovaikutuksessa kyvykkyyden kanssa?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Kyvykkyyden hyödyntäjäsegmentit",
+          "description": "Ketkä ovat kyvykkyyden nykyisiä ja mahdollisia hyödyntäjiä, mukaan lukien tiimit, kumppanit, järjestelmät, tuotteet tai datan käyttäjät?"
+        },
+        "costs": {
+          "section": "Kustannukset",
+          "description": "Mitkä ovat kyvykkyyden rakentamisen, operoinnin, governancen, tuen ja kehittämisen merkittävät kustannukset?"
+        },
+        "benefits": {
+          "section": "Hyödyt",
+          "description": "Mitkä liiketoiminnalliset, operatiiviset, ekosysteemiin, uudelleenkäyttöön, vaatimustenmukaisuuteen tai kustannuksiin liittyvät hyödyt perustelevat kyvykkyyden?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Hyödyntäjäkokemuksen vaatimuskanvas",
+      "purpose": "Mitä kokemukseen liittyviä ja ei-toiminnallisia vaatimuksia hyödyntäjillä on ennen parhaan integraatioarkkitehtuurin valintaa?",
+      "howToUse": "Käytä tätä teknologiariippumattomana vaatimuskanvaksena. Kuvaa hyödyntäjien odotukset ja rajoitteet ja käytä arkkitehtuurivaikutuksia API-rajapintojen, tapahtumien, tiedostojen, streamien, datatuotteiden tai muun mallin valintaan.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Hyödyntäjien tavoitteet",
+          "description": "Mitkä ovat hyödyntäjien liiketoiminta-, työnkulku-, päätöksenteko-, automaatio- tai datankäyttötavoitteet?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Saatavuus ja ajantasaisuus",
+          "description": "Milloin kyvykkyyden täytyy olla saatavilla, kuinka ajantasaista tiedon täytyy olla ja millä latenssi- tai toimitusikkunoilla on merkitystä?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volyymi ja suorituskyky",
+          "description": "Mitä pyyntö-, tapahtuma-, tietue-, tiedosto-, eräajo-, käyttäjä- tai transaktiovolyymeja kyvykkyyden täytyy tukea nyt ja myöhemmin?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Datan laatu ja yhdenmukaisuus",
+          "description": "Mitä tarkkuuteen, täydellisyyteen, yhdenmukaisuuteen, järjestykseen, deduplikointiin, täsmäytykseen tai validointiin liittyviä odotuksia hyödyntäjillä on?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Turvallisuus, tietosuoja ja vaatimustenmukaisuus",
+          "description": "Mitä identiteettiin, valtuutukseen, luottamuksellisuuteen, datan sijaintiin, suostumukseen, säilytykseen, auditointiin tai sääntelyyn liittyviä rajoitteita sovelletaan?"
+        },
+        "onboardingAndAccess": {
+          "section": "Käyttöönotto ja pääsy",
+          "description": "Miten hyödyntäjien tulisi löytää, pyytää, testata, saada hyväksyntä ja aloittaa kyvykkyyden käyttö?"
+        },
+        "changeAndVersioning": {
+          "section": "Muutokset ja versiointi",
+          "description": "Kuinka paljon muutoksia hyödyntäjät sietävät ja mitä ennakkoilmoituksiin, yhteensopivuuteen, migraatioon tai versiointiin liittyviä odotuksia sovelletaan?"
+        },
+        "observabilityAndSupport": {
+          "section": "Havainnoitavuus ja tuki",
+          "description": "Mitä monitorointia, tilatietoa, jäljitettävyyttä, datan laadun näkyvyyttä, tukea, omistajuutta ja häiriöviestintää hyödyntäjät tarvitsevat?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Palautuminen ja jatkuvuus",
+          "description": "Mitä uudelleentoistoon, uudelleenyrityksiin, täsmäytykseen, varmuuskopiointiin, varamenettelyihin, jatkuvuuteen tai manuaaliseen palautumiseen liittyviä odotuksia täytyy tukea?"
+        },
+        "architectureImplications": {
+          "section": "Arkkitehtuurivaikutukset",
+          "description": "Mitä nämä vaatimukset tarkoittavat mahdollisille arkkitehtuurityyleille, kuten API-rajapinnoille, tapahtumille, tiedostoille, streameille, datatuotteille tai suoralle integraatiolle?"
+        }
+      }
     }
   },
   "fr": {
     "apiBusinessModelCanvas": {
       "title": "API Business Model Canvas",
-      "purpose": "Dans quelle mesure cette API sera-t-elle viable et réutilisable ? Avons-nous un cas commercial du point de vue coût-bénéfice ?",
-      "howToUse": "Résumez la proposition de valeur d'une API à partir du Canvas de proposition de valeur API, puis suivez la séquence numérotée.",
+      "purpose": "Quelle sera la viabilité et la réutilisabilité de cette API ? Existe-t-il un modèle métier justifié du point de vue coût-bénéfice ?",
+      "howToUse": "Résumer la proposition de valeur d’une API à partir de l’API Value Proposition Canvas, puis suivre la séquence numérotée.",
       "sections": {
         "keyPartners": {
           "section": "Partenaires clés",
@@ -1172,54 +1511,54 @@
         },
         "keyActivities": {
           "section": "Activités clés",
-          "description": "Quelles sont les actions les plus importantes que le fournisseur d'API doit entreprendre pour réussir?"
+          "description": "Quelles sont les actions les plus importantes que le fournisseur d’API doit entreprendre pour réussir?"
         },
         "keyResources": {
           "section": "Ressources clés",
-          "description": "Quels actifs stratégiques uniques le fournisseur d'API doit-il acquérir ou développer?"
+          "description": "Quels actifs stratégiques uniques le fournisseur d’API doit-il acquérir ou développer?"
         },
         "apiValueProposition": {
-          "section": "Proposition de valeur de l'API",
-          "description": "Commencez par une note adhésive indiquant le nom de l'API ou de la famille d'API, puis notez la valeur ajoutée que l'API offre aux consommateurs d'API."
+          "section": "Proposition de valeur de l’API",
+          "description": "Commencez par une note adhésive indiquant le nom de l’API ou de la famille d’API, puis notez la valeur ajoutée que l’API offre aux utilisateurs API."
         },
         "developerRelations": {
           "section": "Relations développeurs",
-          "description": "Comment le fournisseur d'API atteint-il et soutient-il les consommateurs d'API?"
+          "description": "Comment le fournisseur d’API atteint-il et soutient-il les utilisateurs API?"
         },
         "channels": {
           "section": "Canaux",
-          "description": "Par quels mécanismes les consommateurs d'API interagissent-ils avec l'API?"
+          "description": "Par quels mécanismes les utilisateurs API interagissent-ils avec l’API?"
         },
         "apiConsumerSegments": {
-          "section": "Segments de consommateurs de l'API",
-          "description": "Quelles sont les audiences cibles pour l'API?"
+          "section": "Segments d’utilisateurs API",
+          "description": "Quelles sont les audiences cibles pour l’API?"
         },
         "costs": {
           "section": "Coûts",
-          "description": "Quels sont les coûts importants liés à la création, au déploiement et à l'exploitation de l'API?"
+          "description": "Quels sont les coûts importants liés à la création, au déploiement et à l'exploitation de l’API?"
         },
         "benefits": {
           "section": "Avantages",
-          "description": "Quels sont les avantages significatifs ou les sources de revenus générés par l'API?"
+          "description": "Quels sont les avantages significatifs ou les sources de revenus générés par l’API?"
         }
       }
     },
     "apiValuePropositionCanvas": {
       "title": "API Value Proposition Canvas",
-      "purpose": "Comment le parcours client s'articule-t-il avec les API ? Quels sont les problèmes et les avantages rencontrés par les utilisateurs finaux et les consommateurs d'API ?",
-      "howToUse": "Décrire le point de vue des utilisateurs finaux, en commençant par leurs tâches, puis leurs problèmes et avantages ainsi que ceux des consommateurs d'API, et enfin les produits et fonctionnalités de l'API.",
+      "purpose": "Comment le parcours client est-il lié aux API ? Quels irritants et gains des utilisateurs finaux et des utilisateurs API doivent être traités ?",
+      "howToUse": "Décrire la perspective des utilisateurs finaux, en commençant par leurs tâches, puis leurs irritants et gains ainsi que ceux des utilisateurs API, et enfin les produits et fonctionnalités API.",
       "sections": {
         "tasks": {
           "section": "Tâches",
-          "description": "Qu'est-ce que les clients (utilisateurs finaux) cherchent à réaliser ?"
+          "description": "Que cherchent à accomplir les clients ou utilisateurs finaux ?"
         },
         "gainEnablingFeatures": {
           "section": "Fonctionnalités génératrices de gains",
-          "description": "Quelles fonctionnalités permettent aux utilisateurs finaux et aux consommateurs d'API de réaliser des gains ?"
+          "description": "Quelles fonctionnalités aident les utilisateurs finaux et les utilisateurs API à obtenir les gains attendus ?"
         },
         "painRelievingFeatures": {
-          "section": "Fonctionnalités soulageant les peines",
-          "description": "Quelles fonctionnalités aident les utilisateurs finaux et les consommateurs d'API à surmonter les difficultés ?"
+          "section": "Fonctionnalités qui réduisent les irritants",
+          "description": "Quelles fonctionnalités aident les utilisateurs finaux et les utilisateurs API à réduire les irritants ?"
         },
         "apiProducts": {
           "section": "Produits API",
@@ -1229,39 +1568,39 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "Quels sont les impacts commerciaux potentiels d'une défaillance de l'API?",
-      "howToUse": "Considérez l'impact potentiel sur la disponibilité, la sécurité et les données pour chaque API.",
+      "purpose": "Quels impacts métier une défaillance ou un mauvais comportement de la capacité ou de l’interface peut-il avoir ?",
+      "howToUse": "Évaluer les impacts potentiels sur la disponibilité, la sécurité, les données et les opérations avant de figer le mode de mise en œuvre.",
       "sections": {
         "availabilityRisks": {
           "section": "Risques de disponibilité",
-          "description": "Quels sont les risques potentiels pour la disponibilité de l'API?"
+          "description": "Quels sont les risques potentiels pour la disponibilité de l’API?"
         },
         "securityRisks": {
           "section": "Risques de sécurité",
-          "description": "Quels sont les risques de sécurité potentiels associés à l'API?"
+          "description": "Quels sont les risques de sécurité potentiels associés à l’API?"
         },
         "dataRisks": {
           "section": "Risques liés aux données",
-          "description": "Quels sont les risques potententiels pour l'intégrité ou la confidentialité des données?"
+          "description": "Quels sont les risques potententiels pour l'intégrité ou la protection des données?"
         },
         "mitigateAvailabilityRisks": {
           "section": "Atténuer les risques de disponibilité",
-          "description": "Comment le fournisseur d'API peut-il atténuer les risques de disponibilité?"
+          "description": "Comment le fournisseur d’API peut-il atténuer les risques de disponibilité?"
         },
         "mitigateSecurityRisks": {
           "section": "Atténuer les risques de sécurité",
-          "description": "Comment le fournisseur d'API peut-il atténuer les risques de sécurité?"
+          "description": "Comment le fournisseur d’API peut-il atténuer les risques de sécurité?"
         },
         "mitigateDataRisks": {
           "section": "Atténuer les risques liés aux données",
-          "description": "Comment le fournisseur d'API peut-il atténuer les risques liés aux données?"
+          "description": "Comment le fournisseur d’API peut-il atténuer les risques liés aux données?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "Quelle capacité est nécessaire pour soutenir la consommation de l'API?",
-      "howToUse": "Analysez les besoins de capacité actuels et futurs pour chaque API.",
+      "purpose": "Quelle capacité est nécessaire pour soutenir l’usage de la capacité ou de l’interface ?",
+      "howToUse": "Analyser les exigences de capacité actuelles et futures pour la capacité ou l’interface.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Volumes d'activité actuels",
@@ -1291,8 +1630,8 @@
     },
     "customerJourneyCanvas": {
       "title": "Customer Journey Canvas",
-      "purpose": "Quel est le parcours client ou partenaire que l'API est censée soutenir?",
-      "howToUse": "Décrivez un parcours client ou utilisateur réel — pas l'utilisation de l'API — afin de révéler les points de douleur, les objectifs et le contexte. Ces informations aident à définir le type de support API réellement nécessaire plus tard.",
+      "purpose": "Quel parcours client ou partenaire crée le besoin de capacité ou d’interface ?",
+      "howToUse": "Décrire un parcours réel de client, partenaire ou utilisateur, et non l’usage de l’API elle-même. Ce parcours révèle les irritants, objectifs et contextes qui aident à définir les exigences de capacité et d’interface.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "Le client découvre le besoin",
@@ -1304,7 +1643,7 @@
         },
         "pains": {
           "section": "Douleurs",
-          "description": "Quels sont les points de douleur ou défis du client?"
+          "description": "Quels sont les irritants ou défis du client?"
         },
         "journeySteps": {
           "section": "Étapes du parcours",
@@ -1330,8 +1669,8 @@
     },
     "domainCanvas": {
       "title": "Domain Canvas",
-      "purpose": "Quelles sont les entités principales et les règles métier liées à l'API?",
-      "howToUse": "Définissez le modèle de domaine pour chaque API, incluant entités, attributs et relations.",
+      "purpose": "Quels concepts, entités et règles de domaine métier la capacité ou l’interface doit-elle respecter ?",
+      "howToUse": "Définir le modèle de domaine métier pour la capacité ou l’interface, y compris entités, attributs et relations.",
       "sections": {
         "selectedCustomerJourneySteps": {
           "section": "Étapes du parcours client sélectionnées",
@@ -1361,8 +1700,8 @@
     },
     "eventCanvas": {
       "title": "Event Canvas",
-      "purpose": "Quels événements sont pertinents pour l'API et comment sont-ils traités?",
-      "howToUse": "Définissez les événements, leurs déclencheurs et la logique de traitement pour chaque API.",
+      "purpose": "Quels événements sont pertinents pour la capacité ou l’interface, et comment sont-ils traités ?",
+      "howToUse": "Définir les événements, leurs déclencheurs et la logique de traitement pour la capacité ou l’interface.",
       "sections": {
         "userTaskTrigger": {
           "section": "Tâche utilisateur / Déclencheur",
@@ -1374,7 +1713,7 @@
         },
         "processingLogic": {
           "section": "Traitement / Logique",
-          "description": "Décrivez la logique de traitement backend, y compris les validations, transformations ou décisions de routage."
+          "description": "Décrivez la logique de traitement systèmes backend, y compris les validations, transformations ou décisions de routage."
         },
         "outputEventResult": {
           "section": "Sortie / Résultat de l'événement",
@@ -1384,8 +1723,8 @@
     },
     "interactionCanvas": {
       "title": "Interaction Canvas",
-      "purpose": "Quels types d'interactions cette API doit-elle prendre en charge avant de choisir une conception spécifique à un protocole ?",
-      "howToUse": "Identifiez les styles d'interaction réellement nécessaires pour cette API et ceux qui ne relèvent pas de son champ d'application. Utilisez ce canevas pour clarifier l'intention avant de mapper le résultat vers REST, des événements ou GraphQL.",
+      "purpose": "Quels types d’interactions cette capacité ou interface doit-elle prendre en charge avant de choisir une conception propre au protocole ?",
+      "howToUse": "Identifier les styles d’interaction réellement nécessaires et ceux qui sont hors périmètre. Utiliser ce canvas pour clarifier l’intention avant de mapper le résultat vers REST, événements ou GraphQL.",
       "sections": {
         "crudInteractions": {
           "section": "Interactions CRUD",
@@ -1439,8 +1778,8 @@
     },
     "locationsCanvas": {
       "title": "Locations Canvas",
-      "purpose": "Quelles sont les frontières géopolitiques, réglementaires, réseau et de confiance qui affectent cette API ?",
-      "howToUse": "Identifiez où les consommateurs, les fournisseurs et les systèmes dépendants de l'API opèrent sur les réseaux internes, les réseaux partenaires, l'Internet public et les régions réglementées. Décrivez les implications en termes de latence, de confiance, de conformité et de connectivité entre eux.",
+      "purpose": "Quelles frontières géopolitiques, réglementaires, réseau et de confiance affectent cette capacité ou interface ?",
+      "howToUse": "Identifier où les utilisateurs, fournisseurs et systèmes dépendants opèrent dans les réseaux internes, réseaux partenaires, Internet public et régions réglementées. Décrire les implications sur la latence, la confiance, la conformité et la connectivité.",
       "sections": {
         "locationGroups": {
           "section": "Groupes de localisation / de confiance",
@@ -1478,20 +1817,20 @@
     },
     "restCanvas": {
       "title": "REST Canvas",
-      "purpose": "Comment l'API peut-elle être conçue selon les principes REST?",
-      "howToUse": "Définissez les ressources de l'API, les verbes et les exemples de requêtes et réponses.",
+      "purpose": "Comment concevoir l’API selon les principes RESTful ?",
+      "howToUse": "Définissez les ressources de l’API, les verbes et les exemples de requêtes et réponses.",
       "sections": {
         "apiResources": {
           "section": "Ressources API",
-          "description": "Quelles sont les ressources clés exposées par l'API?"
+          "description": "Quelles sont les ressources clés exposées par l’API?"
         },
         "apiResourceModel": {
           "section": "Modèle de ressource API",
-          "description": "Quelle est la structure du modèle de ressources de l'API?"
+          "description": "Quelle est la structure du modèle de ressources de l’API?"
         },
         "apiVerbs": {
           "section": "Verbes API",
-          "description": "Quels verbes HTTP sont utilisés pour interagir avec les ressources de l'API?"
+          "description": "Quels verbes HTTP sont utilisés pour interagir avec les ressources de l’API?"
         },
         "apiVerbExample": {
           "section": "Exemple de verbe API",
@@ -1501,16 +1840,16 @@
     },
     "graphqlCanvas": {
       "title": "GraphQL Canvas",
-      "purpose": "Comment l'API peut-elle être conçue selon les principes GraphQL ?",
-      "howToUse": "Définissez les principaux types, requêtes, mutations et contraintes pour votre API GraphQL.",
+      "purpose": "Comment concevoir l’API selon les principes GraphQL ?",
+      "howToUse": "Définir les types clés, requêtes, mutations et contraintes pour l’API GraphQL.",
       "sections": {
         "apiName": {
-          "section": "Nom de l'API",
-          "description": "Quel est le nom de l'API GraphQL ou du point de terminaison ?"
+          "section": "Nom de l’API",
+          "description": "Quel est le nom de l’API GraphQL ou du point de terminaison ?"
         },
         "consumerGoals": {
-          "section": "Objectifs des consommateurs",
-          "description": "Quels problèmes les consommateurs de l'API cherchent-ils à résoudre ? Quelles données leur sont nécessaires ?"
+          "section": "Objectifs des utilisateurs",
+          "description": "Quels problèmes les utilisateurs de l’API cherchent-ils à résoudre ? Quelles données leur sont nécessaires ?"
         },
         "keyTypes": {
           "section": "Types clés",
@@ -1530,28 +1869,141 @@
         },
         "subscriptions": {
           "section": "Abonnements",
-          "description": "Existe-t-il des mises à jour en temps réel ou des événements auxquels les consommateurs peuvent s'abonner ?"
+          "description": "Existe-t-il des mises à jour en temps réel ou des événements auxquels les utilisateurs peuvent s'abonner ?"
         },
         "authorizationRules": {
           "section": "Règles d'autorisation",
           "description": "Qui peut accéder à quels champs ou types ?"
         },
         "consumerConstraints": {
-          "section": "Contraintes des consommateurs",
+          "section": "Contraintes des utilisateurs",
           "description": "Y a-t-il des contraintes de pagination, de filtrage ou de limitation du débit ?"
         },
         "openQuestions": {
           "section": "Notes / Questions ouvertes",
-          "description": "Y a-t-il des décisions en attente ou des considérations d'intégration ?"
+          "description": "Y a-t-il des décisions en attente ou des considérations d’intégration ?"
+        }
+      }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Capability Value Proposition Canvas",
+      "purpose": "Quelle capacité réutilisable créerait de la valeur pour les utilisateurs sans décider encore si elle doit être mise à disposition sous forme d’API, d’événement, de fichier, de flux, de produit de données ou d’un autre mode de mise en œuvre ?",
+      "howToUse": "Partir des tâches et résultats attendus des utilisateurs. Capturer les fonctionnalités de capacité qui créent des gains et réduisent les irritants, puis décrire les capacités réutilisables candidates sans nommer la technologie trop tôt.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Tâches et résultats des utilisateurs",
+          "description": "Que cherchent à accomplir les utilisateurs, partenaires, systèmes ou équipes ?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Fonctionnalités de capacité génératrices de gains",
+          "description": "Quelles fonctionnalités de capacité aideraient les utilisateurs à obtenir de meilleurs résultats, plus de rapidité, d’automatisation, d’insights, de portée ou de conformité ?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Fonctionnalités de capacité qui réduisent les irritants",
+          "description": "Quelles fonctionnalités de capacité supprimeraient les frictions, le travail manuel, les erreurs, les retards, les risques ou l’incertitude pour les utilisateurs ?"
+        },
+        "reusableCapabilities": {
+          "section": "Capacités réutilisables",
+          "description": "Quelles capacités métier ou données réutilisables pourraient répondre à ces tâches, gains et irritants pour plusieurs utilisateurs ou cas d’usage ?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Capability Business Model Canvas",
+      "purpose": "Dans quelle mesure cette capacité d’intégration doit-elle être viable, réutilisable, financée, possédée, accompagnée et découvrable ?",
+      "howToUse": "Résumer la proposition de valeur de la capacité, identifier les utilisateurs et canaux d’engagement, puis cartographier propriété, activités, ressources, partenaires, bénéfices et coûts.",
+      "sections": {
+        "keyPartners": {
+          "section": "Partenaires clés",
+          "description": "Quels partenaires métier, technologie, données, sécurité, juridique, plateforme ou externes sont nécessaires pour faire fonctionner la capacité ?"
+        },
+        "keyActivities": {
+          "section": "Activités clés",
+          "description": "Que doivent faire le responsable de la capacité et les producteurs pour concevoir, mettre à disposition, gouverner, accompagner et améliorer la capacité ?"
+        },
+        "keyResources": {
+          "section": "Ressources clés",
+          "description": "Quels systèmes, actifs de données, plateformes, personnes, standards, financements et capacités opérationnelles sont nécessaires ?"
+        },
+        "capabilityValueProposition": {
+          "section": "Proposition de valeur de la capacité",
+          "description": "Quelle valeur cette capacité réutilisable apporte-t-elle aux utilisateurs et à l’organisation ou à l’écosystème ?"
+        },
+        "consumerEngagement": {
+          "section": "Engagement des utilisateurs",
+          "description": "Comment les utilisateurs découvriront-ils, évalueront-ils, demanderont-ils, onboarderont-ils, obtiendront-ils du support et donneront-ils du feedback sur la capacité ?"
+        },
+        "channels": {
+          "section": "Canaux",
+          "description": "Par quels catalogues, portails, marketplaces, sites de documentation, parcours de support ou processus de gouvernance les utilisateurs interagiront-ils avec la capacité ?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Segments d’utilisateurs de la capacité",
+          "description": "Qui sont les utilisateurs actuels et potentiels de la capacité, y compris équipes, partenaires, systèmes, produits ou utilisateurs de données ?"
+        },
+        "costs": {
+          "section": "Coûts",
+          "description": "Quels sont les coûts significatifs de construction, d’exploitation, de gouvernance, de support et d’évolution de la capacité ?"
+        },
+        "benefits": {
+          "section": "Bénéfices",
+          "description": "Quels bénéfices métier, opérationnels, écosystémiques, de réutilisation, de conformité ou de coût justifient la capacité ?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Consumer Experience Requirements Canvas",
+      "purpose": "Quelles exigences d’expérience et non fonctionnelles les utilisateurs doivent-ils préciser avant de décider de la meilleure architecture d’intégration ?",
+      "howToUse": "Utiliser ce canvas comme tableau d’exigences indépendant de la technologie. Capturer les attentes et contraintes des utilisateurs, puis utiliser les implications d’architecture pour choisir API, événements, fichiers, flux, produits de données ou un autre mode de mise en œuvre.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Objectifs des utilisateurs",
+          "description": "Quels sont les objectifs métier, de workflow, de décision, d’automatisation ou d’usage des données des utilisateurs ?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Disponibilité et fraîcheur",
+          "description": "Quand la capacité doit-elle être disponible, quelle fraîcheur d’information est nécessaire et quelles fenêtres de latence ou de mise à disposition comptent ?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume et performance",
+          "description": "Quels volumes de requêtes, événements, enregistrements, fichiers, lots, utilisateurs ou transactions la capacité doit-elle supporter aujourd’hui et demain ?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Qualité et cohérence des données",
+          "description": "Quelles attentes les utilisateurs ont-ils en matière d’exactitude, complétude, cohérence, ordre, déduplication, rapprochement ou validation ?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Sécurité, protection des données et conformité",
+          "description": "Quelles contraintes d’identité, d’autorisation, de confidentialité, de résidence, de consentement, de conservation, d’audit ou de réglementation s’appliquent ?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding et accès",
+          "description": "Comment les utilisateurs doivent-ils trouver, demander, tester, obtenir l’approbation et commencer à utiliser la capacité ?"
+        },
+        "changeAndVersioning": {
+          "section": "Changement et versionnement",
+          "description": "Quelle tolérance au changement les utilisateurs ont-ils, et quelles attentes de préavis, compatibilité, migration ou versionnement s’appliquent ?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observabilité et support",
+          "description": "De quelle surveillance, information de statut, traçabilité, visibilité sur la qualité des données, support, propriété et communication d’incident les utilisateurs ont-ils besoin ?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Reprise et continuité",
+          "description": "Quelles attentes de replay, retry, rapprochement, sauvegarde, fallback, continuité ou reprise manuelle doivent être prises en charge ?"
+        },
+        "architectureImplications": {
+          "section": "Implications d’architecture",
+          "description": "Que signifient ces exigences pour les styles d’architecture possibles, tels que API, événements, fichiers, flux, produits de données ou intégration directe ?"
         }
       }
     }
   },
   "pt": {
     "apiBusinessModelCanvas": {
-      "title": "API Business Model Canvas",
-      "purpose": "Qual será a viabilidade e a reutilização desta API? Temos um caso de negócios do ponto de vista de custo-benefício?",
-      "howToUse": "Resuma a proposta de valor de uma API a partir do API Value Proposition Canvas e siga a sequência numerada.",
+      "title": "Canvas do Modelo de Negócio da API",
+      "purpose": "Qual será a viabilidade e a reutilização desta API? Temos um caso de negócio do ponto de vista de custo-benefício?",
+      "howToUse": "Resuma a proposta de valor de uma API a partir do Canvas da Proposta de Valor da API e siga a sequência numerada.",
       "sections": {
         "keyPartners": {
           "section": "Parceiros-chave",
@@ -1559,31 +2011,31 @@
         },
         "keyActivities": {
           "section": "Atividades-chave",
-          "description": "Quais são as ações mais importantes que o provedor da API deve realizar para operar com sucesso?"
+          "description": "Quais são as ações mais importantes que o fornecedor da API deve realizar para operar com sucesso?"
         },
         "keyResources": {
           "section": "Recursos-chave",
-          "description": "Que ativos estratégicos exclusivos o provedor da API deve adquirir ou construir?"
+          "description": "Que ativos estratégicos exclusivos deve o fornecedor da API adquirir ou construir?"
         },
         "apiValueProposition": {
           "section": "Proposta de valor da API",
-          "description": "Comece com um post-it nomeando a API ou a família de APIs e, em seguida, anote o valor que a API oferece aos seus consumidores."
+          "description": "Comece com uma nota adesiva que nomeie a API ou a família de APIs e, em seguida, anote o valor que a API oferece aos seus utilizadores."
         },
         "developerRelations": {
-          "section": "Relações com desenvolvedores",
-          "description": "Como o provedor da API alcança e oferece suporte aos consumidores da API?"
+          "section": "Relações com programadores",
+          "description": "Como o fornecedor da API alcança e oferece apoio aos utilizadores da API?"
         },
         "channels": {
           "section": "Canais",
-          "description": "Por meio de quais mecanismos os consumidores da API interagem com a API?"
+          "description": "Através de quais mecanismos os utilizadores da API interagem com a API?"
         },
         "apiConsumerSegments": {
-          "section": "Segmentos de consumidores da API",
+          "section": "Segmentos de utilizadores da API",
           "description": "Quem é o público-alvo da API?"
         },
         "costs": {
           "section": "Custos",
-          "description": "Quais são os custos significativos envolvidos na construção, implantação e operação da API?"
+          "description": "Quais são os custos significativos envolvidos na construção, disponibilização e operação da API?"
         },
         "benefits": {
           "section": "Benefícios",
@@ -1592,21 +2044,21 @@
       }
     },
     "apiValuePropositionCanvas": {
-      "title": "API Value Proposition Canvas",
-      "purpose": "Como a jornada do cliente se relaciona com as APIs? Quais dificuldades e benefícios dos usuários finais e consumidores de API precisam ser abordados?",
-      "howToUse": "Descreva a perspectiva dos usuários finais, começando com suas tarefas, depois suas dificuldades e benefícios e os dos consumidores de API e, finalmente, os produtos e recursos da API.",
+      "title": "Canvas da Proposta de Valor da API",
+      "purpose": "Como a percurso do cliente se relaciona com as APIs? Quais dificuldades e benefícios dos utilizadores finais e utilizadores de API precisam /de ser abordados?",
+      "howToUse": "Descreva a perspetiva dos utilizadores finais, começando pelas suas tarefas, depois as suas dificuldades e benefícios e os dos utilizadores de API e, finalmente, os produtos e funcionalidades da API.",
       "sections": {
         "tasks": {
           "section": "Tarefas",
-          "description": "O que os clientes (usuários finais) estão tentando alcançar?"
+          "description": "O que os clientes (utilizadores finais) estão a tentar alcançar?"
         },
         "gainEnablingFeatures": {
           "section": "Recursos que possibilitam ganhos",
-          "description": "Quais recursos permitem que os usuários finais e consumidores de API alcancem ganhos?"
+          "description": "Que funcionalidades permitem que os utilizadores finais e utilizadores de API alcancem ganhos?"
         },
         "painRelievingFeatures": {
           "section": "Recursos que aliviam dificuldades",
-          "description": "Quais recursos ajudam os usuários finais e os consumidores da API a superar dificuldades?"
+          "description": "Que funcionalidades ajudam os utilizadores finais e os utilizadores da API a superar dificuldades?"
         },
         "apiProducts": {
           "section": "Produtos API",
@@ -1615,8 +2067,8 @@
       }
     },
     "businessImpactCanvas": {
-      "title": "Business Impact Canvas",
-      "purpose": "Quais são os possíveis impactos nos negócios da falha da API?",
+      "title": "Canvas de Impacto no Negócio",
+      "purpose": "Quais são os possíveis impactos no negócio da falha da API?",
       "howToUse": "Considere o impacto potencial na disponibilidade, segurança e dados para cada API.",
       "sections": {
         "availabilityRisks": {
@@ -1633,26 +2085,26 @@
         },
         "mitigateAvailabilityRisks": {
           "section": "Mitigar riscos de disponibilidade",
-          "description": "Como o provedor da API pode mitigar os riscos de disponibilidade?"
+          "description": "Como o fornecedor da API pode mitigar os riscos de disponibilidade?"
         },
         "mitigateSecurityRisks": {
           "section": "Mitigar riscos de segurança",
-          "description": "Como o provedor da API pode mitigar os riscos de segurança?"
+          "description": "Como o fornecedor da API pode mitigar os riscos de segurança?"
         },
         "mitigateDataRisks": {
           "section": "Mitigar riscos de dados",
-          "description": "Como o provedor da API pode mitigar os riscos de dados?"
+          "description": "Como o fornecedor da API pode mitigar os riscos de dados?"
         }
       }
     },
     "capacityCanvas": {
-      "title": "Capacity Canvas",
+      "title": "Canvas de Capacidade",
       "purpose": "Quanta capacidade é necessária para suportar o consumo da API?",
       "howToUse": "Analise os requisitos de capacidade atuais e futuros para cada API.",
       "sections": {
         "currentBusinessVolumes": {
-          "section": "Volumes comerciais atuais",
-          "description": "Quais são os volumes comerciais e as taxas de transação atuais?"
+          "section": "Volumes de negócio atuais",
+          "description": "Quais são os volumes de negócio e as taxas de transação atuais?"
         },
         "futureConsumptionTrends": {
           "section": "Tendências de consumo futuro",
@@ -1667,8 +2119,8 @@
           "description": "Quais estratégias de cache podem ser usadas para otimizar o desempenho?"
         },
         "rateLimitingStrategies": {
-          "section": "Estratégias de limitação de taxa",
-          "description": "Que estratégias de limitação de taxa podem ser usadas para gerenciar o consumo?"
+          "section": "Estratégias de limitação de pedidos",
+          "description": "Que estratégias de limitação de pedidos podem ser usadas para gerir o consumo?"
         },
         "scalingStrategies": {
           "section": "Estratégias de dimensionamento",
@@ -1677,9 +2129,9 @@
       }
     },
     "customerJourneyCanvas": {
-      "title": "Customer Journey Canvas",
-      "purpose": "Qual é a jornada do cliente ou parceiro que a API pretende apoiar?",
-      "howToUse": "Descreva uma jornada real de um cliente ou usuário — não o uso da API — para revelar pontos fracos, objetivos e contexto. Essa informação ajuda a definir que tipo de suporte de API será realmente necessário mais tarde.",
+      "title": "Canvas do Percurso do Cliente",
+      "purpose": "Qual é a percurso do cliente ou parceiro que a API pretende apoiar?",
+      "howToUse": "Descreva uma percurso real de um cliente ou utilizador — não o uso da API — para revelar pontos fracos, objetivos e contexto. Esta informação ajuda a definir que tipo de apoio de API será realmente necessário mais tarde.",
       "sections": {
         "customerDiscoversNeed": {
           "section": "O cliente descobre a necessidade",
@@ -1687,15 +2139,15 @@
         },
         "persona": {
           "section": "Persona",
-          "description": "Quem é o cliente típico que passa por essa jornada?"
+          "description": "Quem é o cliente típico que passa por esta percurso?"
         },
         "pains": {
           "section": "Dores",
           "description": "Quais são os pontos fracos ou desafios do cliente?"
         },
         "journeySteps": {
-          "section": "Etapas da jornada",
-          "description": "Quais são as etapas que o cliente percorre em sua jornada?"
+          "section": "Etapas da percurso",
+          "description": "Quais são as etapas que o cliente percorre em sua percurso?"
         },
         "customerNeedIsResolved": {
           "section": "Necessidade do cliente resolvida",
@@ -1716,44 +2168,44 @@
       }
     },
     "domainCanvas": {
-      "title": "Domain Canvas",
-      "purpose": "Quais são as entidades principais e as regras de negócios relacionadas à API?",
+      "title": "Canvas de Domínio",
+      "purpose": "Quais são as entidades principais e as regras de negócio relacionadas com a API?",
       "howToUse": "Defina o modelo de domínio para cada API, incluindo entidades, atributos e relações.",
       "sections": {
         "selectedCustomerJourneySteps": {
-          "section": "Etapas selecionadas da jornada do cliente",
-          "description": "Quais etapas da jornada do cliente são relevantes para este domínio?"
+          "section": "Etapas selecionadas da percurso do cliente",
+          "description": "Quais etapas da percurso do cliente são relevantes para este domínio?"
         },
         "coreEntitiesAndBusinessMeaning": {
-          "section": "Entidades principais e significado comercial",
-          "description": "Quais são as entidades principais e seu significado comercial?"
+          "section": "Entidades principais e significado de negócio",
+          "description": "Quais são as entidades principais e seu significado de negócio?"
         },
         "attributesAndBusinessImportance": {
-          "section": "Atributos e importância comercial",
-          "description": "Quais são os principais atributos de cada entidade e sua importância comercial?"
+          "section": "Atributos e importância de negócio",
+          "description": "Quais são os principais atributos de cada entidade e sua importância de negócio?"
         },
         "relationshipsBetweenEntities": {
           "section": "Relações entre entidades",
           "description": "Quais são as relações entre as entidades?"
         },
         "businessComplianceAndIntegrityRules": {
-          "section": "Regras de negócios, conformidade e integridade",
-          "description": "Quais são as regras de negócios, conformidade e integridade relacionadas às entidades?"
+          "section": "Regras de negócio, conformidade e integridade",
+          "description": "Quais são as regras de negócio, conformidade e integridade relacionadas com as entidades?"
         },
         "securityAndPrivacyConsiderations": {
           "section": "Considerações sobre segurança e privacidade",
-          "description": "Quais são as considerações sobre segurança e privacidade relacionadas às entidades?"
+          "description": "Quais são as considerações sobre segurança e privacidade relacionadas com as entidades?"
         }
       }
     },
     "eventCanvas": {
-      "title": "Event Canvas",
+      "title": "Canvas de Eventos",
       "purpose": "Quais eventos são relevantes para a API e como são processados?",
-      "howToUse": "Defina os eventos, seus gatilhos e a lógica de processamento para cada API.",
+      "howToUse": "Defina os eventos, os seus acionadores e a lógica de processamento para cada API.",
       "sections": {
         "userTaskTrigger": {
-          "section": "Tarefa do usuário/gatilho",
-          "description": "Que ação do usuário ou evento do sistema aciona essa operação de evento?"
+          "section": "Tarefa do utilizador/gatilho",
+          "description": "Que ação do utilizador ou evento do sistema aciona esta operação de evento?"
         },
         "inputEventPayload": {
           "section": "Entrada / Carga útil do evento",
@@ -1761,7 +2213,7 @@
         },
         "processingLogic": {
           "section": "Processamento/Lógica",
-          "description": "Descreva a lógica de processamento de back-end, incluindo validações, transformações ou decisões de roteamento."
+          "description": "Descreva a lógica de processamento de back-end, incluindo validações, transformações ou decisões de encaminhamento."
         },
         "outputEventResult": {
           "section": "Saída/Resultado do evento",
@@ -1770,13 +2222,13 @@
       }
     },
     "interactionCanvas": {
-      "title": "Interaction Canvas",
-      "purpose": "Que tipos de interações esta API deve suportar antes de escolher um projeto específico para o protocolo?",
-      "howToUse": "Identifique quais estilos de interação são realmente necessários para esta API e quais estão fora do escopo. Use esta tela para esclarecer a intenção antes de mapear o resultado para REST, eventos ou GraphQL.",
+      "title": "Canvas de Interação",
+      "purpose": "Que tipos de interações esta API deve suportar antes de escolher uma conceção específica para o protocolo?",
+      "howToUse": "Identifique que estilos de interação são realmente necessários para esta API e quais estão fora do âmbito. Utilize este canvas para esclarecer a intenção antes de mapear o resultado para REST, eventos ou GraphQL.",
       "sections": {
         "crudInteractions": {
           "section": "Interações CRUD",
-          "description": "As interações do tipo CRUD (Criar, Ler, Atualizar, Excluir) são necessárias aqui?"
+          "description": "As interações do tipo CRUD (Criar, Ler, Atualizar, Eliminar) são necessárias aqui?"
         },
         "crudInputOutputModels": {
           "section": "Modelos de entrada e saída CRUD",
@@ -1788,7 +2240,7 @@
         },
         "queryDrivenInteractions": {
           "section": "Interações orientadas por consulta",
-          "description": "Quais interações de leitura ou consulta são necessárias para responder às perguntas dos usuários?"
+          "description": "Quais interações de leitura ou consulta são necessárias para responder às perguntas dos utilizadores?"
         },
         "queryDrivenInputOutputModels": {
           "section": "Modelos de entrada e saída orientados por consulta",
@@ -1812,7 +2264,7 @@
         },
         "eventDrivenInteractions": {
           "section": "Interações orientadas por eventos",
-          "description": "Quais eventos precisam ser publicados ou consumidos, se houver?"
+          "description": "Quais eventos precisam /de ser publicados ou consumidos, se houver?"
         },
         "eventDrivenInputOutputModels": {
           "section": "Modelos de entrada e saída orientados por eventos",
@@ -1825,13 +2277,13 @@
       }
     },
     "locationsCanvas": {
-      "title": "Location Canvas",
-      "purpose": "“Quais limites geopolíticos, regulatórios, de rede e de confiança afetam esta API?",
-      "howToUse": "Identifique onde os consumidores, provedores e sistemas dependentes da API operam em redes internas, redes de parceiros, internet pública e regiões regulamentadas. Descreva as implicações de latência, confiança, conformidade e conectividade entre eles.",
+      "title": "Canvas de Localizações",
+      "purpose": "Que fronteiras geopolíticas, regulamentares, de rede e de confiança afetam esta API?",
+      "howToUse": "Identifique onde os utilizadores, fornecedores e sistemas dependentes da API operam em redes internas, redes de parceiros, internet pública e regiões regulamentadas. Descreva as implicações de latência, confiança, conformidade e conectividade entre eles.",
       "sections": {
         "locationGroups": {
           "section": "Grupos de Localização / Confiança",
-          "description": "Quais são os grupos geopolíticos, regulatórios, de rede ou de confiança relevantes?"
+          "description": "Quais são os grupos geopolíticos, regulamentares, de rede ou de confiança relevantes?"
         },
         "locationGroupCharacteristics": {
           "section": "Características do grupo",
@@ -1839,7 +2291,7 @@
         },
         "locations": {
           "section": "Locais / Zonas Relevantes",
-          "description": "QQuais são os locais, zonas ou ambientes relevantes dentro de cada grupo?"
+          "description": "Quais são os locais, zonas ou ambientes relevantes dentro de cada grupo?"
         },
         "locationCharacteristics": {
           "section": "Características de localização / zona",
@@ -1864,9 +2316,9 @@
       }
     },
     "restCanvas": {
-      "title": "REST Canvas",
-      "purpose": "Como a API pode ser projetada usando os princípios RESTful?",
-      "howToUse": "Defina os recursos, verbos e exemplos de solicitações e respostas da API.",
+      "title": "Canvas REST",
+      "purpose": "Como a API pode ser concebida utilizando os princípios RESTful?",
+      "howToUse": "Defina os recursos, verbos e exemplos de pedidos e respostas da API.",
       "sections": {
         "apiResources": {
           "section": "Recursos da API",
@@ -1882,26 +2334,26 @@
         },
         "apiVerbExample": {
           "section": "Exemplo de verbo da API",
-          "description": "Forneça um exemplo de solicitação e resposta da API para cada verbo."
+          "description": "Forneça um exemplo de pedido e resposta da API para cada verbo."
         }
       }
     },
     "graphqlCanvas": {
-      "title": "GraphQL Canvas",
-      "purpose": "Como a API pode ser projetada usando os princípios do GraphQL?",
-      "howToUse": "Defina os tipos de chave, consultas, mutações e restrições para sua API GraphQL.",
+      "title": "Canvas GraphQL",
+      "purpose": "Como a API pode ser concebida utilizando os princípios do GraphQL?",
+      "howToUse": "Defina os tipos-chave, consultas, mutações e restrições para a sua API GraphQL.",
       "sections": {
         "apiName": {
           "section": "Nome da API",
           "description": "Qual é o nome da API GraphQL ou do endpoint?"
         },
         "consumerGoals": {
-          "section": "Objetivos do consumidor",
-          "description": "Quais problemas os consumidores da API estão tentando resolver? De quais dados eles precisam?"
+          "section": "Objetivos do utilizador",
+          "description": "Que problemas os utilizadores da API estão a tentar resolver? De que dados precisam?"
         },
         "keyTypes": {
           "section": "Tipos de chave",
-          "description": "Quais são os tipos principais expostos (por exemplo, Usuário, Pedido, Produto)?"
+          "description": "Quais são os tipos principais expostos (por exemplo, Utilizador, Pedido, Produto)?"
         },
         "relationships": {
           "section": "Relações",
@@ -1913,23 +2365,136 @@
         },
         "mutations": {
           "section": "Mutações",
-          "description": "Quais operações modificarão os dados (por exemplo, criar, atualizar, excluir)?"
+          "description": "Quais operações modificarão os dados (por exemplo, criar, atualizar, eliminar)?"
         },
         "subscriptions": {
           "section": "Assinaturas",
-          "description": "Existem atualizações em tempo real ou eventos que os consumidores podem assinar?"
+          "description": "Existem atualizações em tempo real ou eventos que os utilizadores podem assinar?"
         },
         "authorizationRules": {
           "section": "Regras de autorização",
-          "description": "Quem pode acessar quais campos ou tipos?"
+          "description": "Quem pode aceder quais campos ou tipos?"
         },
         "consumerConstraints": {
-          "section": "Restrições do consumidor",
-          "description": "Existem restrições de paginação, filtragem ou limitação de taxa?"
+          "section": "Restrições do utilizador",
+          "description": "Existem restrições de paginação, filtragem ou limitação de pedidos?"
         },
         "openQuestions": {
           "section": "Notas/Questões em aberto",
           "description": "Alguma decisão pendente ou considerações sobre integração?"
+        }
+      }
+    },
+    "capabilityValuePropositionCanvas": {
+      "title": "Canvas da Proposta de Valor da Capacidade",
+      "purpose": "Que capacidade reutilizável criaria valor para os utilizadores sem decidir ainda se deve ser disponibilizada como API, evento, ficheiro, stream, produto de dados ou outro estilo de implementação?",
+      "howToUse": "Comece pelas tarefas e resultados dos utilizadores. Capte funcionalidades da capacidade que permitem ganhos e aliviam dores; depois descreva capacidades reutilizáveis candidatas sem nomear a tecnologia demasiado cedo.",
+      "sections": {
+        "consumerTasks": {
+          "section": "Tarefas e resultados dos utilizadores",
+          "description": "O que os utilizadores, parceiros, utilizadores, sistemas ou equipas estão a tentar alcançar?"
+        },
+        "gainEnablingCapabilities": {
+          "section": "Funcionalidades da capacidade que permitem ganhos",
+          "description": "Que funcionalidades da capacidade ajudariam os utilizadores a alcançar melhores resultados, rapidez, automação, conhecimento, alcance ou conformidade?"
+        },
+        "painRelievingCapabilities": {
+          "section": "Funcionalidades da capacidade que aliviam dores",
+          "description": "Que funcionalidades da capacidade removeriam atrito, trabalho manual, erros, atrasos, risco ou incerteza para os utilizadores?"
+        },
+        "reusableCapabilities": {
+          "section": "Capacidades reutilizáveis",
+          "description": "Que capacidades de negócio ou de dados reutilizáveis poderiam servir estas tarefas, ganhos e dores em mais do que um utilizador ou caso de utilização?"
+        }
+      }
+    },
+    "capabilityBusinessModelCanvas": {
+      "title": "Canvas do Modelo de Negócio da Capacidade",
+      "purpose": "Quão viável, reutilizável, financiada, atribuída, apoiada e detetável deve ser esta capacidade de integração?",
+      "howToUse": "Resuma a proposta de valor da capacidade, identifique utilizadores e canais de envolvimento, e depois mapeie propriedade, atividades, recursos, parceiros, benefícios e custos.",
+      "sections": {
+        "keyPartners": {
+          "section": "Parceiros-chave",
+          "description": "Que parceiros de negócio, tecnologia, dados, segurança, jurídico, plataforma ou externos são necessários para que a capacidade funcione?"
+        },
+        "keyActivities": {
+          "section": "Atividades-chave",
+          "description": "O que o responsável pela capacidade e os produtores devem fazer para conceber, entregar, governar, apoiar e melhorar a capacidade?"
+        },
+        "keyResources": {
+          "section": "Recursos-chave",
+          "description": "Que sistemas, ativos de dados, plataformas, pessoas, normas, financiamento e capacidades operacionais são necessários?"
+        },
+        "capabilityValueProposition": {
+          "section": "Proposta de valor da capacidade",
+          "description": "Que valor esta capacidade reutilizável oferece aos utilizadores e à organização ou ecossistema?"
+        },
+        "consumerEngagement": {
+          "section": "Envolvimento dos utilizadores",
+          "description": "Como irão os utilizadores descobrir, avaliar, solicitar, integrar-se, obter apoio e dar feedback sobre a capacidade?"
+        },
+        "channels": {
+          "section": "Canais",
+          "description": "Através de que catálogos, portais, marketplaces, sites de documentação, caminhos de apoio ou processos de governação os utilizadores irão interagir com a capacidade?"
+        },
+        "capabilityConsumerSegments": {
+          "section": "Segmentos de utilizadores da capacidade",
+          "description": "Quem são os utilizadores atuais e potenciais da capacidade, incluindo equipas, parceiros, sistemas, produtos ou utilizadores de dados?"
+        },
+        "costs": {
+          "section": "Custos",
+          "description": "Quais são os custos significativos de construir, operar, governar, apoiar e evoluir a capacidade?"
+        },
+        "benefits": {
+          "section": "Benefícios",
+          "description": "Que benefícios de negócio, operacionais, de ecossistema, reutilização, conformidade ou custo justificam a capacidade?"
+        }
+      }
+    },
+    "consumerExperienceRequirementsCanvas": {
+      "title": "Canvas de Requisitos da Experiência do Utilizador",
+      "purpose": "Que requisitos de experiência e requisitos não funcionais os utilizadores precisam /de esclarecer antes de decidir a melhor arquitetura de integração?",
+      "howToUse": "Utilize isto como uma tabela de requisitos independente da tecnologia. Capte expectativas e restrições dos utilizadores; depois utilize as implicações de arquitetura para escolher APIs, eventos, ficheiros, streams, produtos de dados ou outro estilo de implementação.",
+      "sections": {
+        "consumerGoals": {
+          "section": "Objetivos dos utilizadores",
+          "description": "Quais são os objetivos de negócio, de fluxo de trabalho, de decisão, de automação ou de utilização de dados dos utilizadores?"
+        },
+        "availabilityAndTimeliness": {
+          "section": "Disponibilidade e atualidade",
+          "description": "Quando é que a capacidade deve estar disponível, quão atualizada deve estar a informação e que latência ou janelas de entrega importam?"
+        },
+        "volumeAndPerformance": {
+          "section": "Volume e desempenho",
+          "description": "Que volumes de pedidos, eventos, registos, ficheiros, lotes, utilizadores ou transações a capacidade deve suportar agora e no futuro?"
+        },
+        "dataQualityAndConsistency": {
+          "section": "Qualidade e consistência dos dados",
+          "description": "Que expectativas de exatidão, completude, consistência, ordenação, deduplicação, reconciliação ou validação têm os utilizadores?"
+        },
+        "securityPrivacyAndCompliance": {
+          "section": "Segurança, privacidade e conformidade",
+          "description": "Que restrições de identidade, autorização, confidencialidade, residência, consentimento, retenção, auditoria ou regulamentação se aplicam?"
+        },
+        "onboardingAndAccess": {
+          "section": "Integração e acesso",
+          "description": "Como devem os utilizadores encontrar, solicitar, testar, obter aprovação e começar a utilizar a capacidade?"
+        },
+        "changeAndVersioning": {
+          "section": "Mudança e controlo de versões",
+          "description": "Que tolerância à mudança têm os utilizadores e que expectativas de aviso prévio, compatibilidade, migração ou controlo de versões se aplicam?"
+        },
+        "observabilityAndSupport": {
+          "section": "Observabilidade e apoio",
+          "description": "Que monitorização, estado, rastreabilidade, visibilidade da qualidade dos dados, apoio, propriedade e comunicação de incidentes os utilizadores precisam?"
+        },
+        "recoveryAndContinuity": {
+          "section": "Recuperação e continuidade",
+          "description": "Que expectativas de repetição, nova tentativa, reconciliação, cópia de segurança, fallback, continuidade ou recuperação manual devem ser suportadas?"
+        },
+        "architectureImplications": {
+          "section": "Implicações de arquitetura",
+          "description": "O que estes requisitos implicam para possíveis estilos de arquitetura, como APIs, eventos, ficheiros, streams, produtos de dados ou integração direta?"
         }
       }
     }

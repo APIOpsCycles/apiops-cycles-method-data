@@ -1046,14 +1046,6 @@
           {
             "step": "station.upskilling.how_it_works",
             "resource": "api-training-programs"
-          },
-          {
-            "step": "station.upskilling.how_it_works.1",
-            "resource": "api-training-programs"
-          },
-          {
-            "step": "station.upskilling.how_it_works.2",
-            "resource": "api-training-programs"
           }
         ],
         "apply_in_work": "station.upskilling.apply_in_work"
@@ -1106,14 +1098,6 @@
           {
             "step": "station.portfolio-management.how_it_works",
             "resource": "api-portfolio-management-guidelines"
-          },
-          {
-            "step": "station.portfolio-management.how_it_works.1",
-            "resource": "api-portfolio-management-guidelines"
-          },
-          {
-            "step": "station.portfolio-management.how_it_works.2",
-            "resource": "api-portfolio-management-guidelines"
           }
         ],
         "apply_in_work": "station.portfolio-management.apply_in_work"
@@ -1135,14 +1119,6 @@
         "how_it_works": [
           {
             "step": "station.budget-and-resource-management.how_it_works",
-            "resource": "api-portfolio-management-guidelines"
-          },
-          {
-            "step": "station.budget-and-resource-management.how_it_works.1",
-            "resource": "api-portfolio-management-guidelines"
-          },
-          {
-            "step": "station.budget-and-resource-management.how_it_works.2",
             "resource": "api-portfolio-management-guidelines"
           }
         ],

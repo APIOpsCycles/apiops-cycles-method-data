@@ -56,6 +56,10 @@
     "description": "The API contract is tested and meets functional and non-functional requirements."
   },
   {
+    "id": "automation-workflow-validated",
+    "description": "The workflow, rules, integrations, and relevant interface contracts have been validated and tested."
+  },
+  {
     "id": "api-description-available",
     "description": "The API and its exposed capabilities are described clearly enough for review, audit, and onboarding."
   },

@@ -16,19 +16,24 @@
       "description": "stakeholder.api-product-owner.description"
     },
     {
-      "id": "domain-expert",
-      "title": "stakeholder.domain-expert.title",
-      "description": "stakeholder.domain-expert.description"
+      "id": "capability-owner",
+      "title": "stakeholder.capability-owner.title",
+      "description": "stakeholder.capability-owner.description"
     },
     {
-      "id": "customer-or-partner-representative",
-      "title": "stakeholder.customer-or-partner-representative.title",
-      "description": "stakeholder.customer-or-partner-representative.description"
+      "id": "domain-specialist",
+      "title": "stakeholder.domain-specialist.title",
+      "description": "stakeholder.domain-specialist.description"
     },
     {
-      "id": "api-consumer-representative",
-      "title": "stakeholder.api-consumer-representative.title",
-      "description": "stakeholder.api-consumer-representative.description"
+      "id": "customer-specialist",
+      "title": "stakeholder.customer-specialist.title",
+      "description": "stakeholder.customer-specialist.description"
+    },
+    {
+      "id": "api-consumer-specialist",
+      "title": "stakeholder.api-consumer-specialist.title",
+      "description": "stakeholder.api-consumer-specialist.description"
     },
     {
       "id": "platform-architect",
@@ -36,14 +41,44 @@
       "description": "stakeholder.platform-architect.description"
     },
     {
+      "id": "api-architect",
+      "title": "stakeholder.api-architect.title",
+      "description": "stakeholder.api-architect.description"
+    },
+    {
+      "id": "integration-architect",
+      "title": "stakeholder.integration-architect.title",
+      "description": "stakeholder.integration-architect.description"
+    },
+    {
+      "id": "platform-owner",
+      "title": "stakeholder.platform-owner.title",
+      "description": "stakeholder.platform-owner.description"
+    },
+    {
       "id": "api-designer",
       "title": "stakeholder.api-designer.title",
       "description": "stakeholder.api-designer.description"
     },
     {
-      "id": "delivery-engineer",
-      "title": "stakeholder.delivery-engineer.title",
-      "description": "stakeholder.delivery-engineer.description"
+      "id": "api-engineer",
+      "title": "stakeholder.api-engineer.title",
+      "description": "stakeholder.api-engineer.description"
+    },
+    {
+      "id": "automation-owner",
+      "title": "stakeholder.automation-owner.title",
+      "description": "stakeholder.automation-owner.description"
+    },
+    {
+      "id": "process-owner",
+      "title": "stakeholder.process-owner.title",
+      "description": "stakeholder.process-owner.description"
+    },
+    {
+      "id": "automation-engineer",
+      "title": "stakeholder.automation-engineer.title",
+      "description": "stakeholder.automation-engineer.description"
     },
     {
       "id": "security-specialist",
@@ -51,29 +86,29 @@
       "description": "stakeholder.security-specialist.description"
     },
     {
-      "id": "compliance-legal-specialist",
-      "title": "stakeholder.compliance-legal-specialist.title",
-      "description": "stakeholder.compliance-legal-specialist.description"
+      "id": "compliance-specialist",
+      "title": "stakeholder.compliance-specialist.title",
+      "description": "stakeholder.compliance-specialist.description"
     },
     {
-      "id": "governance-owner",
-      "title": "stakeholder.governance-owner.title",
-      "description": "stakeholder.governance-owner.description"
+      "id": "governance-specialist",
+      "title": "stakeholder.governance-specialist.title",
+      "description": "stakeholder.governance-specialist.description"
     },
     {
-      "id": "documentation-devrel-owner",
-      "title": "stakeholder.documentation-devrel-owner.title",
-      "description": "stakeholder.documentation-devrel-owner.description"
+      "id": "api-devrel-specialist",
+      "title": "stakeholder.api-devrel-specialist.title",
+      "description": "stakeholder.api-devrel-specialist.description"
     },
     {
-      "id": "support-operations-owner",
-      "title": "stakeholder.support-operations-owner.title",
-      "description": "stakeholder.support-operations-owner.description"
+      "id": "operations-specialist",
+      "title": "stakeholder.operations-specialist.title",
+      "description": "stakeholder.operations-specialist.description"
     },
     {
-      "id": "partner-vendor-manager",
-      "title": "stakeholder.partner-vendor-manager.title",
-      "description": "stakeholder.partner-vendor-manager.description"
+      "id": "partner-specialist",
+      "title": "stakeholder.partner-specialist.title",
+      "description": "stakeholder.partner-specialist.description"
     }
   ]
 }

@@ -8,9 +8,13 @@
     "create-apiops": "./bin/create-apiops-project.js"
   },
   "files": [
-    "bin",
+    "bin/check-node-version.js",
+    "bin/create-apiops-project.js",
     "template"
   ],
+  "optionalDependencies": {
+    "apiops-cycles-method-data": "^4.0.0"
+  },
   "keywords": [
     "apiops",
     "openapi",

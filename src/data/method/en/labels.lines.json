@@ -1,16 +1,16 @@
 {
   "lines.title": "Metro Lines",
-  "lines.description": "A collection of API lines that guide the development and management of APIs.",
+  "lines.description": "A collection of shared metro lines that guide reusable capability, API, integration, automation, and future data productization work.",
   "line.business-opportunities-line.title": "Business Opportunities Line",
-  "line.business-opportunities-line.description": "Focuses on identifying and leveraging business opportunities through APIs.",
+  "line.business-opportunities-line.description": "Focuses on identifying and shaping business opportunities as reusable digital capabilities.",
   "line.platform-architecture-line.title": "Platform Architecture Line",
-  "line.platform-architecture-line.description": "Covers the architectural aspects of API platforms.",
-  "line.api-design-line.title": "API Design Line",
-  "line.api-design-line.description": "Focuses on the design principles and practices for APIs.",
+  "line.platform-architecture-line.description": "Covers architecture and platform decisions for reusable capabilities across implementation styles.",
+  "line.api-design-line.title": "Design Line",
+  "line.api-design-line.description": "Focuses on solution and interface design principles that can be used across APIs, integrations, automations, data products, and other implementation styles.",
   "line.delivery-line.title": "Delivery Line",
-  "line.delivery-line.description": "Covers the delivery processes and practices for APIs.",
+  "line.delivery-line.description": "Covers delivery and operational practices for reusable capabilities across implementation styles.",
   "line.publishing-and-adoption-line.title": "Publishing and Adoption Line",
-  "line.publishing-and-adoption-line.description": "Focuses on publishing APIs and ensuring their adoption by consumers.",
+  "line.publishing-and-adoption-line.description": "Focuses on publishing reusable capabilities and enabling adoption by consumers.",
   "line.operating-model-line.title": "Operating Model Line",
-  "line.operating-model-line.description": "Covers the operating model for API management and governance."
+  "line.operating-model-line.description": "Covers the operating model for reusable capability management and governance."
 }

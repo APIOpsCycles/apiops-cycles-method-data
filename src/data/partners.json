@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Osaango",
+    "href": "https://www.osaango.com",
+    "logo": "/partners/osaango-black.svg",
+    "description": "Coordinates the global APIOps Cycles community and method development. Provides consulting, training and method support globally, main partner in the Nordics."
+  },
+  {
+    "title": "adorsys GmbH & Co. KG",
+    "href": "https://adorsys.com/",
+    "logo": "/partners/adorsys.svg",
+    "description": "adorsys designs secure, scalable digital ecosystems for API-driven organisations. We combine deep technical expertise with strong API strategies, governance, and enablement models to help teams build, scale, and operate APIs effectively, turning them into strategic assets that drive innovation and sustainable digital growth. "
+  },
+  {
+    "title": "APIsFirst",
+    "href": "https://www.apisfirst.com",
+    "logo": "/partners/apisfirst.svg",
+    "description": "Provides consulting and team coaching for getting value from API-related investments and API economics, using the method to accelerate understanding and impact. Global reach with local focus in the UK and Australia. "
+  },
+  {
+    "title": "API Evangelist",
+    "href": "https://apievangelist.com/",
+    "logo": "/partners/api-evangelist-logo-butterfly-transparent.png",
+    "description": "API Evangelist is committed to helping your teams focus on the fundamentals of APIs, while also working with you to make sense of the leading edge of APIs, and where all of this is going."
+  },
+  {
+    "title": "You?",
+    "href": "https://tally.so/r/3yQEpp",
+    "logo": "/favicon.svg",
+    "description": "Join the APIOps Cycles community as a partner! Click to learn more..."
+  }
+]

@@ -9,6 +9,7 @@ const repoRoot = path.resolve(__dirname, "..", "..");
 export const DEFAULT_LOCALE = "en";
 export const DEFAULT_OUTPUT_DIR = "specs/canvases";
 export const DEFAULT_STYLE = "Not sure yet";
+export const DEFAULT_CYCLE_ID = "api-productization-cycle";
 export const DEFAULT_NOTE_SIZE = 80;
 export const NOTE_COLOR_PALETTE = Object.freeze({
   benefit: "#C0EB6A",
@@ -72,6 +73,35 @@ export const CANVAS_SECTION_NOTE_INTENTS = Object.freeze({
     gainEnablingFeatures: "benefit",
     painRelievingFeatures: "benefit",
     apiProducts: "neutral"
+  },
+  capabilityValuePropositionCanvas: {
+    consumerTasks: "task",
+    gainEnablingCapabilities: "benefit",
+    painRelievingCapabilities: "benefit",
+    reusableCapabilities: "neutral"
+  },
+  capabilityBusinessModelCanvas: {
+    keyPartners: "neutral",
+    keyActivities: "task",
+    keyResources: "neutral",
+    capabilityValueProposition: "benefit",
+    consumerEngagement: "neutral",
+    channels: "task",
+    capabilityConsumerSegments: "neutral",
+    costs: "negative",
+    benefits: "benefit"
+  },
+  consumerExperienceRequirementsCanvas: {
+    consumerGoals: "benefit",
+    availabilityAndTimeliness: "neutral",
+    volumeAndPerformance: "neutral",
+    dataQualityAndConsistency: "neutral",
+    securityPrivacyAndCompliance: "negative",
+    onboardingAndAccess: "task",
+    changeAndVersioning: "negative",
+    observabilityAndSupport: "task",
+    recoveryAndContinuity: "task",
+    architectureImplications: "neutral"
   },
   businessImpactCanvas: {
     availabilityRisks: "negative",
@@ -237,10 +267,8 @@ export function getCoreStations() {
 
 export function getStations() {
   const stations = readJson(resolveMethodFile("stations.json"));
-  return [
-    ...((stations["core-stations"] && stations["core-stations"].items) || []),
-    ...((stations["sub-stations"] && stations["sub-stations"].items) || [])
-  ]
+  return Object.values(stations)
+    .flatMap((group) => group.items || [])
     .slice()
     .sort((left, right) => left.order - right.order);
 }
@@ -280,6 +308,10 @@ export function getStationCriteriaMap() {
   return readJson(resolveMethodFile("station-criteria.json"));
 }
 
+export function getCriteria() {
+  return readJson(resolveMethodFile("criteria.json"));
+}
+
 export function getStakeholders() {
   return readJson(resolveMethodFile("stakeholders.json")).stakeholders || [];
 }
@@ -288,8 +320,43 @@ export function getStationStakeholderMap() {
   return readJson(resolveMethodFile("station-stakeholders.json"));
 }
 
+export function getStationStakeholderMapForCycle(cycleId = DEFAULT_CYCLE_ID) {
+  const stationStakeholderMap = getStationStakeholderMap();
+  if (stationStakeholderMap.stationStakeholdersByCycle) {
+    const cycle = resolveCycle(cycleId);
+    const entries = stationStakeholderMap.stationStakeholdersByCycle[cycle.id];
+    if (!entries) {
+      throw new Error(`Unknown station stakeholder cycle mapping: ${cycle.id}`);
+    }
+    return entries;
+  }
+
+  return stationStakeholderMap;
+}
+
 export function getResources() {
   return readJson(resolveMethodFile("resources.json")).resources || [];
+}
+
+export function getLines() {
+  return readJson(resolveMethodFile("lines.json")).lines?.items || [];
+}
+
+export function getCycles() {
+  return readJson(resolveMethodFile("cycles.json")).cycles?.items || [];
+}
+
+export function getCycle(cycleId) {
+  const normalizedCycleId = String(cycleId || "").trim();
+  const cycle = getCycles().find((entry) => entry.id === normalizedCycleId || entry.slug === normalizedCycleId);
+  if (!cycle) {
+    throw new Error(`Unknown cycle: ${cycleId}`);
+  }
+  return cycle;
+}
+
+export function resolveCycle(cycleId = DEFAULT_CYCLE_ID) {
+  return getCycle(cycleId || DEFAULT_CYCLE_ID);
 }
 
 export function normalizeResourceId(resourceId) {
@@ -310,6 +377,15 @@ function translate(labelKey, labels) {
   return labels[labelKey] || labelKey;
 }
 
+function translateFromLabelSets(labelKey, ...labelSets) {
+  for (const labels of labelSets) {
+    if (labels[labelKey]) {
+      return labels[labelKey];
+    }
+  }
+  return labelKey;
+}
+
 export function buildStakeholderCatalog(locale = DEFAULT_LOCALE) {
   const stakeholderLabels = getLocalizedLabels(locale, "stakeholders");
   return new Map(getStakeholders().map((stakeholder) => [
@@ -322,14 +398,14 @@ export function buildStakeholderCatalog(locale = DEFAULT_LOCALE) {
   ]));
 }
 
-export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE) {
+export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE, cycleId = DEFAULT_CYCLE_ID) {
   const stakeholderCatalog = buildStakeholderCatalog(locale);
   const stakeholderLabels = getLocalizedLabels(locale, "stakeholders");
-  const stationStakeholderMap = getStationStakeholderMap();
+  const stationStakeholderMap = getStationStakeholderMapForCycle(cycleId);
   const entries = stationStakeholderMap[stationId];
 
   if (!entries) {
-    throw new Error(`Unknown station stakeholder mapping: ${stationId}`);
+    throw new Error(`Unknown station stakeholder mapping: ${stationId} in ${cycleId || DEFAULT_CYCLE_ID}`);
   }
 
   return entries.map((entry) => {
@@ -341,14 +417,20 @@ export function buildStationStakeholderData(stationId, locale = DEFAULT_LOCALE) 
     return {
       ...stakeholder,
       involvement: entry.involvement,
-      involvementLabel: translate(`stakeholder.involvement.${entry.involvement}`, stakeholderLabels)
+      involvementLabel: translate(`stakeholder.involvement.${entry.involvement}`, stakeholderLabels),
+      responsibilities: entry.responsibilities || []
     };
   });
 }
 
-export function buildStartData(locale = DEFAULT_LOCALE) {
-  const stations = getCoreStations();
+export function buildStartData(locale = DEFAULT_LOCALE, cycleId = DEFAULT_CYCLE_ID) {
+  const cycle = resolveCycle(cycleId);
+  const stationById = new Map(getCoreStations().map((station) => [station.id, station]));
+  const stations = (cycle.stations || [])
+    .map((stationId) => stationById.get(stationId))
+    .filter(Boolean);
   const stationLabels = getLocalizedLabels(locale, "stations");
+  const cycleLabels = getLocalizedLabels(locale, "cycles");
   const criteriaLabels = getLocalizedLabels(locale, "criteria");
   const stationCriteriaMap = getStationCriteriaMap();
 
@@ -356,10 +438,15 @@ export function buildStartData(locale = DEFAULT_LOCALE) {
     id: station.id,
     order: station.order,
     slug: station.slug,
-    title: translate(station.title, stationLabels),
-    description: translate(station.description, stationLabels),
+    cycleId: cycle.id,
+    title: cycle.stationLabels?.[station.id]
+      ? translateFromLabelSets(cycle.stationLabels[station.id], stationLabels, cycleLabels)
+      : translate(station.title, stationLabels),
+    description: cycle.stationDescriptions?.[station.id]
+      ? translateFromLabelSets(cycle.stationDescriptions[station.id], stationLabels, cycleLabels)
+      : translate(station.description, stationLabels),
     suggestedForNewApi: index === 0,
-    stakeholders: buildStationStakeholderData(station.id, locale),
+    stakeholders: buildStationStakeholderData(station.id, locale, cycle.id),
     criteria: (stationCriteriaMap[station.id] || []).map((criterionId) => ({
       id: criterionId,
       label: translate(`criterion.${criterionId}`, criteriaLabels)
@@ -593,27 +680,39 @@ export function shouldIncludeResourceForStyle(resourceId, stationId, style) {
   return !["restCanvas", "eventCanvas", "graphqlCanvas"].includes(normalizedResourceId);
 }
 
-export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, style = DEFAULT_STYLE) {
-  const stations = getStations();
-  const resources = getResources();
-  const stationLabels = getLocalizedLabels(locale, "stations");
-  const resourceLabels = getLocalizedLabels(locale, "resources");
-  const station = stations.find((entry) => entry.id === stationId);
+function getCycleStepLabelKey(cycleId, stationId, index) {
+  const baseKey = `cycle.${cycleId}.station.${stationId}.how_it_works`;
+  return index === 0 ? baseKey : `${baseKey}.${index}`;
+}
 
-  if (!station) {
-    throw new Error(`Unknown station id: ${stationId}`);
-  }
+function buildStationResourceSteps(station, stationId, cycle, style, resources, stationLabels, cycleLabels, resourceLabels) {
+  const stationSteps = getStationSteps(station);
+  const stationStepsByResource = new Map(
+    stationSteps
+      .filter((step) => step.resource)
+      .map((step) => [normalizeResourceId(step.resource), step])
+  );
+  const resourceIds = cycle.recommendedResources?.[stationId] || stationSteps.map((step) => step.resource).filter(Boolean);
 
-  const steps = getStationSteps(station)
-    .filter((step) => step.resource)
-    .filter((step) => shouldIncludeResourceForStyle(step.resource, stationId, style))
-    .map((step, index) => {
-      const normalizedResourceId = normalizeResourceId(step.resource);
+  return resourceIds
+    .filter((resourceId) => shouldIncludeResourceForStyle(resourceId, stationId, style))
+    .map((resourceId, index) => {
+      const normalizedResourceId = normalizeResourceId(resourceId);
       const resource = resources.find((entry) => entry.id === normalizedResourceId);
+      const stationStep = stationStepsByResource.get(normalizedResourceId);
+      const resourceTitle = resource ? translate(resource.title, resourceLabels) : normalizedResourceId;
+      const cycleStepLabelKey = getCycleStepLabelKey(cycle.id, stationId, index);
+      const hasCycleStepLabel = cycleLabels[cycleStepLabelKey] || stationLabels[cycleStepLabelKey];
+      const stepText = hasCycleStepLabel
+        ? translateFromLabelSets(cycleStepLabelKey, cycleLabels, stationLabels)
+        : (stationStep
+          ? translate(stationStep.step, stationLabels)
+          : `Use ${resourceTitle}.`);
+
       if (!resource) {
         return {
           order: index + 1,
-          step: translate(step.step, stationLabels),
+          step: stepText,
           resourceId: normalizedResourceId,
           missing: true
         };
@@ -621,9 +720,9 @@ export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, sty
 
       return {
         order: index + 1,
-        step: translate(step.step, stationLabels),
+        step: stepText,
         resourceId: resource.id,
-        resourceTitle: translate(resource.title, resourceLabels),
+        resourceTitle,
         resourceDescription: translate(resource.description, resourceLabels),
         category: resource.category || "",
         canvasId: resource.canvas || null,
@@ -631,12 +730,37 @@ export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, sty
         slug: resource.slug
       };
     });
+}
+
+export function buildStationResourceData(stationId, locale = DEFAULT_LOCALE, style = DEFAULT_STYLE, cycleId = DEFAULT_CYCLE_ID) {
+  const stations = getStations();
+  const resources = getResources();
+  const stationLabels = getLocalizedLabels(locale, "stations");
+  const cycleLabels = getLocalizedLabels(locale, "cycles");
+  const resourceLabels = getLocalizedLabels(locale, "resources");
+  const cycle = resolveCycle(cycleId);
+  const station = stations.find((entry) => entry.id === stationId);
+
+  if (!station) {
+    throw new Error(`Unknown station id: ${stationId}`);
+  }
+
+  if (!(cycle.stations || []).includes(stationId)) {
+    throw new Error(`Station ${stationId} is not part of cycle ${cycle.id}`);
+  }
+
+  const steps = buildStationResourceSteps(station, stationId, cycle, style, resources, stationLabels, cycleLabels, resourceLabels);
 
   return {
     stationId: station.id,
-    stationTitle: translate(station.title, stationLabels),
-    stationDescription: translate(station.description, stationLabels),
-    stakeholders: buildStationStakeholderData(station.id, locale),
+    cycleId: cycle.id,
+    stationTitle: cycle.stationLabels?.[station.id]
+      ? translateFromLabelSets(cycle.stationLabels[station.id], stationLabels, cycleLabels)
+      : translate(station.title, stationLabels),
+    stationDescription: cycle.stationDescriptions?.[station.id]
+      ? translateFromLabelSets(cycle.stationDescriptions[station.id], stationLabels, cycleLabels)
+      : translate(station.description, stationLabels),
+    stakeholders: buildStationStakeholderData(station.id, locale, cycle.id),
     style,
     steps
   };
@@ -707,6 +831,168 @@ export function getCanvasCreatorUrl(canvasId, locale = DEFAULT_LOCALE) {
   return `${CANVAS_CREATOR_BASE_URL}?canvas=${encodeURIComponent(canvasId)}&locale=${encodeURIComponent(locale)}`;
 }
 
+function formatMarkdownCell(value) {
+  return String(value || "")
+    .replace(/\r?\n/g, " ")
+    .trim();
+}
+
+function formatGuidanceList(values) {
+  return values
+    .map((value) => formatMarkdownCell(value).replace(/[.;:]+$/g, ""))
+    .filter(Boolean)
+    .join("; ");
+}
+
+function isPlaceholderExampleNote(content) {
+  const normalized = String(content || "").trim().replace(/\s+/g, " ");
+  return !normalized ||
+    /^placeholder$/i.test(normalized) ||
+    /^double-click on text to edit\. click and select color$/i.test(normalized);
+}
+
+function formatExampleNotes(notes) {
+  return (notes || [])
+    .map((note) => String(note.content || "").trim())
+    .filter((content) => !isPlaceholderExampleNote(content))
+    .join("; ");
+}
+
+function formatExampleAnswer(value) {
+  const text = formatMarkdownCell(value);
+  return text ? `_Example: ${text}_` : "";
+}
+
+function renderConfluencePasteTableRow(values) {
+  return `| ${values.map((value) => formatMarkdownCell(value)).join(" | ")} |`;
+}
+
+function renderConfluenceWikiHeaderRow(values) {
+  return `|| ${values.map((value) => formatMarkdownCell(value)).join(" || ")} ||`;
+}
+
+function renderConfluenceWikiRow(values) {
+  return `| ${values.map((value) => formatMarkdownCell(value)).join(" | ")} |`;
+}
+
+function buildStationCanvasGroups(canvasRows) {
+  const groups = [];
+  const groupsByStation = new Map();
+
+  for (const row of canvasRows) {
+    const stationKey = row.stationTitle || "Requirements";
+    let group = groupsByStation.get(stationKey);
+    if (!group) {
+      group = {
+        stationTitle: stationKey,
+        stationDescription: row.stationDescription || "",
+        stationWhyItMatters: row.stationWhyItMatters || "",
+        canvasRows: []
+      };
+      groupsByStation.set(stationKey, group);
+      groups.push(group);
+    }
+
+    group.canvasRows.push(row);
+  }
+
+  return groups;
+}
+
+function findCanvasResource(canvasId) {
+  return getResources().find((resource) => resource.canvas === canvasId) || null;
+}
+
+function findCanvasStationContext(canvasId, resourceId, stationPath, stationOverlays) {
+  const overlay = stationOverlays.find((entry) => {
+    const reuse = entry.reuse || [];
+    const alternatives = entry.alternativeResources || [];
+    return reuse.includes(canvasId) ||
+      reuse.includes(resourceId) ||
+      alternatives.includes(canvasId) ||
+      alternatives.includes(resourceId);
+  });
+
+  if (!overlay) {
+    return null;
+  }
+
+  return stationPath.find((station) => station.id === overlay.station) || null;
+}
+
+function getDocumentCanvasStationContext(canvasId, resourceId, extension, stationPath) {
+  const explicitStationId = extension.documentCanvasStations?.[canvasId] || extension.documentCanvasStations?.[resourceId];
+  if (explicitStationId) {
+    return stationPath.find((station) => station.id === explicitStationId) || null;
+  }
+
+  return findCanvasStationContext(canvasId, resourceId, stationPath, extension.stationOverlays || []);
+}
+
+function findStationInstruction(stationId, resourceId, locale) {
+  if (!stationId || !resourceId) {
+    return "";
+  }
+
+  const stationLabels = getLocalizedLabels(locale, "stations");
+  const station = getStations().find((entry) => entry.id === stationId);
+  const step = getStationSteps(station || {}).find((entry) => normalizeResourceId(entry.resource) === resourceId);
+  return step ? translate(step.step, stationLabels) : "";
+}
+
+function normalizeDocumentText(value) {
+  return String(value || "");
+}
+
+function getCanvasExampleAnswers(canvasId) {
+  const templatesDir = resolveCanvasFile("import-export-templates");
+  if (!fs.existsSync(templatesDir)) {
+    return new Map();
+  }
+
+  const examplesBySection = new Map();
+  const files = fs.readdirSync(templatesDir)
+    .filter((fileName) => fileName.endsWith(".json"))
+    .map((fileName) => path.join(templatesDir, fileName));
+
+  for (const filePath of files) {
+    const template = readJson(filePath);
+    if (template.templateId !== canvasId) {
+      continue;
+    }
+
+    for (const section of template.sections || []) {
+      const exampleAnswer = formatExampleNotes(section.stickyNotes);
+      if (!exampleAnswer) {
+        continue;
+      }
+
+      const existing = examplesBySection.get(section.sectionId);
+      examplesBySection.set(
+        section.sectionId,
+        existing ? `${existing}; ${exampleAnswer}` : exampleAnswer
+      );
+    }
+  }
+
+  return examplesBySection;
+}
+
+function buildCriteriaMetadata(criteriaIds, locale) {
+  const criteriaLabels = getLocalizedLabels(locale, "criteria");
+  const criteriaById = new Map(getCriteria().map((criterion) => [criterion.id, criterion]));
+  return (criteriaIds || [])
+    .map((criterionId) => {
+      const criterion = criteriaById.get(criterionId);
+      return criterion ? {
+        id: criterion.id,
+        title: translate(`criterion.${criterion.id}`, criteriaLabels),
+        description: criterion.description
+      } : null;
+    })
+    .filter(Boolean);
+}
+
 export function resolveStationIds(options = {}) {
   if (options.station) {
     return [options.station];
@@ -720,7 +1006,8 @@ export function resolveStationIds(options = {}) {
   }
 
   if (!options.preset || options.preset === "new-api") {
-    return NEW_API_STATIONS;
+    const cycle = resolveCycle(options.cycle || DEFAULT_CYCLE_ID);
+    return NEW_API_STATIONS.filter((stationId) => (cycle.stations || []).includes(stationId));
   }
 
   throw new Error(`Unknown preset: ${options.preset}`);
@@ -729,6 +1016,7 @@ export function resolveStationIds(options = {}) {
 export function generateCanvases(options = {}) {
   const locale = options.locale || DEFAULT_LOCALE;
   const style = normalizeStyle(options.style || DEFAULT_STYLE);
+  const cycle = resolveCycle(options.cycle || DEFAULT_CYCLE_ID);
   const outputRoot = path.resolve(process.cwd(), options.output || DEFAULT_OUTPUT_DIR);
   const resources = getResources();
   const generated = [];
@@ -736,7 +1024,7 @@ export function generateCanvases(options = {}) {
   const seenResourceIds = new Set();
 
   for (const stationId of resolveStationIds(options)) {
-    const stationResources = buildStationResourceData(stationId, locale, style);
+    const stationResources = buildStationResourceData(stationId, locale, style, cycle.id);
     const canvasResources = stationResources.steps
       .map((step) => resources.find((resource) => resource.id === step.resourceId))
       .filter((resource) => resource && resource.category === "canvas");
@@ -774,6 +1062,7 @@ export function generateCanvases(options = {}) {
   return {
     locale,
     style,
+    cycleId: cycle.id,
     outputRoot,
     generated,
     skipped

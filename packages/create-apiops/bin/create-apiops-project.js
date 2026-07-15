@@ -12,23 +12,54 @@ const templateDir = path.resolve(__dirname, "..", "template");
 const DEFAULTS = {
   name: "my-api-project",
   locale: "en",
+  cycle: "api-productization-cycle",
   style: "REST",
   install: true
 };
 
 function parseArgs(argv) {
   const args = {
+    help: false,
+    version: false,
     yes: false,
     name: undefined,
     locale: undefined,
+    cycle: undefined,
     style: undefined,
-    install: undefined
+    install: undefined,
+    errors: []
+  };
+
+  const readValue = (arg, key, index) => {
+    const equalIndex = arg.indexOf("=");
+    if (equalIndex !== -1) {
+      const value = arg.slice(equalIndex + 1);
+      if (!value) {
+        args.errors.push(`Missing value for ${arg.slice(0, equalIndex)}.`);
+      }
+      return { value, nextIndex: index };
+    }
+
+    const value = argv[index + 1];
+    if (!value || value.startsWith("--")) {
+      args.errors.push(`Missing value for --${key}.`);
+      return { value: undefined, nextIndex: index };
+    }
+    return { value, nextIndex: index + 1 };
   };
 
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
 
-    if (arg === "--yes") {
+    if (arg === "--help" || arg === "-h") {
+      args.help = true;
+      continue;
+    }
+    if (arg === "--version" || arg === "-v") {
+      args.version = true;
+      continue;
+    }
+    if (arg === "--yes" || arg === "-y") {
       args.yes = true;
       continue;
     }
@@ -36,24 +67,80 @@ function parseArgs(argv) {
       args.install = false;
       continue;
     }
-    if (arg === "--name") {
-      args.name = argv[i + 1];
-      i += 1;
+    if (arg === "--name" || arg.startsWith("--name=")) {
+      const result = readValue(arg, "name", i);
+      args.name = result.value;
+      i = result.nextIndex;
       continue;
     }
-    if (arg === "--locale") {
-      args.locale = argv[i + 1];
-      i += 1;
+    if (arg === "--locale" || arg.startsWith("--locale=")) {
+      const result = readValue(arg, "locale", i);
+      args.locale = result.value;
+      i = result.nextIndex;
       continue;
     }
-    if (arg === "--style") {
-      args.style = argv[i + 1];
-      i += 1;
+    if (arg === "--cycle" || arg.startsWith("--cycle=")) {
+      const result = readValue(arg, "cycle", i);
+      args.cycle = result.value;
+      i = result.nextIndex;
+      continue;
+    }
+    if (arg === "--style" || arg.startsWith("--style=")) {
+      const result = readValue(arg, "style", i);
+      args.style = result.value;
+      i = result.nextIndex;
+      continue;
+    }
+    if (arg.startsWith("-")) {
+      args.errors.push(`Unknown option: ${arg}`);
+      continue;
+    }
+    if (!args.name) {
+      args.name = arg;
+      continue;
+    }
+    if (args.name !== arg) {
+      args.errors.push(`Unexpected positional argument: ${arg}`);
       continue;
     }
   }
 
   return args;
+}
+
+function getPackageVersion() {
+  const packageJsonPath = path.resolve(__dirname, "..", "package.json");
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+  return packageJson.version;
+}
+
+function printHelp() {
+  console.log(`create-apiops ${getPackageVersion()}
+
+Scaffold a new APIOps project with method guidance, API design artifacts,
+OpenAPI linting, and APIOps Cycles audit scaffolding.
+
+Usage:
+  create-apiops [project-name] [options]
+  npm create apiops@latest -- [project-name] [options]
+
+Options:
+  --name <name>        Project directory and package name. Same as project-name.
+  --locale <locale>    Default locale for generated method commands. Default: ${DEFAULTS.locale}
+  --cycle <cycle-id>   APIOps cycle for station labels and resources. Default: ${DEFAULTS.cycle}
+  --style <style>      API style focus: REST, Event, GraphQL, or "Not sure yet". Default: ${DEFAULTS.style}
+  --yes, -y            Accept defaults for omitted options and run without prompts.
+                      Use this in non-interactive shells when any prompt answer is omitted.
+  --no-install         Skip npm install and starter canvas generation.
+  --version, -v        Show the create-apiops version.
+  --help, -h           Show this help.
+
+Examples:
+  npm create apiops@latest
+  npm create apiops@latest my-api
+  npm create apiops@latest -- --name my-api --locale en --cycle api-productization-cycle --style REST --yes
+  npm create apiops@latest -- my-api --locale en --cycle api-productization-cycle --style REST --yes --no-install
+`);
 }
 
 function normalizeStyle(style) {
@@ -119,27 +206,73 @@ function runCommand(command, args, options = {}) {
   });
 }
 
-function hasMissingFlagValue(args) {
-  return ["name", "locale", "style"].some((key) => args[key] === undefined && process.argv.includes(`--${key}`));
+function hasCompleteNonInteractiveConfig(args) {
+  return args.name && args.locale && args.cycle && args.style && args.install !== undefined;
+}
+
+async function loadMethodEngine() {
+  try {
+    return await import("apiops-cycles-method-data/method-engine");
+  } catch (error) {
+    if (error?.code !== "ERR_MODULE_NOT_FOUND") {
+      throw error;
+    }
+    return import("../../../src/lib/method-engine.js");
+  }
+}
+
+async function getSupportedCycleIds() {
+  const { getCycles } = await loadMethodEngine();
+  return getCycles().flatMap((cycle) => [cycle.id, cycle.slug].filter(Boolean));
+}
+
+async function validateCycle(cycle) {
+  const supportedCycleIds = await getSupportedCycleIds();
+  if (supportedCycleIds.includes(cycle)) {
+    return;
+  }
+
+  console.error(`Unknown APIOps cycle: ${cycle}`);
+  console.error(`Supported cycles: ${supportedCycleIds.join(", ")}`);
+  process.exit(1);
 }
 
 async function getScaffoldConfig() {
   const args = parseArgs(process.argv.slice(2));
 
-  if (hasMissingFlagValue(args)) {
-    console.error("Missing value for one of --name, --locale, or --style.");
+  if (args.help) {
+    printHelp();
+    process.exit(0);
+  }
+
+  if (args.version) {
+    console.log(getPackageVersion());
+    process.exit(0);
+  }
+
+  if (args.errors.length > 0) {
+    console.error(args.errors.join("\n"));
+    console.error("\nRun `create-apiops --help` for usage.");
     process.exit(1);
   }
 
   const initial = {
     projectName: args.name || DEFAULTS.name,
     locale: args.locale || DEFAULTS.locale,
+    cycle: args.cycle || DEFAULTS.cycle,
     apiStyle: normalizeStyle(args.style || DEFAULTS.style),
     installNow: args.install === undefined ? DEFAULTS.install : args.install
   };
 
-  if (args.yes || (args.name && args.locale && args.style && args.install !== undefined)) {
+  if (args.yes || hasCompleteNonInteractiveConfig(args)) {
     return initial;
+  }
+
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    console.error("create-apiops cannot prompt because stdin or stdout is not interactive.");
+    console.error("Pass --yes to accept defaults for omitted options. To skip --yes, pass --name, --locale, --cycle, --style, and --no-install.");
+    console.error("Example: npm create apiops@latest -- --name my-api --locale en --cycle api-productization-cycle --style REST --yes");
+    process.exit(1);
   }
 
   const rl = readline.createInterface({
@@ -149,6 +282,7 @@ async function getScaffoldConfig() {
 
   const projectName = args.name || await ask(rl, "Project name", initial.projectName);
   const locale = args.locale || await ask(rl, "Default locale", initial.locale);
+  const cycle = args.cycle || await ask(rl, "APIOps cycle", initial.cycle);
   const apiStyle = normalizeStyle(args.style || await ask(rl, "API style focus [REST/Event/GraphQL/Not sure yet]", initial.apiStyle));
   const installAnswer = args.install === undefined
     ? await ask(rl, "Install dependencies now? [yes/no]", initial.installNow ? "yes" : "no")
@@ -158,13 +292,15 @@ async function getScaffoldConfig() {
   return {
     projectName,
     locale,
+    cycle,
     apiStyle,
     installNow: installAnswer.toLowerCase() === "yes"
   };
 }
 
 async function main() {
-  const { projectName, locale, apiStyle, installNow } = await getScaffoldConfig();
+  const { projectName, locale, cycle, apiStyle, installNow } = await getScaffoldConfig();
+  await validateCycle(cycle);
 
   const targetDir = path.resolve(process.cwd(), projectName);
   if (fs.existsSync(targetDir)) {
@@ -177,6 +313,7 @@ async function main() {
   const replacements = {
     "__PROJECT_NAME__": projectName,
     "__LOCALE__": locale,
+    "__CYCLE__": cycle,
     "__API_TITLE__": projectName.replace(/[-_]/g, " "),
     "__API_STYLE__": apiStyle
   };
@@ -204,6 +341,7 @@ async function main() {
         "./node_modules/apiops-cycles-method-data/bin/method-cli.js",
         "generate-canvases",
         "--preset", "new-api",
+        "--cycle", cycle,
         "--style", apiStyle,
         "--locale", locale,
         "--output", "./specs/canvases"
