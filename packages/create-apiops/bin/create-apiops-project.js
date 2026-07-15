@@ -8,7 +8,6 @@ import { spawnSync } from "node:child_process";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const templateDir = path.resolve(__dirname, "..", "template");
-const methodDataRoot = path.resolve(__dirname, "..", "..", "..", "src", "data", "method");
 
 const DEFAULTS = {
   name: "my-api-project",
@@ -211,14 +210,24 @@ function hasCompleteNonInteractiveConfig(args) {
   return args.name && args.locale && args.cycle && args.style && args.install !== undefined;
 }
 
-function getSupportedCycleIds() {
-  const cyclesPath = path.join(methodDataRoot, "cycles.json");
-  const cyclesJson = JSON.parse(fs.readFileSync(cyclesPath, "utf8"));
-  return (cyclesJson.cycles?.items || []).flatMap((cycle) => [cycle.id, cycle.slug].filter(Boolean));
+async function loadMethodEngine() {
+  try {
+    return await import("apiops-cycles-method-data/method-engine");
+  } catch (error) {
+    if (error?.code !== "ERR_MODULE_NOT_FOUND") {
+      throw error;
+    }
+    return import("../../../src/lib/method-engine.js");
+  }
 }
 
-function validateCycle(cycle) {
-  const supportedCycleIds = getSupportedCycleIds();
+async function getSupportedCycleIds() {
+  const { getCycles } = await loadMethodEngine();
+  return getCycles().flatMap((cycle) => [cycle.id, cycle.slug].filter(Boolean));
+}
+
+async function validateCycle(cycle) {
+  const supportedCycleIds = await getSupportedCycleIds();
   if (supportedCycleIds.includes(cycle)) {
     return;
   }
@@ -291,7 +300,7 @@ async function getScaffoldConfig() {
 
 async function main() {
   const { projectName, locale, cycle, apiStyle, installNow } = await getScaffoldConfig();
-  validateCycle(cycle);
+  await validateCycle(cycle);
 
   const targetDir = path.resolve(process.cwd(), projectName);
   if (fs.existsSync(targetDir)) {

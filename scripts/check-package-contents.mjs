@@ -45,6 +45,15 @@ function assertHasFiles(fileSet, requiredFiles, label) {
   }
 }
 
+function assertDoesNotHaveFiles(fileSet, forbiddenFiles, label) {
+  for (const file of forbiddenFiles) {
+    if (fileSet.has(file)) {
+      console.error(`[${label}] Unexpected packaged file: ${file}`);
+      process.exit(1);
+    }
+  }
+}
+
 const pkg = JSON.parse(readFileSync("package.json", "utf8"));
 if (!Array.isArray(pkg.files) || !pkg.files.includes("src/schemas/")) {
   console.error('package.json files must include "src/schemas/".');
@@ -101,7 +110,6 @@ assertHasFiles(
   createApiopsFiles,
   [
     "bin/create-apiops-project.js",
-    "bin/method-cli.js",
     "bin/check-node-version.js",
     "template/AGENTS.md",
     "template/README.md",
@@ -110,5 +118,6 @@ assertHasFiles(
   ],
   "create-apiops"
 );
+assertDoesNotHaveFiles(createApiopsFiles, ["bin/method-cli.js"], "create-apiops");
 
 console.log("Root and create-apiops package content inspection passed.");

@@ -273,7 +273,7 @@ try {
     }
   );
   assert(
-    guidedStartOutput.includes("Recommended start station: API Product Strategy - Turn APIs Into Strategic Products (api-product-strategy)"),
+    guidedStartOutput.includes("Recommended start station: API Product Strategy (api-product-strategy)"),
     "Expected guided start flow to recommend API Product Strategy when all answers are no."
   );
   assert(
