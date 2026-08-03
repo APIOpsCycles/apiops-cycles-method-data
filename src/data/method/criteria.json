@@ -86,5 +86,25 @@
   {
     "id": "legal-compliance-clear",
     "description": "Legal, privacy, and compliance requirements for publishing are defined and understood."
+  },
+  {
+    "id": "automation-opportunity-evidence-ready",
+    "description": "The automation opportunity has enough evidence about process scope, expected outcome, suitability, data, systems, risk, ownership, PoC hypothesis, and validation plan to decide whether it should proceed."
+  },
+  {
+    "id": "automation-owner-confirmed",
+    "description": "Ownership is clear for the automation opportunity, process decisions, PoC validation, risks, and lifecycle outcomes."
+  },
+  {
+    "id": "automation-architecture-and-controls-validated",
+    "description": "The selected automation architecture, implementation mechanisms, human controls, security constraints, and recovery approach have been validated with the relevant stakeholders."
+  },
+  {
+    "id": "automation-operational-readiness-confirmed",
+    "description": "The automation has evidence for functional correctness, permissions, exception handling, oversight, monitoring, support, rollback, and operational ownership."
+  },
+  {
+    "id": "automation-value-monitoring-ready",
+    "description": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements."
   }
 ]

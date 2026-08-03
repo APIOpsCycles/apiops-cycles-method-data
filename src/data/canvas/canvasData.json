@@ -8,54 +8,102 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Alexander Osterwalder", "Osaango Ltd"],
+      "authors": [
+        "Alexander Osterwalder",
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "keyPartners",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 7
       },
       {
         "id": "keyActivities",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       },
       {
         "id": "keyResources",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "apiValueProposition",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "developerRelations",
-        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "channels",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "apiConsumerSegments",
-        "gridPosition": { "column": 4, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 4,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 2
       },
       {
         "id": "costs",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 2.5, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 2.5,
+          "rowSpan": 1
+        },
         "fillOrder": 9
       },
       {
         "id": "benefits",
-        "gridPosition": { "column": 2.5, "row": 2, "colSpan": 2.5, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2.5,
+          "row": 2,
+          "colSpan": 2.5,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       }
     ]
@@ -69,30 +117,53 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Alexander Osterwalder", "Osaango Ltd"],
+      "authors": [
+        "Alexander Osterwalder",
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "tasks",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 4, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 4,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true,
         "journeySteps": true
       },
       {
         "id": "gainEnablingFeatures",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "painRelievingFeatures",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "apiProducts",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 4, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 4,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       }
     ]
@@ -106,41 +177,73 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "availabilityRisks",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "securityRisks",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3,
         "highlight": true
       },
       {
         "id": "dataRisks",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5,
         "highlight": true
       },
       {
         "id": "mitigateAvailabilityRisks",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "mitigateSecurityRisks",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "mitigateDataRisks",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       }
     ]
@@ -154,39 +257,71 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "currentBusinessVolumes",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "futureConsumptionTrends",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "peakLoadAndAvailabilityRequirements",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 3, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 3,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "cachingStrategies",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "rateLimitingStrategies",
-        "gridPosition": { "column": 1, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "scalingStrategies",
-        "gridPosition": { "column": 2, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       }
     ]
@@ -200,50 +335,92 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "customerDiscoversNeed",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "persona",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 3, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 3,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "pains",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 5
       },
       {
         "id": "journeySteps",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 3, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 3,
+          "rowSpan": 2
+        },
         "fillOrder": 4,
         "journeySteps": true
       },
       {
         "id": "customerNeedIsResolved",
-        "gridPosition": { "column": 4, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 4,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "gains",
-        "gridPosition": { "column": 4, "row": 1, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 4,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 6
       },
       {
         "id": "inputsOutputs",
-        "gridPosition": { "column": 0.5, "row": 3, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0.5,
+          "row": 3,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 7
       },
       {
         "id": "interactionProcessingRules",
-        "gridPosition": { "column": 2.5, "row": 3, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2.5,
+          "row": 3,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       }
     ]
@@ -257,40 +434,72 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "selectedCustomerJourneySteps",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true,
         "journeySteps": true
       },
       {
         "id": "coreEntitiesAndBusinessMeaning",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "attributesAndBusinessImportance",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 3
       },
       {
         "id": "relationshipsBetweenEntities",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "businessComplianceAndIntegrityRules",
-        "gridPosition": { "column": 0, "row": 3, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "securityAndPrivacyConsiderations",
-        "gridPosition": { "column": 1, "row": 3, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       }
     ]
@@ -304,29 +513,51 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "userTaskTrigger",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "inputEventPayload",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 2
       },
       {
         "id": "processingLogic",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 2, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 2
+        },
         "fillOrder": 3
       },
       {
         "id": "outputEventResult",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 4
       }
     ]
@@ -340,72 +571,134 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "crudInteractions",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "crudInputOutputModels",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "crudProcessingValidation",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "queryDrivenInteractions",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4,
         "highlight": true
       },
       {
         "id": "queryDrivenInputOutputModels",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "queryDrivenProcessingValidation",
-        "gridPosition": { "column": 1, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       },
       {
         "id": "commandDrivenInteractions",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 7,
         "highlight": true
       },
       {
         "id": "commandDrivenInputOutputModels",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       },
       {
         "id": "commandDrivenProcessingValidation",
-        "gridPosition": { "column": 2, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 9
       },
       {
         "id": "eventDrivenInteractions",
-        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 10,
         "highlight": true
       },
       {
         "id": "eventDrivenInputOutputModels",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 11
       },
       {
         "id": "eventDrivenProcessingValidation",
-        "gridPosition": { "column": 3, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 12
       }
     ]
@@ -419,50 +712,92 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "locationGroups",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "locationGroupCharacteristics",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "locations",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3,
         "highlight": true
       },
       {
         "id": "locationCharacteristics",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "locationDistances",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "locationDistanceCharacteristics",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       },
       {
         "id": "locationEndpoints",
-        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 7
       },
       {
         "id": "locationEndpointCharacteristics",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       }
     ]
@@ -476,30 +811,52 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "apiResources",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "apiResourceModel",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 2
       },
       {
         "id": "apiVerbs",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3,
         "highlight": true
       },
       {
         "id": "apiVerbExample",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 3, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 3,
+          "rowSpan": 2
+        },
         "fillOrder": 4
       }
     ]
@@ -513,58 +870,110 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "apiName",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 1
       },
       {
         "id": "consumerGoals",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "keyTypes",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "relationships",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "queries",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "mutations",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       },
       {
         "id": "subscriptions",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 7
       },
       {
         "id": "authorizationRules",
-        "gridPosition": { "column": 1, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       },
       {
         "id": "consumerConstraints",
-        "gridPosition": { "column": 2, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 9
       },
       {
         "id": "openQuestions",
-        "gridPosition": { "column": 3, "row": 2, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 10
       }
     ]
@@ -578,30 +987,52 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "consumerTasks",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 4, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 4,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true,
         "journeySteps": true
       },
       {
         "id": "gainEnablingCapabilities",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "painRelievingCapabilities",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "reusableCapabilities",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 4, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 4,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       }
     ]
@@ -615,54 +1046,101 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "keyPartners",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 7
       },
       {
         "id": "keyActivities",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       },
       {
         "id": "keyResources",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "capabilityValueProposition",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "consumerEngagement",
-        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "channels",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "capabilityConsumerSegments",
-        "gridPosition": { "column": 4, "row": 0, "colSpan": 1, "rowSpan": 2 },
+        "gridPosition": {
+          "column": 4,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
         "fillOrder": 2
       },
       {
         "id": "costs",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 2.5, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 2.5,
+          "rowSpan": 1
+        },
         "fillOrder": 9
       },
       {
         "id": "benefits",
-        "gridPosition": { "column": 2.5, "row": 2, "colSpan": 2.5, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2.5,
+          "row": 2,
+          "colSpan": 2.5,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       }
     ]
@@ -676,61 +1154,942 @@
     "metadata": {
       "source": "APIOps Cycles",
       "license": "CC-BY-SA 4.0",
-      "authors": ["Osaango Ltd"],
+      "authors": [
+        "Osaango Ltd"
+      ],
       "website": "www.apiopscycles.com"
     },
     "sections": [
       {
         "id": "consumerGoals",
-        "gridPosition": { "column": 0, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 1,
         "highlight": true
       },
       {
         "id": "availabilityAndTimeliness",
-        "gridPosition": { "column": 1, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 2
       },
       {
         "id": "volumeAndPerformance",
-        "gridPosition": { "column": 2, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 3
       },
       {
         "id": "dataQualityAndConsistency",
-        "gridPosition": { "column": 3, "row": 0, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 4
       },
       {
         "id": "securityPrivacyAndCompliance",
-        "gridPosition": { "column": 0, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 5
       },
       {
         "id": "onboardingAndAccess",
-        "gridPosition": { "column": 1, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 6
       },
       {
         "id": "changeAndVersioning",
-        "gridPosition": { "column": 2, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 7
       },
       {
         "id": "observabilityAndSupport",
-        "gridPosition": { "column": 3, "row": 1, "colSpan": 1, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
         "fillOrder": 8
       },
       {
         "id": "recoveryAndContinuity",
-        "gridPosition": { "column": 0, "row": 2, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 9
       },
       {
         "id": "architectureImplications",
-        "gridPosition": { "column": 2, "row": 2, "colSpan": 2, "rowSpan": 1 },
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
         "fillOrder": 10,
         "highlight": true
+      }
+    ]
+  },
+  "automationOpportunityCanvas": {
+    "id": "automationOpportunityCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 4
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "processOrTask",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "currentProblem",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2,
+        "highlight": true
+      },
+      {
+        "id": "usersAndStakeholders",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "currentEffort",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "frequencyAndVolume",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "variability",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "expectedOutcome",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": true
+      },
+      {
+        "id": "processStability",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "dataAvailability",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      },
+      {
+        "id": "systemAvailability",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10
+      },
+      {
+        "id": "riskAndCriticality",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11
+      },
+      {
+        "id": "candidateApproaches",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12,
+        "highlight": true
+      },
+      {
+        "id": "successMeasures",
+        "gridPosition": {
+          "column": 0,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 13
+      },
+      {
+        "id": "owner",
+        "gridPosition": {
+          "column": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 14
+      },
+      {
+        "id": "pocScope",
+        "gridPosition": {
+          "column": 2,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 15
+      },
+      {
+        "id": "assumptionsToValidate",
+        "gridPosition": {
+          "column": 3,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 16
+      }
+    ]
+  },
+  "humanAutomationResponsibilityCanvas": {
+    "id": "humanAutomationResponsibilityCanvas",
+    "layout": {
+      "columns": 3,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "processStep",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true,
+        "journeySteps": true
+      },
+      {
+        "id": "humanResponsibility",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "ruleOrWorkflowResponsibility",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "agentOrAiResponsibility",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "apiOrSystemResponsibility",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "rpaOrUiAutomationResponsibility",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "requiredOversight",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": true
+      },
+      {
+        "id": "escalation",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "evidenceOrAuditTrail",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      }
+    ]
+  },
+  "automationWorkflowCanvas": {
+    "id": "automationWorkflowCanvas",
+    "layout": {
+      "columns": 5,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "trigger",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "inputs",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "workflowStages",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3,
+        "journeySteps": true
+      },
+      {
+        "id": "decisionsAndRules",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "agentActions",
+        "gridPosition": {
+          "column": 4,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "systemInteractions",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "dataSources",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7
+      },
+      {
+        "id": "humanTasks",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "handoffs",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      },
+      {
+        "id": "exceptions",
+        "gridPosition": {
+          "column": 4,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10,
+        "highlight": true
+      },
+      {
+        "id": "retriesAndTimeouts",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11
+      },
+      {
+        "id": "outputs",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12
+      },
+      {
+        "id": "auditEvidence",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 13
+      },
+      {
+        "id": "monitoringPoints",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 14
+      },
+      {
+        "id": "recoveryPath",
+        "gridPosition": {
+          "column": 4,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 15
+      }
+    ]
+  },
+  "automationArchitectureDecisionCanvas": {
+    "id": "automationArchitectureDecisionCanvas",
+    "layout": {
+      "columns": 5,
+      "rows": 4
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "nativeFeature",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1
+      },
+      {
+        "id": "workflow",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "rule",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "agent",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "connector",
+        "gridPosition": {
+          "column": 4,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "api",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "event",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7
+      },
+      {
+        "id": "customCode",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "rpa",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      },
+      {
+        "id": "humanTask",
+        "gridPosition": {
+          "column": 4,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10
+      },
+      {
+        "id": "feasibilityReliabilitySecurity",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11,
+        "highlight": true
+      },
+      {
+        "id": "maintainabilityScalabilityCost",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12
+      },
+      {
+        "id": "latencyObservabilityRecoverability",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 13
+      },
+      {
+        "id": "skillsVendorFit",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 14
+      },
+      {
+        "id": "recommendedHybridApproach",
+        "gridPosition": {
+          "column": 4,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 2
+        },
+        "fillOrder": 15,
+        "highlight": true
+      },
+      {
+        "id": "decisionRationale",
+        "gridPosition": {
+          "column": 0,
+          "row": 3,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 16
+      },
+      {
+        "id": "openQuestionsAndRisks",
+        "gridPosition": {
+          "column": 2,
+          "row": 3,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 17
+      }
+    ]
+  },
+  "automationReadinessOperationsCanvas": {
+    "id": "automationReadinessOperationsCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 4
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "businessOwner",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1
+      },
+      {
+        "id": "operationalOwner",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "users",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "permissions",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "credentials",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "environments",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "testEvidence",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": true
+      },
+      {
+        "id": "exceptionHandling",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "monitoring",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      },
+      {
+        "id": "support",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10
+      },
+      {
+        "id": "manualFallback",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11
+      },
+      {
+        "id": "rollback",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12
+      },
+      {
+        "id": "documentation",
+        "gridPosition": {
+          "column": 0,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 13
+      },
+      {
+        "id": "deploymentDecision",
+        "gridPosition": {
+          "column": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 14,
+        "highlight": true
+      },
+      {
+        "id": "knownRisks",
+        "gridPosition": {
+          "column": 2,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 15
+      },
+      {
+        "id": "improvementBacklog",
+        "gridPosition": {
+          "column": 3,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 16
       }
     ]
   }

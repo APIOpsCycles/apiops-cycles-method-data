@@ -1381,6 +1381,190 @@
         ]
       },
       "category": "guideline"
+    },
+    {
+      "id": "automationOpportunityCanvas",
+      "title": "resource.automation-opportunity-canvas.title",
+      "slug": "resources/automation-opportunity-canvas",
+      "icon": "dashboard-outline",
+      "order": 189,
+      "description": "resource.automation-opportunity-canvas.description",
+      "canvas": "automationOpportunityCanvas",
+      "outcomes": [
+        "resource.automation-opportunity-canvas.outcomes",
+        "resource.automation-opportunity-canvas.outcomes.1",
+        "resource.automation-opportunity-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-opportunity-canvas.steps",
+          "resource.automation-opportunity-canvas.steps.1",
+          "resource.automation-opportunity-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.automation-opportunity-canvas.tips",
+          "resource.automation-opportunity-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "humanAutomationResponsibilityCanvas",
+      "title": "resource.human-automation-responsibility-canvas.title",
+      "slug": "resources/human-automation-responsibility-canvas",
+      "icon": "dashboard-outline",
+      "order": 190,
+      "description": "resource.human-automation-responsibility-canvas.description",
+      "canvas": "humanAutomationResponsibilityCanvas",
+      "outcomes": [
+        "resource.human-automation-responsibility-canvas.outcomes",
+        "resource.human-automation-responsibility-canvas.outcomes.1",
+        "resource.human-automation-responsibility-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.human-automation-responsibility-canvas.steps",
+          "resource.human-automation-responsibility-canvas.steps.1",
+          "resource.human-automation-responsibility-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.human-automation-responsibility-canvas.tips",
+          "resource.human-automation-responsibility-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "automationWorkflowCanvas",
+      "title": "resource.automation-workflow-canvas.title",
+      "slug": "resources/automation-workflow-canvas",
+      "icon": "dashboard-outline",
+      "order": 191,
+      "description": "resource.automation-workflow-canvas.description",
+      "canvas": "automationWorkflowCanvas",
+      "outcomes": [
+        "resource.automation-workflow-canvas.outcomes",
+        "resource.automation-workflow-canvas.outcomes.1",
+        "resource.automation-workflow-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-workflow-canvas.steps",
+          "resource.automation-workflow-canvas.steps.1",
+          "resource.automation-workflow-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.automation-workflow-canvas.tips",
+          "resource.automation-workflow-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "automationArchitectureDecisionCanvas",
+      "title": "resource.automation-architecture-decision-canvas.title",
+      "slug": "resources/automation-architecture-decision-canvas",
+      "icon": "dashboard-outline",
+      "order": 192,
+      "description": "resource.automation-architecture-decision-canvas.description",
+      "canvas": "automationArchitectureDecisionCanvas",
+      "outcomes": [
+        "resource.automation-architecture-decision-canvas.outcomes",
+        "resource.automation-architecture-decision-canvas.outcomes.1",
+        "resource.automation-architecture-decision-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-architecture-decision-canvas.steps",
+          "resource.automation-architecture-decision-canvas.steps.1",
+          "resource.automation-architecture-decision-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.automation-architecture-decision-canvas.tips",
+          "resource.automation-architecture-decision-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "automationReadinessOperationsCanvas",
+      "title": "resource.automation-readiness-operations-canvas.title",
+      "slug": "resources/automation-readiness-operations-canvas",
+      "icon": "dashboard-outline",
+      "order": 193,
+      "description": "resource.automation-readiness-operations-canvas.description",
+      "canvas": "automationReadinessOperationsCanvas",
+      "outcomes": [
+        "resource.automation-readiness-operations-canvas.outcomes",
+        "resource.automation-readiness-operations-canvas.outcomes.1",
+        "resource.automation-readiness-operations-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-readiness-operations-canvas.steps",
+          "resource.automation-readiness-operations-canvas.steps.1",
+          "resource.automation-readiness-operations-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.automation-readiness-operations-canvas.tips",
+          "resource.automation-readiness-operations-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "userOperatorExperienceRequirementsCanvas",
+      "title": "resource.user-operator-experience-requirements.title",
+      "slug": "resources/user-operator-experience-requirements",
+      "icon": "dashboard-outline",
+      "order": 194,
+      "description": "resource.user-operator-experience-requirements.description",
+      "canvas": "consumerExperienceRequirementsCanvas",
+      "outcomes": [
+        "resource.user-operator-experience-requirements.outcomes",
+        "resource.user-operator-experience-requirements.outcomes.1",
+        "resource.user-operator-experience-requirements.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.user-operator-experience-requirements.steps",
+          "resource.user-operator-experience-requirements.steps.1",
+          "resource.user-operator-experience-requirements.steps.2"
+        ],
+        "tips": [
+          "resource.user-operator-experience-requirements.tips",
+          "resource.user-operator-experience-requirements.tips.1"
+        ]
+      },
+      "category": "canvas"
+    },
+    {
+      "id": "automation-monitoring-value-metrics",
+      "title": "resource.automation-monitoring-value-metrics.title",
+      "slug": "resources/automation-monitoring-value-metrics",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 195,
+      "description": "resource.automation-monitoring-value-metrics.description",
+      "image": "",
+      "outcomes": [
+        "resource.automation-monitoring-value-metrics.outcomes",
+        "resource.automation-monitoring-value-metrics.outcomes.1",
+        "resource.automation-monitoring-value-metrics.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.automation-monitoring-value-metrics.steps",
+          "resource.automation-monitoring-value-metrics.steps.1",
+          "resource.automation-monitoring-value-metrics.steps.2",
+          "resource.automation-monitoring-value-metrics.steps.3"
+        ],
+        "tips": [
+          "resource.automation-monitoring-value-metrics.tips",
+          "resource.automation-monitoring-value-metrics.tips.1"
+        ]
+      },
+      "category": "guideline"
     }
   ]
 }

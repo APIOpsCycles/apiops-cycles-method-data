@@ -22,5 +22,10 @@
   "criterion.api-ready-for-publishing": "Die Capability ist bereit, über den gewählten Bereitstellungsmechanismus veröffentlicht oder ausgeliefert zu werden.",
   "criterion.api-documentation-ready": "Nutzerorientierte Dokumentation und Onboarding-Materialien sind bereit.",
   "criterion.consumer-support-ready": "Onboarding-, Support- und Kommunikationsprozesse für Nutzer sind bereit.",
-  "criterion.legal-compliance-clear": "Rechtliche, Datenschutz- und Compliance-Anforderungen für Veröffentlichung oder Release sind definiert und verstanden."
+  "criterion.legal-compliance-clear": "Rechtliche, Datenschutz- und Compliance-Anforderungen für Veröffentlichung oder Release sind definiert und verstanden.",
+  "criterion.automation-opportunity-evidence-ready": "The automation opportunity has enough evidence about process scope, expected outcome, suitability, data, systems, risk, ownership, PoC hypothesis, and validation plan to decide whether it should proceed.",
+  "criterion.automation-owner-confirmed": "Ownership is clear for the automation opportunity, process decisions, PoC validation, risks, and lifecycle outcomes.",
+  "criterion.automation-architecture-and-controls-validated": "The selected automation architecture, implementation mechanisms, human controls, security constraints, and recovery approach have been validated with the relevant stakeholders.",
+  "criterion.automation-operational-readiness-confirmed": "The automation has evidence for functional correctness, permissions, exception handling, oversight, monitoring, support, rollback, and operational ownership.",
+  "criterion.automation-value-monitoring-ready": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements."
 }

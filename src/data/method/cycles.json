@@ -293,8 +293,8 @@
         ],
         "stationLabels": {
           "api-product-strategy": "cycle.station.automation-opportunity-strategy",
-          "api-consumer-experience": "cycle.station.process-user-requirements",
-          "api-platform-architecture": "cycle.station.automation-platform-decision",
+          "api-consumer-experience": "cycle.station.process-user-automation-requirements",
+          "api-platform-architecture": "cycle.station.automation-architecture-platform-decision",
           "api-design": "cycle.station.automation-workflow-design",
           "api-delivery": "cycle.station.automation-delivery",
           "api-audit": "cycle.station.automation-readiness-review",
@@ -303,32 +303,40 @@
         },
         "recommendedResources": {
           "api-product-strategy": [
+            "automationOpportunityCanvas",
             "customerJourneyCanvas",
             "domainCanvas",
             "capabilityValuePropositionCanvas"
           ],
           "api-consumer-experience": [
-            "consumerExperienceRequirementsCanvas"
+            "humanAutomationResponsibilityCanvas",
+            "userOperatorExperienceRequirementsCanvas"
           ],
           "api-platform-architecture": [
+            "automationArchitectureDecisionCanvas",
+            "humanAutomationResponsibilityCanvas",
             "businessImpactCanvas",
             "locationsCanvas",
             "capacityCanvas",
             "automation-operational-ownership-guide"
           ],
           "api-design": [
-            "domainCanvas",
-            "interactionCanvas",
+            "automationWorkflowCanvas",
+            "humanAutomationResponsibilityCanvas",
             "process-workflow-design-guide",
             "decision-business-rules-guide",
-            "automation-trigger-handoff-exception-guide"
+            "automation-trigger-handoff-exception-guide",
+            "domainCanvas",
+            "interactionCanvas"
           ],
           "api-delivery": [
+            "automationReadinessOperationsCanvas",
             "automation-testing-guide",
             "automation-operational-ownership-guide",
             "automation-rollback-supervision-guide"
           ],
           "api-audit": [
+            "automationReadinessOperationsCanvas",
             "automation-readiness-checklist",
             "api-compliance-best-practices"
           ],
@@ -337,19 +345,20 @@
             "service-agreement-template"
           ],
           "monitoring-and-improving": [
-            "automation-operational-ownership-guide",
-            "api-metrics-and-analytics"
+            "automation-monitoring-value-metrics",
+            "automationReadinessOperationsCanvas",
+            "automation-operational-ownership-guide"
           ]
         },
         "overlays": [],
         "entryCriteria": [
-          "business-goals-defined",
-          "stakeholder-approval"
+          "automation-opportunity-evidence-ready",
+          "automation-owner-confirmed"
         ],
         "exitCriteria": [
-          "design-reflects-business-value",
-          "automation-workflow-validated",
-          "audit-passed"
+          "automation-architecture-and-controls-validated",
+          "automation-operational-readiness-confirmed",
+          "automation-value-monitoring-ready"
         ],
         "stationDescriptions": {
           "api-product-strategy": "cycle.automation-cycle.station.api-product-strategy.description",
