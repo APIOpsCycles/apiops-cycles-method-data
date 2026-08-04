@@ -8,7 +8,7 @@
   "cycle.api-productization-cycle.description": "A jornada APIOps Cycles focada em API para transformar APIs em produto, concebê-las, entregá-las, publicá-las e melhorá-las.",
   "cycle.api-productization-cycle.purpose": "Jornada do metodo focada em API para equipas que ja sabem que o estilo de implementacao pretendido e um produto API.",
   "cycle.integration-productization-cycle.title": "Ciclo de Produto de Integração",
-  "cycle.integration-productization-cycle.description": "Um ciclo para transformar capacidades de integracao reutilizaveis em produto antes de selecionar o estilo de implementacao.",
+  "cycle.integration-productization-cycle.description": "Um ciclo para definir e produtizar capacidades de integração reutilizáveis sem assumir antecipadamente o estilo de implementação.",
   "cycle.integration-productization-cycle.purpose": "Orientar a concecao de capacidades de integracao reutilizaveis antes de escolher um estilo de implementacao API, evento, ficheiro, stream, produto de dados, integracao direta ou hibrido.",
   "cycle.station.capability-strategy": "Estrategia da capacidade",
   "cycle.station.consumer-requirements-onboarding": "Requisitos e onboarding de utilizadores",

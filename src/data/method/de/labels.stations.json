@@ -470,7 +470,7 @@
   "station.api-publishing.how_it_works.3": "Feedback und Kontrolle: Wie werden Adoption, Vertrauen, tatsächliche Nutzung, Probleme und unerwartetes Verhalten überwacht, und welche Bedingungen lösen Pause, Rollback oder Rückkehr zum manuellen Betrieb aus?",
   "station.monitoring-and-improving.how_it_works.3": "Lernen und Lifecycle-Entscheidung: Welche Hypothesenannahmen wurden bestätigt oder verworfen, und sollte die Lösung verbessert, erweitert, eingeschränkt, neu gestaltet, pausiert oder stillgelegt werden?",
   "station.integration-capability-strategy.title": "Integration Capability Strategy",
-  "station.integration-capability-strategy.description": "Integration Capability Strategy klärt die nächsten Entscheidungen, Nachweise, Verantwortlichkeiten und Risiken für eine wiederverwendbare Integrationsfähigkeit.",
+  "station.integration-capability-strategy.description": "Integration Capability Strategy klärt die nächsten Entscheidungen, Nachweise, Verantwortlichkeiten und Risiken für eine wiederverwendbare Integrationsfähigkeit. Use supporting canvases only where the necessary evidence does not already exist.",
   "station.integration-capability-strategy.why_it_matters": "Die Integrationsarbeit bleibt konsistent, wenn Consumer, Producer, Plattform, Betrieb, Security, Compliance und Business dieselben Nachweise und Entscheidungen verwenden.",
   "station.integration-capability-strategy.apply_in_work": "Nutzen Sie die stationsspezifischen Integrationsressourcen als primäre Arbeitsgrundlage.",
   "station.integration-capability-strategy.outcomes": "Dokumentierte Integrationsentscheidung oder Arbeitsgrundlage",

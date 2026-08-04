@@ -566,7 +566,7 @@
   "station.api-publishing.how_it_works.3": "Feedback e controlo: como serão monitorizados adoção, confiança, uso real, problemas e comportamento inesperado, e que condições acionam pausa, rollback ou retorno à operação manual?",
   "station.monitoring-and-improving.how_it_works.3": "Aprendizagem e decisão de ciclo de vida: que suposições da hipótese foram suportadas ou rejeitadas, e a solução deve ser melhorada, expandida, restringida, redesenhada, pausada ou retirada?",
   "station.integration-capability-strategy.title": "Estratégia de capacidade de integração",
-  "station.integration-capability-strategy.description": "Estratégia de capacidade de integração clarifica as próximas decisões, evidências, responsabilidades e riscos para uma capacidade de integração reutilizável.",
+  "station.integration-capability-strategy.description": "Estratégia de capacidade de integração clarifica as próximas decisões, evidências, responsabilidades e riscos para uma capacidade de integração reutilizável. Use canvases de apoio apenas quando as evidências necessárias ainda não existirem.",
   "station.integration-capability-strategy.why_it_matters": "O trabalho de integração mantém-se consistente quando consumidores, produtores, plataforma, operações, segurança, compliance e negócio usam as mesmas evidências e decisões.",
   "station.integration-capability-strategy.apply_in_work": "Use os recursos de integração específicos da estação como base de trabalho principal.",
   "station.integration-capability-strategy.outcomes": "Decisão ou base de trabalho de integração documentada",

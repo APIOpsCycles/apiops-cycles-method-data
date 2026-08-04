@@ -1054,6 +1054,65 @@
         "readinessStatus": {
           "section": "Readiness-Status",
           "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Readiness-Status festgehalten werden?"
+        },
+        "documentationDependenciesChangeReadiness": {
+          "section": "Dokumentation, Abhängigkeiten und Änderungsbereitschaft",
+          "description": "Sind Verträge, Mappings, Runbooks, Abhängigkeiten, Migrationsanweisungen, Deployment-Sequenzierung, Cutover, Rückwärtskompatibilität, Version Ownership und Änderungsverantwortungen bereit?"
+        }
+      }
+    },
+    "integrationSolutionDesignCanvas": {
+      "title": "Integration Solution Design Canvas",
+      "purpose": "Fasst das vollständige Integrationsdesign über Implementierungsstile hinweg zusammen, einschließlich Verträgen, Schemas, Mappings, Lieferverhalten, Security, Fehlern, Beobachtbarkeit, Abstimmung und Versionierung.",
+      "howToUse": "Nutzen Sie dies als primäres Solution-Design-Artefakt nach der Architekturentscheidung. Nutzen Sie Interaction Canvas, REST-, Event-, GraphQL-, Datei-, Stream-, Datenprodukt- oder Messaging-Ressourcen nur als bedingte Detailunterstützung.",
+      "sections": {
+        "selectedIntegrationStyle": {
+          "section": "Ausgewählter Integrationsstil",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Ausgewählter Integrationsstil festgehalten werden?"
+        },
+        "producerAndConsumer": {
+          "section": "Producer und Consumer",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Producer und Consumer festgehalten werden?"
+        },
+        "contractAndSchema": {
+          "section": "Vertrag und Schema",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Vertrag und Schema festgehalten werden?"
+        },
+        "mappingsAndTransformations": {
+          "section": "Mappings und Transformationen",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Mappings und Transformationen festgehalten werden?"
+        },
+        "interactionDeliveryPattern": {
+          "section": "Interaktions- oder Liefermuster",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Interaktions- oder Liefermuster festgehalten werden?"
+        },
+        "identityAndSecurity": {
+          "section": "Identität und Security",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Identität und Security festgehalten werden?"
+        },
+        "errorRetryReplay": {
+          "section": "Fehlermodell, Retry, Replay",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Fehlermodell, Retry, Replay festgehalten werden?"
+        },
+        "correlationMetadata": {
+          "section": "Korrelation und Metadaten",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Korrelation und Metadaten festgehalten werden?"
+        },
+        "reconciliationRules": {
+          "section": "Abstimmungsregeln",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Abstimmungsregeln festgehalten werden?"
+        },
+        "observability": {
+          "section": "Beobachtbarkeit",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Beobachtbarkeit festgehalten werden?"
+        },
+        "versioningEvolution": {
+          "section": "Versionierung und Weiterentwicklung",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Versionierung und Weiterentwicklung festgehalten werden?"
+        },
+        "canonicalConsumerSpecificModel": {
+          "section": "Kanonisches vs. consumer-spezifisches Modell",
+          "description": "Welche Designentscheidungen, Regeln, Nachweise und offenen Punkte müssen für Kanonisches vs. consumer-spezifisches Modell festgehalten werden?"
         }
       }
     }
@@ -2100,7 +2159,7 @@
         },
         "fallbackRollback": {
           "section": "Fallback and rollback",
-          "description": "How can consumers or operations continue safely during outage, degradation, incorrect data, or release rollback?"
+          "description": "How can consumers or operations continue safely during outage, degradation, incorrect data, or release rollback? Distinguish rollback from compensating actions where downstream effects cannot be reversed."
         },
         "incidentOwnership": {
           "section": "Incident ownership",
@@ -2113,6 +2172,65 @@
         "readinessStatus": {
           "section": "Readiness status",
           "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
+        },
+        "documentationDependenciesChangeReadiness": {
+          "section": "Documentation, dependencies, and change readiness",
+          "description": "Are contracts, mappings, runbooks, dependencies, migration instructions, deployment sequencing, cutover, backward compatibility, version ownership, and change responsibilities ready?"
+        }
+      }
+    },
+    "integrationSolutionDesignCanvas": {
+      "title": "Integration Solution Design Canvas",
+      "purpose": "Summarize the complete integration design across implementation styles, including contracts, schemas, mappings, delivery behavior, security, errors, observability, reconciliation, and versioning.",
+      "howToUse": "Use this as the primary solution-design artifact after the architecture decision. Use Interaction Canvas, REST, Event, GraphQL, file, stream, data product, or messaging resources as conditional deeper design support.",
+      "sections": {
+        "selectedIntegrationStyle": {
+          "section": "Selected integration style",
+          "description": "Which selected style or hybrid from the architecture decision is this design implementing?"
+        },
+        "producerAndConsumer": {
+          "section": "Producer and consumer",
+          "description": "Which producer, provider, platform, consumer systems, teams, and ownership boundaries are involved?"
+        },
+        "contractAndSchema": {
+          "section": "Contract and schema",
+          "description": "Which interface contract, event schema, message schema, file schema, data contract, or specification defines the integration?"
+        },
+        "mappingsAndTransformations": {
+          "section": "Mappings and transformations",
+          "description": "What source-to-target mappings, transformation rules, validation rules, and canonical or consumer-specific models are required?"
+        },
+        "interactionDeliveryPattern": {
+          "section": "Interaction or delivery pattern",
+          "description": "What request, event, queue, file, batch, stream, connector, orchestration, webhook, B2B/EDI, or data-product delivery pattern applies?"
+        },
+        "identityAndSecurity": {
+          "section": "Identity and security",
+          "description": "What identities, credentials, authorization, encryption, trust boundaries, privacy, and audit controls are required?"
+        },
+        "errorRetryReplay": {
+          "section": "Error model, retry, replay",
+          "description": "How are errors, partial failures, retries, replay, idempotency, duplicate handling, ordering, and dead letters handled?"
+        },
+        "correlationMetadata": {
+          "section": "Correlation and metadata",
+          "description": "What correlation IDs, message metadata, file names, manifests, batch control records, timestamps, and trace fields are required?"
+        },
+        "reconciliationRules": {
+          "section": "Reconciliation rules",
+          "description": "How are records, events, files, totals, states, and downstream outcomes reconciled?"
+        },
+        "observability": {
+          "section": "Observability",
+          "description": "Which logs, metrics, traces, status, alerts, data-quality signals, and consumer-visible health indicators are needed?"
+        },
+        "versioningEvolution": {
+          "section": "Versioning and evolution",
+          "description": "How will compatibility, schema evolution, version ownership, migration, deprecation, and consumer change be managed?"
+        },
+        "canonicalConsumerSpecificModel": {
+          "section": "Canonical vs consumer-specific model",
+          "description": "Where should the design use shared canonical models, and where are consumer-specific variations justified?"
         }
       }
     }
@@ -3172,6 +3290,65 @@
         "readinessStatus": {
           "section": "Valmiustila",
           "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Valmiustila pitää kirjata?"
+        },
+        "documentationDependenciesChangeReadiness": {
+          "section": "Dokumentaatio, riippuvuudet ja muutosvalmius",
+          "description": "Ovatko sopimukset, mäppäykset, runbookit, riippuvuudet, migraatio-ohjeet, deployment-järjestys, cutover, taaksepäin yhteensopivuus, versio-omistajuus ja muutosvastuut valmiit?"
+        }
+      }
+    },
+    "integrationSolutionDesignCanvas": {
+      "title": "Integraatioratkaisun suunnittelukanvas",
+      "purpose": "Kokoaa integraatiosuunnitelman eri toteutustyylien yli, mukaan lukien sopimukset, skeemat, mäppäykset, toimituskäyttäytyminen, turvallisuus, virheet, havainnoitavuus, täsmäytys ja versiointi.",
+      "howToUse": "Käytä tätä ensisijaisena ratkaisusuunnittelun artefaktina arkkitehtuuripäätöksen jälkeen. Käytä Interaction Canvas-, REST-, Event-, GraphQL-, tiedosto-, stream-, datatuote- tai viestintäresursseja vain ehdollisena syventävänä tukena.",
+      "sections": {
+        "selectedIntegrationStyle": {
+          "section": "Valittu integraatiotyyli",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Valittu integraatiotyyli pitää kirjata?"
+        },
+        "producerAndConsumer": {
+          "section": "Tuottaja ja kuluttaja",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Tuottaja ja kuluttaja pitää kirjata?"
+        },
+        "contractAndSchema": {
+          "section": "Sopimus ja skeema",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Sopimus ja skeema pitää kirjata?"
+        },
+        "mappingsAndTransformations": {
+          "section": "Mäppäykset ja transformaatiot",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Mäppäykset ja transformaatiot pitää kirjata?"
+        },
+        "interactionDeliveryPattern": {
+          "section": "Vuorovaikutus- tai toimitusmalli",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Vuorovaikutus- tai toimitusmalli pitää kirjata?"
+        },
+        "identityAndSecurity": {
+          "section": "Identiteetti ja turvallisuus",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Identiteetti ja turvallisuus pitää kirjata?"
+        },
+        "errorRetryReplay": {
+          "section": "Virhemalli, retry ja replay",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Virhemalli, retry ja replay pitää kirjata?"
+        },
+        "correlationMetadata": {
+          "section": "Korrelaatio ja metadata",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Korrelaatio ja metadata pitää kirjata?"
+        },
+        "reconciliationRules": {
+          "section": "Täsmäytyssäännöt",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Täsmäytyssäännöt pitää kirjata?"
+        },
+        "observability": {
+          "section": "Havainnoitavuus",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Havainnoitavuus pitää kirjata?"
+        },
+        "versioningEvolution": {
+          "section": "Versiointi ja kehitys",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Versiointi ja kehitys pitää kirjata?"
+        },
+        "canonicalConsumerSpecificModel": {
+          "section": "Kanoninen vs. kuluttajakohtainen malli",
+          "description": "Mitä suunnittelupäätöksiä, sääntöjä, näyttöä ja avoimia asioita kohdassa Kanoninen vs. kuluttajakohtainen malli pitää kirjata?"
         }
       }
     }
@@ -4231,6 +4408,65 @@
         "readinessStatus": {
           "section": "Statut de préparation",
           "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Statut de préparation?"
+        },
+        "documentationDependenciesChangeReadiness": {
+          "section": "Documentation, dépendances et préparation au changement",
+          "description": "Les contrats, mappings, runbooks, dépendances, instructions de migration, séquence de déploiement, cutover, compatibilité ascendante, propriété des versions et responsabilités de changement sont-ils prêts?"
+        }
+      }
+    },
+    "integrationSolutionDesignCanvas": {
+      "title": "Canvas de conception de solution d’intégration",
+      "purpose": "Résume la conception complète de l’intégration tous styles d’implémentation confondus, y compris contrats, schémas, mappings, comportement de livraison, sécurité, erreurs, observabilité, réconciliation et versioning.",
+      "howToUse": "Utilisez ceci comme artefact principal de conception après la décision d’architecture. Utilisez Interaction Canvas, REST, Event, GraphQL, fichier, stream, produit de données ou messagerie comme support détaillé conditionnel.",
+      "sections": {
+        "selectedIntegrationStyle": {
+          "section": "Style d’intégration sélectionné",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Style d’intégration sélectionné?"
+        },
+        "producerAndConsumer": {
+          "section": "Producteur et consommateur",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Producteur et consommateur?"
+        },
+        "contractAndSchema": {
+          "section": "Contrat et schéma",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Contrat et schéma?"
+        },
+        "mappingsAndTransformations": {
+          "section": "Mappings et transformations",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Mappings et transformations?"
+        },
+        "interactionDeliveryPattern": {
+          "section": "Modèle d’interaction ou de livraison",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Modèle d’interaction ou de livraison?"
+        },
+        "identityAndSecurity": {
+          "section": "Identité et sécurité",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Identité et sécurité?"
+        },
+        "errorRetryReplay": {
+          "section": "Modèle d’erreur, retry, replay",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Modèle d’erreur, retry, replay?"
+        },
+        "correlationMetadata": {
+          "section": "Corrélation et métadonnées",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Corrélation et métadonnées?"
+        },
+        "reconciliationRules": {
+          "section": "Règles de réconciliation",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Règles de réconciliation?"
+        },
+        "observability": {
+          "section": "Observabilité",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Observabilité?"
+        },
+        "versioningEvolution": {
+          "section": "Versioning et évolution",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Versioning et évolution?"
+        },
+        "canonicalConsumerSpecificModel": {
+          "section": "Modèle canonique vs spécifique consommateur",
+          "description": "Quelles décisions de conception, règles, preuves et questions ouvertes doivent être consignées pour Modèle canonique vs spécifique consommateur?"
         }
       }
     }
@@ -5290,6 +5526,65 @@
         "readinessStatus": {
           "section": "Estado de prontidão",
           "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Estado de prontidão?"
+        },
+        "documentationDependenciesChangeReadiness": {
+          "section": "Documentação, dependências e prontidão de mudança",
+          "description": "Contratos, mapeamentos, runbooks, dependências, instruções de migração, sequência de deployment, cutover, compatibilidade retroativa, ownership de versões e responsabilidades de mudança estão prontos?"
+        }
+      }
+    },
+    "integrationSolutionDesignCanvas": {
+      "title": "Canvas de Desenho da Solução de Integração",
+      "purpose": "Resume o desenho completo da integração entre estilos de implementação, incluindo contratos, esquemas, mapeamentos, comportamento de entrega, segurança, erros, observabilidade, reconciliação e versionamento.",
+      "howToUse": "Use isto como artefacto principal de desenho da solução após a decisão de arquitetura. Use Interaction Canvas, REST, Event, GraphQL, ficheiro, stream, produto de dados ou mensageria como apoio detalhado condicional.",
+      "sections": {
+        "selectedIntegrationStyle": {
+          "section": "Estilo de integração selecionado",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Estilo de integração selecionado?"
+        },
+        "producerAndConsumer": {
+          "section": "Produtor e consumidor",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Produtor e consumidor?"
+        },
+        "contractAndSchema": {
+          "section": "Contrato e esquema",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Contrato e esquema?"
+        },
+        "mappingsAndTransformations": {
+          "section": "Mapeamentos e transformações",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Mapeamentos e transformações?"
+        },
+        "interactionDeliveryPattern": {
+          "section": "Padrão de interação ou entrega",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Padrão de interação ou entrega?"
+        },
+        "identityAndSecurity": {
+          "section": "Identidade e segurança",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Identidade e segurança?"
+        },
+        "errorRetryReplay": {
+          "section": "Modelo de erro, retry, replay",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Modelo de erro, retry, replay?"
+        },
+        "correlationMetadata": {
+          "section": "Correlação e metadados",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Correlação e metadados?"
+        },
+        "reconciliationRules": {
+          "section": "Regras de reconciliação",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Regras de reconciliação?"
+        },
+        "observability": {
+          "section": "Observabilidade",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Observabilidade?"
+        },
+        "versioningEvolution": {
+          "section": "Versionamento e evolução",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Versionamento e evolução?"
+        },
+        "canonicalConsumerSpecificModel": {
+          "section": "Modelo canónico vs específico do consumidor",
+          "description": "Que decisões de desenho, regras, evidências e pontos em aberto devem ser registados para Modelo canónico vs específico do consumidor?"
         }
       }
     }

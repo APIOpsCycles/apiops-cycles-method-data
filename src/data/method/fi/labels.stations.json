@@ -470,7 +470,7 @@
   "station.api-publishing.how_it_works.3": "Palaute ja kontrolli: Miten omaksumista, luottamusta, todellista käyttöä, ongelmia ja odottamatonta käyttäytymistä seurataan, ja mitkä ehdot käynnistävät pysäytyksen, palautuksen tai paluun manuaalityöhön?",
   "station.monitoring-and-improving.how_it_works.3": "Oppiminen ja elinkaaripäätös: Mitkä hypoteesin oletukset vahvistuivat tai hylättiin, ja pitäisikö ratkaisua parantaa, laajentaa, rajata, suunnitella uudelleen, pysäyttää tai poistaa käytöstä?",
   "station.integration-capability-strategy.title": "Integraatiokyvykkyyden strategia",
-  "station.integration-capability-strategy.description": "Integraatiokyvykkyyden strategia selkeyttää uudelleenkäytettävän integraatiokyvykkyyden seuraavat päätökset, näytön, vastuut ja riskit.",
+  "station.integration-capability-strategy.description": "Integraatiokyvykkyyden strategia selkeyttää uudelleenkäytettävän integraatiokyvykkyyden seuraavat päätökset, näytön, vastuut ja riskit. Käytä tukikanvaksia vain silloin, kun tarvittavaa näyttöä ei ole jo olemassa.",
   "station.integration-capability-strategy.why_it_matters": "Integraatiotyö pysyy johdonmukaisena, kun kuluttajat, tuottajat, alusta, operointi, security, compliance ja business käyttävät samaa näyttöä ja päätöksiä.",
   "station.integration-capability-strategy.apply_in_work": "Käytä asemakohtaisia integraatioresursseja ensisijaisena työpohjana.",
   "station.integration-capability-strategy.outcomes": "Dokumentoitu integraatiopäätös tai työpohja",

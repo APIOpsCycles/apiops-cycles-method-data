@@ -822,5 +822,15 @@
   "resource.integration-lifecycle-management-guide.steps.1": "Documente decisões, condições, responsabilidades e artefactos necessários.",
   "resource.integration-lifecycle-management-guide.steps.2": "Use os resultados no desenho, entrega, prontidão, publicação ou melhoria.",
   "resource.integration-lifecycle-management-guide.tips": "Adapte este recurso ao estilo de integração escolhido.",
-  "resource.integration-lifecycle-management-guide.tips.1": "Inclua produtores, consumidores, plataforma, operações, segurança, compliance e negócio."
+  "resource.integration-lifecycle-management-guide.tips.1": "Inclua produtores, consumidores, plataforma, operações, segurança, compliance e negócio.",
+  "resource.integration-solution-design-canvas.title": "Canvas de Desenho da Solução de Integração",
+  "resource.integration-solution-design-canvas.description": "Canvas de resumo para decisões de desenho de integração entre estilos, incluindo estilo, produtores, consumidores, contratos, esquemas, mapeamentos, padrão de entrega, segurança, erros, retry, replay, correlação, reconciliação, observabilidade e versionamento.",
+  "resource.integration-solution-design-canvas.outcomes": "Resumo completo do desenho da solução de integração",
+  "resource.integration-solution-design-canvas.outcomes.1": "Decisões de contrato, esquema, mapeamento, entrega, segurança, recuperação e observabilidade documentadas",
+  "resource.integration-solution-design-canvas.outcomes.2": "Desenho rastreável à decisão de arquitetura e aos requisitos de consumidor/provider",
+  "resource.integration-solution-design-canvas.steps": "Comece pelo estilo de arquitetura ou híbrido selecionado.",
+  "resource.integration-solution-design-canvas.steps.1": "Documente contratos, esquemas, mapeamentos, transformações, padrão de entrega, identidade, segurança, erros, retry, replay, correlação, reconciliação, observabilidade e versionamento.",
+  "resource.integration-solution-design-canvas.steps.2": "Use Interaction Canvas e recursos específicos do estilo apenas quando for necessário detalhe adicional de desenho.",
+  "resource.integration-solution-design-canvas.tips": "Use isto como artefacto principal de Integration Solution Design.",
+  "resource.integration-solution-design-canvas.tips.1": "Cubra orquestração de workflow, B2B/EDI, webhooks, modelos de dados canónicos, ficheiros, streams, mensageria, produtos de dados, APIs e connectors quando relevante."
 }

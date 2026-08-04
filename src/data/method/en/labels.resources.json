@@ -822,5 +822,15 @@
   "resource.integration-lifecycle-management-guide.steps.1": "Compare lifecycle options and consequences for producers, consumers, platform, and business owners.",
   "resource.integration-lifecycle-management-guide.steps.2": "Record decision, rationale, owners, timeline, and communication needs.",
   "resource.integration-lifecycle-management-guide.tips": "Use during periodic monitoring and portfolio review.",
-  "resource.integration-lifecycle-management-guide.tips.1": "Treat unmanaged point-to-point growth as lifecycle evidence."
+  "resource.integration-lifecycle-management-guide.tips.1": "Treat unmanaged point-to-point growth as lifecycle evidence.",
+  "resource.integration-solution-design-canvas.title": "Integration Solution Design Canvas",
+  "resource.integration-solution-design-canvas.description": "A summary canvas for cross-style integration design decisions, including selected style, producers, consumers, contracts, schemas, mappings, delivery pattern, security, error handling, retry, replay, correlation, reconciliation, observability, and versioning.",
+  "resource.integration-solution-design-canvas.outcomes": "Complete integration solution design summary",
+  "resource.integration-solution-design-canvas.outcomes.1": "Contract, schema, mapping, delivery, security, recovery, and observability decisions documented",
+  "resource.integration-solution-design-canvas.outcomes.2": "Design traceable to architecture decision and consumer/provider requirements",
+  "resource.integration-solution-design-canvas.steps": "Start from the selected architecture style or hybrid.",
+  "resource.integration-solution-design-canvas.steps.1": "Document contracts, schemas, mappings, transformations, delivery pattern, identity, security, errors, retry, replay, correlation, reconciliation, observability, and versioning.",
+  "resource.integration-solution-design-canvas.steps.2": "Use Interaction Canvas and style-specific resources only where deeper design detail is needed.",
+  "resource.integration-solution-design-canvas.tips": "Use this as the primary Integration Solution Design artifact.",
+  "resource.integration-solution-design-canvas.tips.1": "Cover workflow orchestration, B2B/EDI, webhooks, canonical data models, files, streams, messaging, data products, APIs, and connectors where relevant."
 }

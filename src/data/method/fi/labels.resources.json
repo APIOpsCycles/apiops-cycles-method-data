@@ -822,5 +822,15 @@
   "resource.integration-lifecycle-management-guide.steps.1": "Dokumentoi päätökset, ehdot, vastuut ja tarvittavat artefaktit.",
   "resource.integration-lifecycle-management-guide.steps.2": "Hyödynnä tuloksia suunnittelussa, toimituksessa, valmiusarvioinnissa, julkaisussa tai parantamisessa.",
   "resource.integration-lifecycle-management-guide.tips": "Sovita tämä resurssi valittuun integraatiotyyliin.",
-  "resource.integration-lifecycle-management-guide.tips.1": "Ota mukaan tuottajat, kuluttajat, alusta, operointi, security, compliance ja business."
+  "resource.integration-lifecycle-management-guide.tips.1": "Ota mukaan tuottajat, kuluttajat, alusta, operointi, security, compliance ja business.",
+  "resource.integration-solution-design-canvas.title": "Integraatioratkaisun suunnittelukanvas",
+  "resource.integration-solution-design-canvas.description": "Yhteenvetokanvas integraatiosuunnittelun päätöksille eri tyylien yli, mukaan lukien tyyli, tuottajat, kuluttajat, sopimukset, skeemat, mäppäykset, toimitusmalli, turvallisuus, virheenkäsittely, retry, replay, korrelaatio, täsmäytys, havainnoitavuus ja versiointi.",
+  "resource.integration-solution-design-canvas.outcomes": "Kokonainen integraatioratkaisun suunnitteluyhteenveto",
+  "resource.integration-solution-design-canvas.outcomes.1": "Sopimus-, skeema-, mäppäys-, toimitus-, turvallisuus-, recovery- ja havainnoitavuuspäätökset dokumentoitu",
+  "resource.integration-solution-design-canvas.outcomes.2": "Suunnittelu jäljitettävissä arkkitehtuuripäätökseen ja kuluttaja-/tarjoajavaatimuksiin",
+  "resource.integration-solution-design-canvas.steps": "Aloita valitusta arkkitehtuurityylistä tai hybridistä.",
+  "resource.integration-solution-design-canvas.steps.1": "Dokumentoi sopimukset, skeemat, mäppäykset, transformaatiot, toimitusmalli, identiteetti, turvallisuus, virheet, retry, replay, korrelaatio, täsmäytys, havainnoitavuus ja versiointi.",
+  "resource.integration-solution-design-canvas.steps.2": "Käytä Interaction Canvasia ja tyylikohtaisia resursseja vain, kun syvempää suunnittelutietoa tarvitaan.",
+  "resource.integration-solution-design-canvas.tips": "Käytä tätä ensisijaisena Integration Solution Design -artefaktina.",
+  "resource.integration-solution-design-canvas.tips.1": "Kata workflow-orchestratio, B2B/EDI, webhookit, kanoniset datamallit, tiedostot, streamit, messaging, datatuotteet, API:t ja connectorit tarpeen mukaan."
 }

@@ -222,6 +222,7 @@
             "integrationArchitectureDecisionCanvas"
           ],
           "integration-solution-design": [
+            "integrationSolutionDesignCanvas",
             "interactionCanvas",
             "contract-first-design",
             "integration-style-design-guide"

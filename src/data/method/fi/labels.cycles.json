@@ -8,7 +8,7 @@
   "cycle.api-productization-cycle.description": "API-keskeinen APIOps Cycles -polku APIen tuotteistamiseen, suunnitteluun, toimittamiseen, julkaisuun ja parantamiseen.",
   "cycle.api-productization-cycle.purpose": "API-keskeinen menetelmäpolku tiimeille, jotka jo tietävät, että tarkoitettu toteutustapa on API-tuote.",
   "cycle.integration-productization-cycle.title": "Integraatiokyvykkyyden tuotteistamisen sykli",
-  "cycle.integration-productization-cycle.description": "Sykli uudelleenkaytettavien integraatiokyvykkyyksien tuotteistamiseen ennen toteutustavan valintaa.",
+  "cycle.integration-productization-cycle.description": "Sykli uudelleenkäytettävien integraatiokyvykkyyksien määrittelyyn ja tuotteistamiseen ilman, että toteutustyyli oletetaan etukäteen.",
   "cycle.integration-productization-cycle.purpose": "Ohjaa uudelleenkaytettavan integraatiokyvykkyyden suunnittelua ennen API-, tapahtuma-, tiedosto-, virta-, datatuote-, suora integraatio- tai hybriditoteutustavan valintaa.",
   "cycle.station.capability-strategy": "Kyvykkyysstrategia",
   "cycle.station.consumer-requirements-onboarding": "Hyödyntäjien vaatimukset ja käyttöönotto",

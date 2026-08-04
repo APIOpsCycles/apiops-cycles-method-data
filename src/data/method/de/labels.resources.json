@@ -822,5 +822,15 @@
   "resource.integration-lifecycle-management-guide.steps.1": "Dokumentieren Sie Entscheidungen, Bedingungen, Verantwortlichkeiten und benötigte Artefakte.",
   "resource.integration-lifecycle-management-guide.steps.2": "Nutzen Sie die Ergebnisse für Design, Lieferung, Readiness, Veröffentlichung oder Verbesserung.",
   "resource.integration-lifecycle-management-guide.tips": "Passen Sie diese Ressource an den gewählten Integrationsstil an.",
-  "resource.integration-lifecycle-management-guide.tips.1": "Beziehen Sie Producer, Consumer, Plattform, Betrieb, Security, Compliance und Business ein."
+  "resource.integration-lifecycle-management-guide.tips.1": "Beziehen Sie Producer, Consumer, Plattform, Betrieb, Security, Compliance und Business ein.",
+  "resource.integration-solution-design-canvas.title": "Integration Solution Design Canvas",
+  "resource.integration-solution-design-canvas.description": "Ein Summary-Canvas für Integrationsdesign-Entscheidungen über Stile hinweg, einschließlich Stil, Producer, Consumer, Verträge, Schemas, Mappings, Liefermuster, Security, Fehlerbehandlung, Retry, Replay, Korrelation, Abstimmung, Beobachtbarkeit und Versionierung.",
+  "resource.integration-solution-design-canvas.outcomes": "Vollständige Zusammenfassung des Integrationsdesigns",
+  "resource.integration-solution-design-canvas.outcomes.1": "Vertrags-, Schema-, Mapping-, Liefer-, Security-, Recovery- und Observability-Entscheidungen dokumentiert",
+  "resource.integration-solution-design-canvas.outcomes.2": "Design auf Architekturentscheidung und Consumer-/Provider-Anforderungen zurückführbar",
+  "resource.integration-solution-design-canvas.steps": "Beginnen Sie mit dem ausgewählten Architekturstil oder Hybrid.",
+  "resource.integration-solution-design-canvas.steps.1": "Dokumentieren Sie Verträge, Schemas, Mappings, Transformationen, Liefermuster, Identität, Security, Fehler, Retry, Replay, Korrelation, Abstimmung, Beobachtbarkeit und Versionierung.",
+  "resource.integration-solution-design-canvas.steps.2": "Nutzen Sie Interaction Canvas und stilspezifische Ressourcen nur dort, wo tieferes Designdetail benötigt wird.",
+  "resource.integration-solution-design-canvas.tips": "Nutzen Sie dies als primäres Artefakt für Integration Solution Design.",
+  "resource.integration-solution-design-canvas.tips.1": "Berücksichtigen Sie Workflow-Orchestrierung, B2B/EDI, Webhooks, kanonische Datenmodelle, Dateien, Streams, Messaging, Datenprodukte, APIs und Connectors dort, wo sie relevant sind."
 }

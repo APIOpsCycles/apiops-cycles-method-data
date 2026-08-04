@@ -470,7 +470,7 @@
   "station.api-publishing.how_it_works.3": "Feedback et contrôle : comment surveiller l’adoption, la confiance, l’usage réel, les problèmes et comportements inattendus, et quelles conditions déclenchent pause, rollback ou retour au manuel?",
   "station.monitoring-and-improving.how_it_works.3": "Apprentissage et décision de cycle de vie : quelles hypothèses ont été confirmées ou rejetées, et faut-il améliorer, étendre, restreindre, reconcevoir, suspendre ou retirer la solution?",
   "station.integration-capability-strategy.title": "Stratégie de capacité d’intégration",
-  "station.integration-capability-strategy.description": "Stratégie de capacité d’intégration clarifie les prochaines décisions, preuves, responsabilités et risques pour une capacité d’intégration réutilisable.",
+  "station.integration-capability-strategy.description": "Stratégie de capacité d’intégration clarifie les prochaines décisions, preuves, responsabilités et risques pour une capacité d’intégration réutilisable. Utilisez les canvases de support uniquement lorsque les preuves nécessaires n’existent pas déjà.",
   "station.integration-capability-strategy.why_it_matters": "Le travail d’intégration reste cohérent lorsque consommateurs, producteurs, plateforme, opérations, sécurité, conformité et métier utilisent les mêmes preuves et décisions.",
   "station.integration-capability-strategy.apply_in_work": "Utilisez les ressources d’intégration propres à la station comme base de travail principale.",
   "station.integration-capability-strategy.outcomes": "Décision ou base de travail d’intégration documentée",

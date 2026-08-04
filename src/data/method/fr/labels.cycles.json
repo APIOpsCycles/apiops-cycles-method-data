@@ -8,7 +8,7 @@
   "cycle.api-productization-cycle.description": "Parcours APIOps Cycles centré sur les API pour productiser, concevoir, livrer, publier et améliorer des produits API.",
   "cycle.api-productization-cycle.purpose": "Parcours méthodologique centré sur les API pour les équipes qui savent déjà que le mode de mise en œuvre prévu est un produit API.",
   "cycle.integration-productization-cycle.title": "Cycle de productisation des capacités d’intégration",
-  "cycle.integration-productization-cycle.description": "Cycle pour productiser des capacites d integration reutilisables avant de choisir le mode de mise en oeuvre.",
+  "cycle.integration-productization-cycle.description": "Un cycle pour définir et productiser des capacités d’intégration réutilisables sans présupposer le style d’implémentation à l’avance.",
   "cycle.integration-productization-cycle.purpose": "Guider la conception de capacites d integration reutilisables avant de choisir un mode de mise en oeuvre API, evenement, fichier, flux, produit de donnees, integration directe ou hybride.",
   "cycle.station.capability-strategy": "Stratégie de capacité",
   "cycle.station.consumer-requirements-onboarding": "Exigences utilisateurs & onboarding",

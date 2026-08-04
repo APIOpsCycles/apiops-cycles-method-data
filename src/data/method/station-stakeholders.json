@@ -654,37 +654,15 @@
         },
         {
           "stakeholder": "business-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "customerJourneyCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "domainCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "capability-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "capabilityValuePropositionCanvas",
-              "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "capabilityBusinessModelCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
@@ -706,10 +684,6 @@
           "responsibilities": [
             {
               "resource": "integrationConsumerProviderRequirementsCanvas",
-              "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "consumerExperienceRequirementsCanvas",
               "role": "suggested-answer-owner"
             }
           ]
@@ -747,32 +721,16 @@
             {
               "resource": "integrationArchitectureDecisionCanvas",
               "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "locationsCanvas",
-              "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "integration-architect",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "businessImpactCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "capacityCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "security-specialist",
@@ -805,7 +763,7 @@
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "interactionCanvas",
+              "resource": "integrationSolutionDesignCanvas",
               "role": "suggested-answer-owner"
             }
           ]

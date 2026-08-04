@@ -8,7 +8,7 @@
   "cycle.api-productization-cycle.description": "Die API-fokussierte APIOps-Cycles-Journey für Produktisierung, Design, Bereitstellung, Veröffentlichung und Verbesserung von APIs.",
   "cycle.api-productization-cycle.purpose": "API-fokussierte Method Journey für Teams, die bereits wissen, dass die vorgesehene Umsetzungsweise ein API-Produkt ist.",
   "cycle.integration-productization-cycle.title": "Integrationszyklus",
-  "cycle.integration-productization-cycle.description": "Ein Zyklus zur Produktisierung wiederverwendbarer Integrations-Capabilities, bevor der Implementierungsstil gewaehlt wird.",
+  "cycle.integration-productization-cycle.description": "Ein Zyklus zum Definieren und Produktisieren wiederverwendbarer Integrationsfähigkeiten, ohne den Implementierungsstil im Voraus anzunehmen.",
   "cycle.integration-productization-cycle.purpose": "Unterstuetzt das Design wiederverwendbarer Integrations-Capabilities, bevor ein API-, Event-, Datei-, Stream-, Datenprodukt-, direkte Integrations- oder hybrider Implementierungsstil gewaehlt wird.",
   "cycle.station.capability-strategy": "Capability-Strategie",
   "cycle.station.consumer-requirements-onboarding": "Nutzeranforderungen & Onboarding",

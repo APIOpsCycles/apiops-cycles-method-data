@@ -2132,6 +2132,33 @@
         ]
       },
       "category": "guideline"
+    },
+    {
+      "id": "integrationSolutionDesignCanvas",
+      "title": "resource.integration-solution-design-canvas.title",
+      "slug": "resources/integration-solution-design-canvas",
+      "icon": "dashboard-outline",
+      "order": 217,
+      "description": "resource.integration-solution-design-canvas.description",
+      "image": "",
+      "canvas": "integrationSolutionDesignCanvas",
+      "outcomes": [
+        "resource.integration-solution-design-canvas.outcomes",
+        "resource.integration-solution-design-canvas.outcomes.1",
+        "resource.integration-solution-design-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-solution-design-canvas.steps",
+          "resource.integration-solution-design-canvas.steps.1",
+          "resource.integration-solution-design-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.integration-solution-design-canvas.tips",
+          "resource.integration-solution-design-canvas.tips.1"
+        ]
+      },
+      "category": "canvas"
     }
   ]
 }

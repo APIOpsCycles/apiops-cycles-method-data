@@ -2450,7 +2450,7 @@
     "id": "integrationReadinessOperationsCanvas",
     "layout": {
       "columns": 4,
-      "rows": 4
+      "rows": 5
     },
     "metadata": {
       "source": "APIOps Cycles",
@@ -2636,6 +2636,157 @@
         },
         "fillOrder": 16,
         "highlight": true
+      },
+      {
+        "id": "documentationDependenciesChangeReadiness",
+        "gridPosition": {
+          "column": 0,
+          "row": 4,
+          "colSpan": 4,
+          "rowSpan": 1
+        },
+        "fillOrder": 17,
+        "highlight": true
+      }
+    ]
+  },
+  "integrationSolutionDesignCanvas": {
+    "id": "integrationSolutionDesignCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "selectedIntegrationStyle",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "producerAndConsumer",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "contractAndSchema",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3,
+        "highlight": true
+      },
+      {
+        "id": "mappingsAndTransformations",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4,
+        "highlight": true
+      },
+      {
+        "id": "interactionDeliveryPattern",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "identityAndSecurity",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "errorRetryReplay",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7
+      },
+      {
+        "id": "correlationMetadata",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "reconciliationRules",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      },
+      {
+        "id": "observability",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10
+      },
+      {
+        "id": "versioningEvolution",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11
+      },
+      {
+        "id": "canonicalConsumerSpecificModel",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12
       }
     ]
   }
