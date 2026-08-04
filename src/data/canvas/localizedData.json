@@ -914,7 +914,7 @@
     "integrationArchitectureDecisionCanvas": {
       "title": "Integration Architecture Decision Canvas",
       "purpose": "Vergleichen und begründen Sie Integrationsstile, Plattformfähigkeiten, Governance-Randbedingungen und abgelehnte Alternativen.",
-      "howToUse": "Markieren Sie jeden Kandidatenstil als betrachtet, ausgewählt, abgelehnt oder nicht relevant. Vergleichen Sie tragfähige Optionen nach Timing, Kopplung, Dateneigentum, Konsistenz, Zuverlässigkeit, Sicherheit, Wartbarkeit, Beobachtbarkeit, Wiederherstellung, Kosten, Governance und Skills.",
+      "howToUse": "Nutzen Sie die gemeinsame Kandidatenstatus-Auswahl, um jeden Kandidatenstil als betrachtet, ausgewählt, abgelehnt oder nicht relevant zu markieren. Vergleichen Sie tragfähige Optionen nach Timing, Kopplung, Dateneigentum, Konsistenz, Zuverlässigkeit, Sicherheit, Wartbarkeit, Beobachtbarkeit, Wiederherstellung, Kosten, Governance und Skills.",
       "sections": {
         "synchronousApi": {
           "section": "Synchrone API",
@@ -1063,7 +1063,7 @@
     },
     "integrationSolutionDesignCanvas": {
       "title": "Integration Solution Design Canvas",
-      "purpose": "Fasst das vollständige Integrationsdesign über Implementierungsstile hinweg zusammen, einschließlich Verträgen, Schemas, Mappings, Lieferverhalten, Security, Fehlern, Beobachtbarkeit, Abstimmung und Versionierung.",
+      "purpose": "Fasst das vollständige Integrationsdesign über Implementierungsstile hinweg zusammen, einschließlich Verträgen, Schemas, Datenstrukturen, Mappings, Lieferverhalten, Security, Fehlern, Beobachtbarkeit, Abstimmung und Versionierung.",
       "howToUse": "Nutzen Sie dies als primäres Solution-Design-Artefakt nach der Architekturentscheidung. Nutzen Sie Interaction Canvas, REST-, Event-, GraphQL-, Datei-, Stream-, Datenprodukt- oder Messaging-Ressourcen nur als bedingte Detailunterstützung.",
       "sections": {
         "selectedIntegrationStyle": {
@@ -2032,7 +2032,7 @@
     "integrationArchitectureDecisionCanvas": {
       "title": "Integration Architecture Decision Canvas",
       "purpose": "Compare and justify integration implementation styles, platform capabilities, governance constraints, and rejected alternatives.",
-      "howToUse": "Mark each candidate style as considered, selected, rejected, or not relevant. Compare viable options against timing, coupling, data ownership, consistency, reliability, security, maintainability, observability, recovery, cost, governance, and skills.",
+      "howToUse": "Use the shared candidate status control to mark each candidate style as considered, selected, rejected, or not relevant. Compare viable options against timing, coupling, data ownership, consistency, reliability, security, maintainability, observability, recovery, cost, governance, and skills.",
       "sections": {
         "synchronousApi": {
           "section": "Synchronous API",
@@ -2181,7 +2181,7 @@
     },
     "integrationSolutionDesignCanvas": {
       "title": "Integration Solution Design Canvas",
-      "purpose": "Summarize the complete integration design across implementation styles, including contracts, schemas, mappings, delivery behavior, security, errors, observability, reconciliation, and versioning.",
+      "purpose": "Summarize the complete integration design across implementation styles, including contracts, schemas, data structures, mappings, delivery behavior, security, errors, observability, reconciliation, and versioning.",
       "howToUse": "Use this as the primary solution-design artifact after the architecture decision. Use Interaction Canvas, REST, Event, GraphQL, file, stream, data product, or messaging resources as conditional deeper design support.",
       "sections": {
         "selectedIntegrationStyle": {
@@ -3150,7 +3150,7 @@
     "integrationArchitectureDecisionCanvas": {
       "title": "Integraation arkkitehtuuripäätöksen kanvas",
       "purpose": "Vertaa ja perustele integraation toteutustyylit, alustakyvykkyydet, governance-rajoitteet ja hylätyt vaihtoehdot.",
-      "howToUse": "Merkitse jokainen ehdokastyyli tarkastelluksi, valituksi, hylätyksi tai ei-relevantiksi. Vertaa toteuttamiskelpoisia vaihtoehtoja ajoituksen, kytkeytymisen, datan omistajuuden, konsistenssin, luotettavuuden, turvallisuuden, ylläpidettävyyden, havainnoitavuuden, palautumisen, kustannusten, governancen ja osaamisen perusteella.",
+      "howToUse": "Käytä yhteistä ehdokasstatus-valintaa merkitäksesi jokaisen ehdokastyylin tarkastelluksi, valituksi, hylätyksi tai ei-relevantiksi. Vertaa toteuttamiskelpoisia vaihtoehtoja ajoituksen, kytkeytymisen, datan omistajuuden, konsistenssin, luotettavuuden, turvallisuuden, ylläpidettävyyden, havainnoitavuuden, palautumisen, kustannusten, governancen ja osaamisen perusteella.",
       "sections": {
         "synchronousApi": {
           "section": "Synkroninen API",
@@ -3299,7 +3299,7 @@
     },
     "integrationSolutionDesignCanvas": {
       "title": "Integraatioratkaisun suunnittelukanvas",
-      "purpose": "Kokoaa integraatiosuunnitelman eri toteutustyylien yli, mukaan lukien sopimukset, skeemat, mäppäykset, toimituskäyttäytyminen, turvallisuus, virheet, havainnoitavuus, täsmäytys ja versiointi.",
+      "purpose": "Kokoaa integraatiosuunnitelman eri toteutustyylien yli, mukaan lukien sopimukset, skeemat, tietorakenteet, mäppäykset, toimituskäyttäytyminen, turvallisuus, virheet, havainnoitavuus, täsmäytys ja versiointi.",
       "howToUse": "Käytä tätä ensisijaisena ratkaisusuunnittelun artefaktina arkkitehtuuripäätöksen jälkeen. Käytä Interaction Canvas-, REST-, Event-, GraphQL-, tiedosto-, stream-, datatuote- tai viestintäresursseja vain ehdollisena syventävänä tukena.",
       "sections": {
         "selectedIntegrationStyle": {
@@ -4268,7 +4268,7 @@
     "integrationArchitectureDecisionCanvas": {
       "title": "Canvas de décision d’architecture d’intégration",
       "purpose": "Comparer et justifier les styles d’implémentation d’intégration, les capacités plateforme, les contraintes de gouvernance et les alternatives rejetées.",
-      "howToUse": "Marquez chaque style candidat comme considéré, sélectionné, rejeté ou non pertinent. Comparez les options viables selon temporalité, couplage, propriété des données, cohérence, fiabilité, sécurité, maintenabilité, observabilité, récupération, coût, gouvernance et compétences.",
+      "howToUse": "Utilisez le contrôle de statut partagé pour marquer chaque style candidat comme considéré, sélectionné, rejeté ou non pertinent. Comparez les options viables selon temporalité, couplage, propriété des données, cohérence, fiabilité, sécurité, maintenabilité, observabilité, récupération, coût, gouvernance et compétences.",
       "sections": {
         "synchronousApi": {
           "section": "API synchrone",
@@ -4417,7 +4417,7 @@
     },
     "integrationSolutionDesignCanvas": {
       "title": "Canvas de conception de solution d’intégration",
-      "purpose": "Résume la conception complète de l’intégration tous styles d’implémentation confondus, y compris contrats, schémas, mappings, comportement de livraison, sécurité, erreurs, observabilité, réconciliation et versioning.",
+      "purpose": "Résume la conception complète de l’intégration tous styles d’implémentation confondus, y compris contrats, schémas, structures de données, mappings, comportement de livraison, sécurité, erreurs, observabilité, réconciliation et versioning.",
       "howToUse": "Utilisez ceci comme artefact principal de conception après la décision d’architecture. Utilisez Interaction Canvas, REST, Event, GraphQL, fichier, stream, produit de données ou messagerie comme support détaillé conditionnel.",
       "sections": {
         "selectedIntegrationStyle": {
@@ -5386,7 +5386,7 @@
     "integrationArchitectureDecisionCanvas": {
       "title": "Canvas de Decisão de Arquitetura de Integração",
       "purpose": "Comparar e justificar estilos de implementação de integração, capacidades de plataforma, restrições de governação e alternativas rejeitadas.",
-      "howToUse": "Marque cada estilo candidato como considerado, selecionado, rejeitado ou não relevante. Compare opções viáveis por temporização, acoplamento, ownership dos dados, consistência, fiabilidade, segurança, manutenibilidade, observabilidade, recuperação, custo, governação e competências.",
+      "howToUse": "Use o controlo de estado partilhado para marcar cada estilo candidato como considerado, selecionado, rejeitado ou não relevante. Compare opções viáveis por temporização, acoplamento, ownership dos dados, consistência, fiabilidade, segurança, manutenibilidade, observabilidade, recuperação, custo, governação e competências.",
       "sections": {
         "synchronousApi": {
           "section": "API síncrona",
@@ -5535,7 +5535,7 @@
     },
     "integrationSolutionDesignCanvas": {
       "title": "Canvas de Desenho da Solução de Integração",
-      "purpose": "Resume o desenho completo da integração entre estilos de implementação, incluindo contratos, esquemas, mapeamentos, comportamento de entrega, segurança, erros, observabilidade, reconciliação e versionamento.",
+      "purpose": "Resume o desenho completo da integração entre estilos de implementação, incluindo contratos, esquemas, estruturas de dados, mapeamentos, comportamento de entrega, segurança, erros, observabilidade, reconciliação e versionamento.",
       "howToUse": "Use isto como artefacto principal de desenho da solução após a decisão de arquitetura. Use Interaction Canvas, REST, Event, GraphQL, ficheiro, stream, produto de dados ou mensageria como apoio detalhado condicional.",
       "sections": {
         "selectedIntegrationStyle": {
