@@ -682,43 +682,43 @@
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where should the solution react to, publish, or consume events?"
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -1505,43 +1505,43 @@
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where should the solution react to, publish, or consume events?"
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -2328,43 +2328,43 @@
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where should the solution react to, publish, or consume events?"
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -3151,43 +3151,43 @@
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where should the solution react to, publish, or consume events?"
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -3974,43 +3974,43 @@
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where should the solution react to, publish, or consume events?"
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
