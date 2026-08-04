@@ -739,6 +739,375 @@
           "incident-report",
           "roadmap"
         ]
+      },
+      {
+        "id": "capability-strategy",
+        "title": "station.capability-strategy.title",
+        "slug": "method/capability-strategy",
+        "order": 1,
+        "icon": "strategy-outline",
+        "description": "station.capability-strategy.description",
+        "why_it_matters": "station.capability-strategy.why_it_matters",
+        "outcomes": [
+          "station.capability-strategy.outcomes",
+          "station.capability-strategy.outcomes.1",
+          "station.capability-strategy.outcomes.2",
+          "station.capability-strategy.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-strategy.how_it_works"
+          },
+          {
+            "step": "station.capability-strategy.how_it_works.1"
+          },
+          {
+            "step": "station.capability-strategy.how_it_works.2"
+          },
+          {
+            "step": "station.capability-strategy.how_it_works.3"
+          }
+        ],
+        "apply_in_work": "station.capability-strategy.apply_in_work",
+        "lifecycleStage": "strategy",
+        "stationCriteria": [
+          "metrics-feedback-available",
+          "business-goals-defined",
+          "market-research-done",
+          "stakeholder-approval"
+        ],
+        "expectedEvidenceTags": [
+          "design-artifact",
+          "documentation",
+          "research",
+          "roadmap"
+        ]
+      },
+      {
+        "id": "capability-consumer-producer-requirements",
+        "title": "station.capability-consumer-producer-requirements.title",
+        "slug": "method/capability-consumer-producer-requirements",
+        "order": 2,
+        "icon": "deployed-code-account-outline",
+        "description": "station.capability-consumer-producer-requirements.description",
+        "why_it_matters": "station.capability-consumer-producer-requirements.why_it_matters",
+        "outcomes": [
+          "station.capability-consumer-producer-requirements.outcomes",
+          "station.capability-consumer-producer-requirements.outcomes.1",
+          "station.capability-consumer-producer-requirements.outcomes.2",
+          "station.capability-consumer-producer-requirements.outcomes.3"
+        ],
+        "how-it-works": [
+          {
+            "step": "station.api-consumer-experience.how_it_works"
+          },
+          {
+            "step": "station.api-consumer-experience.how_it_works.1"
+          },
+          {
+            "step": "station.api-consumer-experience.how_it_works.2"
+          }
+        ],
+        "apply_in_work": "station.capability-consumer-producer-requirements.apply_in_work",
+        "lifecycleStage": "strategy",
+        "stationCriteria": [
+          "api-opportunity-documented",
+          "api-reusability",
+          "hide-backend-discrepancies",
+          "value-prop-validated",
+          "consumer-segments-identified",
+          "api-roadmap-defined"
+        ],
+        "expectedEvidenceTags": [
+          "design-artifact",
+          "documentation",
+          "consumer-feedback"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-consumer-producer-requirements.how_it_works"
+          },
+          {
+            "step": "station.capability-consumer-producer-requirements.how_it_works.1"
+          },
+          {
+            "step": "station.capability-consumer-producer-requirements.how_it_works.2"
+          },
+          {
+            "step": "station.capability-consumer-producer-requirements.how_it_works.3"
+          }
+        ]
+      },
+      {
+        "id": "capability-architecture-platform-decisions",
+        "title": "station.capability-architecture-platform-decisions.title",
+        "slug": "method/capability-architecture-platform-decisions",
+        "order": 3,
+        "icon": "code-blocks-outline",
+        "description": "station.capability-architecture-platform-decisions.description",
+        "why_it_matters": "station.capability-architecture-platform-decisions.why_it_matters",
+        "outcomes": [
+          "station.capability-architecture-platform-decisions.outcomes",
+          "station.capability-architecture-platform-decisions.outcomes.1",
+          "station.capability-architecture-platform-decisions.outcomes.2",
+          "station.capability-architecture-platform-decisions.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-architecture-platform-decisions.how_it_works"
+          },
+          {
+            "step": "station.capability-architecture-platform-decisions.how_it_works.1"
+          },
+          {
+            "step": "station.capability-architecture-platform-decisions.how_it_works.2"
+          },
+          {
+            "step": "station.capability-architecture-platform-decisions.how_it_works.3"
+          }
+        ],
+        "apply_in_work": "station.capability-architecture-platform-decisions.apply_in_work",
+        "lifecycleStage": "architecture",
+        "stationCriteria": [
+          "api-reusability",
+          "hide-backend-discrepancies",
+          "value-prop-validated",
+          "consumer-segments-identified",
+          "api-roadmap-defined"
+        ],
+        "expectedEvidenceTags": [
+          "architecture-decision",
+          "documentation",
+          "platform-config",
+          "metrics"
+        ]
+      },
+      {
+        "id": "capability-solution-interaction-design",
+        "title": "station.capability-solution-interaction-design.title",
+        "slug": "method/capability-solution-interaction-design",
+        "order": 4,
+        "icon": "api",
+        "description": "station.capability-solution-interaction-design.description",
+        "why_it_matters": "station.capability-solution-interaction-design.why_it_matters",
+        "outcomes": [
+          "station.capability-solution-interaction-design.outcomes",
+          "station.capability-solution-interaction-design.outcomes.1",
+          "station.capability-solution-interaction-design.outcomes.2",
+          "station.capability-solution-interaction-design.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-solution-interaction-design.how_it_works"
+          },
+          {
+            "step": "station.capability-solution-interaction-design.how_it_works.1"
+          },
+          {
+            "step": "station.capability-solution-interaction-design.how_it_works.2"
+          },
+          {
+            "step": "station.capability-solution-interaction-design.how_it_works.3"
+          }
+        ],
+        "apply_in_work": "station.capability-solution-interaction-design.apply_in_work",
+        "lifecycleStage": "design",
+        "stationCriteria": [
+          "architecture-patterns-validated",
+          "hide-backend-discrepancies",
+          "design-reflects-business-value",
+          "api-consistency"
+        ],
+        "expectedEvidenceTags": [
+          "spec",
+          "contract",
+          "design-artifact",
+          "documentation"
+        ]
+      },
+      {
+        "id": "capability-delivery-operations",
+        "title": "station.capability-delivery-operations.title",
+        "slug": "method/capability-delivery-operations",
+        "order": 5,
+        "icon": "code",
+        "description": "station.capability-delivery-operations.description",
+        "why_it_matters": "station.capability-delivery-operations.why_it_matters",
+        "outcomes": [
+          "station.capability-delivery-operations.outcomes",
+          "station.capability-delivery-operations.outcomes.1",
+          "station.capability-delivery-operations.outcomes.2",
+          "station.capability-delivery-operations.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-delivery-operations.how_it_works"
+          },
+          {
+            "step": "station.capability-delivery-operations.how_it_works.1"
+          },
+          {
+            "step": "station.capability-delivery-operations.how_it_works.2"
+          },
+          {
+            "step": "station.capability-delivery-operations.how_it_works.3"
+          },
+          {
+            "step": "station.capability-delivery-operations.how_it_works.4"
+          },
+          {
+            "step": "station.capability-delivery-operations.how_it_works.5"
+          }
+        ],
+        "apply_in_work": "station.capability-delivery-operations.apply_in_work",
+        "lifecycleStage": "delivery",
+        "stationCriteria": [
+          "architecture-patterns-validated",
+          "hide-backend-discrepancies",
+          "design-reflects-business-value",
+          "api-consistency"
+        ],
+        "expectedEvidenceTags": [
+          "implementation",
+          "pipeline-config",
+          "test-report",
+          "security-report"
+        ]
+      },
+      {
+        "id": "capability-readiness-assurance",
+        "title": "station.capability-readiness-assurance.title",
+        "slug": "method/capability-readiness-assurance",
+        "order": 6,
+        "icon": "check-box-outline",
+        "description": "station.capability-readiness-assurance.description",
+        "why_it_matters": "station.capability-readiness-assurance.why_it_matters",
+        "outcomes": [
+          "station.capability-readiness-assurance.outcomes",
+          "station.capability-readiness-assurance.outcomes.1",
+          "station.capability-readiness-assurance.outcomes.2",
+          "station.capability-readiness-assurance.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-readiness-assurance.how_it_works"
+          },
+          {
+            "step": "station.capability-readiness-assurance.how_it_works.1"
+          },
+          {
+            "step": "station.capability-readiness-assurance.how_it_works.2"
+          },
+          {
+            "step": "station.capability-readiness-assurance.how_it_works.3"
+          },
+          {
+            "step": "station.capability-readiness-assurance.how_it_works.4"
+          },
+          {
+            "step": "station.capability-readiness-assurance.how_it_works.5"
+          }
+        ],
+        "apply_in_work": "station.capability-readiness-assurance.apply_in_work",
+        "lifecycleStage": "publishing",
+        "stationCriteria": [
+          "architecture-patterns-validated",
+          "design-reflects-business-value",
+          "api-description-available",
+          "api-consistency",
+          "api-contract-tested"
+        ],
+        "expectedEvidenceTags": [
+          "audit-report",
+          "compliance-report",
+          "security-report",
+          "test-report"
+        ]
+      },
+      {
+        "id": "capability-publishing-enablement",
+        "title": "station.capability-publishing-enablement.title",
+        "slug": "method/capability-publishing-enablement",
+        "order": 7,
+        "icon": "deployed-code-outline",
+        "description": "station.capability-publishing-enablement.description",
+        "why_it_matters": "station.capability-publishing-enablement.why_it_matters",
+        "outcomes": [
+          "station.capability-publishing-enablement.outcomes",
+          "station.capability-publishing-enablement.outcomes.1",
+          "station.capability-publishing-enablement.outcomes.2",
+          "station.capability-publishing-enablement.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-publishing-enablement.how_it_works"
+          },
+          {
+            "step": "station.capability-publishing-enablement.how_it_works.1"
+          },
+          {
+            "step": "station.capability-publishing-enablement.how_it_works.2"
+          },
+          {
+            "step": "station.capability-publishing-enablement.how_it_works.3"
+          }
+        ],
+        "apply_in_work": "station.capability-publishing-enablement.apply_in_work",
+        "lifecycleStage": "publishing",
+        "stationCriteria": [
+          "audit-passed",
+          "audit-reports-shared",
+          "api-ready-for-publishing",
+          "api-documentation-ready"
+        ],
+        "expectedEvidenceTags": [
+          "gateway-config",
+          "developer-portal",
+          "documentation",
+          "release-record"
+        ]
+      },
+      {
+        "id": "capability-monitoring-improvement",
+        "title": "station.capability-monitoring-improvement.title",
+        "slug": "method/capability-monitoring-improvement",
+        "order": 8,
+        "icon": "analytics-outline",
+        "description": "station.capability-monitoring-improvement.description",
+        "why_it_matters": "station.capability-monitoring-improvement.why_it_matters",
+        "outcomes": [
+          "station.capability-monitoring-improvement.outcomes",
+          "station.capability-monitoring-improvement.outcomes.1",
+          "station.capability-monitoring-improvement.outcomes.2",
+          "station.capability-monitoring-improvement.outcomes.3"
+        ],
+        "how_it_works": [
+          {
+            "step": "station.capability-monitoring-improvement.how_it_works"
+          },
+          {
+            "step": "station.capability-monitoring-improvement.how_it_works.1"
+          },
+          {
+            "step": "station.capability-monitoring-improvement.how_it_works.2"
+          },
+          {
+            "step": "station.capability-monitoring-improvement.how_it_works.3"
+          }
+        ],
+        "apply_in_work": "station.capability-monitoring-improvement.apply_in_work",
+        "lifecycleStage": "improving",
+        "stationCriteria": [
+          "api-documentation-ready",
+          "consumer-support-ready",
+          "legal-compliance-clear"
+        ],
+        "expectedEvidenceTags": [
+          "metrics",
+          "consumer-feedback",
+          "incident-report",
+          "roadmap"
+        ]
       }
     ]
   },

@@ -22,7 +22,9 @@
           "competitive-analysis",
           "ecosystem-vision",
           "integration-monitoring-improvement",
-          "integration-capability-strategy"
+          "integration-capability-strategy",
+          "capability-monitoring-improvement",
+          "capability-strategy"
         ]
       },
       {
@@ -43,7 +45,10 @@
           "vendor-management",
           "integration-capability-strategy",
           "integration-consumer-requirements-onboarding",
-          "integration-architecture-platform-decisions"
+          "integration-architecture-platform-decisions",
+          "capability-strategy",
+          "capability-consumer-producer-requirements",
+          "capability-architecture-platform-decisions"
         ]
       },
       {
@@ -61,7 +66,11 @@
           "integration-architecture-platform-decisions",
           "integration-solution-design",
           "integration-delivery-operations",
-          "integration-readiness-assurance"
+          "integration-readiness-assurance",
+          "capability-architecture-platform-decisions",
+          "capability-solution-interaction-design",
+          "capability-delivery-operations",
+          "capability-readiness-assurance"
         ]
       },
       {
@@ -78,7 +87,8 @@
           "ci-cd",
           "test-automation",
           "release-management",
-          "integration-delivery-operations"
+          "integration-delivery-operations",
+          "capability-delivery-operations"
         ]
       },
       {
@@ -98,7 +108,10 @@
           "partner-integration",
           "integration-readiness-assurance",
           "integration-publishing-enablement",
-          "integration-monitoring-improvement"
+          "integration-monitoring-improvement",
+          "capability-readiness-assurance",
+          "capability-publishing-enablement",
+          "capability-monitoring-improvement"
         ]
       },
       {
@@ -116,7 +129,8 @@
           "operating-guidelines",
           "portfolio-management",
           "budget-and-resource-management",
-          "integration-capability-strategy"
+          "integration-capability-strategy",
+          "capability-strategy"
         ]
       }
     ]

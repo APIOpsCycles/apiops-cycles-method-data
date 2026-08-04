@@ -1,40 +1,24 @@
 {
   "stationStakeholdersByCycle": {
     "capability-productization-cycle": {
-      "api-product-strategy": [
+      "capability-strategy": [
         {
           "stakeholder": "capability-owner",
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "capabilityValuePropositionCanvas",
-              "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "capabilityBusinessModelCanvas",
+              "resource": "capabilityHypothesisCanvas",
               "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "business-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "customerJourneyCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "domainCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "customer-specialist",
@@ -53,10 +37,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-consumer-experience": [
+      "capability-consumer-producer-requirements": [
         {
           "stakeholder": "customer-specialist",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capabilityConsumerProducerRequirementsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "capability-owner",
@@ -64,13 +54,7 @@
         },
         {
           "stakeholder": "api-consumer-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "consumerExperienceRequirementsCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
@@ -89,36 +73,24 @@
           "involvement": "consulted"
         }
       ],
-      "api-platform-architecture": [
+      "capability-architecture-platform-decisions": [
         {
           "stakeholder": "platform-architect",
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "locationsCanvas",
+              "resource": "capabilityArchitectureDecisionCanvas",
               "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "capability-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "businessImpactCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "capacityCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "security-specialist",
@@ -141,10 +113,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-design": [
+      "capability-solution-interaction-design": [
         {
           "stakeholder": "api-designer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capabilitySolutionDesignCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "capability-owner",
@@ -175,10 +153,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-delivery": [
+      "capability-delivery-operations": [
         {
           "stakeholder": "api-engineer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capabilityReadinessOperationsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "platform-architect",
@@ -205,10 +189,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-audit": [
+      "capability-readiness-assurance": [
         {
           "stakeholder": "governance-specialist",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capability-readiness-checklist",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "security-specialist",
@@ -239,10 +229,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-publishing": [
+      "capability-publishing-enablement": [
         {
           "stakeholder": "capability-owner",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capability-publishing-discovery-guide",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "api-devrel-specialist",
@@ -269,10 +265,16 @@
           "involvement": "consulted"
         }
       ],
-      "monitoring-and-improving": [
+      "capability-monitoring-improvement": [
         {
           "stakeholder": "capability-owner",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capability-monitoring-value-metrics",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "business-owner",

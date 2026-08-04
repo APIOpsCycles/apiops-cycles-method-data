@@ -114,5 +114,13 @@
   {
     "id": "integration-published-for-reuse",
     "description": "The integration capability is discoverable with published ownership, lifecycle status, contracts, schemas, service expectations, access and onboarding paths, support, versioning, and feedback channels."
+  },
+  {
+    "id": "capability-readiness-confirmed",
+    "description": "Capability design, service definition, test evidence, operating model, permissions, monitoring, support, fallback, lifecycle arrangements, risks, and ownership have been reviewed for release readiness."
+  },
+  {
+    "id": "capability-published-for-reuse",
+    "description": "The reusable capability is discoverable with published purpose, value, ownership, lifecycle status, usage conditions, service expectations, access paths, support, versioning, and feedback channels."
   }
 ]

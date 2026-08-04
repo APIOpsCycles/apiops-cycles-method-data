@@ -2789,5 +2789,800 @@
         "fillOrder": 12
       }
     ]
+  },
+  "capabilityHypothesisCanvas": {
+    "id": "capabilityHypothesisCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "hypothesis",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "targetConsumersUseCases",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "reusableScope",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "supportingEvidence",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "expectedOutcomes",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "criticalAssumptions",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6,
+        "highlight": true
+      },
+      {
+        "id": "minimumValidation",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": true
+      },
+      {
+        "id": "decision",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 8,
+        "highlight": true
+      }
+    ]
+  },
+  "capabilityConsumerProducerRequirementsCanvas": {
+    "id": "capabilityConsumerProducerRequirementsCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "intendedConsumersContexts",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "capabilityOwnerProducerResponsibilities",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2,
+        "highlight": true
+      },
+      {
+        "id": "discoveryEvaluation",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3,
+        "highlight": false
+      },
+      {
+        "id": "accessOnboarding",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4,
+        "highlight": false
+      },
+      {
+        "id": "serviceExpectations",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5,
+        "highlight": false
+      },
+      {
+        "id": "qualityAvailability",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6,
+        "highlight": false
+      },
+      {
+        "id": "changeLifecycle",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": false
+      },
+      {
+        "id": "supportIncidentCommunication",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8,
+        "highlight": false
+      },
+      {
+        "id": "operationalGovernanceConstraints",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9,
+        "highlight": false
+      },
+      {
+        "id": "producerCommitments",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10,
+        "highlight": false
+      },
+      {
+        "id": "consumerResponsibilities",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11,
+        "highlight": false
+      },
+      {
+        "id": "architectureImplications",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12,
+        "highlight": true
+      }
+    ]
+  },
+  "capabilityArchitectureDecisionCanvas": {
+    "id": "capabilityArchitectureDecisionCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 4
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "api",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1
+      },
+      {
+        "id": "event",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "fileBatch",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "stream",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4
+      },
+      {
+        "id": "dataProduct",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "workflow",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6
+      },
+      {
+        "id": "sharedService",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7
+      },
+      {
+        "id": "userFacingApplication",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8
+      },
+      {
+        "id": "directIntegration",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9
+      },
+      {
+        "id": "platformNativeFeature",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10
+      },
+      {
+        "id": "humanAssistedService",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11
+      },
+      {
+        "id": "hybridApproach",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12
+      },
+      {
+        "id": "evaluationCriteria",
+        "gridPosition": {
+          "column": 0,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 13,
+        "highlight": true
+      },
+      {
+        "id": "selectedStylePlatform",
+        "gridPosition": {
+          "column": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 14,
+        "highlight": true
+      },
+      {
+        "id": "rationaleRejectedAlternatives",
+        "gridPosition": {
+          "column": 2,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 15,
+        "highlight": true
+      },
+      {
+        "id": "assumptionsRisks",
+        "gridPosition": {
+          "column": 3,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 16,
+        "highlight": true
+      }
+    ]
+  },
+  "capabilitySolutionDesignCanvas": {
+    "id": "capabilitySolutionDesignCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 3
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "selectedImplementationStyle",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "serviceBoundary",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2,
+        "highlight": true
+      },
+      {
+        "id": "consumerInteractionModel",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3,
+        "highlight": false
+      },
+      {
+        "id": "dataBusinessConcepts",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4,
+        "highlight": false
+      },
+      {
+        "id": "contractOrServiceDefinition",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5,
+        "highlight": true
+      },
+      {
+        "id": "responsibilitiesRules",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6,
+        "highlight": false
+      },
+      {
+        "id": "inputsOutputs",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": false
+      },
+      {
+        "id": "errorsExceptions",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8,
+        "highlight": false
+      },
+      {
+        "id": "lifecycleVersioning",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9,
+        "highlight": false
+      },
+      {
+        "id": "securityPrivacy",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10,
+        "highlight": false
+      },
+      {
+        "id": "observability",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11,
+        "highlight": false
+      },
+      {
+        "id": "supportModel",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12,
+        "highlight": false
+      }
+    ]
+  },
+  "capabilityReadinessOperationsCanvas": {
+    "id": "capabilityReadinessOperationsCanvas",
+    "layout": {
+      "columns": 4,
+      "rows": 5
+    },
+    "metadata": {
+      "source": "APIOps Cycles",
+      "license": "CC-BY-SA 4.0",
+      "authors": [
+        "Osaango Ltd"
+      ],
+      "website": "www.apiopscycles.com"
+    },
+    "sections": [
+      {
+        "id": "businessOwner",
+        "gridPosition": {
+          "column": 0,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 1,
+        "highlight": true
+      },
+      {
+        "id": "capabilityOwner",
+        "gridPosition": {
+          "column": 1,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 2,
+        "highlight": true
+      },
+      {
+        "id": "producerOwner",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3,
+        "highlight": false
+      },
+      {
+        "id": "operationalOwner",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4,
+        "highlight": false
+      },
+      {
+        "id": "consumers",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5,
+        "highlight": false
+      },
+      {
+        "id": "implementationStyle",
+        "gridPosition": {
+          "column": 1,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 6,
+        "highlight": false
+      },
+      {
+        "id": "environments",
+        "gridPosition": {
+          "column": 2,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 7,
+        "highlight": false
+      },
+      {
+        "id": "permissionsCredentials",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8,
+        "highlight": false
+      },
+      {
+        "id": "testEvidence",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 9,
+        "highlight": false
+      },
+      {
+        "id": "serviceExpectations",
+        "gridPosition": {
+          "column": 1,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 10,
+        "highlight": false
+      },
+      {
+        "id": "monitoring",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 11,
+        "highlight": false
+      },
+      {
+        "id": "support",
+        "gridPosition": {
+          "column": 3,
+          "row": 2,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 12,
+        "highlight": false
+      },
+      {
+        "id": "fallbackContinuity",
+        "gridPosition": {
+          "column": 0,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 13,
+        "highlight": false
+      },
+      {
+        "id": "changeOwnership",
+        "gridPosition": {
+          "column": 1,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 14,
+        "highlight": false
+      },
+      {
+        "id": "documentationRunbooks",
+        "gridPosition": {
+          "column": 2,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 15,
+        "highlight": false
+      },
+      {
+        "id": "readinessStatus",
+        "gridPosition": {
+          "column": 3,
+          "row": 3,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 16,
+        "highlight": true
+      },
+      {
+        "id": "knownRisks",
+        "gridPosition": {
+          "column": 0,
+          "row": 4,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 17,
+        "highlight": false
+      },
+      {
+        "id": "improvementBacklog",
+        "gridPosition": {
+          "column": 1,
+          "row": 4,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 18,
+        "highlight": false
+      }
+    ]
   }
 }

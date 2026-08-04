@@ -12,72 +12,78 @@
         "description": "cycle.capability-productization-cycle.description",
         "purpose": "cycle.capability-productization-cycle.purpose",
         "stations": [
-          "api-product-strategy",
-          "api-consumer-experience",
-          "api-platform-architecture",
-          "api-design",
-          "api-delivery",
-          "api-audit",
-          "api-publishing",
-          "monitoring-and-improving"
+          "capability-strategy",
+          "capability-consumer-producer-requirements",
+          "capability-architecture-platform-decisions",
+          "capability-solution-interaction-design",
+          "capability-delivery-operations",
+          "capability-readiness-assurance",
+          "capability-publishing-enablement",
+          "capability-monitoring-improvement"
         ],
         "stationLabels": {
-          "api-product-strategy": "cycle.station.capability-strategy",
-          "api-consumer-experience": "cycle.station.consumer-requirements-onboarding",
-          "api-platform-architecture": "cycle.station.architecture-platform-decisions",
-          "api-design": "cycle.station.solution-interface-design",
-          "api-delivery": "cycle.station.delivery-operations",
-          "api-audit": "cycle.station.quality-readiness-assurance",
-          "api-publishing": "cycle.station.publishing-enablement",
-          "monitoring-and-improving": "cycle.station.monitoring-improvement"
+          "capability-strategy": "cycle.station.capability-strategy",
+          "capability-consumer-producer-requirements": "cycle.station.consumer-producer-service-requirements",
+          "capability-architecture-platform-decisions": "cycle.station.capability-architecture-platform-decisions",
+          "capability-solution-interaction-design": "cycle.station.capability-solution-interaction-design",
+          "capability-delivery-operations": "cycle.station.capability-delivery-operations",
+          "capability-readiness-assurance": "cycle.station.capability-readiness-assurance",
+          "capability-publishing-enablement": "cycle.station.capability-publishing-enablement",
+          "capability-monitoring-improvement": "cycle.station.capability-monitoring-improvement"
         },
         "stationDescriptions": {
-          "api-product-strategy": "cycle.capability-productization-cycle.station.api-product-strategy.description",
-          "api-consumer-experience": "cycle.capability-productization-cycle.station.api-consumer-experience.description",
-          "api-platform-architecture": "cycle.capability-productization-cycle.station.api-platform-architecture.description",
-          "api-design": "cycle.capability-productization-cycle.station.api-design.description",
-          "api-delivery": "cycle.capability-productization-cycle.station.api-delivery.description",
-          "api-audit": "cycle.capability-productization-cycle.station.api-audit.description",
-          "api-publishing": "cycle.capability-productization-cycle.station.api-publishing.description",
-          "monitoring-and-improving": "cycle.capability-productization-cycle.station.monitoring-and-improving.description"
+          "capability-strategy": "cycle.capability-productization-cycle.station.capability-strategy.description",
+          "capability-consumer-producer-requirements": "cycle.capability-productization-cycle.station.capability-consumer-producer-requirements.description",
+          "capability-architecture-platform-decisions": "cycle.capability-productization-cycle.station.capability-architecture-platform-decisions.description",
+          "capability-solution-interaction-design": "cycle.capability-productization-cycle.station.capability-solution-interaction-design.description",
+          "capability-delivery-operations": "cycle.capability-productization-cycle.station.capability-delivery-operations.description",
+          "capability-readiness-assurance": "cycle.capability-productization-cycle.station.capability-readiness-assurance.description",
+          "capability-publishing-enablement": "cycle.capability-productization-cycle.station.capability-publishing-enablement.description",
+          "capability-monitoring-improvement": "cycle.capability-productization-cycle.station.capability-monitoring-improvement.description"
         },
         "recommendedResources": {
-          "api-product-strategy": [
-            "customerJourneyCanvas",
-            "domainCanvas",
-            "capabilityValuePropositionCanvas",
-            "capabilityBusinessModelCanvas"
+          "capability-strategy": [
+            "capabilityHypothesisCanvas"
           ],
-          "api-consumer-experience": [
-            "consumerExperienceRequirementsCanvas",
-            "api-onboarding-best-practices"
+          "capability-consumer-producer-requirements": [
+            "capabilityConsumerProducerRequirementsCanvas",
+            "capability-consumer-onboarding-guide",
+            "capability-service-expectations-guide",
+            "capability-ownership-producer-responsibilities-guide"
           ],
-          "api-platform-architecture": [
-            "businessImpactCanvas",
-            "locationsCanvas",
-            "capacityCanvas"
+          "capability-architecture-platform-decisions": [
+            "capabilityArchitectureDecisionCanvas"
           ],
-          "api-design": [
-            "domainCanvas",
+          "capability-solution-interaction-design": [
+            "capabilitySolutionDesignCanvas",
             "interactionCanvas",
             "contract-first-design"
           ],
-          "api-delivery": [
-            "api-development-best-practices",
-            "api-testing-best-practices",
-            "apiops-CI-CD-for-apis"
+          "capability-delivery-operations": [
+            "capabilityReadinessOperationsCanvas",
+            "capability-delivery-guide",
+            "capability-testing-validation-guide",
+            "capability-ci-cd-release-guide",
+            "capability-operational-ownership-guide",
+            "capability-security-access-guide",
+            "capability-support-lifecycle-guide"
           ],
-          "api-audit": [
-            "api-audit-checklist",
-            "api-compliance-best-practices"
+          "capability-readiness-assurance": [
+            "capability-readiness-checklist",
+            "capability-compliance-governance-guide",
+            "capability-service-quality-checklist"
           ],
-          "api-publishing": [
-            "api-onboarding-best-practices",
-            "service-agreement-template"
+          "capability-publishing-enablement": [
+            "capability-publishing-discovery-guide",
+            "capability-consumer-onboarding-guide",
+            "capability-service-agreement-template",
+            "capability-versioning-lifecycle-guide"
           ],
-          "monitoring-and-improving": [
-            "api-metrics-and-analytics",
-            "api-community-engagement-strategies"
+          "capability-monitoring-improvement": [
+            "capability-monitoring-value-metrics",
+            "capability-adoption-reuse-guide",
+            "capability-consumer-feedback-guide",
+            "capability-lifecycle-management-guide"
           ]
         },
         "entryCriteria": [
@@ -87,7 +93,8 @@
         "exitCriteria": [
           "value-prop-validated",
           "architecture-patterns-validated",
-          "audit-passed"
+          "capability-readiness-confirmed",
+          "capability-published-for-reuse"
         ]
       },
       {

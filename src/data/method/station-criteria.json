@@ -100,5 +100,56 @@
     "api-documentation-ready",
     "consumer-support-ready",
     "legal-compliance-clear"
+  ],
+  "capability-strategy": [
+    "metrics-feedback-available",
+    "business-goals-defined",
+    "market-research-done",
+    "stakeholder-approval"
+  ],
+  "capability-consumer-producer-requirements": [
+    "api-opportunity-documented",
+    "api-reusability",
+    "hide-backend-discrepancies",
+    "value-prop-validated",
+    "consumer-segments-identified",
+    "api-roadmap-defined"
+  ],
+  "capability-architecture-platform-decisions": [
+    "api-reusability",
+    "hide-backend-discrepancies",
+    "value-prop-validated",
+    "consumer-segments-identified",
+    "api-roadmap-defined"
+  ],
+  "capability-solution-interaction-design": [
+    "architecture-patterns-validated",
+    "hide-backend-discrepancies",
+    "design-reflects-business-value",
+    "api-consistency"
+  ],
+  "capability-delivery-operations": [
+    "architecture-patterns-validated",
+    "hide-backend-discrepancies",
+    "design-reflects-business-value",
+    "api-consistency"
+  ],
+  "capability-readiness-assurance": [
+    "architecture-patterns-validated",
+    "design-reflects-business-value",
+    "api-description-available",
+    "api-consistency",
+    "api-contract-tested"
+  ],
+  "capability-publishing-enablement": [
+    "audit-passed",
+    "audit-reports-shared",
+    "api-ready-for-publishing",
+    "api-documentation-ready"
+  ],
+  "capability-monitoring-improvement": [
+    "api-documentation-ready",
+    "consumer-support-ready",
+    "legal-compliance-clear"
   ]
 }
