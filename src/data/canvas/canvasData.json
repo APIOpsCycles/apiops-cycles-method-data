@@ -1268,7 +1268,7 @@
     "id": "automationOpportunityCanvas",
     "layout": {
       "columns": 4,
-      "rows": 4
+      "rows": 3
     },
     "metadata": {
       "source": "APIOps Cycles",
@@ -1280,168 +1280,79 @@
     },
     "sections": [
       {
-        "id": "processOrTask",
+        "id": "hypothesis",
         "gridPosition": {
           "column": 0,
           "row": 0,
-          "colSpan": 1,
+          "colSpan": 2,
           "rowSpan": 1
         },
         "fillOrder": 1,
         "highlight": true
       },
       {
-        "id": "currentProblem",
-        "gridPosition": {
-          "column": 1,
-          "row": 0,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 2,
-        "highlight": true
-      },
-      {
-        "id": "usersAndStakeholders",
+        "id": "supportingEvidence",
         "gridPosition": {
           "column": 2,
           "row": 0,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 2
+      },
+      {
+        "id": "automationScope",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
           "colSpan": 1,
           "rowSpan": 1
         },
         "fillOrder": 3
       },
       {
-        "id": "currentEffort",
-        "gridPosition": {
-          "column": 3,
-          "row": 0,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 4
-      },
-      {
-        "id": "frequencyAndVolume",
-        "gridPosition": {
-          "column": 0,
-          "row": 1,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 5
-      },
-      {
-        "id": "variability",
+        "id": "responsibilityAndSolutionHypothesis",
         "gridPosition": {
           "column": 1,
           "row": 1,
           "colSpan": 1,
           "rowSpan": 1
         },
-        "fillOrder": 6
+        "fillOrder": 4,
+        "highlight": true
       },
       {
-        "id": "expectedOutcome",
+        "id": "criticalAssumptions",
         "gridPosition": {
           "column": 2,
           "row": 1,
-          "colSpan": 1,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 5,
+        "highlight": true
+      },
+      {
+        "id": "validationExperiment",
+        "gridPosition": {
+          "column": 0,
+          "row": 2,
+          "colSpan": 2,
+          "rowSpan": 1
+        },
+        "fillOrder": 6,
+        "highlight": true
+      },
+      {
+        "id": "decision",
+        "gridPosition": {
+          "column": 2,
+          "row": 2,
+          "colSpan": 2,
           "rowSpan": 1
         },
         "fillOrder": 7,
         "highlight": true
-      },
-      {
-        "id": "processStability",
-        "gridPosition": {
-          "column": 3,
-          "row": 1,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 8
-      },
-      {
-        "id": "dataAvailability",
-        "gridPosition": {
-          "column": 0,
-          "row": 2,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 9
-      },
-      {
-        "id": "systemAvailability",
-        "gridPosition": {
-          "column": 1,
-          "row": 2,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 10
-      },
-      {
-        "id": "riskAndCriticality",
-        "gridPosition": {
-          "column": 2,
-          "row": 2,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 11
-      },
-      {
-        "id": "candidateApproaches",
-        "gridPosition": {
-          "column": 3,
-          "row": 2,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 12,
-        "highlight": true
-      },
-      {
-        "id": "successMeasures",
-        "gridPosition": {
-          "column": 0,
-          "row": 3,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 13
-      },
-      {
-        "id": "owner",
-        "gridPosition": {
-          "column": 1,
-          "row": 3,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 14
-      },
-      {
-        "id": "pocScope",
-        "gridPosition": {
-          "column": 2,
-          "row": 3,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 15
-      },
-      {
-        "id": "assumptionsToValidate",
-        "gridPosition": {
-          "column": 3,
-          "row": 3,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 16
       }
     ]
   },

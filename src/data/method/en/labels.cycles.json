@@ -80,7 +80,7 @@
   "cycle.station.automation-readiness-review": "Automation Readiness Review",
   "cycle.station.automation-enablement": "Automation Rollout & Enablement",
   "cycle.station.automation-monitoring-improvement": "Automation Monitoring & Improvement",
-  "cycle.automation-cycle.station.api-product-strategy.description": "Prioritize an automation opportunity with defined process scope, expected outcome, initial implementation hypothesis, owner, risks, evidence, and validation plan.",
+  "cycle.automation-cycle.station.api-product-strategy.description": "Prioritize an automation hypothesis by linking journey, value, domain, impact, capacity, or other evidence to a clear scope, critical assumptions, validation experiment, and proceed or stop decision.",
   "cycle.automation-cycle.station.api-consumer-experience.description": "Agree target process, user, automation, oversight, permission, escalation, confirmation, and exception requirements before choosing implementation mechanisms.",
   "cycle.automation-cycle.station.api-platform-architecture.description": "Compare native system capability, workflow, rules, agents, APIs, events, connectors, custom code, RPA or UI automation, human tasks, and hybrid options to justify the automation architecture.",
   "cycle.automation-cycle.station.api-design.description": "Design a testable end-to-end automation workflow covering responsibilities, data, interactions, authentication, decisions, exceptions, controls, audit evidence, monitoring, and recovery.",

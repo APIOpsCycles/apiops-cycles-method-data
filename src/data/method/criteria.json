@@ -89,7 +89,7 @@
   },
   {
     "id": "automation-opportunity-evidence-ready",
-    "description": "The automation opportunity has enough evidence about process scope, expected outcome, suitability, data, systems, risk, ownership, PoC hypothesis, and validation plan to decide whether it should proceed."
+    "description": "The automation hypothesis has enough referenced evidence about outcome, scope, responsibility assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed."
   },
   {
     "id": "automation-owner-confirmed",

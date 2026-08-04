@@ -499,73 +499,37 @@
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Opportunity Canvas",
-      "purpose": "Assess and prioritize an automation opportunity before committing to an implementation approach.",
-      "howToUse": "Start with the target process or task, describe the current problem and expected outcome, then assess effort, volume, variability, stability, data, systems, risk, candidate approaches, ownership, PoC scope, and assumptions to validate.",
+      "title": "Automation Hypothesis Canvas",
+      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
       "sections": {
-        "processOrTask": {
-          "section": "Process or task",
-          "description": "Which process, task, decision, handoff, or recurring work is being considered for automation?"
+        "hypothesis": {
+          "section": "Hypothesis",
+          "description": "What do we believe automating which work for which actor will achieve? Use the form: We believe automating [work] for [actor] will achieve [outcome]."
         },
-        "currentProblem": {
-          "section": "Current problem",
-          "description": "What pain, delay, risk, cost, error, or user frustration exists today?"
+        "supportingEvidence": {
+          "section": "Supporting evidence",
+          "description": "Which Journey, Value Proposition, Business Impact, Capacity, Domain, or other evidence supports this hypothesis? Link or reference existing artifacts instead of repeating them."
         },
-        "usersAndStakeholders": {
-          "section": "Users and stakeholders",
-          "description": "Who performs, owns, supports, approves, or is affected by this work?"
+        "automationScope": {
+          "section": "Scope of automation",
+          "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
-        "currentEffort": {
-          "section": "Current effort",
-          "description": "How much manual effort, waiting, rework, or coordination does the current process require?"
+        "responsibilityAndSolutionHypothesis": {
+          "section": "Responsibility and solution hypothesis",
+          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
         },
-        "frequencyAndVolume": {
-          "section": "Frequency and volume",
-          "description": "How often does the work happen and how many cases, transactions, records, or users are involved?"
+        "criticalAssumptions": {
+          "section": "Critical assumptions",
+          "description": "Which assumptions could invalidate value, feasibility, safety, operability, compliance, or adoption?"
         },
-        "variability": {
-          "section": "Variability",
-          "description": "How much does the work vary by case, data quality, channel, judgement, exception, or system state?"
+        "validationExperiment": {
+          "section": "Validation experiment",
+          "description": "What is the smallest useful PoC or investigation, what evidence and thresholds decide success, and what stop conditions apply?"
         },
-        "expectedOutcome": {
-          "section": "Expected outcome",
-          "description": "What business, user, quality, compliance, speed, cost, or risk outcome should improve?"
-        },
-        "processStability": {
-          "section": "Process stability",
-          "description": "Is the process stable enough to automate, or are policy, ownership, data, or system changes still unresolved?"
-        },
-        "dataAvailability": {
-          "section": "Data availability",
-          "description": "What data is required, where does it come from, and is it complete, timely, trusted, and accessible?"
-        },
-        "systemAvailability": {
-          "section": "System availability",
-          "description": "Which systems, APIs, events, connectors, files, screens, or manual channels are available for the solution?"
-        },
-        "riskAndCriticality": {
-          "section": "Risk and criticality",
-          "description": "What could go wrong, how critical is the work, and can actions be reversed, paused, or recovered manually?"
-        },
-        "candidateApproaches": {
-          "section": "Candidate approaches",
-          "description": "Which mechanisms might perform each step: person, rule, workflow, agent, API or system integration, connector, custom code, or UI automation?"
-        },
-        "successMeasures": {
-          "section": "Success measures",
-          "description": "How will the PoC and later production solution prove value, quality, adoption, safety, and operability?"
-        },
-        "owner": {
-          "section": "Owner",
-          "description": "Who owns the opportunity, process decision, PoC scope, and lifecycle outcomes?"
-        },
-        "pocScope": {
-          "section": "PoC scope",
-          "description": "What is the smallest useful scope that validates the hypothesis without hiding key risks?"
-        },
-        "assumptionsToValidate": {
-          "section": "Assumptions to validate",
-          "description": "Which assumptions about process, data, systems, users, permissions, feasibility, risk, or value must be tested next?"
+        "decision": {
+          "section": "Decision",
+          "description": "What is the evidence-based decision: supported, revise and retest, redesign the process first, or reject?"
         }
       }
     },
@@ -1326,73 +1290,37 @@
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Opportunity Canvas",
-      "purpose": "Assess and prioritize an automation opportunity before committing to an implementation approach.",
-      "howToUse": "Start with the target process or task, describe the current problem and expected outcome, then assess effort, volume, variability, stability, data, systems, risk, candidate approaches, ownership, PoC scope, and assumptions to validate.",
+      "title": "Automation Hypothesis Canvas",
+      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
       "sections": {
-        "processOrTask": {
-          "section": "Process or task",
-          "description": "Which process, task, decision, handoff, or recurring work is being considered for automation?"
+        "hypothesis": {
+          "section": "Hypothesis",
+          "description": "What do we believe automating which work for which actor will achieve? Use the form: We believe automating [work] for [actor] will achieve [outcome]."
         },
-        "currentProblem": {
-          "section": "Current problem",
-          "description": "What pain, delay, risk, cost, error, or user frustration exists today?"
+        "supportingEvidence": {
+          "section": "Supporting evidence",
+          "description": "Which Journey, Value Proposition, Business Impact, Capacity, Domain, or other evidence supports this hypothesis? Link or reference existing artifacts instead of repeating them."
         },
-        "usersAndStakeholders": {
-          "section": "Users and stakeholders",
-          "description": "Who performs, owns, supports, approves, or is affected by this work?"
+        "automationScope": {
+          "section": "Scope of automation",
+          "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
-        "currentEffort": {
-          "section": "Current effort",
-          "description": "How much manual effort, waiting, rework, or coordination does the current process require?"
+        "responsibilityAndSolutionHypothesis": {
+          "section": "Responsibility and solution hypothesis",
+          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
         },
-        "frequencyAndVolume": {
-          "section": "Frequency and volume",
-          "description": "How often does the work happen and how many cases, transactions, records, or users are involved?"
+        "criticalAssumptions": {
+          "section": "Critical assumptions",
+          "description": "Which assumptions could invalidate value, feasibility, safety, operability, compliance, or adoption?"
         },
-        "variability": {
-          "section": "Variability",
-          "description": "How much does the work vary by case, data quality, channel, judgement, exception, or system state?"
+        "validationExperiment": {
+          "section": "Validation experiment",
+          "description": "What is the smallest useful PoC or investigation, what evidence and thresholds decide success, and what stop conditions apply?"
         },
-        "expectedOutcome": {
-          "section": "Expected outcome",
-          "description": "What business, user, quality, compliance, speed, cost, or risk outcome should improve?"
-        },
-        "processStability": {
-          "section": "Process stability",
-          "description": "Is the process stable enough to automate, or are policy, ownership, data, or system changes still unresolved?"
-        },
-        "dataAvailability": {
-          "section": "Data availability",
-          "description": "What data is required, where does it come from, and is it complete, timely, trusted, and accessible?"
-        },
-        "systemAvailability": {
-          "section": "System availability",
-          "description": "Which systems, APIs, events, connectors, files, screens, or manual channels are available for the solution?"
-        },
-        "riskAndCriticality": {
-          "section": "Risk and criticality",
-          "description": "What could go wrong, how critical is the work, and can actions be reversed, paused, or recovered manually?"
-        },
-        "candidateApproaches": {
-          "section": "Candidate approaches",
-          "description": "Which mechanisms might perform each step: person, rule, workflow, agent, API or system integration, connector, custom code, or UI automation?"
-        },
-        "successMeasures": {
-          "section": "Success measures",
-          "description": "How will the PoC and later production solution prove value, quality, adoption, safety, and operability?"
-        },
-        "owner": {
-          "section": "Owner",
-          "description": "Who owns the opportunity, process decision, PoC scope, and lifecycle outcomes?"
-        },
-        "pocScope": {
-          "section": "PoC scope",
-          "description": "What is the smallest useful scope that validates the hypothesis without hiding key risks?"
-        },
-        "assumptionsToValidate": {
-          "section": "Assumptions to validate",
-          "description": "Which assumptions about process, data, systems, users, permissions, feasibility, risk, or value must be tested next?"
+        "decision": {
+          "section": "Decision",
+          "description": "What is the evidence-based decision: supported, revise and retest, redesign the process first, or reject?"
         }
       }
     },
@@ -2153,73 +2081,37 @@
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Opportunity Canvas",
-      "purpose": "Assess and prioritize an automation opportunity before committing to an implementation approach.",
-      "howToUse": "Start with the target process or task, describe the current problem and expected outcome, then assess effort, volume, variability, stability, data, systems, risk, candidate approaches, ownership, PoC scope, and assumptions to validate.",
+      "title": "Automation Hypothesis Canvas",
+      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
       "sections": {
-        "processOrTask": {
-          "section": "Process or task",
-          "description": "Which process, task, decision, handoff, or recurring work is being considered for automation?"
+        "hypothesis": {
+          "section": "Hypothesis",
+          "description": "What do we believe automating which work for which actor will achieve? Use the form: We believe automating [work] for [actor] will achieve [outcome]."
         },
-        "currentProblem": {
-          "section": "Current problem",
-          "description": "What pain, delay, risk, cost, error, or user frustration exists today?"
+        "supportingEvidence": {
+          "section": "Supporting evidence",
+          "description": "Which Journey, Value Proposition, Business Impact, Capacity, Domain, or other evidence supports this hypothesis? Link or reference existing artifacts instead of repeating them."
         },
-        "usersAndStakeholders": {
-          "section": "Users and stakeholders",
-          "description": "Who performs, owns, supports, approves, or is affected by this work?"
+        "automationScope": {
+          "section": "Scope of automation",
+          "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
-        "currentEffort": {
-          "section": "Current effort",
-          "description": "How much manual effort, waiting, rework, or coordination does the current process require?"
+        "responsibilityAndSolutionHypothesis": {
+          "section": "Responsibility and solution hypothesis",
+          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
         },
-        "frequencyAndVolume": {
-          "section": "Frequency and volume",
-          "description": "How often does the work happen and how many cases, transactions, records, or users are involved?"
+        "criticalAssumptions": {
+          "section": "Critical assumptions",
+          "description": "Which assumptions could invalidate value, feasibility, safety, operability, compliance, or adoption?"
         },
-        "variability": {
-          "section": "Variability",
-          "description": "How much does the work vary by case, data quality, channel, judgement, exception, or system state?"
+        "validationExperiment": {
+          "section": "Validation experiment",
+          "description": "What is the smallest useful PoC or investigation, what evidence and thresholds decide success, and what stop conditions apply?"
         },
-        "expectedOutcome": {
-          "section": "Expected outcome",
-          "description": "What business, user, quality, compliance, speed, cost, or risk outcome should improve?"
-        },
-        "processStability": {
-          "section": "Process stability",
-          "description": "Is the process stable enough to automate, or are policy, ownership, data, or system changes still unresolved?"
-        },
-        "dataAvailability": {
-          "section": "Data availability",
-          "description": "What data is required, where does it come from, and is it complete, timely, trusted, and accessible?"
-        },
-        "systemAvailability": {
-          "section": "System availability",
-          "description": "Which systems, APIs, events, connectors, files, screens, or manual channels are available for the solution?"
-        },
-        "riskAndCriticality": {
-          "section": "Risk and criticality",
-          "description": "What could go wrong, how critical is the work, and can actions be reversed, paused, or recovered manually?"
-        },
-        "candidateApproaches": {
-          "section": "Candidate approaches",
-          "description": "Which mechanisms might perform each step: person, rule, workflow, agent, API or system integration, connector, custom code, or UI automation?"
-        },
-        "successMeasures": {
-          "section": "Success measures",
-          "description": "How will the PoC and later production solution prove value, quality, adoption, safety, and operability?"
-        },
-        "owner": {
-          "section": "Owner",
-          "description": "Who owns the opportunity, process decision, PoC scope, and lifecycle outcomes?"
-        },
-        "pocScope": {
-          "section": "PoC scope",
-          "description": "What is the smallest useful scope that validates the hypothesis without hiding key risks?"
-        },
-        "assumptionsToValidate": {
-          "section": "Assumptions to validate",
-          "description": "Which assumptions about process, data, systems, users, permissions, feasibility, risk, or value must be tested next?"
+        "decision": {
+          "section": "Decision",
+          "description": "What is the evidence-based decision: supported, revise and retest, redesign the process first, or reject?"
         }
       }
     },
@@ -2980,73 +2872,37 @@
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Opportunity Canvas",
-      "purpose": "Assess and prioritize an automation opportunity before committing to an implementation approach.",
-      "howToUse": "Start with the target process or task, describe the current problem and expected outcome, then assess effort, volume, variability, stability, data, systems, risk, candidate approaches, ownership, PoC scope, and assumptions to validate.",
+      "title": "Automation Hypothesis Canvas",
+      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
       "sections": {
-        "processOrTask": {
-          "section": "Process or task",
-          "description": "Which process, task, decision, handoff, or recurring work is being considered for automation?"
+        "hypothesis": {
+          "section": "Hypothesis",
+          "description": "What do we believe automating which work for which actor will achieve? Use the form: We believe automating [work] for [actor] will achieve [outcome]."
         },
-        "currentProblem": {
-          "section": "Current problem",
-          "description": "What pain, delay, risk, cost, error, or user frustration exists today?"
+        "supportingEvidence": {
+          "section": "Supporting evidence",
+          "description": "Which Journey, Value Proposition, Business Impact, Capacity, Domain, or other evidence supports this hypothesis? Link or reference existing artifacts instead of repeating them."
         },
-        "usersAndStakeholders": {
-          "section": "Users and stakeholders",
-          "description": "Who performs, owns, supports, approves, or is affected by this work?"
+        "automationScope": {
+          "section": "Scope of automation",
+          "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
-        "currentEffort": {
-          "section": "Current effort",
-          "description": "How much manual effort, waiting, rework, or coordination does the current process require?"
+        "responsibilityAndSolutionHypothesis": {
+          "section": "Responsibility and solution hypothesis",
+          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
         },
-        "frequencyAndVolume": {
-          "section": "Frequency and volume",
-          "description": "How often does the work happen and how many cases, transactions, records, or users are involved?"
+        "criticalAssumptions": {
+          "section": "Critical assumptions",
+          "description": "Which assumptions could invalidate value, feasibility, safety, operability, compliance, or adoption?"
         },
-        "variability": {
-          "section": "Variability",
-          "description": "How much does the work vary by case, data quality, channel, judgement, exception, or system state?"
+        "validationExperiment": {
+          "section": "Validation experiment",
+          "description": "What is the smallest useful PoC or investigation, what evidence and thresholds decide success, and what stop conditions apply?"
         },
-        "expectedOutcome": {
-          "section": "Expected outcome",
-          "description": "What business, user, quality, compliance, speed, cost, or risk outcome should improve?"
-        },
-        "processStability": {
-          "section": "Process stability",
-          "description": "Is the process stable enough to automate, or are policy, ownership, data, or system changes still unresolved?"
-        },
-        "dataAvailability": {
-          "section": "Data availability",
-          "description": "What data is required, where does it come from, and is it complete, timely, trusted, and accessible?"
-        },
-        "systemAvailability": {
-          "section": "System availability",
-          "description": "Which systems, APIs, events, connectors, files, screens, or manual channels are available for the solution?"
-        },
-        "riskAndCriticality": {
-          "section": "Risk and criticality",
-          "description": "What could go wrong, how critical is the work, and can actions be reversed, paused, or recovered manually?"
-        },
-        "candidateApproaches": {
-          "section": "Candidate approaches",
-          "description": "Which mechanisms might perform each step: person, rule, workflow, agent, API or system integration, connector, custom code, or UI automation?"
-        },
-        "successMeasures": {
-          "section": "Success measures",
-          "description": "How will the PoC and later production solution prove value, quality, adoption, safety, and operability?"
-        },
-        "owner": {
-          "section": "Owner",
-          "description": "Who owns the opportunity, process decision, PoC scope, and lifecycle outcomes?"
-        },
-        "pocScope": {
-          "section": "PoC scope",
-          "description": "What is the smallest useful scope that validates the hypothesis without hiding key risks?"
-        },
-        "assumptionsToValidate": {
-          "section": "Assumptions to validate",
-          "description": "Which assumptions about process, data, systems, users, permissions, feasibility, risk, or value must be tested next?"
+        "decision": {
+          "section": "Decision",
+          "description": "What is the evidence-based decision: supported, revise and retest, redesign the process first, or reject?"
         }
       }
     },
@@ -3807,73 +3663,37 @@
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Opportunity Canvas",
-      "purpose": "Assess and prioritize an automation opportunity before committing to an implementation approach.",
-      "howToUse": "Start with the target process or task, describe the current problem and expected outcome, then assess effort, volume, variability, stability, data, systems, risk, candidate approaches, ownership, PoC scope, and assumptions to validate.",
+      "title": "Automation Hypothesis Canvas",
+      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
       "sections": {
-        "processOrTask": {
-          "section": "Process or task",
-          "description": "Which process, task, decision, handoff, or recurring work is being considered for automation?"
+        "hypothesis": {
+          "section": "Hypothesis",
+          "description": "What do we believe automating which work for which actor will achieve? Use the form: We believe automating [work] for [actor] will achieve [outcome]."
         },
-        "currentProblem": {
-          "section": "Current problem",
-          "description": "What pain, delay, risk, cost, error, or user frustration exists today?"
+        "supportingEvidence": {
+          "section": "Supporting evidence",
+          "description": "Which Journey, Value Proposition, Business Impact, Capacity, Domain, or other evidence supports this hypothesis? Link or reference existing artifacts instead of repeating them."
         },
-        "usersAndStakeholders": {
-          "section": "Users and stakeholders",
-          "description": "Who performs, owns, supports, approves, or is affected by this work?"
+        "automationScope": {
+          "section": "Scope of automation",
+          "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
-        "currentEffort": {
-          "section": "Current effort",
-          "description": "How much manual effort, waiting, rework, or coordination does the current process require?"
+        "responsibilityAndSolutionHypothesis": {
+          "section": "Responsibility and solution hypothesis",
+          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
         },
-        "frequencyAndVolume": {
-          "section": "Frequency and volume",
-          "description": "How often does the work happen and how many cases, transactions, records, or users are involved?"
+        "criticalAssumptions": {
+          "section": "Critical assumptions",
+          "description": "Which assumptions could invalidate value, feasibility, safety, operability, compliance, or adoption?"
         },
-        "variability": {
-          "section": "Variability",
-          "description": "How much does the work vary by case, data quality, channel, judgement, exception, or system state?"
+        "validationExperiment": {
+          "section": "Validation experiment",
+          "description": "What is the smallest useful PoC or investigation, what evidence and thresholds decide success, and what stop conditions apply?"
         },
-        "expectedOutcome": {
-          "section": "Expected outcome",
-          "description": "What business, user, quality, compliance, speed, cost, or risk outcome should improve?"
-        },
-        "processStability": {
-          "section": "Process stability",
-          "description": "Is the process stable enough to automate, or are policy, ownership, data, or system changes still unresolved?"
-        },
-        "dataAvailability": {
-          "section": "Data availability",
-          "description": "What data is required, where does it come from, and is it complete, timely, trusted, and accessible?"
-        },
-        "systemAvailability": {
-          "section": "System availability",
-          "description": "Which systems, APIs, events, connectors, files, screens, or manual channels are available for the solution?"
-        },
-        "riskAndCriticality": {
-          "section": "Risk and criticality",
-          "description": "What could go wrong, how critical is the work, and can actions be reversed, paused, or recovered manually?"
-        },
-        "candidateApproaches": {
-          "section": "Candidate approaches",
-          "description": "Which mechanisms might perform each step: person, rule, workflow, agent, API or system integration, connector, custom code, or UI automation?"
-        },
-        "successMeasures": {
-          "section": "Success measures",
-          "description": "How will the PoC and later production solution prove value, quality, adoption, safety, and operability?"
-        },
-        "owner": {
-          "section": "Owner",
-          "description": "Who owns the opportunity, process decision, PoC scope, and lifecycle outcomes?"
-        },
-        "pocScope": {
-          "section": "PoC scope",
-          "description": "What is the smallest useful scope that validates the hypothesis without hiding key risks?"
-        },
-        "assumptionsToValidate": {
-          "section": "Assumptions to validate",
-          "description": "Which assumptions about process, data, systems, users, permissions, feasibility, risk, or value must be tested next?"
+        "decision": {
+          "section": "Decision",
+          "description": "What is the evidence-based decision: supported, revise and retest, redesign the process first, or reject?"
         }
       }
     },

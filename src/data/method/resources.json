@@ -1385,7 +1385,7 @@
     {
       "id": "automationOpportunityCanvas",
       "title": "resource.automation-opportunity-canvas.title",
-      "slug": "resources/automation-opportunity-canvas",
+      "slug": "resources/automation-hypothesis-canvas",
       "icon": "dashboard-outline",
       "order": 189,
       "description": "resource.automation-opportunity-canvas.description",

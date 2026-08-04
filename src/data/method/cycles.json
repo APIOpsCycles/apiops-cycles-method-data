@@ -303,10 +303,10 @@
         },
         "recommendedResources": {
           "api-product-strategy": [
-            "automationOpportunityCanvas",
             "customerJourneyCanvas",
+            "capabilityValuePropositionCanvas",
             "domainCanvas",
-            "capabilityValuePropositionCanvas"
+            "automationOpportunityCanvas"
           ],
           "api-consumer-experience": [
             "humanAutomationResponsibilityCanvas",
@@ -336,7 +336,6 @@
             "automation-rollback-supervision-guide"
           ],
           "api-audit": [
-            "automationReadinessOperationsCanvas",
             "automation-readiness-checklist",
             "api-compliance-best-practices"
           ],
