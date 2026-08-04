@@ -23,7 +23,7 @@
   "criterion.api-documentation-ready": "Nutzerorientierte Dokumentation und Onboarding-Materialien sind bereit.",
   "criterion.consumer-support-ready": "Onboarding-, Support- und Kommunikationsprozesse für Nutzer sind bereit.",
   "criterion.legal-compliance-clear": "Rechtliche, Datenschutz- und Compliance-Anforderungen für Veröffentlichung oder Release sind definiert und verstanden.",
-  "criterion.automation-opportunity-evidence-ready": "The automation hypothesis has enough referenced evidence about outcome, scope, responsibility assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed.",
+  "criterion.automation-opportunity-evidence-ready": "The automation hypothesis has enough referenced evidence about expected outcome, scope, initial implementation assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed.",
   "criterion.automation-owner-confirmed": "Ownership is clear for the automation opportunity, process decisions, PoC validation, risks, and lifecycle outcomes.",
   "criterion.automation-architecture-and-controls-validated": "The selected automation architecture, implementation mechanisms, human controls, security constraints, and recovery approach have been validated with the relevant stakeholders.",
   "criterion.automation-operational-readiness-confirmed": "The automation has evidence for functional correctness, permissions, exception handling, oversight, monitoring, support, rollback, and operational ownership.",

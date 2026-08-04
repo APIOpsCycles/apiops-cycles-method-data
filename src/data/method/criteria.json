@@ -89,7 +89,7 @@
   },
   {
     "id": "automation-opportunity-evidence-ready",
-    "description": "The automation hypothesis has enough referenced evidence about outcome, scope, responsibility assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed."
+    "description": "The automation hypothesis has enough referenced evidence about expected outcome, scope, initial implementation assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed."
   },
   {
     "id": "automation-owner-confirmed",

@@ -68,8 +68,8 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "Welche geschäftlichen Auswirkungen kann ein Ausfall oder Fehlverhalten der Capability oder Schnittstelle haben?",
-      "howToUse": "Bewerten Sie mögliche Auswirkungen auf Verfügbarkeit, Sicherheit und Daten, bevor der Implementierungsstil endgültig festgelegt wird.",
+      "purpose": "What value, risk, operational, financial, customer, employee, compliance, and strategic impact is expected or at stake?",
+      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
       "sections": {
         "availabilityRisks": {
           "section": "Risiken der Verfügbarkeit",
@@ -94,13 +94,45 @@
         "mitigateDataRisks": {
           "section": "Reduktion der Datenrisiken",
           "description": "Wie lassen sich Datenrisiken reduzieren?"
+        },
+        "expectedBenefits": {
+          "section": "Expected benefits",
+          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+        },
+        "operationalEfficiencyImpact": {
+          "section": "Operational efficiency impact",
+          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+        },
+        "customerEmployeeImpact": {
+          "section": "Customer and employee impact",
+          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+        },
+        "financialImpact": {
+          "section": "Financial impact",
+          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+        },
+        "complianceStrategicImpact": {
+          "section": "Compliance and strategic impact",
+          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+        },
+        "impactOfNotProceeding": {
+          "section": "Impact of not proceeding",
+          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+        },
+        "risksAndCriticality": {
+          "section": "Risks and criticality",
+          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+        },
+        "mitigationsAndDecisionImpact": {
+          "section": "Mitigations and decision impact",
+          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "Welche Kapazität ist erforderlich, um die Nutzung der Capability oder Schnittstelle zu unterstützen?",
-      "howToUse": "Analysieren Sie aktuelle und zukünftige Kapazitätsanforderungen für die Capability oder Schnittstelle.",
+      "purpose": "How much demand, load, timing, and scaling capacity must be understood for the capability, automation, integration, or service?",
+      "howToUse": "Quantify current and expected demand, peak load, and availability needs. Record caching, rate limiting, and scaling approaches as architecture follow-up decisions rather than user requirements.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Aktuelles Geschäftsvolumen",
@@ -452,56 +484,56 @@
       }
     },
     "consumerExperienceRequirementsCanvas": {
-      "title": "Consumer Experience Requirements Canvas",
-      "purpose": "Welche Erfahrungs- und nichtfunktionalen Anforderungen benötigen Nutzer, bevor die beste Integrationsarchitektur entschieden wird?",
-      "howToUse": "Nutzen Sie dieses Canvas als technologieunabhängige Anforderungstabelle. Erfassen Sie Erwartungen und Einschränkungen der Nutzer und verwenden Sie anschließend die Architekturimplikationen, um APIs, Events, Dateien, Streams, Datenprodukte oder ein anderes Muster auszuwählen.",
+      "title": "Experience Requirements Canvas",
+      "purpose": "What experience, operational, and non-functional requirements must the solution satisfy for users, operators, consumers, approvers, and support teams?",
+      "howToUse": "Capture what people and consuming systems require from the capability or automation. Keep this focused on requirements and constraints; quantify capacity and choose implementation mechanisms in later architecture work.",
       "sections": {
         "consumerGoals": {
-          "section": "Nutzerziele",
-          "description": "Welche Geschäfts-, Workflow-, Entscheidungs-, Automatisierungs- oder Datennutzungsziele haben die Nutzer?"
+          "section": "User, operator, or consumer goals",
+          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
         },
         "availabilityAndTimeliness": {
-          "section": "Verfügbarkeit und Aktualität",
-          "description": "Wann muss die Capability verfügbar sein, wie aktuell müssen Informationen sein und welche Latenz- oder Bereitstellungsfenster sind relevant?"
+          "section": "Availability and timeliness needs",
+          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
         },
         "volumeAndPerformance": {
-          "section": "Volumen und Performance",
-          "description": "Welche Volumina an Requests, Events, Datensätzen, Dateien, Batches, Nutzern oder Transaktionen muss die Capability heute und künftig unterstützen?"
+          "section": "Volume and performance expectations",
+          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
         },
         "dataQualityAndConsistency": {
-          "section": "Datenqualität und Konsistenz",
-          "description": "Welche Erwartungen an Genauigkeit, Vollständigkeit, Konsistenz, Reihenfolge, Deduplizierung, Abstimmung oder Validierung haben Nutzer?"
+          "section": "Data quality and consistency needs",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Sicherheit, Datenschutz und Compliance",
-          "description": "Welche Anforderungen an Identität, Autorisierung, Vertraulichkeit, Datenresidenz, Einwilligung, Aufbewahrung, Audit oder Regulierung gelten?"
+          "section": "Security, privacy, and compliance constraints",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
         },
         "onboardingAndAccess": {
-          "section": "Onboarding und Zugriff",
-          "description": "Wie sollen Nutzer die Capability finden, anfordern, testen, freigeben lassen und mit der Nutzung beginnen?"
+          "section": "Activation and access",
+          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
         },
         "changeAndVersioning": {
-          "section": "Änderungen und Versionierung",
-          "description": "Wie viel Änderungstoleranz haben Nutzer und welche Erwartungen an Vorankündigung, Kompatibilität, Migration oder Versionierung gelten?"
+          "section": "Change and versioning expectations",
+          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
         },
         "observabilityAndSupport": {
-          "section": "Observability und Support",
-          "description": "Welche Überwachung, Statusinformationen, Nachvollziehbarkeit, Sichtbarkeit der Datenqualität, Unterstützung, Verantwortlichkeiten und Incident-Kommunikation benötigen Nutzer?"
+          "section": "Observability and support needs",
+          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
         },
         "recoveryAndContinuity": {
-          "section": "Recovery und Kontinuität",
-          "description": "Welche Erwartungen an Replay, Retry, Abstimmung, Backup, Fallback, Kontinuität oder manuelle Wiederherstellung müssen unterstützt werden?"
+          "section": "Recovery and continuity needs",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
         },
         "architectureImplications": {
-          "section": "Architekturimplikationen",
-          "description": "Was bedeuten diese Anforderungen für mögliche Architekturstile wie APIs, Events, Dateien, Streams, Datenprodukte oder direkte Integration?"
+          "section": "Constraints for later design",
+          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
         }
       }
     },
     "automationOpportunityCanvas": {
       "title": "Automation Hypothesis Canvas",
-      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
-      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
+      "purpose": "Link evidence from optional supporting canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "Start with the Automation Hypothesis Canvas. Reference Journey, Value Proposition, Domain, Business Impact, Capacity, or other evidence only where it is relevant; do not repeat those canvases here.",
       "sections": {
         "hypothesis": {
           "section": "Hypothesis",
@@ -516,8 +548,8 @@
           "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
         "responsibilityAndSolutionHypothesis": {
-          "section": "Responsibility and solution hypothesis",
-          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
+          "section": "Initial implementation hypothesis",
+          "description": "What is the current assumption about how the automation might be implemented? This is an assumption to validate, not an architecture decision."
         },
         "criticalAssumptions": {
           "section": "Critical assumptions",
@@ -578,8 +610,8 @@
     },
     "automationWorkflowCanvas": {
       "title": "Automation Workflow Canvas",
-      "purpose": "Design the end-to-end automation, including decisions, system interactions, human tasks, exceptions, and controls.",
-      "howToUse": "Distinguish the target process from the technical workflow. Capture the trigger, inputs, stages, responsibilities, interactions, controls, exception paths, outputs, monitoring, and recovery before implementation.",
+      "purpose": "Design the sequence, states, data, triggers, decisions, interactions, failure paths, and recovery for the end-to-end automation workflow.",
+      "howToUse": "Use the responsibility allocation from the Human-Automation Responsibility Canvas as an input. Focus here on how the workflow runs, changes state, exchanges data, handles exceptions, produces evidence, and recovers.",
       "sections": {
         "trigger": {
           "section": "Trigger",
@@ -590,16 +622,16 @@
           "description": "What data, documents, messages, forms, records, or context are required at the start and during the workflow?"
         },
         "workflowStages": {
-          "section": "Workflow stages",
-          "description": "What are the main target process and technical workflow stages from start to completion?"
+          "section": "Workflow stages and states",
+          "description": "What are the main workflow stages and states from trigger to completion, including waiting, review, exception, and completion states?"
         },
         "decisionsAndRules": {
           "section": "Decisions and rules",
           "description": "Which deterministic rules, validations, thresholds, policies, or decision points shape the flow?"
         },
         "agentActions": {
-          "section": "Agent actions",
-          "description": "What may an agent or AI do, recommend, generate, classify, summarize, or decide?"
+          "section": "Automation actions",
+          "description": "What may the automation, workflow, rule, agent, integration, API, RPA, or system component do at each relevant stage?"
         },
         "systemInteractions": {
           "section": "System interactions",
@@ -610,12 +642,12 @@
           "description": "Which source systems, datasets, records, documents, or knowledge sources are used and trusted?"
         },
         "humanTasks": {
-          "section": "Human tasks",
-          "description": "Which approvals, confirmations, judgement calls, corrections, reviews, or manual actions remain human?"
+          "section": "Human checkpoints",
+          "description": "Where does the responsibility allocation require approval, confirmation, judgement, correction, review, or manual completion?"
         },
         "handoffs": {
-          "section": "Handoffs",
-          "description": "Where does work move between people, automations, agents, systems, support teams, or queues?"
+          "section": "Handoffs and queues",
+          "description": "Where does work move between automation components, people, support teams, systems, queues, or exception paths?"
         },
         "exceptions": {
           "section": "Exceptions",
@@ -646,47 +678,47 @@
     "automationArchitectureDecisionCanvas": {
       "title": "Automation Architecture Decision Canvas",
       "purpose": "Compare and justify alternative implementation mechanisms for an automation solution.",
-      "howToUse": "Compare candidate implementation mechanisms individually and as a hybrid. Use feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit to justify the decision.",
+      "howToUse": "Mark each candidate mechanism as considered, selected, rejected, or not relevant. Compare only the viable candidates individually and as a hybrid, then justify the recommended implementation approach using feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit.",
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events?"
+          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -720,8 +752,8 @@
     },
     "automationReadinessOperationsCanvas": {
       "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Confirm that the automation can be safely released, operated, monitored, and recovered.",
-      "howToUse": "Use this as a release and operations gate. Confirm ownership, access, environments, evidence, exception handling, monitoring, support, fallback, rollback, documentation, deployment decision, known risks, and improvement backlog.",
+      "purpose": "Prepare the operating model for a safely released, supported, monitored, and recoverable automation.",
+      "howToUse": "Use this during delivery to prepare ownership, environments, access, evidence, monitoring, support, fallback, rollback, runbooks, known risks, and the deployment decision. Use the readiness checklist later for the release gate.",
       "sections": {
         "businessOwner": {
           "section": "Business owner",
@@ -776,8 +808,8 @@
           "description": "What operating instructions, design records, architecture decisions, user guidance, and runbooks are ready?"
         },
         "deploymentDecision": {
-          "section": "Deployment decision",
-          "description": "What is the release decision, who approves it, and what conditions or remediation actions apply?"
+          "section": "Release readiness status",
+          "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
         },
         "knownRisks": {
           "section": "Known risks",
@@ -859,8 +891,8 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "What are the potential business impacts if the capability, integration, or service fails?",
-      "howToUse": "Consider the potential impact on availability, security, and data for each capability, integration, or service.",
+      "purpose": "What value, risk, operational, financial, customer, employee, compliance, and strategic impact is expected or at stake?",
+      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
       "sections": {
         "availabilityRisks": {
           "section": "Availability Risks",
@@ -885,13 +917,45 @@
         "mitigateDataRisks": {
           "section": "Mitigate Data Risks",
           "description": "How can the capability owner mitigate the data risks?"
+        },
+        "expectedBenefits": {
+          "section": "Expected benefits",
+          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+        },
+        "operationalEfficiencyImpact": {
+          "section": "Operational efficiency impact",
+          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+        },
+        "customerEmployeeImpact": {
+          "section": "Customer and employee impact",
+          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+        },
+        "financialImpact": {
+          "section": "Financial impact",
+          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+        },
+        "complianceStrategicImpact": {
+          "section": "Compliance and strategic impact",
+          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+        },
+        "impactOfNotProceeding": {
+          "section": "Impact of not proceeding",
+          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+        },
+        "risksAndCriticality": {
+          "section": "Risks and criticality",
+          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+        },
+        "mitigationsAndDecisionImpact": {
+          "section": "Mitigations and decision impact",
+          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "How much capacity is needed to support expected capability consumption?",
-      "howToUse": "Analyze the current and future capacity requirements for each capability, integration, or service.",
+      "purpose": "How much demand, load, timing, and scaling capacity must be understood for the capability, automation, integration, or service?",
+      "howToUse": "Quantify current and expected demand, peak load, and availability needs. Record caching, rate limiting, and scaling approaches as architecture follow-up decisions rather than user requirements.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Current Business Volumes",
@@ -1243,56 +1307,56 @@
       }
     },
     "consumerExperienceRequirementsCanvas": {
-      "title": "Consumer Experience Requirements Canvas",
-      "purpose": "What experience and non-functional requirements do consumers need before deciding the best integration architecture?",
-      "howToUse": "Use this as a technology-agnostic requirements table. Capture consumer expectations and constraints, then use the architecture implications to choose APIs, events, files, streams, data products, or another implementation style.",
+      "title": "Experience Requirements Canvas",
+      "purpose": "What experience, operational, and non-functional requirements must the solution satisfy for users, operators, consumers, approvers, and support teams?",
+      "howToUse": "Capture what people and consuming systems require from the capability or automation. Keep this focused on requirements and constraints; quantify capacity and choose implementation mechanisms in later architecture work.",
       "sections": {
         "consumerGoals": {
-          "section": "Consumer goals",
-          "description": "What are the consumer's business goals, workflow goals, decision goals, automation goals, or data usage goals?"
+          "section": "User, operator, or consumer goals",
+          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
         },
         "availabilityAndTimeliness": {
-          "section": "Availability and timeliness",
-          "description": "When must the capability be available, how fresh must information be, and what latency or delivery windows matter?"
+          "section": "Availability and timeliness needs",
+          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
         },
         "volumeAndPerformance": {
-          "section": "Volume and performance",
-          "description": "What request, event, record, file, batch, user, or transaction volumes must the capability support now and later?"
+          "section": "Volume and performance expectations",
+          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
         },
         "dataQualityAndConsistency": {
-          "section": "Data quality and consistency",
-          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do consumers have?"
+          "section": "Data quality and consistency needs",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Security, privacy, and compliance",
-          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints apply?"
+          "section": "Security, privacy, and compliance constraints",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
         },
         "onboardingAndAccess": {
-          "section": "Onboarding and access",
-          "description": "How should consumers find, request, test, get approved for, and start using the capability?"
+          "section": "Activation and access",
+          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
         },
         "changeAndVersioning": {
-          "section": "Change and versioning",
-          "description": "How much change tolerance do consumers have, and what notice, compatibility, migration, or versioning expectations apply?"
+          "section": "Change and versioning expectations",
+          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
         },
         "observabilityAndSupport": {
-          "section": "Observability and support",
-          "description": "What monitoring, status, traceability, data quality visibility, support, ownership, and incident communication do consumers need?"
+          "section": "Observability and support needs",
+          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
         },
         "recoveryAndContinuity": {
-          "section": "Recovery and continuity",
+          "section": "Recovery and continuity needs",
           "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
         },
         "architectureImplications": {
-          "section": "Architecture implications",
-          "description": "What do these requirements imply for possible architecture styles, such as APIs, events, files, streams, data products, or direct integration?"
+          "section": "Constraints for later design",
+          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
         }
       }
     },
     "automationOpportunityCanvas": {
       "title": "Automation Hypothesis Canvas",
-      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
-      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
+      "purpose": "Link evidence from optional supporting canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "Start with the Automation Hypothesis Canvas. Reference Journey, Value Proposition, Domain, Business Impact, Capacity, or other evidence only where it is relevant; do not repeat those canvases here.",
       "sections": {
         "hypothesis": {
           "section": "Hypothesis",
@@ -1307,8 +1371,8 @@
           "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
         "responsibilityAndSolutionHypothesis": {
-          "section": "Responsibility and solution hypothesis",
-          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
+          "section": "Initial implementation hypothesis",
+          "description": "What is the current assumption about how the automation might be implemented? This is an assumption to validate, not an architecture decision."
         },
         "criticalAssumptions": {
           "section": "Critical assumptions",
@@ -1369,8 +1433,8 @@
     },
     "automationWorkflowCanvas": {
       "title": "Automation Workflow Canvas",
-      "purpose": "Design the end-to-end automation, including decisions, system interactions, human tasks, exceptions, and controls.",
-      "howToUse": "Distinguish the target process from the technical workflow. Capture the trigger, inputs, stages, responsibilities, interactions, controls, exception paths, outputs, monitoring, and recovery before implementation.",
+      "purpose": "Design the sequence, states, data, triggers, decisions, interactions, failure paths, and recovery for the end-to-end automation workflow.",
+      "howToUse": "Use the responsibility allocation from the Human-Automation Responsibility Canvas as an input. Focus here on how the workflow runs, changes state, exchanges data, handles exceptions, produces evidence, and recovers.",
       "sections": {
         "trigger": {
           "section": "Trigger",
@@ -1381,16 +1445,16 @@
           "description": "What data, documents, messages, forms, records, or context are required at the start and during the workflow?"
         },
         "workflowStages": {
-          "section": "Workflow stages",
-          "description": "What are the main target process and technical workflow stages from start to completion?"
+          "section": "Workflow stages and states",
+          "description": "What are the main workflow stages and states from trigger to completion, including waiting, review, exception, and completion states?"
         },
         "decisionsAndRules": {
           "section": "Decisions and rules",
           "description": "Which deterministic rules, validations, thresholds, policies, or decision points shape the flow?"
         },
         "agentActions": {
-          "section": "Agent actions",
-          "description": "What may an agent or AI do, recommend, generate, classify, summarize, or decide?"
+          "section": "Automation actions",
+          "description": "What may the automation, workflow, rule, agent, integration, API, RPA, or system component do at each relevant stage?"
         },
         "systemInteractions": {
           "section": "System interactions",
@@ -1401,12 +1465,12 @@
           "description": "Which source systems, datasets, records, documents, or knowledge sources are used and trusted?"
         },
         "humanTasks": {
-          "section": "Human tasks",
-          "description": "Which approvals, confirmations, judgement calls, corrections, reviews, or manual actions remain human?"
+          "section": "Human checkpoints",
+          "description": "Where does the responsibility allocation require approval, confirmation, judgement, correction, review, or manual completion?"
         },
         "handoffs": {
-          "section": "Handoffs",
-          "description": "Where does work move between people, automations, agents, systems, support teams, or queues?"
+          "section": "Handoffs and queues",
+          "description": "Where does work move between automation components, people, support teams, systems, queues, or exception paths?"
         },
         "exceptions": {
           "section": "Exceptions",
@@ -1437,47 +1501,47 @@
     "automationArchitectureDecisionCanvas": {
       "title": "Automation Architecture Decision Canvas",
       "purpose": "Compare and justify alternative implementation mechanisms for an automation solution.",
-      "howToUse": "Compare candidate implementation mechanisms individually and as a hybrid. Use feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit to justify the decision.",
+      "howToUse": "Mark each candidate mechanism as considered, selected, rejected, or not relevant. Compare only the viable candidates individually and as a hybrid, then justify the recommended implementation approach using feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit.",
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events?"
+          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -1511,8 +1575,8 @@
     },
     "automationReadinessOperationsCanvas": {
       "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Confirm that the automation can be safely released, operated, monitored, and recovered.",
-      "howToUse": "Use this as a release and operations gate. Confirm ownership, access, environments, evidence, exception handling, monitoring, support, fallback, rollback, documentation, deployment decision, known risks, and improvement backlog.",
+      "purpose": "Prepare the operating model for a safely released, supported, monitored, and recoverable automation.",
+      "howToUse": "Use this during delivery to prepare ownership, environments, access, evidence, monitoring, support, fallback, rollback, runbooks, known risks, and the deployment decision. Use the readiness checklist later for the release gate.",
       "sections": {
         "businessOwner": {
           "section": "Business owner",
@@ -1567,8 +1631,8 @@
           "description": "What operating instructions, design records, architecture decisions, user guidance, and runbooks are ready?"
         },
         "deploymentDecision": {
-          "section": "Deployment decision",
-          "description": "What is the release decision, who approves it, and what conditions or remediation actions apply?"
+          "section": "Release readiness status",
+          "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
         },
         "knownRisks": {
           "section": "Known risks",
@@ -1649,9 +1713,9 @@
       }
     },
     "businessImpactCanvas": {
-      "title": "Liiketoimintavaikutuskanvas",
-      "purpose": "Mitkä ovat kyvykkyyden tai rajapinnan epäonnistumisen mahdolliset liiketoimintavaikutukset?",
-      "howToUse": "Arvioi vaikutukset saatavuuteen, turvallisuuteen, dataan ja operointiin ennen toteutustyylin lukitsemista.",
+      "title": "Business Impact Canvas",
+      "purpose": "What value, risk, operational, financial, customer, employee, compliance, and strategic impact is expected or at stake?",
+      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
       "sections": {
         "availabilityRisks": {
           "section": "Saatavuuteen liittyvät riskit",
@@ -1676,13 +1740,45 @@
         "mitigateDataRisks": {
           "section": "Tietoriskien vähentäminen",
           "description": "Miten API-tarjoaja voi vähentää tietoriskejä?"
+        },
+        "expectedBenefits": {
+          "section": "Expected benefits",
+          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+        },
+        "operationalEfficiencyImpact": {
+          "section": "Operational efficiency impact",
+          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+        },
+        "customerEmployeeImpact": {
+          "section": "Customer and employee impact",
+          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+        },
+        "financialImpact": {
+          "section": "Financial impact",
+          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+        },
+        "complianceStrategicImpact": {
+          "section": "Compliance and strategic impact",
+          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+        },
+        "impactOfNotProceeding": {
+          "section": "Impact of not proceeding",
+          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+        },
+        "risksAndCriticality": {
+          "section": "Risks and criticality",
+          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+        },
+        "mitigationsAndDecisionImpact": {
+          "section": "Mitigations and decision impact",
+          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Kapasiteettikanvas",
-      "purpose": "Kuinka paljon kapasiteettia kyvykkyyden tai rajapinnan käytön tukeminen edellyttää?",
-      "howToUse": "Analysoi nykyiset ja tulevat kapasiteettivaatimukset kyvykkyydelle tai rajapinnalle.",
+      "purpose": "How much demand, load, timing, and scaling capacity must be understood for the capability, automation, integration, or service?",
+      "howToUse": "Quantify current and expected demand, peak load, and availability needs. Record caching, rate limiting, and scaling approaches as architecture follow-up decisions rather than user requirements.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Nykyinen liiketoimintavolyymi",
@@ -2034,56 +2130,56 @@
       }
     },
     "consumerExperienceRequirementsCanvas": {
-      "title": "Hyödyntäjäkokemuksen vaatimuskanvas",
-      "purpose": "Mitä kokemukseen liittyviä ja ei-toiminnallisia vaatimuksia hyödyntäjillä on ennen parhaan integraatioarkkitehtuurin valintaa?",
-      "howToUse": "Käytä tätä teknologiariippumattomana vaatimuskanvaksena. Kuvaa hyödyntäjien odotukset ja rajoitteet ja käytä arkkitehtuurivaikutuksia API-rajapintojen, tapahtumien, tiedostojen, streamien, datatuotteiden tai muun mallin valintaan.",
+      "title": "Experience Requirements Canvas",
+      "purpose": "What experience, operational, and non-functional requirements must the solution satisfy for users, operators, consumers, approvers, and support teams?",
+      "howToUse": "Capture what people and consuming systems require from the capability or automation. Keep this focused on requirements and constraints; quantify capacity and choose implementation mechanisms in later architecture work.",
       "sections": {
         "consumerGoals": {
-          "section": "Hyödyntäjien tavoitteet",
-          "description": "Mitkä ovat hyödyntäjien liiketoiminta-, työnkulku-, päätöksenteko-, automaatio- tai datankäyttötavoitteet?"
+          "section": "User, operator, or consumer goals",
+          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
         },
         "availabilityAndTimeliness": {
-          "section": "Saatavuus ja ajantasaisuus",
-          "description": "Milloin kyvykkyyden täytyy olla saatavilla, kuinka ajantasaista tiedon täytyy olla ja millä latenssi- tai toimitusikkunoilla on merkitystä?"
+          "section": "Availability and timeliness needs",
+          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
         },
         "volumeAndPerformance": {
-          "section": "Volyymi ja suorituskyky",
-          "description": "Mitä pyyntö-, tapahtuma-, tietue-, tiedosto-, eräajo-, käyttäjä- tai transaktiovolyymeja kyvykkyyden täytyy tukea nyt ja myöhemmin?"
+          "section": "Volume and performance expectations",
+          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
         },
         "dataQualityAndConsistency": {
-          "section": "Datan laatu ja yhdenmukaisuus",
-          "description": "Mitä tarkkuuteen, täydellisyyteen, yhdenmukaisuuteen, järjestykseen, deduplikointiin, täsmäytykseen tai validointiin liittyviä odotuksia hyödyntäjillä on?"
+          "section": "Data quality and consistency needs",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Turvallisuus, tietosuoja ja vaatimustenmukaisuus",
-          "description": "Mitä identiteettiin, valtuutukseen, luottamuksellisuuteen, datan sijaintiin, suostumukseen, säilytykseen, auditointiin tai sääntelyyn liittyviä rajoitteita sovelletaan?"
+          "section": "Security, privacy, and compliance constraints",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
         },
         "onboardingAndAccess": {
-          "section": "Käyttöönotto ja pääsy",
-          "description": "Miten hyödyntäjien tulisi löytää, pyytää, testata, saada hyväksyntä ja aloittaa kyvykkyyden käyttö?"
+          "section": "Activation and access",
+          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
         },
         "changeAndVersioning": {
-          "section": "Muutokset ja versiointi",
-          "description": "Kuinka paljon muutoksia hyödyntäjät sietävät ja mitä ennakkoilmoituksiin, yhteensopivuuteen, migraatioon tai versiointiin liittyviä odotuksia sovelletaan?"
+          "section": "Change and versioning expectations",
+          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
         },
         "observabilityAndSupport": {
-          "section": "Havainnoitavuus ja tuki",
-          "description": "Mitä monitorointia, tilatietoa, jäljitettävyyttä, datan laadun näkyvyyttä, tukea, omistajuutta ja häiriöviestintää hyödyntäjät tarvitsevat?"
+          "section": "Observability and support needs",
+          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
         },
         "recoveryAndContinuity": {
-          "section": "Palautuminen ja jatkuvuus",
-          "description": "Mitä uudelleentoistoon, uudelleenyrityksiin, täsmäytykseen, varmuuskopiointiin, varamenettelyihin, jatkuvuuteen tai manuaaliseen palautumiseen liittyviä odotuksia täytyy tukea?"
+          "section": "Recovery and continuity needs",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
         },
         "architectureImplications": {
-          "section": "Arkkitehtuurivaikutukset",
-          "description": "Mitä nämä vaatimukset tarkoittavat mahdollisille arkkitehtuurityyleille, kuten API-rajapinnoille, tapahtumille, tiedostoille, streameille, datatuotteille tai suoralle integraatiolle?"
+          "section": "Constraints for later design",
+          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
         }
       }
     },
     "automationOpportunityCanvas": {
       "title": "Automation Hypothesis Canvas",
-      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
-      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
+      "purpose": "Link evidence from optional supporting canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "Start with the Automation Hypothesis Canvas. Reference Journey, Value Proposition, Domain, Business Impact, Capacity, or other evidence only where it is relevant; do not repeat those canvases here.",
       "sections": {
         "hypothesis": {
           "section": "Hypothesis",
@@ -2098,8 +2194,8 @@
           "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
         "responsibilityAndSolutionHypothesis": {
-          "section": "Responsibility and solution hypothesis",
-          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
+          "section": "Initial implementation hypothesis",
+          "description": "What is the current assumption about how the automation might be implemented? This is an assumption to validate, not an architecture decision."
         },
         "criticalAssumptions": {
           "section": "Critical assumptions",
@@ -2160,8 +2256,8 @@
     },
     "automationWorkflowCanvas": {
       "title": "Automation Workflow Canvas",
-      "purpose": "Design the end-to-end automation, including decisions, system interactions, human tasks, exceptions, and controls.",
-      "howToUse": "Distinguish the target process from the technical workflow. Capture the trigger, inputs, stages, responsibilities, interactions, controls, exception paths, outputs, monitoring, and recovery before implementation.",
+      "purpose": "Design the sequence, states, data, triggers, decisions, interactions, failure paths, and recovery for the end-to-end automation workflow.",
+      "howToUse": "Use the responsibility allocation from the Human-Automation Responsibility Canvas as an input. Focus here on how the workflow runs, changes state, exchanges data, handles exceptions, produces evidence, and recovers.",
       "sections": {
         "trigger": {
           "section": "Trigger",
@@ -2172,16 +2268,16 @@
           "description": "What data, documents, messages, forms, records, or context are required at the start and during the workflow?"
         },
         "workflowStages": {
-          "section": "Workflow stages",
-          "description": "What are the main target process and technical workflow stages from start to completion?"
+          "section": "Workflow stages and states",
+          "description": "What are the main workflow stages and states from trigger to completion, including waiting, review, exception, and completion states?"
         },
         "decisionsAndRules": {
           "section": "Decisions and rules",
           "description": "Which deterministic rules, validations, thresholds, policies, or decision points shape the flow?"
         },
         "agentActions": {
-          "section": "Agent actions",
-          "description": "What may an agent or AI do, recommend, generate, classify, summarize, or decide?"
+          "section": "Automation actions",
+          "description": "What may the automation, workflow, rule, agent, integration, API, RPA, or system component do at each relevant stage?"
         },
         "systemInteractions": {
           "section": "System interactions",
@@ -2192,12 +2288,12 @@
           "description": "Which source systems, datasets, records, documents, or knowledge sources are used and trusted?"
         },
         "humanTasks": {
-          "section": "Human tasks",
-          "description": "Which approvals, confirmations, judgement calls, corrections, reviews, or manual actions remain human?"
+          "section": "Human checkpoints",
+          "description": "Where does the responsibility allocation require approval, confirmation, judgement, correction, review, or manual completion?"
         },
         "handoffs": {
-          "section": "Handoffs",
-          "description": "Where does work move between people, automations, agents, systems, support teams, or queues?"
+          "section": "Handoffs and queues",
+          "description": "Where does work move between automation components, people, support teams, systems, queues, or exception paths?"
         },
         "exceptions": {
           "section": "Exceptions",
@@ -2228,47 +2324,47 @@
     "automationArchitectureDecisionCanvas": {
       "title": "Automation Architecture Decision Canvas",
       "purpose": "Compare and justify alternative implementation mechanisms for an automation solution.",
-      "howToUse": "Compare candidate implementation mechanisms individually and as a hybrid. Use feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit to justify the decision.",
+      "howToUse": "Mark each candidate mechanism as considered, selected, rejected, or not relevant. Compare only the viable candidates individually and as a hybrid, then justify the recommended implementation approach using feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit.",
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events?"
+          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -2302,8 +2398,8 @@
     },
     "automationReadinessOperationsCanvas": {
       "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Confirm that the automation can be safely released, operated, monitored, and recovered.",
-      "howToUse": "Use this as a release and operations gate. Confirm ownership, access, environments, evidence, exception handling, monitoring, support, fallback, rollback, documentation, deployment decision, known risks, and improvement backlog.",
+      "purpose": "Prepare the operating model for a safely released, supported, monitored, and recoverable automation.",
+      "howToUse": "Use this during delivery to prepare ownership, environments, access, evidence, monitoring, support, fallback, rollback, runbooks, known risks, and the deployment decision. Use the readiness checklist later for the release gate.",
       "sections": {
         "businessOwner": {
           "section": "Business owner",
@@ -2358,8 +2454,8 @@
           "description": "What operating instructions, design records, architecture decisions, user guidance, and runbooks are ready?"
         },
         "deploymentDecision": {
-          "section": "Deployment decision",
-          "description": "What is the release decision, who approves it, and what conditions or remediation actions apply?"
+          "section": "Release readiness status",
+          "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
         },
         "knownRisks": {
           "section": "Known risks",
@@ -2441,8 +2537,8 @@
     },
     "businessImpactCanvas": {
       "title": "Business Impact Canvas",
-      "purpose": "Quels impacts métier une défaillance ou un mauvais comportement de la capacité ou de l’interface peut-il avoir ?",
-      "howToUse": "Évaluer les impacts potentiels sur la disponibilité, la sécurité, les données et les opérations avant de figer le mode de mise en œuvre.",
+      "purpose": "What value, risk, operational, financial, customer, employee, compliance, and strategic impact is expected or at stake?",
+      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
       "sections": {
         "availabilityRisks": {
           "section": "Risques de disponibilité",
@@ -2467,13 +2563,45 @@
         "mitigateDataRisks": {
           "section": "Atténuer les risques liés aux données",
           "description": "Comment le fournisseur d’API peut-il atténuer les risques liés aux données?"
+        },
+        "expectedBenefits": {
+          "section": "Expected benefits",
+          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+        },
+        "operationalEfficiencyImpact": {
+          "section": "Operational efficiency impact",
+          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+        },
+        "customerEmployeeImpact": {
+          "section": "Customer and employee impact",
+          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+        },
+        "financialImpact": {
+          "section": "Financial impact",
+          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+        },
+        "complianceStrategicImpact": {
+          "section": "Compliance and strategic impact",
+          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+        },
+        "impactOfNotProceeding": {
+          "section": "Impact of not proceeding",
+          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+        },
+        "risksAndCriticality": {
+          "section": "Risks and criticality",
+          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+        },
+        "mitigationsAndDecisionImpact": {
+          "section": "Mitigations and decision impact",
+          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Capacity Canvas",
-      "purpose": "Quelle capacité est nécessaire pour soutenir l’usage de la capacité ou de l’interface ?",
-      "howToUse": "Analyser les exigences de capacité actuelles et futures pour la capacité ou l’interface.",
+      "purpose": "How much demand, load, timing, and scaling capacity must be understood for the capability, automation, integration, or service?",
+      "howToUse": "Quantify current and expected demand, peak load, and availability needs. Record caching, rate limiting, and scaling approaches as architecture follow-up decisions rather than user requirements.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Volumes d'activité actuels",
@@ -2825,56 +2953,56 @@
       }
     },
     "consumerExperienceRequirementsCanvas": {
-      "title": "Consumer Experience Requirements Canvas",
-      "purpose": "Quelles exigences d’expérience et non fonctionnelles les utilisateurs doivent-ils préciser avant de décider de la meilleure architecture d’intégration ?",
-      "howToUse": "Utiliser ce canvas comme tableau d’exigences indépendant de la technologie. Capturer les attentes et contraintes des utilisateurs, puis utiliser les implications d’architecture pour choisir API, événements, fichiers, flux, produits de données ou un autre mode de mise en œuvre.",
+      "title": "Experience Requirements Canvas",
+      "purpose": "What experience, operational, and non-functional requirements must the solution satisfy for users, operators, consumers, approvers, and support teams?",
+      "howToUse": "Capture what people and consuming systems require from the capability or automation. Keep this focused on requirements and constraints; quantify capacity and choose implementation mechanisms in later architecture work.",
       "sections": {
         "consumerGoals": {
-          "section": "Objectifs des utilisateurs",
-          "description": "Quels sont les objectifs métier, de workflow, de décision, d’automatisation ou d’usage des données des utilisateurs ?"
+          "section": "User, operator, or consumer goals",
+          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
         },
         "availabilityAndTimeliness": {
-          "section": "Disponibilité et fraîcheur",
-          "description": "Quand la capacité doit-elle être disponible, quelle fraîcheur d’information est nécessaire et quelles fenêtres de latence ou de mise à disposition comptent ?"
+          "section": "Availability and timeliness needs",
+          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
         },
         "volumeAndPerformance": {
-          "section": "Volume et performance",
-          "description": "Quels volumes de requêtes, événements, enregistrements, fichiers, lots, utilisateurs ou transactions la capacité doit-elle supporter aujourd’hui et demain ?"
+          "section": "Volume and performance expectations",
+          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
         },
         "dataQualityAndConsistency": {
-          "section": "Qualité et cohérence des données",
-          "description": "Quelles attentes les utilisateurs ont-ils en matière d’exactitude, complétude, cohérence, ordre, déduplication, rapprochement ou validation ?"
+          "section": "Data quality and consistency needs",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Sécurité, protection des données et conformité",
-          "description": "Quelles contraintes d’identité, d’autorisation, de confidentialité, de résidence, de consentement, de conservation, d’audit ou de réglementation s’appliquent ?"
+          "section": "Security, privacy, and compliance constraints",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
         },
         "onboardingAndAccess": {
-          "section": "Onboarding et accès",
-          "description": "Comment les utilisateurs doivent-ils trouver, demander, tester, obtenir l’approbation et commencer à utiliser la capacité ?"
+          "section": "Activation and access",
+          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
         },
         "changeAndVersioning": {
-          "section": "Changement et versionnement",
-          "description": "Quelle tolérance au changement les utilisateurs ont-ils, et quelles attentes de préavis, compatibilité, migration ou versionnement s’appliquent ?"
+          "section": "Change and versioning expectations",
+          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
         },
         "observabilityAndSupport": {
-          "section": "Observabilité et support",
-          "description": "De quelle surveillance, information de statut, traçabilité, visibilité sur la qualité des données, support, propriété et communication d’incident les utilisateurs ont-ils besoin ?"
+          "section": "Observability and support needs",
+          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
         },
         "recoveryAndContinuity": {
-          "section": "Reprise et continuité",
-          "description": "Quelles attentes de replay, retry, rapprochement, sauvegarde, fallback, continuité ou reprise manuelle doivent être prises en charge ?"
+          "section": "Recovery and continuity needs",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
         },
         "architectureImplications": {
-          "section": "Implications d’architecture",
-          "description": "Que signifient ces exigences pour les styles d’architecture possibles, tels que API, événements, fichiers, flux, produits de données ou intégration directe ?"
+          "section": "Constraints for later design",
+          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
         }
       }
     },
     "automationOpportunityCanvas": {
       "title": "Automation Hypothesis Canvas",
-      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
-      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
+      "purpose": "Link evidence from optional supporting canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "Start with the Automation Hypothesis Canvas. Reference Journey, Value Proposition, Domain, Business Impact, Capacity, or other evidence only where it is relevant; do not repeat those canvases here.",
       "sections": {
         "hypothesis": {
           "section": "Hypothesis",
@@ -2889,8 +3017,8 @@
           "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
         "responsibilityAndSolutionHypothesis": {
-          "section": "Responsibility and solution hypothesis",
-          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
+          "section": "Initial implementation hypothesis",
+          "description": "What is the current assumption about how the automation might be implemented? This is an assumption to validate, not an architecture decision."
         },
         "criticalAssumptions": {
           "section": "Critical assumptions",
@@ -2951,8 +3079,8 @@
     },
     "automationWorkflowCanvas": {
       "title": "Automation Workflow Canvas",
-      "purpose": "Design the end-to-end automation, including decisions, system interactions, human tasks, exceptions, and controls.",
-      "howToUse": "Distinguish the target process from the technical workflow. Capture the trigger, inputs, stages, responsibilities, interactions, controls, exception paths, outputs, monitoring, and recovery before implementation.",
+      "purpose": "Design the sequence, states, data, triggers, decisions, interactions, failure paths, and recovery for the end-to-end automation workflow.",
+      "howToUse": "Use the responsibility allocation from the Human-Automation Responsibility Canvas as an input. Focus here on how the workflow runs, changes state, exchanges data, handles exceptions, produces evidence, and recovers.",
       "sections": {
         "trigger": {
           "section": "Trigger",
@@ -2963,16 +3091,16 @@
           "description": "What data, documents, messages, forms, records, or context are required at the start and during the workflow?"
         },
         "workflowStages": {
-          "section": "Workflow stages",
-          "description": "What are the main target process and technical workflow stages from start to completion?"
+          "section": "Workflow stages and states",
+          "description": "What are the main workflow stages and states from trigger to completion, including waiting, review, exception, and completion states?"
         },
         "decisionsAndRules": {
           "section": "Decisions and rules",
           "description": "Which deterministic rules, validations, thresholds, policies, or decision points shape the flow?"
         },
         "agentActions": {
-          "section": "Agent actions",
-          "description": "What may an agent or AI do, recommend, generate, classify, summarize, or decide?"
+          "section": "Automation actions",
+          "description": "What may the automation, workflow, rule, agent, integration, API, RPA, or system component do at each relevant stage?"
         },
         "systemInteractions": {
           "section": "System interactions",
@@ -2983,12 +3111,12 @@
           "description": "Which source systems, datasets, records, documents, or knowledge sources are used and trusted?"
         },
         "humanTasks": {
-          "section": "Human tasks",
-          "description": "Which approvals, confirmations, judgement calls, corrections, reviews, or manual actions remain human?"
+          "section": "Human checkpoints",
+          "description": "Where does the responsibility allocation require approval, confirmation, judgement, correction, review, or manual completion?"
         },
         "handoffs": {
-          "section": "Handoffs",
-          "description": "Where does work move between people, automations, agents, systems, support teams, or queues?"
+          "section": "Handoffs and queues",
+          "description": "Where does work move between automation components, people, support teams, systems, queues, or exception paths?"
         },
         "exceptions": {
           "section": "Exceptions",
@@ -3019,47 +3147,47 @@
     "automationArchitectureDecisionCanvas": {
       "title": "Automation Architecture Decision Canvas",
       "purpose": "Compare and justify alternative implementation mechanisms for an automation solution.",
-      "howToUse": "Compare candidate implementation mechanisms individually and as a hybrid. Use feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit to justify the decision.",
+      "howToUse": "Mark each candidate mechanism as considered, selected, rejected, or not relevant. Compare only the viable candidates individually and as a hybrid, then justify the recommended implementation approach using feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit.",
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events?"
+          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -3093,8 +3221,8 @@
     },
     "automationReadinessOperationsCanvas": {
       "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Confirm that the automation can be safely released, operated, monitored, and recovered.",
-      "howToUse": "Use this as a release and operations gate. Confirm ownership, access, environments, evidence, exception handling, monitoring, support, fallback, rollback, documentation, deployment decision, known risks, and improvement backlog.",
+      "purpose": "Prepare the operating model for a safely released, supported, monitored, and recoverable automation.",
+      "howToUse": "Use this during delivery to prepare ownership, environments, access, evidence, monitoring, support, fallback, rollback, runbooks, known risks, and the deployment decision. Use the readiness checklist later for the release gate.",
       "sections": {
         "businessOwner": {
           "section": "Business owner",
@@ -3149,8 +3277,8 @@
           "description": "What operating instructions, design records, architecture decisions, user guidance, and runbooks are ready?"
         },
         "deploymentDecision": {
-          "section": "Deployment decision",
-          "description": "What is the release decision, who approves it, and what conditions or remediation actions apply?"
+          "section": "Release readiness status",
+          "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
         },
         "knownRisks": {
           "section": "Known risks",
@@ -3231,9 +3359,9 @@
       }
     },
     "businessImpactCanvas": {
-      "title": "Canvas de Impacto no Negócio",
-      "purpose": "Quais são os possíveis impactos no negócio da falha da API?",
-      "howToUse": "Considere o impacto potencial na disponibilidade, segurança e dados para cada API.",
+      "title": "Business Impact Canvas",
+      "purpose": "What value, risk, operational, financial, customer, employee, compliance, and strategic impact is expected or at stake?",
+      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
       "sections": {
         "availabilityRisks": {
           "section": "Riscos de disponibilidade",
@@ -3258,13 +3386,45 @@
         "mitigateDataRisks": {
           "section": "Mitigar riscos de dados",
           "description": "Como o fornecedor da API pode mitigar os riscos de dados?"
+        },
+        "expectedBenefits": {
+          "section": "Expected benefits",
+          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+        },
+        "operationalEfficiencyImpact": {
+          "section": "Operational efficiency impact",
+          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+        },
+        "customerEmployeeImpact": {
+          "section": "Customer and employee impact",
+          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+        },
+        "financialImpact": {
+          "section": "Financial impact",
+          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+        },
+        "complianceStrategicImpact": {
+          "section": "Compliance and strategic impact",
+          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+        },
+        "impactOfNotProceeding": {
+          "section": "Impact of not proceeding",
+          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+        },
+        "risksAndCriticality": {
+          "section": "Risks and criticality",
+          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+        },
+        "mitigationsAndDecisionImpact": {
+          "section": "Mitigations and decision impact",
+          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
         }
       }
     },
     "capacityCanvas": {
       "title": "Canvas de Capacidade",
-      "purpose": "Quanta capacidade é necessária para suportar o consumo da API?",
-      "howToUse": "Analise os requisitos de capacidade atuais e futuros para cada API.",
+      "purpose": "How much demand, load, timing, and scaling capacity must be understood for the capability, automation, integration, or service?",
+      "howToUse": "Quantify current and expected demand, peak load, and availability needs. Record caching, rate limiting, and scaling approaches as architecture follow-up decisions rather than user requirements.",
       "sections": {
         "currentBusinessVolumes": {
           "section": "Volumes de negócio atuais",
@@ -3616,56 +3776,56 @@
       }
     },
     "consumerExperienceRequirementsCanvas": {
-      "title": "Canvas de Requisitos da Experiência do Utilizador",
-      "purpose": "Que requisitos de experiência e requisitos não funcionais os utilizadores precisam /de esclarecer antes de decidir a melhor arquitetura de integração?",
-      "howToUse": "Utilize isto como uma tabela de requisitos independente da tecnologia. Capte expectativas e restrições dos utilizadores; depois utilize as implicações de arquitetura para escolher APIs, eventos, ficheiros, streams, produtos de dados ou outro estilo de implementação.",
+      "title": "Experience Requirements Canvas",
+      "purpose": "What experience, operational, and non-functional requirements must the solution satisfy for users, operators, consumers, approvers, and support teams?",
+      "howToUse": "Capture what people and consuming systems require from the capability or automation. Keep this focused on requirements and constraints; quantify capacity and choose implementation mechanisms in later architecture work.",
       "sections": {
         "consumerGoals": {
-          "section": "Objetivos dos utilizadores",
-          "description": "Quais são os objetivos de negócio, de fluxo de trabalho, de decisão, de automação ou de utilização de dados dos utilizadores?"
+          "section": "User, operator, or consumer goals",
+          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
         },
         "availabilityAndTimeliness": {
-          "section": "Disponibilidade e atualidade",
-          "description": "Quando é que a capacidade deve estar disponível, quão atualizada deve estar a informação e que latência ou janelas de entrega importam?"
+          "section": "Availability and timeliness needs",
+          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
         },
         "volumeAndPerformance": {
-          "section": "Volume e desempenho",
-          "description": "Que volumes de pedidos, eventos, registos, ficheiros, lotes, utilizadores ou transações a capacidade deve suportar agora e no futuro?"
+          "section": "Volume and performance expectations",
+          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
         },
         "dataQualityAndConsistency": {
-          "section": "Qualidade e consistência dos dados",
-          "description": "Que expectativas de exatidão, completude, consistência, ordenação, deduplicação, reconciliação ou validação têm os utilizadores?"
+          "section": "Data quality and consistency needs",
+          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Segurança, privacidade e conformidade",
-          "description": "Que restrições de identidade, autorização, confidencialidade, residência, consentimento, retenção, auditoria ou regulamentação se aplicam?"
+          "section": "Security, privacy, and compliance constraints",
+          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
         },
         "onboardingAndAccess": {
-          "section": "Integração e acesso",
-          "description": "Como devem os utilizadores encontrar, solicitar, testar, obter aprovação e começar a utilizar a capacidade?"
+          "section": "Activation and access",
+          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
         },
         "changeAndVersioning": {
-          "section": "Mudança e controlo de versões",
-          "description": "Que tolerância à mudança têm os utilizadores e que expectativas de aviso prévio, compatibilidade, migração ou controlo de versões se aplicam?"
+          "section": "Change and versioning expectations",
+          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
         },
         "observabilityAndSupport": {
-          "section": "Observabilidade e apoio",
-          "description": "Que monitorização, estado, rastreabilidade, visibilidade da qualidade dos dados, apoio, propriedade e comunicação de incidentes os utilizadores precisam?"
+          "section": "Observability and support needs",
+          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
         },
         "recoveryAndContinuity": {
-          "section": "Recuperação e continuidade",
-          "description": "Que expectativas de repetição, nova tentativa, reconciliação, cópia de segurança, fallback, continuidade ou recuperação manual devem ser suportadas?"
+          "section": "Recovery and continuity needs",
+          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
         },
         "architectureImplications": {
-          "section": "Implicações de arquitetura",
-          "description": "O que estes requisitos implicam para possíveis estilos de arquitetura, como APIs, eventos, ficheiros, streams, produtos de dados ou integração direta?"
+          "section": "Constraints for later design",
+          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
         }
       }
     },
     "automationOpportunityCanvas": {
       "title": "Automation Hypothesis Canvas",
-      "purpose": "Link evidence from strategy canvases to a testable automation hypothesis before committing to architecture or delivery.",
-      "howToUse": "State the automation hypothesis, reference supporting evidence, narrow the scope, identify early responsibility and solution assumptions, define the smallest useful validation experiment, and record the decision after evidence is reviewed.",
+      "purpose": "Link evidence from optional supporting canvases to a testable automation hypothesis before committing to architecture or delivery.",
+      "howToUse": "Start with the Automation Hypothesis Canvas. Reference Journey, Value Proposition, Domain, Business Impact, Capacity, or other evidence only where it is relevant; do not repeat those canvases here.",
       "sections": {
         "hypothesis": {
           "section": "Hypothesis",
@@ -3680,8 +3840,8 @@
           "description": "Which part of the work is being considered for automation now, and what is explicitly outside scope?"
         },
         "responsibilityAndSolutionHypothesis": {
-          "section": "Responsibility and solution hypothesis",
-          "description": "What might remain human, and what might be performed by workflow, rules, agent, integration, API, RPA, or another mechanism?"
+          "section": "Initial implementation hypothesis",
+          "description": "What is the current assumption about how the automation might be implemented? This is an assumption to validate, not an architecture decision."
         },
         "criticalAssumptions": {
           "section": "Critical assumptions",
@@ -3742,8 +3902,8 @@
     },
     "automationWorkflowCanvas": {
       "title": "Automation Workflow Canvas",
-      "purpose": "Design the end-to-end automation, including decisions, system interactions, human tasks, exceptions, and controls.",
-      "howToUse": "Distinguish the target process from the technical workflow. Capture the trigger, inputs, stages, responsibilities, interactions, controls, exception paths, outputs, monitoring, and recovery before implementation.",
+      "purpose": "Design the sequence, states, data, triggers, decisions, interactions, failure paths, and recovery for the end-to-end automation workflow.",
+      "howToUse": "Use the responsibility allocation from the Human-Automation Responsibility Canvas as an input. Focus here on how the workflow runs, changes state, exchanges data, handles exceptions, produces evidence, and recovers.",
       "sections": {
         "trigger": {
           "section": "Trigger",
@@ -3754,16 +3914,16 @@
           "description": "What data, documents, messages, forms, records, or context are required at the start and during the workflow?"
         },
         "workflowStages": {
-          "section": "Workflow stages",
-          "description": "What are the main target process and technical workflow stages from start to completion?"
+          "section": "Workflow stages and states",
+          "description": "What are the main workflow stages and states from trigger to completion, including waiting, review, exception, and completion states?"
         },
         "decisionsAndRules": {
           "section": "Decisions and rules",
           "description": "Which deterministic rules, validations, thresholds, policies, or decision points shape the flow?"
         },
         "agentActions": {
-          "section": "Agent actions",
-          "description": "What may an agent or AI do, recommend, generate, classify, summarize, or decide?"
+          "section": "Automation actions",
+          "description": "What may the automation, workflow, rule, agent, integration, API, RPA, or system component do at each relevant stage?"
         },
         "systemInteractions": {
           "section": "System interactions",
@@ -3774,12 +3934,12 @@
           "description": "Which source systems, datasets, records, documents, or knowledge sources are used and trusted?"
         },
         "humanTasks": {
-          "section": "Human tasks",
-          "description": "Which approvals, confirmations, judgement calls, corrections, reviews, or manual actions remain human?"
+          "section": "Human checkpoints",
+          "description": "Where does the responsibility allocation require approval, confirmation, judgement, correction, review, or manual completion?"
         },
         "handoffs": {
-          "section": "Handoffs",
-          "description": "Where does work move between people, automations, agents, systems, support teams, or queues?"
+          "section": "Handoffs and queues",
+          "description": "Where does work move between automation components, people, support teams, systems, queues, or exception paths?"
         },
         "exceptions": {
           "section": "Exceptions",
@@ -3810,47 +3970,47 @@
     "automationArchitectureDecisionCanvas": {
       "title": "Automation Architecture Decision Canvas",
       "purpose": "Compare and justify alternative implementation mechanisms for an automation solution.",
-      "howToUse": "Compare candidate implementation mechanisms individually and as a hybrid. Use feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit to justify the decision.",
+      "howToUse": "Mark each candidate mechanism as considered, selected, rejected, or not relevant. Compare only the viable candidates individually and as a hybrid, then justify the recommended implementation approach using feasibility, reliability, security, maintainability, latency, scalability, cost, dependency, testability, observability, recoverability, skills, and architectural fit.",
       "sections": {
         "nativeFeature": {
           "section": "Native feature",
-          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership?"
+          "description": "Can an existing system capability solve this step with acceptable reliability, controls, and ownership? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit?"
+          "description": "Where is workflow orchestration, scheduling, routing, approval, notification, or coordination the best fit? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rule": {
           "section": "Rule",
-          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations?"
+          "description": "Which decisions can be implemented as deterministic business rules, policy checks, validations, or calculations? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "agent": {
           "section": "Agent",
-          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance?"
+          "description": "Where could an agent or AI safely add judgement, language understanding, generation, planning, or assistance? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "connector": {
           "section": "Connector",
-          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable?"
+          "description": "Which low-code, platform, SaaS, file, message, or data connectors are viable? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "api": {
           "section": "API",
-          "description": "Where is an API call the best fit for reliable, governed, testable system interaction?"
+          "description": "Where is an API call the best fit for reliable, governed, testable system interaction? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "event": {
           "section": "Event",
-          "description": "Where should the solution react to, publish, or consume events?"
+          "description": "Where should the solution react to, publish, or consume events? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "customCode": {
           "section": "Custom code",
-          "description": "Where is custom code justified because standard capabilities are insufficient or too risky?"
+          "description": "Where is custom code justified because standard capabilities are insufficient or too risky? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "rpa": {
           "section": "RPA",
-          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required?"
+          "description": "Where is desktop or UI automation justified, and what fragility or recovery controls are required? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "humanTask": {
           "section": "Human task",
-          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling?"
+          "description": "Which steps should remain human because of judgement, accountability, risk, consent, policy, or exception handling? Mark this candidate as considered, selected, rejected, or not relevant."
         },
         "feasibilityReliabilitySecurity": {
           "section": "Feasibility, reliability, security",
@@ -3884,8 +4044,8 @@
     },
     "automationReadinessOperationsCanvas": {
       "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Confirm that the automation can be safely released, operated, monitored, and recovered.",
-      "howToUse": "Use this as a release and operations gate. Confirm ownership, access, environments, evidence, exception handling, monitoring, support, fallback, rollback, documentation, deployment decision, known risks, and improvement backlog.",
+      "purpose": "Prepare the operating model for a safely released, supported, monitored, and recoverable automation.",
+      "howToUse": "Use this during delivery to prepare ownership, environments, access, evidence, monitoring, support, fallback, rollback, runbooks, known risks, and the deployment decision. Use the readiness checklist later for the release gate.",
       "sections": {
         "businessOwner": {
           "section": "Business owner",
@@ -3940,8 +4100,8 @@
           "description": "What operating instructions, design records, architecture decisions, user guidance, and runbooks are ready?"
         },
         "deploymentDecision": {
-          "section": "Deployment decision",
-          "description": "What is the release decision, who approves it, and what conditions or remediation actions apply?"
+          "section": "Release readiness status",
+          "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
         },
         "knownRisks": {
           "section": "Known risks",

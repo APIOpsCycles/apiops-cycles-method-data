@@ -171,7 +171,7 @@
   "businessImpactCanvas": {
     "id": "businessImpactCanvas",
     "layout": {
-      "columns": 3,
+      "columns": 4,
       "rows": 2
     },
     "metadata": {
@@ -184,7 +184,7 @@
     },
     "sections": [
       {
-        "id": "availabilityRisks",
+        "id": "expectedBenefits",
         "gridPosition": {
           "column": 0,
           "row": 0,
@@ -195,56 +195,77 @@
         "highlight": true
       },
       {
-        "id": "securityRisks",
+        "id": "operationalEfficiencyImpact",
         "gridPosition": {
           "column": 1,
           "row": 0,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 3,
-        "highlight": true
-      },
-      {
-        "id": "dataRisks",
-        "gridPosition": {
-          "column": 2,
-          "row": 0,
-          "colSpan": 1,
-          "rowSpan": 1
-        },
-        "fillOrder": 5,
-        "highlight": true
-      },
-      {
-        "id": "mitigateAvailabilityRisks",
-        "gridPosition": {
-          "column": 0,
-          "row": 1,
           "colSpan": 1,
           "rowSpan": 1
         },
         "fillOrder": 2
       },
       {
-        "id": "mitigateSecurityRisks",
+        "id": "customerEmployeeImpact",
+        "gridPosition": {
+          "column": 2,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 3
+      },
+      {
+        "id": "financialImpact",
+        "gridPosition": {
+          "column": 3,
+          "row": 0,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 4,
+        "highlight": true
+      },
+      {
+        "id": "complianceStrategicImpact",
+        "gridPosition": {
+          "column": 0,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 5
+      },
+      {
+        "id": "impactOfNotProceeding",
         "gridPosition": {
           "column": 1,
           "row": 1,
           "colSpan": 1,
           "rowSpan": 1
         },
-        "fillOrder": 4
+        "fillOrder": 6
       },
       {
-        "id": "mitigateDataRisks",
+        "id": "risksAndCriticality",
         "gridPosition": {
           "column": 2,
           "row": 1,
           "colSpan": 1,
           "rowSpan": 1
         },
-        "fillOrder": 6
+        "fillOrder": 7,
+        "highlight": true
+      },
+      {
+        "id": "mitigationsAndDecisionImpact",
+        "gridPosition": {
+          "column": 3,
+          "row": 1,
+          "colSpan": 1,
+          "rowSpan": 1
+        },
+        "fillOrder": 8,
+        "highlight": true
       }
     ]
   },

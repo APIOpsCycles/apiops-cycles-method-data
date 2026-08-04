@@ -979,10 +979,6 @@
             {
               "resource": "automationOpportunityCanvas",
               "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "customerJourneyCanvas",
-              "role": "suggested-answer-owner"
             }
           ]
         },
@@ -993,22 +989,12 @@
             {
               "resource": "automationOpportunityCanvas",
               "role": "decision-owner"
-            },
-            {
-              "resource": "capabilityValuePropositionCanvas",
-              "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "domain-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "domainCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "automation-engineer",
@@ -1134,13 +1120,7 @@
         },
         {
           "stakeholder": "process-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "humanAutomationResponsibilityCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "automation-owner",
@@ -1148,13 +1128,7 @@
         },
         {
           "stakeholder": "integration-architect",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "interactionCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "consulted"
         },
         {
           "stakeholder": "platform-architect",
@@ -1170,10 +1144,6 @@
         },
         {
           "stakeholder": "compliance-specialist",
-          "involvement": "consulted"
-        },
-        {
-          "stakeholder": "api-designer",
           "involvement": "consulted"
         }
       ],
@@ -1237,7 +1207,7 @@
           "involvement": "core",
           "responsibilities": [
             {
-              "resource": "automationReadinessOperationsCanvas",
+              "resource": "automation-readiness-checklist",
               "role": "decision-owner"
             }
           ]

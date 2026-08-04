@@ -303,9 +303,6 @@
         },
         "recommendedResources": {
           "api-product-strategy": [
-            "customerJourneyCanvas",
-            "capabilityValuePropositionCanvas",
-            "domainCanvas",
             "automationOpportunityCanvas"
           ],
           "api-consumer-experience": [
@@ -313,40 +310,22 @@
             "userOperatorExperienceRequirementsCanvas"
           ],
           "api-platform-architecture": [
-            "automationArchitectureDecisionCanvas",
-            "humanAutomationResponsibilityCanvas",
-            "businessImpactCanvas",
-            "locationsCanvas",
-            "capacityCanvas",
-            "automation-operational-ownership-guide"
+            "automationArchitectureDecisionCanvas"
           ],
           "api-design": [
-            "automationWorkflowCanvas",
-            "humanAutomationResponsibilityCanvas",
-            "process-workflow-design-guide",
-            "decision-business-rules-guide",
-            "automation-trigger-handoff-exception-guide",
-            "domainCanvas",
-            "interactionCanvas"
+            "automationWorkflowCanvas"
           ],
           "api-delivery": [
-            "automationReadinessOperationsCanvas",
-            "automation-testing-guide",
-            "automation-operational-ownership-guide",
-            "automation-rollback-supervision-guide"
+            "automationReadinessOperationsCanvas"
           ],
           "api-audit": [
-            "automation-readiness-checklist",
-            "api-compliance-best-practices"
+            "automation-readiness-checklist"
           ],
           "api-publishing": [
-            "automation-rollout-enablement-guide",
-            "service-agreement-template"
+            "automation-rollout-enablement-guide"
           ],
           "monitoring-and-improving": [
-            "automation-monitoring-value-metrics",
-            "automationReadinessOperationsCanvas",
-            "automation-operational-ownership-guide"
+            "automation-monitoring-value-metrics"
           ]
         },
         "overlays": [],

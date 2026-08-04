@@ -21,20 +21,16 @@
         ],
         "how_it_works": [
           {
-            "step": "station.api-product-strategy.how_it_works",
-            "resource": "customerJourneyCanvas"
+            "step": "station.api-product-strategy.how_it_works"
           },
           {
-            "step": "station.api-product-strategy.how_it_works.1",
-            "resource": "domainCanvas"
+            "step": "station.api-product-strategy.how_it_works.1"
           },
           {
-            "step": "station.api-product-strategy.how_it_works.2",
-            "resource": "apiValuePropositionCanvas"
+            "step": "station.api-product-strategy.how_it_works.2"
           },
           {
-            "step": "station.api-product-strategy.how_it_works.3",
-            "resource": "apiBusinessModelCanvas"
+            "step": "station.api-product-strategy.how_it_works.3"
           }
         ],
         "apply_in_work": "station.api-product-strategy.apply_in_work",
@@ -68,16 +64,13 @@
         ],
         "how-it-works": [
           {
-            "step": "station.api-consumer-experience.how_it_works",
-            "resource": "apiValuePropositionCanvas"
+            "step": "station.api-consumer-experience.how_it_works"
           },
           {
-            "step": "station.api-consumer-experience.how_it_works.1",
-            "resource": "customerJourneyCanvas"
+            "step": "station.api-consumer-experience.how_it_works.1"
           },
           {
-            "step": "station.api-consumer-experience.how_it_works.2",
-            "resource": "api-onboarding-best-practices"
+            "step": "station.api-consumer-experience.how_it_works.2"
           }
         ],
         "apply_in_work": "station.api-consumer-experience.apply_in_work",
@@ -111,20 +104,16 @@
         ],
         "how_it_works": [
           {
-            "step": "station.api-platform-architecture.how_it_works",
-            "resource": "businessImpactCanvas"
+            "step": "station.api-platform-architecture.how_it_works"
           },
           {
-            "step": "station.api-platform-architecture.how_it_works.1",
-            "resource": "locationsCanvas"
+            "step": "station.api-platform-architecture.how_it_works.1"
           },
           {
-            "step": "station.api-platform-architecture.how_it_works.2",
-            "resource": "capacityCanvas"
+            "step": "station.api-platform-architecture.how_it_works.2"
           },
           {
-            "step": "station.api-platform-architecture.how_it_works.3",
-            "resource": "api-metrics-and-analytics"
+            "step": "station.api-platform-architecture.how_it_works.3"
           }
         ],
         "apply_in_work": "station.api-platform-architecture.apply_in_work",
@@ -159,36 +148,28 @@
         ],
         "how_it_works": [
           {
-            "step": "station.api-design.how_it_works",
-            "resource": "domainCanvas"
+            "step": "station.api-design.how_it_works"
           },
           {
-            "step": "station.api-design.how_it_works.1",
-            "resource": "interactionCanvas"
+            "step": "station.api-design.how_it_works.1"
           },
           {
-            "step": "station.api-design.how_it_works.2",
-            "resource": "restCanvas"
+            "step": "station.api-design.how_it_works.2"
           },
           {
-            "step": "station.api-design.how_it_works.3",
-            "resource": "eventCanvas"
+            "step": "station.api-design.how_it_works.3"
           },
           {
-            "step": "station.api-design.how_it_works.4",
-            "resource": "graphqlCanvas"
+            "step": "station.api-design.how_it_works.4"
           },
           {
-            "step": "station.api-design.how_it_works.5",
-            "resource": "api-design-principles"
+            "step": "station.api-design.how_it_works.5"
           },
           {
-            "step": "station.api-design.how_it_works.6",
-            "resource": "contract-first-design"
+            "step": "station.api-design.how_it_works.6"
           },
           {
-            "step": "station.api-design.how_it_works.7",
-            "resource": "api-audit-checklist"
+            "step": "station.api-design.how_it_works.7"
           }
         ],
         "apply_in_work": "station.api-design.apply_in_work",
@@ -222,28 +203,22 @@
         ],
         "how_it_works": [
           {
-            "step": "station.api-delivery.how_it_works",
-            "resource": "api-development-best-practices"
+            "step": "station.api-delivery.how_it_works"
           },
           {
-            "step": "station.api-delivery.how_it_works.1",
-            "resource": "api-development-best-practices"
+            "step": "station.api-delivery.how_it_works.1"
           },
           {
-            "step": "station.api-delivery.how_it_works.2",
-            "resource": "api-testing-best-practices"
+            "step": "station.api-delivery.how_it_works.2"
           },
           {
-            "step": "station.api-delivery.how_it_works.3",
-            "resource": "apiops-CI-CD-for-apis"
+            "step": "station.api-delivery.how_it_works.3"
           },
           {
-            "step": "station.api-delivery.how_it_works.4",
-            "resource": "api-security-best-practices"
+            "step": "station.api-delivery.how_it_works.4"
           },
           {
-            "step": "station.api-delivery.how_it_works.5",
-            "resource": "api-audit-checklist"
+            "step": "station.api-delivery.how_it_works.5"
           }
         ],
         "apply_in_work": "station.api-delivery.apply_in_work",
@@ -277,15 +252,22 @@
         ],
         "how_it_works": [
           {
-            "step": "station.api-audit.how_it_works",
-            "resource": "api-audit-checklist"
+            "step": "station.api-audit.how_it_works"
           },
           {
-            "step": "station.api-audit.how_it_works.1",
-            "resource": "api-compliance-best-practices"
+            "step": "station.api-audit.how_it_works.1"
           },
           {
             "step": "station.api-audit.how_it_works.2"
+          },
+          {
+            "step": "station.api-audit.how_it_works.3"
+          },
+          {
+            "step": "station.api-audit.how_it_works.4"
+          },
+          {
+            "step": "station.api-audit.how_it_works.5"
           }
         ],
         "apply_in_work": "station.api-audit.apply_in_work",
@@ -320,16 +302,16 @@
         ],
         "how_it_works": [
           {
-            "step": "station.api-publishing.how_it_works",
-            "resource": "apiops-CI-CD-for-apis"
+            "step": "station.api-publishing.how_it_works"
           },
           {
-            "step": "station.api-publishing.how_it_works.1",
-            "resource": "api-onboarding-best-practices"
+            "step": "station.api-publishing.how_it_works.1"
           },
           {
-            "step": "station.api-publishing.how_it_works.2",
-            "resource": "api-audit-checklist"
+            "step": "station.api-publishing.how_it_works.2"
+          },
+          {
+            "step": "station.api-publishing.how_it_works.3"
           }
         ],
         "apply_in_work": "station.api-publishing.apply_in_work",
@@ -363,16 +345,16 @@
         ],
         "how_it_works": [
           {
-            "step": "station.monitoring-and-improving.how_it_works",
-            "resource": "api-metrics-and-analytics"
+            "step": "station.monitoring-and-improving.how_it_works"
           },
           {
-            "step": "station.monitoring-and-improving.how_it_works.1",
-            "resource": "api-community-engagement-strategies"
+            "step": "station.monitoring-and-improving.how_it_works.1"
           },
           {
-            "step": "station.monitoring-and-improving.how_it_works.2",
-            "resource": "apiops-CI-CD-for-apis"
+            "step": "station.monitoring-and-improving.how_it_works.2"
+          },
+          {
+            "step": "station.monitoring-and-improving.how_it_works.3"
           }
         ],
         "apply_in_work": "station.monitoring-and-improving.apply_in_work",
