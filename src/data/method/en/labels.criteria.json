@@ -27,5 +27,7 @@
   "criterion.automation-owner-confirmed": "Ownership is clear for the automation opportunity, process decisions, PoC validation, risks, and lifecycle outcomes.",
   "criterion.automation-architecture-and-controls-validated": "The selected automation architecture, implementation mechanisms, human controls, security constraints, and recovery approach have been validated with the relevant stakeholders.",
   "criterion.automation-operational-readiness-confirmed": "The automation has evidence for functional correctness, permissions, exception handling, oversight, monitoring, support, rollback, and operational ownership.",
-  "criterion.automation-value-monitoring-ready": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements."
+  "criterion.automation-value-monitoring-ready": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements.",
+  "criterion.integration-readiness-confirmed": "Integration contracts, schemas, mappings, test evidence, environments, permissions, credentials, monitoring, support, replay, reconciliation, fallback, recovery, risks, and ownership have been reviewed for release readiness.",
+  "criterion.integration-published-for-reuse": "The integration capability is discoverable with published ownership, lifecycle status, contracts, schemas, service expectations, access and onboarding paths, support, versioning, and feedback channels."
 }

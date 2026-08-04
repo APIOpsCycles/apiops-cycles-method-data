@@ -641,10 +641,16 @@
       ]
     },
     "integration-productization-cycle": {
-      "api-product-strategy": [
+      "integration-capability-strategy": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integrationCapabilityHypothesisCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "business-owner",
@@ -693,11 +699,15 @@
           "involvement": "consulted"
         }
       ],
-      "api-consumer-experience": [
+      "integration-consumer-requirements-onboarding": [
         {
           "stakeholder": "api-consumer-specialist",
           "involvement": "lead",
           "responsibilities": [
+            {
+              "resource": "integrationConsumerProviderRequirementsCanvas",
+              "role": "suggested-answer-owner"
+            },
             {
               "resource": "consumerExperienceRequirementsCanvas",
               "role": "suggested-answer-owner"
@@ -729,11 +739,15 @@
           "involvement": "consulted"
         }
       ],
-      "api-platform-architecture": [
+      "integration-architecture-platform-decisions": [
         {
           "stakeholder": "platform-architect",
           "involvement": "lead",
           "responsibilities": [
+            {
+              "resource": "integrationArchitectureDecisionCanvas",
+              "role": "suggested-answer-owner"
+            },
             {
               "resource": "locationsCanvas",
               "role": "suggested-answer-owner"
@@ -785,10 +799,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-design": [
+      "integration-solution-design": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "interactionCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "api-designer",
@@ -819,10 +839,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-delivery": [
+      "integration-delivery-operations": [
         {
           "stakeholder": "api-engineer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integrationReadinessOperationsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "integration-architect",
@@ -853,10 +879,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-audit": [
+      "integration-readiness-assurance": [
         {
           "stakeholder": "governance-specialist",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integration-readiness-checklist",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "integration-architect",
@@ -887,10 +919,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-publishing": [
+      "integration-publishing-enablement": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integration-publishing-discovery-guide",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "api-devrel-specialist",
@@ -921,10 +959,16 @@
           "involvement": "consulted"
         }
       ],
-      "monitoring-and-improving": [
+      "integration-monitoring-improvement": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integration-monitoring-value-metrics",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "operations-specialist",

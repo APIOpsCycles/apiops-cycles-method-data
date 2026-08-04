@@ -106,5 +106,13 @@
   {
     "id": "automation-value-monitoring-ready",
     "description": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements."
+  },
+  {
+    "id": "integration-readiness-confirmed",
+    "description": "Integration contracts, schemas, mappings, test evidence, environments, permissions, credentials, monitoring, support, replay, reconciliation, fallback, recovery, risks, and ownership have been reviewed for release readiness."
+  },
+  {
+    "id": "integration-published-for-reuse",
+    "description": "The integration capability is discoverable with published ownership, lifecycle status, contracts, schemas, service expectations, access and onboarding paths, support, versioning, and feedback channels."
   }
 ]

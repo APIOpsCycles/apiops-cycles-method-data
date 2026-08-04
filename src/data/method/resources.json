@@ -1565,6 +1565,573 @@
         ]
       },
       "category": "guideline"
+    },
+    {
+      "id": "integrationCapabilityHypothesisCanvas",
+      "title": "resource.integration-capability-hypothesis-canvas.title",
+      "slug": "resources/integration-capability-hypothesis-canvas",
+      "icon": "dashboard-outline",
+      "order": 196,
+      "description": "resource.integration-capability-hypothesis-canvas.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-capability-hypothesis-canvas.outcomes",
+        "resource.integration-capability-hypothesis-canvas.outcomes.1",
+        "resource.integration-capability-hypothesis-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-capability-hypothesis-canvas.steps",
+          "resource.integration-capability-hypothesis-canvas.steps.1",
+          "resource.integration-capability-hypothesis-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.integration-capability-hypothesis-canvas.tips",
+          "resource.integration-capability-hypothesis-canvas.tips.1"
+        ]
+      },
+      "category": "canvas",
+      "canvas": "integrationCapabilityHypothesisCanvas"
+    },
+    {
+      "id": "integrationConsumerProviderRequirementsCanvas",
+      "title": "resource.integration-consumer-provider-requirements-canvas.title",
+      "slug": "resources/integration-consumer-provider-requirements-canvas",
+      "icon": "dashboard-outline",
+      "order": 197,
+      "description": "resource.integration-consumer-provider-requirements-canvas.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-consumer-provider-requirements-canvas.outcomes",
+        "resource.integration-consumer-provider-requirements-canvas.outcomes.1",
+        "resource.integration-consumer-provider-requirements-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-consumer-provider-requirements-canvas.steps",
+          "resource.integration-consumer-provider-requirements-canvas.steps.1",
+          "resource.integration-consumer-provider-requirements-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.integration-consumer-provider-requirements-canvas.tips",
+          "resource.integration-consumer-provider-requirements-canvas.tips.1"
+        ]
+      },
+      "category": "canvas",
+      "canvas": "integrationConsumerProviderRequirementsCanvas"
+    },
+    {
+      "id": "integrationArchitectureDecisionCanvas",
+      "title": "resource.integration-architecture-decision-canvas.title",
+      "slug": "resources/integration-architecture-decision-canvas",
+      "icon": "dashboard-outline",
+      "order": 198,
+      "description": "resource.integration-architecture-decision-canvas.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-architecture-decision-canvas.outcomes",
+        "resource.integration-architecture-decision-canvas.outcomes.1",
+        "resource.integration-architecture-decision-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-architecture-decision-canvas.steps",
+          "resource.integration-architecture-decision-canvas.steps.1",
+          "resource.integration-architecture-decision-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.integration-architecture-decision-canvas.tips",
+          "resource.integration-architecture-decision-canvas.tips.1"
+        ]
+      },
+      "category": "canvas",
+      "canvas": "integrationArchitectureDecisionCanvas"
+    },
+    {
+      "id": "integrationReadinessOperationsCanvas",
+      "title": "resource.integration-readiness-operations-canvas.title",
+      "slug": "resources/integration-readiness-operations-canvas",
+      "icon": "dashboard-outline",
+      "order": 199,
+      "description": "resource.integration-readiness-operations-canvas.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-readiness-operations-canvas.outcomes",
+        "resource.integration-readiness-operations-canvas.outcomes.1",
+        "resource.integration-readiness-operations-canvas.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-readiness-operations-canvas.steps",
+          "resource.integration-readiness-operations-canvas.steps.1",
+          "resource.integration-readiness-operations-canvas.steps.2"
+        ],
+        "tips": [
+          "resource.integration-readiness-operations-canvas.tips",
+          "resource.integration-readiness-operations-canvas.tips.1"
+        ]
+      },
+      "category": "canvas",
+      "canvas": "integrationReadinessOperationsCanvas"
+    },
+    {
+      "id": "integration-consumer-onboarding-guide",
+      "title": "resource.integration-consumer-onboarding-guide.title",
+      "slug": "resources/integration-consumer-onboarding-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 200,
+      "description": "resource.integration-consumer-onboarding-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-consumer-onboarding-guide.outcomes",
+        "resource.integration-consumer-onboarding-guide.outcomes.1",
+        "resource.integration-consumer-onboarding-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-consumer-onboarding-guide.steps",
+          "resource.integration-consumer-onboarding-guide.steps.1",
+          "resource.integration-consumer-onboarding-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-consumer-onboarding-guide.tips",
+          "resource.integration-consumer-onboarding-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-access-environment-checklist",
+      "title": "resource.integration-access-environment-checklist.title",
+      "slug": "resources/integration-access-environment-checklist",
+      "icon": "check-box-outline",
+      "draft": "true",
+      "order": 201,
+      "description": "resource.integration-access-environment-checklist.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-access-environment-checklist.outcomes",
+        "resource.integration-access-environment-checklist.outcomes.1",
+        "resource.integration-access-environment-checklist.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-access-environment-checklist.steps",
+          "resource.integration-access-environment-checklist.steps.1",
+          "resource.integration-access-environment-checklist.steps.2"
+        ],
+        "tips": [
+          "resource.integration-access-environment-checklist.tips",
+          "resource.integration-access-environment-checklist.tips.1"
+        ]
+      },
+      "category": "checklist"
+    },
+    {
+      "id": "integration-style-design-guide",
+      "title": "resource.integration-style-design-guide.title",
+      "slug": "resources/integration-style-design-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 202,
+      "description": "resource.integration-style-design-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-style-design-guide.outcomes",
+        "resource.integration-style-design-guide.outcomes.1",
+        "resource.integration-style-design-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-style-design-guide.steps",
+          "resource.integration-style-design-guide.steps.1",
+          "resource.integration-style-design-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-style-design-guide.tips",
+          "resource.integration-style-design-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-development-best-practices",
+      "title": "resource.integration-development-best-practices.title",
+      "slug": "resources/integration-development-best-practices",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 203,
+      "description": "resource.integration-development-best-practices.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-development-best-practices.outcomes",
+        "resource.integration-development-best-practices.outcomes.1",
+        "resource.integration-development-best-practices.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-development-best-practices.steps",
+          "resource.integration-development-best-practices.steps.1",
+          "resource.integration-development-best-practices.steps.2"
+        ],
+        "tips": [
+          "resource.integration-development-best-practices.tips",
+          "resource.integration-development-best-practices.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-testing-guide",
+      "title": "resource.integration-testing-guide.title",
+      "slug": "resources/integration-testing-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 204,
+      "description": "resource.integration-testing-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-testing-guide.outcomes",
+        "resource.integration-testing-guide.outcomes.1",
+        "resource.integration-testing-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-testing-guide.steps",
+          "resource.integration-testing-guide.steps.1",
+          "resource.integration-testing-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-testing-guide.tips",
+          "resource.integration-testing-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-ci-cd-deployment-guide",
+      "title": "resource.integration-ci-cd-deployment-guide.title",
+      "slug": "resources/integration-ci-cd-deployment-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 205,
+      "description": "resource.integration-ci-cd-deployment-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-ci-cd-deployment-guide.outcomes",
+        "resource.integration-ci-cd-deployment-guide.outcomes.1",
+        "resource.integration-ci-cd-deployment-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-ci-cd-deployment-guide.steps",
+          "resource.integration-ci-cd-deployment-guide.steps.1",
+          "resource.integration-ci-cd-deployment-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-ci-cd-deployment-guide.tips",
+          "resource.integration-ci-cd-deployment-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-security-guide",
+      "title": "resource.integration-security-guide.title",
+      "slug": "resources/integration-security-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 206,
+      "description": "resource.integration-security-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-security-guide.outcomes",
+        "resource.integration-security-guide.outcomes.1",
+        "resource.integration-security-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-security-guide.steps",
+          "resource.integration-security-guide.steps.1",
+          "resource.integration-security-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-security-guide.tips",
+          "resource.integration-security-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-recovery-reconciliation-guide",
+      "title": "resource.integration-recovery-reconciliation-guide.title",
+      "slug": "resources/integration-recovery-reconciliation-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 207,
+      "description": "resource.integration-recovery-reconciliation-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-recovery-reconciliation-guide.outcomes",
+        "resource.integration-recovery-reconciliation-guide.outcomes.1",
+        "resource.integration-recovery-reconciliation-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-recovery-reconciliation-guide.steps",
+          "resource.integration-recovery-reconciliation-guide.steps.1",
+          "resource.integration-recovery-reconciliation-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-recovery-reconciliation-guide.tips",
+          "resource.integration-recovery-reconciliation-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-readiness-checklist",
+      "title": "resource.integration-readiness-checklist.title",
+      "slug": "resources/integration-readiness-checklist",
+      "icon": "check-box-outline",
+      "draft": "true",
+      "order": 208,
+      "description": "resource.integration-readiness-checklist.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-readiness-checklist.outcomes",
+        "resource.integration-readiness-checklist.outcomes.1",
+        "resource.integration-readiness-checklist.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-readiness-checklist.steps",
+          "resource.integration-readiness-checklist.steps.1",
+          "resource.integration-readiness-checklist.steps.2"
+        ],
+        "tips": [
+          "resource.integration-readiness-checklist.tips",
+          "resource.integration-readiness-checklist.tips.1"
+        ]
+      },
+      "category": "checklist"
+    },
+    {
+      "id": "integration-compliance-data-governance-guide",
+      "title": "resource.integration-compliance-data-governance-guide.title",
+      "slug": "resources/integration-compliance-data-governance-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 209,
+      "description": "resource.integration-compliance-data-governance-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-compliance-data-governance-guide.outcomes",
+        "resource.integration-compliance-data-governance-guide.outcomes.1",
+        "resource.integration-compliance-data-governance-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-compliance-data-governance-guide.steps",
+          "resource.integration-compliance-data-governance-guide.steps.1",
+          "resource.integration-compliance-data-governance-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-compliance-data-governance-guide.tips",
+          "resource.integration-compliance-data-governance-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-publishing-discovery-guide",
+      "title": "resource.integration-publishing-discovery-guide.title",
+      "slug": "resources/integration-publishing-discovery-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 210,
+      "description": "resource.integration-publishing-discovery-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-publishing-discovery-guide.outcomes",
+        "resource.integration-publishing-discovery-guide.outcomes.1",
+        "resource.integration-publishing-discovery-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-publishing-discovery-guide.steps",
+          "resource.integration-publishing-discovery-guide.steps.1",
+          "resource.integration-publishing-discovery-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-publishing-discovery-guide.tips",
+          "resource.integration-publishing-discovery-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-service-agreement-template",
+      "title": "resource.integration-service-agreement-template.title",
+      "slug": "resources/integration-service-agreement-template",
+      "icon": "contract-outline",
+      "draft": "true",
+      "order": 211,
+      "description": "resource.integration-service-agreement-template.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-service-agreement-template.outcomes",
+        "resource.integration-service-agreement-template.outcomes.1",
+        "resource.integration-service-agreement-template.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-service-agreement-template.steps",
+          "resource.integration-service-agreement-template.steps.1",
+          "resource.integration-service-agreement-template.steps.2"
+        ],
+        "tips": [
+          "resource.integration-service-agreement-template.tips",
+          "resource.integration-service-agreement-template.tips.1"
+        ]
+      },
+      "category": "template"
+    },
+    {
+      "id": "integration-versioning-deprecation-guide",
+      "title": "resource.integration-versioning-deprecation-guide.title",
+      "slug": "resources/integration-versioning-deprecation-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 212,
+      "description": "resource.integration-versioning-deprecation-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-versioning-deprecation-guide.outcomes",
+        "resource.integration-versioning-deprecation-guide.outcomes.1",
+        "resource.integration-versioning-deprecation-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-versioning-deprecation-guide.steps",
+          "resource.integration-versioning-deprecation-guide.steps.1",
+          "resource.integration-versioning-deprecation-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-versioning-deprecation-guide.tips",
+          "resource.integration-versioning-deprecation-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-monitoring-value-metrics",
+      "title": "resource.integration-monitoring-value-metrics.title",
+      "slug": "resources/integration-monitoring-value-metrics",
+      "icon": "analytics-outline",
+      "draft": "true",
+      "order": 213,
+      "description": "resource.integration-monitoring-value-metrics.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-monitoring-value-metrics.outcomes",
+        "resource.integration-monitoring-value-metrics.outcomes.1",
+        "resource.integration-monitoring-value-metrics.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-monitoring-value-metrics.steps",
+          "resource.integration-monitoring-value-metrics.steps.1",
+          "resource.integration-monitoring-value-metrics.steps.2"
+        ],
+        "tips": [
+          "resource.integration-monitoring-value-metrics.tips",
+          "resource.integration-monitoring-value-metrics.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-consumer-feedback-adoption-guide",
+      "title": "resource.integration-consumer-feedback-adoption-guide.title",
+      "slug": "resources/integration-consumer-feedback-adoption-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 214,
+      "description": "resource.integration-consumer-feedback-adoption-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-consumer-feedback-adoption-guide.outcomes",
+        "resource.integration-consumer-feedback-adoption-guide.outcomes.1",
+        "resource.integration-consumer-feedback-adoption-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-consumer-feedback-adoption-guide.steps",
+          "resource.integration-consumer-feedback-adoption-guide.steps.1",
+          "resource.integration-consumer-feedback-adoption-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-consumer-feedback-adoption-guide.tips",
+          "resource.integration-consumer-feedback-adoption-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-reliability-data-quality-metrics",
+      "title": "resource.integration-reliability-data-quality-metrics.title",
+      "slug": "resources/integration-reliability-data-quality-metrics",
+      "icon": "analytics-outline",
+      "draft": "true",
+      "order": 215,
+      "description": "resource.integration-reliability-data-quality-metrics.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-reliability-data-quality-metrics.outcomes",
+        "resource.integration-reliability-data-quality-metrics.outcomes.1",
+        "resource.integration-reliability-data-quality-metrics.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-reliability-data-quality-metrics.steps",
+          "resource.integration-reliability-data-quality-metrics.steps.1",
+          "resource.integration-reliability-data-quality-metrics.steps.2"
+        ],
+        "tips": [
+          "resource.integration-reliability-data-quality-metrics.tips",
+          "resource.integration-reliability-data-quality-metrics.tips.1"
+        ]
+      },
+      "category": "guideline"
+    },
+    {
+      "id": "integration-lifecycle-management-guide",
+      "title": "resource.integration-lifecycle-management-guide.title",
+      "slug": "resources/integration-lifecycle-management-guide",
+      "icon": "edit-document-outline",
+      "draft": "true",
+      "order": 216,
+      "description": "resource.integration-lifecycle-management-guide.description",
+      "image": "",
+      "outcomes": [
+        "resource.integration-lifecycle-management-guide.outcomes",
+        "resource.integration-lifecycle-management-guide.outcomes.1",
+        "resource.integration-lifecycle-management-guide.outcomes.2"
+      ],
+      "how_it_works": {
+        "steps": [
+          "resource.integration-lifecycle-management-guide.steps",
+          "resource.integration-lifecycle-management-guide.steps.1",
+          "resource.integration-lifecycle-management-guide.steps.2"
+        ],
+        "tips": [
+          "resource.integration-lifecycle-management-guide.tips",
+          "resource.integration-lifecycle-management-guide.tips.1"
+        ]
+      },
+      "category": "guideline"
     }
   ]
 }

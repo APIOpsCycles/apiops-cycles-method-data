@@ -20,7 +20,9 @@
           "market-insights",
           "business-goals",
           "competitive-analysis",
-          "ecosystem-vision"
+          "ecosystem-vision",
+          "integration-monitoring-improvement",
+          "integration-capability-strategy"
         ]
       },
       {
@@ -38,7 +40,10 @@
           "legal-and-compliance",
           "security-and-privacy",
           "design-standards",
-          "vendor-management"
+          "vendor-management",
+          "integration-capability-strategy",
+          "integration-consumer-requirements-onboarding",
+          "integration-architecture-platform-decisions"
         ]
       },
       {
@@ -52,7 +57,11 @@
           "api-platform-architecture",
           "api-design",
           "api-delivery",
-          "api-audit"
+          "api-audit",
+          "integration-architecture-platform-decisions",
+          "integration-solution-design",
+          "integration-delivery-operations",
+          "integration-readiness-assurance"
         ]
       },
       {
@@ -68,7 +77,8 @@
           "development",
           "ci-cd",
           "test-automation",
-          "release-management"
+          "release-management",
+          "integration-delivery-operations"
         ]
       },
       {
@@ -85,7 +95,10 @@
           "service-agreements",
           "api-consumer-adoption",
           "api-promotion",
-          "partner-integration"
+          "partner-integration",
+          "integration-readiness-assurance",
+          "integration-publishing-enablement",
+          "integration-monitoring-improvement"
         ]
       },
       {
@@ -102,7 +115,8 @@
           "upskilling",
           "operating-guidelines",
           "portfolio-management",
-          "budget-and-resource-management"
+          "budget-and-resource-management",
+          "integration-capability-strategy"
         ]
       }
     ]

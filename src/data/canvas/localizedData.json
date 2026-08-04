@@ -820,6 +820,242 @@
           "description": "Which improvements, unresolved assumptions, PoC findings, and future enhancements should be prioritized next?"
         }
       }
+    },
+    "integrationCapabilityHypothesisCanvas": {
+      "title": "Integration Capability Hypothesis Canvas",
+      "purpose": "Priorisieren Sie eine wiederverwendbare Integrationsfähigkeit, indem Sie Verbraucher-, Wert-, Domänen-, Ownership-, Wiederverwendungs- und Viabilitätsnachweise mit klarem Umfang, Annahmen, Validierungsschritt und Fortfahren-oder-Stoppen-Entscheidung verbinden.",
+      "howToUse": "Beginnen Sie hier vor der Architekturentscheidung. Verweisen Sie nur dort auf Journey, Wertversprechen, Domäne, Geschäftsmodell, Impact, Kapazität oder andere Nachweise, wo sie die Hypothese stützen.",
+      "sections": {
+        "hypothesis": {
+          "section": "Integrationsfähigkeitshypothese",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Integrationsfähigkeitshypothese festgehalten werden?"
+        },
+        "consumersAndReuseScope": {
+          "section": "Vorgesehene Consumer und Wiederverwendungsumfang",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Vorgesehene Consumer und Wiederverwendungsumfang festgehalten werden?"
+        },
+        "providerAndOwner": {
+          "section": "Provider und Owner",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Provider und Owner festgehalten werden?"
+        },
+        "supportingEvidence": {
+          "section": "Unterstützende Nachweise",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Unterstützende Nachweise festgehalten werden?"
+        },
+        "implementationStyleHypothesis": {
+          "section": "Anfängliche Implementierungsstil-Hypothese",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Anfängliche Implementierungsstil-Hypothese festgehalten werden?"
+        },
+        "criticalAssumptions": {
+          "section": "Kritische Annahmen",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Kritische Annahmen festgehalten werden?"
+        },
+        "validationExperiment": {
+          "section": "Validierungsexperiment",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Validierungsexperiment festgehalten werden?"
+        },
+        "decision": {
+          "section": "Entscheidung",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Entscheidung festgehalten werden?"
+        }
+      }
+    },
+    "integrationConsumerProviderRequirementsCanvas": {
+      "title": "Integration Consumer & Provider Requirements Canvas",
+      "purpose": "Erfassen Sie, was konsumierende Systeme, Teams, Produzenten, Provider und Betreiber benötigen, bevor die Integrationsumsetzung ausgewählt oder entworfen wird.",
+      "howToUse": "Nutzen Sie dies, um Onboarding, Zugriff, Umgebungen, Identität, Kompatibilität, Serviceerwartungen, Datenqualität, Support und Wiederherstellungsanforderungen explizit zu machen.",
+      "sections": {
+        "consumerSystemsAndTeams": {
+          "section": "Consumer-Systeme und Teams",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Consumer-Systeme und Teams festgehalten werden?"
+        },
+        "providerResponsibilities": {
+          "section": "Provider-Verantwortlichkeiten",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Provider-Verantwortlichkeiten festgehalten werden?"
+        },
+        "interactionAndDataNeeds": {
+          "section": "Interaktions- und Datenbedarfe",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Interaktions- und Datenbedarfe festgehalten werden?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding und Zugriff",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Onboarding und Zugriff festgehalten werden?"
+        },
+        "environmentsAndTestAccess": {
+          "section": "Umgebungen und Testzugriff",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Umgebungen und Testzugriff festgehalten werden?"
+        },
+        "credentialsAndIdentity": {
+          "section": "Credentials und Identität",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Credentials und Identität festgehalten werden?"
+        },
+        "compatibilityAndVersioning": {
+          "section": "Kompatibilität und Versionierung",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Kompatibilität und Versionierung festgehalten werden?"
+        },
+        "serviceExpectations": {
+          "section": "Serviceerwartungen",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Serviceerwartungen festgehalten werden?"
+        },
+        "dataQualityAndObservability": {
+          "section": "Datenqualität und Beobachtbarkeit",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Datenqualität und Beobachtbarkeit festgehalten werden?"
+        },
+        "supportAndFailureHandling": {
+          "section": "Support und Fehlerbehandlung",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Support und Fehlerbehandlung festgehalten werden?"
+        },
+        "replayReconciliationRecovery": {
+          "section": "Replay, Abstimmung, Wiederherstellung",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Replay, Abstimmung, Wiederherstellung festgehalten werden?"
+        }
+      }
+    },
+    "integrationArchitectureDecisionCanvas": {
+      "title": "Integration Architecture Decision Canvas",
+      "purpose": "Vergleichen und begründen Sie Integrationsstile, Plattformfähigkeiten, Governance-Randbedingungen und abgelehnte Alternativen.",
+      "howToUse": "Markieren Sie jeden Kandidatenstil als betrachtet, ausgewählt, abgelehnt oder nicht relevant. Vergleichen Sie tragfähige Optionen nach Timing, Kopplung, Dateneigentum, Konsistenz, Zuverlässigkeit, Sicherheit, Wartbarkeit, Beobachtbarkeit, Wiederherstellung, Kosten, Governance und Skills.",
+      "sections": {
+        "synchronousApi": {
+          "section": "Synchrone API",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Synchrone API festgehalten werden?"
+        },
+        "eventDriven": {
+          "section": "Asynchrones Event",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Asynchrones Event festgehalten werden?"
+        },
+        "messagingQueue": {
+          "section": "Messaging oder Queue",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Messaging oder Queue festgehalten werden?"
+        },
+        "batchFileExchange": {
+          "section": "Batch- oder Dateiaustausch",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Batch- oder Dateiaustausch festgehalten werden?"
+        },
+        "stream": {
+          "section": "Stream",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Stream festgehalten werden?"
+        },
+        "etlElt": {
+          "section": "ETL oder ELT",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für ETL oder ELT festgehalten werden?"
+        },
+        "dataProduct": {
+          "section": "Datenprodukt",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Datenprodukt festgehalten werden?"
+        },
+        "directDatabase": {
+          "section": "Direkte Datenbankintegration",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Direkte Datenbankintegration festgehalten werden?"
+        },
+        "sharedPlatform": {
+          "section": "Gemeinsame Integrationsplattform",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Gemeinsame Integrationsplattform festgehalten werden?"
+        },
+        "pointToPoint": {
+          "section": "Point-to-Point",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Point-to-Point festgehalten werden?"
+        },
+        "managedConnector": {
+          "section": "Managed Connector",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Managed Connector festgehalten werden?"
+        },
+        "customIntegration": {
+          "section": "Custom Integration",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Custom Integration festgehalten werden?"
+        },
+        "hybridApproach": {
+          "section": "Hybrider Ansatz",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Hybrider Ansatz festgehalten werden?"
+        },
+        "evaluationCriteria": {
+          "section": "Bewertungskriterien",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Bewertungskriterien festgehalten werden?"
+        },
+        "selectedStyleAndPlatform": {
+          "section": "Ausgewählter Stil und Plattform",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Ausgewählter Stil und Plattform festgehalten werden?"
+        },
+        "rationaleAndRejectedAlternatives": {
+          "section": "Begründung und abgelehnte Alternativen",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Begründung und abgelehnte Alternativen festgehalten werden?"
+        },
+        "openRisksAndAssumptions": {
+          "section": "Offene Risiken und Annahmen",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Offene Risiken und Annahmen festgehalten werden?"
+        }
+      }
+    },
+    "integrationReadinessOperationsCanvas": {
+      "title": "Integration Readiness & Operations Canvas",
+      "purpose": "Bereiten Sie das Betriebsmodell für eine sicher freigegebene, unterstützte, überwachte, wiederherstellbare und wiederverwendbare Integrationsfähigkeit vor.",
+      "howToUse": "Nutzen Sie dies während der Lieferung, um Ownership, Umgebungen, Credentials, Deployment, Monitoring, Support, Retry, Replay, Abstimmung, Fallback, Rollback, Incidents, Testnachweise, Risiken und Readiness-Status vorzubereiten.",
+      "sections": {
+        "businessOwner": {
+          "section": "Business Owner",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Business Owner festgehalten werden?"
+        },
+        "integrationOwner": {
+          "section": "Integration Owner",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Integration Owner festgehalten werden?"
+        },
+        "producerOwners": {
+          "section": "Producer Owner",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Producer Owner festgehalten werden?"
+        },
+        "consumerOwners": {
+          "section": "Consumer Owner",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Consumer Owner festgehalten werden?"
+        },
+        "platformOwner": {
+          "section": "Platform Owner",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Platform Owner festgehalten werden?"
+        },
+        "environments": {
+          "section": "Umgebungen",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Umgebungen festgehalten werden?"
+        },
+        "credentials": {
+          "section": "Credentials",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Credentials festgehalten werden?"
+        },
+        "deployment": {
+          "section": "Deployment",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Deployment festgehalten werden?"
+        },
+        "monitoring": {
+          "section": "Monitoring",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Monitoring festgehalten werden?"
+        },
+        "support": {
+          "section": "Support",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Support festgehalten werden?"
+        },
+        "retryReplay": {
+          "section": "Retry und Replay",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Retry und Replay festgehalten werden?"
+        },
+        "reconciliation": {
+          "section": "Abstimmung",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Abstimmung festgehalten werden?"
+        },
+        "fallbackRollback": {
+          "section": "Fallback und Rollback",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Fallback und Rollback festgehalten werden?"
+        },
+        "incidentOwnership": {
+          "section": "Incident Ownership",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Incident Ownership festgehalten werden?"
+        },
+        "testEvidenceKnownRisks": {
+          "section": "Testnachweise und bekannte Risiken",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Testnachweise und bekannte Risiken festgehalten werden?"
+        },
+        "readinessStatus": {
+          "section": "Readiness-Status",
+          "description": "Welche Angaben, Nachweise, Entscheidungen und offenen Punkte müssen für Readiness-Status festgehalten werden?"
+        }
+      }
     }
   },
   "en": {
@@ -1055,8 +1291,8 @@
     },
     "eventCanvas": {
       "title": "Event Canvas",
-      "purpose": "What events are relevant to the API, and how are they processed?",
-      "howToUse": "Define the events, their triggers, and the processing logic for each API.",
+      "purpose": "What events are relevant to the integration capability, and how are they produced, consumed, processed, and governed?",
+      "howToUse": "Define event triggers, payloads, processing logic, ownership, consumers, and governance for the selected integration capability.",
       "sections": {
         "userTaskTrigger": {
           "section": "User Task / Trigger",
@@ -1641,6 +1877,242 @@
         "improvementBacklog": {
           "section": "Improvement backlog",
           "description": "Which improvements, unresolved assumptions, PoC findings, and future enhancements should be prioritized next?"
+        }
+      }
+    },
+    "integrationCapabilityHypothesisCanvas": {
+      "title": "Integration Capability Hypothesis Canvas",
+      "purpose": "Prioritize a reusable integration capability hypothesis by linking consumer, value, domain, ownership, reuse, and viability evidence to a clear scope, assumptions, validation step, and proceed-or-stop decision.",
+      "howToUse": "Start here before architecture selection. Reference journey, value proposition, domain, business model, impact, capacity, or other evidence only where it supports the hypothesis.",
+      "sections": {
+        "hypothesis": {
+          "section": "Integration capability hypothesis",
+          "description": "What reusable integration capability do we believe should exist, for which consumers, and what outcome should it achieve?"
+        },
+        "consumersAndReuseScope": {
+          "section": "Intended consumers and reuse scope",
+          "description": "Which current and future consumers, use cases, boundaries, and reuse limits are in scope?"
+        },
+        "providerAndOwner": {
+          "section": "Provider and owner",
+          "description": "Who provides the capability, who owns it as a product, and who operates it?"
+        },
+        "supportingEvidence": {
+          "section": "Supporting evidence",
+          "description": "Which journey, value, domain, business model, impact, capacity, or other evidence supports this hypothesis?"
+        },
+        "implementationStyleHypothesis": {
+          "section": "Initial implementation-style hypothesis",
+          "description": "What is the current assumption about API, event, file, stream, data product, direct integration, connector, or hybrid style?"
+        },
+        "criticalAssumptions": {
+          "section": "Critical assumptions",
+          "description": "Which assumptions could invalidate value, feasibility, ownership, reuse, operability, compliance, or adoption?"
+        },
+        "validationExperiment": {
+          "section": "Validation experiment",
+          "description": "What is the smallest useful validation step, what evidence decides success, and what stop conditions apply?"
+        },
+        "decision": {
+          "section": "Decision",
+          "description": "What is the evidence-based decision: proceed, revise and retest, narrow scope, or reject?"
+        }
+      }
+    },
+    "integrationConsumerProviderRequirementsCanvas": {
+      "title": "Integration Consumer & Provider Requirements Canvas",
+      "purpose": "Capture what consumer systems, teams, producers, providers, and operators need before selecting or designing the integration implementation.",
+      "howToUse": "Use this to make onboarding, access, environments, identity, compatibility, service expectations, data quality, support, and recovery requirements explicit.",
+      "sections": {
+        "consumerSystemsAndTeams": {
+          "section": "Consumer systems and teams",
+          "description": "Which systems, teams, partners, products, processes, or data consumers need this integration capability?"
+        },
+        "providerResponsibilities": {
+          "section": "Provider responsibilities",
+          "description": "What must the producer, provider, platform, or owning team commit to?"
+        },
+        "interactionAndDataNeeds": {
+          "section": "Interaction and data needs",
+          "description": "What data, events, commands, files, timing, freshness, ordering, and transformation expectations must be supported?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding and access",
+          "description": "How do consumers discover, request access, get approved, and start using the capability?"
+        },
+        "environmentsAndTestAccess": {
+          "section": "Environments and test access",
+          "description": "Which sandbox, test, staging, production, partner, or synthetic-data environments are needed?"
+        },
+        "credentialsAndIdentity": {
+          "section": "Credentials and identity",
+          "description": "What identities, credentials, secrets, certificates, tokens, permissions, or trust boundaries are required?"
+        },
+        "compatibilityAndVersioning": {
+          "section": "Compatibility and versioning",
+          "description": "What compatibility, change notice, migration, deprecation, and versioning expectations apply?"
+        },
+        "serviceExpectations": {
+          "section": "Service expectations",
+          "description": "What availability, latency, throughput, support hours, incident, and service-level expectations matter?"
+        },
+        "dataQualityAndObservability": {
+          "section": "Data quality and observability",
+          "description": "What validation, completeness, consistency, reconciliation, traceability, status, and monitoring visibility is required?"
+        },
+        "supportAndFailureHandling": {
+          "section": "Support and failure handling",
+          "description": "How are errors, partial failures, timeouts, consumer issues, provider incidents, and support escalations handled?"
+        },
+        "replayReconciliationRecovery": {
+          "section": "Replay, reconciliation, recovery",
+          "description": "What replay, retry, duplicate handling, ordering, reconciliation, fallback, restart, and recovery expectations apply?"
+        }
+      }
+    },
+    "integrationArchitectureDecisionCanvas": {
+      "title": "Integration Architecture Decision Canvas",
+      "purpose": "Compare and justify integration implementation styles, platform capabilities, governance constraints, and rejected alternatives.",
+      "howToUse": "Mark each candidate style as considered, selected, rejected, or not relevant. Compare viable options against timing, coupling, data ownership, consistency, reliability, security, maintainability, observability, recovery, cost, governance, and skills.",
+      "sections": {
+        "synchronousApi": {
+          "section": "Synchronous API",
+          "description": "Where does request-response interaction fit the timing, coupling, reliability, and consumer experience needs?"
+        },
+        "eventDriven": {
+          "section": "Asynchronous event",
+          "description": "Where should events be published or consumed to decouple producers and consumers?"
+        },
+        "messagingQueue": {
+          "section": "Messaging or queue",
+          "description": "Where are queues, topics, routing, buffering, delivery guarantees, or dead-letter handling needed?"
+        },
+        "batchFileExchange": {
+          "section": "Batch or file exchange",
+          "description": "Where do scheduled files, batches, manifests, schema validation, restartability, or delivery windows fit?"
+        },
+        "stream": {
+          "section": "Stream",
+          "description": "Where is continuous high-volume, low-latency, ordered, or replayable data movement needed?"
+        },
+        "etlElt": {
+          "section": "ETL or ELT",
+          "description": "Where are extraction, transformation, loading, lineage, and data platform operations the right fit?"
+        },
+        "dataProduct": {
+          "section": "Data product",
+          "description": "Where should curated, governed, discoverable data be exposed as a reusable product?"
+        },
+        "directDatabase": {
+          "section": "Direct database integration",
+          "description": "Where is direct database access considered, and what coupling, ownership, security, and change risks does it create?"
+        },
+        "sharedPlatform": {
+          "section": "Shared integration platform",
+          "description": "Where should platform capabilities, gateways, brokers, iPaaS, catalogs, or managed services be used?"
+        },
+        "pointToPoint": {
+          "section": "Point-to-point",
+          "description": "Where is a narrow point-to-point integration acceptable, and what reuse or maintainability tradeoffs follow?"
+        },
+        "managedConnector": {
+          "section": "Managed connector",
+          "description": "Where can SaaS, low-code, marketplace, or vendor-managed connectors satisfy the need?"
+        },
+        "customIntegration": {
+          "section": "Custom integration",
+          "description": "Where is custom code justified because standard patterns or connectors are insufficient?"
+        },
+        "hybridApproach": {
+          "section": "Hybrid approach",
+          "description": "Which combination of API, event, file, stream, data product, connector, platform, and custom integration is needed?"
+        },
+        "evaluationCriteria": {
+          "section": "Evaluation criteria",
+          "description": "How do options compare on interaction, timing, coupling, data ownership, consistency, reliability, replay, latency, volume, security, maintainability, observability, cost, governance, vendor dependency, and skills?"
+        },
+        "selectedStyleAndPlatform": {
+          "section": "Selected style and platform",
+          "description": "Which style or hybrid and which platform capabilities are selected?"
+        },
+        "rationaleAndRejectedAlternatives": {
+          "section": "Rationale and rejected alternatives",
+          "description": "Why is this decision preferred, and why were other viable alternatives rejected?"
+        },
+        "openRisksAndAssumptions": {
+          "section": "Open risks and assumptions",
+          "description": "Which risks, assumptions, dependencies, standards, or unresolved constraints must be tracked before release?"
+        }
+      }
+    },
+    "integrationReadinessOperationsCanvas": {
+      "title": "Integration Readiness & Operations Canvas",
+      "purpose": "Prepare the operating model for a safely released, supported, monitored, recoverable, and reusable integration capability.",
+      "howToUse": "Use this during delivery to prepare ownership, environments, credentials, deployment, monitoring, support, retry, replay, reconciliation, fallback, rollback, incidents, test evidence, risks, and readiness status.",
+      "sections": {
+        "businessOwner": {
+          "section": "Business owner",
+          "description": "Who owns business value, reuse intent, funding, prioritization, and release acceptance?"
+        },
+        "integrationOwner": {
+          "section": "Integration owner",
+          "description": "Who owns the integration capability lifecycle, changes, roadmap, and operational accountability?"
+        },
+        "producerOwners": {
+          "section": "Producer owners",
+          "description": "Who owns source systems, events, data, schemas, contracts, and producer-side incidents?"
+        },
+        "consumerOwners": {
+          "section": "Consumer owners",
+          "description": "Which consumer owners must be ready for onboarding, testing, migration, and production use?"
+        },
+        "platformOwner": {
+          "section": "Platform owner",
+          "description": "Who owns gateway, broker, iPaaS, data platform, runtime, network, or shared platform responsibilities?"
+        },
+        "environments": {
+          "section": "Environments",
+          "description": "Which development, test, sandbox, staging, production, partner, and recovery environments are ready?"
+        },
+        "credentials": {
+          "section": "Credentials",
+          "description": "How are credentials, certificates, secrets, tokens, service identities, and access approvals managed?"
+        },
+        "deployment": {
+          "section": "Deployment",
+          "description": "How are build, release, configuration, migration, cutover, and rollback managed?"
+        },
+        "monitoring": {
+          "section": "Monitoring",
+          "description": "Which availability, latency, throughput, queue, stream, batch, file, data quality, incident, and consumer signals are monitored?"
+        },
+        "support": {
+          "section": "Support",
+          "description": "Who supports producers, consumers, platform operations, incidents, changes, and service questions?"
+        },
+        "retryReplay": {
+          "section": "Retry and replay",
+          "description": "How are retries, replay, dead-letter handling, duplicate handling, ordering, and idempotency handled?"
+        },
+        "reconciliation": {
+          "section": "Reconciliation",
+          "description": "How are records, events, files, totals, states, and downstream outcomes reconciled?"
+        },
+        "fallbackRollback": {
+          "section": "Fallback and rollback",
+          "description": "How can consumers or operations continue safely during outage, degradation, incorrect data, or release rollback?"
+        },
+        "incidentOwnership": {
+          "section": "Incident ownership",
+          "description": "Who leads incidents across producer, integration, platform, consumer, and business boundaries?"
+        },
+        "testEvidenceKnownRisks": {
+          "section": "Test evidence and known risks",
+          "description": "What test evidence, accepted residual risks, conditions, and remediation actions are documented?"
+        },
+        "readinessStatus": {
+          "section": "Readiness status",
+          "description": "What remains incomplete, conditional, or blocking before the formal readiness decision?"
         }
       }
     }
@@ -2466,6 +2938,242 @@
           "description": "Which improvements, unresolved assumptions, PoC findings, and future enhancements should be prioritized next?"
         }
       }
+    },
+    "integrationCapabilityHypothesisCanvas": {
+      "title": "Integraatiokyvykkyyden hypoteesikanvas",
+      "purpose": "Priorisoi uudelleenkäytettävä integraatiokyvykkyyshypoteesi yhdistämällä kuluttaja-, arvo-, domain-, omistajuus-, uudelleenkäyttö- ja elinkelpoisuusnäyttö selkeään rajaukseen, oletuksiin, validointiaskeleeseen ja jatka-tai-pysäytä-päätökseen.",
+      "howToUse": "Aloita tästä ennen arkkitehtuurin valintaa. Viittaa journey-, arvolupaus-, domain-, liiketoimintamalli-, vaikutus-, kapasiteetti- tai muuhun näyttöön vain silloin, kun se tukee hypoteesia.",
+      "sections": {
+        "hypothesis": {
+          "section": "Integraatiokyvykkyyden hypoteesi",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Integraatiokyvykkyyden hypoteesi pitää kirjata?"
+        },
+        "consumersAndReuseScope": {
+          "section": "Tarkoitetut kuluttajat ja uudelleenkäytön rajaus",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tarkoitetut kuluttajat ja uudelleenkäytön rajaus pitää kirjata?"
+        },
+        "providerAndOwner": {
+          "section": "Tarjoaja ja omistaja",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tarjoaja ja omistaja pitää kirjata?"
+        },
+        "supportingEvidence": {
+          "section": "Tukeva näyttö",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tukeva näyttö pitää kirjata?"
+        },
+        "implementationStyleHypothesis": {
+          "section": "Alustava toteutustyylihypoteesi",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Alustava toteutustyylihypoteesi pitää kirjata?"
+        },
+        "criticalAssumptions": {
+          "section": "Kriittiset oletukset",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Kriittiset oletukset pitää kirjata?"
+        },
+        "validationExperiment": {
+          "section": "Validointikokeilu",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Validointikokeilu pitää kirjata?"
+        },
+        "decision": {
+          "section": "Päätös",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Päätös pitää kirjata?"
+        }
+      }
+    },
+    "integrationConsumerProviderRequirementsCanvas": {
+      "title": "Integraation kuluttaja- ja tarjoajavaatimusten kanvas",
+      "purpose": "Kuvaa, mitä kuluttavat järjestelmät, tiimit, tuottajat, tarjoajat ja operoijat tarvitsevat ennen integraation toteutustavan valintaa tai suunnittelua.",
+      "howToUse": "Tee näkyväksi onboarding, pääsy, ympäristöt, identiteetti, yhteensopivuus, palveluodotukset, datan laatu, tuki ja palautumisvaatimukset.",
+      "sections": {
+        "consumerSystemsAndTeams": {
+          "section": "Kuluttajajärjestelmät ja tiimit",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Kuluttajajärjestelmät ja tiimit pitää kirjata?"
+        },
+        "providerResponsibilities": {
+          "section": "Tarjoajan vastuut",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tarjoajan vastuut pitää kirjata?"
+        },
+        "interactionAndDataNeeds": {
+          "section": "Vuorovaikutus- ja datatarpeet",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Vuorovaikutus- ja datatarpeet pitää kirjata?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding ja pääsy",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Onboarding ja pääsy pitää kirjata?"
+        },
+        "environmentsAndTestAccess": {
+          "section": "Ympäristöt ja testipääsy",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Ympäristöt ja testipääsy pitää kirjata?"
+        },
+        "credentialsAndIdentity": {
+          "section": "Tunnistetiedot ja identiteetti",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tunnistetiedot ja identiteetti pitää kirjata?"
+        },
+        "compatibilityAndVersioning": {
+          "section": "Yhteensopivuus ja versiointi",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Yhteensopivuus ja versiointi pitää kirjata?"
+        },
+        "serviceExpectations": {
+          "section": "Palveluodotukset",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Palveluodotukset pitää kirjata?"
+        },
+        "dataQualityAndObservability": {
+          "section": "Datan laatu ja havainnoitavuus",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Datan laatu ja havainnoitavuus pitää kirjata?"
+        },
+        "supportAndFailureHandling": {
+          "section": "Tuki ja virheenkäsittely",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tuki ja virheenkäsittely pitää kirjata?"
+        },
+        "replayReconciliationRecovery": {
+          "section": "Replay, täsmäytys ja palautuminen",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Replay, täsmäytys ja palautuminen pitää kirjata?"
+        }
+      }
+    },
+    "integrationArchitectureDecisionCanvas": {
+      "title": "Integraation arkkitehtuuripäätöksen kanvas",
+      "purpose": "Vertaa ja perustele integraation toteutustyylit, alustakyvykkyydet, governance-rajoitteet ja hylätyt vaihtoehdot.",
+      "howToUse": "Merkitse jokainen ehdokastyyli tarkastelluksi, valituksi, hylätyksi tai ei-relevantiksi. Vertaa toteuttamiskelpoisia vaihtoehtoja ajoituksen, kytkeytymisen, datan omistajuuden, konsistenssin, luotettavuuden, turvallisuuden, ylläpidettävyyden, havainnoitavuuden, palautumisen, kustannusten, governancen ja osaamisen perusteella.",
+      "sections": {
+        "synchronousApi": {
+          "section": "Synkroninen API",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Synkroninen API pitää kirjata?"
+        },
+        "eventDriven": {
+          "section": "Asynkroninen tapahtuma",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Asynkroninen tapahtuma pitää kirjata?"
+        },
+        "messagingQueue": {
+          "section": "Viestitys tai jono",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Viestitys tai jono pitää kirjata?"
+        },
+        "batchFileExchange": {
+          "section": "Batch- tai tiedostovaihto",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Batch- tai tiedostovaihto pitää kirjata?"
+        },
+        "stream": {
+          "section": "Stream",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Stream pitää kirjata?"
+        },
+        "etlElt": {
+          "section": "ETL tai ELT",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa ETL tai ELT pitää kirjata?"
+        },
+        "dataProduct": {
+          "section": "Datatuote",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Datatuote pitää kirjata?"
+        },
+        "directDatabase": {
+          "section": "Suora tietokantaintegraatio",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Suora tietokantaintegraatio pitää kirjata?"
+        },
+        "sharedPlatform": {
+          "section": "Yhteinen integraatioalusta",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Yhteinen integraatioalusta pitää kirjata?"
+        },
+        "pointToPoint": {
+          "section": "Point-to-point",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Point-to-point pitää kirjata?"
+        },
+        "managedConnector": {
+          "section": "Hallittu connector",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Hallittu connector pitää kirjata?"
+        },
+        "customIntegration": {
+          "section": "Räätälöity integraatio",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Räätälöity integraatio pitää kirjata?"
+        },
+        "hybridApproach": {
+          "section": "Hybridiratkaisu",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Hybridiratkaisu pitää kirjata?"
+        },
+        "evaluationCriteria": {
+          "section": "Arviointikriteerit",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Arviointikriteerit pitää kirjata?"
+        },
+        "selectedStyleAndPlatform": {
+          "section": "Valittu tyyli ja alusta",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Valittu tyyli ja alusta pitää kirjata?"
+        },
+        "rationaleAndRejectedAlternatives": {
+          "section": "Perustelu ja hylätyt vaihtoehdot",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Perustelu ja hylätyt vaihtoehdot pitää kirjata?"
+        },
+        "openRisksAndAssumptions": {
+          "section": "Avoimet riskit ja oletukset",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Avoimet riskit ja oletukset pitää kirjata?"
+        }
+      }
+    },
+    "integrationReadinessOperationsCanvas": {
+      "title": "Integraation valmius- ja operointikanvas",
+      "purpose": "Valmistele toimintamalli turvallisesti julkaistavalle, tuetulle, valvotulle, palautettavalle ja uudelleenkäytettävälle integraatiokyvykkyydelle.",
+      "howToUse": "Käytä tätä toimituksen aikana omistajuuden, ympäristöjen, tunnistetietojen, käyttöönoton, seurannan, tuen, retryn, replayn, täsmäytyksen, fallbackin, rollbackin, incidentien, testinäytön, riskien ja valmiustilan valmisteluun.",
+      "sections": {
+        "businessOwner": {
+          "section": "Business owner",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Business owner pitää kirjata?"
+        },
+        "integrationOwner": {
+          "section": "Integraation omistaja",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Integraation omistaja pitää kirjata?"
+        },
+        "producerOwners": {
+          "section": "Tuottajaomistajat",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tuottajaomistajat pitää kirjata?"
+        },
+        "consumerOwners": {
+          "section": "Kuluttajaomistajat",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Kuluttajaomistajat pitää kirjata?"
+        },
+        "platformOwner": {
+          "section": "Alustan omistaja",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Alustan omistaja pitää kirjata?"
+        },
+        "environments": {
+          "section": "Ympäristöt",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Ympäristöt pitää kirjata?"
+        },
+        "credentials": {
+          "section": "Tunnistetiedot",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tunnistetiedot pitää kirjata?"
+        },
+        "deployment": {
+          "section": "Deployment",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Deployment pitää kirjata?"
+        },
+        "monitoring": {
+          "section": "Seuranta",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Seuranta pitää kirjata?"
+        },
+        "support": {
+          "section": "Tuki",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Tuki pitää kirjata?"
+        },
+        "retryReplay": {
+          "section": "Retry ja replay",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Retry ja replay pitää kirjata?"
+        },
+        "reconciliation": {
+          "section": "Täsmäytys",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Täsmäytys pitää kirjata?"
+        },
+        "fallbackRollback": {
+          "section": "Fallback ja rollback",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Fallback ja rollback pitää kirjata?"
+        },
+        "incidentOwnership": {
+          "section": "Incident-omistajuus",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Incident-omistajuus pitää kirjata?"
+        },
+        "testEvidenceKnownRisks": {
+          "section": "Testinäyttö ja tunnetut riskit",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Testinäyttö ja tunnetut riskit pitää kirjata?"
+        },
+        "readinessStatus": {
+          "section": "Valmiustila",
+          "description": "Mitä tietoja, näyttöä, päätöksiä ja avoimia asioita kohdassa Valmiustila pitää kirjata?"
+        }
+      }
     }
   },
   "fr": {
@@ -3289,6 +3997,242 @@
           "description": "Which improvements, unresolved assumptions, PoC findings, and future enhancements should be prioritized next?"
         }
       }
+    },
+    "integrationCapabilityHypothesisCanvas": {
+      "title": "Canvas d’hypothèse de capacité d’intégration",
+      "purpose": "Prioriser une hypothèse de capacité d’intégration réutilisable en reliant les preuves consommateurs, valeur, domaine, propriété, réutilisation et viabilité à un périmètre clair, des hypothèses, une validation et une décision poursuivre ou arrêter.",
+      "howToUse": "Commencez ici avant le choix d’architecture. Référencez les preuves de parcours, proposition de valeur, domaine, modèle métier, impact, capacité ou autres uniquement lorsqu’elles soutiennent l’hypothèse.",
+      "sections": {
+        "hypothesis": {
+          "section": "Hypothèse de capacité d’intégration",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Hypothèse de capacité d’intégration?"
+        },
+        "consumersAndReuseScope": {
+          "section": "Consommateurs visés et périmètre de réutilisation",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Consommateurs visés et périmètre de réutilisation?"
+        },
+        "providerAndOwner": {
+          "section": "Fournisseur et propriétaire",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Fournisseur et propriétaire?"
+        },
+        "supportingEvidence": {
+          "section": "Preuves de support",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Preuves de support?"
+        },
+        "implementationStyleHypothesis": {
+          "section": "Hypothèse initiale de style d’implémentation",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Hypothèse initiale de style d’implémentation?"
+        },
+        "criticalAssumptions": {
+          "section": "Hypothèses critiques",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Hypothèses critiques?"
+        },
+        "validationExperiment": {
+          "section": "Expérience de validation",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Expérience de validation?"
+        },
+        "decision": {
+          "section": "Décision",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Décision?"
+        }
+      }
+    },
+    "integrationConsumerProviderRequirementsCanvas": {
+      "title": "Canvas des exigences consommateur et fournisseur d’intégration",
+      "purpose": "Capturer les besoins des systèmes consommateurs, équipes, producteurs, fournisseurs et opérateurs avant de choisir ou concevoir l’implémentation d’intégration.",
+      "howToUse": "Utilisez ceci pour rendre explicites onboarding, accès, environnements, identité, compatibilité, attentes de service, qualité des données, support et exigences de récupération.",
+      "sections": {
+        "consumerSystemsAndTeams": {
+          "section": "Systèmes consommateurs et équipes",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Systèmes consommateurs et équipes?"
+        },
+        "providerResponsibilities": {
+          "section": "Responsabilités du fournisseur",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Responsabilités du fournisseur?"
+        },
+        "interactionAndDataNeeds": {
+          "section": "Besoins d’interaction et de données",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Besoins d’interaction et de données?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding et accès",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Onboarding et accès?"
+        },
+        "environmentsAndTestAccess": {
+          "section": "Environnements et accès de test",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Environnements et accès de test?"
+        },
+        "credentialsAndIdentity": {
+          "section": "Identifiants et identité",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Identifiants et identité?"
+        },
+        "compatibilityAndVersioning": {
+          "section": "Compatibilité et versioning",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Compatibilité et versioning?"
+        },
+        "serviceExpectations": {
+          "section": "Attentes de service",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Attentes de service?"
+        },
+        "dataQualityAndObservability": {
+          "section": "Qualité des données et observabilité",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Qualité des données et observabilité?"
+        },
+        "supportAndFailureHandling": {
+          "section": "Support et gestion des échecs",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Support et gestion des échecs?"
+        },
+        "replayReconciliationRecovery": {
+          "section": "Replay, réconciliation, récupération",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Replay, réconciliation, récupération?"
+        }
+      }
+    },
+    "integrationArchitectureDecisionCanvas": {
+      "title": "Canvas de décision d’architecture d’intégration",
+      "purpose": "Comparer et justifier les styles d’implémentation d’intégration, les capacités plateforme, les contraintes de gouvernance et les alternatives rejetées.",
+      "howToUse": "Marquez chaque style candidat comme considéré, sélectionné, rejeté ou non pertinent. Comparez les options viables selon temporalité, couplage, propriété des données, cohérence, fiabilité, sécurité, maintenabilité, observabilité, récupération, coût, gouvernance et compétences.",
+      "sections": {
+        "synchronousApi": {
+          "section": "API synchrone",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour API synchrone?"
+        },
+        "eventDriven": {
+          "section": "Événement asynchrone",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Événement asynchrone?"
+        },
+        "messagingQueue": {
+          "section": "Messagerie ou file",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Messagerie ou file?"
+        },
+        "batchFileExchange": {
+          "section": "Échange batch ou fichier",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Échange batch ou fichier?"
+        },
+        "stream": {
+          "section": "Stream",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Stream?"
+        },
+        "etlElt": {
+          "section": "ETL ou ELT",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour ETL ou ELT?"
+        },
+        "dataProduct": {
+          "section": "Produit de données",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Produit de données?"
+        },
+        "directDatabase": {
+          "section": "Intégration directe base de données",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Intégration directe base de données?"
+        },
+        "sharedPlatform": {
+          "section": "Plateforme d’intégration partagée",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Plateforme d’intégration partagée?"
+        },
+        "pointToPoint": {
+          "section": "Point-à-point",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Point-à-point?"
+        },
+        "managedConnector": {
+          "section": "Connecteur managé",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Connecteur managé?"
+        },
+        "customIntegration": {
+          "section": "Intégration spécifique",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Intégration spécifique?"
+        },
+        "hybridApproach": {
+          "section": "Approche hybride",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Approche hybride?"
+        },
+        "evaluationCriteria": {
+          "section": "Critères d’évaluation",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Critères d’évaluation?"
+        },
+        "selectedStyleAndPlatform": {
+          "section": "Style et plateforme sélectionnés",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Style et plateforme sélectionnés?"
+        },
+        "rationaleAndRejectedAlternatives": {
+          "section": "Justification et alternatives rejetées",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Justification et alternatives rejetées?"
+        },
+        "openRisksAndAssumptions": {
+          "section": "Risques et hypothèses ouverts",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Risques et hypothèses ouverts?"
+        }
+      }
+    },
+    "integrationReadinessOperationsCanvas": {
+      "title": "Canvas de préparation et d’exploitation de l’intégration",
+      "purpose": "Préparer le modèle opérationnel d’une capacité d’intégration réutilisable pouvant être publiée, supportée, surveillée et récupérée en sécurité.",
+      "howToUse": "Utilisez ceci pendant la livraison pour préparer propriété, environnements, identifiants, déploiement, monitoring, support, retry, replay, réconciliation, fallback, rollback, incidents, preuves de test, risques et statut de préparation.",
+      "sections": {
+        "businessOwner": {
+          "section": "Propriétaire métier",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Propriétaire métier?"
+        },
+        "integrationOwner": {
+          "section": "Propriétaire de l’intégration",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Propriétaire de l’intégration?"
+        },
+        "producerOwners": {
+          "section": "Propriétaires producteurs",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Propriétaires producteurs?"
+        },
+        "consumerOwners": {
+          "section": "Propriétaires consommateurs",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Propriétaires consommateurs?"
+        },
+        "platformOwner": {
+          "section": "Propriétaire plateforme",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Propriétaire plateforme?"
+        },
+        "environments": {
+          "section": "Environnements",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Environnements?"
+        },
+        "credentials": {
+          "section": "Identifiants",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Identifiants?"
+        },
+        "deployment": {
+          "section": "Déploiement",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Déploiement?"
+        },
+        "monitoring": {
+          "section": "Monitoring",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Monitoring?"
+        },
+        "support": {
+          "section": "Support",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Support?"
+        },
+        "retryReplay": {
+          "section": "Retry et replay",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Retry et replay?"
+        },
+        "reconciliation": {
+          "section": "Réconciliation",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Réconciliation?"
+        },
+        "fallbackRollback": {
+          "section": "Fallback et rollback",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Fallback et rollback?"
+        },
+        "incidentOwnership": {
+          "section": "Responsabilité incidents",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Responsabilité incidents?"
+        },
+        "testEvidenceKnownRisks": {
+          "section": "Preuves de test et risques connus",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Preuves de test et risques connus?"
+        },
+        "readinessStatus": {
+          "section": "Statut de préparation",
+          "description": "Quelles informations, preuves, décisions et questions ouvertes doivent être consignées pour Statut de préparation?"
+        }
+      }
     }
   },
   "pt": {
@@ -4110,6 +5054,242 @@
         "improvementBacklog": {
           "section": "Improvement backlog",
           "description": "Which improvements, unresolved assumptions, PoC findings, and future enhancements should be prioritized next?"
+        }
+      }
+    },
+    "integrationCapabilityHypothesisCanvas": {
+      "title": "Canvas de Hipótese de Capacidade de Integração",
+      "purpose": "Priorizar uma hipótese de capacidade de integração reutilizável ligando evidências de consumidores, valor, domínio, ownership, reutilização e viabilidade a um escopo claro, pressupostos, validação e decisão de avançar ou parar.",
+      "howToUse": "Comece aqui antes da escolha de arquitetura. Referencie evidências de jornada, proposta de valor, domínio, modelo de negócio, impacto, capacidade ou outras apenas quando sustentarem a hipótese.",
+      "sections": {
+        "hypothesis": {
+          "section": "Hipótese de capacidade de integração",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Hipótese de capacidade de integração?"
+        },
+        "consumersAndReuseScope": {
+          "section": "Consumidores previstos e escopo de reutilização",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Consumidores previstos e escopo de reutilização?"
+        },
+        "providerAndOwner": {
+          "section": "Provider e owner",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Provider e owner?"
+        },
+        "supportingEvidence": {
+          "section": "Evidências de suporte",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Evidências de suporte?"
+        },
+        "implementationStyleHypothesis": {
+          "section": "Hipótese inicial de estilo de implementação",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Hipótese inicial de estilo de implementação?"
+        },
+        "criticalAssumptions": {
+          "section": "Pressupostos críticos",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Pressupostos críticos?"
+        },
+        "validationExperiment": {
+          "section": "Experiência de validação",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Experiência de validação?"
+        },
+        "decision": {
+          "section": "Decisão",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Decisão?"
+        }
+      }
+    },
+    "integrationConsumerProviderRequirementsCanvas": {
+      "title": "Canvas de Requisitos do Consumidor e Provider de Integração",
+      "purpose": "Capturar o que sistemas consumidores, equipas, produtores, providers e operadores precisam antes de selecionar ou desenhar a implementação da integração.",
+      "howToUse": "Use isto para tornar explícitos onboarding, acesso, ambientes, identidade, compatibilidade, expectativas de serviço, qualidade dos dados, suporte e requisitos de recuperação.",
+      "sections": {
+        "consumerSystemsAndTeams": {
+          "section": "Sistemas consumidores e equipas",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Sistemas consumidores e equipas?"
+        },
+        "providerResponsibilities": {
+          "section": "Responsabilidades do provider",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Responsabilidades do provider?"
+        },
+        "interactionAndDataNeeds": {
+          "section": "Necessidades de interação e dados",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Necessidades de interação e dados?"
+        },
+        "onboardingAndAccess": {
+          "section": "Onboarding e acesso",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Onboarding e acesso?"
+        },
+        "environmentsAndTestAccess": {
+          "section": "Ambientes e acesso de teste",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Ambientes e acesso de teste?"
+        },
+        "credentialsAndIdentity": {
+          "section": "Credenciais e identidade",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Credenciais e identidade?"
+        },
+        "compatibilityAndVersioning": {
+          "section": "Compatibilidade e versionamento",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Compatibilidade e versionamento?"
+        },
+        "serviceExpectations": {
+          "section": "Expectativas de serviço",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Expectativas de serviço?"
+        },
+        "dataQualityAndObservability": {
+          "section": "Qualidade dos dados e observabilidade",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Qualidade dos dados e observabilidade?"
+        },
+        "supportAndFailureHandling": {
+          "section": "Suporte e tratamento de falhas",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Suporte e tratamento de falhas?"
+        },
+        "replayReconciliationRecovery": {
+          "section": "Replay, reconciliação, recuperação",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Replay, reconciliação, recuperação?"
+        }
+      }
+    },
+    "integrationArchitectureDecisionCanvas": {
+      "title": "Canvas de Decisão de Arquitetura de Integração",
+      "purpose": "Comparar e justificar estilos de implementação de integração, capacidades de plataforma, restrições de governação e alternativas rejeitadas.",
+      "howToUse": "Marque cada estilo candidato como considerado, selecionado, rejeitado ou não relevante. Compare opções viáveis por temporização, acoplamento, ownership dos dados, consistência, fiabilidade, segurança, manutenibilidade, observabilidade, recuperação, custo, governação e competências.",
+      "sections": {
+        "synchronousApi": {
+          "section": "API síncrona",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para API síncrona?"
+        },
+        "eventDriven": {
+          "section": "Evento assíncrono",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Evento assíncrono?"
+        },
+        "messagingQueue": {
+          "section": "Mensageria ou fila",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Mensageria ou fila?"
+        },
+        "batchFileExchange": {
+          "section": "Troca batch ou ficheiro",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Troca batch ou ficheiro?"
+        },
+        "stream": {
+          "section": "Stream",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Stream?"
+        },
+        "etlElt": {
+          "section": "ETL ou ELT",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para ETL ou ELT?"
+        },
+        "dataProduct": {
+          "section": "Produto de dados",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Produto de dados?"
+        },
+        "directDatabase": {
+          "section": "Integração direta com base de dados",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Integração direta com base de dados?"
+        },
+        "sharedPlatform": {
+          "section": "Plataforma de integração partilhada",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Plataforma de integração partilhada?"
+        },
+        "pointToPoint": {
+          "section": "Point-to-point",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Point-to-point?"
+        },
+        "managedConnector": {
+          "section": "Connector gerido",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Connector gerido?"
+        },
+        "customIntegration": {
+          "section": "Integração customizada",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Integração customizada?"
+        },
+        "hybridApproach": {
+          "section": "Abordagem híbrida",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Abordagem híbrida?"
+        },
+        "evaluationCriteria": {
+          "section": "Critérios de avaliação",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Critérios de avaliação?"
+        },
+        "selectedStyleAndPlatform": {
+          "section": "Estilo e plataforma selecionados",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Estilo e plataforma selecionados?"
+        },
+        "rationaleAndRejectedAlternatives": {
+          "section": "Justificação e alternativas rejeitadas",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Justificação e alternativas rejeitadas?"
+        },
+        "openRisksAndAssumptions": {
+          "section": "Riscos e pressupostos em aberto",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Riscos e pressupostos em aberto?"
+        }
+      }
+    },
+    "integrationReadinessOperationsCanvas": {
+      "title": "Canvas de Prontidão e Operações da Integração",
+      "purpose": "Preparar o modelo operacional para uma capacidade de integração reutilizável lançada, suportada, monitorizada e recuperável com segurança.",
+      "howToUse": "Use isto durante a entrega para preparar ownership, ambientes, credenciais, deployment, monitorização, suporte, retry, replay, reconciliação, fallback, rollback, incidentes, evidências de teste, riscos e estado de prontidão.",
+      "sections": {
+        "businessOwner": {
+          "section": "Business owner",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Business owner?"
+        },
+        "integrationOwner": {
+          "section": "Owner da integração",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Owner da integração?"
+        },
+        "producerOwners": {
+          "section": "Owners produtores",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Owners produtores?"
+        },
+        "consumerOwners": {
+          "section": "Owners consumidores",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Owners consumidores?"
+        },
+        "platformOwner": {
+          "section": "Owner da plataforma",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Owner da plataforma?"
+        },
+        "environments": {
+          "section": "Ambientes",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Ambientes?"
+        },
+        "credentials": {
+          "section": "Credenciais",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Credenciais?"
+        },
+        "deployment": {
+          "section": "Deployment",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Deployment?"
+        },
+        "monitoring": {
+          "section": "Monitorização",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Monitorização?"
+        },
+        "support": {
+          "section": "Suporte",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Suporte?"
+        },
+        "retryReplay": {
+          "section": "Retry e replay",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Retry e replay?"
+        },
+        "reconciliation": {
+          "section": "Reconciliação",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Reconciliação?"
+        },
+        "fallbackRollback": {
+          "section": "Fallback e rollback",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Fallback e rollback?"
+        },
+        "incidentOwnership": {
+          "section": "Ownership de incidentes",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Ownership de incidentes?"
+        },
+        "testEvidenceKnownRisks": {
+          "section": "Evidências de teste e riscos conhecidos",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Evidências de teste e riscos conhecidos?"
+        },
+        "readinessStatus": {
+          "section": "Estado de prontidão",
+          "description": "Que informação, evidências, decisões e pontos em aberto devem ser registados para Estado de prontidão?"
         }
       }
     }

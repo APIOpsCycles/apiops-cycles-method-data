@@ -190,69 +190,65 @@
         "description": "cycle.integration-productization-cycle.description",
         "purpose": "cycle.integration-productization-cycle.purpose",
         "stations": [
-          "api-product-strategy",
-          "api-consumer-experience",
-          "api-platform-architecture",
-          "api-design",
-          "api-delivery",
-          "api-audit",
-          "api-publishing",
-          "monitoring-and-improving"
+          "integration-capability-strategy",
+          "integration-consumer-requirements-onboarding",
+          "integration-architecture-platform-decisions",
+          "integration-solution-design",
+          "integration-delivery-operations",
+          "integration-readiness-assurance",
+          "integration-publishing-enablement",
+          "integration-monitoring-improvement"
         ],
         "stationLabels": {
-          "api-product-strategy": "cycle.station.integration-capability-strategy",
-          "api-consumer-experience": "cycle.station.integration-consumer-requirements-onboarding",
-          "api-platform-architecture": "cycle.station.integration-architecture-decision",
-          "api-design": "cycle.station.integration-solution-design",
-          "api-delivery": "cycle.station.integration-delivery-operations",
-          "api-audit": "cycle.station.integration-readiness-assurance",
-          "api-publishing": "cycle.station.capability-publishing",
-          "monitoring-and-improving": "cycle.station.integration-monitoring-improvement"
+          "integration-capability-strategy": "cycle.station.integration-capability-strategy",
+          "integration-consumer-requirements-onboarding": "cycle.station.integration-consumer-requirements-onboarding",
+          "integration-architecture-platform-decisions": "cycle.station.integration-architecture-decision",
+          "integration-solution-design": "cycle.station.integration-solution-design",
+          "integration-delivery-operations": "cycle.station.integration-delivery-operations",
+          "integration-readiness-assurance": "cycle.station.integration-readiness-assurance",
+          "integration-publishing-enablement": "cycle.station.capability-publishing",
+          "integration-monitoring-improvement": "cycle.station.integration-monitoring-improvement"
         },
         "recommendedResources": {
-          "api-product-strategy": [
-            "customerJourneyCanvas",
-            "domainCanvas",
-            "capabilityValuePropositionCanvas",
-            "capabilityBusinessModelCanvas"
+          "integration-capability-strategy": [
+            "integrationCapabilityHypothesisCanvas"
           ],
-          "api-consumer-experience": [
-            "consumerExperienceRequirementsCanvas",
-            "api-onboarding-best-practices"
+          "integration-consumer-requirements-onboarding": [
+            "integrationConsumerProviderRequirementsCanvas",
+            "integration-consumer-onboarding-guide",
+            "integration-access-environment-checklist"
           ],
-          "api-platform-architecture": [
-            "businessImpactCanvas",
-            "locationsCanvas",
-            "capacityCanvas",
-            "partner-integration-guidelines"
+          "integration-architecture-platform-decisions": [
+            "integrationArchitectureDecisionCanvas"
           ],
-          "api-design": [
-            "domainCanvas",
+          "integration-solution-design": [
             "interactionCanvas",
-            "integration-style-selection-guide",
-            "restCanvas",
-            "eventCanvas",
-            "graphqlCanvas",
-            "contract-first-design"
+            "contract-first-design",
+            "integration-style-design-guide"
           ],
-          "api-delivery": [
-            "api-development-best-practices",
-            "api-testing-best-practices",
-            "apiops-CI-CD-for-apis",
-            "api-security-best-practices",
-            "partner-integration-guidelines"
+          "integration-delivery-operations": [
+            "integrationReadinessOperationsCanvas",
+            "integration-development-best-practices",
+            "integration-testing-guide",
+            "integration-ci-cd-deployment-guide",
+            "integration-security-guide",
+            "integration-recovery-reconciliation-guide"
           ],
-          "api-audit": [
-            "api-audit-checklist",
-            "api-compliance-best-practices"
+          "integration-readiness-assurance": [
+            "integration-readiness-checklist",
+            "integration-compliance-data-governance-guide"
           ],
-          "api-publishing": [
-            "api-onboarding-best-practices",
-            "service-agreement-template"
+          "integration-publishing-enablement": [
+            "integration-publishing-discovery-guide",
+            "integration-consumer-onboarding-guide",
+            "integration-service-agreement-template",
+            "integration-versioning-deprecation-guide"
           ],
-          "monitoring-and-improving": [
-            "api-metrics-and-analytics",
-            "api-community-engagement-strategies"
+          "integration-monitoring-improvement": [
+            "integration-monitoring-value-metrics",
+            "integration-consumer-feedback-adoption-guide",
+            "integration-reliability-data-quality-metrics",
+            "integration-lifecycle-management-guide"
           ]
         },
         "entryCriteria": [
@@ -261,18 +257,18 @@
         ],
         "exitCriteria": [
           "architecture-patterns-validated",
-          "api-description-available",
-          "audit-passed"
+          "integration-readiness-confirmed",
+          "integration-published-for-reuse"
         ],
         "stationDescriptions": {
-          "api-product-strategy": "cycle.integration-productization-cycle.station.api-product-strategy.description",
-          "api-consumer-experience": "cycle.integration-productization-cycle.station.api-consumer-experience.description",
-          "api-platform-architecture": "cycle.integration-productization-cycle.station.api-platform-architecture.description",
-          "api-design": "cycle.integration-productization-cycle.station.api-design.description",
-          "api-delivery": "cycle.integration-productization-cycle.station.api-delivery.description",
-          "api-audit": "cycle.integration-productization-cycle.station.api-audit.description",
-          "api-publishing": "cycle.integration-productization-cycle.station.api-publishing.description",
-          "monitoring-and-improving": "cycle.integration-productization-cycle.station.monitoring-and-improving.description"
+          "integration-capability-strategy": "cycle.integration-productization-cycle.station.integration-capability-strategy.description",
+          "integration-consumer-requirements-onboarding": "cycle.integration-productization-cycle.station.integration-consumer-requirements-onboarding.description",
+          "integration-architecture-platform-decisions": "cycle.integration-productization-cycle.station.integration-architecture-platform-decisions.description",
+          "integration-solution-design": "cycle.integration-productization-cycle.station.integration-solution-design.description",
+          "integration-delivery-operations": "cycle.integration-productization-cycle.station.integration-delivery-operations.description",
+          "integration-readiness-assurance": "cycle.integration-productization-cycle.station.integration-readiness-assurance.description",
+          "integration-publishing-enablement": "cycle.integration-productization-cycle.station.integration-publishing-enablement.description",
+          "integration-monitoring-improvement": "cycle.integration-productization-cycle.station.integration-monitoring-improvement.description"
         }
       },
       {
