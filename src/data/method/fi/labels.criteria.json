@@ -22,5 +22,14 @@
   "criterion.api-ready-for-publishing": "Kyvykkyys on valmis julkaistavaksi tai toimitettavaksi valitun toimitusmekanismin kautta.",
   "criterion.api-documentation-ready": "Hyödyntäjille suunnattu dokumentaatio ja käyttöönottomateriaalit ovat valmiit.",
   "criterion.consumer-support-ready": "Hyödyntäjien käyttöönotto-, tuki- ja viestintäprosessit ovat valmiit.",
-  "criterion.legal-compliance-clear": "Julkaisun tai toimituksen oikeudelliset, tietosuoja- ja vaatimustenmukaisuusvaatimukset on määritelty ja ymmärretty."
+  "criterion.legal-compliance-clear": "Julkaisun tai toimituksen oikeudelliset, tietosuoja- ja vaatimustenmukaisuusvaatimukset on määritelty ja ymmärretty.",
+  "criterion.automation-opportunity-evidence-ready": "The automation hypothesis has enough referenced evidence about expected outcome, scope, initial implementation assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed.",
+  "criterion.automation-owner-confirmed": "Ownership is clear for the automation opportunity, process decisions, PoC validation, risks, and lifecycle outcomes.",
+  "criterion.automation-architecture-and-controls-validated": "The selected automation architecture, implementation mechanisms, human controls, security constraints, and recovery approach have been validated with the relevant stakeholders.",
+  "criterion.automation-operational-readiness-confirmed": "The automation has evidence for functional correctness, permissions, exception handling, oversight, monitoring, support, rollback, and operational ownership.",
+  "criterion.automation-value-monitoring-ready": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements.",
+  "criterion.integration-readiness-confirmed": "Integraatiosopimukset, skeemat, mäppäykset, testinäyttö, ympäristöt, oikeudet, tunnistetiedot, seuranta, tuki, replay, täsmäytys, fallback, palautuminen, riskit ja omistajuus on arvioitu julkaisuvalmiutta varten.",
+  "criterion.integration-published-for-reuse": "Integraatiokyvykkyys on löydettävissä ja sille on julkaistu omistajuus, elinkaaritila, sopimukset, skeemat, palveluodotukset, pääsy- ja onboarding-polut, tuki, versiointi ja palautekanavat.",
+  "criterion.capability-readiness-confirmed": "Kyvykkyyden suunnittelu, palvelumäärittely, testinäyttö, toimintamalli, oikeudet, seuranta, tuki, fallback, elinkaarijärjestelyt, riskit ja omistajuus on arvioitu julkaisuvalmiutta varten.",
+  "criterion.capability-published-for-reuse": "Uudelleenkäytettävä kyvykkyys on löydettävissä ja sille on julkaistu tarkoitus, arvo, omistajuus, elinkaaritila, käyttöehdot, palveluodotukset, pääsypolut, tuki, versiointi ja palautekanavat."
 }

@@ -86,5 +86,41 @@
   {
     "id": "legal-compliance-clear",
     "description": "Legal, privacy, and compliance requirements for publishing are defined and understood."
+  },
+  {
+    "id": "automation-opportunity-evidence-ready",
+    "description": "The automation hypothesis has enough referenced evidence about expected outcome, scope, initial implementation assumptions, critical risks, validation experiment, thresholds, and decision to determine whether it should proceed."
+  },
+  {
+    "id": "automation-owner-confirmed",
+    "description": "Ownership is clear for the automation opportunity, process decisions, PoC validation, risks, and lifecycle outcomes."
+  },
+  {
+    "id": "automation-architecture-and-controls-validated",
+    "description": "The selected automation architecture, implementation mechanisms, human controls, security constraints, and recovery approach have been validated with the relevant stakeholders."
+  },
+  {
+    "id": "automation-operational-readiness-confirmed",
+    "description": "The automation has evidence for functional correctness, permissions, exception handling, oversight, monitoring, support, rollback, and operational ownership."
+  },
+  {
+    "id": "automation-value-monitoring-ready",
+    "description": "Automation performance, process outcomes, risk signals, manual interventions, incidents, and realized benefits can be monitored and used to prioritize improvements."
+  },
+  {
+    "id": "integration-readiness-confirmed",
+    "description": "Integration contracts, schemas, mappings, test evidence, environments, permissions, credentials, monitoring, support, replay, reconciliation, fallback, recovery, risks, and ownership have been reviewed for release readiness."
+  },
+  {
+    "id": "integration-published-for-reuse",
+    "description": "The integration capability is discoverable with published ownership, lifecycle status, contracts, schemas, service expectations, access and onboarding paths, support, versioning, and feedback channels."
+  },
+  {
+    "id": "capability-readiness-confirmed",
+    "description": "Capability design, service definition, test evidence, operating model, permissions, monitoring, support, fallback, lifecycle arrangements, risks, and ownership have been reviewed for release readiness."
+  },
+  {
+    "id": "capability-published-for-reuse",
+    "description": "The reusable capability is discoverable with published purpose, value, ownership, lifecycle status, usage conditions, service expectations, access paths, support, versioning, and feedback channels."
   }
 ]

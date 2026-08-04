@@ -1,40 +1,24 @@
 {
   "stationStakeholdersByCycle": {
     "capability-productization-cycle": {
-      "api-product-strategy": [
+      "capability-strategy": [
         {
           "stakeholder": "capability-owner",
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "capabilityValuePropositionCanvas",
-              "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "capabilityBusinessModelCanvas",
+              "resource": "capabilityHypothesisCanvas",
               "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "business-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "customerJourneyCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "domainCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "customer-specialist",
@@ -53,10 +37,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-consumer-experience": [
+      "capability-consumer-producer-requirements": [
         {
           "stakeholder": "customer-specialist",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capabilityConsumerProducerRequirementsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "capability-owner",
@@ -64,13 +54,7 @@
         },
         {
           "stakeholder": "api-consumer-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "consumerExperienceRequirementsCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
@@ -89,36 +73,24 @@
           "involvement": "consulted"
         }
       ],
-      "api-platform-architecture": [
+      "capability-architecture-platform-decisions": [
         {
           "stakeholder": "platform-architect",
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "locationsCanvas",
+              "resource": "capabilityArchitectureDecisionCanvas",
               "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "capability-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "businessImpactCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "capacityCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "security-specialist",
@@ -141,10 +113,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-design": [
+      "capability-solution-interaction-design": [
         {
           "stakeholder": "api-designer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capabilitySolutionDesignCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "capability-owner",
@@ -175,10 +153,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-delivery": [
+      "capability-delivery-operations": [
         {
           "stakeholder": "api-engineer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capabilityReadinessOperationsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "platform-architect",
@@ -205,10 +189,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-audit": [
+      "capability-readiness-assurance": [
         {
           "stakeholder": "governance-specialist",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capability-readiness-checklist",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "security-specialist",
@@ -239,10 +229,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-publishing": [
+      "capability-publishing-enablement": [
         {
           "stakeholder": "capability-owner",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capability-publishing-discovery-guide",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "api-devrel-specialist",
@@ -269,10 +265,16 @@
           "involvement": "consulted"
         }
       ],
-      "monitoring-and-improving": [
+      "capability-monitoring-improvement": [
         {
           "stakeholder": "capability-owner",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "capability-monitoring-value-metrics",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "business-owner",
@@ -641,44 +643,28 @@
       ]
     },
     "integration-productization-cycle": {
-      "api-product-strategy": [
+      "integration-capability-strategy": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integrationCapabilityHypothesisCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "business-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "customerJourneyCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "domainCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "capability-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "capabilityValuePropositionCanvas",
-              "role": "suggested-answer-owner"
-            },
-            {
-              "resource": "capabilityBusinessModelCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
@@ -693,13 +679,13 @@
           "involvement": "consulted"
         }
       ],
-      "api-consumer-experience": [
+      "integration-consumer-requirements-onboarding": [
         {
           "stakeholder": "api-consumer-specialist",
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "consumerExperienceRequirementsCanvas",
+              "resource": "integrationConsumerProviderRequirementsCanvas",
               "role": "suggested-answer-owner"
             }
           ]
@@ -729,36 +715,24 @@
           "involvement": "consulted"
         }
       ],
-      "api-platform-architecture": [
+      "integration-architecture-platform-decisions": [
         {
           "stakeholder": "platform-architect",
           "involvement": "lead",
           "responsibilities": [
             {
-              "resource": "locationsCanvas",
+              "resource": "integrationArchitectureDecisionCanvas",
               "role": "suggested-answer-owner"
             }
           ]
         },
         {
           "stakeholder": "integration-architect",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "businessImpactCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "capacityCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "security-specialist",
@@ -785,10 +759,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-design": [
+      "integration-solution-design": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integrationSolutionDesignCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "api-designer",
@@ -819,10 +799,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-delivery": [
+      "integration-delivery-operations": [
         {
           "stakeholder": "api-engineer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integrationReadinessOperationsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "integration-architect",
@@ -853,10 +839,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-audit": [
+      "integration-readiness-assurance": [
         {
           "stakeholder": "governance-specialist",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integration-readiness-checklist",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "integration-architect",
@@ -887,10 +879,16 @@
           "involvement": "consulted"
         }
       ],
-      "api-publishing": [
+      "integration-publishing-enablement": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integration-publishing-discovery-guide",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "api-devrel-specialist",
@@ -921,10 +919,16 @@
           "involvement": "consulted"
         }
       ],
-      "monitoring-and-improving": [
+      "integration-monitoring-improvement": [
         {
           "stakeholder": "integration-architect",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "integration-monitoring-value-metrics",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "operations-specialist",
@@ -964,31 +968,37 @@
       "api-product-strategy": [
         {
           "stakeholder": "automation-owner",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "automationOpportunityCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "process-owner",
-          "involvement": "core"
+          "involvement": "core",
+          "responsibilities": [
+            {
+              "resource": "automationOpportunityCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "business-owner",
           "involvement": "core",
           "responsibilities": [
             {
-              "resource": "customerJourneyCanvas",
-              "role": "suggested-answer-owner"
+              "resource": "automationOpportunityCanvas",
+              "role": "decision-owner"
             }
           ]
         },
         {
           "stakeholder": "domain-specialist",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "domainCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "core"
         },
         {
           "stakeholder": "automation-engineer",
@@ -996,6 +1006,10 @@
         },
         {
           "stakeholder": "platform-owner",
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "security-specialist",
           "involvement": "consulted"
         },
         {
@@ -1006,7 +1020,13 @@
       "api-consumer-experience": [
         {
           "stakeholder": "process-owner",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "humanAutomationResponsibilityCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "automation-owner",
@@ -1014,24 +1034,28 @@
         },
         {
           "stakeholder": "customer-specialist",
-          "involvement": "core"
+          "involvement": "core",
+          "responsibilities": [
+            {
+              "resource": "userOperatorExperienceRequirementsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "domain-specialist",
           "involvement": "core"
         },
         {
-          "stakeholder": "api-consumer-specialist",
-          "involvement": "consulted",
-          "responsibilities": [
-            {
-              "resource": "consumerExperienceRequirementsCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "stakeholder": "operations-specialist",
+          "involvement": "core"
         },
         {
-          "stakeholder": "operations-specialist",
+          "stakeholder": "automation-engineer",
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "security-specialist",
           "involvement": "consulted"
         },
         {
@@ -1041,12 +1065,14 @@
       ],
       "api-platform-architecture": [
         {
-          "stakeholder": "platform-owner",
-          "involvement": "lead"
-        },
-        {
           "stakeholder": "platform-architect",
-          "involvement": "core"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "automationArchitectureDecisionCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "automation-owner",
@@ -1054,6 +1080,14 @@
         },
         {
           "stakeholder": "automation-engineer",
+          "involvement": "core"
+        },
+        {
+          "stakeholder": "integration-architect",
+          "involvement": "core"
+        },
+        {
+          "stakeholder": "platform-owner",
           "involvement": "core"
         },
         {
@@ -1069,14 +1103,24 @@
           "involvement": "consulted"
         },
         {
-          "stakeholder": "integration-architect",
+          "stakeholder": "process-owner",
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "business-owner",
           "involvement": "consulted"
         }
       ],
       "api-design": [
         {
           "stakeholder": "automation-engineer",
-          "involvement": "lead"
+          "involvement": "lead",
+          "responsibilities": [
+            {
+              "resource": "automationWorkflowCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "process-owner",
@@ -1088,21 +1132,15 @@
         },
         {
           "stakeholder": "integration-architect",
-          "involvement": "core",
-          "responsibilities": [
-            {
-              "resource": "interactionCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "platform-architect",
+          "involvement": "core"
         },
         {
           "stakeholder": "domain-specialist",
           "involvement": "core"
-        },
-        {
-          "stakeholder": "api-designer",
-          "involvement": "consulted"
         },
         {
           "stakeholder": "security-specialist",
@@ -1120,11 +1158,23 @@
         },
         {
           "stakeholder": "automation-owner",
-          "involvement": "core"
+          "involvement": "core",
+          "responsibilities": [
+            {
+              "resource": "automationReadinessOperationsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "operations-specialist",
-          "involvement": "core"
+          "involvement": "core",
+          "responsibilities": [
+            {
+              "resource": "automationReadinessOperationsCanvas",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "platform-architect",
@@ -1136,6 +1186,10 @@
         },
         {
           "stakeholder": "process-owner",
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "integration-architect",
           "involvement": "consulted"
         },
         {
@@ -1154,10 +1208,20 @@
         },
         {
           "stakeholder": "automation-owner",
-          "involvement": "core"
+          "involvement": "core",
+          "responsibilities": [
+            {
+              "resource": "automation-readiness-checklist",
+              "role": "decision-owner"
+            }
+          ]
         },
         {
           "stakeholder": "process-owner",
+          "involvement": "core"
+        },
+        {
+          "stakeholder": "operations-specialist",
           "involvement": "core"
         },
         {
@@ -1173,11 +1237,11 @@
           "involvement": "consulted"
         },
         {
-          "stakeholder": "operations-specialist",
+          "stakeholder": "platform-architect",
           "involvement": "consulted"
         },
         {
-          "stakeholder": "platform-architect",
+          "stakeholder": "business-owner",
           "involvement": "consulted"
         }
       ],
@@ -1195,7 +1259,7 @@
           "involvement": "core"
         },
         {
-          "stakeholder": "api-devrel-specialist",
+          "stakeholder": "customer-specialist",
           "involvement": "core"
         },
         {
@@ -1204,6 +1268,10 @@
         },
         {
           "stakeholder": "business-owner",
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "security-specialist",
           "involvement": "consulted"
         },
         {
@@ -1222,7 +1290,13 @@
         },
         {
           "stakeholder": "operations-specialist",
-          "involvement": "core"
+          "involvement": "core",
+          "responsibilities": [
+            {
+              "resource": "automation-monitoring-value-metrics",
+              "role": "suggested-answer-owner"
+            }
+          ]
         },
         {
           "stakeholder": "automation-engineer",
@@ -1230,7 +1304,7 @@
         },
         {
           "stakeholder": "business-owner",
-          "involvement": "consulted"
+          "involvement": "core"
         },
         {
           "stakeholder": "platform-owner",
@@ -1242,6 +1316,10 @@
         },
         {
           "stakeholder": "compliance-specialist",
+          "involvement": "consulted"
+        },
+        {
+          "stakeholder": "domain-specialist",
           "involvement": "consulted"
         }
       ]
