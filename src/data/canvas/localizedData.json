@@ -1123,35 +1123,35 @@
       "sections": {
         "hypothesis": {
           "section": "Fähigkeitshypothese",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Fähigkeitshypothese festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Fähigkeitshypothese festgehalten werden?"
         },
         "targetConsumersUseCases": {
           "section": "Ziel-Consumer und Anwendungsfälle",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Ziel-Consumer und Anwendungsfälle festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Ziel-Consumer und Anwendungsfälle festgehalten werden?"
         },
         "reusableScope": {
           "section": "Vorgesehener Wiederverwendungsumfang",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Vorgesehener Wiederverwendungsumfang festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Vorgesehener Wiederverwendungsumfang festgehalten werden?"
         },
         "supportingEvidence": {
           "section": "Unterstützende Nachweise",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Unterstützende Nachweise festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Unterstützende Nachweise festgehalten werden?"
         },
         "expectedOutcomes": {
           "section": "Erwartete Ergebnisse",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Erwartete Ergebnisse festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Erwartete Ergebnisse festgehalten werden?"
         },
         "criticalAssumptions": {
           "section": "Kritische Annahmen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Kritische Annahmen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Kritische Annahmen festgehalten werden?"
         },
         "minimumValidation": {
           "section": "Minimale Validierung",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Minimale Validierung festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Minimale Validierung festgehalten werden?"
         },
         "decision": {
           "section": "Entscheidung",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Entscheidung festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Entscheidung festgehalten werden?"
         }
       }
     },
@@ -1162,51 +1162,51 @@
       "sections": {
         "intendedConsumersContexts": {
           "section": "Vorgesehene Consumer und Kontexte",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Vorgesehene Consumer und Kontexte festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Vorgesehene Consumer und Kontexte festgehalten werden?"
         },
         "capabilityOwnerProducerResponsibilities": {
           "section": "Capability Owner und Producer-Verantwortlichkeiten",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Capability Owner und Producer-Verantwortlichkeiten festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Capability Owner und Producer-Verantwortlichkeiten festgehalten werden?"
         },
         "discoveryEvaluation": {
           "section": "Auffindbarkeit und Bewertung",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Auffindbarkeit und Bewertung festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Auffindbarkeit und Bewertung festgehalten werden?"
         },
         "accessOnboarding": {
           "section": "Zugriff und Onboarding",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Zugriff und Onboarding festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Zugriff und Onboarding festgehalten werden?"
         },
         "serviceExpectations": {
           "section": "Serviceerwartungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Serviceerwartungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Serviceerwartungen festgehalten werden?"
         },
         "qualityAvailability": {
           "section": "Qualitäts- und Verfügbarkeitserwartungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Qualitäts- und Verfügbarkeitserwartungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Qualitäts- und Verfügbarkeitserwartungen festgehalten werden?"
         },
         "changeLifecycle": {
           "section": "Änderungs- und Lifecycle-Erwartungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Änderungs- und Lifecycle-Erwartungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Änderungs- und Lifecycle-Erwartungen festgehalten werden?"
         },
         "supportIncidentCommunication": {
           "section": "Support und Incident-Kommunikation",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Support und Incident-Kommunikation festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Support und Incident-Kommunikation festgehalten werden?"
         },
         "operationalGovernanceConstraints": {
           "section": "Operative und Governance-Randbedingungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Operative und Governance-Randbedingungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Operative und Governance-Randbedingungen festgehalten werden?"
         },
         "producerCommitments": {
           "section": "Producer-Verpflichtungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Producer-Verpflichtungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Producer-Verpflichtungen festgehalten werden?"
         },
         "consumerResponsibilities": {
           "section": "Consumer-Verantwortlichkeiten",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Consumer-Verantwortlichkeiten festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Consumer-Verantwortlichkeiten festgehalten werden?"
         },
         "architectureImplications": {
           "section": "Architekturimplikationen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Architekturimplikationen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Architekturimplikationen festgehalten werden?"
         }
       }
     },
@@ -1217,67 +1217,67 @@
       "sections": {
         "api": {
           "section": "API",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für API festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für API festgehalten werden?"
         },
         "event": {
           "section": "Event",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Event festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Event festgehalten werden?"
         },
         "fileBatch": {
           "section": "Datei oder Batch",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Datei oder Batch festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Datei oder Batch festgehalten werden?"
         },
         "stream": {
           "section": "Stream",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Stream festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Stream festgehalten werden?"
         },
         "dataProduct": {
           "section": "Datenprodukt",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Datenprodukt festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Datenprodukt festgehalten werden?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Workflow festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Workflow festgehalten werden?"
         },
         "sharedService": {
           "section": "Shared Service",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Shared Service festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Shared Service festgehalten werden?"
         },
         "userFacingApplication": {
           "section": "User-facing Application",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für User-facing Application festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für User-facing Application festgehalten werden?"
         },
         "directIntegration": {
           "section": "Direkte Integration",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Direkte Integration festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Direkte Integration festgehalten werden?"
         },
         "platformNativeFeature": {
           "section": "Plattformnative Funktion",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Plattformnative Funktion festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Plattformnative Funktion festgehalten werden?"
         },
         "humanAssistedService": {
           "section": "Menschlich unterstützter Service",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Menschlich unterstützter Service festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Menschlich unterstützter Service festgehalten werden?"
         },
         "hybridApproach": {
           "section": "Hybrider Ansatz",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Hybrider Ansatz festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Hybrider Ansatz festgehalten werden?"
         },
         "evaluationCriteria": {
           "section": "Bewertungskriterien",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Bewertungskriterien festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Bewertungskriterien festgehalten werden?"
         },
         "selectedStylePlatform": {
           "section": "Ausgewählter Stil und Plattform",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Ausgewählter Stil und Plattform festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Ausgewählter Stil und Plattform festgehalten werden?"
         },
         "rationaleRejectedAlternatives": {
           "section": "Begründung und abgelehnte Alternativen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Begründung und abgelehnte Alternativen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Begründung und abgelehnte Alternativen festgehalten werden?"
         },
         "assumptionsRisks": {
           "section": "Annahmen und Risiken",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Annahmen und Risiken festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Annahmen und Risiken festgehalten werden?"
         }
       }
     },
@@ -1288,51 +1288,51 @@
       "sections": {
         "selectedImplementationStyle": {
           "section": "Ausgewählter Implementierungsstil",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Ausgewählter Implementierungsstil festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Ausgewählter Implementierungsstil festgehalten werden?"
         },
         "serviceBoundary": {
           "section": "Servicegrenze",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Servicegrenze festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Servicegrenze festgehalten werden?"
         },
         "consumerInteractionModel": {
           "section": "Consumer-Interaktionsmodell",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Consumer-Interaktionsmodell festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Consumer-Interaktionsmodell festgehalten werden?"
         },
         "dataBusinessConcepts": {
           "section": "Daten- und Business-Konzepte",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Daten- und Business-Konzepte festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Daten- und Business-Konzepte festgehalten werden?"
         },
         "contractOrServiceDefinition": {
           "section": "Vertrag oder Service Definition",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Vertrag oder Service Definition festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Vertrag oder Service Definition festgehalten werden?"
         },
         "responsibilitiesRules": {
           "section": "Verantwortlichkeiten und Regeln",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Verantwortlichkeiten und Regeln festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Verantwortlichkeiten und Regeln festgehalten werden?"
         },
         "inputsOutputs": {
           "section": "Inputs und Outputs",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Inputs und Outputs festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Inputs und Outputs festgehalten werden?"
         },
         "errorsExceptions": {
           "section": "Fehler und Ausnahmen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Fehler und Ausnahmen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Fehler und Ausnahmen festgehalten werden?"
         },
         "lifecycleVersioning": {
           "section": "Lifecycle und Versionierung",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Lifecycle und Versionierung festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Lifecycle und Versionierung festgehalten werden?"
         },
         "securityPrivacy": {
           "section": "Security und Datenschutz",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Security und Datenschutz festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Security und Datenschutz festgehalten werden?"
         },
         "observability": {
           "section": "Beobachtbarkeit",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Beobachtbarkeit festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Beobachtbarkeit festgehalten werden?"
         },
         "supportModel": {
           "section": "Supportmodell",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Supportmodell festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Supportmodell festgehalten werden?"
         }
       }
     },
@@ -1343,75 +1343,75 @@
       "sections": {
         "businessOwner": {
           "section": "Business Owner",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Business Owner festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Business Owner festgehalten werden?"
         },
         "capabilityOwner": {
           "section": "Capability Owner",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Capability Owner festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Capability Owner festgehalten werden?"
         },
         "producerOwner": {
           "section": "Producer Owner",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Producer Owner festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Producer Owner festgehalten werden?"
         },
         "operationalOwner": {
           "section": "Operational Owner",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Operational Owner festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Operational Owner festgehalten werden?"
         },
         "consumers": {
           "section": "Consumer",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Consumer festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Consumer festgehalten werden?"
         },
         "implementationStyle": {
           "section": "Implementierungsstil",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Implementierungsstil festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Implementierungsstil festgehalten werden?"
         },
         "environments": {
           "section": "Umgebungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Umgebungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Umgebungen festgehalten werden?"
         },
         "permissionsCredentials": {
           "section": "Berechtigungen und Credentials",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Berechtigungen und Credentials festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Berechtigungen und Credentials festgehalten werden?"
         },
         "testEvidence": {
           "section": "Testnachweise",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Testnachweise festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Testnachweise festgehalten werden?"
         },
         "serviceExpectations": {
           "section": "Serviceerwartungen",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Serviceerwartungen festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Serviceerwartungen festgehalten werden?"
         },
         "monitoring": {
           "section": "Monitoring",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Monitoring festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Monitoring festgehalten werden?"
         },
         "support": {
           "section": "Support",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Support festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Support festgehalten werden?"
         },
         "fallbackContinuity": {
           "section": "Fallback und Kontinuität",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Fallback und Kontinuität festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Fallback und Kontinuität festgehalten werden?"
         },
         "changeOwnership": {
           "section": "Change Ownership",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Change Ownership festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Change Ownership festgehalten werden?"
         },
         "documentationRunbooks": {
           "section": "Dokumentation und Runbooks",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Dokumentation und Runbooks festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Dokumentation und Runbooks festgehalten werden?"
         },
         "readinessStatus": {
           "section": "Readiness-Status",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Readiness-Status festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Readiness-Status festgehalten werden?"
         },
         "knownRisks": {
           "section": "Bekannte Risiken",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Bekannte Risiken festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Bekannte Risiken festgehalten werden?"
         },
         "improvementBacklog": {
           "section": "Verbesserungs-Backlog",
-          "description": "Welche Entscheidungen, Nachweise und offenen Punkte müssen für Verbesserungs-Backlog festgehalten werden?"
+          "description": "Welche konkreten Entscheidungen, Nachweise, Verantwortlichkeiten, Risiken und nächsten Schritte müssen für Verbesserungs-Backlog festgehalten werden?"
         }
       }
     }
@@ -2540,35 +2540,35 @@
       "sections": {
         "hypothesis": {
           "section": "Capability hypothesis",
-          "description": "Capability hypothesis: what needs to be decided, evidenced, or validated?"
+          "description": "What reusable digital capability do we believe should exist, for whom, and what outcome should it achieve?"
         },
         "targetConsumersUseCases": {
           "section": "Target consumers and use cases",
-          "description": "Target consumers and use cases: what needs to be decided, evidenced, or validated?"
+          "description": "Which current and potential consumers and use cases are in scope?"
         },
         "reusableScope": {
           "section": "Intended reusable scope",
-          "description": "Intended reusable scope: what needs to be decided, evidenced, or validated?"
+          "description": "What should be reusable across consumers, and what is explicitly outside scope?"
         },
         "supportingEvidence": {
           "section": "Supporting evidence",
-          "description": "Supporting evidence: what needs to be decided, evidenced, or validated?"
+          "description": "Which journey, value proposition, domain, impact, capacity, market, or operational evidence supports the hypothesis?"
         },
         "expectedOutcomes": {
           "section": "Expected outcomes",
-          "description": "Expected outcomes: what needs to be decided, evidenced, or validated?"
+          "description": "What consumer, business, operational, compliance, or ecosystem outcomes are expected?"
         },
         "criticalAssumptions": {
           "section": "Critical assumptions",
-          "description": "Critical assumptions: what needs to be decided, evidenced, or validated?"
+          "description": "Which assumptions could invalidate value, reuse, feasibility, ownership, sustainability, or adoption?"
         },
         "minimumValidation": {
           "section": "Minimum validation",
-          "description": "Minimum validation: what needs to be decided, evidenced, or validated?"
+          "description": "What is the smallest useful validation activity, and what evidence and thresholds determine success?"
         },
         "decision": {
           "section": "Decision",
-          "description": "Decision: what needs to be decided, evidenced, or validated?"
+          "description": "Should the capability proceed, be narrowed, revised and retested, or rejected?"
         }
       }
     },
@@ -2579,51 +2579,51 @@
       "sections": {
         "intendedConsumersContexts": {
           "section": "Intended consumers and contexts",
-          "description": "Intended consumers and contexts: what needs to be decided, evidenced, or validated?"
+          "description": "Who will use or consume the capability, in which processes, products, systems, or journeys?"
         },
         "capabilityOwnerProducerResponsibilities": {
           "section": "Capability owner and producer responsibilities",
-          "description": "Capability owner and producer responsibilities: what needs to be decided, evidenced, or validated?"
+          "description": "Who is accountable for the productized capability, and what must producer teams provide and maintain?"
         },
         "discoveryEvaluation": {
           "section": "Discovery and evaluation",
-          "description": "Discovery and evaluation: what needs to be decided, evidenced, or validated?"
+          "description": "How should consumers find, understand, compare, and evaluate the capability?"
         },
         "accessOnboarding": {
           "section": "Access and onboarding",
-          "description": "Access and onboarding: what needs to be decided, evidenced, or validated?"
+          "description": "How should consumers request access, test, onboard, and begin using it?"
         },
         "serviceExpectations": {
           "section": "Service expectations",
-          "description": "Service expectations: what needs to be decided, evidenced, or validated?"
+          "description": "What availability, timeliness, quality, support, and service commitments are expected?"
         },
         "qualityAvailability": {
           "section": "Quality and availability expectations",
-          "description": "Quality and availability expectations: what needs to be decided, evidenced, or validated?"
+          "description": "What accuracy, completeness, consistency, freshness, reliability, and continuity requirements apply?"
         },
         "changeLifecycle": {
           "section": "Change and lifecycle expectations",
-          "description": "Change and lifecycle expectations: what needs to be decided, evidenced, or validated?"
+          "description": "What notice, compatibility, migration, versioning, deprecation, and retirement expectations apply?"
         },
         "supportIncidentCommunication": {
           "section": "Support and incident communication",
-          "description": "Support and incident communication: what needs to be decided, evidenced, or validated?"
+          "description": "How are issues raised, owned, communicated, escalated, and resolved?"
         },
         "operationalGovernanceConstraints": {
           "section": "Operational and governance constraints",
-          "description": "Operational and governance constraints: what needs to be decided, evidenced, or validated?"
+          "description": "What security, privacy, compliance, funding, policy, platform, or operating constraints apply?"
         },
         "producerCommitments": {
           "section": "Producer commitments",
-          "description": "Producer commitments: what needs to be decided, evidenced, or validated?"
+          "description": "What delivery, documentation, support, monitoring, change, and lifecycle commitments must producers make?"
         },
         "consumerResponsibilities": {
           "section": "Consumer responsibilities",
-          "description": "Consumer responsibilities: what needs to be decided, evidenced, or validated?"
+          "description": "What usage, security, testing, feedback, cost, or compliance responsibilities do consumers accept?"
         },
         "architectureImplications": {
           "section": "Architecture implications",
-          "description": "Architecture implications: what needs to be decided, evidenced, or validated?"
+          "description": "Which requirements must later architecture and implementation decisions satisfy?"
         }
       }
     },
@@ -2634,67 +2634,67 @@
       "sections": {
         "api": {
           "section": "API",
-          "description": "API: what needs to be decided, evidenced, or validated?"
+          "description": "Where would a governed, reusable programmatic interface best satisfy consumer needs?"
         },
         "event": {
           "section": "Event",
-          "description": "Event: what needs to be decided, evidenced, or validated?"
+          "description": "Where should consumers react asynchronously to business or data changes?"
         },
         "fileBatch": {
           "section": "File or batch",
-          "description": "File or batch: what needs to be decided, evidenced, or validated?"
+          "description": "Where do scheduled, high-volume, delayed, or externally exchanged datasets fit?"
         },
         "stream": {
           "section": "Stream",
-          "description": "Stream: what needs to be decided, evidenced, or validated?"
+          "description": "Where is continuous, replayable, ordered, or low-latency data access needed?"
         },
         "dataProduct": {
           "section": "Data product",
-          "description": "Data product: what needs to be decided, evidenced, or validated?"
+          "description": "Where should governed and reusable data be offered as a managed product?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Workflow: what needs to be decided, evidenced, or validated?"
+          "description": "Where should orchestration, routing, approvals, or process coordination deliver the capability?"
         },
         "sharedService": {
           "section": "Shared service",
-          "description": "Shared service: what needs to be decided, evidenced, or validated?"
+          "description": "Where should a centrally operated service provide reusable business functionality?"
         },
         "userFacingApplication": {
           "section": "User-facing application",
-          "description": "User-facing application: what needs to be decided, evidenced, or validated?"
+          "description": "Where do consumers need a human-facing experience rather than only a machine interface?"
         },
         "directIntegration": {
           "section": "Direct integration",
-          "description": "Direct integration: what needs to be decided, evidenced, or validated?"
+          "description": "Where is tightly coupled system-to-system implementation acceptable, and what risks follow?"
         },
         "platformNativeFeature": {
           "section": "Platform-native feature",
-          "description": "Platform-native feature: what needs to be decided, evidenced, or validated?"
+          "description": "Can an existing platform capability meet the need without creating unnecessary custom implementation?"
         },
         "humanAssistedService": {
           "section": "Human-assisted service",
-          "description": "Human-assisted service: what needs to be decided, evidenced, or validated?"
+          "description": "Which parts require human expertise, judgement, accountability, or exception handling?"
         },
         "hybridApproach": {
           "section": "Hybrid approach",
-          "description": "Hybrid approach: what needs to be decided, evidenced, or validated?"
+          "description": "Which combination best delivers the capability?"
         },
         "evaluationCriteria": {
           "section": "Evaluation criteria",
-          "description": "Evaluation criteria: what needs to be decided, evidenced, or validated?"
+          "description": "How do candidates compare on consumer fit, reuse, coupling, timing, volume, security, reliability, operability, discoverability, cost, governance, skills, and sustainability?"
         },
         "selectedStylePlatform": {
           "section": "Selected style and platform",
-          "description": "Selected style and platform: what needs to be decided, evidenced, or validated?"
+          "description": "Which implementation style and enabling platform are selected?"
         },
         "rationaleRejectedAlternatives": {
           "section": "Rationale and rejected alternatives",
-          "description": "Rationale and rejected alternatives: what needs to be decided, evidenced, or validated?"
+          "description": "Why is the selected approach preferred, and why were alternatives rejected?"
         },
         "assumptionsRisks": {
           "section": "Assumptions and risks",
-          "description": "Assumptions and risks: what needs to be decided, evidenced, or validated?"
+          "description": "What remains uncertain or must be validated before delivery?"
         }
       }
     },
@@ -2705,51 +2705,51 @@
       "sections": {
         "selectedImplementationStyle": {
           "section": "Selected implementation style",
-          "description": "Selected implementation style: what needs to be decided, evidenced, or validated?"
+          "description": "Which architecture decision is this design implementing?"
         },
         "serviceBoundary": {
           "section": "Service boundary",
-          "description": "Service boundary: what needs to be decided, evidenced, or validated?"
+          "description": "What responsibility belongs inside the capability, and what remains outside?"
         },
         "consumerInteractionModel": {
           "section": "Consumer interaction model",
-          "description": "Consumer interaction model: what needs to be decided, evidenced, or validated?"
+          "description": "How do consumers discover, access, invoke, participate in, or receive the capability?"
         },
         "dataBusinessConcepts": {
           "section": "Data and business concepts",
-          "description": "Data and business concepts: what needs to be decided, evidenced, or validated?"
+          "description": "Which concepts, entities, rules, states, and meanings must be shared?"
         },
         "contractOrServiceDefinition": {
           "section": "Contract or service definition",
-          "description": "Contract or service definition: what needs to be decided, evidenced, or validated?"
+          "description": "What technical, service, experience, data, workflow, or operational contract defines expected behaviour?"
         },
         "responsibilitiesRules": {
           "section": "Responsibilities and rules",
-          "description": "Responsibilities and rules: what needs to be decided, evidenced, or validated?"
+          "description": "What must consumers, producers, operators, platforms, and supporting teams do?"
         },
         "inputsOutputs": {
           "section": "Inputs and outputs",
-          "description": "Inputs and outputs: what needs to be decided, evidenced, or validated?"
+          "description": "What information, events, requests, decisions, services, or outcomes enter and leave the capability?"
         },
         "errorsExceptions": {
           "section": "Errors and exceptions",
-          "description": "Errors and exceptions: what needs to be decided, evidenced, or validated?"
+          "description": "What failure, invalid-input, unavailable-service, policy, business, and exception conditions must be handled?"
         },
         "lifecycleVersioning": {
           "section": "Lifecycle and versioning",
-          "description": "Lifecycle and versioning: what needs to be decided, evidenced, or validated?"
+          "description": "How will compatibility, change, migration, deprecation, and retirement work?"
         },
         "securityPrivacy": {
           "section": "Security and privacy",
-          "description": "Security and privacy: what needs to be decided, evidenced, or validated?"
+          "description": "What identity, access, confidentiality, consent, retention, audit, and trust controls apply?"
         },
         "observability": {
           "section": "Observability",
-          "description": "Observability: what needs to be decided, evidenced, or validated?"
+          "description": "What usage, health, quality, value, and consumer signals must be visible?"
         },
         "supportModel": {
           "section": "Support model",
-          "description": "Support model: what needs to be decided, evidenced, or validated?"
+          "description": "How do consumers get help, report issues, and receive status or change communication?"
         }
       }
     },
@@ -2760,75 +2760,75 @@
       "sections": {
         "businessOwner": {
           "section": "Business owner",
-          "description": "Business owner: what needs to be decided, evidenced, or validated?"
+          "description": "Who owns expected value, funding, prioritisation, and release acceptance?"
         },
         "capabilityOwner": {
           "section": "Capability owner",
-          "description": "Capability owner: what needs to be decided, evidenced, or validated?"
+          "description": "Who owns the capability lifecycle, roadmap, reuse, and consumer outcomes?"
         },
         "producerOwner": {
           "section": "Producer owner",
-          "description": "Producer owner: what needs to be decided, evidenced, or validated?"
+          "description": "Which producer owner or owners are accountable for delivery, quality, contracts, changes, and producer-side issues?"
         },
         "operationalOwner": {
           "section": "Operational owner",
-          "description": "Operational owner: what needs to be decided, evidenced, or validated?"
+          "description": "Who owns runtime health, incidents, support, recovery, and runbooks?"
         },
         "consumers": {
           "section": "Consumers",
-          "description": "Consumers: what needs to be decided, evidenced, or validated?"
+          "description": "Which consumers are ready, affected, dependent, or still migrating?"
         },
         "implementationStyle": {
           "section": "Implementation style",
-          "description": "Implementation style: what needs to be decided, evidenced, or validated?"
+          "description": "Which style or hybrid is being operated, and what specific operating implications follow?"
         },
         "environments": {
           "section": "Environments",
-          "description": "Environments: what needs to be decided, evidenced, or validated?"
+          "description": "Which development, test, staging, production, partner, and recovery environments are ready?"
         },
         "permissionsCredentials": {
           "section": "Permissions and credentials",
-          "description": "Permissions and credentials: what needs to be decided, evidenced, or validated?"
+          "description": "How are access, identities, secrets, certificates, approvals, and reviews managed?"
         },
         "testEvidence": {
           "section": "Test evidence",
-          "description": "Test evidence: what needs to be decided, evidenced, or validated?"
+          "description": "What proves functionality, service quality, security, compatibility, resilience, and consumer usability?"
         },
         "serviceExpectations": {
           "section": "Service expectations",
-          "description": "Service expectations: what needs to be decided, evidenced, or validated?"
+          "description": "What commitments apply to availability, quality, support, change, and lifecycle?"
         },
         "monitoring": {
           "section": "Monitoring",
-          "description": "Monitoring: what needs to be decided, evidenced, or validated?"
+          "description": "Which health, usage, quality, value, adoption, cost, and risk signals are monitored?"
         },
         "support": {
           "section": "Support",
-          "description": "Support: what needs to be decided, evidenced, or validated?"
+          "description": "Who supports consumers and operators, and how are issues escalated?"
         },
         "fallbackContinuity": {
           "section": "Fallback and continuity",
-          "description": "Fallback and continuity: what needs to be decided, evidenced, or validated?"
+          "description": "How does service continue or degrade safely when the capability is unavailable?"
         },
         "changeOwnership": {
           "section": "Change ownership",
-          "description": "Change ownership: what needs to be decided, evidenced, or validated?"
+          "description": "Who approves, implements, communicates, and supports changes?"
         },
         "documentationRunbooks": {
           "section": "Documentation and runbooks",
-          "description": "Documentation and runbooks: what needs to be decided, evidenced, or validated?"
+          "description": "Are consumer guidance, service definitions, architecture records, support instructions, and recovery procedures ready?"
         },
         "readinessStatus": {
           "section": "Readiness status",
-          "description": "Readiness status: what needs to be decided, evidenced, or validated?"
+          "description": "What remains incomplete, conditional, or blocking?"
         },
         "knownRisks": {
           "section": "Known risks",
-          "description": "Known risks: what needs to be decided, evidenced, or validated?"
+          "description": "Which risks are mitigated, accepted, deferred, or blocking?"
         },
         "improvementBacklog": {
           "section": "Improvement backlog",
-          "description": "Improvement backlog: what needs to be decided, evidenced, or validated?"
+          "description": "What should be improved after release?"
         }
       }
     }
@@ -3957,35 +3957,35 @@
       "sections": {
         "hypothesis": {
           "section": "Kyvykkyyshypoteesi",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kyvykkyyshypoteesi pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kyvykkyyshypoteesi pitää kirjata?"
         },
         "targetConsumersUseCases": {
           "section": "Kohdekuluttajat ja käyttötapaukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kohdekuluttajat ja käyttötapaukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kohdekuluttajat ja käyttötapaukset pitää kirjata?"
         },
         "reusableScope": {
           "section": "Tarkoitettu uudelleenkäytön rajaus",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tarkoitettu uudelleenkäytön rajaus pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tarkoitettu uudelleenkäytön rajaus pitää kirjata?"
         },
         "supportingEvidence": {
           "section": "Tukeva näyttö",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tukeva näyttö pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tukeva näyttö pitää kirjata?"
         },
         "expectedOutcomes": {
           "section": "Odotetut tulokset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Odotetut tulokset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Odotetut tulokset pitää kirjata?"
         },
         "criticalAssumptions": {
           "section": "Kriittiset oletukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kriittiset oletukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kriittiset oletukset pitää kirjata?"
         },
         "minimumValidation": {
           "section": "Vähimmäisvalidaatio",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Vähimmäisvalidaatio pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Vähimmäisvalidaatio pitää kirjata?"
         },
         "decision": {
           "section": "Päätös",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Päätös pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Päätös pitää kirjata?"
         }
       }
     },
@@ -3996,51 +3996,51 @@
       "sections": {
         "intendedConsumersContexts": {
           "section": "Tarkoitetut kuluttajat ja kontekstit",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tarkoitetut kuluttajat ja kontekstit pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tarkoitetut kuluttajat ja kontekstit pitää kirjata?"
         },
         "capabilityOwnerProducerResponsibilities": {
           "section": "Kyvykkyyden omistaja ja tuottajavastuut",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kyvykkyyden omistaja ja tuottajavastuut pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kyvykkyyden omistaja ja tuottajavastuut pitää kirjata?"
         },
         "discoveryEvaluation": {
           "section": "Löydettävyys ja arviointi",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Löydettävyys ja arviointi pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Löydettävyys ja arviointi pitää kirjata?"
         },
         "accessOnboarding": {
           "section": "Pääsy ja onboarding",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Pääsy ja onboarding pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Pääsy ja onboarding pitää kirjata?"
         },
         "serviceExpectations": {
           "section": "Palveluodotukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Palveluodotukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Palveluodotukset pitää kirjata?"
         },
         "qualityAvailability": {
           "section": "Laatu- ja saatavuusodotukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Laatu- ja saatavuusodotukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Laatu- ja saatavuusodotukset pitää kirjata?"
         },
         "changeLifecycle": {
           "section": "Muutos- ja elinkaariodotukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Muutos- ja elinkaariodotukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Muutos- ja elinkaariodotukset pitää kirjata?"
         },
         "supportIncidentCommunication": {
           "section": "Tuki ja incident-viestintä",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tuki ja incident-viestintä pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tuki ja incident-viestintä pitää kirjata?"
         },
         "operationalGovernanceConstraints": {
           "section": "Operatiiviset ja governance-reunaehdot",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Operatiiviset ja governance-reunaehdot pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Operatiiviset ja governance-reunaehdot pitää kirjata?"
         },
         "producerCommitments": {
           "section": "Tuottajan sitoumukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tuottajan sitoumukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tuottajan sitoumukset pitää kirjata?"
         },
         "consumerResponsibilities": {
           "section": "Kuluttajan vastuut",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kuluttajan vastuut pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kuluttajan vastuut pitää kirjata?"
         },
         "architectureImplications": {
           "section": "Arkkitehtuurivaikutukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Arkkitehtuurivaikutukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Arkkitehtuurivaikutukset pitää kirjata?"
         }
       }
     },
@@ -4051,67 +4051,67 @@
       "sections": {
         "api": {
           "section": "API",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa API pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa API pitää kirjata?"
         },
         "event": {
           "section": "Tapahtuma",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tapahtuma pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tapahtuma pitää kirjata?"
         },
         "fileBatch": {
           "section": "Tiedosto tai batch",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tiedosto tai batch pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tiedosto tai batch pitää kirjata?"
         },
         "stream": {
           "section": "Stream",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Stream pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Stream pitää kirjata?"
         },
         "dataProduct": {
           "section": "Datatuote",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Datatuote pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Datatuote pitää kirjata?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Workflow pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Workflow pitää kirjata?"
         },
         "sharedService": {
           "section": "Jaettu palvelu",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Jaettu palvelu pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Jaettu palvelu pitää kirjata?"
         },
         "userFacingApplication": {
           "section": "Käyttäjälle näkyvä sovellus",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Käyttäjälle näkyvä sovellus pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Käyttäjälle näkyvä sovellus pitää kirjata?"
         },
         "directIntegration": {
           "section": "Suora integraatio",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Suora integraatio pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Suora integraatio pitää kirjata?"
         },
         "platformNativeFeature": {
           "section": "Alustan natiivi toiminto",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Alustan natiivi toiminto pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Alustan natiivi toiminto pitää kirjata?"
         },
         "humanAssistedService": {
           "section": "Ihmisen tukema palvelu",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Ihmisen tukema palvelu pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Ihmisen tukema palvelu pitää kirjata?"
         },
         "hybridApproach": {
           "section": "Hybridiratkaisu",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Hybridiratkaisu pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Hybridiratkaisu pitää kirjata?"
         },
         "evaluationCriteria": {
           "section": "Arviointikriteerit",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Arviointikriteerit pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Arviointikriteerit pitää kirjata?"
         },
         "selectedStylePlatform": {
           "section": "Valittu tyyli ja alusta",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Valittu tyyli ja alusta pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Valittu tyyli ja alusta pitää kirjata?"
         },
         "rationaleRejectedAlternatives": {
           "section": "Perustelu ja hylätyt vaihtoehdot",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Perustelu ja hylätyt vaihtoehdot pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Perustelu ja hylätyt vaihtoehdot pitää kirjata?"
         },
         "assumptionsRisks": {
           "section": "Oletukset ja riskit",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Oletukset ja riskit pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Oletukset ja riskit pitää kirjata?"
         }
       }
     },
@@ -4122,51 +4122,51 @@
       "sections": {
         "selectedImplementationStyle": {
           "section": "Valittu toteutustyyli",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Valittu toteutustyyli pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Valittu toteutustyyli pitää kirjata?"
         },
         "serviceBoundary": {
           "section": "Palveluraja",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Palveluraja pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Palveluraja pitää kirjata?"
         },
         "consumerInteractionModel": {
           "section": "Kuluttajan vuorovaikutusmalli",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kuluttajan vuorovaikutusmalli pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kuluttajan vuorovaikutusmalli pitää kirjata?"
         },
         "dataBusinessConcepts": {
           "section": "Data- ja liiketoimintakäsitteet",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Data- ja liiketoimintakäsitteet pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Data- ja liiketoimintakäsitteet pitää kirjata?"
         },
         "contractOrServiceDefinition": {
           "section": "Sopimus tai palvelumäärittely",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Sopimus tai palvelumäärittely pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Sopimus tai palvelumäärittely pitää kirjata?"
         },
         "responsibilitiesRules": {
           "section": "Vastuut ja säännöt",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Vastuut ja säännöt pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Vastuut ja säännöt pitää kirjata?"
         },
         "inputsOutputs": {
           "section": "Syötteet ja tuotokset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Syötteet ja tuotokset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Syötteet ja tuotokset pitää kirjata?"
         },
         "errorsExceptions": {
           "section": "Virheet ja poikkeukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Virheet ja poikkeukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Virheet ja poikkeukset pitää kirjata?"
         },
         "lifecycleVersioning": {
           "section": "Elinkaari ja versiointi",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Elinkaari ja versiointi pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Elinkaari ja versiointi pitää kirjata?"
         },
         "securityPrivacy": {
           "section": "Turvallisuus ja tietosuoja",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Turvallisuus ja tietosuoja pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Turvallisuus ja tietosuoja pitää kirjata?"
         },
         "observability": {
           "section": "Havainnoitavuus",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Havainnoitavuus pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Havainnoitavuus pitää kirjata?"
         },
         "supportModel": {
           "section": "Tukimalli",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tukimalli pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tukimalli pitää kirjata?"
         }
       }
     },
@@ -4177,75 +4177,75 @@
       "sections": {
         "businessOwner": {
           "section": "Business owner",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Business owner pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Business owner pitää kirjata?"
         },
         "capabilityOwner": {
           "section": "Kyvykkyyden omistaja",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kyvykkyyden omistaja pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kyvykkyyden omistaja pitää kirjata?"
         },
         "producerOwner": {
           "section": "Tuottajaomistaja",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tuottajaomistaja pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tuottajaomistaja pitää kirjata?"
         },
         "operationalOwner": {
           "section": "Operatiivinen omistaja",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Operatiivinen omistaja pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Operatiivinen omistaja pitää kirjata?"
         },
         "consumers": {
           "section": "Kuluttajat",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Kuluttajat pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Kuluttajat pitää kirjata?"
         },
         "implementationStyle": {
           "section": "Toteutustyyli",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Toteutustyyli pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Toteutustyyli pitää kirjata?"
         },
         "environments": {
           "section": "Ympäristöt",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Ympäristöt pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Ympäristöt pitää kirjata?"
         },
         "permissionsCredentials": {
           "section": "Oikeudet ja tunnistetiedot",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Oikeudet ja tunnistetiedot pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Oikeudet ja tunnistetiedot pitää kirjata?"
         },
         "testEvidence": {
           "section": "Testinäyttö",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Testinäyttö pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Testinäyttö pitää kirjata?"
         },
         "serviceExpectations": {
           "section": "Palveluodotukset",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Palveluodotukset pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Palveluodotukset pitää kirjata?"
         },
         "monitoring": {
           "section": "Seuranta",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Seuranta pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Seuranta pitää kirjata?"
         },
         "support": {
           "section": "Tuki",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tuki pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tuki pitää kirjata?"
         },
         "fallbackContinuity": {
           "section": "Fallback ja jatkuvuus",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Fallback ja jatkuvuus pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Fallback ja jatkuvuus pitää kirjata?"
         },
         "changeOwnership": {
           "section": "Muutoksen omistajuus",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Muutoksen omistajuus pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Muutoksen omistajuus pitää kirjata?"
         },
         "documentationRunbooks": {
           "section": "Dokumentaatio ja runbookit",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Dokumentaatio ja runbookit pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Dokumentaatio ja runbookit pitää kirjata?"
         },
         "readinessStatus": {
           "section": "Valmiustila",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Valmiustila pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Valmiustila pitää kirjata?"
         },
         "knownRisks": {
           "section": "Tunnetut riskit",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Tunnetut riskit pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Tunnetut riskit pitää kirjata?"
         },
         "improvementBacklog": {
           "section": "Parannusbacklog",
-          "description": "Mitä päätöksiä, näyttöä ja avoimia asioita kohdassa Parannusbacklog pitää kirjata?"
+          "description": "Mitä konkreettisia päätöksiä, näyttöä, vastuita, riskejä ja seuraavia askeleita kohdassa Parannusbacklog pitää kirjata?"
         }
       }
     }
@@ -5374,35 +5374,35 @@
       "sections": {
         "hypothesis": {
           "section": "Hypothèse de capacité",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Hypothèse de capacité?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Hypothèse de capacité?"
         },
         "targetConsumersUseCases": {
           "section": "Consommateurs cibles et cas d’usage",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Consommateurs cibles et cas d’usage?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Consommateurs cibles et cas d’usage?"
         },
         "reusableScope": {
           "section": "Périmètre réutilisable prévu",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Périmètre réutilisable prévu?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Périmètre réutilisable prévu?"
         },
         "supportingEvidence": {
           "section": "Preuves de support",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Preuves de support?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Preuves de support?"
         },
         "expectedOutcomes": {
           "section": "Résultats attendus",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Résultats attendus?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Résultats attendus?"
         },
         "criticalAssumptions": {
           "section": "Hypothèses critiques",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Hypothèses critiques?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Hypothèses critiques?"
         },
         "minimumValidation": {
           "section": "Validation minimale",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Validation minimale?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Validation minimale?"
         },
         "decision": {
           "section": "Décision",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Décision?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Décision?"
         }
       }
     },
@@ -5413,51 +5413,51 @@
       "sections": {
         "intendedConsumersContexts": {
           "section": "Consommateurs et contextes prévus",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Consommateurs et contextes prévus?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Consommateurs et contextes prévus?"
         },
         "capabilityOwnerProducerResponsibilities": {
           "section": "Propriétaire de capacité et responsabilités producteur",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Propriétaire de capacité et responsabilités producteur?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Propriétaire de capacité et responsabilités producteur?"
         },
         "discoveryEvaluation": {
           "section": "Découverte et évaluation",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Découverte et évaluation?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Découverte et évaluation?"
         },
         "accessOnboarding": {
           "section": "Accès et onboarding",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Accès et onboarding?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Accès et onboarding?"
         },
         "serviceExpectations": {
           "section": "Attentes de service",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Attentes de service?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Attentes de service?"
         },
         "qualityAvailability": {
           "section": "Attentes de qualité et disponibilité",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Attentes de qualité et disponibilité?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Attentes de qualité et disponibilité?"
         },
         "changeLifecycle": {
           "section": "Attentes de changement et cycle de vie",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Attentes de changement et cycle de vie?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Attentes de changement et cycle de vie?"
         },
         "supportIncidentCommunication": {
           "section": "Support et communication incident",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Support et communication incident?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Support et communication incident?"
         },
         "operationalGovernanceConstraints": {
           "section": "Contraintes opérationnelles et gouvernance",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Contraintes opérationnelles et gouvernance?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Contraintes opérationnelles et gouvernance?"
         },
         "producerCommitments": {
           "section": "Engagements producteur",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Engagements producteur?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Engagements producteur?"
         },
         "consumerResponsibilities": {
           "section": "Responsabilités consommateur",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Responsabilités consommateur?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Responsabilités consommateur?"
         },
         "architectureImplications": {
           "section": "Implications d’architecture",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Implications d’architecture?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Implications d’architecture?"
         }
       }
     },
@@ -5468,67 +5468,67 @@
       "sections": {
         "api": {
           "section": "API",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour API?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour API?"
         },
         "event": {
           "section": "Événement",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Événement?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Événement?"
         },
         "fileBatch": {
           "section": "Fichier ou batch",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Fichier ou batch?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Fichier ou batch?"
         },
         "stream": {
           "section": "Stream",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Stream?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Stream?"
         },
         "dataProduct": {
           "section": "Produit de données",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Produit de données?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Produit de données?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Workflow?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Workflow?"
         },
         "sharedService": {
           "section": "Service partagé",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Service partagé?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Service partagé?"
         },
         "userFacingApplication": {
           "section": "Application utilisateur",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Application utilisateur?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Application utilisateur?"
         },
         "directIntegration": {
           "section": "Intégration directe",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Intégration directe?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Intégration directe?"
         },
         "platformNativeFeature": {
           "section": "Fonction native plateforme",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Fonction native plateforme?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Fonction native plateforme?"
         },
         "humanAssistedService": {
           "section": "Service assisté par humain",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Service assisté par humain?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Service assisté par humain?"
         },
         "hybridApproach": {
           "section": "Approche hybride",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Approche hybride?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Approche hybride?"
         },
         "evaluationCriteria": {
           "section": "Critères d’évaluation",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Critères d’évaluation?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Critères d’évaluation?"
         },
         "selectedStylePlatform": {
           "section": "Style et plateforme sélectionnés",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Style et plateforme sélectionnés?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Style et plateforme sélectionnés?"
         },
         "rationaleRejectedAlternatives": {
           "section": "Justification et alternatives rejetées",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Justification et alternatives rejetées?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Justification et alternatives rejetées?"
         },
         "assumptionsRisks": {
           "section": "Hypothèses et risques",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Hypothèses et risques?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Hypothèses et risques?"
         }
       }
     },
@@ -5539,51 +5539,51 @@
       "sections": {
         "selectedImplementationStyle": {
           "section": "Style d’implémentation sélectionné",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Style d’implémentation sélectionné?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Style d’implémentation sélectionné?"
         },
         "serviceBoundary": {
           "section": "Frontière de service",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Frontière de service?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Frontière de service?"
         },
         "consumerInteractionModel": {
           "section": "Modèle d’interaction consommateur",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Modèle d’interaction consommateur?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Modèle d’interaction consommateur?"
         },
         "dataBusinessConcepts": {
           "section": "Concepts données et métier",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Concepts données et métier?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Concepts données et métier?"
         },
         "contractOrServiceDefinition": {
           "section": "Contrat ou définition de service",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Contrat ou définition de service?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Contrat ou définition de service?"
         },
         "responsibilitiesRules": {
           "section": "Responsabilités et règles",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Responsabilités et règles?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Responsabilités et règles?"
         },
         "inputsOutputs": {
           "section": "Entrées et sorties",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Entrées et sorties?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Entrées et sorties?"
         },
         "errorsExceptions": {
           "section": "Erreurs et exceptions",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Erreurs et exceptions?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Erreurs et exceptions?"
         },
         "lifecycleVersioning": {
           "section": "Cycle de vie et versioning",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Cycle de vie et versioning?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Cycle de vie et versioning?"
         },
         "securityPrivacy": {
           "section": "Sécurité et confidentialité",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Sécurité et confidentialité?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Sécurité et confidentialité?"
         },
         "observability": {
           "section": "Observabilité",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Observabilité?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Observabilité?"
         },
         "supportModel": {
           "section": "Modèle de support",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Modèle de support?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Modèle de support?"
         }
       }
     },
@@ -5594,75 +5594,75 @@
       "sections": {
         "businessOwner": {
           "section": "Propriétaire métier",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Propriétaire métier?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Propriétaire métier?"
         },
         "capabilityOwner": {
           "section": "Propriétaire de capacité",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Propriétaire de capacité?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Propriétaire de capacité?"
         },
         "producerOwner": {
           "section": "Propriétaire producteur",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Propriétaire producteur?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Propriétaire producteur?"
         },
         "operationalOwner": {
           "section": "Propriétaire opérationnel",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Propriétaire opérationnel?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Propriétaire opérationnel?"
         },
         "consumers": {
           "section": "Consommateurs",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Consommateurs?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Consommateurs?"
         },
         "implementationStyle": {
           "section": "Style d’implémentation",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Style d’implémentation?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Style d’implémentation?"
         },
         "environments": {
           "section": "Environnements",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Environnements?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Environnements?"
         },
         "permissionsCredentials": {
           "section": "Permissions et identifiants",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Permissions et identifiants?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Permissions et identifiants?"
         },
         "testEvidence": {
           "section": "Preuves de test",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Preuves de test?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Preuves de test?"
         },
         "serviceExpectations": {
           "section": "Attentes de service",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Attentes de service?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Attentes de service?"
         },
         "monitoring": {
           "section": "Monitoring",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Monitoring?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Monitoring?"
         },
         "support": {
           "section": "Support",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Support?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Support?"
         },
         "fallbackContinuity": {
           "section": "Fallback et continuité",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Fallback et continuité?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Fallback et continuité?"
         },
         "changeOwnership": {
           "section": "Responsabilité du changement",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Responsabilité du changement?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Responsabilité du changement?"
         },
         "documentationRunbooks": {
           "section": "Documentation et runbooks",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Documentation et runbooks?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Documentation et runbooks?"
         },
         "readinessStatus": {
           "section": "Statut de préparation",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Statut de préparation?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Statut de préparation?"
         },
         "knownRisks": {
           "section": "Risques connus",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Risques connus?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Risques connus?"
         },
         "improvementBacklog": {
           "section": "Backlog d’amélioration",
-          "description": "Quelles décisions, preuves et questions ouvertes doivent être consignées pour Backlog d’amélioration?"
+          "description": "Quelles décisions concrètes, preuves, responsabilités, risques et prochaines étapes doivent être consignés pour Backlog d’amélioration?"
         }
       }
     }
@@ -6791,35 +6791,35 @@
       "sections": {
         "hypothesis": {
           "section": "Hipótese de capacidade",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Hipótese de capacidade?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Hipótese de capacidade?"
         },
         "targetConsumersUseCases": {
           "section": "Consumidores-alvo e casos de uso",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Consumidores-alvo e casos de uso?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Consumidores-alvo e casos de uso?"
         },
         "reusableScope": {
           "section": "Escopo reutilizável previsto",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Escopo reutilizável previsto?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Escopo reutilizável previsto?"
         },
         "supportingEvidence": {
           "section": "Evidências de suporte",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Evidências de suporte?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Evidências de suporte?"
         },
         "expectedOutcomes": {
           "section": "Resultados esperados",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Resultados esperados?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Resultados esperados?"
         },
         "criticalAssumptions": {
           "section": "Pressupostos críticos",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Pressupostos críticos?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Pressupostos críticos?"
         },
         "minimumValidation": {
           "section": "Validação mínima",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Validação mínima?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Validação mínima?"
         },
         "decision": {
           "section": "Decisão",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Decisão?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Decisão?"
         }
       }
     },
@@ -6830,51 +6830,51 @@
       "sections": {
         "intendedConsumersContexts": {
           "section": "Consumidores e contextos previstos",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Consumidores e contextos previstos?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Consumidores e contextos previstos?"
         },
         "capabilityOwnerProducerResponsibilities": {
           "section": "Owner da capacidade e responsabilidades do produtor",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Owner da capacidade e responsabilidades do produtor?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Owner da capacidade e responsabilidades do produtor?"
         },
         "discoveryEvaluation": {
           "section": "Descoberta e avaliação",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Descoberta e avaliação?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Descoberta e avaliação?"
         },
         "accessOnboarding": {
           "section": "Acesso e onboarding",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Acesso e onboarding?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Acesso e onboarding?"
         },
         "serviceExpectations": {
           "section": "Expectativas de serviço",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Expectativas de serviço?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Expectativas de serviço?"
         },
         "qualityAvailability": {
           "section": "Expectativas de qualidade e disponibilidade",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Expectativas de qualidade e disponibilidade?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Expectativas de qualidade e disponibilidade?"
         },
         "changeLifecycle": {
           "section": "Expectativas de mudança e ciclo de vida",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Expectativas de mudança e ciclo de vida?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Expectativas de mudança e ciclo de vida?"
         },
         "supportIncidentCommunication": {
           "section": "Suporte e comunicação de incidentes",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Suporte e comunicação de incidentes?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Suporte e comunicação de incidentes?"
         },
         "operationalGovernanceConstraints": {
           "section": "Restrições operacionais e de governação",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Restrições operacionais e de governação?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Restrições operacionais e de governação?"
         },
         "producerCommitments": {
           "section": "Compromissos do produtor",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Compromissos do produtor?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Compromissos do produtor?"
         },
         "consumerResponsibilities": {
           "section": "Responsabilidades do consumidor",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Responsabilidades do consumidor?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Responsabilidades do consumidor?"
         },
         "architectureImplications": {
           "section": "Implicações de arquitetura",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Implicações de arquitetura?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Implicações de arquitetura?"
         }
       }
     },
@@ -6885,67 +6885,67 @@
       "sections": {
         "api": {
           "section": "API",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para API?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para API?"
         },
         "event": {
           "section": "Evento",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Evento?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Evento?"
         },
         "fileBatch": {
           "section": "Ficheiro ou batch",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Ficheiro ou batch?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Ficheiro ou batch?"
         },
         "stream": {
           "section": "Stream",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Stream?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Stream?"
         },
         "dataProduct": {
           "section": "Produto de dados",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Produto de dados?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Produto de dados?"
         },
         "workflow": {
           "section": "Workflow",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Workflow?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Workflow?"
         },
         "sharedService": {
           "section": "Serviço partilhado",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Serviço partilhado?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Serviço partilhado?"
         },
         "userFacingApplication": {
           "section": "Aplicação orientada ao utilizador",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Aplicação orientada ao utilizador?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Aplicação orientada ao utilizador?"
         },
         "directIntegration": {
           "section": "Integração direta",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Integração direta?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Integração direta?"
         },
         "platformNativeFeature": {
           "section": "Funcionalidade nativa da plataforma",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Funcionalidade nativa da plataforma?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Funcionalidade nativa da plataforma?"
         },
         "humanAssistedService": {
           "section": "Serviço assistido por humano",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Serviço assistido por humano?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Serviço assistido por humano?"
         },
         "hybridApproach": {
           "section": "Abordagem híbrida",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Abordagem híbrida?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Abordagem híbrida?"
         },
         "evaluationCriteria": {
           "section": "Critérios de avaliação",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Critérios de avaliação?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Critérios de avaliação?"
         },
         "selectedStylePlatform": {
           "section": "Estilo e plataforma selecionados",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Estilo e plataforma selecionados?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Estilo e plataforma selecionados?"
         },
         "rationaleRejectedAlternatives": {
           "section": "Justificação e alternativas rejeitadas",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Justificação e alternativas rejeitadas?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Justificação e alternativas rejeitadas?"
         },
         "assumptionsRisks": {
           "section": "Pressupostos e riscos",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Pressupostos e riscos?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Pressupostos e riscos?"
         }
       }
     },
@@ -6956,51 +6956,51 @@
       "sections": {
         "selectedImplementationStyle": {
           "section": "Estilo de implementação selecionado",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Estilo de implementação selecionado?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Estilo de implementação selecionado?"
         },
         "serviceBoundary": {
           "section": "Fronteira do serviço",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Fronteira do serviço?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Fronteira do serviço?"
         },
         "consumerInteractionModel": {
           "section": "Modelo de interação do consumidor",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Modelo de interação do consumidor?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Modelo de interação do consumidor?"
         },
         "dataBusinessConcepts": {
           "section": "Conceitos de dados e negócio",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Conceitos de dados e negócio?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Conceitos de dados e negócio?"
         },
         "contractOrServiceDefinition": {
           "section": "Contrato ou definição de serviço",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Contrato ou definição de serviço?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Contrato ou definição de serviço?"
         },
         "responsibilitiesRules": {
           "section": "Responsabilidades e regras",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Responsabilidades e regras?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Responsabilidades e regras?"
         },
         "inputsOutputs": {
           "section": "Entradas e saídas",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Entradas e saídas?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Entradas e saídas?"
         },
         "errorsExceptions": {
           "section": "Erros e exceções",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Erros e exceções?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Erros e exceções?"
         },
         "lifecycleVersioning": {
           "section": "Ciclo de vida e versionamento",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Ciclo de vida e versionamento?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Ciclo de vida e versionamento?"
         },
         "securityPrivacy": {
           "section": "Segurança e privacidade",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Segurança e privacidade?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Segurança e privacidade?"
         },
         "observability": {
           "section": "Observabilidade",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Observabilidade?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Observabilidade?"
         },
         "supportModel": {
           "section": "Modelo de suporte",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Modelo de suporte?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Modelo de suporte?"
         }
       }
     },
@@ -7011,75 +7011,75 @@
       "sections": {
         "businessOwner": {
           "section": "Business owner",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Business owner?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Business owner?"
         },
         "capabilityOwner": {
           "section": "Owner da capacidade",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Owner da capacidade?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Owner da capacidade?"
         },
         "producerOwner": {
           "section": "Owner produtor",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Owner produtor?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Owner produtor?"
         },
         "operationalOwner": {
           "section": "Owner operacional",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Owner operacional?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Owner operacional?"
         },
         "consumers": {
           "section": "Consumidores",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Consumidores?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Consumidores?"
         },
         "implementationStyle": {
           "section": "Estilo de implementação",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Estilo de implementação?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Estilo de implementação?"
         },
         "environments": {
           "section": "Ambientes",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Ambientes?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Ambientes?"
         },
         "permissionsCredentials": {
           "section": "Permissões e credenciais",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Permissões e credenciais?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Permissões e credenciais?"
         },
         "testEvidence": {
           "section": "Evidências de teste",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Evidências de teste?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Evidências de teste?"
         },
         "serviceExpectations": {
           "section": "Expectativas de serviço",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Expectativas de serviço?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Expectativas de serviço?"
         },
         "monitoring": {
           "section": "Monitorização",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Monitorização?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Monitorização?"
         },
         "support": {
           "section": "Suporte",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Suporte?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Suporte?"
         },
         "fallbackContinuity": {
           "section": "Fallback e continuidade",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Fallback e continuidade?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Fallback e continuidade?"
         },
         "changeOwnership": {
           "section": "Ownership da mudança",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Ownership da mudança?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Ownership da mudança?"
         },
         "documentationRunbooks": {
           "section": "Documentação e runbooks",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Documentação e runbooks?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Documentação e runbooks?"
         },
         "readinessStatus": {
           "section": "Estado de prontidão",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Estado de prontidão?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Estado de prontidão?"
         },
         "knownRisks": {
           "section": "Riscos conhecidos",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Riscos conhecidos?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Riscos conhecidos?"
         },
         "improvementBacklog": {
           "section": "Backlog de melhoria",
-          "description": "Que decisões, evidências e pontos em aberto devem ser registados para Backlog de melhoria?"
+          "description": "Que decisões concretas, evidências, responsabilidades, riscos e próximos passos devem ser registados para Backlog de melhoria?"
         }
       }
     }
