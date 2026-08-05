@@ -74,7 +74,7 @@ const architectureData = methodEngine.buildStationResourceData("api-platform-arc
 assert.ok(architectureData.stakeholders.some((entry) => entry.id === "security-specialist"), "Expected api-platform-architecture to include security-specialist.");
 assert.ok(architectureData.stakeholders.some((entry) => entry.id === "compliance-specialist"), "Expected api-platform-architecture to include compliance-specialist.");
 
-const capabilityStrategyData = methodEngine.buildStationResourceData("capability-strategy", "en", methodEngine.DEFAULT_STYLE, "capability-productization-cycle");
+const capabilityStrategyData = methodEngine.buildStationResourceData("api-product-strategy", "en", methodEngine.DEFAULT_STYLE, "capability-productization-cycle");
 assert.ok(
   capabilityStrategyData.steps.some((entry) => entry.resourceId === "capabilityHypothesisCanvas"),
   "Expected capability cycle strategy resources to use capability hypothesis canvas."

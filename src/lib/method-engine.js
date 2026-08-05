@@ -308,6 +308,16 @@ export function getStationCriteriaMap() {
   return readJson(resolveMethodFile("station-criteria.json"));
 }
 
+export function resolveStationCriteria(stationCriteriaMap, stationId, cycleId = DEFAULT_CYCLE_ID) {
+  if (Array.isArray(stationCriteriaMap?.[stationId])) {
+    return stationCriteriaMap[stationId];
+  }
+
+  return stationCriteriaMap?.byCycle?.[cycleId]?.[stationId]
+    || stationCriteriaMap?.default?.[stationId]
+    || [];
+}
+
 export function getCriteria() {
   return readJson(resolveMethodFile("criteria.json"));
 }
@@ -447,7 +457,7 @@ export function buildStartData(locale = DEFAULT_LOCALE, cycleId = DEFAULT_CYCLE_
       : translate(station.description, stationLabels),
     suggestedForNewApi: index === 0,
     stakeholders: buildStationStakeholderData(station.id, locale, cycle.id),
-    criteria: (stationCriteriaMap[station.id] || []).map((criterionId) => ({
+    criteria: resolveStationCriteria(stationCriteriaMap, station.id, cycle.id).map((criterionId) => ({
       id: criterionId,
       label: translate(`criterion.${criterionId}`, criteriaLabels)
     }))

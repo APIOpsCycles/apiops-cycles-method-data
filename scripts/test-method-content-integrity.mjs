@@ -29,6 +29,12 @@ const findings = [];
 const warnings = [];
 const lifecycleStages = new Set(["strategy", "architecture", "design", "delivery", "publishing", "improving"]);
 
+function resolveStationCriteria(stationId, cycleId) {
+  return stationCriteriaJson.byCycle?.[cycleId]?.[stationId]
+    || stationCriteriaJson.default?.[stationId]
+    || [];
+}
+
 function collectMatchingStringValues(node, pattern, results = new Set()) {
   if (typeof node === "string") {
     if (pattern.test(node)) {
@@ -118,10 +124,10 @@ for (const station of stationGroups) {
       findings.push(`Core station ${station.id} is missing a valid lifecycleStage.`);
     }
 
-    const expectedCriteria = stationCriteriaJson[station.id] || [];
+    const expectedCriteria = stationCriteriaJson.default?.[station.id] || [];
     const actualCriteria = station.stationCriteria || [];
     if (JSON.stringify(actualCriteria) !== JSON.stringify(expectedCriteria)) {
-      findings.push(`Core station ${station.id} stationCriteria does not match station-criteria.json.`);
+      findings.push(`Core station ${station.id} stationCriteria does not match station-criteria.json default criteria.`);
     }
 
     if (!Array.isArray(station.expectedEvidenceTags) || station.expectedEvidenceTags.length === 0) {
@@ -264,6 +270,45 @@ for (const cycle of cyclesJson.cycles?.items || []) {
     }
   }
 
+  const cycleCriteriaMap = stationCriteriaJson.byCycle?.[cycle.id] || {};
+  for (const [stationId, criterionIds] of Object.entries(cycleCriteriaMap)) {
+    if (!knownStationIds.has(stationId)) {
+      findings.push(`Cycle ${cycle.id} station criteria references unknown station "${stationId}".`);
+    }
+    if (!(cycle.stations || []).includes(stationId)) {
+      findings.push(`Cycle ${cycle.id} station criteria references station outside the cycle: ${stationId}.`);
+    }
+    for (const criterionId of criterionIds || []) {
+      if (!knownCriteriaIds.has(criterionId)) {
+        findings.push(`Cycle ${cycle.id} station criteria for "${stationId}" references unknown criterion "${criterionId}".`);
+      }
+    }
+  }
+
+  for (const stationId of cycle.stations || []) {
+    const criterionIds = resolveStationCriteria(stationId, cycle.id);
+    if (!Array.isArray(criterionIds) || criterionIds.length === 0) {
+      findings.push(`Cycle ${cycle.id} station "${stationId}" has no station criteria.`);
+    }
+  }
+
+}
+
+for (const [stationId, criterionIds] of Object.entries(stationCriteriaJson.default || {})) {
+  if (!knownStationIds.has(stationId)) {
+    findings.push(`Default station criteria references unknown station "${stationId}".`);
+  }
+  for (const criterionId of criterionIds || []) {
+    if (!knownCriteriaIds.has(criterionId)) {
+      findings.push(`Default station criteria for "${stationId}" references unknown criterion "${criterionId}".`);
+    }
+  }
+}
+
+for (const cycleId of Object.keys(stationCriteriaJson.byCycle || {})) {
+  if (!knownCycleIds.has(cycleId)) {
+    findings.push(`Station criteria references unknown cycle "${cycleId}".`);
+  }
 }
 
 const stationsUsedInLines = new Set(
