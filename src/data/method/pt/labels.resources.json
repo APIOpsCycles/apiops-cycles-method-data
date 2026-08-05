@@ -85,7 +85,7 @@
   "resource.api-testing-best-practices.outcomes.1": "Abordagem normalizada utilizando as boas práticas de teste de API",
   "resource.api-testing-best-practices.outcomes.2": "Melhoria da implementação das práticas de API relacionadas",
   "resource.api-testing-best-practices.steps": "Testar a funcionalidade, a segurança e o desempenho das APIs, utilizando ferramentas de teste automatizadas.",
-  "resource.api-testing-best-practices.steps.1": "Integrar testes funcionais e não funcionais no pipeline CI/CD para garantir que as APIs cumprems normas de qualidade.",
+  "resource.api-testing-best-practices.steps.1": "Integrar testes funcionais e não funcionais no pipeline CI/CD para garantir que as APIs cumprem normas de qualidade.",
   "resource.api-testing-best-practices.steps.2": "Utilizar ferramentas de teste automatizadas para validar a funcionalidade, a segurança e o desempenho da API.",
   "resource.api-testing-best-practices.tips": "Personalize as boas práticas de teste de API ao seu domínio",
   "resource.api-testing-best-practices.tips.1": "Utilize-o de forma colaborativa entre as funções de negócio e tecnológicas",
