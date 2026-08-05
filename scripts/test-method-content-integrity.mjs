@@ -29,6 +29,104 @@ const findings = [];
 const warnings = [];
 const lifecycleStages = new Set(["strategy", "architecture", "design", "delivery", "publishing", "improving"]);
 
+const textQualityRoots = [
+  path.join("src", "data", "method"),
+  path.join("src", "data", "canvas")
+];
+const textQualityPatterns = [
+  {
+    name: "Unicode replacement character",
+    pattern: /\uFFFD/u,
+    reason: "usually means invalid bytes were decoded with replacement"
+  },
+  {
+    name: "UTF-8 mojibake lead U+00C3",
+    pattern: /\u00c3/u,
+    reason: "usually means UTF-8 text was decoded as Windows-1252 or Latin-1"
+  },
+  {
+    name: "UTF-8 mojibake lead U+00C2",
+    pattern: /\u00c2/u,
+    reason: "usually means a non-breaking space or punctuation was double-decoded"
+  },
+  {
+    name: "UTF-8 punctuation mojibake",
+    pattern: /\u00e2[\u0080-\u009f\u20ac\u201a\u201c\u201d\u201e\u02dc\u2019\u2018\u2013\u2014]/u,
+    reason: "usually means smart quotes, dashes, or zero-width characters were corrupted"
+  },
+  {
+    name: "question-mark accent replacement",
+    pattern: /\b[A-Za-z\u00c0-\u017e]*\?[A-Za-z\u00c0-\u017e]*\b/u,
+    reason: "usually means an accented character was replaced by ? during shell rewriting"
+  },
+  {
+    name: "known Portuguese corruption Snum",
+    pattern: /\bSnum\b/u,
+    reason: "expected text is likely Sem"
+  },
+  {
+    name: "known Portuguese corruption snum",
+    pattern: /\bsnum\b/u,
+    reason: "expected text is likely sem"
+  },
+  {
+    name: "known Portuguese corruption cumprems",
+    pattern: /\bcumprems\b/u,
+    reason: "expected text is likely cumprem"
+  }
+];
+
+function listFiles(dirPath) {
+  return readdirSync(dirPath, { withFileTypes: true }).flatMap((entry) => {
+    const entryPath = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      return listFiles(entryPath);
+    }
+    return [entryPath];
+  });
+}
+
+function collectStringValues(node, keyPath = "", results = []) {
+  if (typeof node === "string") {
+    results.push({ keyPath, value: node });
+    return results;
+  }
+
+  if (Array.isArray(node)) {
+    node.forEach((item, index) => {
+      collectStringValues(item, `${keyPath}[${index}]`, results);
+    });
+    return results;
+  }
+
+  if (node && typeof node === "object") {
+    for (const [key, value] of Object.entries(node)) {
+      collectStringValues(value, keyPath ? `${keyPath}.${key}` : key, results);
+    }
+  }
+
+  return results;
+}
+
+function validateTextEncodingAndMojibake() {
+  const jsonFiles = textQualityRoots
+    .flatMap((root) => listFiles(root))
+    .filter((filePath) => filePath.endsWith(".json"));
+
+  for (const filePath of jsonFiles) {
+    const data = readJson(filePath);
+    for (const { keyPath, value } of collectStringValues(data)) {
+      for (const { name, pattern, reason } of textQualityPatterns) {
+        if (pattern.test(value)) {
+          findings.push(
+            `Text quality issue in ${filePath}${keyPath ? ` at ${keyPath}` : ""}: ${name} (${reason}).`
+          );
+        }
+      }
+    }
+  }
+}
+
 function resolveStationCriteria(stationId, cycleId) {
   return stationCriteriaJson.byCycle?.[cycleId]?.[stationId]
     || stationCriteriaJson.default?.[stationId]
@@ -444,6 +542,8 @@ for (const locale of Object.keys(localizedCanvasDataJson)) {
     }
   }
 }
+
+validateTextEncodingAndMojibake();
 
 if (findings.length > 0) {
   console.error("Method content validation failed:");

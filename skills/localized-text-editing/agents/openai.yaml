@@ -1,0 +1,5 @@
+interface:
+  display_name: Localized Text Editing
+  short_description: Edit localized APIOps text without encoding damage
+policy:
+  allow_implicit_invocation: true
