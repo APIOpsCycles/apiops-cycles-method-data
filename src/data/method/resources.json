@@ -1409,32 +1409,6 @@
       "category": "canvas"
     },
     {
-      "id": "humanAutomationResponsibilityCanvas",
-      "title": "resource.human-automation-responsibility-canvas.title",
-      "slug": "resources/human-automation-responsibility-canvas",
-      "icon": "dashboard-outline",
-      "order": 190,
-      "description": "resource.human-automation-responsibility-canvas.description",
-      "canvas": "humanAutomationResponsibilityCanvas",
-      "outcomes": [
-        "resource.human-automation-responsibility-canvas.outcomes",
-        "resource.human-automation-responsibility-canvas.outcomes.1",
-        "resource.human-automation-responsibility-canvas.outcomes.2"
-      ],
-      "how_it_works": {
-        "steps": [
-          "resource.human-automation-responsibility-canvas.steps",
-          "resource.human-automation-responsibility-canvas.steps.1",
-          "resource.human-automation-responsibility-canvas.steps.2"
-        ],
-        "tips": [
-          "resource.human-automation-responsibility-canvas.tips",
-          "resource.human-automation-responsibility-canvas.tips.1"
-        ]
-      },
-      "category": "canvas"
-    },
-    {
       "id": "automationWorkflowCanvas",
       "title": "resource.automation-workflow-canvas.title",
       "slug": "resources/automation-workflow-canvas",

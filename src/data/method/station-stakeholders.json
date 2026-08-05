@@ -1,7 +1,7 @@
 {
   "stationStakeholdersByCycle": {
     "capability-productization-cycle": {
-      "capability-strategy": [
+      "api-product-strategy": [
         {
           "stakeholder": "capability-owner",
           "involvement": "lead",
@@ -37,7 +37,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-consumer-producer-requirements": [
+      "api-consumer-experience": [
         {
           "stakeholder": "customer-specialist",
           "involvement": "lead",
@@ -73,7 +73,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-architecture-platform-decisions": [
+      "api-platform-architecture": [
         {
           "stakeholder": "platform-architect",
           "involvement": "lead",
@@ -113,7 +113,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-solution-interaction-design": [
+      "api-design": [
         {
           "stakeholder": "api-designer",
           "involvement": "lead",
@@ -153,7 +153,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-delivery-operations": [
+      "api-delivery": [
         {
           "stakeholder": "api-engineer",
           "involvement": "lead",
@@ -189,7 +189,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-readiness-assurance": [
+      "api-audit": [
         {
           "stakeholder": "governance-specialist",
           "involvement": "lead",
@@ -229,7 +229,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-publishing-enablement": [
+      "api-publishing": [
         {
           "stakeholder": "capability-owner",
           "involvement": "lead",
@@ -265,7 +265,7 @@
           "involvement": "consulted"
         }
       ],
-      "capability-monitoring-improvement": [
+      "monitoring-and-improving": [
         {
           "stakeholder": "capability-owner",
           "involvement": "lead",
@@ -643,7 +643,7 @@
       ]
     },
     "integration-productization-cycle": {
-      "integration-capability-strategy": [
+      "api-product-strategy": [
         {
           "stakeholder": "integration-architect",
           "involvement": "lead",
@@ -679,7 +679,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-consumer-requirements-onboarding": [
+      "api-consumer-experience": [
         {
           "stakeholder": "api-consumer-specialist",
           "involvement": "lead",
@@ -715,7 +715,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-architecture-platform-decisions": [
+      "api-platform-architecture": [
         {
           "stakeholder": "platform-architect",
           "involvement": "lead",
@@ -759,7 +759,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-solution-design": [
+      "api-design": [
         {
           "stakeholder": "integration-architect",
           "involvement": "lead",
@@ -799,7 +799,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-delivery-operations": [
+      "api-delivery": [
         {
           "stakeholder": "api-engineer",
           "involvement": "lead",
@@ -839,7 +839,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-readiness-assurance": [
+      "api-audit": [
         {
           "stakeholder": "governance-specialist",
           "involvement": "lead",
@@ -879,7 +879,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-publishing-enablement": [
+      "api-publishing": [
         {
           "stakeholder": "integration-architect",
           "involvement": "lead",
@@ -919,7 +919,7 @@
           "involvement": "consulted"
         }
       ],
-      "integration-monitoring-improvement": [
+      "monitoring-and-improving": [
         {
           "stakeholder": "integration-architect",
           "involvement": "lead",
@@ -1020,13 +1020,7 @@
       "api-consumer-experience": [
         {
           "stakeholder": "process-owner",
-          "involvement": "lead",
-          "responsibilities": [
-            {
-              "resource": "humanAutomationResponsibilityCanvas",
-              "role": "suggested-answer-owner"
-            }
-          ]
+          "involvement": "lead"
         },
         {
           "stakeholder": "automation-owner",
@@ -1037,7 +1031,7 @@
           "involvement": "core",
           "responsibilities": [
             {
-              "resource": "userOperatorExperienceRequirementsCanvas",
+              "resource": "consumerExperienceRequirementsCanvas",
               "role": "suggested-answer-owner"
             }
           ]
