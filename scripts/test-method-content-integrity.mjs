@@ -373,6 +373,20 @@ for (const locale of localeDirs) {
 for (const locale of Object.keys(localizedCanvasDataJson)) {
   const localizedCanvases = localizedCanvasDataJson[locale] || {};
 
+  for (const canvasId of Object.keys(localizedCanvases)) {
+    if (!knownCanvasIds.has(canvasId)) {
+      findings.push(`Locale ${locale} has localization for unknown canvas "${canvasId}".`);
+      continue;
+    }
+
+    const knownSectionIds = new Set((canvasDataJson[canvasId].sections || []).map((section) => section.id));
+    for (const sectionId of Object.keys(localizedCanvases[canvasId].sections || {})) {
+      if (!knownSectionIds.has(sectionId)) {
+        findings.push(`Locale ${locale} has localization for unknown section "${canvasId}.${sectionId}".`);
+      }
+    }
+  }
+
   for (const [canvasId, canvas] of Object.entries(canvasDataJson)) {
     const localizedCanvas = localizedCanvases[canvasId];
     if (!localizedCanvas) {
@@ -390,6 +404,21 @@ for (const locale of Object.keys(localizedCanvasDataJson)) {
       findings.push(`Locale ${locale} is missing canvas howToUse for "${canvasId}".`);
     }
 
+    if (locale !== "en") {
+      const englishCanvas = localizedCanvasDataJson.en?.[canvasId];
+      if (locale === "de" && localizedCanvas.title !== englishCanvas?.title) {
+        findings.push(`Locale de must keep the English canvas name for "${canvasId}.title".`);
+      }
+      for (const field of ["title", "purpose", "howToUse"]) {
+        if (locale === "de" && field === "title") {
+          continue;
+        }
+        if (localizedCanvas[field] === englishCanvas?.[field]) {
+          findings.push(`Locale ${locale} still uses English fallback for "${canvasId}.${field}".`);
+        }
+      }
+    }
+
     for (const section of canvas.sections || []) {
       const localizedSection = localizedCanvas.sections?.[section.id];
       if (!localizedSection) {
@@ -402,6 +431,15 @@ for (const locale of Object.keys(localizedCanvasDataJson)) {
       }
       if (!String(localizedSection.description || "").trim()) {
         findings.push(`Locale ${locale} is missing section description for "${canvasId}.${section.id}".`);
+      }
+
+      if (locale !== "en") {
+        const englishSection = localizedCanvasDataJson.en?.[canvasId]?.sections?.[section.id];
+        for (const field of ["section", "description"]) {
+          if (localizedSection[field] === englishSection?.[field]) {
+            findings.push(`Locale ${locale} still uses English fallback for "${canvasId}.${section.id}.${field}".`);
+          }
+        }
       }
     }
   }
