@@ -22,7 +22,7 @@
           "description": "Beginnen Sie mit einem Haftzettel, auf dem Sie die API oder die API-Familie benennen, und erfassen Sie dann, welchen Nutzen die API den API-Nutzern bietet."
         },
         "developerRelations": {
-          "section": "Developer Relations",
+          "section": "Developer-Relations",
           "description": "Wie erreicht und unterstützt der API-Anbieter die API-Nutzer?"
         },
         "channels": {
@@ -72,36 +72,36 @@
       "howToUse": "Nutzen Sie dies, um erwartete Vorteile und Konsequenzen mit Architektur, Priorisierung, Bereitschaft und Proceed-or-Stop-Entscheidungen zu verbinden. Berücksichtigen Sie auch die Auswirkungen des Nicht-Handelns sowie kritische Risiken und Gegenmaßnahmen.",
       "sections": {
         "expectedBenefits": {
-          "section": "Expected benefits",
-          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+          "section": "Erwartete Vorteile",
+          "description": "Welche geschäftlichen, kundenbezogenen, mitarbeiterbezogenen, qualitäts-, geschwindigkeits-, risiko-, compliance- oder strategischen Vorteile werden erwartet?"
         },
         "operationalEfficiencyImpact": {
-          "section": "Operational efficiency impact",
-          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+          "section": "Auswirkung auf die operative Effizienz",
+          "description": "Wie könnten Arbeitsaufwand, Wartezeit, Nacharbeit, Durchsatz, Zuverlässigkeit, Supportbelastung oder Betriebskosten sich verändern?"
         },
         "customerEmployeeImpact": {
-          "section": "Customer and employee impact",
-          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+          "section": "Auswirkung auf Kunden und Mitarbeitende",
+          "description": "Wie werden Kunden, Mitarbeitende, Partner, Betreiber oder Supportteams die Veränderung erleben?"
         },
         "financialImpact": {
-          "section": "Financial impact",
-          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+          "section": "Finanzielle Auswirkung",
+          "description": "Welche Auswirkungen auf Umsatz, Kosten, Investitionen, Einsparungen, vermiedene Verluste oder Finanzierung werden erwartet?"
         },
         "complianceStrategicImpact": {
-          "section": "Compliance and strategic impact",
-          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+          "section": "Compliance- und strategische Auswirkung",
+          "description": "Welche regulatorischen, vertraglichen, richtlinienbezogenen, reputations-, markt-, ökosystem- oder strategischen Konsequenzen sind relevant?"
         },
         "impactOfNotProceeding": {
-          "section": "Impact of not proceeding",
-          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+          "section": "Auswirkung des Nicht-Fortfahrens",
+          "description": "Was geschieht, wenn die Capability, Automatisierung, Integration oder der Service nicht verbessert oder geliefert wird?"
         },
         "risksAndCriticality": {
-          "section": "Risks and criticality",
-          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+          "section": "Risiken und Kritikalität",
+          "description": "Welche Verfügbarkeits-, Sicherheits-, Daten-, Safety-, Prozess-, Akzeptanz- oder Business-Continuity-Risiken könnten das Ergebnis beeinflussen?"
         },
         "mitigationsAndDecisionImpact": {
-          "section": "Mitigations and decision impact",
-          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
+          "section": "Gegenmaßnahmen und Entscheidungsauswirkung",
+          "description": "Welche Gegenmaßnahmen, Einschränkungen, Kompromisse oder Restrisiken sollten Priorisierung, Architektur, Rollout oder Readiness-Entscheidungen beeinflussen?"
         }
       }
     },
@@ -146,7 +146,7 @@
           "description": "Wie erkennt der Kunde oder Nutzer ein Bedürfnis oder Problem?"
         },
         "persona": {
-          "section": "Persona",
+          "section": "Personas",
           "description": "Wer ist der typische Kunde oder Nutzer, der diese Reise erlebt?"
         },
         "pains": {
@@ -166,7 +166,7 @@
           "description": "Welchen Gewinn oder Nutzen hat der Kunde?"
         },
         "inputsOutputs": {
-          "section": "Inputs & Outputs",
+          "section": "Eingaben & Ausgaben",
           "description": "Was sind die Inputs und Outputs bei jedem Schritt?"
         },
         "interactionProcessingRules": {
@@ -380,7 +380,7 @@
           "description": "Welche Operationen verändern Daten (z.B. erstellen, aktualisieren, löschen)?"
         },
         "subscriptions": {
-          "section": "Subscriptions",
+          "section": "Abonnements",
           "description": "Gibt es Echtzeit-Updates oder Ereignisse, die Nutzer abonnieren können?"
         },
         "authorizationRules": {
@@ -512,28 +512,28 @@
     },
     "automationOpportunityCanvas": {
       "title": "Automation Hypothesis & Validation Canvas",
-      "purpose": "Turn existing journey, value, impact, domain, and capacity evidence into a testable automation decision.",
-      "howToUse": "Reuse earlier canvas outputs. Record only the remaining hypothesis, uncertainties, validation, and decision.",
+      "purpose": "Überführen Sie vorhandene Nachweise zu Journey, Wert, Auswirkungen, Domäne und Kapazität in eine prüfbare Automatisierungsentscheidung.",
+      "howToUse": "Verwenden Sie frühere Canvas-Ergebnisse wieder. Erfassen Sie nur die verbleibende Hypothese, Unsicherheiten, Validierung und Entscheidung.",
       "sections": {
         "hypothesis": {
-          "section": "Automation hypothesis",
-          "description": "What work do we believe should be automated, and what outcome should it achieve?"
+          "section": "Automatisierungshypothese",
+          "description": "Welche Arbeit sollte aus unserer Sicht automatisiert werden, und welches Ergebnis soll sie erreichen?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the hypothesis?"
+          "section": "Wiederverwendete Nachweise",
+          "description": "Welche früheren Canvas-Ergebnisse stützen die Hypothese?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could make the hypothesis wrong, unsafe, or unworkable?"
+          "section": "Kritische Annahmen",
+          "description": "Was könnte die Hypothese falsch, unsicher oder nicht umsetzbar machen?"
         },
         "validationExperiment": {
-          "section": "Validation experiment",
-          "description": "What is the smallest useful test, evidence threshold, and stop condition?"
+          "section": "Validierungsexperiment",
+          "description": "Was ist der kleinste sinnvolle Test, welcher Nachweisschwellenwert gilt, und wann wird gestoppt?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, revise, redesign the process, or stop?"
+          "section": "Entscheidung",
+          "description": "Fortfahren, überarbeiten, den Prozess neu gestalten oder stoppen?"
         }
       }
     },
@@ -570,365 +570,365 @@
     },
     "automationArchitectureDecisionCanvas": {
       "title": "Automation Architecture Decision Canvas",
-      "purpose": "Choose the implementation approach using evidence already gathered.",
-      "howToUse": "Bring forward constraints and responsibility choices. Compare only viable mechanisms, then record the decision and remaining risks.",
+      "purpose": "Wählen Sie den Umsetzungsansatz anhand bereits gesammelter Nachweise.",
+      "howToUse": "Übernehmen Sie Einschränkungen und Verantwortlichkeitsentscheidungen. Vergleichen Sie nur tragfähige Mechanismen und dokumentieren Sie anschließend die Entscheidung und verbleibende Risiken.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which requirements, capacity, location, impact, and responsibility decisions constrain the choice?"
+          "section": "Wiederverwendete Eingaben",
+          "description": "Welche Anforderungen, Kapazitäts-, Standort-, Auswirkungs- und Verantwortlichkeitsentscheidungen begrenzen die Auswahl?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which human, workflow, rule, agent, API, connector, custom, or UI automation options remain viable?"
+          "section": "Tragfähige Optionen",
+          "description": "Welche Optionen mit Menschen, Workflows, Regeln, Agenten, APIs, Konnektoren, individuellen Lösungen oder UI-Automatisierung bleiben tragfähig?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style or hybrid is selected?"
+          "section": "Ausgewählter Ansatz",
+          "description": "Welcher Umsetzungsstil oder hybride Ansatz wird ausgewählt?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Entscheidungsbegründung",
+          "description": "Warum passt der ausgewählte Ansatz am besten?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Abgelehnte Alternativen",
+          "description": "Welche ernsthaften Alternativen wurden abgelehnt, und warum?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Offene Risiken",
+          "description": "Was muss vor Lieferung oder Release noch validiert werden?"
         }
       }
     },
     "automationReadinessOperationsCanvas": {
       "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before readiness review.",
-      "howToUse": "Reuse design decisions. Record ownership, operational arrangements, evidence, recovery, and remaining readiness gaps.",
+      "purpose": "Bereiten Sie die minimal erforderlichen Betriebsnachweise vor der Readiness-Prüfung vor.",
+      "howToUse": "Verwenden Sie Designentscheidungen wieder. Erfassen Sie Ownership, betriebliche Regelungen, Nachweise, Wiederherstellung und verbleibende Readiness-Lücken.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business outcomes, operations, support, and changes?"
+          "section": "Verantwortlichkeit",
+          "description": "Wer verantwortet Geschäftsergebnisse, Betrieb, Support und Änderungen?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, permissions, credentials, and identities ready?"
+          "section": "Umgebungen und Zugriff",
+          "description": "Sind Umgebungen, Berechtigungen, Credentials und Identitäten bereit?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves correct, safe, and reliable behavior?"
+          "section": "Testnachweise",
+          "description": "Was belegt korrektes, sicheres und zuverlässiges Verhalten?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, incidents, users, and operators be supported?"
+          "section": "Monitoring und Support",
+          "description": "Wie werden Health, Incidents, Nutzer und Betreiber unterstützt?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will exceptions, fallback, rollback, and manual recovery work?"
+          "section": "Fehler und Wiederherstellung",
+          "description": "Wie funktionieren Ausnahmen, Fallback, Rollback und manuelle Wiederherstellung?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are documentation, risks, conditions, and blocking gaps clear?"
+          "section": "Readiness-Status",
+          "description": "Sind Dokumentation, Risiken, Bedingungen und blockierende Lücken klar?"
         }
       }
     },
     "integrationCapabilityHypothesisCanvas": {
       "title": "Integration Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable integration capability should proceed.",
-      "howToUse": "Reuse journey, value, domain, business model, impact, and capacity evidence instead of restating it.",
+      "purpose": "Validieren Sie, ob eine vorgeschlagene wiederverwendbare Integrationsfähigkeit weiterverfolgt werden sollte.",
+      "howToUse": "Verwenden Sie Nachweise zu Journey, Wert, Domäne, Geschäftsmodell, Auswirkungen und Kapazität wieder, statt sie erneut zu beschreiben.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed integration capability and reuse scope are being tested?"
+          "section": "Zu validierende Fähigkeit",
+          "description": "Welche vorgeschlagene Integrationsfähigkeit und welcher Wiederverwendungsumfang werden geprüft?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Wiederverwendete Nachweise",
+          "description": "Welche früheren Canvas-Ergebnisse stützen den Vorschlag?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, feasibility, or adoption?"
+          "section": "Kritische Annahmen",
+          "description": "Was könnte Wert, Wiederverwendung, Ownership, Machbarkeit oder Akzeptanz ungültig machen?"
         },
         "validationStep": {
-          "section": "Validation step",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Validierungsschritt",
+          "description": "Was ist die kleinste sinnvolle Validierung und welcher Erfolgsschwellenwert gilt?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Entscheidung",
+          "description": "Fortfahren, eingrenzen, überarbeiten und erneut testen oder stoppen?"
         }
       }
     },
     "integrationConsumerProviderRequirementsCanvas": {
       "title": "Integration Consumer & Provider Commitments Canvas",
-      "purpose": "Agree the responsibilities needed to use and provide a reusable integration capability.",
-      "howToUse": "Bring forward consumers, use cases, service needs, and constraints. Record commitments rather than rediscovering requirements.",
+      "purpose": "Vereinbaren Sie die Verantwortlichkeiten, die zur Nutzung und Bereitstellung einer wiederverwendbaren Integrationsfähigkeit erforderlich sind.",
+      "howToUse": "Übernehmen Sie Nutzer, Anwendungsfälle, Servicebedarfe und Einschränkungen. Erfassen Sie Verpflichtungen, statt Anforderungen erneut zu ermitteln.",
       "sections": {
         "selectedPartiesAndUseCases": {
-          "section": "Selected parties and use cases",
-          "description": "Which producers, providers, consumers, and use cases are covered?"
+          "section": "Ausgewählte Parteien und Anwendungsfälle",
+          "description": "Welche Produzenten, Anbieter, Nutzer und Anwendungsfälle sind abgedeckt?"
         },
         "providerCommitments": {
-          "section": "Provider commitments",
-          "description": "What will providers deliver, maintain, monitor, and support?"
+          "section": "Anbieterverpflichtungen",
+          "description": "Was werden Anbieter liefern, warten, überwachen und unterstützen?"
         },
         "consumerCommitments": {
-          "section": "Consumer commitments",
-          "description": "What must consumers test, protect, operate, and communicate?"
+          "section": "Nutzerverpflichtungen",
+          "description": "Was müssen Nutzer testen, schützen, betreiben und kommunizieren?"
         },
         "accessAndValidationAgreement": {
-          "section": "Access and validation",
-          "description": "How will access, environments, credentials, and conformance be handled?"
+          "section": "Zugriff und Validierung",
+          "description": "Wie werden Zugriff, Umgebungen, Credentials und Konformität gehandhabt?"
         },
         "failureAndRecoveryAgreement": {
-          "section": "Failure and recovery",
-          "description": "Who handles failures, replay, duplicates, reconciliation, and recovery?"
+          "section": "Fehler und Wiederherstellung",
+          "description": "Wer behandelt Fehler, Replay, Duplikate, Abstimmung und Wiederherstellung?"
         },
         "changeAndLifecycleAgreement": {
-          "section": "Change and lifecycle",
-          "description": "How will compatibility, migration, notice, deprecation, and retirement work?"
+          "section": "Änderung und Lebenszyklus",
+          "description": "Wie funktionieren Kompatibilität, Migration, Benachrichtigung, Deprecation und Stilllegung?"
         }
       }
     },
     "integrationArchitectureDecisionCanvas": {
       "title": "Integration Architecture Decision Canvas",
-      "purpose": "Choose the integration style and platform using evidence already gathered.",
-      "howToUse": "Bring forward consumer commitments, impact, location, and capacity. Compare only viable styles and record the decision.",
+      "purpose": "Wählen Sie Integrationsstil und Plattform anhand bereits gesammelter Nachweise.",
+      "howToUse": "Übernehmen Sie Nutzerverpflichtungen, Auswirkungen, Standort und Kapazität. Vergleichen Sie nur tragfähige Stile und dokumentieren Sie die Entscheidung.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which commitments, capacity, location, impact, and domain decisions constrain the choice?"
+          "section": "Wiederverwendete Eingaben",
+          "description": "Welche Verpflichtungen sowie Kapazitäts-, Standort-, Auswirkungs- und Domänenentscheidungen begrenzen die Auswahl?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, messaging, file, stream, data, connector, platform, or custom options remain viable?"
+          "section": "Tragfähige Optionen",
+          "description": "Welche API-, Event-, Messaging-, Datei-, Stream-, Daten-, Konnektor-, Plattform- oder individuellen Optionen bleiben tragfähig?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which integration style, platform, or hybrid is selected?"
+          "section": "Ausgewählter Ansatz",
+          "description": "Welcher Integrationsstil, welche Plattform oder welcher hybride Ansatz wird ausgewählt?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Entscheidungsbegründung",
+          "description": "Warum passt der ausgewählte Ansatz am besten?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Abgelehnte Alternativen",
+          "description": "Welche ernsthaften Alternativen wurden abgelehnt, und warum?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Offene Risiken",
+          "description": "Was muss vor Lieferung oder Release noch validiert werden?"
         }
       }
     },
     "integrationReadinessOperationsCanvas": {
       "title": "Integration Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before integration readiness review.",
-      "howToUse": "Reuse contracts and design decisions. Record ownership, operations, evidence, recovery, and remaining readiness gaps.",
+      "purpose": "Bereiten Sie die minimal erforderlichen Betriebsnachweise vor der Integrations-Readiness-Prüfung vor.",
+      "howToUse": "Verwenden Sie Verträge und Designentscheidungen wieder. Erfassen Sie Ownership, Betrieb, Nachweise, Wiederherstellung und verbleibende Readiness-Lücken.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business, integration, producer, consumer, platform, and incident responsibilities?"
+          "section": "Verantwortlichkeit",
+          "description": "Wer verantwortet Geschäfts-, Integrations-, Produzenten-, Nutzer-, Plattform- und Incident-Aufgaben?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, credentials, connectivity, permissions, and sequencing ready?"
+          "section": "Umgebungen und Zugriff",
+          "description": "Sind Umgebungen, Credentials, Konnektivität, Berechtigungen und Sequenzierung bereit?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves contract, mapping, compatibility, quality, resilience, and recovery?"
+          "section": "Testnachweise",
+          "description": "Was belegt Vertrag, Mapping, Kompatibilität, Qualität, Resilienz und Wiederherstellung?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will producers, consumers, platforms, incidents, and service questions be supported?"
+          "section": "Monitoring und Support",
+          "description": "Wie werden Produzenten, Nutzer, Plattformen, Incidents und Servicefragen unterstützt?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will retry, replay, duplicates, reconciliation, fallback, and compensation work?"
+          "section": "Fehler und Wiederherstellung",
+          "description": "Wie funktionieren Retry, Replay, Duplikate, Abstimmung, Fallback und Kompensation?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are contracts, runbooks, dependencies, risks, conditions, and blocking gaps clear?"
+          "section": "Readiness-Status",
+          "description": "Sind Verträge, Runbooks, Abhängigkeiten, Risiken, Bedingungen und blockierende Lücken klar?"
         }
       }
     },
     "integrationSolutionDesignCanvas": {
       "title": "Integration Solution Design Canvas",
-      "purpose": "Refine the selected architecture into an implementable integration design.",
-      "howToUse": "Reuse the selected style, domain concepts, interaction needs, and commitments. Add only implementation-specific design.",
+      "purpose": "Verfeinern Sie die ausgewählte Architektur zu einem umsetzbaren Integrationsdesign.",
+      "howToUse": "Verwenden Sie den ausgewählten Stil, Domänenkonzepte, Interaktionsbedarfe und Verpflichtungen wieder. Ergänzen Sie nur umsetzungsspezifisches Design.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which architecture, domain, interaction, and commitment decisions are reused?"
+          "section": "Ausgewählte Eingaben",
+          "description": "Welche Architektur-, Domänen-, Interaktions- und Verpflichtungsentscheidungen werden wiederverwendet?"
         },
         "contractAndModel": {
-          "section": "Contract and model",
-          "description": "What contract, schema, data model, and version define the integration?"
+          "section": "Vertrag und Modell",
+          "description": "Welcher Vertrag, welches Schema, Datenmodell und welche Version definieren die Integration?"
         },
         "mappingAndDelivery": {
-          "section": "Mapping and delivery",
-          "description": "What transformations, delivery pattern, and metadata are required?"
+          "section": "Mapping und Lieferung",
+          "description": "Welche Transformationen, Liefermuster und Metadaten sind erforderlich?"
         },
         "errorsAndRecovery": {
-          "section": "Errors and recovery",
-          "description": "How are failures, retries, replay, duplicates, and reconciliation handled?"
+          "section": "Fehler und Wiederherstellung",
+          "description": "Wie werden Fehler, Retries, Replay, Duplikate und Abstimmung behandelt?"
         },
         "securityAndTrust": {
-          "section": "Security and trust",
-          "description": "What identity, access, privacy, and trust controls apply?"
+          "section": "Sicherheit und Vertrauen",
+          "description": "Welche Identitäts-, Zugriffs-, Datenschutz- und Vertrauenskontrollen gelten?"
         },
         "observabilityAndEvolution": {
-          "section": "Observability and evolution",
-          "description": "How will the integration be monitored, changed, migrated, and deprecated?"
+          "section": "Observability und Weiterentwicklung",
+          "description": "Wie wird die Integration überwacht, geändert, migriert und als deprecated markiert?"
         }
       }
     },
     "capabilityHypothesisCanvas": {
       "title": "Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable digital capability should proceed.",
-      "howToUse": "Reuse journey, value proposition, business model, impact, domain, and capacity outputs instead of repeating them.",
+      "purpose": "Validieren Sie, ob eine vorgeschlagene wiederverwendbare digitale Fähigkeit weiterverfolgt werden sollte.",
+      "howToUse": "Verwenden Sie Ergebnisse zu Journey, Wertversprechen, Geschäftsmodell, Auswirkungen, Domäne und Kapazität wieder, statt sie zu wiederholen.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed capability and reusable scope are being tested?"
+          "section": "Zu validierende Fähigkeit",
+          "description": "Welche vorgeschlagene Fähigkeit und welcher Wiederverwendungsumfang werden geprüft?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Wiederverwendete Nachweise",
+          "description": "Welche früheren Canvas-Ergebnisse stützen den Vorschlag?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, sustainability, or adoption?"
+          "section": "Kritische Annahmen",
+          "description": "Was könnte Wert, Wiederverwendung, Ownership, Nachhaltigkeit oder Akzeptanz ungültig machen?"
         },
         "minimumValidation": {
-          "section": "Minimum validation",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Minimalvalidierung",
+          "description": "Was ist die kleinste sinnvolle Validierung und welcher Erfolgsschwellenwert gilt?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Entscheidung",
+          "description": "Fortfahren, eingrenzen, überarbeiten und erneut testen oder stoppen?"
         }
       }
     },
     "capabilityConsumerProducerRequirementsCanvas": {
       "title": "Capability Consumer & Producer Commitments Canvas",
-      "purpose": "Agree mutual commitments for providing and consuming a reusable capability.",
-      "howToUse": "Reuse consumers, value, channels, service needs, and ownership from earlier canvases. Capture only agreed commitments and gaps.",
+      "purpose": "Vereinbaren Sie gegenseitige Verpflichtungen für Bereitstellung und Nutzung einer wiederverwendbaren Fähigkeit.",
+      "howToUse": "Verwenden Sie Nutzer, Wert, Kanäle, Servicebedarfe und Ownership aus früheren Canvases wieder. Erfassen Sie nur vereinbarte Verpflichtungen und Lücken.",
       "sections": {
         "selectedConsumersAndUseCases": {
-          "section": "Selected consumers and use cases",
-          "description": "Which consumers and usage contexts are covered?"
+          "section": "Ausgewählte Nutzer und Anwendungsfälle",
+          "description": "Welche Nutzer und Nutzungskontexte sind abgedeckt?"
         },
         "ownerAndProducerCommitments": {
-          "section": "Owner and producer commitments",
-          "description": "What will owners and producers provide, maintain, monitor, and support?"
+          "section": "Owner- und Produzentenverpflichtungen",
+          "description": "Was werden Owner und Produzenten bereitstellen, warten, überwachen und unterstützen?"
         },
         "consumerResponsibilities": {
-          "section": "Consumer responsibilities",
-          "description": "What must consumers do for appropriate use, access, testing, and feedback?"
+          "section": "Nutzerverantwortlichkeiten",
+          "description": "Was müssen Nutzer für angemessene Nutzung, Zugriff, Tests und Feedback tun?"
         },
         "accessAndOnboardingAgreement": {
-          "section": "Access and onboarding",
-          "description": "What discovery, approval, testing, and onboarding path is agreed?"
+          "section": "Zugriff und Onboarding",
+          "description": "Welcher Discovery-, Genehmigungs-, Test- und Onboarding-Pfad ist vereinbart?"
         },
         "serviceAndLifecycleAgreement": {
-          "section": "Service and lifecycle",
-          "description": "What service, change, deprecation, and retirement commitments are agreed?"
+          "section": "Service und Lebenszyklus",
+          "description": "Welche Service-, Änderungs-, Deprecation- und Stilllegungsverpflichtungen sind vereinbart?"
         },
         "openCommitments": {
-          "section": "Open commitments",
-          "description": "What remains unresolved before architecture or delivery?"
+          "section": "Offene Verpflichtungen",
+          "description": "Was bleibt vor Architektur oder Lieferung ungeklärt?"
         }
       }
     },
     "capabilityArchitectureDecisionCanvas": {
       "title": "Capability Architecture Decision Canvas",
-      "purpose": "Choose how the capability will be delivered using evidence already gathered.",
-      "howToUse": "Bring forward value, commitments, impact, location, capacity, and domain decisions. Compare only viable implementation styles.",
+      "purpose": "Wählen Sie anhand bereits gesammelter Nachweise, wie die Fähigkeit geliefert wird.",
+      "howToUse": "Übernehmen Sie Wert, Verpflichtungen, Auswirkungen, Standort, Kapazität und Domänenentscheidungen. Vergleichen Sie nur tragfähige Umsetzungsstile.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which earlier decisions and constraints shape the implementation choice?"
+          "section": "Wiederverwendete Eingaben",
+          "description": "Welche früheren Entscheidungen und Einschränkungen prägen die Umsetzungswahl?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, workflow, application, data product, shared service, human service, or hybrid options remain viable?"
+          "section": "Tragfähige Optionen",
+          "description": "Welche API-, Event-, Workflow-, Anwendungs-, Datenprodukt-, Shared-Service-, menschlichen Service- oder hybriden Optionen bleiben tragfähig?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style and enabling platform are selected?"
+          "section": "Ausgewählter Ansatz",
+          "description": "Welcher Umsetzungsstil und welche unterstützende Plattform werden ausgewählt?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Entscheidungsbegründung",
+          "description": "Warum passt der ausgewählte Ansatz am besten?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Abgelehnte Alternativen",
+          "description": "Welche ernsthaften Alternativen wurden abgelehnt, und warum?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Offene Risiken",
+          "description": "Was muss vor Lieferung oder Release noch validiert werden?"
         }
       }
     },
     "capabilitySolutionDesignCanvas": {
       "title": "Capability Solution Design Canvas",
-      "purpose": "Refine the selected implementation style into a clear consumer-facing capability design.",
-      "howToUse": "Reuse value, domain, interaction, commitments, and architecture outputs. Add only solution-specific design.",
+      "purpose": "Verfeinern Sie den ausgewählten Umsetzungsstil zu einem klaren, nutzerorientierten Fähigkeitsdesign.",
+      "howToUse": "Verwenden Sie Wert-, Domänen-, Interaktions-, Verpflichtungs- und Architekturergebnisse wieder. Ergänzen Sie nur lösungsspezifisches Design.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which earlier journey, value, domain, commitment, and architecture decisions are reused?"
+          "section": "Ausgewählte Eingaben",
+          "description": "Welche früheren Journey-, Wert-, Domänen-, Verpflichtungs- und Architekturentscheidungen werden wiederverwendet?"
         },
         "boundaryAndInteraction": {
-          "section": "Boundary and interaction",
-          "description": "What belongs inside the capability, and how do consumers use it?"
+          "section": "Grenze und Interaktion",
+          "description": "Was gehört in die Fähigkeit, und wie nutzen Nutzer sie?"
         },
         "contractRulesAndOutcomes": {
-          "section": "Contract, rules, and outcomes",
-          "description": "What behavior, responsibilities, inputs, outputs, and outcomes are promised?"
+          "section": "Vertrag, Regeln und Ergebnisse",
+          "description": "Welches Verhalten, welche Verantwortlichkeiten, Eingaben, Ausgaben und Ergebnisse werden zugesagt?"
         },
         "errorsAndSecurity": {
-          "section": "Errors and security",
-          "description": "How are exceptions, access, privacy, and trust handled?"
+          "section": "Fehler und Sicherheit",
+          "description": "Wie werden Ausnahmen, Zugriff, Datenschutz und Vertrauen behandelt?"
         },
         "lifecycleAndSupport": {
-          "section": "Lifecycle and support",
-          "description": "How will change, versioning, support, deprecation, and retirement work?"
+          "section": "Lebenszyklus und Support",
+          "description": "Wie funktionieren Änderungen, Versionierung, Support, Deprecation und Stilllegung?"
         },
         "observability": {
-          "section": "Observability",
-          "description": "What health, usage, quality, value, and consumer signals must be visible?"
+          "section": "Beobachtbarkeit",
+          "description": "Welche Health-, Nutzungs-, Qualitäts-, Wert- und Nutzersignale müssen sichtbar sein?"
         }
       }
     },
     "capabilityReadinessOperationsCanvas": {
       "title": "Capability Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before capability readiness review.",
-      "howToUse": "Reuse business model, commitments, and solution design. Record only operational ownership, evidence, continuity, and readiness gaps.",
+      "purpose": "Bereiten Sie die minimal erforderlichen Betriebsnachweise vor der Fähigkeits-Readiness-Prüfung vor.",
+      "howToUse": "Verwenden Sie Geschäftsmodell, Verpflichtungen und Lösungsdesign wieder. Erfassen Sie nur operative Ownership, Nachweise, Kontinuität und Readiness-Lücken.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns value, the capability lifecycle, production, operations, support, and changes?"
+          "section": "Verantwortlichkeit",
+          "description": "Wer verantwortet Wert, Fähigkeitslebenszyklus, Produktion, Betrieb, Support und Änderungen?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are required environments, access, permissions, and credentials ready?"
+          "section": "Umgebungen und Zugriff",
+          "description": "Sind erforderliche Umgebungen, Zugriffe, Berechtigungen und Credentials bereit?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves outcomes, quality, security, compatibility, resilience, and consumer usability?"
+          "section": "Testnachweise",
+          "description": "Was belegt Ergebnisse, Qualität, Sicherheit, Kompatibilität, Resilienz und Nutzerfreundlichkeit?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, usage, value, incidents, consumers, and operators be supported?"
+          "section": "Monitoring und Support",
+          "description": "Wie werden Health, Nutzung, Wert, Incidents, Nutzer und Betreiber unterstützt?"
         },
         "failureAndRecovery": {
-          "section": "Continuity and recovery",
-          "description": "How will service continue, degrade safely, recover, or fall back?"
+          "section": "Kontinuität und Wiederherstellung",
+          "description": "Wie läuft der Service weiter, degradiert sicher, wird wiederhergestellt oder fällt zurück?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are service definitions, runbooks, risks, conditions, and blocking gaps clear?"
+          "section": "Readiness-Status",
+          "description": "Sind Service-Definitionen, Runbooks, Risiken, Bedingungen und blockierende Lücken klar?"
         }
       }
     }
@@ -1937,39 +1937,39 @@
     "businessImpactCanvas": {
       "title": "Liiketoimintavaikutusten kanvas",
       "purpose": "Mitä arvoa, riskiä sekä operatiivisia, taloudellisia, asiakas-, työntekijä-, vaatimustenmukaisuus- ja strategisia vaikutuksia odotetaan tai on vaakalaudalla?",
-      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
+      "howToUse": "Käytä tätä yhdistämään odotetut hyödyt ja seuraukset arkkitehtuuriin, priorisointiin, valmiuteen ja jatka-tai-pysäytä-päätöksiin. Sisällytä myös etenemättä jättämisen vaikutus sekä kriittiset riskit ja hallintakeinot.",
       "sections": {
         "expectedBenefits": {
-          "section": "Expected benefits",
-          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+          "section": "Odotetut hyödyt",
+          "description": "Mitä liiketoiminta-, asiakas-, työntekijä-, laatu-, nopeus-, riski-, vaatimustenmukaisuus- tai strategisia hyötyjä odotetaan?"
         },
         "operationalEfficiencyImpact": {
-          "section": "Operational efficiency impact",
-          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+          "section": "Vaikutus operatiiviseen tehokkuuteen",
+          "description": "Miten työmäärä, odotusaika, uudelleentyö, läpimeno, luotettavuus, tukikuorma tai operatiiviset kustannukset voivat muuttua?"
         },
         "customerEmployeeImpact": {
-          "section": "Customer and employee impact",
-          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+          "section": "Vaikutus asiakkaisiin ja työntekijöihin",
+          "description": "Miten asiakkaat, työntekijät, kumppanit, operaattorit tai tukitiimit kokevat muutoksen?"
         },
         "financialImpact": {
-          "section": "Financial impact",
-          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+          "section": "Taloudellinen vaikutus",
+          "description": "Mitä vaikutuksia odotetaan tuloihin, kustannuksiin, investointeihin, säästöihin, tappioiden välttämiseen tai rahoitukseen?"
         },
         "complianceStrategicImpact": {
-          "section": "Compliance and strategic impact",
-          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+          "section": "Vaatimustenmukaisuuden ja strategian vaikutus",
+          "description": "Mitkä sääntelyyn, sopimuksiin, käytäntöihin, maineeseen, markkinaan, ekosysteemiin tai strategiaan liittyvät seuraukset ovat olennaisia?"
         },
         "impactOfNotProceeding": {
-          "section": "Impact of not proceeding",
-          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+          "section": "Etenemättä jättämisen vaikutus",
+          "description": "Mitä tapahtuu, jos kyvykkyyttä, automaatiota, integraatiota tai palvelua ei paranneta tai toimiteta?"
         },
         "risksAndCriticality": {
-          "section": "Risks and criticality",
-          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+          "section": "Riskit ja kriittisyys",
+          "description": "Mitkä saatavuuteen, tietoturvaan, dataan, turvallisuuteen, prosessiin, käyttöönottoon tai liiketoiminnan jatkuvuuteen liittyvät riskit voivat vaikuttaa lopputulokseen?"
         },
         "mitigationsAndDecisionImpact": {
-          "section": "Mitigations and decision impact",
-          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
+          "section": "Hallintakeinot ja vaikutus päätöksiin",
+          "description": "Mitkä hallintakeinot, rajoitteet, kompromissit tai jäännösriskit vaikuttavat priorisointi-, arkkitehtuuri-, käyttöönotto- tai valmiuspäätöksiin?"
         }
       }
     },
@@ -2014,7 +2014,7 @@
           "description": "Miten asiakas huomaa tarpeensa?"
         },
         "persona": {
-          "section": "Persona",
+          "section": "Persoona",
           "description": "Kuka on tämän asiakaspolun kokija?"
         },
         "pains": {
@@ -2379,34 +2379,34 @@
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Hypothesis & Validation Canvas",
-      "purpose": "Turn existing journey, value, impact, domain, and capacity evidence into a testable automation decision.",
-      "howToUse": "Reuse earlier canvas outputs. Record only the remaining hypothesis, uncertainties, validation, and decision.",
+      "title": "Automaation hypoteesi- ja validointicanvas",
+      "purpose": "Muunna olemassa oleva asiakaspolku-, arvo-, vaikutus-, domain- ja kapasiteettinäyttö testattavaksi automaatiopäätökseksi.",
+      "howToUse": "Hyödynnä aiempien canvasten tuotoksia. Kirjaa vain jäljellä oleva hypoteesi, epävarmuudet, validointi ja päätös.",
       "sections": {
         "hypothesis": {
-          "section": "Automation hypothesis",
-          "description": "What work do we believe should be automated, and what outcome should it achieve?"
+          "section": "Automaation hypoteesi",
+          "description": "Mitä työtä uskomme, että pitäisi automatisoida, ja mikä lopputulos sen pitäisi saavuttaa?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the hypothesis?"
+          "section": "Uudelleenkäytetty näyttö",
+          "description": "Mitkä aiempien canvasten tuotokset tukevat hypoteesia?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could make the hypothesis wrong, unsafe, or unworkable?"
+          "section": "Kriittiset oletukset",
+          "description": "Mikä voisi tehdä hypoteesista väärän, turvattoman tai toteutuskelvottoman?"
         },
         "validationExperiment": {
-          "section": "Validation experiment",
-          "description": "What is the smallest useful test, evidence threshold, and stop condition?"
+          "section": "Validointikoe",
+          "description": "Mikä on pienin hyödyllinen testi, näytön kynnysarvo ja pysäytysehto?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, revise, redesign the process, or stop?"
+          "section": "Päätös",
+          "description": "Jatketaanko, tarkennetaanko, suunnitellaanko prosessi uudelleen vai pysäytetäänkö?"
         }
       }
     },
     "automationWorkflowCanvas": {
-      "title": "Automation Workflow Canvas",
+      "title": "Automaation työnkulkucanvas",
       "purpose": "Suunnittele sisäinen työnkulku, jolla valitut asiakas- ja kyvykkyystulokset tuotetaan.",
       "howToUse": "Hyödynnä asiakaspolun, arvolupauksen, toimialueen ja validoinnin aiempia tuloksia. Määritä sisäinen työ, jaa se ihmisten ja automaation kesken ja lisää vain toteutuksen kannalta tarvittavat yksityiskohdat.",
       "sections": {
@@ -2437,373 +2437,373 @@
       }
     },
     "automationArchitectureDecisionCanvas": {
-      "title": "Automation Architecture Decision Canvas",
-      "purpose": "Choose the implementation approach using evidence already gathered.",
-      "howToUse": "Bring forward constraints and responsibility choices. Compare only viable mechanisms, then record the decision and remaining risks.",
+      "title": "Automaation arkkitehtuuripäätöksen canvas",
+      "purpose": "Valitse toteutustapa jo kerätyn näytön perusteella.",
+      "howToUse": "Tuo mukaan rajoitteet ja vastuupäätökset. Vertaa vain toteuttamiskelpoisia mekanismeja ja kirjaa päätös sekä jäljellä olevat riskit.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which requirements, capacity, location, impact, and responsibility decisions constrain the choice?"
+          "section": "Uudelleenkäytetyt syötteet",
+          "description": "Mitkä vaatimukset sekä kapasiteetti-, sijainti-, vaikutus- ja vastuupäätökset rajaavat valintaa?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which human, workflow, rule, agent, API, connector, custom, or UI automation options remain viable?"
+          "section": "Toteuttamiskelpoiset vaihtoehdot",
+          "description": "Mitkä ihmisiin, työnkulkuihin, sääntöihin, agentteihin, API:eihin, konnektoreihin, räätälöintiin tai käyttöliittymäautomaatioon liittyvät vaihtoehdot ovat edelleen toteuttamiskelpoisia?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style or hybrid is selected?"
+          "section": "Valittu lähestymistapa",
+          "description": "Mikä toteutustyyli tai hybridi valitaan?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Päätöksen perustelu",
+          "description": "Miksi valittu lähestymistapa sopii parhaiten?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Hylätyt vaihtoehdot",
+          "description": "Mitkä vakavasti harkitut vaihtoehdot hylättiin ja miksi?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Avoimet riskit",
+          "description": "Mikä tarvitsee vielä validointia ennen toimitusta tai julkaisua?"
         }
       }
     },
     "automationReadinessOperationsCanvas": {
-      "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before readiness review.",
-      "howToUse": "Reuse design decisions. Record ownership, operational arrangements, evidence, recovery, and remaining readiness gaps.",
+      "title": "Automaation valmius- ja operointicanvas",
+      "purpose": "Valmistele vähimmäisnäyttö, jota tarvitaan ennen valmiuskatselmointia.",
+      "howToUse": "Hyödynnä suunnittelupäätöksiä. Kirjaa omistajuus, operatiiviset järjestelyt, näyttö, palautuminen ja jäljellä olevat valmiuspuutteet.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business outcomes, operations, support, and changes?"
+          "section": "Omistajuus",
+          "description": "Kuka omistaa liiketoimintatulokset, operoinnin, tuen ja muutokset?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, permissions, credentials, and identities ready?"
+          "section": "Ympäristöt ja pääsy",
+          "description": "Ovatko ympäristöt, oikeudet, tunnistetiedot ja identiteetit valmiina?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves correct, safe, and reliable behavior?"
+          "section": "Testinäyttö",
+          "description": "Mikä todistaa oikean, turvallisen ja luotettavan toiminnan?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, incidents, users, and operators be supported?"
+          "section": "Valvonta ja tuki",
+          "description": "Miten tilaa, häiriöitä, käyttäjiä ja operaattoreita tuetaan?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will exceptions, fallback, rollback, and manual recovery work?"
+          "section": "Vikatilanteet ja palautuminen",
+          "description": "Miten poikkeukset, varamenettely, palautus ja manuaalinen palautuminen toimivat?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are documentation, risks, conditions, and blocking gaps clear?"
+          "section": "Valmiustila",
+          "description": "Ovatko dokumentaatio, riskit, ehdot ja estävät puutteet selkeitä?"
         }
       }
     },
     "integrationCapabilityHypothesisCanvas": {
-      "title": "Integration Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable integration capability should proceed.",
-      "howToUse": "Reuse journey, value, domain, business model, impact, and capacity evidence instead of restating it.",
+      "title": "Integraatiokyvykkyyden validointicanvas",
+      "purpose": "Validoi, kannattaako ehdotettua uudelleenkäytettävää integraatiokyvykkyyttä jatkaa.",
+      "howToUse": "Hyödynnä asiakaspolkuun, arvoon, domainiin, liiketoimintamalliin, vaikutuksiin ja kapasiteettiin liittyvä näyttö sen sijaan, että kuvaisit sen uudelleen.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed integration capability and reuse scope are being tested?"
+          "section": "Validoitava kyvykkyys",
+          "description": "Mitä ehdotettua integraatiokyvykkyyttä ja uudelleenkäytön laajuutta testataan?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Uudelleenkäytetty näyttö",
+          "description": "Mitkä aiempien canvasten tuotokset tukevat ehdotusta?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, feasibility, or adoption?"
+          "section": "Kriittiset oletukset",
+          "description": "Mikä voisi kumota arvon, uudelleenkäytön, omistajuuden, toteutettavuuden tai käyttöönoton?"
         },
         "validationStep": {
-          "section": "Validation step",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Validointivaihe",
+          "description": "Mikä on pienin hyödyllinen validointi ja onnistumisen kynnysarvo?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Päätös",
+          "description": "Jatketaanko, rajataanko, tarkennetaanko ja testataan uudelleen vai pysäytetäänkö?"
         }
       }
     },
     "integrationConsumerProviderRequirementsCanvas": {
-      "title": "Integration Consumer & Provider Commitments Canvas",
-      "purpose": "Agree the responsibilities needed to use and provide a reusable integration capability.",
-      "howToUse": "Bring forward consumers, use cases, service needs, and constraints. Record commitments rather than rediscovering requirements.",
+      "title": "Integraation kuluttaja- ja tarjoajasitoumusten canvas",
+      "purpose": "Sovi vastuista, joita tarvitaan uudelleenkäytettävän integraatiokyvykkyyden käyttämiseen ja tarjoamiseen.",
+      "howToUse": "Tuo mukaan kuluttajat, käyttötapaukset, palvelutarpeet ja rajoitteet. Kirjaa sitoumukset sen sijaan, että etsisit vaatimukset uudelleen.",
       "sections": {
         "selectedPartiesAndUseCases": {
-          "section": "Selected parties and use cases",
-          "description": "Which producers, providers, consumers, and use cases are covered?"
+          "section": "Valitut osapuolet ja käyttötapaukset",
+          "description": "Mitkä tuottajat, tarjoajat, kuluttajat ja käyttötapaukset sisältyvät?"
         },
         "providerCommitments": {
-          "section": "Provider commitments",
-          "description": "What will providers deliver, maintain, monitor, and support?"
+          "section": "Tarjoajan sitoumukset",
+          "description": "Mitä tarjoajat toimittavat, ylläpitävät, valvovat ja tukevat?"
         },
         "consumerCommitments": {
-          "section": "Consumer commitments",
-          "description": "What must consumers test, protect, operate, and communicate?"
+          "section": "Kuluttajan sitoumukset",
+          "description": "Mitä kuluttajien täytyy testata, suojata, operoida ja viestiä?"
         },
         "accessAndValidationAgreement": {
-          "section": "Access and validation",
-          "description": "How will access, environments, credentials, and conformance be handled?"
+          "section": "Pääsy ja validointi",
+          "description": "Miten pääsy, ympäristöt, tunnistetiedot ja vaatimustenmukaisuus hoidetaan?"
         },
         "failureAndRecoveryAgreement": {
-          "section": "Failure and recovery",
-          "description": "Who handles failures, replay, duplicates, reconciliation, and recovery?"
+          "section": "Vikatilanteet ja palautuminen",
+          "description": "Kuka käsittelee viat, uudelleenajon, duplikaatit, täsmäytyksen ja palautumisen?"
         },
         "changeAndLifecycleAgreement": {
-          "section": "Change and lifecycle",
-          "description": "How will compatibility, migration, notice, deprecation, and retirement work?"
+          "section": "Muutos ja elinkaari",
+          "description": "Miten yhteensopivuus, migraatio, ilmoitukset, vanhentaminen ja käytöstä poisto toimivat?"
         }
       }
     },
     "integrationArchitectureDecisionCanvas": {
-      "title": "Integration Architecture Decision Canvas",
-      "purpose": "Choose the integration style and platform using evidence already gathered.",
-      "howToUse": "Bring forward consumer commitments, impact, location, and capacity. Compare only viable styles and record the decision.",
+      "title": "Integraatioarkkitehtuurin päätöscanvas",
+      "purpose": "Valitse integraatiotyyli ja alusta jo kerätyn näytön perusteella.",
+      "howToUse": "Tuo mukaan kuluttajasitoumukset, vaikutukset, sijainti ja kapasiteetti. Vertaa vain toteuttamiskelpoisia tyylejä ja kirjaa päätös.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which commitments, capacity, location, impact, and domain decisions constrain the choice?"
+          "section": "Uudelleenkäytetyt syötteet",
+          "description": "Mitkä sitoumukset sekä kapasiteetti-, sijainti-, vaikutus- ja domainpäätökset rajaavat valintaa?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, messaging, file, stream, data, connector, platform, or custom options remain viable?"
+          "section": "Toteuttamiskelpoiset vaihtoehdot",
+          "description": "Mitkä API-, tapahtuma-, viesti-, tiedosto-, stream-, data-, konnektori-, alusta- tai räätälöidyt vaihtoehdot ovat edelleen toteuttamiskelpoisia?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which integration style, platform, or hybrid is selected?"
+          "section": "Valittu lähestymistapa",
+          "description": "Mikä integraatiotyyli, alusta tai hybridi valitaan?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Päätöksen perustelu",
+          "description": "Miksi valittu lähestymistapa sopii parhaiten?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Hylätyt vaihtoehdot",
+          "description": "Mitkä vakavasti harkitut vaihtoehdot hylättiin ja miksi?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Avoimet riskit",
+          "description": "Mikä tarvitsee vielä validointia ennen toimitusta tai julkaisua?"
         }
       }
     },
     "integrationReadinessOperationsCanvas": {
-      "title": "Integration Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before integration readiness review.",
-      "howToUse": "Reuse contracts and design decisions. Record ownership, operations, evidence, recovery, and remaining readiness gaps.",
+      "title": "Integraation valmius- ja operointicanvas",
+      "purpose": "Valmistele vähimmäisnäyttö, jota tarvitaan ennen integraation valmiuskatselmointia.",
+      "howToUse": "Hyödynnä sopimuksia ja suunnittelupäätöksiä. Kirjaa omistajuus, operointi, näyttö, palautuminen ja jäljellä olevat valmiuspuutteet.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business, integration, producer, consumer, platform, and incident responsibilities?"
+          "section": "Omistajuus",
+          "description": "Kuka omistaa liiketoiminnan, integraation, tuottajan, kuluttajan, alustan ja häiriöiden vastuut?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, credentials, connectivity, permissions, and sequencing ready?"
+          "section": "Ympäristöt ja pääsy",
+          "description": "Ovatko ympäristöt, tunnistetiedot, yhteydet, oikeudet ja ajoitusjärjestys valmiina?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves contract, mapping, compatibility, quality, resilience, and recovery?"
+          "section": "Testinäyttö",
+          "description": "Mikä todistaa sopimuksen, mäppäyksen, yhteensopivuuden, laadun, resilienssin ja palautumisen?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will producers, consumers, platforms, incidents, and service questions be supported?"
+          "section": "Valvonta ja tuki",
+          "description": "Miten tuottajia, kuluttajia, alustoja, häiriöitä ja palvelukysymyksiä tuetaan?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will retry, replay, duplicates, reconciliation, fallback, and compensation work?"
+          "section": "Vikatilanteet ja palautuminen",
+          "description": "Miten uudelleenyritys, uudelleenajo, duplikaatit, täsmäytys, varamenettely ja kompensointi toimivat?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are contracts, runbooks, dependencies, risks, conditions, and blocking gaps clear?"
+          "section": "Valmiustila",
+          "description": "Ovatko sopimukset, runbookit, riippuvuudet, riskit, ehdot ja estävät puutteet selkeitä?"
         }
       }
     },
     "integrationSolutionDesignCanvas": {
-      "title": "Integration Solution Design Canvas",
-      "purpose": "Refine the selected architecture into an implementable integration design.",
-      "howToUse": "Reuse the selected style, domain concepts, interaction needs, and commitments. Add only implementation-specific design.",
+      "title": "Integraatioratkaisun suunnittelucanvas",
+      "purpose": "Tarkenna valittu arkkitehtuuri toteutettavaksi integraatiosuunnitelmaksi.",
+      "howToUse": "Hyödynnä valittua tyyliä, domainkäsitteitä, vuorovaikutustarpeita ja sitoumuksia. Lisää vain toteutuskohtainen suunnittelu.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which architecture, domain, interaction, and commitment decisions are reused?"
+          "section": "Valitut syötteet",
+          "description": "Mitkä arkkitehtuuri-, domain-, vuorovaikutus- ja sitoumuspäätökset käytetään uudelleen?"
         },
         "contractAndModel": {
-          "section": "Contract and model",
-          "description": "What contract, schema, data model, and version define the integration?"
+          "section": "Sopimus ja malli",
+          "description": "Mikä sopimus, skeema, datamalli ja versio määrittävät integraation?"
         },
         "mappingAndDelivery": {
-          "section": "Mapping and delivery",
-          "description": "What transformations, delivery pattern, and metadata are required?"
+          "section": "Mäppäys ja toimitus",
+          "description": "Mitä muunnoksia, toimitusmallia ja metadataa tarvitaan?"
         },
         "errorsAndRecovery": {
-          "section": "Errors and recovery",
-          "description": "How are failures, retries, replay, duplicates, and reconciliation handled?"
+          "section": "Virheet ja palautuminen",
+          "description": "Miten viat, uudelleenyritykset, uudelleenajo, duplikaatit ja täsmäytys käsitellään?"
         },
         "securityAndTrust": {
-          "section": "Security and trust",
-          "description": "What identity, access, privacy, and trust controls apply?"
+          "section": "Turvallisuus ja luottamus",
+          "description": "Mitä identiteetti-, pääsy-, yksityisyys- ja luottamuskontrolleja sovelletaan?"
         },
         "observabilityAndEvolution": {
-          "section": "Observability and evolution",
-          "description": "How will the integration be monitored, changed, migrated, and deprecated?"
+          "section": "Havainnoitavuus ja kehittäminen",
+          "description": "Miten integraatiota valvotaan, muutetaan, migroidaan ja vanhennetaan?"
         }
       }
     },
     "capabilityHypothesisCanvas": {
-      "title": "Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable digital capability should proceed.",
-      "howToUse": "Reuse journey, value proposition, business model, impact, domain, and capacity outputs instead of repeating them.",
+      "title": "Kyvykkyyden validointicanvas",
+      "purpose": "Validoi, kannattaako ehdotettua uudelleenkäytettävää digitaalista kyvykkyyttä jatkaa.",
+      "howToUse": "Hyödynnä asiakaspolun, arvolupauksen, liiketoimintamallin, vaikutusten, domainin ja kapasiteetin tuotoksia niiden toistamisen sijaan.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed capability and reusable scope are being tested?"
+          "section": "Validoitava kyvykkyys",
+          "description": "Mitä ehdotettua kyvykkyyttä ja uudelleenkäytön laajuutta testataan?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Uudelleenkäytetty näyttö",
+          "description": "Mitkä aiempien canvasten tuotokset tukevat ehdotusta?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, sustainability, or adoption?"
+          "section": "Kriittiset oletukset",
+          "description": "Mikä voisi kumota arvon, uudelleenkäytön, omistajuuden, kestävyyden tai käyttöönoton?"
         },
         "minimumValidation": {
-          "section": "Minimum validation",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Vähimmäisvalidointi",
+          "description": "Mikä on pienin hyödyllinen validointi ja onnistumisen kynnysarvo?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Päätös",
+          "description": "Jatketaanko, rajataanko, tarkennetaanko ja testataan uudelleen vai pysäytetäänkö?"
         }
       }
     },
     "capabilityConsumerProducerRequirementsCanvas": {
-      "title": "Capability Consumer & Producer Commitments Canvas",
-      "purpose": "Agree mutual commitments for providing and consuming a reusable capability.",
-      "howToUse": "Reuse consumers, value, channels, service needs, and ownership from earlier canvases. Capture only agreed commitments and gaps.",
+      "title": "Kyvykkyyden kuluttaja- ja tuottajasitoumusten canvas",
+      "purpose": "Sovi keskinäisistä sitoumuksista uudelleenkäytettävän kyvykkyyden tarjoamiseksi ja käyttämiseksi.",
+      "howToUse": "Hyödynnä aiempien canvasten kuluttajat, arvo, kanavat, palvelutarpeet ja omistajuus. Kirjaa vain sovitut sitoumukset ja puutteet.",
       "sections": {
         "selectedConsumersAndUseCases": {
-          "section": "Selected consumers and use cases",
-          "description": "Which consumers and usage contexts are covered?"
+          "section": "Valitut kuluttajat ja käyttötapaukset",
+          "description": "Mitkä kuluttajat ja käyttökontekstit sisältyvät?"
         },
         "ownerAndProducerCommitments": {
-          "section": "Owner and producer commitments",
-          "description": "What will owners and producers provide, maintain, monitor, and support?"
+          "section": "Omistajan ja tuottajan sitoumukset",
+          "description": "Mitä omistajat ja tuottajat tarjoavat, ylläpitävät, valvovat ja tukevat?"
         },
         "consumerResponsibilities": {
-          "section": "Consumer responsibilities",
-          "description": "What must consumers do for appropriate use, access, testing, and feedback?"
+          "section": "Kuluttajan vastuut",
+          "description": "Mitä kuluttajien täytyy tehdä asianmukaisen käytön, pääsyn, testauksen ja palautteen vuoksi?"
         },
         "accessAndOnboardingAgreement": {
-          "section": "Access and onboarding",
-          "description": "What discovery, approval, testing, and onboarding path is agreed?"
+          "section": "Pääsy ja käyttöönotto",
+          "description": "Mikä löytämisen, hyväksynnän, testauksen ja käyttöönoton polku on sovittu?"
         },
         "serviceAndLifecycleAgreement": {
-          "section": "Service and lifecycle",
-          "description": "What service, change, deprecation, and retirement commitments are agreed?"
+          "section": "Palvelu ja elinkaari",
+          "description": "Mitä palvelu-, muutos-, vanhentamis- ja käytöstäpoistositoumuksia on sovittu?"
         },
         "openCommitments": {
-          "section": "Open commitments",
-          "description": "What remains unresolved before architecture or delivery?"
+          "section": "Avoimet sitoumukset",
+          "description": "Mikä on vielä ratkaisematta ennen arkkitehtuuria tai toimitusta?"
         }
       }
     },
     "capabilityArchitectureDecisionCanvas": {
-      "title": "Capability Architecture Decision Canvas",
-      "purpose": "Choose how the capability will be delivered using evidence already gathered.",
-      "howToUse": "Bring forward value, commitments, impact, location, capacity, and domain decisions. Compare only viable implementation styles.",
+      "title": "Kyvykkyysarkkitehtuurin päätöscanvas",
+      "purpose": "Valitse jo kerätyn näytön perusteella, miten kyvykkyys toimitetaan.",
+      "howToUse": "Tuo mukaan arvo, sitoumukset, vaikutukset, sijainti, kapasiteetti ja domainpäätökset. Vertaa vain toteuttamiskelpoisia toteutustyylejä.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which earlier decisions and constraints shape the implementation choice?"
+          "section": "Uudelleenkäytetyt syötteet",
+          "description": "Mitkä aiemmat päätökset ja rajoitteet muovaavat toteutusvalintaa?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, workflow, application, data product, shared service, human service, or hybrid options remain viable?"
+          "section": "Toteuttamiskelpoiset vaihtoehdot",
+          "description": "Mitkä API-, tapahtuma-, työnkulku-, sovellus-, datatuote-, jaettu palvelu-, ihmispalvelu- tai hybridivaihtoehdot ovat edelleen toteuttamiskelpoisia?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style and enabling platform are selected?"
+          "section": "Valittu lähestymistapa",
+          "description": "Mikä toteutustyyli ja mahdollistava alusta valitaan?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Päätöksen perustelu",
+          "description": "Miksi valittu lähestymistapa sopii parhaiten?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Hylätyt vaihtoehdot",
+          "description": "Mitkä vakavasti harkitut vaihtoehdot hylättiin ja miksi?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Avoimet riskit",
+          "description": "Mikä tarvitsee vielä validointia ennen toimitusta tai julkaisua?"
         }
       }
     },
     "capabilitySolutionDesignCanvas": {
-      "title": "Capability Solution Design Canvas",
-      "purpose": "Refine the selected implementation style into a clear consumer-facing capability design.",
-      "howToUse": "Reuse value, domain, interaction, commitments, and architecture outputs. Add only solution-specific design.",
+      "title": "Kyvykkyysratkaisun suunnittelucanvas",
+      "purpose": "Tarkenna valittu toteutustyyli selkeäksi kuluttajille näkyväksi kyvykkyyssuunnitteluksi.",
+      "howToUse": "Hyödynnä arvo-, domain-, vuorovaikutus-, sitoumus- ja arkkitehtuurituotoksia. Lisää vain ratkaisukohtainen suunnittelu.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which earlier journey, value, domain, commitment, and architecture decisions are reused?"
+          "section": "Valitut syötteet",
+          "description": "Mitkä aiemmat asiakaspolku-, arvo-, domain-, sitoumus- ja arkkitehtuuripäätökset käytetään uudelleen?"
         },
         "boundaryAndInteraction": {
-          "section": "Boundary and interaction",
-          "description": "What belongs inside the capability, and how do consumers use it?"
+          "section": "Rajaus ja vuorovaikutus",
+          "description": "Mikä kuuluu kyvykkyyden sisään, ja miten kuluttajat käyttävät sitä?"
         },
         "contractRulesAndOutcomes": {
-          "section": "Contract, rules, and outcomes",
-          "description": "What behavior, responsibilities, inputs, outputs, and outcomes are promised?"
+          "section": "Sopimus, säännöt ja lopputulokset",
+          "description": "Mikä toiminta, vastuut, syötteet, tuotokset ja lopputulokset luvataan?"
         },
         "errorsAndSecurity": {
-          "section": "Errors and security",
-          "description": "How are exceptions, access, privacy, and trust handled?"
+          "section": "Virheet ja turvallisuus",
+          "description": "Miten poikkeukset, pääsy, yksityisyys ja luottamus käsitellään?"
         },
         "lifecycleAndSupport": {
-          "section": "Lifecycle and support",
-          "description": "How will change, versioning, support, deprecation, and retirement work?"
+          "section": "Elinkaari ja tuki",
+          "description": "Miten muutos, versiointi, tuki, vanhentaminen ja käytöstä poisto toimivat?"
         },
         "observability": {
-          "section": "Observability",
-          "description": "What health, usage, quality, value, and consumer signals must be visible?"
+          "section": "Havainnoitavuus",
+          "description": "Mitkä tila-, käyttö-, laatu-, arvo- ja kuluttajasignaalit täytyy nähdä?"
         }
       }
     },
     "capabilityReadinessOperationsCanvas": {
-      "title": "Capability Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before capability readiness review.",
-      "howToUse": "Reuse business model, commitments, and solution design. Record only operational ownership, evidence, continuity, and readiness gaps.",
+      "title": "Kyvykkyyden valmius- ja operointicanvas",
+      "purpose": "Valmistele vähimmäisnäyttö, jota tarvitaan ennen kyvykkyyden valmiuskatselmointia.",
+      "howToUse": "Hyödynnä liiketoimintamallia, sitoumuksia ja ratkaisusuunnittelua. Kirjaa vain operatiivinen omistajuus, näyttö, jatkuvuus ja valmiuspuutteet.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns value, the capability lifecycle, production, operations, support, and changes?"
+          "section": "Omistajuus",
+          "description": "Kuka omistaa arvon, kyvykkyyden elinkaaren, tuotannon, operoinnin, tuen ja muutokset?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are required environments, access, permissions, and credentials ready?"
+          "section": "Ympäristöt ja pääsy",
+          "description": "Ovatko tarvittavat ympäristöt, pääsy, oikeudet ja tunnistetiedot valmiina?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves outcomes, quality, security, compatibility, resilience, and consumer usability?"
+          "section": "Testinäyttö",
+          "description": "Mikä todistaa lopputulokset, laadun, turvallisuuden, yhteensopivuuden, resilienssin ja kuluttajakäytettävyyden?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, usage, value, incidents, consumers, and operators be supported?"
+          "section": "Valvonta ja tuki",
+          "description": "Miten tilaa, käyttöä, arvoa, häiriöitä, kuluttajia ja operaattoreita tuetaan?"
         },
         "failureAndRecovery": {
-          "section": "Continuity and recovery",
-          "description": "How will service continue, degrade safely, recover, or fall back?"
+          "section": "Jatkuvuus ja palautuminen",
+          "description": "Miten palvelu jatkuu, heikkenee hallitusti, palautuu tai siirtyy varamenettelyyn?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are service definitions, runbooks, risks, conditions, and blocking gaps clear?"
+          "section": "Valmiustila",
+          "description": "Ovatko palvelumäärittelyt, runbookit, riskit, ehdot ja estävät puutteet selkeitä?"
         }
       }
     }
   },
   "fr": {
     "apiBusinessModelCanvas": {
-      "title": "API Business Model Canvas",
+      "title": "Canvas de modèle économique d'API",
       "purpose": "Quelle sera la viabilité et la réutilisabilité de cette API ? Existe-t-il un modèle métier justifié du point de vue coût-bénéfice ?",
       "howToUse": "Résumer la proposition de valeur d’une API à partir de l’API Value Proposition Canvas, puis suivre la séquence numérotée.",
       "sections": {
@@ -2846,7 +2846,7 @@
       }
     },
     "apiValuePropositionCanvas": {
-      "title": "API Value Proposition Canvas",
+      "title": "Canvas de proposition de valeur d'API",
       "purpose": "Comment le parcours client est-il lié aux API ? Quels irritants et gains des utilisateurs finaux et des utilisateurs API doivent être traités ?",
       "howToUse": "Décrire la perspective des utilisateurs finaux, en commençant par leurs tâches, puis leurs irritants et gains ainsi que ceux des utilisateurs API, et enfin les produits et fonctionnalités API.",
       "sections": {
@@ -2871,44 +2871,44 @@
     "businessImpactCanvas": {
       "title": "Canvas d’impact métier",
       "purpose": "Quelle valeur, quels risques et quels impacts opérationnels, financiers, clients, employés, conformité et stratégiques sont attendus ou en jeu?",
-      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
+      "howToUse": "Utilisez ce canvas pour relier les bénéfices et conséquences attendus à l'architecture, à la priorisation, à la préparation et aux décisions de poursuivre ou d'arrêter. Incluez aussi l'impact de ne pas poursuivre ainsi que les risques critiques et les mesures d'atténuation.",
       "sections": {
         "expectedBenefits": {
-          "section": "Expected benefits",
-          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+          "section": "Bénéfices attendus",
+          "description": "Quels bénéfices métier, client, employé, qualité, rapidité, risque, conformité ou stratégiques sont attendus ?"
         },
         "operationalEfficiencyImpact": {
-          "section": "Operational efficiency impact",
-          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+          "section": "Impact sur l'efficacité opérationnelle",
+          "description": "Comment l'effort de travail, le temps d'attente, les reprises, le débit, la fiabilité, la charge de support ou les coûts opérationnels pourraient-ils changer ?"
         },
         "customerEmployeeImpact": {
-          "section": "Customer and employee impact",
-          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+          "section": "Impact sur les clients et les employés",
+          "description": "Comment les clients, employés, partenaires, opérateurs ou équipes support vivront-ils le changement ?"
         },
         "financialImpact": {
-          "section": "Financial impact",
-          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+          "section": "Impact financier",
+          "description": "Quel impact sur les revenus, les coûts, les investissements, les économies, l'évitement de pertes ou le financement est attendu ?"
         },
         "complianceStrategicImpact": {
-          "section": "Compliance and strategic impact",
-          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+          "section": "Impact conformité et stratégique",
+          "description": "Quelles conséquences réglementaires, contractuelles, de politique, de réputation, de marché, d'écosystème ou stratégiques comptent ?"
         },
         "impactOfNotProceeding": {
-          "section": "Impact of not proceeding",
-          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+          "section": "Impact de ne pas poursuivre",
+          "description": "Que se passe-t-il si la capacité, l'automatisation, l'intégration ou le service n'est pas amélioré ou livré ?"
         },
         "risksAndCriticality": {
-          "section": "Risks and criticality",
-          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+          "section": "Risques et criticité",
+          "description": "Quels risques de disponibilité, sécurité, données, sûreté, processus, adoption ou continuité d'activité pourraient affecter le résultat ?"
         },
         "mitigationsAndDecisionImpact": {
-          "section": "Mitigations and decision impact",
-          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
+          "section": "Mesures d'atténuation et impact décisionnel",
+          "description": "Quelles mesures d'atténuation, contraintes, compromis ou risques résiduels doivent influencer les décisions de priorisation, d'architecture, de déploiement ou de préparation ?"
         }
       }
     },
     "capacityCanvas": {
-      "title": "Capacity Canvas",
+      "title": "Canvas de capacité",
       "purpose": "Quelle demande, charge, temporalité et capacité de mise à l’échelle doivent être comprises pour la capacité, l’automatisation, l’intégration ou le service?",
       "howToUse": "Quantifiez la demande actuelle et attendue, la charge de pointe et les besoins de disponibilité. Enregistrez les approches de cache, de limitation de débit et de montée en charge comme décisions de suivi d’architecture plutôt que comme exigences utilisateur.",
       "sections": {
@@ -2939,7 +2939,7 @@
       }
     },
     "customerJourneyCanvas": {
-      "title": "Customer Journey Canvas",
+      "title": "Canvas de parcours client",
       "purpose": "Quel parcours vit le client pertinent le plus externe, et que faut-il améliorer ?",
       "howToUse": "Commencez par le client pertinent le plus externe. Décrivez son parcours réel avant de remonter vers les capacités, les processus internes ou les choix de mise en œuvre.",
       "sections": {
@@ -2948,7 +2948,7 @@
           "description": "Comment le client reconnaît-il son besoin ou son problème?"
         },
         "persona": {
-          "section": "Persona",
+          "section": "Personnage utilisateur",
           "description": "Qui est le client type qui vit ce parcours?"
         },
         "pains": {
@@ -2964,7 +2964,7 @@
           "description": "Comment le besoin du client est-il finalement résolu?"
         },
         "gains": {
-          "section": "Gains",
+          "section": "Bénéfices",
           "description": "Quels sont les gains ou bénéfices pour le client?"
         },
         "inputsOutputs": {
@@ -2982,7 +2982,7 @@
       }
     },
     "domainCanvas": {
-      "title": "Domain Canvas",
+      "title": "Canvas de domaine",
       "purpose": "Quels concepts, entités et règles de domaine métier la capacité ou l’interface doit-elle respecter ?",
       "howToUse": "Définir le modèle de domaine métier pour la capacité ou l’interface, y compris entités, attributs et relations.",
       "sections": {
@@ -3013,7 +3013,7 @@
       }
     },
     "eventCanvas": {
-      "title": "Event Canvas",
+      "title": "Canvas d'événement",
       "purpose": "Quels événements sont pertinents pour la capacité ou l’interface, et comment sont-ils traités ?",
       "howToUse": "Définir les événements, leurs déclencheurs et la logique de traitement pour la capacité ou l’interface.",
       "sections": {
@@ -3036,7 +3036,7 @@
       }
     },
     "interactionCanvas": {
-      "title": "Interaction Canvas",
+      "title": "Canvas d'interaction",
       "purpose": "Quels types d’interactions cette capacité ou interface doit-elle prendre en charge avant de choisir une conception propre au protocole ?",
       "howToUse": "Identifier les styles d’interaction réellement nécessaires et ceux qui sont hors périmètre. Utiliser ce canvas pour clarifier l’intention avant de mapper le résultat vers REST, événements ou GraphQL.",
       "sections": {
@@ -3091,7 +3091,7 @@
       }
     },
     "locationsCanvas": {
-      "title": "Locations Canvas",
+      "title": "Canvas de localisation",
       "purpose": "Quelles frontières géopolitiques, réglementaires, réseau et de confiance affectent cette capacité ou interface ?",
       "howToUse": "Identifier où les utilisateurs, fournisseurs et systèmes dépendants opèrent dans les réseaux internes, réseaux partenaires, Internet public et régions réglementées. Décrire les implications sur la latence, la confiance, la conformité et la connectivité.",
       "sections": {
@@ -3130,7 +3130,7 @@
       }
     },
     "restCanvas": {
-      "title": "REST Canvas",
+      "title": "Canvas REST",
       "purpose": "Comment concevoir l’API selon les principes RESTful ?",
       "howToUse": "Définissez les ressources de l’API, les verbes et les exemples de requêtes et réponses.",
       "sections": {
@@ -3153,7 +3153,7 @@
       }
     },
     "graphqlCanvas": {
-      "title": "GraphQL Canvas",
+      "title": "Canvas GraphQL",
       "purpose": "Comment concevoir l’API selon les principes GraphQL ?",
       "howToUse": "Définir les types clés, requêtes, mutations et contraintes pour l’API GraphQL.",
       "sections": {
@@ -3178,7 +3178,7 @@
           "description": "Quelles requêtes courantes doivent être prises en charge ?"
         },
         "mutations": {
-          "section": "Mutations",
+          "section": "Mutations GraphQL",
           "description": "Quelles opérations vont modifier les données (ex. créer, mettre à jour, supprimer) ?"
         },
         "subscriptions": {
@@ -3200,7 +3200,7 @@
       }
     },
     "capabilityValuePropositionCanvas": {
-      "title": "Capability Value Proposition Canvas",
+      "title": "Canvas de proposition de valeur de capacité",
       "purpose": "Quelle capacité réutilisable créerait de la valeur pour les utilisateurs sans décider encore si elle doit être mise à disposition sous forme d’API, d’événement, de fichier, de flux, de produit de données ou d’un autre mode de mise en œuvre ?",
       "howToUse": "Partir des tâches et résultats attendus des utilisateurs. Capturer les fonctionnalités de capacité qui créent des gains et réduisent les irritants, puis décrire les capacités réutilisables candidates sans nommer la technologie trop tôt.",
       "sections": {
@@ -3223,7 +3223,7 @@
       }
     },
     "capabilityBusinessModelCanvas": {
-      "title": "Capability Business Model Canvas",
+      "title": "Canvas de modèle économique de capacité",
       "purpose": "Dans quelle mesure cette capacité doit-elle être viable, réutilisable, financée, possédée, accompagnée et découvrable ?",
       "howToUse": "Résumer la proposition de valeur de la capacité, identifier les utilisateurs et canaux d’engagement, puis cartographier propriété, activités, ressources, partenaires, bénéfices et coûts.",
       "sections": {
@@ -3271,76 +3271,76 @@
       "howToUse": "Capturez ce que les personnes et systèmes consommateurs attendent de la capacité ou de l’automatisation. Restez centré sur les exigences et contraintes; quantifiez la capacité et choisissez les mécanismes de mise en œuvre dans le travail d’architecture ultérieur.",
       "sections": {
         "consumerGoals": {
-          "section": "User, operator, or consumer goals",
-          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
+          "section": "Objectifs des utilisateurs, opérateurs ou consommateurs",
+          "description": "Quels objectifs métier, de workflow, de décision, d'automatisation, de support ou d'utilisation des données doivent être pris en charge ?"
         },
         "availabilityAndTimeliness": {
-          "section": "Availability and timeliness needs",
-          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
+          "section": "Besoins de disponibilité et de délais",
+          "description": "Quand la solution doit-elle être disponible, quelle fraîcheur d'information est nécessaire, et quelles fenêtres de réponse, livraison ou achèvement comptent pour les utilisateurs et opérateurs ?"
         },
         "volumeAndPerformance": {
-          "section": "Volume and performance expectations",
-          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
+          "section": "Attentes de volume et de performance",
+          "description": "Quels volumes d'utilisateurs, cas, transactions, enregistrements, événements, fichiers, lots ou éléments de travail faut-il comprendre avant la planification de capacité ?"
         },
         "dataQualityAndConsistency": {
-          "section": "Data quality and consistency needs",
-          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
+          "section": "Besoins de qualité et de cohérence des données",
+          "description": "Quelles attentes d'exactitude, complétude, cohérence, ordre, déduplication, rapprochement ou validation les utilisateurs, opérateurs ou systèmes consommateurs ont-ils ?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Security, privacy, and compliance constraints",
-          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
+          "section": "Contraintes de sécurité, confidentialité et conformité",
+          "description": "Quelles contraintes d'identité, d'autorisation, de confidentialité, de résidence, de consentement, de conservation, d'audit ou réglementaires la solution doit-elle satisfaire ?"
         },
         "onboardingAndAccess": {
-          "section": "Activation and access",
-          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
+          "section": "Activation et accès",
+          "description": "Comment les utilisateurs, opérateurs ou équipes consommatrices obtiennent-ils l'accès, initient-ils ou participent-ils à la solution, et reçoivent-ils les permissions et consignes requises ?"
         },
         "changeAndVersioning": {
-          "section": "Change and versioning expectations",
-          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
+          "section": "Attentes de changement et de versioning",
+          "description": "Quelle tolérance au changement existe, et quelles attentes de notification, compatibilité, migration, formation ou versioning s'appliquent ?"
         },
         "observabilityAndSupport": {
-          "section": "Observability and support needs",
-          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
+          "section": "Besoins d'observabilité et de support",
+          "description": "De quels monitoring, statut, traçabilité, visibilité qualité, support, ownership et communication d'incident les utilisateurs et opérateurs ont-ils besoin ?"
         },
         "recoveryAndContinuity": {
-          "section": "Recovery and continuity needs",
-          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+          "section": "Besoins de reprise et de continuité",
+          "description": "Quelles attentes de replay, retry, rapprochement, sauvegarde, fallback, continuité ou reprise manuelle doivent être prises en charge ?"
         },
         "architectureImplications": {
-          "section": "Constraints for later design",
-          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
+          "section": "Contraintes pour la conception ultérieure",
+          "description": "Quelles exigences les décisions ultérieures d'architecture, de workflow, de capacité, d'intégration ou de mise en œuvre devront-elles satisfaire ?"
         }
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Hypothesis & Validation Canvas",
-      "purpose": "Turn existing journey, value, impact, domain, and capacity evidence into a testable automation decision.",
-      "howToUse": "Reuse earlier canvas outputs. Record only the remaining hypothesis, uncertainties, validation, and decision.",
+      "title": "Canvas d'hypothèse et de validation de l'automatisation",
+      "purpose": "Transformez les preuves existantes sur le parcours, la valeur, l'impact, le domaine et la capacité en une décision d'automatisation testable.",
+      "howToUse": "Réutilisez les résultats des canvases précédents. Ne consignez que l'hypothèse restante, les incertitudes, la validation et la décision.",
       "sections": {
         "hypothesis": {
-          "section": "Automation hypothesis",
-          "description": "What work do we believe should be automated, and what outcome should it achieve?"
+          "section": "Hypothèse d'automatisation",
+          "description": "Quel travail pensons-nous devoir automatiser, et quel résultat doit-il produire ?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the hypothesis?"
+          "section": "Preuves réutilisées",
+          "description": "Quels résultats de canvases précédents soutiennent l'hypothèse ?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could make the hypothesis wrong, unsafe, or unworkable?"
+          "section": "Hypothèses critiques",
+          "description": "Qu'est-ce qui pourrait rendre l'hypothèse fausse, dangereuse ou impraticable ?"
         },
         "validationExperiment": {
-          "section": "Validation experiment",
-          "description": "What is the smallest useful test, evidence threshold, and stop condition?"
+          "section": "Expérience de validation",
+          "description": "Quel est le plus petit test utile, le seuil de preuve et la condition d'arrêt ?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, revise, redesign the process, or stop?"
+          "section": "Décision",
+          "description": "Poursuivre, réviser, reconcevoir le processus ou arrêter ?"
         }
       }
     },
     "automationWorkflowCanvas": {
-      "title": "Automation Workflow Canvas",
+      "title": "Canvas de workflow d'automatisation",
       "purpose": "Concevoir le workflow interne nécessaire pour produire les résultats client et capacité sélectionnés.",
       "howToUse": "Réutilisez les éléments du parcours client, de la proposition de valeur, du domaine et de la validation. Définissez le travail interne, répartissez-le entre humains et automatisation, puis ajoutez uniquement les détails d’exécution.",
       "sections": {
@@ -3371,366 +3371,366 @@
       }
     },
     "automationArchitectureDecisionCanvas": {
-      "title": "Automation Architecture Decision Canvas",
-      "purpose": "Choose the implementation approach using evidence already gathered.",
-      "howToUse": "Bring forward constraints and responsibility choices. Compare only viable mechanisms, then record the decision and remaining risks.",
+      "title": "Canvas de décision d'architecture d'automatisation",
+      "purpose": "Choisissez l'approche de mise en œuvre à partir des preuves déjà collectées.",
+      "howToUse": "Reprenez les contraintes et les choix de responsabilité. Comparez uniquement les mécanismes viables, puis consignez la décision et les risques restants.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which requirements, capacity, location, impact, and responsibility decisions constrain the choice?"
+          "section": "Entrées réutilisées",
+          "description": "Quelles exigences et décisions de capacité, localisation, impact et responsabilité contraignent le choix ?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which human, workflow, rule, agent, API, connector, custom, or UI automation options remain viable?"
+          "section": "Options viables",
+          "description": "Quelles options humaines, de workflow, règle, agent, API, connecteur, personnalisées ou d'automatisation UI restent viables ?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style or hybrid is selected?"
+          "section": "Approche sélectionnée",
+          "description": "Quel style de mise en œuvre ou hybride est sélectionné ?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Justification de la décision",
+          "description": "Pourquoi l'approche sélectionnée convient-elle le mieux ?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Alternatives rejetées",
+          "description": "Quelles alternatives sérieuses ont été rejetées, et pourquoi ?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Risques ouverts",
+          "description": "Qu'est-ce qui doit encore être validé avant livraison ou release ?"
         }
       }
     },
     "automationReadinessOperationsCanvas": {
-      "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before readiness review.",
-      "howToUse": "Reuse design decisions. Record ownership, operational arrangements, evidence, recovery, and remaining readiness gaps.",
+      "title": "Canvas de préparation et d'exploitation de l'automatisation",
+      "purpose": "Préparez les preuves opérationnelles minimales nécessaires avant la revue de préparation.",
+      "howToUse": "Réutilisez les décisions de conception. Consignez l'ownership, les arrangements opérationnels, les preuves, la reprise et les écarts de préparation restants.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business outcomes, operations, support, and changes?"
+          "section": "Responsabilité",
+          "description": "Qui est responsable des résultats métier, des opérations, du support et des changements ?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, permissions, credentials, and identities ready?"
+          "section": "Environnements et accès",
+          "description": "Les environnements, permissions, identifiants et identités sont-ils prêts ?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves correct, safe, and reliable behavior?"
+          "section": "Preuves de test",
+          "description": "Qu'est-ce qui prouve un comportement correct, sûr et fiable ?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, incidents, users, and operators be supported?"
+          "section": "Surveillance et support",
+          "description": "Comment l'état, les incidents, les utilisateurs et les opérateurs seront-ils pris en charge ?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will exceptions, fallback, rollback, and manual recovery work?"
+          "section": "Défaillance et reprise",
+          "description": "Comment fonctionneront les exceptions, le repli, le rollback et la reprise manuelle ?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are documentation, risks, conditions, and blocking gaps clear?"
+          "section": "Statut de préparation",
+          "description": "La documentation, les risques, les conditions et les écarts bloquants sont-ils clairs ?"
         }
       }
     },
     "integrationCapabilityHypothesisCanvas": {
-      "title": "Integration Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable integration capability should proceed.",
-      "howToUse": "Reuse journey, value, domain, business model, impact, and capacity evidence instead of restating it.",
+      "title": "Canvas de validation de capacité d'intégration",
+      "purpose": "Validez si une capacité d'intégration réutilisable proposée doit être poursuivie.",
+      "howToUse": "Réutilisez les preuves de parcours, valeur, domaine, modèle économique, impact et capacité au lieu de les reformuler.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed integration capability and reuse scope are being tested?"
+          "section": "Capacité à valider",
+          "description": "Quelle capacité d'intégration proposée et quel périmètre de réutilisation sont testés ?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Preuves réutilisées",
+          "description": "Quels résultats de canvases précédents soutiennent la proposition ?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, feasibility, or adoption?"
+          "section": "Hypothèses critiques",
+          "description": "Qu'est-ce qui pourrait invalider la valeur, la réutilisation, l'ownership, la faisabilité ou l'adoption ?"
         },
         "validationStep": {
-          "section": "Validation step",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Étape de validation",
+          "description": "Quelle est la plus petite validation utile et le seuil de succès ?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Décision",
+          "description": "Poursuivre, réduire le périmètre, réviser et retester, ou arrêter ?"
         }
       }
     },
     "integrationConsumerProviderRequirementsCanvas": {
-      "title": "Integration Consumer & Provider Commitments Canvas",
-      "purpose": "Agree the responsibilities needed to use and provide a reusable integration capability.",
-      "howToUse": "Bring forward consumers, use cases, service needs, and constraints. Record commitments rather than rediscovering requirements.",
+      "title": "Canvas des engagements consommateurs et fournisseurs d'intégration",
+      "purpose": "Convenir des responsabilités nécessaires pour utiliser et fournir une capacité d'intégration réutilisable.",
+      "howToUse": "Reprenez les consommateurs, cas d'utilisation, besoins de service et contraintes. Consignez les engagements plutôt que de redécouvrir les exigences.",
       "sections": {
         "selectedPartiesAndUseCases": {
-          "section": "Selected parties and use cases",
-          "description": "Which producers, providers, consumers, and use cases are covered?"
+          "section": "Parties et cas d'utilisation sélectionnés",
+          "description": "Quels producteurs, fournisseurs, consommateurs et cas d'utilisation sont couverts ?"
         },
         "providerCommitments": {
-          "section": "Provider commitments",
-          "description": "What will providers deliver, maintain, monitor, and support?"
+          "section": "Engagements du fournisseur",
+          "description": "Que les fournisseurs livreront-ils, maintiendront-ils, surveilleront-ils et prendront-ils en charge ?"
         },
         "consumerCommitments": {
-          "section": "Consumer commitments",
-          "description": "What must consumers test, protect, operate, and communicate?"
+          "section": "Engagements du consommateur",
+          "description": "Que doivent tester, protéger, opérer et communiquer les consommateurs ?"
         },
         "accessAndValidationAgreement": {
-          "section": "Access and validation",
-          "description": "How will access, environments, credentials, and conformance be handled?"
+          "section": "Accès et validation",
+          "description": "Comment l'accès, les environnements, les identifiants et la conformité seront-ils gérés ?"
         },
         "failureAndRecoveryAgreement": {
-          "section": "Failure and recovery",
-          "description": "Who handles failures, replay, duplicates, reconciliation, and recovery?"
+          "section": "Défaillance et reprise",
+          "description": "Qui gère les défaillances, le replay, les doublons, le rapprochement et la reprise ?"
         },
         "changeAndLifecycleAgreement": {
-          "section": "Change and lifecycle",
-          "description": "How will compatibility, migration, notice, deprecation, and retirement work?"
+          "section": "Changement et cycle de vie",
+          "description": "Comment fonctionneront la compatibilité, la migration, les notifications, la dépréciation et le retrait ?"
         }
       }
     },
     "integrationArchitectureDecisionCanvas": {
-      "title": "Integration Architecture Decision Canvas",
-      "purpose": "Choose the integration style and platform using evidence already gathered.",
-      "howToUse": "Bring forward consumer commitments, impact, location, and capacity. Compare only viable styles and record the decision.",
+      "title": "Canvas de décision d'architecture d'intégration",
+      "purpose": "Choisissez le style d'intégration et la plateforme à partir des preuves déjà collectées.",
+      "howToUse": "Reprenez les engagements consommateurs, l'impact, la localisation et la capacité. Comparez uniquement les styles viables et consignez la décision.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which commitments, capacity, location, impact, and domain decisions constrain the choice?"
+          "section": "Entrées réutilisées",
+          "description": "Quels engagements et décisions de capacité, localisation, impact et domaine contraignent le choix ?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, messaging, file, stream, data, connector, platform, or custom options remain viable?"
+          "section": "Options viables",
+          "description": "Quelles options API, événement, messagerie, fichier, stream, données, connecteur, plateforme ou personnalisées restent viables ?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which integration style, platform, or hybrid is selected?"
+          "section": "Approche sélectionnée",
+          "description": "Quel style d'intégration, plateforme ou hybride est sélectionné ?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Justification de la décision",
+          "description": "Pourquoi l'approche sélectionnée convient-elle le mieux ?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Alternatives rejetées",
+          "description": "Quelles alternatives sérieuses ont été rejetées, et pourquoi ?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Risques ouverts",
+          "description": "Qu'est-ce qui doit encore être validé avant livraison ou release ?"
         }
       }
     },
     "integrationReadinessOperationsCanvas": {
-      "title": "Integration Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before integration readiness review.",
-      "howToUse": "Reuse contracts and design decisions. Record ownership, operations, evidence, recovery, and remaining readiness gaps.",
+      "title": "Canvas de préparation et d'exploitation de l'intégration",
+      "purpose": "Préparez les preuves opérationnelles minimales nécessaires avant la revue de préparation de l'intégration.",
+      "howToUse": "Réutilisez les contrats et décisions de conception. Consignez l'ownership, les opérations, les preuves, la reprise et les écarts de préparation restants.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business, integration, producer, consumer, platform, and incident responsibilities?"
+          "section": "Responsabilité",
+          "description": "Qui est responsable du métier, de l'intégration, du producteur, du consommateur, de la plateforme et des incidents ?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, credentials, connectivity, permissions, and sequencing ready?"
+          "section": "Environnements et accès",
+          "description": "Les environnements, identifiants, connectivité, permissions et séquencement sont-ils prêts ?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves contract, mapping, compatibility, quality, resilience, and recovery?"
+          "section": "Preuves de test",
+          "description": "Qu'est-ce qui prouve le contrat, le mapping, la compatibilité, la qualité, la résilience et la reprise ?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will producers, consumers, platforms, incidents, and service questions be supported?"
+          "section": "Surveillance et support",
+          "description": "Comment les producteurs, consommateurs, plateformes, incidents et questions de service seront-ils pris en charge ?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will retry, replay, duplicates, reconciliation, fallback, and compensation work?"
+          "section": "Défaillance et reprise",
+          "description": "Comment fonctionneront les retries, le replay, les doublons, le rapprochement, le fallback et la compensation ?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are contracts, runbooks, dependencies, risks, conditions, and blocking gaps clear?"
+          "section": "Statut de préparation",
+          "description": "Les contrats, runbooks, dépendances, risques, conditions et écarts bloquants sont-ils clairs ?"
         }
       }
     },
     "integrationSolutionDesignCanvas": {
-      "title": "Integration Solution Design Canvas",
-      "purpose": "Refine the selected architecture into an implementable integration design.",
-      "howToUse": "Reuse the selected style, domain concepts, interaction needs, and commitments. Add only implementation-specific design.",
+      "title": "Canvas de conception de solution d'intégration",
+      "purpose": "Affinez l'architecture sélectionnée en une conception d'intégration réalisable.",
+      "howToUse": "Réutilisez le style sélectionné, les concepts du domaine, les besoins d'interaction et les engagements. Ajoutez uniquement la conception propre à la mise en œuvre.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which architecture, domain, interaction, and commitment decisions are reused?"
+          "section": "Entrées sélectionnées",
+          "description": "Quelles décisions d'architecture, de domaine, d'interaction et d'engagement sont réutilisées ?"
         },
         "contractAndModel": {
-          "section": "Contract and model",
-          "description": "What contract, schema, data model, and version define the integration?"
+          "section": "Contrat et modèle",
+          "description": "Quel contrat, schéma, modèle de données et version définissent l'intégration ?"
         },
         "mappingAndDelivery": {
-          "section": "Mapping and delivery",
-          "description": "What transformations, delivery pattern, and metadata are required?"
+          "section": "Mapping et livraison",
+          "description": "Quelles transformations, quel modèle de livraison et quelles métadonnées sont requis ?"
         },
         "errorsAndRecovery": {
-          "section": "Errors and recovery",
-          "description": "How are failures, retries, replay, duplicates, and reconciliation handled?"
+          "section": "Erreurs et reprise",
+          "description": "Comment les défaillances, retries, replay, doublons et rapprochements sont-ils gérés ?"
         },
         "securityAndTrust": {
-          "section": "Security and trust",
-          "description": "What identity, access, privacy, and trust controls apply?"
+          "section": "Sécurité et confiance",
+          "description": "Quels contrôles d'identité, d'accès, de confidentialité et de confiance s'appliquent ?"
         },
         "observabilityAndEvolution": {
-          "section": "Observability and evolution",
-          "description": "How will the integration be monitored, changed, migrated, and deprecated?"
+          "section": "Observabilité et évolution",
+          "description": "Comment l'intégration sera-t-elle surveillée, modifiée, migrée et dépréciée ?"
         }
       }
     },
     "capabilityHypothesisCanvas": {
-      "title": "Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable digital capability should proceed.",
-      "howToUse": "Reuse journey, value proposition, business model, impact, domain, and capacity outputs instead of repeating them.",
+      "title": "Canvas de validation de capacité",
+      "purpose": "Validez si une capacité numérique réutilisable proposée doit être poursuivie.",
+      "howToUse": "Réutilisez les résultats de parcours, proposition de valeur, modèle économique, impact, domaine et capacité au lieu de les répéter.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed capability and reusable scope are being tested?"
+          "section": "Capacité à valider",
+          "description": "Quelle capacité proposée et quel périmètre de réutilisation sont testés ?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Preuves réutilisées",
+          "description": "Quels résultats de canvases précédents soutiennent la proposition ?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, sustainability, or adoption?"
+          "section": "Hypothèses critiques",
+          "description": "Qu'est-ce qui pourrait invalider la valeur, la réutilisation, l'ownership, la durabilité ou l'adoption ?"
         },
         "minimumValidation": {
-          "section": "Minimum validation",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Validation minimale",
+          "description": "Quelle est la plus petite validation utile et le seuil de succès ?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Décision",
+          "description": "Poursuivre, réduire le périmètre, réviser et retester, ou arrêter ?"
         }
       }
     },
     "capabilityConsumerProducerRequirementsCanvas": {
-      "title": "Capability Consumer & Producer Commitments Canvas",
-      "purpose": "Agree mutual commitments for providing and consuming a reusable capability.",
-      "howToUse": "Reuse consumers, value, channels, service needs, and ownership from earlier canvases. Capture only agreed commitments and gaps.",
+      "title": "Canvas des engagements consommateurs et producteurs de capacité",
+      "purpose": "Convenir des engagements mutuels pour fournir et consommer une capacité réutilisable.",
+      "howToUse": "Réutilisez les consommateurs, la valeur, les canaux, les besoins de service et l'ownership des canvases précédents. Ne capturez que les engagements et écarts convenus.",
       "sections": {
         "selectedConsumersAndUseCases": {
-          "section": "Selected consumers and use cases",
-          "description": "Which consumers and usage contexts are covered?"
+          "section": "Consommateurs et cas d'utilisation sélectionnés",
+          "description": "Quels consommateurs et contextes d'utilisation sont couverts ?"
         },
         "ownerAndProducerCommitments": {
-          "section": "Owner and producer commitments",
-          "description": "What will owners and producers provide, maintain, monitor, and support?"
+          "section": "Engagements de l'owner et du producteur",
+          "description": "Que les owners et producteurs fourniront-ils, maintiendront-ils, surveilleront-ils et prendront-ils en charge ?"
         },
         "consumerResponsibilities": {
-          "section": "Consumer responsibilities",
-          "description": "What must consumers do for appropriate use, access, testing, and feedback?"
+          "section": "Responsabilités du consommateur",
+          "description": "Que doivent faire les consommateurs pour une utilisation, un accès, des tests et un feedback appropriés ?"
         },
         "accessAndOnboardingAgreement": {
-          "section": "Access and onboarding",
-          "description": "What discovery, approval, testing, and onboarding path is agreed?"
+          "section": "Accès et onboarding",
+          "description": "Quel parcours de découverte, approbation, test et onboarding est convenu ?"
         },
         "serviceAndLifecycleAgreement": {
-          "section": "Service and lifecycle",
-          "description": "What service, change, deprecation, and retirement commitments are agreed?"
+          "section": "Service et cycle de vie",
+          "description": "Quels engagements de service, changement, dépréciation et retrait sont convenus ?"
         },
         "openCommitments": {
-          "section": "Open commitments",
-          "description": "What remains unresolved before architecture or delivery?"
+          "section": "Engagements ouverts",
+          "description": "Qu'est-ce qui reste non résolu avant l'architecture ou la livraison ?"
         }
       }
     },
     "capabilityArchitectureDecisionCanvas": {
-      "title": "Capability Architecture Decision Canvas",
-      "purpose": "Choose how the capability will be delivered using evidence already gathered.",
-      "howToUse": "Bring forward value, commitments, impact, location, capacity, and domain decisions. Compare only viable implementation styles.",
+      "title": "Canvas de décision d'architecture de capacité",
+      "purpose": "Choisissez comment la capacité sera livrée à partir des preuves déjà collectées.",
+      "howToUse": "Reprenez la valeur, les engagements, l'impact, la localisation, la capacité et les décisions de domaine. Comparez uniquement les styles de mise en œuvre viables.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which earlier decisions and constraints shape the implementation choice?"
+          "section": "Entrées réutilisées",
+          "description": "Quelles décisions et contraintes antérieures façonnent le choix de mise en œuvre ?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, workflow, application, data product, shared service, human service, or hybrid options remain viable?"
+          "section": "Options viables",
+          "description": "Quelles options API, événement, workflow, application, produit de données, service partagé, service humain ou hybride restent viables ?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style and enabling platform are selected?"
+          "section": "Approche sélectionnée",
+          "description": "Quel style de mise en œuvre et quelle plateforme habilitante sont sélectionnés ?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Justification de la décision",
+          "description": "Pourquoi l'approche sélectionnée convient-elle le mieux ?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Alternatives rejetées",
+          "description": "Quelles alternatives sérieuses ont été rejetées, et pourquoi ?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Risques ouverts",
+          "description": "Qu'est-ce qui doit encore être validé avant livraison ou release ?"
         }
       }
     },
     "capabilitySolutionDesignCanvas": {
-      "title": "Capability Solution Design Canvas",
-      "purpose": "Refine the selected implementation style into a clear consumer-facing capability design.",
-      "howToUse": "Reuse value, domain, interaction, commitments, and architecture outputs. Add only solution-specific design.",
+      "title": "Canvas de conception de solution de capacité",
+      "purpose": "Affinez le style de mise en œuvre sélectionné en une conception de capacité claire pour les consommateurs.",
+      "howToUse": "Réutilisez les résultats de valeur, domaine, interaction, engagements et architecture. Ajoutez uniquement la conception propre à la solution.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which earlier journey, value, domain, commitment, and architecture decisions are reused?"
+          "section": "Entrées sélectionnées",
+          "description": "Quelles décisions antérieures de parcours, valeur, domaine, engagement et architecture sont réutilisées ?"
         },
         "boundaryAndInteraction": {
-          "section": "Boundary and interaction",
-          "description": "What belongs inside the capability, and how do consumers use it?"
+          "section": "Périmètre et interaction",
+          "description": "Qu'est-ce qui appartient à la capacité, et comment les consommateurs l'utilisent-ils ?"
         },
         "contractRulesAndOutcomes": {
-          "section": "Contract, rules, and outcomes",
-          "description": "What behavior, responsibilities, inputs, outputs, and outcomes are promised?"
+          "section": "Contrat, règles et résultats",
+          "description": "Quels comportements, responsabilités, entrées, sorties et résultats sont promis ?"
         },
         "errorsAndSecurity": {
-          "section": "Errors and security",
-          "description": "How are exceptions, access, privacy, and trust handled?"
+          "section": "Erreurs et sécurité",
+          "description": "Comment les exceptions, l'accès, la confidentialité et la confiance sont-ils gérés ?"
         },
         "lifecycleAndSupport": {
-          "section": "Lifecycle and support",
-          "description": "How will change, versioning, support, deprecation, and retirement work?"
+          "section": "Cycle de vie et support",
+          "description": "Comment fonctionneront le changement, le versioning, le support, la dépréciation et le retrait ?"
         },
         "observability": {
-          "section": "Observability",
-          "description": "What health, usage, quality, value, and consumer signals must be visible?"
+          "section": "Observabilité",
+          "description": "Quels signaux d'état, d'usage, de qualité, de valeur et de consommateur doivent être visibles ?"
         }
       }
     },
     "capabilityReadinessOperationsCanvas": {
-      "title": "Capability Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before capability readiness review.",
-      "howToUse": "Reuse business model, commitments, and solution design. Record only operational ownership, evidence, continuity, and readiness gaps.",
+      "title": "Canvas de préparation et d'exploitation de capacité",
+      "purpose": "Préparez les preuves opérationnelles minimales nécessaires avant la revue de préparation de la capacité.",
+      "howToUse": "Réutilisez le modèle économique, les engagements et la conception de solution. Ne consignez que l'ownership opérationnel, les preuves, la continuité et les écarts de préparation.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns value, the capability lifecycle, production, operations, support, and changes?"
+          "section": "Responsabilité",
+          "description": "Qui est responsable de la valeur, du cycle de vie de la capacité, de la production, des opérations, du support et des changements ?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are required environments, access, permissions, and credentials ready?"
+          "section": "Environnements et accès",
+          "description": "Les environnements, accès, permissions et identifiants requis sont-ils prêts ?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves outcomes, quality, security, compatibility, resilience, and consumer usability?"
+          "section": "Preuves de test",
+          "description": "Qu'est-ce qui prouve les résultats, la qualité, la sécurité, la compatibilité, la résilience et l'utilisabilité par les consommateurs ?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, usage, value, incidents, consumers, and operators be supported?"
+          "section": "Surveillance et support",
+          "description": "Comment l'état, l'usage, la valeur, les incidents, les consommateurs et les opérateurs seront-ils pris en charge ?"
         },
         "failureAndRecovery": {
-          "section": "Continuity and recovery",
-          "description": "How will service continue, degrade safely, recover, or fall back?"
+          "section": "Continuité et reprise",
+          "description": "Comment le service continuera-t-il, se dégradera-t-il en sécurité, récupérera-t-il ou basculera-t-il en fallback ?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are service definitions, runbooks, risks, conditions, and blocking gaps clear?"
+          "section": "Statut de préparation",
+          "description": "Les définitions de service, runbooks, risques, conditions et écarts bloquants sont-ils clairs ?"
         }
       }
     }
@@ -3805,39 +3805,39 @@
     "businessImpactCanvas": {
       "title": "Canvas de Impacto de Negócio",
       "purpose": "Que valor, risco e impactos operacionais, financeiros, de clientes, colaboradores, conformidade e estratégicos são esperados ou estão em causa?",
-      "howToUse": "Use this to connect expected benefits and consequences to architecture, prioritization, readiness, and proceed-or-stop decisions. Include the impact of not proceeding as well as critical risks and mitigations.",
+      "howToUse": "Use isto para ligar benefícios e consequências esperados à arquitetura, priorização, prontidão e decisões de avançar ou parar. Inclua também o impacto de não prosseguir, bem como riscos críticos e mitigações.",
       "sections": {
         "expectedBenefits": {
-          "section": "Expected benefits",
-          "description": "What business, customer, employee, quality, speed, risk, compliance, or strategic benefits are expected?"
+          "section": "Benefícios esperados",
+          "description": "Que benefícios de negócio, cliente, colaborador, qualidade, velocidade, risco, conformidade ou estratégicos são esperados?"
         },
         "operationalEfficiencyImpact": {
-          "section": "Operational efficiency impact",
-          "description": "How could work effort, waiting time, rework, throughput, reliability, support load, or operational cost change?"
+          "section": "Impacto na eficiência operacional",
+          "description": "Como podem mudar o esforço de trabalho, o tempo de espera, o retrabalho, o débito, a fiabilidade, a carga de suporte ou o custo operacional?"
         },
         "customerEmployeeImpact": {
-          "section": "Customer and employee impact",
-          "description": "How will customers, employees, partners, operators, or support teams experience the change?"
+          "section": "Impacto em clientes e colaboradores",
+          "description": "Como irão clientes, colaboradores, parceiros, operadores ou equipas de suporte experienciar a mudança?"
         },
         "financialImpact": {
-          "section": "Financial impact",
-          "description": "What revenue, cost, investment, savings, loss avoidance, or funding impact is expected?"
+          "section": "Impacto financeiro",
+          "description": "Que impacto em receitas, custos, investimento, poupanças, prevenção de perdas ou financiamento é esperado?"
         },
         "complianceStrategicImpact": {
-          "section": "Compliance and strategic impact",
-          "description": "What regulatory, contractual, policy, reputation, market, ecosystem, or strategic consequences matter?"
+          "section": "Impacto de conformidade e estratégico",
+          "description": "Que consequências regulamentares, contratuais, de políticas, reputação, mercado, ecossistema ou estratégicas são relevantes?"
         },
         "impactOfNotProceeding": {
-          "section": "Impact of not proceeding",
-          "description": "What happens if the capability, automation, integration, or service is not improved or delivered?"
+          "section": "Impacto de não prosseguir",
+          "description": "O que acontece se a capacidade, automação, integração ou serviço não for melhorado ou entregue?"
         },
         "risksAndCriticality": {
-          "section": "Risks and criticality",
-          "description": "What availability, security, data, safety, process, adoption, or business continuity risks could affect the outcome?"
+          "section": "Riscos e criticidade",
+          "description": "Que riscos de disponibilidade, segurança, dados, segurança operacional, processo, adoção ou continuidade do negócio podem afetar o resultado?"
         },
         "mitigationsAndDecisionImpact": {
-          "section": "Mitigations and decision impact",
-          "description": "Which mitigations, constraints, trade-offs, or residual risks should influence prioritization, architecture, rollout, or readiness decisions?"
+          "section": "Mitigações e impacto na decisão",
+          "description": "Que mitigações, restrições, compromissos ou riscos residuais devem influenciar decisões de priorização, arquitetura, rollout ou prontidão?"
         }
       }
     },
@@ -3882,7 +3882,7 @@
           "description": "Como o cliente reconhece sua necessidade ou problema?"
         },
         "persona": {
-          "section": "Persona",
+          "section": "Persona do utilizador",
           "description": "Quem é o cliente típico que passa por esta percurso?"
         },
         "pains": {
@@ -4205,76 +4205,76 @@
       "howToUse": "Registe o que pessoas e sistemas consumidores precisam da capacidade ou automação. Mantenha o foco em requisitos e restrições; quantifique capacidade e escolha mecanismos de implementação no trabalho posterior de arquitetura.",
       "sections": {
         "consumerGoals": {
-          "section": "User, operator, or consumer goals",
-          "description": "What business, workflow, decision, automation, support, or data usage goals must be supported?"
+          "section": "Objetivos de utilizador, operador ou consumidor",
+          "description": "Que objetivos de negócio, workflow, decisão, automação, suporte ou utilização de dados devem ser suportados?"
         },
         "availabilityAndTimeliness": {
-          "section": "Availability and timeliness needs",
-          "description": "When must the solution be available, how fresh must information be, and what response, delivery, or completion windows matter to users and operators?"
+          "section": "Necessidades de disponibilidade e tempestividade",
+          "description": "Quando a solução deve estar disponível, quão atual deve ser a informação e que janelas de resposta, entrega ou conclusão importam para utilizadores e operadores?"
         },
         "volumeAndPerformance": {
-          "section": "Volume and performance expectations",
-          "description": "What user, case, transaction, record, event, file, batch, or work-item volumes must be understood before capacity planning?"
+          "section": "Expectativas de volume e desempenho",
+          "description": "Que volumes de utilizadores, casos, transações, registos, eventos, ficheiros, lotes ou itens de trabalho devem ser entendidos antes do planeamento de capacidade?"
         },
         "dataQualityAndConsistency": {
-          "section": "Data quality and consistency needs",
-          "description": "What accuracy, completeness, consistency, ordering, deduplication, reconciliation, or validation expectations do users, operators, or consuming systems have?"
+          "section": "Necessidades de qualidade e consistência de dados",
+          "description": "Que expectativas de exatidão, completude, consistência, ordenação, deduplicação, reconciliação ou validação têm utilizadores, operadores ou sistemas consumidores?"
         },
         "securityPrivacyAndCompliance": {
-          "section": "Security, privacy, and compliance constraints",
-          "description": "What identity, authorization, confidentiality, residency, consent, retention, audit, or regulatory constraints must the solution satisfy?"
+          "section": "Restrições de segurança, privacidade e conformidade",
+          "description": "Que restrições de identidade, autorização, confidencialidade, residência, consentimento, retenção, auditoria ou regulamentares a solução deve satisfazer?"
         },
         "onboardingAndAccess": {
-          "section": "Activation and access",
-          "description": "How do users, operators, or consuming teams gain access, initiate or participate in the solution, and receive the required permissions and guidance?"
+          "section": "Ativação e acesso",
+          "description": "Como utilizadores, operadores ou equipas consumidoras obtêm acesso, iniciam ou participam na solução e recebem as permissões e orientação necessárias?"
         },
         "changeAndVersioning": {
-          "section": "Change and versioning expectations",
-          "description": "How much change tolerance exists, and what notice, compatibility, migration, training, or versioning expectations apply?"
+          "section": "Expectativas de mudança e versionamento",
+          "description": "Que tolerância à mudança existe e que expectativas de aviso, compatibilidade, migração, formação ou versionamento se aplicam?"
         },
         "observabilityAndSupport": {
-          "section": "Observability and support needs",
-          "description": "What monitoring, status, traceability, quality visibility, support, ownership, and incident communication do users and operators need?"
+          "section": "Necessidades de observabilidade e suporte",
+          "description": "Que monitorização, estado, rastreabilidade, visibilidade de qualidade, suporte, ownership e comunicação de incidentes utilizadores e operadores necessitam?"
         },
         "recoveryAndContinuity": {
-          "section": "Recovery and continuity needs",
-          "description": "What replay, retry, reconciliation, backup, fallback, continuity, or manual recovery expectations must be supported?"
+          "section": "Necessidades de recuperação e continuidade",
+          "description": "Que expectativas de replay, retry, reconciliação, backup, fallback, continuidade ou recuperação manual devem ser suportadas?"
         },
         "architectureImplications": {
-          "section": "Constraints for later design",
-          "description": "Which requirements must later architecture, workflow, capacity, integration, or implementation decisions satisfy?"
+          "section": "Restrições para design posterior",
+          "description": "Que requisitos devem ser satisfeitos por decisões posteriores de arquitetura, workflow, capacidade, integração ou implementação?"
         }
       }
     },
     "automationOpportunityCanvas": {
-      "title": "Automation Hypothesis & Validation Canvas",
-      "purpose": "Turn existing journey, value, impact, domain, and capacity evidence into a testable automation decision.",
-      "howToUse": "Reuse earlier canvas outputs. Record only the remaining hypothesis, uncertainties, validation, and decision.",
+      "title": "Canvas de Hipótese e Validação de Automação",
+      "purpose": "Transforme evidências existentes de jornada, valor, impacto, domínio e capacidade numa decisão de automação testável.",
+      "howToUse": "Reutilize resultados de canvases anteriores. Registe apenas a hipótese restante, incertezas, validação e decisão.",
       "sections": {
         "hypothesis": {
-          "section": "Automation hypothesis",
-          "description": "What work do we believe should be automated, and what outcome should it achieve?"
+          "section": "Hipótese de automação",
+          "description": "Que trabalho acreditamos que deve ser automatizado e que resultado deve alcançar?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the hypothesis?"
+          "section": "Evidências reutilizadas",
+          "description": "Que resultados de canvases anteriores suportam a hipótese?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could make the hypothesis wrong, unsafe, or unworkable?"
+          "section": "Pressupostos críticos",
+          "description": "O que poderia tornar a hipótese errada, insegura ou inviável?"
         },
         "validationExperiment": {
-          "section": "Validation experiment",
-          "description": "What is the smallest useful test, evidence threshold, and stop condition?"
+          "section": "Experiência de validação",
+          "description": "Qual é o menor teste útil, limiar de evidência e condição de paragem?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, revise, redesign the process, or stop?"
+          "section": "Decisão",
+          "description": "Prosseguir, rever, redesenhar o processo ou parar?"
         }
       }
     },
     "automationWorkflowCanvas": {
-      "title": "Automation Workflow Canvas",
+      "title": "Canvas de Fluxo de Trabalho de Automação",
       "purpose": "Desenhar o fluxo de trabalho interno necessário para produzir os resultados selecionados para o cliente e para a capacidade.",
       "howToUse": "Reutilize evidências da jornada do cliente, proposta de valor, domínio e validação. Defina o trabalho interno, distribua-o entre pessoas e automação e acrescente apenas os detalhes de execução.",
       "sections": {
@@ -4305,366 +4305,366 @@
       }
     },
     "automationArchitectureDecisionCanvas": {
-      "title": "Automation Architecture Decision Canvas",
-      "purpose": "Choose the implementation approach using evidence already gathered.",
-      "howToUse": "Bring forward constraints and responsibility choices. Compare only viable mechanisms, then record the decision and remaining risks.",
+      "title": "Canvas de Decisão de Arquitetura de Automação",
+      "purpose": "Escolha a abordagem de implementação usando evidências já recolhidas.",
+      "howToUse": "Traga restrições e escolhas de responsabilidade. Compare apenas mecanismos viáveis e registe a decisão e os riscos restantes.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which requirements, capacity, location, impact, and responsibility decisions constrain the choice?"
+          "section": "Entradas reutilizadas",
+          "description": "Que requisitos e decisões de capacidade, localização, impacto e responsabilidade restringem a escolha?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which human, workflow, rule, agent, API, connector, custom, or UI automation options remain viable?"
+          "section": "Opções viáveis",
+          "description": "Que opções humanas, de workflow, regras, agentes, APIs, conectores, personalizadas ou de automação de UI permanecem viáveis?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style or hybrid is selected?"
+          "section": "Abordagem selecionada",
+          "description": "Que estilo de implementação ou híbrido é selecionado?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Justificação da decisão",
+          "description": "Porque é que a abordagem selecionada é a mais adequada?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Alternativas rejeitadas",
+          "description": "Que alternativas sérias foram rejeitadas e porquê?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Riscos em aberto",
+          "description": "O que ainda precisa de validação antes da entrega ou release?"
         }
       }
     },
     "automationReadinessOperationsCanvas": {
-      "title": "Automation Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before readiness review.",
-      "howToUse": "Reuse design decisions. Record ownership, operational arrangements, evidence, recovery, and remaining readiness gaps.",
+      "title": "Canvas de Prontidão e Operações de Automação",
+      "purpose": "Prepare as evidências operacionais mínimas necessárias antes da revisão de prontidão.",
+      "howToUse": "Reutilize decisões de design. Registe ownership, arranjos operacionais, evidências, recuperação e lacunas de prontidão restantes.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business outcomes, operations, support, and changes?"
+          "section": "Responsabilidade",
+          "description": "Quem é responsável por resultados de negócio, operações, suporte e mudanças?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, permissions, credentials, and identities ready?"
+          "section": "Ambientes e acesso",
+          "description": "Ambientes, permissões, credenciais e identidades estão prontos?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves correct, safe, and reliable behavior?"
+          "section": "Evidências de teste",
+          "description": "O que comprova comportamento correto, seguro e fiável?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, incidents, users, and operators be supported?"
+          "section": "Monitorização e suporte",
+          "description": "Como serão suportados estado, incidentes, utilizadores e operadores?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will exceptions, fallback, rollback, and manual recovery work?"
+          "section": "Falha e recuperação",
+          "description": "Como funcionarão exceções, fallback, rollback e recuperação manual?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are documentation, risks, conditions, and blocking gaps clear?"
+          "section": "Estado de prontidão",
+          "description": "Documentação, riscos, condições e lacunas bloqueadoras estão claros?"
         }
       }
     },
     "integrationCapabilityHypothesisCanvas": {
-      "title": "Integration Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable integration capability should proceed.",
-      "howToUse": "Reuse journey, value, domain, business model, impact, and capacity evidence instead of restating it.",
+      "title": "Canvas de Validação de Capacidade de Integração",
+      "purpose": "Valide se uma capacidade de integração reutilizável proposta deve prosseguir.",
+      "howToUse": "Reutilize evidências de jornada, valor, domínio, modelo de negócio, impacto e capacidade em vez de as repetir.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed integration capability and reuse scope are being tested?"
+          "section": "Capacidade a validar",
+          "description": "Que capacidade de integração proposta e âmbito de reutilização estão a ser testados?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Evidências reutilizadas",
+          "description": "Que resultados de canvases anteriores suportam a proposta?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, feasibility, or adoption?"
+          "section": "Pressupostos críticos",
+          "description": "O que poderia invalidar valor, reutilização, ownership, viabilidade ou adoção?"
         },
         "validationStep": {
-          "section": "Validation step",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Passo de validação",
+          "description": "Qual é a menor validação útil e o limiar de sucesso?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Decisão",
+          "description": "Prosseguir, restringir, rever e voltar a testar ou parar?"
         }
       }
     },
     "integrationConsumerProviderRequirementsCanvas": {
-      "title": "Integration Consumer & Provider Commitments Canvas",
-      "purpose": "Agree the responsibilities needed to use and provide a reusable integration capability.",
-      "howToUse": "Bring forward consumers, use cases, service needs, and constraints. Record commitments rather than rediscovering requirements.",
+      "title": "Canvas de Compromissos de Consumidor e Fornecedor de Integração",
+      "purpose": "Acorde as responsabilidades necessárias para usar e fornecer uma capacidade de integração reutilizável.",
+      "howToUse": "Traga consumidores, casos de uso, necessidades de serviço e restrições. Registe compromissos em vez de redescobrir requisitos.",
       "sections": {
         "selectedPartiesAndUseCases": {
-          "section": "Selected parties and use cases",
-          "description": "Which producers, providers, consumers, and use cases are covered?"
+          "section": "Partes e casos de uso selecionados",
+          "description": "Que produtores, fornecedores, consumidores e casos de uso estão cobertos?"
         },
         "providerCommitments": {
-          "section": "Provider commitments",
-          "description": "What will providers deliver, maintain, monitor, and support?"
+          "section": "Compromissos do fornecedor",
+          "description": "O que os fornecedores irão entregar, manter, monitorizar e suportar?"
         },
         "consumerCommitments": {
-          "section": "Consumer commitments",
-          "description": "What must consumers test, protect, operate, and communicate?"
+          "section": "Compromissos do consumidor",
+          "description": "O que os consumidores devem testar, proteger, operar e comunicar?"
         },
         "accessAndValidationAgreement": {
-          "section": "Access and validation",
-          "description": "How will access, environments, credentials, and conformance be handled?"
+          "section": "Acesso e validação",
+          "description": "Como serão tratados acesso, ambientes, credenciais e conformidade?"
         },
         "failureAndRecoveryAgreement": {
-          "section": "Failure and recovery",
-          "description": "Who handles failures, replay, duplicates, reconciliation, and recovery?"
+          "section": "Falha e recuperação",
+          "description": "Quem trata falhas, replay, duplicados, reconciliação e recuperação?"
         },
         "changeAndLifecycleAgreement": {
-          "section": "Change and lifecycle",
-          "description": "How will compatibility, migration, notice, deprecation, and retirement work?"
+          "section": "Mudança e ciclo de vida",
+          "description": "Como funcionarão compatibilidade, migração, aviso, depreciação e retirada?"
         }
       }
     },
     "integrationArchitectureDecisionCanvas": {
-      "title": "Integration Architecture Decision Canvas",
-      "purpose": "Choose the integration style and platform using evidence already gathered.",
-      "howToUse": "Bring forward consumer commitments, impact, location, and capacity. Compare only viable styles and record the decision.",
+      "title": "Canvas de Decisão de Arquitetura de Integração",
+      "purpose": "Escolha o estilo de integração e a plataforma usando evidências já recolhidas.",
+      "howToUse": "Traga compromissos dos consumidores, impacto, localização e capacidade. Compare apenas estilos viáveis e registe a decisão.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which commitments, capacity, location, impact, and domain decisions constrain the choice?"
+          "section": "Entradas reutilizadas",
+          "description": "Que compromissos e decisões de capacidade, localização, impacto e domínio restringem a escolha?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, messaging, file, stream, data, connector, platform, or custom options remain viable?"
+          "section": "Opções viáveis",
+          "description": "Que opções de API, evento, mensagens, ficheiro, stream, dados, conector, plataforma ou personalizadas permanecem viáveis?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which integration style, platform, or hybrid is selected?"
+          "section": "Abordagem selecionada",
+          "description": "Que estilo de integração, plataforma ou híbrido é selecionado?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Justificação da decisão",
+          "description": "Porque é que a abordagem selecionada é a mais adequada?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Alternativas rejeitadas",
+          "description": "Que alternativas sérias foram rejeitadas e porquê?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Riscos em aberto",
+          "description": "O que ainda precisa de validação antes da entrega ou release?"
         }
       }
     },
     "integrationReadinessOperationsCanvas": {
-      "title": "Integration Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before integration readiness review.",
-      "howToUse": "Reuse contracts and design decisions. Record ownership, operations, evidence, recovery, and remaining readiness gaps.",
+      "title": "Canvas de Prontidão e Operações de Integração",
+      "purpose": "Prepare as evidências operacionais mínimas necessárias antes da revisão de prontidão da integração.",
+      "howToUse": "Reutilize contratos e decisões de design. Registe ownership, operações, evidências, recuperação e lacunas de prontidão restantes.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns business, integration, producer, consumer, platform, and incident responsibilities?"
+          "section": "Responsabilidade",
+          "description": "Quem é responsável por negócio, integração, produtor, consumidor, plataforma e incidentes?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are environments, credentials, connectivity, permissions, and sequencing ready?"
+          "section": "Ambientes e acesso",
+          "description": "Ambientes, credenciais, conectividade, permissões e sequenciação estão prontos?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves contract, mapping, compatibility, quality, resilience, and recovery?"
+          "section": "Evidências de teste",
+          "description": "O que comprova contrato, mapeamento, compatibilidade, qualidade, resiliência e recuperação?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will producers, consumers, platforms, incidents, and service questions be supported?"
+          "section": "Monitorização e suporte",
+          "description": "Como serão suportados produtores, consumidores, plataformas, incidentes e questões de serviço?"
         },
         "failureAndRecovery": {
-          "section": "Failure and recovery",
-          "description": "How will retry, replay, duplicates, reconciliation, fallback, and compensation work?"
+          "section": "Falha e recuperação",
+          "description": "Como funcionarão retry, replay, duplicados, reconciliação, fallback e compensação?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are contracts, runbooks, dependencies, risks, conditions, and blocking gaps clear?"
+          "section": "Estado de prontidão",
+          "description": "Contratos, runbooks, dependências, riscos, condições e lacunas bloqueadoras estão claros?"
         }
       }
     },
     "integrationSolutionDesignCanvas": {
-      "title": "Integration Solution Design Canvas",
-      "purpose": "Refine the selected architecture into an implementable integration design.",
-      "howToUse": "Reuse the selected style, domain concepts, interaction needs, and commitments. Add only implementation-specific design.",
+      "title": "Canvas de Design de Solução de Integração",
+      "purpose": "Refine a arquitetura selecionada num design de integração implementável.",
+      "howToUse": "Reutilize o estilo selecionado, conceitos de domínio, necessidades de interação e compromissos. Acrescente apenas design específico de implementação.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which architecture, domain, interaction, and commitment decisions are reused?"
+          "section": "Entradas selecionadas",
+          "description": "Que decisões de arquitetura, domínio, interação e compromisso são reutilizadas?"
         },
         "contractAndModel": {
-          "section": "Contract and model",
-          "description": "What contract, schema, data model, and version define the integration?"
+          "section": "Contrato e modelo",
+          "description": "Que contrato, esquema, modelo de dados e versão definem a integração?"
         },
         "mappingAndDelivery": {
-          "section": "Mapping and delivery",
-          "description": "What transformations, delivery pattern, and metadata are required?"
+          "section": "Mapeamento e entrega",
+          "description": "Que transformações, padrão de entrega e metadados são necessários?"
         },
         "errorsAndRecovery": {
-          "section": "Errors and recovery",
-          "description": "How are failures, retries, replay, duplicates, and reconciliation handled?"
+          "section": "Erros e recuperação",
+          "description": "Como são tratadas falhas, retries, replay, duplicados e reconciliação?"
         },
         "securityAndTrust": {
-          "section": "Security and trust",
-          "description": "What identity, access, privacy, and trust controls apply?"
+          "section": "Segurança e confiança",
+          "description": "Que controlos de identidade, acesso, privacidade e confiança se aplicam?"
         },
         "observabilityAndEvolution": {
-          "section": "Observability and evolution",
-          "description": "How will the integration be monitored, changed, migrated, and deprecated?"
+          "section": "Observabilidade e evolução",
+          "description": "Como a integração será monitorizada, alterada, migrada e depreciada?"
         }
       }
     },
     "capabilityHypothesisCanvas": {
-      "title": "Capability Validation Canvas",
-      "purpose": "Validate whether a proposed reusable digital capability should proceed.",
-      "howToUse": "Reuse journey, value proposition, business model, impact, domain, and capacity outputs instead of repeating them.",
+      "title": "Canvas de Validação de Capacidade",
+      "purpose": "Valide se uma capacidade digital reutilizável proposta deve prosseguir.",
+      "howToUse": "Reutilize resultados de jornada, proposta de valor, modelo de negócio, impacto, domínio e capacidade em vez de os repetir.",
       "sections": {
         "capabilityToValidate": {
-          "section": "Capability to validate",
-          "description": "Which proposed capability and reusable scope are being tested?"
+          "section": "Capacidade a validar",
+          "description": "Que capacidade proposta e âmbito reutilizável estão a ser testados?"
         },
         "reusedEvidence": {
-          "section": "Reused evidence",
-          "description": "Which earlier canvas outputs support the proposal?"
+          "section": "Evidências reutilizadas",
+          "description": "Que resultados de canvases anteriores suportam a proposta?"
         },
         "criticalAssumptions": {
-          "section": "Critical assumptions",
-          "description": "What could invalidate value, reuse, ownership, sustainability, or adoption?"
+          "section": "Pressupostos críticos",
+          "description": "O que poderia invalidar valor, reutilização, ownership, sustentabilidade ou adoção?"
         },
         "minimumValidation": {
-          "section": "Minimum validation",
-          "description": "What is the smallest useful validation and success threshold?"
+          "section": "Validação mínima",
+          "description": "Qual é a menor validação útil e o limiar de sucesso?"
         },
         "decision": {
-          "section": "Decision",
-          "description": "Proceed, narrow, revise and retest, or stop?"
+          "section": "Decisão",
+          "description": "Prosseguir, restringir, rever e voltar a testar ou parar?"
         }
       }
     },
     "capabilityConsumerProducerRequirementsCanvas": {
-      "title": "Capability Consumer & Producer Commitments Canvas",
-      "purpose": "Agree mutual commitments for providing and consuming a reusable capability.",
-      "howToUse": "Reuse consumers, value, channels, service needs, and ownership from earlier canvases. Capture only agreed commitments and gaps.",
+      "title": "Canvas de Compromissos de Consumidor e Produtor de Capacidade",
+      "purpose": "Acorde compromissos mútuos para fornecer e consumir uma capacidade reutilizável.",
+      "howToUse": "Reutilize consumidores, valor, canais, necessidades de serviço e ownership de canvases anteriores. Capture apenas compromissos e lacunas acordados.",
       "sections": {
         "selectedConsumersAndUseCases": {
-          "section": "Selected consumers and use cases",
-          "description": "Which consumers and usage contexts are covered?"
+          "section": "Consumidores e casos de uso selecionados",
+          "description": "Que consumidores e contextos de uso estão cobertos?"
         },
         "ownerAndProducerCommitments": {
-          "section": "Owner and producer commitments",
-          "description": "What will owners and producers provide, maintain, monitor, and support?"
+          "section": "Compromissos do owner e do produtor",
+          "description": "O que owners e produtores irão fornecer, manter, monitorizar e suportar?"
         },
         "consumerResponsibilities": {
-          "section": "Consumer responsibilities",
-          "description": "What must consumers do for appropriate use, access, testing, and feedback?"
+          "section": "Responsabilidades do consumidor",
+          "description": "O que os consumidores devem fazer para utilização adequada, acesso, testes e feedback?"
         },
         "accessAndOnboardingAgreement": {
-          "section": "Access and onboarding",
-          "description": "What discovery, approval, testing, and onboarding path is agreed?"
+          "section": "Acesso e onboarding",
+          "description": "Que percurso de descoberta, aprovação, teste e onboarding está acordado?"
         },
         "serviceAndLifecycleAgreement": {
-          "section": "Service and lifecycle",
-          "description": "What service, change, deprecation, and retirement commitments are agreed?"
+          "section": "Serviço e ciclo de vida",
+          "description": "Que compromissos de serviço, mudança, depreciação e retirada estão acordados?"
         },
         "openCommitments": {
-          "section": "Open commitments",
-          "description": "What remains unresolved before architecture or delivery?"
+          "section": "Compromissos em aberto",
+          "description": "O que permanece por resolver antes da arquitetura ou entrega?"
         }
       }
     },
     "capabilityArchitectureDecisionCanvas": {
-      "title": "Capability Architecture Decision Canvas",
-      "purpose": "Choose how the capability will be delivered using evidence already gathered.",
-      "howToUse": "Bring forward value, commitments, impact, location, capacity, and domain decisions. Compare only viable implementation styles.",
+      "title": "Canvas de Decisão de Arquitetura de Capacidade",
+      "purpose": "Escolha como a capacidade será entregue usando evidências já recolhidas.",
+      "howToUse": "Traga valor, compromissos, impacto, localização, capacidade e decisões de domínio. Compare apenas estilos de implementação viáveis.",
       "sections": {
         "reusedInputs": {
-          "section": "Reused inputs",
-          "description": "Which earlier decisions and constraints shape the implementation choice?"
+          "section": "Entradas reutilizadas",
+          "description": "Que decisões e restrições anteriores moldam a escolha de implementação?"
         },
         "viableOptions": {
-          "section": "Viable options",
-          "description": "Which API, event, workflow, application, data product, shared service, human service, or hybrid options remain viable?"
+          "section": "Opções viáveis",
+          "description": "Que opções de API, evento, workflow, aplicação, produto de dados, serviço partilhado, serviço humano ou híbridas permanecem viáveis?"
         },
         "selectedApproach": {
-          "section": "Selected approach",
-          "description": "Which implementation style and enabling platform are selected?"
+          "section": "Abordagem selecionada",
+          "description": "Que estilo de implementação e plataforma habilitadora são selecionados?"
         },
         "decisionRationale": {
-          "section": "Decision rationale",
-          "description": "Why does the selected approach fit best?"
+          "section": "Justificação da decisão",
+          "description": "Porque é que a abordagem selecionada é a mais adequada?"
         },
         "rejectedAlternatives": {
-          "section": "Rejected alternatives",
-          "description": "Which serious alternatives were rejected, and why?"
+          "section": "Alternativas rejeitadas",
+          "description": "Que alternativas sérias foram rejeitadas e porquê?"
         },
         "openRisks": {
-          "section": "Open risks",
-          "description": "What still needs validation before delivery or release?"
+          "section": "Riscos em aberto",
+          "description": "O que ainda precisa de validação antes da entrega ou release?"
         }
       }
     },
     "capabilitySolutionDesignCanvas": {
-      "title": "Capability Solution Design Canvas",
-      "purpose": "Refine the selected implementation style into a clear consumer-facing capability design.",
-      "howToUse": "Reuse value, domain, interaction, commitments, and architecture outputs. Add only solution-specific design.",
+      "title": "Canvas de Design de Solução de Capacidade",
+      "purpose": "Refine o estilo de implementação selecionado num design de capacidade claro para consumidores.",
+      "howToUse": "Reutilize resultados de valor, domínio, interação, compromissos e arquitetura. Acrescente apenas design específico da solução.",
       "sections": {
         "selectedInputs": {
-          "section": "Selected inputs",
-          "description": "Which earlier journey, value, domain, commitment, and architecture decisions are reused?"
+          "section": "Entradas selecionadas",
+          "description": "Que decisões anteriores de jornada, valor, domínio, compromisso e arquitetura são reutilizadas?"
         },
         "boundaryAndInteraction": {
-          "section": "Boundary and interaction",
-          "description": "What belongs inside the capability, and how do consumers use it?"
+          "section": "Fronteira e interação",
+          "description": "O que pertence à capacidade e como os consumidores a utilizam?"
         },
         "contractRulesAndOutcomes": {
-          "section": "Contract, rules, and outcomes",
-          "description": "What behavior, responsibilities, inputs, outputs, and outcomes are promised?"
+          "section": "Contrato, regras e resultados",
+          "description": "Que comportamento, responsabilidades, entradas, saídas e resultados são prometidos?"
         },
         "errorsAndSecurity": {
-          "section": "Errors and security",
-          "description": "How are exceptions, access, privacy, and trust handled?"
+          "section": "Erros e segurança",
+          "description": "Como são tratadas exceções, acesso, privacidade e confiança?"
         },
         "lifecycleAndSupport": {
-          "section": "Lifecycle and support",
-          "description": "How will change, versioning, support, deprecation, and retirement work?"
+          "section": "Ciclo de vida e suporte",
+          "description": "Como funcionarão mudança, versionamento, suporte, depreciação e retirada?"
         },
         "observability": {
-          "section": "Observability",
-          "description": "What health, usage, quality, value, and consumer signals must be visible?"
+          "section": "Observabilidade",
+          "description": "Que sinais de estado, utilização, qualidade, valor e consumidor devem estar visíveis?"
         }
       }
     },
     "capabilityReadinessOperationsCanvas": {
-      "title": "Capability Readiness & Operations Canvas",
-      "purpose": "Prepare the minimum operating evidence needed before capability readiness review.",
-      "howToUse": "Reuse business model, commitments, and solution design. Record only operational ownership, evidence, continuity, and readiness gaps.",
+      "title": "Canvas de Prontidão e Operações de Capacidade",
+      "purpose": "Prepare as evidências operacionais mínimas necessárias antes da revisão de prontidão da capacidade.",
+      "howToUse": "Reutilize modelo de negócio, compromissos e design de solução. Registe apenas ownership operacional, evidências, continuidade e lacunas de prontidão.",
       "sections": {
         "ownership": {
-          "section": "Ownership",
-          "description": "Who owns value, the capability lifecycle, production, operations, support, and changes?"
+          "section": "Responsabilidade",
+          "description": "Quem é responsável por valor, ciclo de vida da capacidade, produção, operações, suporte e mudanças?"
         },
         "environmentsAndAccess": {
-          "section": "Environments and access",
-          "description": "Are required environments, access, permissions, and credentials ready?"
+          "section": "Ambientes e acesso",
+          "description": "Ambientes, acesso, permissões e credenciais necessários estão prontos?"
         },
         "testEvidence": {
-          "section": "Test evidence",
-          "description": "What proves outcomes, quality, security, compatibility, resilience, and consumer usability?"
+          "section": "Evidências de teste",
+          "description": "O que comprova resultados, qualidade, segurança, compatibilidade, resiliência e usabilidade para consumidores?"
         },
         "monitoringAndSupport": {
-          "section": "Monitoring and support",
-          "description": "How will health, usage, value, incidents, consumers, and operators be supported?"
+          "section": "Monitorização e suporte",
+          "description": "Como serão suportados estado, utilização, valor, incidentes, consumidores e operadores?"
         },
         "failureAndRecovery": {
-          "section": "Continuity and recovery",
-          "description": "How will service continue, degrade safely, recover, or fall back?"
+          "section": "Continuidade e recuperação",
+          "description": "Como o serviço continuará, degradará de forma segura, recuperará ou recorrerá a fallback?"
         },
         "documentationRisksAndReadiness": {
-          "section": "Readiness status",
-          "description": "Are service definitions, runbooks, risks, conditions, and blocking gaps clear?"
+          "section": "Estado de prontidão",
+          "description": "Definições de serviço, runbooks, riscos, condições e lacunas bloqueadoras estão claros?"
         }
       }
     }
